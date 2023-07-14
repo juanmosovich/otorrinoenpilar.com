@@ -16,6 +16,11 @@
 <meta name=viewport content="width=device-width, initial-scale=1">
 <meta name="description" content="horarios consultorios otorrino"/>
 <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3 crossorigin=anonymous>
+<!--mapa-->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+<script type="module" src="./index.js"></script>
+<!--mapa-->
+
 <title>Otorrino consultorios en Pilar</title>
 </head>
 <style>img {width: 100%; height: 250px; object-fit: contain;}</style>
@@ -23,11 +28,10 @@
 <header>
 <div class="card text-center">
 <div class="card-header text-white bg-danger">
-Juan Horacio Mosovich. Médico otorrinolaringólogo.<br>
-Medicina de Sueño. Nutrición.
+<h1>Juan Mosovich. Médico otorrinolaringólogo.</h1>
 </div>
 <div class="card-body text-white bg-primary">
-<h1 class="card-title text-white bg-primary">Otorrinolaringología en Pilar.</h1>
+<h2 class="card-title text-white bg-primary">Otorrinolaringología en Pilar.</h2>
 <p class=card-text><h3>Tratamiento médico y quirúrgico. Obras sociales y prepagas</h3></p>
 <a href=./contacto.html class="btn btn-danger">¿Problemas con los turnos? ¡¡contáctenos!!</a>
     <a href=/index.html class="btn btn-light">INICIO.</a>
@@ -39,46 +43,108 @@ Medicina de Sueño. Nutrición.
 <div class=card>
 <img src=./imagenes/agenda.webp class=card-img-top alt=agenda>
 <div class=card-body>
-<h4 class="card-title text-center"><strong>Consultorios, horarios y lugares de atención.</strong></h4><br>
+<h3 class="card-title text-center"><strong>Cómo coordinar una consulta.</strong></h3><br>
 
-<hr>
-<div class="card">
-    <img src="./imagenes/agora2.webp" style="max-width:350px; max-height: 300px;" class="card-img-top" alt="imagen que representa riesgo cardiovascular">
-    <div class="card-body">
-    <h5 class="card-title">Consultas particulares y OSDE (presenciales y online).</h5>
-    <p>Por consultas particulares y de OSDE tanto presenciales como online puede consultar presupuesto o coordinar su consulta directamente por 
-    whatsapp haciendo click <a href="https://api.whatsapp.com/send?phone=541168212512" target=_blank rel="noopener noreferrer">aquí.</a><br>
-    El consultorio está ubicado en el complejo 46 Plaza, edificio agora 2, primer piso oficina 110. Debe bajar en panamericana km 46 mano a provincia (bajada Temaiken/Lagartos) en calle Caamaño 1100 (detrás del Officia donde funcionan los consultorios del Htal Austral).<br>
-    Acceda a la ubicación por <a target="_blank" rel="noopener noreferrer" href="https://waze.com/ul/h69yhj73d8"><mark style="background-color: aquamarine; color: black;">WAZE</mark></a> 
-   </p>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100">
+        <img src="/imagenes/otoscopia.webp" class="card-img-top" alt="medico mirando a paciente con otoscopio">
+        <div class="card-body">
+          <h4 class="card-title class h5">Consulta programada convencional.</h5>
+          <p class="card-text">Si usted desea coordinar una consulta convencional por obras sociales o prepagas 
+            puede hacerlo directamente en cada centro en particular. El centro con más disponibilidad de consultorio 
+            si tiene <strong>OSDE</strong> es <a href="#pilares" class="link-dark">Centro Médico Pilares</a>, sobre panamericana. Por <strong>IOMA</strong> son la Clínica Nuestra
+             <a class="link-dark" href="#fatima">Señora de Fátima en Pilar</a> y <a href="#mas" class="link-dark">Medicina Asistencial</a> en Pilar. La obra social OSPE brinda cobertura 
+             en ambos centros. Consulte en cada centro por la cobertura de otras obras sociales.
+          </p>
+        </div>
+        <div class="card-footer bg-primary">
+         </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="./imagenes/cirujano-opera.webp" class="card-img-top" alt="cirujano operando">
+        <div class="card-body">
+          <h4 class="card-title h5">Pacientes con cirugías programadas.</h5>
+          <p class="card-text">
+            Los pacientes que están efectuando estudios prequirurgicos o con controles postquirúrgicos pueden consultar sin turno en los días
+             de atención habitual, en los horarios de apertura de los consultorios preferentemente, en cualquiera de las instituciones. Deben registrar en mesa de entrada su consulta 
+            y serán atendidos con sobreturno. 
+            </p>
+        </div>
+        <div class="card-footer bg-primary">
+          
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="/imagenes/emergencia-sala.webp" class="card-img-top" alt="sala de emergencias imagen">
+        <div class="card-body">
+          <h4 class="card-title h5">Consultas con urgencia.</h5>
+          <p class="card-text">
+            Para ser atendido en el día o en la semana en general puede consultar sin turno, en forma espontánea, en los horarios de apertura de los consultorios. Puede contratar una
+             consulta por videollamada o coordinar su consulta urgente presencial aqui por  <a target="_blank" rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=541168212512">
+              <button type="button" class="btn" style="background-color: green; color:aliceblue">
+                WhatsApp
+               </button></a>
+          </p>
+        </div>
+        <div class="card-footer bg-primary">
+      </div>
+      </div>
+    </div>
   </div>
-      <div class="card-footer bg-primary text-white">
-      </div> 
-      </div>  
 <hr>
-</div>
 
-<h2><strong>Consultas por obras sociales en los siguientes centros (consulte en cada centro en particular):</strong></h2>
+<h2 style="color: blue; text-decoration: underline;"  class="p-3 text-center" >Consultas en los siguientes centros</h2>
 
-<div class="container-md" style="background-color:beige">
-<strong>Sobre Panamericana</strong><br>
-Centro Medico Pilares: Días lunes y miércoles 17has. Jueves 18 has. Viernes 14has. Sábados 10:30 has. Pedir turno en Pilares haciendo click <a href=https://www.cmpilares.com target=_blank rel="noopener noreferrer"><strong>aquí</strong></a> <br>
-Acceda a la ubicación de Pilares en <a rel="noopener noreferrer" target="_blank" href="https://waze.com/ul/h69yhh6pvO"><mark style="background-color: aquamarine; color: black;">WAZE</mark></a>
+<div class="container-md p-3" style="background-color:beige">
+
+<h3 style="color: blue;">Sobre Panamericana</h3>
+
+<h4 id="pilares">Centro Medico Pilares</h5> 
+<p>
+  Días lunes y miércoles a partir de las 17 has. Jueves 18 has. Viernes 14 has. Sábados 10:30 has. <a href=https://www.cmpilares.com target=_blank rel="noopener noreferrer"><button type="button" class="btn btn-primary" >Pedir turno en Pilares</button></a><br>
+Acceda a la ubicación de Pilares en <a rel="noopener noreferrer" target="_blank" href="https://waze.com/ul/h69yhh6pvO"><mark style="background-color: aquamarine; color: black; border-radius: 15px; font-size: bold;"> <strong>WAZE</strong>🚗 </mark></a> 
+</p>
+
+<h4>Complejo 46 Plaza edificio Agora 2 (panamericana y caamaño)</h4>
+<p>Por consultas particulares y de OSDE tanto presenciales como online puede consultar presupuesto o coordinar su consulta directamente por 
+<a href="https://api.whatsapp.com/send?phone=541168212512" target=_blank rel="noopener noreferrer"><button type="button" class="btn btn-primary">Coordinar consulta.</button></a><br>
+El consultorio está ubicado en el complejo 46 Plaza, edificio agora 2, primer piso oficina 110. Debe bajar en panamericana km 46 mano a provincia (bajada Temaiken/Lagartos) en calle Caamaño 1100 (detrás del Officia donde funcionan los consultorios del Htal Austral).<br>
+Acceda a la ubicación por <a target="_blank" rel="noopener noreferrer" href="https://waze.com/ul/h69yhj73d8"><mark style="background-color: aquamarine; color: black; border-radius: 15px; font-size: bold;"> <strong>WAZE</strong>🚗 </mark></a> 
+</p>
+<hr>
+
+<h3 style="color: blue;">En Derqui<h3>
+<h4>Consultorios Alfaro</h4>
+<p>Días martes y viernes a partir de las 17 has. Pedir turno en Alfaro al 0230 448-8958.
 <br>
+Acceda a la ubicación de Consultorios Alfaro, Derqui en <a target="_blank" rel="noopener noreferrer" href="https://waze.com/ul/h69y5v17w8"><mark style="background-color: aquamarine; color: black; border-radius: 15px; font-size: bold;"> <strong>WAZE</strong>🚗 </mark></a>  <br><br>
+</p>
 <hr>
-<strong>En Derqui</strong><br> Consultorios Alfaro: días martes y viernes 17 has. Pedir turno en Alfaro al 0230 448-8958<br>
-Acceda a la ubicación de Consultorios Alfaro, Derqui en <a target="_blank" rel="noopener noreferrer" href="https://waze.com/ul/h69y5v17w8"><mark style="background-color: aquamarine; color: black;">WAZE</mark></a> <br><br>
+<h3 style="color: blue;" >En Pilar Centro</h3>
+<h4 id="fatima">Clínica Fátima Pilar</h4>
+ <p>Es en los consultorios nuevos de la clínica en el primer piso (no en la esquina). Días martes a partir de las 15 has y viernes 09:00 has. <a href="https://api.whatsapp.com/send?phone=5492304250949" target=_blank rel="noopener noreferrer"><button type="button" class="btn btn-primary">Pedir turno en Fátima</button></a> <br>
+Acceda a la ubicación de Fatima Pilar en <a target="_blank" rel="noopener noreferrer" href="https://waze.com/ul/h69y5gqwgt"><mark style="background-color: aquamarine; color: black; border-radius: 15px; font-size: bold;"> <strong>WAZE</strong>🚗 </mark></a> 
+ </p>
+
+<h4 id="mas">Medicina Asistencial Pilar</h4>
+<p>Centro MAS, Moreno 565 Pilar, los días Viernes a partir de las 11 has.<br>
+  Acceda a la ubicación del consultorio en <a rel="noopener noreferrer" target="_blank" href="https://waze.com/ul/h69y5gqm2s"><mark style="background-color: aquamarine; color: black; border-radius: 15px; font-size: bold;"> <strong>WAZE</strong>🚗 </mark></a> 
+</p>
 <hr>
-<strong>En Pilar Centro</strong><br>
-Clínica Fátima: días martes 15.15 has y viernes 09:00 has. Pedir turno en Fátima por Whatsapp mediante texto (no audio) haciendo click <a href="https://api.whatsapp.com/send?phone=5492304250949" target=_blank rel="noopener noreferrer"><strong>aquí</strong></a> <br>
-Acceda a la ubicación de Fatima Pilar en <a target="_blank" rel="noopener noreferrer" href="https://waze.com/ul/h69y5gqwgt"><mark style="background-color: aquamarine; color: black;">WAZE</mark></a>
-<br><br>
-Medicina Asistencial Pilar: En centro MAS, Moreno 565 Pilar, los días Viernes 11 has.
-<hr>
-<strong>En Hurlingham centro</strong>
-Lunes de 9 a 15 has.<br>
-Acceda a la ubicación del consultorio en <a rel="noopener noreferrer" target="_blank" href="https://waze.com/ul/h69y71z67g"><mark style="background-color: aquamarine; color: black;">WAZE</mark></a>
+<h3 style="color: blue;">En Hurlingham centro</h3>
+<h4>Centro Médico Hurlingham</h4>
+<p>Lunes de 9 a 14 has.<br>
+Acceda a la ubicación del consultorio en <a rel="noopener noreferrer" target="_blank" href="https://waze.com/ul/h69y71z67g"><mark style="background-color: aquamarine; color: black; border-radius: 15px; font-size: bold;"> <strong>WAZE</strong>🚗 </mark></a> 
+</p>
 </div>
+<!--mapa-->
+<div id="map" class="container" style="height: 400px; width: auto;"></div>
+<!--mapa-->
 
 </main>
 <footer>
@@ -97,5 +163,9 @@ optimizarla. La información suministrada por los pacientes es confidencial.<br>
 </div>
 </div>
 </footer>
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxO9w2EtDe6BAK19oABcrL2mXjpPg-QQA&callback=initMap&v=weekly"
+      defer
+    ></script>
 </body>
 </html>
