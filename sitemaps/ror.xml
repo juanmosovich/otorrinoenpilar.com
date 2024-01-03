@@ -14,8 +14,8 @@
 </item>
 <item>
      <link>https://otorrinoenpilar.com/sahos.html</link>
-     <title>Diagnóstico y tratamiento del ronquido y la apnea en adultos y niños.</title>
-     <description>diagnostico y tratamiento de la apnea del sueño en adultos y niños</description>
+     <title>Ronquidos y Apneas del sueño en adultos.</title>
+     <description>Medicina de sueño. Ronquidos y Apneas del sueño en adultos.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
@@ -30,16 +30,8 @@
 </item>
 <item>
      <link>https://otorrinoenpilar.com/info.html</link>
-     <title>información sobre rinoplastias y cirugías de otorrino</title>
-     <description>preguntas frecuentes sobre rinoplastias y cirugías de otorrino</description>
-     <ror:updatePeriod></ror:updatePeriod>
-     <ror:sortOrder>1</ror:sortOrder>
-     <ror:resourceOf>sitemap</ror:resourceOf>
-</item>
-<item>
-     <link>https://otorrinoenpilar.com/blog.html</link>
-     <title>Blog de temas de otorrinolaringología</title>
-     <description>blog de temas de otorrinolaringología.</description>
+     <title>Info cirugías otorrino y audífonos.</title>
+     <description>preguntas frecuentes sobre cirugías de otorrinolaringología y uso de audífonos</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
@@ -62,7 +54,7 @@
 </item>
 <item>
      <link>https://otorrinoenpilar.com/consultorio.html</link>
-     <title>Otorrino consultorios en Pilar</title>
+     <title>Juan Mosovich, otorrinolaringólogo, consultorios en Pilar.</title>
      <description>horarios consultorios otorrino</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
@@ -86,7 +78,7 @@
 </item>
 <item>
      <link>https://otorrinoenpilar.com/temas/rinoplastia.html</link>
-     <title>rinoplastia rinoseptumplastia cirugias de nariz información.</title>
+     <title>rinoplastias y rinoseptumplastias en Pilar Buenos Aires Argentina.</title>
      <description>información sobre rinoplastia y cirugías de nariz.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>1</ror:sortOrder>
@@ -101,6 +93,22 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
+     <link>https://otorrinoenpilar.com/pediatria.html</link>
+     <title>Diagnóstico y tratamiento del ronquido y la apnea en los niños.</title>
+     <description>diagnostico y tratamiento de la apnea del sueño en adultos y niños</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://otorrinoenpilar.com/garganta.html</link>
+     <title>Enfermedades de la garganta.</title>
+     <description>enfermedades e información sobre problemas en la voz, laringe, aliento, deglución y garganta</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
      <link>https://otorrinoenpilar.com/index.html</link>
      <title>otorrino sinusitis faringitis osde rinoplastia ronquidos</title>
      <description>servicios otorrinolaringologia cirugia rinoplastias apnea sueño .</description>
@@ -109,9 +117,9 @@
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
 <item>
-     <link>https://otorrinoenpilar.com/oto.html</link>
-     <title>Audifonos ofertas cirugías mejorar audición.</title>
-     <description>servicios de audífonos y audición</description>
+     <link>https://otorrinoenpilar.com/dormir.html</link>
+     <title>Medicina de sueño.</title>
+     <description>Medicina de sueño.</description>
      <ror:updatePeriod></ror:updatePeriod>
      <ror:sortOrder>2</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
