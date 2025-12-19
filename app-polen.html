@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pólenes en el Aire - Información y Pronóstico para Pilar, Escobar, CABA y AMBA</title>
+
+    <!-- Metadatos para SEO -->
+    <meta name="description" content="Consulta la concentración de polen y el pronóstico para Pilar, Escobar, CABA, AMBA y otras ciudades del mundo. Obtén recomendaciones higiénicas para manejar tus alergias.">
+    <meta name="keywords" content="polen, alergia, pronóstico polen, Pilar, Escobar, CABA, AMBA, Buenos Aires, otorrino, salud respiratoria, calidad del aire, alergias estacionales">
+    <meta name="author" content="Otorrino en Pilar">
+    <link rel="canonical" href="https://otorrinoenpilar.com/app-polen.html"> <!-- Reemplaza con la URL real de tu app -->
+
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="Pólenes en el Aire - Información y Pronóstico">
+    <meta property="og:description" content="Consulta la concentración de polen y el pronóstico para Pilar, Escobar, CABA, AMBA y otras ciudades del mundo. Obtén recomendaciones higiénicas para manejar tus alergias.">
+    <meta property="og:url" content="https://otorrinoenpilar.com/app-polen.html"> <!-- Reemplaza con la URL real de tu app -->
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:image" content="URL_DE_IMAGEN_PREVIEW.jpg"> Si tienes una imagen de vista previa para compartir -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pólenes en el Aire - Información y Pronóstico">
+    <meta name="twitter:description" content="Consulta la concentración de polen y el pronóstico para Pilar, Escobar, CABA, AMBA y otras ciudades del mundo. Obtén recomendaciones higiénicas para manejar tus alergias.">
+    <!-- <meta name="twitter:image" content="URL_DE_IMAGEN_PREVIEW.jpg"> Si tienes una imagen de vista previa para Twitter -->
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Fondo azul-gris claro */
+            color: #333;
+        }
+        .custom-card-rounded {
+            border-radius: 1rem; /* Esquinas más redondeadas, equivalente a Tailwind's rounded-2xl */
+        }
+        .btn-custom-primary {
+            background-color: #3b82f6; /* Azul */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            transition: background-color 0.2s ease-in-out;
+            border: none; /* Eliminar borde predeterminado de Bootstrap */
+        }
+        .btn-custom-primary:hover {
+            background-color: #2563eb; /* Azul más oscuro al pasar el ratón */
+            color: white; /* Asegurar que el color del texto permanezca blanco al pasar el ratón */
+        }
+        .pollen-level-low {
+            color: #22c55e; /* Verde */
+        }
+        .pollen-level-moderate {
+            color: #facc15; /* Amarillo */
+        }
+        .pollen-level-high {
+            color: #ef4444; /* Rojo */
+        }
+        .pollen-level-very-high {
+            color: #dc2626; /* Rojo más oscuro */
+        }
+        .recommendation-item {
+            background-color: #e2e8f0; /* Gris claro */
+            border-left: 4px solid #3b82f6; /* Borde azul */
+        }
+        /* Estilo para el spinner de carga */
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin {
+            animation: spin 1s linear infinite;
+        }
+        /* Ajuste para el botón de volver */
+        .btn-back-to-home {
+            background-color: #e9ecef; /* Gris claro */
+            color: #495057; /* Texto más oscuro */
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background-color 0.2s ease-in-out;
+        }
+        .btn-back-to-home:hover {
+            background-color: #dee2e6; /* Gris ligeramente más oscuro al pasar el ratón */
+            color: #495057; /* Asegurar que el color del texto permanezca */
+        }
+    </style>
+</head>
+<body class="d-flex align-items-center justify-content-center min-vh-100 p-4">
+    <!-- Botón para volver a la página de inicio -->
+    <div class="position-absolute top-0 start-0 p-3">
+        <a href="https://otorrinoenpilar.com/" target="_blank" class="btn btn-back-to-home d-flex align-items-center">
+            <!-- Icono de flecha izquierda (puedes usar un SVG, Font Awesome, o emoji) -->
+            &#8592; Volver a otorrinoenpilar.com
+        </a>
+    </div>
+
+    <div class="container p-4 bg-white custom-card-rounded shadow-lg">
+        <h1 class="text-center fw-bold mb-4 text-dark">Pólenes en el Aire</h1>
+
+        <div class="row g-4 mb-4">
+            <!-- Selector de Ubicación y Búsqueda -->
+            <div class="col-md-6">
+                <div class="card p-4 custom-card-rounded shadow-sm">
+                    <h2 class="card-title fs-4 fw-semibold mb-3 text-secondary">Seleccionar o Buscar Ubicación</h2>
+                    <div class="mb-3">
+                        <label for="locationSelect" class="form-label text-muted fw-medium">Ubicaciones Frecuentes:</label>
+                        <select id="locationSelect" class="form-select p-3 border border-secondary-subtle rounded-3 focus-ring">
+                            <option value="pilar">Pilar, Buenos Aires</option>
+                            <option value="escobar">Escobar, Buenos Aires</option>
+                            <option value="caba">CABA (Ciudad Autónoma de Buenos Aires)</option>
+                            <option value="amba">AMBA (Área Metropolitana de Buenos Aires)</option>
+                            <option value="">--- O buscar otra ---</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="customLocationInput" class="form-label text-muted fw-medium">Buscar otra ubicación (ciudad, país):</label>
+                        <input type="text" id="customLocationInput" placeholder="Ej: Madrid, España" class="form-control p-3 border border-secondary-subtle rounded-3 focus-ring">
+                    </div>
+                    <button id="fetchPollenBtn" class="btn btn-custom-primary w-100">Obtener Información de Polen</button>
+                </div>
+            </div>
+
+            <!-- Información Actual de Polen -->
+            <div class="col-md-6">
+                <div class="card p-4 custom-card-rounded shadow-sm">
+                    <h2 class="card-title fs-4 fw-semibold mb-3 text-secondary">Concentración Actual</h2>
+                    <div id="currentPollenInfo" class="text-center">
+                        <p class="text-muted fs-5">Selecciona o busca una ubicación para ver los datos.</p>
+                    </div>
+                    <!-- Indicador de carga -->
+                    <div id="loadingIndicator" class="d-none flex-column align-items-center justify-content-center mt-4">
+                        <div class="animate-spin d-inline-block" style="width: 2rem; height: 2rem; border: 4px solid #3b82f6; border-top-color: transparent; border-radius: 50%;"></div>
+                        <p class="text-primary mt-2">Cargando datos...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pronóstico y Recomendaciones -->
+        <div class="row g-4">
+            <!-- Pronóstico de Polen -->
+            <div class="col-lg-6">
+                <div class="card p-4 custom-card-rounded shadow-sm">
+                    <h2 class="card-title fs-4 fw-semibold mb-3 text-secondary">Pronóstico de Polen (Próximos Días)</h2>
+                    <div id="forecastPollenInfo">
+                        <p class="text-muted fs-5">El pronóstico aparecerá aquí.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Medidas Higiénicas -->
+            <div class="col-lg-6">
+                <div class="card p-4 custom-card-rounded shadow-sm">
+                    <h2 class="card-title fs-4 fw-semibold mb-3 text-secondary">Medidas Higiénicas Recomendadas</h2>
+                    <ul class="list-unstyled space-y-3">
+                        <li class="recommendation-item p-3 rounded-3 d-flex align-items-start">
+                            <span class="text-primary fs-4 me-3">&#10003;</span>
+                            <p class="text-dark mb-0">Mantener las ventanas cerradas en casa y en el coche, especialmente durante las horas de mayor concentración de polen (al amanecer y al atardecer).</p>
+                        </li>
+                        <li class="recommendation-item p-3 rounded-3 d-flex align-items-start">
+                            <span class="text-primary fs-4 me-3">&#10003;</span>
+                            <p class="text-dark mb-0">Usar gafas de sol al aire libre para proteger los ojos del polen.</p>
+                        </li>
+                        <li class="recommendation-item p-3 rounded-3 d-flex align-items-start">
+                            <span class="text-primary fs-4 me-3">&#10003;</span>
+                            <p class="text-dark mb-0">Evitar secar la ropa al aire libre, ya que el polen puede adherirse a ella.</p>
+                        </li>
+                        <li class="recommendation-item p-3 rounded-3 d-flex align-items-start">
+                            <span class="text-primary fs-4 me-3">&#10003;</span>
+                            <p class="text-dark mb-0">Ducharse y lavarse el pelo al regresar a casa para eliminar el polen del cuerpo y el cabello.</p>
+                        </li>
+                        <li class="recommendation-item p-3 rounded-3 d-flex align-items-start">
+                            <span class="text-primary fs-4 me-3">&#10003;</span>
+                            <p class="text-dark mb-0">Limpiar el polvo con un paño húmedo y aspirar regularmente para reducir el polen en el interior.</p>
+                        </li>
+                        <li class="recommendation-item p-3 rounded-3 d-flex align-items-start">
+                            <span class="text-primary fs-4 me-3">&#10003;</span>
+                            <p class="text-dark mb-0">Consultar a un médico o alergólogo si los síntomas son severos.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mención y Enlace al Sitio Web -->
+        <div class="mt-5 text-center text-muted small">
+            <p>Esta aplicación es un servicio de <a href="https://otorrinoenpilar.com/" target="_blank" class="text-primary fw-semibold text-decoration-none">otorrinoenpilar.com</a></p>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById('fetchPollenBtn').addEventListener('click', fetchPollenData);
+
+        // Función para mostrar el indicador de carga y limpiar los datos anteriores
+        function showLoading() {
+            document.getElementById('loadingIndicator').classList.remove('d-none');
+            document.getElementById('currentPollenInfo').innerHTML = ''; // Limpiar datos anteriores
+            document.getElementById('forecastPollenInfo').innerHTML = ''; // Limpiar datos anteriores
+        }
+
+        // Función para ocultar el indicador de carga
+        function hideLoading() {
+            document.getElementById('loadingIndicator').classList.add('d-none');
+        }
+
+        async function fetchPollenData() {
+            showLoading(); // Mostrar el indicador de carga al inicio de la operación
+
+            const selectedLocation = document.getElementById('locationSelect').value;
+            const customLocation = document.getElementById('customLocationInput').value.trim();
+            let locationToSearch = '';
+
+            // Mapeo de ubicaciones predefinidas a cadenas de búsqueda más específicas para Geocoding API
+            const predefinedLocationMap = {
+                'pilar': 'Pilar, Buenos Aires, Argentina',
+                'escobar': 'Escobar, Buenos Aires, Argentina',
+                'caba': 'Ciudad Autónoma de Buenos Aires, Argentina',
+                'amba': 'Área Metropolitana de Buenos Aires, Argentina'
+            };
+
+            // Priorizar la entrada personalizada si no está vacía
+            if (customLocation !== '') {
+                locationToSearch = customLocation;
+            } else if (selectedLocation !== '') {
+                // Usar el mapeo para las ubicaciones predefinidas
+                locationToSearch = predefinedLocationMap[selectedLocation] || selectedLocation;
+            } else {
+                // Si no se selecciona ni se ingresa nada, mostrar un mensaje de error
+                displayErrorMessage("Por favor, selecciona una ubicación o ingresa una para buscar.");
+                hideLoading(); // Ocultar el indicador de carga en caso de error
+                return;
+            }
+
+            // Define tu única llave de API aquí
+            // ¡IMPORTANTE! Reemplaza 'YOUR_SINGLE_GOOGLE_API_KEY' con tu llave real.
+            const GOOGLE_API_KEY = 'AIzaSyC29M6MgzRWcHFJ85GHmR1_iGq8g_0HXCo';
+
+            if (GOOGLE_API_KEY === 'YOUR_SINGLE_GOOGLE_API_KEY') {
+                displayErrorMessage("Por favor, reemplaza 'YOUR_SINGLE_GOOGLE_API_KEY' con tu llave real en el código.");
+                console.warn("La llave de API no está configurada. Usando datos simulados. Por favor, configura tu llave real para obtener datos en vivo.");
+                useSimulatedData(locationToSearch);
+                hideLoading(); // Ocultar el indicador de carga
+                return;
+            }
+
+            try {
+                // Paso 1: Llamada a la API de Geocodificación para obtener latitud y longitud
+                let geocodingUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(locationToSearch)}&key=${GOOGLE_API_KEY}`;
+                // Solo añadir el componente de país si la ubicación seleccionada es una de las predefinidas de Argentina
+                if (predefinedLocationMap[selectedLocation] && predefinedLocationMap[selectedLocation].includes('Argentina')) {
+                    geocodingUrl += `&components=country:AR`;
+                }
+
+                const geocodingResponse = await fetch(geocodingUrl);
+                const geocodingData = await geocodingResponse.json();
+
+                console.log('Respuesta de Geocoding API:', geocodingData); // Para depuración
+
+                if (geocodingData.status !== 'OK' || geocodingData.results.length === 0) {
+                    displayErrorMessage(`No se pudo encontrar la ubicación: "${locationToSearch}". Por favor, intenta con otra o verifica la ortografía.`);
+                    hideLoading(); // Ocultar el indicador de carga
+                    return;
+                }
+
+                const { lat, lng } = geocodingData.results[0].geometry.location;
+
+                // Paso 2: Llamada a la Pollen API (v1)
+                const pollenApiUrl = `https://pollen.googleapis.com/v1/forecast:lookup?location.latitude=${lat}&location.longitude=${lng}&days=3&key=${GOOGLE_API_KEY}`;
+
+                const pollenResponse = await fetch(pollenApiUrl);
+
+                if (!pollenResponse.ok) {
+                    const errorText = await pollenResponse.text();
+                    console.error('Error en la respuesta de Pollen API:', errorText); // Para depuración
+                    throw new Error(`Error en la API de Polen (${pollenResponse.status}): ${errorText}`);
+                }
+
+                const pollenData = await pollenResponse.json();
+                console.log('Respuesta de Pollen API:', pollenData); // Para depuración
+
+                // Procesar y mostrar los datos reales de polen
+                processAndDisplayRealPollenData(pollenData, locationToSearch);
+
+            } catch (error) {
+                console.error('Error general al obtener datos de polen:', error);
+                displayErrorMessage(`Ocurrió un error al obtener los datos: ${error.message}. Por favor, inténtalo de nuevo. Verifica tu llave de API y las restricciones.`);
+                // Fallback a datos simulados si la llamada a la API real falla
+                useSimulatedData(locationToSearch);
+            } finally {
+                hideLoading(); // Asegurarse de ocultar el indicador de carga siempre
+            }
+        }
+
+        // Función auxiliar para usar datos simulados (útil para desarrollo y pruebas)
+        function useSimulatedData(location) {
+            const simulatedData = {
+                pilar: {
+                    current: {
+                        level: 'moderate',
+                        description: 'Nivel moderado de polen de gramíneas y olivo.',
+                        dominantType: 'Gramíneas',
+                        concentration: '50-100 granos/m³'
+                    },
+                    forecast: [
+                        { day: 'Hoy', level: 'moderate', description: 'Moderado' },
+                        { day: 'Mañana', level: 'high', description: 'Alto' },
+                        { day: 'Pasado Mañana', level: 'moderate', description: 'Moderado' }
+                    ]
+                },
+                escobar: {
+                    current: {
+                        level: 'high',
+                        description: 'Nivel alto de polen de plátano y ciprés.',
+                        dominantType: 'Plátano',
+                        concentration: '100-250 granos/m³'
+                    },
+                    forecast: [
+                        { day: 'Hoy', level: 'high', description: 'Alto' },
+                        { day: 'Mañana', level: 'very-high', description: 'Muy Alto' },
+                        { day: 'Pasado Mañana', level: 'high', description: 'Alto' }
+                    ]
+                },
+                caba: {
+                    current: {
+                        level: 'moderate',
+                        description: 'Nivel moderado de polen de fresno y morera.',
+                        dominantType: 'Fresno',
+                        concentration: '60-120 granos/m³'
+                    },
+                    forecast: [
+                        { day: 'Hoy', level: 'moderate', description: 'Moderado' },
+                        { day: 'Mañana', level: 'high', description: 'Alto' },
+                        { day: 'Pasado Mañana', level: 'moderate', description: 'Moderado' }
+                    ]
+                },
+                amba: {
+                    current: {
+                        level: 'high',
+                        description: 'Nivel alto general de polen de gramíneas y árboles.',
+                        dominantType: 'Gramíneas y Árboles',
+                        concentration: '90-200 granos/m³'
+                    },
+                    forecast: [
+                        { day: 'Hoy', level: 'high', description: 'Alto' },
+                        { day: 'Mañana', level: 'very-high', description: 'Muy Alto' },
+                        { day: 'Pasado Mañana', level: 'high', description: 'Alto' }
+                    ]
+                },
+                // Datos simulados genéricos para cualquier otra ubicación
+                other_location: {
+                    current: {
+                        level: 'low',
+                        description: 'Nivel bajo de polen en esta región.',
+                        dominantType: 'Varios',
+                        concentration: '10-40 granos/m³'
+                    },
+                    forecast: [
+                        { day: 'Hoy', level: 'low', description: 'Bajo' },
+                        { day: 'Mañana', level: 'moderate', description: 'Moderado' },
+                        { day: 'Pasado Mañana', level: 'low', description: 'Bajo' }
+                    ]
+                }
+            };
+
+            let data;
+            if (simulatedData[location.toLowerCase()]) {
+                data = simulatedData[location.toLowerCase()];
+            } else {
+                data = simulatedData['other_location'];
+                data.current.description = `Nivel de polen simulado para "${location}".`;
+            }
+            displayPollenData(data);
+        }
+
+        // Función para procesar y mostrar los datos reales de polen de la Pollen API (v1)
+        // ¡IMPORTANTE! Esta función se basa en la estructura de respuesta de la Pollen API v1.
+        // Siempre consulta la documentación oficial de Google Maps Platform Pollen API para el formato exacto.
+        function processAndDisplayRealPollenData(apiData, locationName) {
+            let currentLevel = 'desconocido'; // Cambiado de 'unknown'
+            let currentDescription = `Datos de polen para ${locationName}.`;
+            let dominantType = 'N/A';
+            let concentration = 'N/A';
+            const forecast = [];
+
+            console.log('Datos brutos de Pollen API en processAndDisplayRealPollenData:', apiData); // Depuración
+
+            if (apiData && apiData.dailyInfo && apiData.dailyInfo.length > 0) {
+                const today = apiData.dailyInfo[0]; // Información del día actual
+
+                if (today.pollenTypeInfo && today.pollenTypeInfo.length > 0) {
+                    let maxIndexValue = -1;
+                    let dominantPollenToday = null;
+
+                    today.pollenTypeInfo.forEach(pollen => {
+                        // Verificamos si indexInfo existe y tiene un valor numérico
+                        if (pollen.indexInfo && typeof pollen.indexInfo.value === 'number') {
+                            // Priorizamos un indexInfo válido con el valor más alto
+                            if (pollen.indexInfo.value > maxIndexValue) {
+                                maxIndexValue = pollen.indexInfo.value;
+                                dominantPollenToday = pollen;
+                            }
+                        }
+                    });
+
+                    if (dominantPollenToday) {
+                        // Log the category to debug
+                        console.log('Categoría de la API para el polen dominante de hoy (indexInfo.category):', dominantPollenToday.indexInfo.category);
+                        console.log('Valor UPI para el polen dominante de hoy (indexInfo.value):', dominantPollenToday.indexInfo.value);
+
+                        let simpleCategory = 'desconocido'; // Cambiado de 'unknown'
+                        const value = dominantPollenToday.indexInfo.value;
+                        const apiCategory = dominantPollenToday.indexInfo.category;
+
+                        // Mapeo basado en el valor numérico del índice UPI (0-5)
+                        if (value === 0) simpleCategory = 'none';
+                        else if (value === 1) simpleCategory = 'low'; // Very Low
+                        else if (value === 2) simpleCategory = 'low'; // Low
+                        else if (value === 3) simpleCategory = 'moderate';
+                        else if (value === 4) simpleCategory = 'high';
+                        else if (value === 5) simpleCategory = 'very-high';
+                        else simpleCategory = 'desconocido'; // Cambiado de 'unknown'
+
+                        currentLevel = simpleCategory;
+                        currentDescription = `Nivel ${currentLevel.charAt(0).toUpperCase() + currentLevel.slice(1)} de polen de ${dominantPollenToday.displayName}.`;
+                        dominantType = dominantPollenToday.displayName;
+                        concentration = `${dominantPollenToday.indexInfo.value} (índice UPI)`;
+                    } else {
+                        // Si no se encontró indexInfo válido para ningún tipo de polen hoy
+                        console.warn('No se encontró información de índice de polen válida (indexInfo) para el día actual. Mostrando como "Desconocido".');
+                        currentLevel = 'desconocido'; // Cambiado de 'unknown'
+                        currentDescription = `Nivel de polen desconocido para ${locationName}.`;
+                        // Intentar obtener el tipo dominante si hay al menos uno, aunque no tenga índice
+                        dominantType = today.pollenTypeInfo[0] ? today.pollenTypeInfo[0].displayName : 'N/A';
+                        concentration = 'N/A';
+                    }
+                } else {
+                    // Si pollenTypeInfo está vacío o no existe para hoy
+                    console.warn('No hay pollenTypeInfo disponible para hoy en la respuesta de la API.');
+                    currentLevel = 'desconocido'; // Cambiado de 'unknown'
+                    currentDescription = `No hay datos de polen disponibles para ${locationName}.`;
+                    dominantType = 'N/A';
+                    concentration = 'N/A';
+                }
+
+                // Poblar el pronóstico para los próximos días
+                apiData.dailyInfo.forEach((dayInfo, index) => {
+                    let dayLabel = '';
+                    if (index === 0) dayLabel = 'Hoy';
+                    else if (index === 1) dayLabel = 'Mañana';
+                    else if (index === 2) dayLabel = 'Pasado Mañana';
+                    else dayLabel = `Día ${index + 1}`;
+
+                    let dayLevel = 'desconocido'; // Cambiado de 'unknown'
+                    if (dayInfo.pollenTypeInfo && dayInfo.pollenTypeInfo.length > 0) {
+                        let dayMaxIndex = -1;
+                        let dayDominantPollen = null;
+                        dayInfo.pollenTypeInfo.forEach(pollen => {
+                            if (pollen.indexInfo && typeof pollen.indexInfo.value === 'number') {
+                                if (pollen.indexInfo.value > dayMaxIndex) {
+                                    dayMaxIndex = pollen.indexInfo.value;
+                                    dayDominantPollen = pollen;
+                                }
+                            }
+                        });
+                        if (dayDominantPollen) {
+                            const value = dayDominantPollen.indexInfo.value;
+                            if (value === 0) dayLevel = 'none';
+                            else if (value === 1) dayLevel = 'low'; // Very Low
+                            else if (value === 2) dayLevel = 'low'; // Low
+                            else if (value === 3) dayLevel = 'moderate';
+                            else if (value === 4) dayLevel = 'high';
+                            else if (value === 5) dayLevel = 'very-high';
+                            else dayLevel = 'desconocido'; // Cambiado de 'unknown'
+                        } else {
+                            console.warn(`No se encontró información de índice de polen válida (indexInfo) para el día ${dayLabel}.`);
+                            dayLevel = 'desconocido'; // Cambiado de 'unknown'
+                        }
+                    } else {
+                        console.warn(`No hay pollenTypeInfo disponible para el día ${dayLabel}.`);
+                        dayLevel = 'desconocido'; // Cambiado de 'unknown'
+                    }
+                    forecast.push({ day: dayLabel, level: dayLevel, description: dayLevel.charAt(0).toUpperCase() + dayLevel.slice(1) });
+                });
+            } else {
+                console.warn('dailyInfo no está disponible o está vacío en la respuesta de la API de Polen.');
+                displayErrorMessage(`No se encontraron datos de polen detallados para ${locationName}.`);
+                return;
+            }
+
+            // Estructurar los datos procesados para que coincidan con la función displayPollenData
+            const processedData = {
+                current: {
+                    level: currentLevel,
+                    description: currentDescription,
+                    dominantType: dominantType,
+                    concentration: concentration
+                },
+                forecast: forecast
+            };
+
+            displayPollenData(processedData);
+        }
+
+        function displayPollenData(data) {
+            const currentPollenInfo = document.getElementById('currentPollenInfo');
+            const forecastPollenInfo = document.getElementById('forecastPollenInfo');
+
+            if (!data) {
+                displayErrorMessage("No se encontraron datos para esta ubicación.");
+                return;
+            }
+
+            // Mostrar Información de Polen Actual
+            let currentLevelClass = '';
+            switch (data.current.level) {
+                case 'low': currentLevelClass = 'pollen-level-low'; break;
+                case 'moderate': currentLevelClass = 'pollen-level-moderate'; break;
+                case 'high': currentLevelClass = 'pollen-level-high'; break;
+                case 'very-high': currentLevelClass = 'pollen-level-very-high'; break;
+                case 'none': currentLevelClass = 'text-success'; break; // Color para "none"
+                case 'desconocido': currentLevelClass = 'text-secondary'; break; // Color para "desconocido"
+                default: currentLevelClass = 'text-secondary'; break; // Color por defecto si el nivel es desconocido
+            }
+
+            // Capitalizar la primera letra del nivel para mostrar
+            const displayLevel = data.current.level.charAt(0).toUpperCase() + data.current.level.slice(1);
+
+            currentPollenInfo.innerHTML = `
+                <p class="display-4 fw-bold ${currentLevelClass} mb-2">${displayLevel.toUpperCase()}</p>
+                <p class="fs-5 fw-medium text-dark mb-1">${data.current.description}</p>
+                <p class="fs-6 text-muted">Tipo dominante: <span class="fw-semibold">${data.current.dominantType}</span></p>
+                <p class="fs-6 text-muted">Concentración: <span class="fw-semibold">${data.current.concentration}</span></p>
+            `;
+
+            // Mostrar Información de Pronóstico de Polen
+            let forecastHtml = '<ul class="list-unstyled space-y-3">';
+            if (data.forecast && data.forecast.length > 0) {
+                data.forecast.forEach(day => {
+                    let dayLevelClass = '';
+                    switch (day.level) {
+                        case 'low': dayLevelClass = 'pollen-level-low'; break;
+                        case 'moderate': dayLevelClass = 'pollen-level-moderate'; break;
+                        case 'high': dayLevelClass = 'pollen-level-high'; break;
+                        case 'very-high': dayLevelClass = 'pollen-level-very-high'; break;
+                        case 'none': dayLevelClass = 'text-success'; break; // Color para "none"
+                        case 'desconocido': dayLevelClass = 'text-secondary'; break; // Color para "desconocido"
+                        default: dayLevelClass = 'text-secondary'; break;
+                    }
+                    forecastHtml += `
+                        <li class="d-flex justify-content-between align-items-center bg-light p-3 rounded-3 shadow-sm">
+                            <span class="fw-medium text-dark">${day.day}</span>
+                            <span class="fs-5 fw-semibold ${dayLevelClass}">${day.description.charAt(0).toUpperCase() + day.description.slice(1)}</span>
+                        </li>
+                    `;
+                });
+            } else {
+                forecastHtml += `<li class="text-muted fs-5">No hay pronóstico disponible.</li>`;
+            }
+            forecastHtml += '</ul>';
+            forecastPollenInfo.innerHTML = forecastHtml;
+        }
+
+        function displayErrorMessage(message) {
+            const currentPollenInfo = document.getElementById('currentPollenInfo');
+            const forecastPollenInfo = document.getElementById('forecastPollenInfo');
+            currentPollenInfo.innerHTML = `<p class="text-danger fs-5">${message}</p>`;
+            forecastPollenInfo.innerHTML = `<p class="text-danger fs-5">${message}</p>`;
+            hideLoading(); // Asegurarse de ocultar el indicador de carga en caso de error
+        }
+    </script>
+</body>
+</html>
+
+
+<!--
+clave api
+AIzaSyC29M6MgzRWcHFJ85GHmR1_iGq8g_0HXCo
+
+
+AIzaSyC29M6MgzRWcHFJ85GHmR1_iGq8g_0HXCo
+
+-->

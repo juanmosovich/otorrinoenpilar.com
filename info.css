@@ -17,6 +17,7 @@ button {
     font-size: large;
     font-weight: bold;
     border: none;
+    transition: all 0.3s ease;
 }
 
 button:hover {
@@ -24,7 +25,13 @@ button:hover {
    color: black;
    border-bottom: solid 3px darkblue;
    font-weight: bolder;
-   
+}
+
+.separador {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
 }
 
 #faq {
@@ -109,27 +116,8 @@ code {
 @media only screen and (max-width:815px) {
     #navbar ul {
         border: 0;
-        height: 207px}
-    button {
-            background-color: blue;
-            color: white;
-            border-radius: 15px;
-            cursor: pointer;
-            min-width: 150px;
-            min-height: 60px;
-            font-size: large;
-            font-weight: bold;
-            border: none;
-        }
-        
-        button:hover {
-           background-color: rgb(186, 186, 235);
-           color: black;
-           border-bottom: solid 3px darkblue;
-           font-weight: bolder;
-           
-        }
-        
+        height: 207px
+    }
     #navbar {
         background-color: white;
         position: absolute;
@@ -160,24 +148,4 @@ code {
         padding-right: 45px;
         min-width: 233px
     }
-    button {
-        background-color: blue;
-        color: white;
-        border-radius: 15px;
-        cursor: pointer;
-        min-width: 150px;
-        min-height: 60px;
-        font-size: large;
-        font-weight: bold;
-        border: none;
-    }
-    
-    button:hover {
-       background-color: rgb(186, 186, 235);
-       color: black;
-       border-bottom: solid 3px darkblue;
-       font-weight: bolder;
-       
-    }
-    
 }
