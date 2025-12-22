@@ -360,19 +360,19 @@
         </nav>
         <h2><a href="#ivn" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">1 ¿Respiro mal por mi nariz?.</a></h2>
         <hr>
-        <h2 class="h4"><a href="#nose" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">2 Cuestionario de valoración respiratoria (NOSE).</a></h2>
+        <h2><a href="#nose" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">2 Cuestionario de valoración respiratoria (NOSE).</a></h2>
         <hr>
-        <h2 class="h4"><a href="#higienico-dieteticas" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">3 Medidas higiénico-dietéticas y farmacológicas.</a></h2>
+        <h2><a href="#higienico-dieteticas" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">3 Medidas higiénico-dietéticas y farmacológicas.</a></h2>
         <hr>
-        <h2 class="h4"><a href="#cornete" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">4 Cornetes y tabique nasal. Rinoplastias.</a></h2>
+        <h2><a href="#cornete" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">4 Cornetes y tabique nasal. Rinoplastias.</a></h2>
         <hr>
-        <h2 class="h4"><a href="#sinusitis" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">5 Sinusitis agudas y crónicas.</a></h2>
+        <h2><a href="#sinusitis" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">5 Sinusitis agudas y crónicas.</a></h2>
        <hr>
-        <h2 class="h4"><a href="#epistaxis" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">6 Sangrados nasales y traumatismos de nariz.</a></h2>
+        <h2><a href="#epistaxis" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">6 Sangrados nasales y traumatismos de nariz.</a></h2>
         <hr>
-        <h2 class="h4"><a href="#tabaco" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">7 Dejar de fumar. Consejos.</a></h2>
+        <h2><a href="#tabaco" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">7 Dejar de fumar. Consejos.</a></h2>
         <hr>
-        <h2 class="h4"><a href="#olfato" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">8 Problemas en el Olfato.</a></h2>
+        <h2><a href="#olfato" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">8 Problemas en el Olfato.</a></h2>
         <hr>
      </div>
 
@@ -3714,5 +3714,76 @@ document.addEventListener('DOMContentLoaded', () => {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <!-- Font Awesome JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+  <!-- Modal de Reseña -->
+  <div class="modal fade" id="modalResena" tabindex="-1" aria-labelledby="modalResenaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center px-3 px-md-4 pb-3">
+          <div class="mb-2 mb-md-3">
+            <span style="font-size: 2.5rem;">⭐</span>
+          </div>
+          <h3 class="modal-title mb-2 mb-md-3 fs-5 fs-md-4" id="modalResenaLabel">¿Cómo fue tu experiencia?</h3>
+          <p class="text-muted small">Tu opinión es muy valiosa para nosotros y para otros pacientes. ¿Podrías dedicarnos un minuto para calificarnos?</p>
+        </div>
+        <div class="modal-footer border-0 d-flex flex-column flex-sm-row justify-content-center gap-2 pt-0">
+          <button type="button" class="btn btn-light btn-sm" data-bs-dismiss="modal">Más tarde</button>
+          <a href="https://g.page/r/CWbtrBOdyGoaEBM/review" class="btn btn-primary btn-sm px-3" target="_blank" rel="noopener noreferrer">Calificar ahora</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+      if (sessionStorage.getItem('resenaMostrada')) {
+          return;
+      }
+      let tiempoMinimo = 60000;
+      let scrollRequerido = 50;
+      let tiempoInicio = Date.now();
+      let scrollRealizado = false;
+      let modalMostrado = false;
+      function obtenerPorcentajeScroll() {
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          return (scrollTop / scrollHeight) * 100;
+      }
+      function verificarScroll() {
+          if (obtenerPorcentajeScroll() >= scrollRequerido) {
+              scrollRealizado = true;
+          }
+      }
+      function mostrarModal() {
+          if (modalMostrado) return;
+          modalMostrado = true;
+          var myModal = new bootstrap.Modal(document.getElementById('modalResena'));
+          myModal.show();
+          sessionStorage.setItem('resenaMostrada', 'true');
+          window.removeEventListener('scroll', verificarScroll);
+          document.removeEventListener('mouseleave', detectarSalida);
+      }
+      function verificarCondiciones() {
+          const tiempoTranscurrido = Date.now() - tiempoInicio >= tiempoMinimo;
+          if (tiempoTranscurrido && scrollRealizado) {
+              mostrarModal();
+          }
+      }
+      function detectarSalida(e) {
+          if (e.clientY <= 0 && (Date.now() - tiempoInicio >= 30000)) {
+              mostrarModal();
+          }
+      }
+      window.addEventListener('scroll', function() {
+          verificarScroll();
+          verificarCondiciones();
+      });
+      document.addEventListener('mouseleave', detectarSalida);
+      setInterval(verificarCondiciones, 5000);
+  });
+  </script>
 </body>
 </html>

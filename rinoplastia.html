@@ -31,9 +31,9 @@
 <meta property="og:title" content="Rinoplastia y Rinoseptumplastia en Pilar, Buenos Aires | Simulación Digital Preoperatoria">
 <meta property="og:description" content="Descubra cómo puede visualizar el resultado de su rinoplastia antes de la cirugía con simulación digital. Conozca nuestros procedimientos en Pilar, Buenos Aires.">
 <meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/rinop.webp">
-<meta property="og:url" content="https://www.otorrinoenpilar.com/rinoplastias.html">
+<meta property="og:url" content="https://www.otorrinoenpilar.com/rinoplastia.html">
 <meta property="og:type" content="article">
-<meta property="og:locale" content="es_ES">
+<meta property="og:locale" content="es_AR">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
@@ -283,6 +283,56 @@
             height: auto;
             object-fit: cover;
           }
+          
+          /* Evitar que WhatsApp flotante cubra contenido */
+          main, footer {
+            padding-bottom: 100px;
+          }
+        }
+        
+        /* Skip link visible on focus */
+        .visually-hidden-focusable:focus {
+          width: auto;
+          height: auto;
+          clip: auto;
+        }
+        
+        /* Mejorar estados focus para accesibilidad */
+        a:focus, button:focus, input:focus, textarea:focus, select:focus {
+          outline: 3px solid #0d6efd;
+          outline-offset: 2px;
+        }
+        
+        /* Mejorar contraste en navegación */
+        .navbar-light .navbar-nav .nav-link:hover,
+        .navbar-light .navbar-nav .nav-link:focus {
+          background-color: rgba(13, 110, 253, 0.1);
+          border-radius: 4px;
+        }
+        
+        /* Smooth scroll */
+        html {
+          scroll-behavior: smooth;
+        }
+        
+        /* Mejora de transiciones en cards */
+        .card {
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .card:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        /* Imágenes clickeables con cursor pointer */
+        .card img[onclick] {
+          cursor: pointer;
+          transition: opacity 0.2s ease;
+        }
+        
+        .card img[onclick]:hover {
+          opacity: 0.9;
         }
         
         /* Tablet responsive improvements */
@@ -299,10 +349,12 @@
 </head>
 
 <body id="top">
+  <!-- Skip link para accesibilidad -->
+  <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 bg-primary text-white p-2 m-2" style="z-index: 9999;">Saltar al contenido principal</a>
 
-  <header class="my-5">
+  <header>
     <!-- Simplificado para mobile first: el brand y el botón se distribuyen en cualquier pantalla -->
-    <nav class="navbar navbar-light bg-light py-3 shadow-sm">
+    <nav class="navbar navbar-light bg-light py-3 shadow-sm" aria-label="Navegación principal">
       <div class="container-fluid d-flex justify-content-between px-4">
         <!-- El texto del brand es un poco más pequeño en móvil con 'fs-5' -->
         <a class="navbar-brand text-primary fw-bold fs-5" href="https://www.otorrinoenpilar.com/">
@@ -324,7 +376,7 @@
     </div>
   </header>
    
-    <main>
+    <main id="main-content">
     <!-- Contenido introductorio optimizado para SEO -->
     <div class="container my-4">
       <p class="lead">
@@ -335,17 +387,17 @@
       </p>
     </div>
       <div class="container-sm text-center my-3 py-3">
-        <nav aria-label="breadcrumb">
+        <nav aria-label="Migas de pan">
           <ol class="breadcrumb justify-content-center">
             <li class="breadcrumb-item"><a href="https://www.otorrinoenpilar.com/">Inicio</a></li>
             <li class="breadcrumb-item active" aria-current="page">Rinoplastia</li>
           </ol>
         </nav>
-        <h2><a href="#consulrino" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Consúltenos su caso.</a></h2>
+        <h2 class="h3"><a href="#consulrino" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Consúltenos su caso</a></h2>
         <hr>
-        <h2 class="h4"><a href="#info" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Información general sobre rinoplastias.</a></h2>
+        <h2 class="h4"><a href="#info" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Información general sobre rinoplastias</a></h2>
         <hr>
-        <h2 class="h4"><a href="#galeria" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Galería de casos clínicos de rinoplastia.</a></h2>
+        <h2 class="h4"><a href="#galeria" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Galería de casos clínicos de rinoplastia</a></h2>
         <hr>
       </div>
        
@@ -354,13 +406,13 @@
       
  <div class="container-sm text-center my-4">
             <div class="card contact-card">
-                <img src="./imagenes/perf-nariz.webp" class="card-img-top mx-auto mb-4" alt="mujer de perfil antes de rinoplastia" loading="lazy">
+                <img src="./imagenes/perf-nariz.webp" class="card-img-top mx-auto mb-4" alt="Perfil femenino antes de rinoplastia - Consulta de cirugía nasal" loading="lazy" width="120" height="120">
                 <div class="card-body p-0">
                     <p class="card-text mb-4" style="color: #555;">
                         Resuelva todas sus dudas sobre la rinoseptumplastia de forma rápida y confidencial a través de WhatsApp.
                     </p>
-                    <a href="https://api.whatsapp.com/send?phone=541168212512" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-                        <i class="bi bi-whatsapp me-2"></i> Iniciar chat
+                    <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20quisiera%20consultar%20sobre%20rinoplastia" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" aria-label="Iniciar chat por WhatsApp">
+                        <i class="fab fa-whatsapp me-2"></i> Iniciar chat
                     </a>
                 </div>
             </div>
@@ -375,7 +427,7 @@
 <div class="card-group p-1">
   
     <div class="card p-3">
-        <img loading="lazy" src="./imagenes/blogrino2.webp" class="card-img-top" alt="Perfil de una persona con una nariz armoniosa, mostrando mejora estética y respiración clara después de la rinoplastia." style="max-height: 230px; width: auto;">
+        <img loading="lazy" src="./imagenes/blogrino2.webp" class="card-img-top" alt="Perfil de una persona con una nariz armoniosa, mostrando mejora estética y respiración clara después de la rinoplastia" style="max-height: 230px; width: auto;" width="350" height="230">
         <div class="card-body">
             <h3 class="card-title h5">Rinoplastia: La Armonía Perfecta entre Belleza y Salud.</h3>
             <article class="card-text">
@@ -1009,8 +1061,8 @@
 
 <!-- Botón flotante de WhatsApp -->
 <div class="floating-whatsapp">
-  <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20me%20gustar%C3%ADa%20coordinar%20una%20consulta" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-    <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" loading="lazy">
+  <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20quisiera%20consultar%20sobre%20rinoplastia" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp sobre rinoplastia">
+    <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" loading="lazy" width="35" height="35">
   </a>
 </div>
 
@@ -1116,7 +1168,7 @@
                 if (button.getAttribute('aria-expanded') === 'true') {
                     button.textContent = 'Ver menos';
                 } else {
-                    button.textContent = 'Ver más';
+                    button.textContent = '¡Conoce más!';
                 }
             }, 300); // Tiempo para asegurar la actualización después de la animación del colapso
         });

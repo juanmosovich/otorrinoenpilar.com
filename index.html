@@ -17,6 +17,10 @@
 <meta name="theme-color" content="#003366">
 <meta name="author" content="Dr. Juan Mosovich">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<!-- Preconnect para mejor performance -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://www.google.com" crossorigin>
 <!--bootstrap y font awesome-->
 <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3 crossorigin=anonymous>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,9 +28,8 @@
 <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-<link rel="manifest" href="./site.webmanifest">
+<link rel="manifest" href="./favicon/site.webmanifest">
 <!--favicon-->
-<link rel=manifest href=./site.webmanifest>
 <title>Dr. Juan Mosovich | Otorrinolaringólogo en Pilar y Zona Norte | Especialista en Rinoplastia y Apnea del Sueño</title>
 <meta name="description" content="Consultorio del Dr. Juan Mosovich, médico otorrinolaringólogo especialista universitario en Pilar y Zona Norte. Experto en rinoplastia, cirugía nasal, tratamiento de apnea del sueño, ronquidos, problemas de oído, garganta y otorrinolaringología pediátrica. Atención presencial y online.">
 <meta name="keywords" content="otorrinolaringólogo pilar, rinoplastia zona norte, apnea del sueño, cirugía nariz, audífonos, ronquidos, Dr. Mosovich">
@@ -56,7 +59,7 @@
       "description": "Especialista en Otorrinolaringología con amplia experiencia en diagnóstico y tratamiento de trastornos del oído, nariz y garganta. Ofrecemos servicios de rinoplastia, tratamiento de ronquidos y apneas del sueño, y atención pediátrica. Consultas presenciales y online en Pilar y Zona Norte AMBA, Argentina.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Caamaño y Panamericana",
+        "streetAddress": "Caamaño 1100, Edificio Agora 2, Piso 1, Oficina 110",
         "addressLocality": "Pilar",
         "addressRegion": "Buenos Aires",
         "postalCode": "1631",
@@ -102,6 +105,47 @@
         ]
       }
     }
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Dónde está ubicado el consultorio sobre Panamericana?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El Dr. Mosovich atiende en dos ubicaciones sobre Panamericana: Centro Médico Pilares (Panamericana Km 49.5, lunes, miércoles, jueves, viernes y sábados) y Complejo 46 Plaza Edificio Agora 2 (Panamericana km 46, lunes a viernes desde 19 hs y sábados 11:30 hs)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Atiende en Pilar centro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, en la Clínica Fátima Pilar, ubicada en la calle Víctor Vergani 830, Pilar. Días lunes de 16 a 17:30 hs y jueves de 8:30 a 11:00 hs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo coordino una consulta de urgencia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las urgencias son solo en forma particular y están sujetas a disponibilidad. Puede coordinarlas por WhatsApp al 11-6821-2512."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Acepta obras sociales?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, acepta múltiples obras sociales y prepagas en los distintos centros médicos. OSDE puede coordinarse por WhatsApp. Para otras obras sociales, debe solicitar turno directamente en cada centro de atención."
+      }
+    }
+  ]
+}
 </script>
 <style>
 
@@ -200,6 +244,11 @@
       font-size: 1rem;
       padding: 0.5rem 1rem;
     }
+    
+    /* Evitar que WhatsApp flotante cubra contenido importante */
+    main, footer {
+      padding-bottom: 100px;
+    }
   }
   
   /* Smooth scroll */
@@ -220,6 +269,82 @@
   .btn {
     transition: all 0.3s ease;
   }
+  
+  .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  /* Skip link visible on focus */
+  .visually-hidden-focusable:focus {
+    width: auto;
+    height: auto;
+    clip: auto;
+  }
+  
+  /* Mejorar contraste de navegación */
+  .navbar-light .navbar-nav .nav-link {
+    font-weight: 500;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    outline: 2px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 2px;
+  }
+  
+  /* Mejorar estados focus para accesibilidad */
+  a:focus, button:focus, input:focus, textarea:focus, select:focus {
+    outline: 3px solid #0d6efd;
+    outline-offset: 2px;
+  }
+  
+  /* Validación de formulario */
+  .form-control.is-invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  }
+  
+  .form-control.is-valid {
+    border-color: #198754;
+    padding-right: calc(1.5em + 0.75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23198754' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(0.375em + 0.1875rem) center;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+  }
+  
+  /* Botón de envío con estado loading */
+  .btn-loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.65;
+  }
+  
+  .btn-loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spinner 0.6s linear infinite;
+  }
+  
+  @keyframes spinner {
+    to { transform: rotate(360deg); }
+  }
  /* alerta por vacaciones */
           .contenedor-alerta-personalizado {
            display: block;
@@ -233,6 +358,8 @@
 </head>
 
 <body class="p-1 m-1" style="background-color: #003366;">
+  <!-- Skip link para accesibilidad -->
+  <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 bg-primary text-white p-2 m-2" style="z-index: 9999;">Saltar al contenido principal</a>
   <!-- Alerta por vacaciones Contenedor principal de la alerta con clases de Bootstrap para estilo y ocultado inicial -->
 
  <div class="contenedor-alerta-personalizado">
@@ -253,12 +380,12 @@
 <nav class="navbar navbar-expand-lg navbar-light text-white sticky-top" style="background-color: #003366;">
 <div class=container-fluid>
 <a class="navbar-brand text-white" href="#"><strong>OtorrinoEnPilar.com</strong></a>
-<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarNav aria-controls=navbarNav aria-expanded=false aria-label="Toggle navigation">
+<button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarNav aria-controls=navbarNav aria-expanded=false aria-label="Abrir menú de navegación">
 <div><p class="text-white p-0 mb-1"><small>menú</small></p></div>
   <span style="background-color: white;" class=navbar-toggler-icon></span>
 </button>
 <div class="collapse navbar-collapse" id=navbarNav>
-<div class=navbar-nav>
+<ul class="navbar-nav">
  <li class=nav-item>
   <a class="nav-link text-white" href="#servicios">Servicios</a>
 </li>
@@ -290,11 +417,15 @@
   <a class="nav-link text-white" href="https://www.otorrinoenpilar.com/dormir.html">Sueño</a>
 </li>
 <li class=nav-item>
-  <a class="nav-link text-white" href="https://www.otorrinoenpilar.com/info.html#qr-web">Código QR</a>
+  <a class="nav-link text-white" href="https://www.otorrinoenpilar.com/info.html#qr-web">QR</a>
+</li>
+<li class=nav-item>
+  <a class="nav-link text-white" href="#dejarResenaGoogle">Tu Opinión</a>
 </li>
 <li class="nav-item"> 
-    <a class="nav-link text-white" rel="noopener-noreferrer" target="_blank" href="https://www.ketohoy.com/">Dieta</a>
+    <a class="nav-link text-white" rel="noopener noreferrer" target="_blank" href="https://www.ketohoy.com/">Dieta</a>
 </li>
+</ul>
 </div>
 </div>
 </nav>
@@ -307,28 +438,28 @@
       <h1 class="card-title h2"><a class="link-dark" href="./info.html#cv">Dr. Juan Mosovich - Otorrinolaringólogo en Pilar</a></h1>
       <p class="card-text">Médico Otorrinolaringólogo Especialista Universitario.</p>
       <div class="text-center"> 
-      <a href="#contacto" class="btn btn-lg btn-primary mx-2" >Coordinar una consulta</a>
+      <a href="#contacto" class="btn btn-lg btn-primary mx-2" style="box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);">💬 Coordinar una consulta</a>
        </div>
     </div>
-    <div class="card-footer text-white" style="background-color: #003366;">
-      Atención online y presencial en Pilar y Zona Norte AMBA. Argentina.
+    <div class="card-footer text-white" style="background-color: #003366; font-size: 15px; padding: 12px;">
+      🏥 Atención online y presencial en Pilar y Zona Norte AMBA, Argentina.
     </div>
   </section>
 
 </header>
 
-<main>
+<main id="main-content">
   <section class="container" id="servicios">
     
   <div class="text-center text-white my-4">
-        <h2>Servicios de Otorrinolaringología en Pilar</h2>
+        <h2 class="h1">Servicios de Otorrinolaringología en Pilar</h2>
    </div>
     
     <div class="row g-4">
         <!-- Rinoplastia -->
         <div class="col-md-4">
             <div class="card service-card h-100 text-center p-4">
-                <img src="./imagenes/perf-nariz.webp" class="service-icon" alt="Rinoplastia en Pilar - Cirugía estética y funcional de nariz" loading="lazy" width="50" height="50">
+                <img loading="lazy" src="./imagenes/perf-nariz.webp" class="service-icon" alt="Rinoplastia en Pilar - Cirugía estética y funcional de nariz" width="50" height="50">
                 <div class="card-body">
                     <h3 class="card-title h5">Rinoplastia</h3>
                     <p class="card-text">Mejora estética y funcional de la nariz.</p>
@@ -416,7 +547,7 @@
         <div class="card-header text-white" style="background-color: #003366;">
             <h2 class="h4 mb-0">Temas de interés frecuente</h2>
         </div>
-        <div class="card-body" style="background-color: #f2f2f2;">
+        <div class="card-body" style="background-color: #f8f9fa;">
             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
                 <div class="col">
                     <a href="https://www.otorrinoenpilar.com/oido.html#vppb" class="quick-access-link link-dark text-decoration-none d-flex flex-column align-items-center">
@@ -458,167 +589,146 @@
         </div>
     </div>
 </section>
+<section  id="contacto" style="padding: 40px 15px; background-color: #f8f9fa; font-family: 'Segoe UI', Roboto, Arial, sans-serif; color: #212529;">
+    
+    <div style="text-align: center; margin-bottom: 30px;">
+        <h2 style="color: #003366; font-size: 26px; font-weight: 700; text-transform: uppercase; margin: 0; padding-bottom: 12px; border-bottom: 3px solid #0d6efd; display: inline-block;">
+            Consultorios de Otorrino
+        </h2>
+        <p style="margin-top: 15px; font-size: 17px; color: #495057; font-weight: 500;">Pilar y Zona Norte</p>
+    </div>
 
-<div class="container-fluid text-center" style="background-color: #f2f2f2;"> 
-  <hr style="height: 10px; background-color: #003366;">    
-  <h2 id="contacto" class="text-center p-2 my-2" style="background-color: #f2f2f2; color: black;">
-    <strong>Coordinar una Consulta</strong>
-  </h2>
-    <hr style="height: 10px; background-color: #003366;">  
-</div>
- 
-    <div class="card-group m-1 p-1"> 
+    <div style="max-width: 1000px; margin: 0 auto;">
+        
+        <article style="background: #ffffff; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; margin-bottom: 40px; border: 1px solid #e0e0e0;">
+            <div style="display: flex; flex-wrap: wrap;">
+                
+                <div style="flex: 1; min-width: 300px; padding: 25px; box-sizing: border-box;">
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <img loading="lazy" src="./imagenes/icons8-siren-64.png" alt="Icono urgencias" width="30" height="30" style="margin-right: 10px;">
+                        <h3 style="color: #003366; margin: 0; font-size: 20px; font-weight: 700;">Consultas Particulares y Urgencias</h3>
+                    </div>
 
-          <article class="card mx-5 p-3">
-             <mark class="bg-danger text-center"><img loading="lazy" src="./imagenes/icons8-siren-64.png" class="card-img-top service-icon" alt="Botón de emergencia rojo"></mark>
-            <div class="card-body">
-              <h3 class="card-title h5 text-center">Urgencias, Particulares y OSDE</h3>
-              <p class="card-text text-center">
-                <div class="text-center mb-2"> 
-                  <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#urgencia" role="button" aria-expanded="false" aria-controls="collapseExample">
-                  Ver más
-                  </a>
-                    </div> 
-                      <span class="collapse" id="urgencia">      
-                      Coordina tu consulta particular programada o urgente por chat en el botón de WhatsApp. Las <strong>URGENCIAS</strong> son 
-                      solo en forma particular (servicio sujeto a disponibilidad).
-                      
-                      <div class="text-center mt-2"> 
-                        <a href="#whatsapp">
-                          <button type="button" class="btn btn-sm btn-outline-primary">
-                            Contactar Ahora
-                          </button>
+                    <p style="font-size: 15px; line-height: 1.7; color: #495057; margin-bottom: 20px;">
+                      El consultorio está ubicado en el <strong>complejo 46 Plaza</strong>, edificio Agora 2, primer piso oficina 110. Debes bajar en Panamericana km 46 mano a provincia (bajada Temaiken/Lagartos) en calle Caamaño 1100 (detrás del Officia donde funcionan los consultorios del Htal. Austral). Urgencias sujetas a disponibilidad.
+                    </p>
+
+                    <div style="background: #f0f8ff; border-left: 4px solid #0d6efd; padding: 15px; border-radius: 6px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <p style="margin: 0; font-size: 14px; color: #212529;">
+                            <strong>Dirección:</strong> Caamaño 1100, 1er Piso, Of. 110. Pilar.<br>
+                            <span style="display: block; margin-top: 5px; color: #003366; font-weight: 600;">
+                                🕒 Lun a Vie (desde 19hs) | Sáb (12:00hs)
+                            </span>
+                        </p>
+                    </div>
+
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20necesito%20un%20turno" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="display: block; background-color: #25d366; color: white; text-decoration: none; padding: 16px; border-radius: 8px; font-weight: 600; font-size: 16px; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(37, 211, 102, 0.3);">
+                            💬 RESERVAR POR WHATSAPP
+                        </a>
+                        <div style="background: #fff3cd; color: #856404; padding: 10px; border-radius: 6px; margin-top: 10px; font-size: 13px; font-weight: 600; border: 1px solid #ffc107;">
+                            ⚠️ SOLO MENSAJES (NO LLAMADAS)
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 10px; justify-content: center;">
+                        <a href="https://waze.com/ul/h69yhj73d8" target="_blank" rel="noopener noreferrer" style="text-decoration: none; font-size: 12px; background: #31b7c6; color: #fff; padding: 8px 16px; border-radius: 6px; font-weight: 600; transition: all 0.3s ease;">
+                            🗺️ WAZE
+                        </a>
+                        <a href="https://maps.app.goo.gl/H8MGdSrEawJcMZxE6" target="_blank" rel="noopener noreferrer" style="text-decoration: none; font-size: 12px; background: #4285F4; color: #fff; padding: 8px 16px; border-radius: 6px; font-weight: 600; transition: all 0.3s ease;">
+                            📍 GOOGLE MAPS
                         </a>
                     </div>
-                      </span>
-              </p>
+                </div>
+
+                <div style="flex: 1; min-width: 300px; min-height: 300px; background: #e5e5e5; position: relative;">
+                    <iframe 
+                        title="Mapa de ubicación del Complejo 46 Plaza en Pilar"
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3290.689709829622!2d-58.829688999999995!3d-34.434636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDI2JzA0LjciUyA1OMKwNDknNDYuOSJX!5e0!3m2!1ses-419!2sar!4v1766342030349!5m2!1ses-419!2sar" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
-          </article>
-            
-        <article class="card mx-5 p-3">
-          <mark class="bg-primary text-center"><img loading="lazy" src="./imagenes/icons8-agenda-50.png" class="card-img-top service-icon" alt="Agenda sobre mesa"></mark>
-           <div class="card-body">
-             <h3 class="card-title class h5 text-center">Consultas Programadas por Obra Social</h3>
-            <p class="card-text text-center">
-              <div class="text-center mb-2"> 
-                <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#collapseA" role="button" aria-expanded="false" aria-controls="collapseExample">
-                Ver más
-              </a>
-                  </div> 
-                  <span class="collapse" id="collapseA">  
-                  Si deseas coordinar una consulta convencional por obras sociales o prepagas, 
-                  debes hacerlo directamente en cada centro en particular. No se dan turnos de obras sociales por este medio (excepto OSDE).
-                  <div class="text-center mt-2"> 
-                    <a href="#lugares">
-                     <button type="button" class="btn btn-sm btn-outline-primary">
-                       Ver centros de atención
-                     </button>
-                    </a>
-                  </div>
-                </span>
-            </p>
-           </div>
-         </article>
-        </div>
+        </article>
 
-  <section class="container-fluid text-center mt-5" id="contacto" style="background-color: #f2f2f2;">    
-        <hr id="whatsapp" style="height: 10px; background-color: #003366;">
-                          
-            <a href="https://api.whatsapp.com/send?phone=541168212512" target=_blank rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <div style="background: white; border-radius: 12px; padding: 20px; border: 1px solid #eee;">
+            <h4 style="text-align: center; color: #495057; margin-bottom: 20px; font-size: 18px; font-weight: 600; border-bottom: 2px solid #dee2e6; padding-bottom: 10px;">
+                📍 Otras Sedes,  Obras Sociales y Prepagas
+            </h4>
 
-              <button class="btn btn-lg btn-primary pb-0">
-               <img loading="lazy" class="service-icon" src="./imagenes/icons8-whatsapp-100.png" alt="Icono WhatsApp"><span class="h4"><strong>WhatsApp</strong></span>
-               <p class="text-white"><small>(solo mensajes)</small></p>
-              </button>
+            <div class="accordion" id="acordeonLugares">
                 
-            </a>
+                <div class="accordion-item" style="border: none; border-bottom: 1px solid #f0f0f0;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sedePilares" style="font-weight: 600; color: #003366; font-size: 15px;">
+                            📍 Sobre Panamericana: Centro Médico Pilares (Km 49.5)
+                        </button>
+                    </h2>
+                    <div id="sedePilares" class="accordion-collapse collapse" data-bs-parent="#acordeonLugares">
+                        <div class="accordion-body" style="font-size: 14px; line-height: 1.5;">
+                            <p>Ubicado en el Complejo Bureau Pilar (Km 49.5). <br>
+                            <strong>Horarios:</strong> Lun (18:00), Mié (16:30), Jue (18:00), Vie (14:00) y Sáb (10:30).</p>
+                            <a href="https://www.cmpilares.com" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #003366; color: #fff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 8px; transition: all 0.3s ease;">📅 PEDIR TURNO EN PILARES</a>
+                            <a href="https://waze.com/ul/h69yhh6pvO" target="_blank" rel="noopener noreferrer" style="margin-left:10px; text-decoration:none; color: #fff; background:#31b7c6; padding:8px 14px; border-radius:6px; font-size:12px; font-weight: 600; transition: all 0.3s ease;">🗺️ WAZE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item" style="border: none; border-bottom: 1px solid #f0f0f0;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sedeDerqui" style="font-weight: 600; color: #003366; font-size: 15px;">
+                            📍 En Derqui: Consultorios Alfaro
+                        </button>
+                    </h2>
+                    <div id="sedeDerqui" class="accordion-collapse collapse" data-bs-parent="#acordeonLugares">
+                        <div class="accordion-body" style="font-size: 14px;">
+                            <p>Calle Aráoz Alfaro 1485, Presidente Derqui.<br>
+                            <strong>Horarios:</strong> Martes (18:00) y Viernes (17:00).</p>
+                            <p style="font-weight: bold; color: #dc3545; margin-bottom: 10px;">📞 Turnos por teléfono: 0230 448-8958</p>
+                            <a href="https://waze.com/ul/h69y5v17w8" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color: #fff; background:#31b7c6; padding:8px 14px; border-radius:6px; font-size:12px; font-weight: 600; transition: all 0.3s ease;">🗺️ WAZE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item" style="border: none;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sedeFatima" style="font-weight: 600; color: #003366; font-size: 15px;">
+                            📍 En Pilar Centro: Clínica Fátima
+                        </button>
+                    </h2>
+                    <div id="sedeFatima" class="accordion-collapse collapse" data-bs-parent="#acordeonLugares">
+                        <div class="accordion-body" style="font-size: 14px;">
+                            <p>Calle Víctor Vergani 830, Pilar Centro (1er Piso).<br>
+                            <strong>Horarios:</strong> Lunes (16:00) y Jueves (08:30).</p>
+                            <a href="https://api.whatsapp.com/send?phone=5492304250949" target="_blank" rel="noopener noreferrer" style="display: inline-block; background: #25d366; color: #fff; padding: 10px 18px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 8px; transition: all 0.3s ease;">💬 WHATSAPP CLÍNICA FÁTIMA</a>
+                            <a href="https://waze.com/ul/h69y5gqwgt" target="_blank" rel="noopener noreferrer" style="margin-left:10px; text-decoration:none; color: #fff; background:#31b7c6; padding:8px 14px; border-radius:6px; font-size:12px; font-weight: 600; transition: all 0.3s ease;">🗺️ WAZE</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
 
             <!-- Botón flotante de WhatsApp -->
             <div class="floating-whatsapp">
               <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20me%20gustar%C3%ADa%20coordinar%20una%20consulta" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-                <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" loading="lazy">
+                <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" loading="lazy" width="35" height="35">
               </a>
             </div>
             
             <hr style="height: 10px; background-color: #003366;">
   </section>
   
-   <h2 id="lugares" style="color: black; text-decoration: underline; background-color: #f2f2f2;" class="p-3 text-center">
-    Consultorios de Otorrinolaringología en Pilar y Zona Norte
-  </h2>
-    
-  <div class="accordion" id="accordionExample">
-    
-      <div class="accordion-item">
-        <h3 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Sobre Panamericana
-          </button>
-        </h3>
-        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <h4>Centro Médico Pilares</h4> 
-              <p>
-              El Centro Médico Pilares está en el Complejo Bureau Pilar, Panamericana Km 49.5, General Martín Miguel de Güemes 0, Pilar. Días lunes de 18 a 19:30 hs, miércoles de 16:30 a 18:30 hs. Jueves 18 a 18:30 hs. Viernes de 14 a 16:30 hs. Sábados 10:30 a 11:30 hs. <a class="link-dark" href="https://www.cmpilares.com" target="_blank" rel="noopener noreferrer">Pedir turno en Pilares</a><br>
-              Accede a la ubicación con <a rel="noopener noreferrer" target="_blank" href="https://waze.com/ul/h69yhh6pvO" aria-label="Ver ubicación en Waze">
-                <mark style="background-color: aquamarine; color: black; border-radius: 12px; font-weight: bold;"><strong><img src="./imagenes/icons8-waze-24.png" loading="lazy" alt="Icono Waze" class="small-icon"> Waze</strong></mark>
-              </a> 
-              </p>
-              
-              <h4>Complejo 46 Plaza Edificio Agora 2 (Panamericana y Caamaño)</h4>
-              <p>Para consultas particulares y de OSDE puedes <a class="link-dark" href="#whatsapp">coordinar tu consulta</a> en el botón de WhatsApp en forma 
-                programada. Consultorio disponible los días lunes a viernes desde 19 hs y sábados 11:30 hs. Urgencias solo en forma particular y sujetas a disponibilidad.
-              El consultorio está ubicado en el complejo 46 Plaza, edificio Agora 2, primer piso oficina 110. Debes bajar en Panamericana km 46 mano a provincia (bajada Temaiken/Lagartos) en calle Caamaño 1100 (detrás del Officia donde funcionan los consultorios del Htal Austral).<br>
-              Accede a la ubicación con <a target="_blank" rel="noopener noreferrer" href="https://waze.com/ul/h69yhj73d8" aria-label="Ver ubicación en Waze">
-                <mark style="background-color: aquamarine; color: black; border-radius: 12px; font-weight: bold;"><strong><img src="./imagenes/icons8-waze-24.png" loading="lazy" alt="Icono Waze" class="small-icon"> Waze</strong></mark>
-              </a> 
-              </p>
-          </div>
-        </div>
-      </div>
-    
-      <div class="accordion-item">
-        <h3 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            En Derqui
-          </button>
-        </h3>
-        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-            <h4>Consultorios Alfaro</h4>
-            <p>Ubicado en la calle Aráoz Alfaro 1485, Presidente Derqui, Bs As. Días martes de 18 a 19:30 hs y viernes a partir de las 17 hs. Pedir turno en Alfaro al 0230 448-8958.
-            <br>
-            Accede a la ubicación con <a target="_blank" rel="noopener noreferrer" href="https://waze.com/ul/h69y5v17w8" aria-label="Ver ubicación en Waze">
-              <mark style="background-color: aquamarine; color: black; border-radius: 12px; font-weight: bold;"><strong><img src="./imagenes/icons8-waze-24.png" loading="lazy" alt="Icono Waze" class="small-icon"> Waze</strong></mark>
-            </a>  
-            </p>
-          </div>
-        </div>
-      </div>
-    
-      <div class="accordion-item">
-        <h3 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            En Pilar Centro
-          </button>
-        </h3>
-        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-              <h4>Clínica Fátima Pilar</h4>
-              <p>La Clínica Fátima está ubicada en la calle Víctor Vergani 830, Pilar. Es en los consultorios nuevos de la clínica en el primer piso (no en la esquina). Días lunes a partir de las 16 hasta las 17:30 hs y jueves de 8:30 a 11:00 hs. 
-              <a class="link-dark" href="https://api.whatsapp.com/send?phone=5492304250949" target=_blank rel="noopener noreferrer">Pedir turno en Fátima</a> <br>
-            Accede a la ubicación con <a target="_blank" rel="noopener noreferrer" href="https://waze.com/ul/h69y5gqwgt" aria-label="Ver ubicación en Waze">
-              <mark style="background-color: aquamarine; color: black; border-radius: 12px; font-weight: bold;"><strong><img src="./imagenes/icons8-waze-24.png" loading="lazy" alt="Icono Waze" class="small-icon"> Waze</strong></mark>
-            </a> 
-              </p>
-           </div>
-        </div>
-      </div>
-    </div>
-  </section>
+ 
     
   <section> 
-    <h2 style="color: black; text-decoration: underline; background-color: #f2f2f2;" class="p-3 my-2 text-center">Quirófanos para Cirugías Otorrinolaringológicas</h2>
+    <h2 style="color: #212529; background-color: #f8f9fa; border-left: 4px solid #0d6efd;" class="p-3 my-4 text-center fw-bold">🏥 Quirófanos.</h2>
     
     <div class="accordion" id="accordionExampleQuirófanos">
       <div class="accordion-item">
@@ -654,42 +764,195 @@
 
   </section>
   
-  <section> 
-    <div class="container-fluid text-center mb-3" style="background-color: #f2f2f2;"> 
-        <hr style="height: 10px; background-color: #003366;">            
-                <div class="container text-center"> 
-                        
-                            <h3 class="pt-3">Contacto por Mail</h3>
-                            <p>(respuesta en horas)</p>
-                        <form 
-                        action=https://formsubmit.co/8de93ee4a66525cf83a1a06b12beda82
-                          method=POST
-                        > 
-          <div class="col-md-10 pb-3 mx-auto"> 
-               <label for="nombre" class="form-label"><strong>Tu nombre</strong></label>
-                 <input type="name" name="name" required class="form-control" id="nombre" placeholder="Ingresa tu nombre.">
-              </div>
-          
-              <div class="col-md-10 pb-3 mx-auto">
-                <label for="exampleInputEmail1" class="form-label"><strong>Tu email</strong></label>
-                <input type="email" name="email" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa tu email.">
-               </div>
-          
-              <div class="col-md-10 pb-3 mx-auto">
-                <label for="consulta" class="form-label"><strong>Tu consulta</strong></label>
-                <textarea name="consulta" id="consulta" required class="form-control" placeholder="Ingresa tu consulta aquí."></textarea>
-              </div>
-
-              <div class="col-md-10 pb-3 mx-auto">
-                <label for="archivo" class="form-label"><strong>Adjuntar archivo (opcional)</strong></label>
-                <input type="file" name="archivo" class="form-control" id="archivo" title="Seleccionar Archivo">
-              </div>
-
-              <button type="submit" class="btn btn-outline-primary btn-lg mt-3 mb-2 p-2">Envía tu Mail</button>
-                                            
-                        </form>
+  <section > 
+    <div class="container-fluid mb-4 py-5 mt-5" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);"> 
+        <div class="container"> 
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- Card del formulario -->
+                    <div class="card shadow-lg border-0" style="border-radius: 15px; overflow: hidden;">
+                        <div class="card-header text-white text-center py-4" style="background: linear-gradient(135deg, #003366 0%, #004d99 100%);">
+                            <h3 class="mb-2">📧 Contacto por Mail</h3>
+                            <p class="mb-0 small">Respuesta en 24-48 horas</p>
                         </div>
-                        <hr style="height: 10px; background-color: #003366;">
+                        <div class="card-body p-4 p-md-5">
+                            <form 
+                                action="https://formsubmit.co/8de93ee4a66525cf83a1a06b12beda82"
+                                method="POST"
+                                novalidate
+                                id="contactForm"
+                            > 
+                                <!-- Configuración FormSubmit -->
+                                <input type="hidden" name="_subject" value="Nueva consulta desde OtorrinoEnPilar.com">
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="text" name="_honey" style="display:none">
+                                
+                                <!-- Campo Nombre -->
+                                <div class="mb-4"> 
+                                    <label for="nombre" class="form-label fw-bold">
+                                        <i class="fas fa-user text-primary me-2"></i>Nombre completo
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        name="name" 
+                                        required 
+                                        class="form-control form-control-lg" 
+                                        id="nombre" 
+                                        placeholder="Ej: Juan Pérez" 
+                                        autocomplete="name" 
+                                        aria-required="true"
+                                        minlength="3"
+                                        pattern="[A-Za-zÀ-ÿ\s]{3,50}"
+                                    >
+                                    <div class="invalid-feedback">
+                                        <i class="fas fa-exclamation-circle me-1"></i>Por favor ingresa tu nombre completo (mínimo 3 caracteres).
+                                    </div>
+                                </div>
+                          
+                                <!-- Campo Email -->
+                                <div class="mb-4">
+                                    <label for="email" class="form-label fw-bold">
+                                        <i class="fas fa-envelope text-primary me-2"></i>Email
+                                    </label>
+                                    <input 
+                                        type="email" 
+                                        name="email" 
+                                        required 
+                                        class="form-control form-control-lg" 
+                                        id="email" 
+                                        placeholder="ejemplo@mail.com" 
+                                        autocomplete="email" 
+                                        aria-required="true"
+                                    >
+                                    <div class="invalid-feedback">
+                                        <i class="fas fa-exclamation-circle me-1"></i>Por favor ingresa un email válido.
+                                    </div>
+                                </div>
+
+                                <!-- Campo Teléfono -->
+                                <div class="mb-4">
+                                    <label for="telefono" class="form-label fw-bold">
+                                        <i class="fas fa-phone text-primary me-2"></i>Teléfono <span class="text-muted small">(opcional)</span>
+                                    </label>
+                                    <input 
+                                        type="tel" 
+                                        name="telefono" 
+                                        class="form-control form-control-lg" 
+                                        id="telefono" 
+                                        placeholder="Ej: 11-1234-5678" 
+                                        autocomplete="tel"
+                                        pattern="[0-9\s\-\+\(\)]{7,20}"
+                                    >
+                                    <small class="form-text text-muted">
+                                        <i class="fas fa-info-circle me-1"></i>Para contactarte más rápido si es necesario
+                                    </small>
+                                </div>
+
+                                <!-- Campo Motivo -->
+                                <div class="mb-4">
+                                    <label for="motivo" class="form-label fw-bold">
+                                        <i class="fas fa-clipboard-list text-primary me-2"></i>Motivo de consulta
+                                    </label>
+                                    <select name="motivo" id="motivo" class="form-select form-select-lg" required>
+                                        <option value="">Selecciona una opción...</option>
+                                        <option value="Consulta General">Consulta General</option>
+                                        <option value="Solicitud de Turno">Solicitud de Turno</option>
+                                        <option value="Rinoplastia">Consulta sobre Rinoplastia</option>
+                                        <option value="Apnea del Sueño">Apnea del Sueño / Ronquidos</option>
+                                        <option value="Problemas de Oído">Problemas de Oído</option>
+                                        <option value="Problemas de Garganta">Problemas de Garganta</option>
+                                        <option value="Sinusitis">Sinusitis</option>
+                                        <option value="Pediatría">Consulta Pediátrica</option>
+                                        <option value="Otra Consulta">Otra Consulta</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        <i class="fas fa-exclamation-circle me-1"></i>Por favor selecciona el motivo de tu consulta.
+                                    </div>
+                                </div>
+                          
+                                <!-- Campo Consulta -->
+                                <div class="mb-4">
+                                    <label for="consulta" class="form-label fw-bold">
+                                        <i class="fas fa-comment-medical text-primary me-2"></i>Mensaje / Consulta
+                                    </label>
+                                    <textarea 
+                                        name="consulta" 
+                                        id="consulta" 
+                                        required 
+                                        class="form-control" 
+                                        placeholder="Describe tu consulta con el mayor detalle posible..." 
+                                        rows="6" 
+                                        aria-required="true"
+                                        minlength="10"
+                                        style="resize: vertical;"
+                                    ></textarea>
+                                    <div class="invalid-feedback">
+                                        <i class="fas fa-exclamation-circle me-1"></i>Por favor describe tu consulta (mínimo 10 caracteres).
+                                    </div>
+                                    <small class="form-text text-muted">
+                                        <i class="fas fa-lightbulb me-1"></i>Incluye síntomas, duración y cualquier información relevante
+                                    </small>
+                                </div>
+
+                                <!-- Campo Archivo -->
+                                <div class="mb-4">
+                                    <label for="archivo" class="form-label fw-bold">
+                                        <i class="fas fa-paperclip text-primary me-2"></i>Adjuntar archivo <span class="text-muted small">(opcional)</span>
+                                    </label>
+                                    <input 
+                                        type="file" 
+                                        name="attachment" 
+                                        class="form-control" 
+                                        id="archivo" 
+                                        aria-label="Seleccionar archivo" 
+                                        accept="image/*,.pdf,.doc,.docx"
+                                    >
+                                    <small class="form-text text-muted">
+                                        <i class="fas fa-file-image me-1"></i>Imágenes, PDF o Word (máx. 10MB)
+                                    </small>
+                                </div>
+
+                                <!-- Checkbox de privacidad -->
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="privacidad" required>
+                                        <label class="form-check-label small" for="privacidad">
+                                            Acepto que mis datos sean tratados de forma confidencial según la política de privacidad
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            Debes aceptar la política de privacidad.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Botón Enviar -->
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary btn-lg py-3" style="background: linear-gradient(135deg, #003366 0%, #004d99 100%); border: none; font-weight: 600; box-shadow: 0 4px 15px rgba(0, 51, 102, 0.3);">
+                                        <i class="fas fa-paper-plane me-2"></i>Enviar Consulta
+                                    </button>
+                                </div>
+
+                                <!-- Mensaje de ayuda -->
+                                <div class="alert alert-info mt-4 mb-0" role="alert" style="border-left: 4px solid #0dcaf0;">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    <strong>¿Necesitas respuesta urgente?</strong> 
+                                    <a href="https://api.whatsapp.com/send?phone=541168212512" target="_blank" rel="noopener noreferrer" class="alert-link">
+                                        Contáctanos por WhatsApp <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                            </form>
+
+                            <!-- Mensaje de éxito (oculto por defecto) -->
+                            <div id="successMessage" class="alert alert-success mt-4 d-none" role="alert">
+                                <i class="fas fa-check-circle me-2"></i>
+                                <strong>¡Mensaje enviado con éxito!</strong> Te responderemos pronto.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>        
   </section>
 
@@ -697,12 +960,12 @@
 
 </main>
 <footer>
-    <div class="card-footer text-white" style="background-color: #003366;">
+    <div class="card-footer text-white primary" style="background-color: #003366;">
         <div class="card-text text-center">
 <hr>
-            <div class="container py-4">
+              <div class="container-fluid py-4 bg-primary">
                 <h2 class="mb-4 text-white h3">Testimonios de Pacientes - Opiniones sobre el Dr. Mosovich</h2>
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <blockquote class="blockquote">
@@ -777,14 +1040,22 @@
                             </blockquote>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" aria-label="Testimonio anterior">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                        <span class="visually-hidden">Anterior</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" aria-label="Siguiente testimonio">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                        <span class="visually-hidden">Siguiente</span>
                     </button>
+                </div>
+                
+                <!-- Botón para dejar reseña en Google -->
+                <div class="text-center mb-3 mb-md-3 mt-2 mt-md-0" id="dejarResenaGoogle">
+                    <p class="text-white mb-2" style="font-size: 1.1rem;">¿Ya fuiste paciente? ¡Tu opinión es importante!</p>
+                    <a href="https://g.page/r/CWbtrBOdyGoaEBM/review" target="_blank" rel="noopener noreferrer" class="btn btn-light btn-lg" style="background-color: #ffffff; color: #003366; font-weight: bold; border-radius: 30px; padding: 15px 35px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.3s ease; border: 2px solid #ffffff;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.2)'">
+                        <i class="fas fa-star" style="color: #FFC107; margin-right: 8px;"></i>Dejar una reseña en Google
+                    </a>
                 </div>
             </div>
             <hr>
@@ -792,7 +1063,7 @@
             El objetivo del sitio no es reemplazar la consulta médica, sino complementarla y optimizarla.<br> 
             La información suministrada por los pacientes es confidencial.<br>
             <div class="text-center">
-              <img loading="lazy" style="height: 50px; width: 130px;" src="./imagenes/btc1.PNG" alt="Aviso de 10% de descuento en pagos con bitcoin o criptomonedas">
+              <img loading="lazy" style="height: 50px; width: 130px;" src="./imagenes/btc1.PNG" alt="Aviso de 10% de descuento en pagos con bitcoin o criptomonedas" width="130" height="50">
             </div>
 
             <hr>
@@ -829,6 +1100,68 @@
       }, 300); // Time to ensure update after collapse animation
     });
   });
+</script>
+
+<script>
+  // Validación de formulario en tiempo real
+  (function() {
+    'use strict';
+    
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+    
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
+    
+    // Validación en tiempo real
+    const inputs = form.querySelectorAll('input[required], textarea[required]');
+    inputs.forEach(input => {
+      input.addEventListener('blur', function() {
+        if (this.checkValidity()) {
+          this.classList.remove('is-invalid');
+          this.classList.add('is-valid');
+        } else {
+          this.classList.remove('is-valid');
+          this.classList.add('is-invalid');
+        }
+      });
+      
+      input.addEventListener('input', function() {
+        if (this.classList.contains('is-invalid') && this.checkValidity()) {
+          this.classList.remove('is-invalid');
+          this.classList.add('is-valid');
+        }
+      });
+    });
+    
+    // Manejo de envío
+    form.addEventListener('submit', function(event) {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        inputs.forEach(input => {
+          if (!input.checkValidity()) {
+            input.classList.add('is-invalid');
+          }
+        });
+        
+        // Scroll al primer campo inválido
+        const firstInvalid = form.querySelector('.is-invalid');
+        if (firstInvalid) {
+          firstInvalid.focus();
+          firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      } else {
+        // Mostrar estado de carga
+        if (submitBtn) {
+          submitBtn.classList.add('btn-loading');
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = 'Enviando...';
+        }
+      }
+    });
+  })();
 </script>
 
 
