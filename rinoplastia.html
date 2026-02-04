@@ -22,14 +22,14 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Información detallada sobre rinoplastia, rinoseptumplastia y procedimientos estéticos y funcionales de la nariz en Pilar, Buenos Aires. Conozca los beneficios de la simulación digital preoperatoria.">
+<meta name="description" content="Rinoplastia y rinoseptumplastia en Pilar, Buenos Aires. Simulación digital preoperatoria con enfoque estético y funcional. Consultas por WhatsApp.">
 <meta name="keywords" content="rinoplastia, septumplastia, rinoseptumplastia, cirugía de nariz, Pilar, Buenos Aires, simulación digital, cirugía estética de nariz">
 <meta name="author" content="Dr. Juan Mosovich">
 <meta name="robots" content="index, follow">
 
 <!-- Open Graph para compartir en redes sociales -->
-<meta property="og:title" content="Rinoplastia y Rinoseptumplastia en Pilar, Buenos Aires | Simulación Digital Preoperatoria">
-<meta property="og:description" content="Descubra cómo puede visualizar el resultado de su rinoplastia antes de la cirugía con simulación digital. Conozca nuestros procedimientos en Pilar, Buenos Aires.">
+<meta property="og:title" content="Rinoplastia en Pilar | Simulación Digital - Dr. Mosovich">
+<meta property="og:description" content="Simulación digital preoperatoria y enfoque estético-funcional en Pilar, Buenos Aires. Consultas por WhatsApp.">
 <meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/rinop.webp">
 <meta property="og:url" content="https://www.otorrinoenpilar.com/rinoplastia.html">
 <meta property="og:type" content="article">
@@ -37,8 +37,8 @@
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Rinoplastia y Rinoseptumplastia en Pilar, Buenos Aires">
-<meta name="twitter:description" content="Información detallada y simulación digital para cirugía de nariz en Pilar.">
+<meta name="twitter:title" content="Rinoplastia en Pilar | Simulación Digital">
+<meta name="twitter:description" content="Rinoplastia y rinoseptumplastia con simulación digital preoperatoria en Pilar, Buenos Aires.">
 <meta name="twitter:image" content="https://otorrinoenpilar.com/imagenes/rinop.webp">
 
 <!-- Critical CSS inlined for faster FCP -->
@@ -63,6 +63,44 @@
   @media (min-width: 992px) {
     .p-lg-5 { padding: 3rem !important; }
   }
+
+  .scroll-to-top {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 1050;
+  }
+
+  .scroll-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .scroll-to-top:active {
+    transform: scale(0.96);
+  }
+
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      left: 24px;
+      bottom: 24px;
+      width: 48px;
+      height: 48px;
+    }
+  }
 </style>
 
 <!-- Non-critical CSS loaded asynchronously -->
@@ -75,9 +113,9 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+<link rel="manifest" href="/favicon/site.webmanifest">
 
-<title>Rinoplastia y Rinoseptumplastia en Pilar, Buenos Aires - Simulación Digital</title>
+<title>Rinoplastia en Pilar | Simulación Digital - Dr. Mosovich</title>
 <link rel="canonical" href="https://www.otorrinoenpilar.com/rinoplastia.html"/>
 <!-- Datos estructurados JSON-LD -->
 <script type="application/ld+json">
@@ -104,6 +142,10 @@
     "publisher": {
       "@type": "Organization",
       "name": "Otorrino en Pilar",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=100063748789595",
+        "https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr"
+      ],
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.otorrinoenpilar.com/imagenes/rino.webp",
@@ -129,6 +171,62 @@
         "position": 2,
         "name": "Rinoplastia y Rinoseptumplastia",
         "item": "https://www.otorrinoenpilar.com/rinoplastia.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalProcedure",
+    "name": "Rinoplastia y Rinoseptumplastia",
+    "description": "Procedimiento estético y funcional de la nariz con simulación digital preoperatoria.",
+    "bodyLocation": "Nariz",
+    "procedureType": "Surgical",
+    "performer": {
+      "@type": "Physician",
+      "name": "Dr. Juan Mosovich",
+      "url": "https://www.otorrinoenpilar.com/info.html#cv",
+      "medicalSpecialty": "Otolaryngology"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Pilar, Buenos Aires"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿La rinoplastia mejora la respiración?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En muchos casos sí. La rinoseptumplastia corrige desvíos del tabique y otras causas de obstrucción nasal, mejorando el flujo de aire."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué es la simulación digital preoperatoria?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Es una herramienta que permite visualizar un resultado estimado antes de la cirugía para alinear expectativas con objetivos reales."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuánto tiempo dura la recuperación?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La recuperación inicial suele ser de 7 a 14 días, y la desinflamación completa puede tardar varios meses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿La rinoplastia deja cicatrices visibles?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En la técnica cerrada las incisiones son internas. En la abierta puede existir una cicatriz mínima que suele ser poco visible."
+        }
       }
     ]
   }
@@ -176,6 +274,14 @@
    o si el modal-dialog no tiene un overflow: visible. Puedes experimentar con esto. */
 .modal-dialog {
     overflow: visible; /* Permite que el contenido "sobresalga" de los límites */
+}
+
+/* Rendimiento (desktop): evita renderizar contenido fuera de pantalla */
+@media (min-width: 992px) {
+  .gallery-section {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 1200px;
+  }
 }
 
   .btn-whatsapp {
@@ -315,24 +421,29 @@
           scroll-behavior: smooth;
         }
         
-        /* Mejora de transiciones en cards */
+        /* Mejora de transiciones en cards (solo dispositivos con hover real) */
         .card {
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
-        .card:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+
+        @media (hover: hover) and (pointer: fine) {
+          .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+          }
+          .card img[onclick] {
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+          }
+          .card img[onclick]:hover {
+            opacity: 0.9;
+          }
         }
-        
-        /* Imágenes clickeables con cursor pointer */
-        .card img[onclick] {
-          cursor: pointer;
-          transition: opacity 0.2s ease;
-        }
-        
-        .card img[onclick]:hover {
-          opacity: 0.9;
+
+        .info-card-img {
+          width: 100%;
+          aspect-ratio: 4 / 3;
+          object-fit: cover;
         }
         
         /* Tablet responsive improvements */
@@ -343,6 +454,107 @@
           .card-group .card {
             flex: 0 1 calc(50% - 1rem);
             margin: 0.5rem;
+          }
+        }
+
+        .hero-banner .lead {
+          max-width: 60ch;
+          margin: 0 auto 1rem;
+        }
+
+        .section-intro .lead {
+          max-width: 75ch;
+          margin: 0 auto;
+          line-height: 1.65;
+        }
+
+        .quick-actions {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.75rem;
+          justify-content: center;
+        }
+
+        .gallery-section .card-group {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          justify-content: center;
+        }
+
+        .gallery-section .card {
+          flex: 1 0 160px;
+          border: none;
+        }
+
+        .gallery-section .card img {
+          border-radius: 0.5rem;
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        .gallery-section .card img {
+          aspect-ratio: 4 / 3;
+          object-fit: cover;
+          display: block;
+        }
+
+        .modal-img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        @media (max-width: 576px) {
+          .hero-banner .display-4 {
+            font-size: clamp(1.6rem, 5vw, 2.2rem);
+          }
+          .hero-banner .lead {
+            font-size: 1.05rem;
+          }
+          .navbar .btn {
+            padding: 0.5rem 1rem;
+          }
+          .btn-whatsapp {
+            width: 100%;
+          }
+          .contact-card {
+            padding: 1.5rem;
+          }
+          .gallery-section .card-group {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.5rem;
+          }
+          .gallery-section .card {
+            width: 100% !important;
+          }
+          .gallery-section .card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+          .nav-btn-left {
+            left: 6px;
+          }
+          .nav-btn-right {
+            right: 6px;
+          }
+          .modal-dialog {
+            margin: 0.5rem;
+          }
+        }
+
+        @media (min-width: 577px) and (max-width: 992px) {
+          .gallery-section .card-group {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.75rem;
+          }
+          .gallery-section .card {
+            width: 100% !important;
           }
         }
 </style>
@@ -367,10 +579,13 @@
     </nav>
 
     <!-- Se ajusta el padding con clases responsivas: 'p-4' en móvil y 'p-lg-5' en pantallas grandes -->
-    <div class="p-4 p-lg-5 text-center text-white" style="background-color: #003366;">
-      <div class="container-fluid">
+    <div class="p-4 p-lg-5 text-center text-white hero-banner" style="background-color: #003366;">
         <h1 class="display-4 fw-bold">Rinoplastia y Rinoseptumplastia en Pilar: Cirugía Estética y Funcional de Nariz</h1>
         <p class="lead mb-4">Simulación digital preoperatoria y tratamientos personalizados. Dr. Juan Mosovich.</p>
+        <div class="quick-actions">
+          <a href="#consulrino" class="btn btn-light fw-bold rounded-pill">Consultar por WhatsApp</a>
+          <a href="#galeria" class="btn btn-outline-light fw-bold rounded-pill">Ver casos clínicos</a>
+        </div>
       </div>
       </div>
     </div>
@@ -378,12 +593,12 @@
    
     <main id="main-content">
     <!-- Contenido introductorio optimizado para SEO -->
-    <div class="container my-4">
+    <div class="container my-4 section-intro">
       <p class="lead">
         Especialista en <strong>rinoplastia</strong> y <strong>rinoseptumplastia</strong> en Pilar y Zona Norte de Buenos Aires. 
         Ofrecemos <strong>cirugía estética y funcional de la nariz</strong> con tecnología de <strong>simulación digital preoperatoria</strong> 
         para que pueda visualizar el resultado antes de la intervención. Tratamientos personalizados para mejorar tanto la 
-        <strong>estética facial</strong> como la <strong>función respiratoria</strong>.
+        <strong>estética facial</strong> como la <strong>función respiratoria</strong>. Conozca el <a href="https://www.otorrinoenpilar.com/info.html#rino" class="link-primary">consentimiento informado</a>.
       </p>
     </div>
       <div class="container-sm text-center my-3 py-3">
@@ -411,7 +626,7 @@
                     <p class="card-text mb-4" style="color: #555;">
                         Resuelva todas sus dudas sobre la rinoseptumplastia de forma rápida y confidencial a través de WhatsApp.
                     </p>
-                    <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20quisiera%20consultar%20sobre%20rinoplastia" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" aria-label="Iniciar chat por WhatsApp">
+                    <a href="https://api.whatsapp.com/send?phone=541168212512&text=Quiero%20una%20consulta%20%20por%20chat%20con%20el%20Dr.%20Mosovich%20por%20una%20rinoplastia" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" aria-label="Iniciar chat por WhatsApp">
                         <i class="fab fa-whatsapp me-2"></i> Iniciar chat
                     </a>
                 </div>
@@ -419,7 +634,7 @@
         </div>
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#consulrino" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div> 
 
   <h2 id="info" class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">Información sobre rinoplastias.</h2>
@@ -427,7 +642,7 @@
 <div class="card-group p-1">
   
     <div class="card p-3">
-        <img loading="lazy" src="./imagenes/blogrino2.webp" class="card-img-top" alt="Perfil de una persona con una nariz armoniosa, mostrando mejora estética y respiración clara después de la rinoplastia" style="max-height: 230px; width: auto;" width="350" height="230">
+        <img loading="lazy" decoding="async" src="./imagenes/blogrino2.webp" class="card-img-top info-card-img" alt="Perfil de una persona con una nariz armoniosa, mostrando mejora estética y respiración clara después de la rinoplastia" width="350" height="230">
         <div class="card-body">
             <h3 class="card-title h5">Rinoplastia: La Armonía Perfecta entre Belleza y Salud.</h3>
             <article class="card-text">
@@ -459,7 +674,7 @@
     </div>
 
       <div class="card p-3">
-        <img loading="lazy" src="./imagenes/rinoplastia.webp" class="card-img-top" alt="Mujer sonriendo con confianza después de una rinoplastia exitosa, con una nariz sutil y de aspecto natural." style="max-height: 200px; width: auto;">
+        <img loading="lazy" decoding="async" src="./imagenes/rinoplastia-800.webp" srcset="./imagenes/rinoplastia-400.webp 400w, ./imagenes/rinoplastia-800.webp 800w, ./imagenes/rinoplastia-1200.webp 1200w" sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 350px" class="card-img-top info-card-img" alt="Mujer sonriendo con confianza después de una rinoplastia exitosa, con una nariz sutil y de aspecto natural." width="350" height="200">
         <div class="card-body">
             <h3 class="card-title h5">Beneficios de la Rinoplastia: Más Allá de la Estética.</h3>
             <article class="card-text">
@@ -494,7 +709,7 @@
 
 
     <div class="card p-3">
-        <img loading="lazy" src="./imagenes/blogrino3.webp" class="card-img-top" alt="Ilustración realista de una nariz, enfatizando la armonía natural con el rostro en lugar de la perfección idealizada." style="max-height: 230px; width: auto;">
+        <img loading="lazy" decoding="async" src="./imagenes/blogrino3.webp" class="card-img-top info-card-img" alt="Ilustración realista de una nariz, enfatizando la armonía natural con el rostro en lugar de la perfección idealizada." width="350" height="230">
         <div class="card-body">
             <h3 class="card-title h5">Rinoplastia: La Verdad Detrás de la Perfección.</h3>
             <article class="card-text">
@@ -533,9 +748,9 @@
 
 
 
-                             <div class="container-flex text-center my-4 p-0">
-                          <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
-                         </div> 
+                              <div class="container-flex text-center my-4 p-0">
+                            <a href="#info" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+                           </div> 
 
                 
                                                             
@@ -543,7 +758,7 @@
 
     <div class="card-group p-1">
     <div class="card p-3">
-      <img loading="lazy" src="./imagenes/simulacion-rino-gemini.webp"  class=card-img-top alt="hombre haciendo una simulación de rinoplastia en una computadora.">
+      <img loading="lazy" decoding="async" src="./imagenes/simulacion-rino-gemini.webp"  class="card-img-top info-card-img" alt="hombre haciendo una simulación de rinoplastia en una computadora." width="350" height="230">
         <div class="card-body">
             <h3 class="card-title h5">Tu Futuro Rostro Hoy: La Magia de la Simulación en Rinoplastia.</h3>
             <article class="card-text">
@@ -573,7 +788,7 @@
 
     <div class="card p-3">
         <div class="card-body">
-            <img loading="lazy" src="./imagenes/avion.webp"  class=card-img-top alt="avion">
+            <img loading="lazy" decoding="async" src="./imagenes/avion.webp"  class="card-img-top info-card-img" alt="avion" width="350" height="230">
             <h3 class="card-title h5">¿Rinoplastia en el Extranjero? Lo Que Nadie Te Cuenta Antes de Viajar.</h3>
             <article class="card-text">
                 <div class="text-center mb-2">
@@ -601,7 +816,7 @@
     </div>
 
     <div class="card p-3">
-       <img loading="lazy" src="./imagenes/rinop.webp"  class=card-img-top alt="foto de antes y después de una rinoplastia">
+      <img loading="lazy" decoding="async" src="./imagenes/rinop.webp"  class="card-img-top info-card-img" alt="foto de antes y después de una rinoplastia" width="350" height="230">
         <div class="card-body">
             <h3 class="card-title h5">Desvelando los Secretos: ¿Qué Tipo de Rinoplastia es Para Ti?</h3>
             <article class="card-text">
@@ -640,9 +855,64 @@
 
 
               <div class="container-flex text-center my-4 p-0">
-                <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+                <a href="#info" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
               </div> 
 
+              <section id="faq" class="container my-4">
+                <h2 class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">Preguntas frecuentes sobre rinoplastia</h2>
+                <div class="accordion my-3" id="faqRino">
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="faqOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                        ¿La rinoplastia mejora la respiración?
+                      </button>
+                    </h3>
+                    <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqOne" data-bs-parent="#faqRino">
+                      <div class="accordion-body">
+                        En muchos casos sí. La rinoseptumplastia corrige desvíos del tabique y otras causas de obstrucción nasal.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="faqTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                        ¿Qué es la simulación digital preoperatoria?
+                      </button>
+                    </h3>
+                    <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqTwo" data-bs-parent="#faqRino">
+                      <div class="accordion-body">
+                        Es una herramienta que permite visualizar un resultado estimado antes de la cirugía para alinear expectativas.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="faqThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                        ¿Cuánto tiempo dura la recuperación?
+                      </button>
+                    </h3>
+                    <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqThree" data-bs-parent="#faqRino">
+                      <div class="accordion-body">
+                        La recuperación inicial suele ser de 7 a 14 días, y la desinflamación completa puede tardar varios meses.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="faqFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                        ¿La rinoplastia deja cicatrices visibles?
+                      </button>
+                    </h3>
+                    <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqFour" data-bs-parent="#faqRino">
+                      <div class="accordion-body">
+                        En la técnica cerrada las incisiones son internas. En la abierta puede existir una cicatriz mínima.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+                        <section id="galeria-section" class="gallery-section">
                         <!--galeria rino-->  
                     <div class="py-2 my-2" style="background-color: #003366; color: white;">
         <h2 id="galeria" class="text-center py-1 my-1" style="font-size: 1.5rem;">Algunos casos clínicos.</h2>
@@ -664,20 +934,20 @@
     </div>
     <div class="card-group align-items-stretch">
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/1pd.webp" class="card-img-top" alt="rinoplastia caso 1 perfil derecho antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/1pd-800.webp" srcset="./imagenes/1pd-400.webp 400w, ./imagenes/1pd-800.webp 800w, ./imagenes/1pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 1 perfil derecho antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/1pi.webp" class="card-img-top" alt="rinoplastia caso 1 perfil izquierdo antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/1pi-800.webp" srcset="./imagenes/1pi-400.webp 400w, ./imagenes/1pi-800.webp 800w, ./imagenes/1pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 1 perfil izquierdo antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/1od.webp" class="card-img-top" alt="rinoplastia caso 1 oblicuo derecho antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/1od-800.webp" srcset="./imagenes/1od-400.webp 400w, ./imagenes/1od-800.webp 800w, ./imagenes/1od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 1 oblicuo derecho antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/1oi.webp" class="card-img-top" alt="rinoplastia caso 1 oblicuo izquierdo antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/1oi-800.webp" srcset="./imagenes/1oi-400.webp 400w, ./imagenes/1oi-800.webp 800w, ./imagenes/1oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 1 oblicuo izquierdo antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
     </div>
     <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
     </div>
 
     <!-- Repite la misma estructura para cada caso (Casos 2 a 12) -->
@@ -688,23 +958,23 @@
     </div>
     <div class="card-group">
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/2f.webp" class="card-img-top" alt="rinoplastia caso 2 frontal antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/2f-800.webp" srcset="./imagenes/2f-400.webp 400w, ./imagenes/2f-800.webp 800w, ./imagenes/2f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 2 frontal antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/2od.webp" class="card-img-top" alt="rinoplastia caso 2 oblicuo derecho antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/2od-800.webp" srcset="./imagenes/2od-400.webp 400w, ./imagenes/2od-800.webp 800w, ./imagenes/2od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 2 oblicuo derecho antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/2oi.webp" class="card-img-top" alt="rinoplastia caso 2 oblicuo izquierdo antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/2oi-800.webp" srcset="./imagenes/2oi-400.webp 400w, ./imagenes/2oi-800.webp 800w, ./imagenes/2oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 2 oblicuo izquierdo antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/2pd.webp" class="card-img-top" alt="rinoplastia caso 2 perfil derecho antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/2pd-800.webp" srcset="./imagenes/2pd-400.webp 400w, ./imagenes/2pd-800.webp 800w, ./imagenes/2pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 2 perfil derecho antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/2pi.webp" class="card-img-top" alt="rinoplastia caso 2 perfil izquierdo antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/2pi-800.webp" srcset="./imagenes/2pi-400.webp 400w, ./imagenes/2pi-800.webp 800w, ./imagenes/2pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 2 perfil izquierdo antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
     </div>
     <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
     </div>
 
     <!-- Continúa con los demás casos de la misma forma -->
@@ -716,30 +986,30 @@
       <div class="card-group">
             
             <div class="card" style="width: 18rem;">
-                <img src="./imagenes/3f.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" loading="lazy" onclick="openModal(this)">
+                <img src="./imagenes/3f-800.webp" srcset="./imagenes/3f-400.webp 400w, ./imagenes/3f-800.webp 800w, ./imagenes/3f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
             </div>
       
               <div class="card" style="width: 18rem;">
-                <img src="./imagenes/3od.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" loading="lazy" onclick="openModal(this)">
+                <img src="./imagenes/3od-800.webp" srcset="./imagenes/3od-400.webp 400w, ./imagenes/3od-800.webp 800w, ./imagenes/3od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
            </div>
       
               <div class="card" style="width: 18rem;">
-                <img src="./imagenes/3oi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" loading="lazy" onclick="openModal(this)">
+                <img src="./imagenes/3oi-800.webp" srcset="./imagenes/3oi-400.webp 400w, ./imagenes/3oi-800.webp 800w, ./imagenes/3oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
              </div>
       
               <div class="card" style="width: 18rem;">
-                <img src="./imagenes/3pd.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" loading="lazy" onclick="openModal(this)">
+                <img src="./imagenes/3pd-800.webp" srcset="./imagenes/3pd-400.webp 400w, ./imagenes/3pd-800.webp 800w, ./imagenes/3pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
              </div>
              <div class="card" style="width: 18rem;">
-              <img src="./imagenes/3pi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" loading="lazy" onclick="openModal(this)">
+              <img src="./imagenes/3pi-800.webp" srcset="./imagenes/3pi-400.webp 400w, ./imagenes/3pi-800.webp 800w, ./imagenes/3pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
            </div>
            <div class="card" style="width: 18rem;">
-            <img src="./imagenes/3b.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/3b-800.webp" srcset="./imagenes/3b-400.webp 400w, ./imagenes/3b-800.webp 800w, ./imagenes/3b-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
         </div>
 
         <div class="container-flex text-center my-4 p-0">
-          <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+          <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
         </div>   
         <div class="text-center bg-primary text-white">
             <a target="_blank" rel="noopener-noreferrer" href="https://bejewelled-daffodil-60c301.netlify.app"><h6 class="text-white" >🔍Caso 4</h6></a>
@@ -749,22 +1019,22 @@
         <div class="card-group">
               
               <div class="card" style="width: 18rem;">
-                  <img src="./imagenes/4f.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después perfil caso 1" loading="lazy" onclick="openModal(this)">
+                  <img src="./imagenes/4f-800.webp" srcset="./imagenes/4f-400.webp 400w, ./imagenes/4f-800.webp 800w, ./imagenes/4f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después perfil caso 1" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
               </div>
               <div class="card" style="width: 18rem;">
-                  <img src="./imagenes/4oi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después oblic caso 1" loading="lazy" onclick="openModal(this)">
+                  <img src="./imagenes/4oi-800.webp" srcset="./imagenes/4oi-400.webp 400w, ./imagenes/4oi-800.webp 800w, ./imagenes/4oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después oblic caso 1" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
                </div>
         
                 <div class="card" style="width: 18rem;">
-                  <img src="./imagenes/4pd.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después oblic aso 1" loading="lazy" onclick="openModal(this)">
+                  <img src="./imagenes/4pd-800.webp" srcset="./imagenes/4pd-400.webp 400w, ./imagenes/4pd-800.webp 800w, ./imagenes/4pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después oblic aso 1" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
                </div>
                <div class="card" style="width: 18rem;">
-                <img src="./imagenes/4pi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después oblic aso 1" loading="lazy" onclick="openModal(this)">
+                <img src="./imagenes/4pi-800.webp" srcset="./imagenes/4pi-400.webp 400w, ./imagenes/4pi-800.webp 800w, ./imagenes/4pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después oblic aso 1" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
              </div>
            </div>
 
            <div class="container-flex text-center my-4 p-0">
-            <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+            <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
           </div> 
 
            <div class="text-center bg-primary text-white">
@@ -776,32 +1046,32 @@
           <div class="card-group">
               
             <div class="card" style="width: 18rem;">
-                <img src="./imagenes/5f.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+                <img src="./imagenes/5f-800.webp" srcset="./imagenes/5f-400.webp 400w, ./imagenes/5f-800.webp 800w, ./imagenes/5f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
             </div>
       
               <div class="card" style="width: 18rem;">
-                <img src="./imagenes/5od.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+                <img src="./imagenes/5od-800.webp" srcset="./imagenes/5od-400.webp 400w, ./imagenes/5od-800.webp 800w, ./imagenes/5od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
            </div>
       
               <div class="card" style="width: 18rem;">
-                <img src="./imagenes/5oi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+                <img src="./imagenes/5oi-800.webp" srcset="./imagenes/5oi-400.webp 400w, ./imagenes/5oi-800.webp 800w, ./imagenes/5oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
              </div>
       
               <div class="card" style="width: 18rem;">
-                <img src="./imagenes/5pd.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+                <img src="./imagenes/5pd-800.webp" srcset="./imagenes/5pd-400.webp 400w, ./imagenes/5pd-800.webp 800w, ./imagenes/5pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
              </div>
              <div class="card" style="width: 18rem;">
-              <img src="./imagenes/5pi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+              <img src="./imagenes/5pi-800.webp" srcset="./imagenes/5pi-400.webp 400w, ./imagenes/5pi-800.webp 800w, ./imagenes/5pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
            </div>
            <div class="card" style="width: 18rem;">
-            <img src="./imagenes/5b.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/5b-800.webp" srcset="./imagenes/5b-400.webp 400w, ./imagenes/5b-800.webp 800w, ./imagenes/5b-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
         </div>
         </div>
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
     </div> 
 
     <div class="text-center bg-primary text-white">
@@ -812,30 +1082,30 @@
   <div class="card-group">
         
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/6f.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/6f-800.webp" srcset="./imagenes/6f-400.webp 400w, ./imagenes/6f-800.webp 800w, ./imagenes/6f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/6od.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/6od-800.webp" srcset="./imagenes/6od-400.webp 400w, ./imagenes/6od-800.webp 800w, ./imagenes/6od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
        </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/6oi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/6oi-800.webp" srcset="./imagenes/6oi-400.webp 400w, ./imagenes/6oi-800.webp 800w, ./imagenes/6oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/6pd.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/6pd-800.webp" srcset="./imagenes/6pd-400.webp 400w, ./imagenes/6pd-800.webp 800w, ./imagenes/6pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
          <div class="card" style="width: 18rem;">
-          <img src="./imagenes/6pi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+          <img src="./imagenes/6pi-800.webp" srcset="./imagenes/6pi-400.webp 400w, ./imagenes/6pi-800.webp 800w, ./imagenes/6pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
        </div>
        <div class="card" style="width: 18rem;">
-        <img src="./imagenes/6b.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+        <img src="./imagenes/6b-800.webp" srcset="./imagenes/6b-400.webp 400w, ./imagenes/6b-800.webp 800w, ./imagenes/6b-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
      </div>
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
     </div> 
 
 
@@ -847,30 +1117,30 @@
   <div class="card-group">
         
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/7f.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/7f-800.webp" srcset="./imagenes/7f-400.webp 400w, ./imagenes/7f-800.webp 800w, ./imagenes/7f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/7od.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/7od-800.webp" srcset="./imagenes/7od-400.webp 400w, ./imagenes/7od-800.webp 800w, ./imagenes/7od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
        </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/7oi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/7oi-800.webp" srcset="./imagenes/7oi-400.webp 400w, ./imagenes/7oi-800.webp 800w, ./imagenes/7oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/7pd.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/7pd-800.webp" srcset="./imagenes/7pd-400.webp 400w, ./imagenes/7pd-800.webp 800w, ./imagenes/7pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
          <div class="card" style="width: 18rem;">
-          <img src="./imagenes/7pi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+          <img src="./imagenes/7pi-800.webp" srcset="./imagenes/7pi-400.webp 400w, ./imagenes/7pi-800.webp 800w, ./imagenes/7pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
        </div>
        <div class="card" style="width: 18rem;">
-        <img src="./imagenes/7b.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+        <img src="./imagenes/7b-800.webp" srcset="./imagenes/7b-400.webp 400w, ./imagenes/7b-800.webp 800w, ./imagenes/7b-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
      </div>
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
     </div> 
 
 
@@ -883,30 +1153,30 @@
   <div class="card-group">
         
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/8f.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/8f-800.webp" srcset="./imagenes/8f-400.webp 400w, ./imagenes/8f-800.webp 800w, ./imagenes/8f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/8od.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/8od-800.webp" srcset="./imagenes/8od-400.webp 400w, ./imagenes/8od-800.webp 800w, ./imagenes/8od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
        </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/8oi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/8oi-800.webp" srcset="./imagenes/8oi-400.webp 400w, ./imagenes/8oi-800.webp 800w, ./imagenes/8oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/8pd.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/8pd-800.webp" srcset="./imagenes/8pd-400.webp 400w, ./imagenes/8pd-800.webp 800w, ./imagenes/8pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
          <div class="card" style="width: 18rem;">
-          <img src="./imagenes/8pi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+          <img src="./imagenes/8pi-800.webp" srcset="./imagenes/8pi-400.webp 400w, ./imagenes/8pi-800.webp 800w, ./imagenes/8pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
        </div>
        <div class="card" style="width: 18rem;">
-        <img src="./imagenes/8b.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+        <img src="./imagenes/8b-800.webp" srcset="./imagenes/8b-400.webp 400w, ./imagenes/8b-800.webp 800w, ./imagenes/8b-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
      </div>
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
     </div> 
 
     <div class="text-center bg-primary text-white">
@@ -917,30 +1187,30 @@
   <div class="card-group">
         
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/9f.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/9f-800.webp" srcset="./imagenes/9f-400.webp 400w, ./imagenes/9f-800.webp 800w, ./imagenes/9f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/9od.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/9od-800.webp" srcset="./imagenes/9od-400.webp 400w, ./imagenes/9od-800.webp 800w, ./imagenes/9od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
        </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/9oi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/9oi-800.webp" srcset="./imagenes/9oi-400.webp 400w, ./imagenes/9oi-800.webp 800w, ./imagenes/9oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/9pd.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/9pd-800.webp" srcset="./imagenes/9pd-400.webp 400w, ./imagenes/9pd-800.webp 800w, ./imagenes/9pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
          <div class="card" style="width: 18rem;">
-          <img src="./imagenes/9pi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+          <img src="./imagenes/9pi-800.webp" srcset="./imagenes/9pi-400.webp 400w, ./imagenes/9pi-800.webp 800w, ./imagenes/9pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
        </div>
        <div class="card" style="width: 18rem;">
-        <img src="./imagenes/9b.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+        <img src="./imagenes/9b-800.webp" srcset="./imagenes/9b-400.webp 400w, ./imagenes/9b-800.webp 800w, ./imagenes/9b-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
      </div>
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
     </div> 
 
     <div class="text-center bg-primary text-white">
@@ -951,30 +1221,30 @@
   <div class="card-group">
         
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/f10.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/f10-800.webp" srcset="./imagenes/f10-400.webp 400w, ./imagenes/f10-800.webp 800w, ./imagenes/f10-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/od10.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/od10-800.webp" srcset="./imagenes/od10-400.webp 400w, ./imagenes/od10-800.webp 800w, ./imagenes/od10-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
        </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/oi10.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/oi10-800.webp" srcset="./imagenes/oi10-400.webp 400w, ./imagenes/oi10-800.webp 800w, ./imagenes/oi10-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/pd10.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/pd10-800.webp" srcset="./imagenes/pd10-400.webp 400w, ./imagenes/pd10-800.webp 800w, ./imagenes/pd10-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
          <div class="card" style="width: 18rem;">
-          <img src="./imagenes/pi10.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+          <img src="./imagenes/pi10-800.webp" srcset="./imagenes/pi10-400.webp 400w, ./imagenes/pi10-800.webp 800w, ./imagenes/pi10-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
        </div>
        <div class="card" style="width: 18rem;">
-        <img src="./imagenes/b10.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+        <img src="./imagenes/b10-800.webp" srcset="./imagenes/b10-400.webp 400w, ./imagenes/b10-800.webp 800w, ./imagenes/b10-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
      </div>
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
     </div> 
 
     <div class="text-center bg-primary text-white">
@@ -985,27 +1255,27 @@
   <div class="card-group">
         
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/f11.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/f11-800.webp" srcset="./imagenes/f11-400.webp 400w, ./imagenes/f11-800.webp 800w, ./imagenes/f11-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/od11.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/od11-800.webp" srcset="./imagenes/od11-400.webp 400w, ./imagenes/od11-800.webp 800w, ./imagenes/od11-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
        </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/oi11.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/oi11-800.webp" srcset="./imagenes/oi11-400.webp 400w, ./imagenes/oi11-800.webp 800w, ./imagenes/oi11-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/pd11.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/pd11-800.webp" srcset="./imagenes/pd11-400.webp 400w, ./imagenes/pd11-800.webp 800w, ./imagenes/pd11-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
          <div class="card" style="width: 18rem;">
-          <img src="./imagenes/pi11.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+          <img src="./imagenes/pi11-800.webp" srcset="./imagenes/pi11-400.webp 400w, ./imagenes/pi11-800.webp 800w, ./imagenes/pi11-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
        </div>
      </div>
 
      <div class="container-flex text-center my-4 p-0">
-      <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
     </div> 
 
      <div class="text-center bg-primary text-white">
@@ -1016,28 +1286,29 @@
   <div class="card-group">
         
         <div class="card" style="width: 18rem;">
-            <img src="./imagenes/12f.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/12f-800.webp" srcset="./imagenes/12f-400.webp 400w, ./imagenes/12f-800.webp 800w, ./imagenes/12f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
         </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/12od.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/12od-800.webp" srcset="./imagenes/12od-400.webp 400w, ./imagenes/12od-800.webp 800w, ./imagenes/12od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
        </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/12oi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/12oi-800.webp" srcset="./imagenes/12oi-400.webp 400w, ./imagenes/12oi-800.webp 800w, ./imagenes/12oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
   
           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/12pd.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+            <img src="./imagenes/12pd-800.webp" srcset="./imagenes/12pd-400.webp 400w, ./imagenes/12pd-800.webp 800w, ./imagenes/12pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
          </div>
          <div class="card" style="width: 18rem;">
-          <img src="./imagenes/12pi.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+          <img src="./imagenes/12pi-800.webp" srcset="./imagenes/12pi-400.webp 400w, ./imagenes/12pi-800.webp 800w, ./imagenes/12pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
        </div>
        <div class="card" style="width: 18rem;">
-        <img src="./imagenes/12b.webp" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" onclick="openModal(this)">
+        <img src="./imagenes/12b-800.webp" srcset="./imagenes/12b-400.webp 400w, ./imagenes/12b-800.webp 800w, ./imagenes/12b-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
      </div>
-     </div> 
-  <!--galeria rino-->
+      </div> 
+    <!--galeria rino-->
+    </section>
 
 
 
@@ -1054,14 +1325,14 @@
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div> 
 
 </main>
 
 <!-- Botón flotante de WhatsApp -->
 <div class="floating-whatsapp">
-  <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20quisiera%20consultar%20sobre%20rinoplastia" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp sobre rinoplastia">
+  <a href="https://api.whatsapp.com/send?phone=541168212512&text=Quiero%20una%20consulta%20%20por%20chat%20con%20el%20Dr.%20Mosovich%20por%20una%20rinoplastia" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp sobre rinoplastia">
     <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" loading="lazy" width="35" height="35">
   </a>
 </div>
@@ -1086,6 +1357,14 @@
   </div>
 
   <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
+    <div class="mb-2">
+      <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+        <i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i>
+      </a>
+      <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+        <i class="fab fa-instagram" style="font-size: 1.4rem;"></i>
+      </a>
+    </div>
     <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
       &copy; 2025 Otorrino en Pilar. Todos los derechos reservados.
     </p>
@@ -1173,6 +1452,31 @@
             }, 300); // Tiempo para asegurar la actualización después de la animación del colapso
         });
     });
+</script>
+<button type="button" id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
+  <i class="fas fa-chevron-up" aria-hidden="true"></i>
+</button>
+
+<script>
+  (function() {
+    const scrollBtn = document.getElementById('scrollToTop');
+    if (!scrollBtn) return;
+
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
+    toggleVisibility();
+
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
 </script>
 </body>
 </html>

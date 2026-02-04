@@ -31,8 +31,8 @@
 <link rel="manifest" href="./favicon/site.webmanifest">
 <!--favicon-->
 <title>Dr. Juan Mosovich | Otorrinolaringólogo en Pilar y Zona Norte | Especialista en Rinoplastia y Apnea del Sueño</title>
-<meta name="description" content="Consultorio del Dr. Juan Mosovich, médico otorrinolaringólogo especialista universitario en Pilar y Zona Norte. Experto en rinoplastia, cirugía nasal, tratamiento de apnea del sueño, ronquidos, problemas de oído, garganta y otorrinolaringología pediátrica. Atención presencial y online.">
-<meta name="keywords" content="otorrinolaringólogo pilar, rinoplastia zona norte, apnea del sueño, cirugía nariz, audífonos, ronquidos, Dr. Mosovich">
+<meta name="description" content="Consultorio del Dr. Juan Mosovich, médico otorrinolaringólogo especialista universitario en Pilar y Zona Norte. Experto en rinoplastia, cirugía nasal, tratamiento de apnea del sueño, ronquidos, problemas de oído, garganta y otorrinolaringología pediátrica. Consultas potenciadas por inteligencia artificial. Atención presencial y online.">
+<meta name="keywords" content="otorrinolaringólogo pilar, rinoplastia zona norte, apnea del sueño, cirugía nariz, audífonos, ronquidos, Dr. Mosovich, consultas con IA, inteligencia artificial médica, diagnóstico asistido por IA">
 <link rel="canonical" href="https://www.otorrinoenpilar.com/"/>
 <!-- Open Graph tags -->
 <meta property="og:title" content="Dr. Juan Mosovich | Otorrinolaringólogo Especialista en Pilar y Zona Norte">
@@ -72,8 +72,8 @@
         "contactType": "customer service"
       },
       "sameAs": [
-        "https://www.instagram.com/otorrinoenpilar/",
-        "https://www.facebook.com/otorrinoenpilar"
+        "https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr",
+        "https://www.facebook.com/profile.php?id=100063748789595"
       ],
       "medicalSpecialty": "Otolaryngology",
       "priceRange": "$$",
@@ -81,6 +81,13 @@
         "@type": "OfferCatalog",
         "name": "Servicios de Otorrinolaringología",
         "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalTherapy",
+              "name": "Consultas Potenciadas por Inteligencia Artificial"
+            }
+          },
           {
             "@type": "Offer",
             "itemOffered": {
@@ -163,6 +170,21 @@
     width: 24px;
     height: 24px;
     vertical-align: middle; /* Vertically aligns icons with text */
+  }
+
+  /* Links sociales con área táctil cómoda */
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    text-decoration: none;
+  }
+
+  .social-link i {
+    font-size: 1.5rem;
   }
 
   /* Botón flotante de WhatsApp */
@@ -248,6 +270,15 @@
     /* Evitar que WhatsApp flotante cubra contenido importante */
     main, footer {
       padding-bottom: 100px;
+    }
+
+    .social-link {
+      width: 48px;
+      height: 48px;
+    }
+
+    .social-link i {
+      font-size: 1.6rem;
     }
   }
   
@@ -345,24 +376,65 @@
   @keyframes spinner {
     to { transform: rotate(360deg); }
   }
- /* alerta por vacaciones */
-          .contenedor-alerta-personalizado {
-           display: block;
-           min-height: unset;
-         }
-        .aviso-vacaciones-alerta .btn-close {
-            filter: invert(1);
-        }
+
+  .scroll-to-top {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 1050;
+  }
+
+  .scroll-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .scroll-to-top:active {
+    transform: scale(0.96);
+  }
+
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      left: 24px;
+      bottom: 24px;
+      width: 48px;
+      height: 48px;
+    }
+  }
+  
+  /* Alerta por vacaciones - COMENTADO
+  .contenedor-alerta-personalizado {
+    display: block;
+    min-height: unset;
+  }
+  .aviso-vacaciones-alerta .btn-close {
+    filter: invert(1);
+  }
+  */
 
 </style>
 </head>
 
 <body class="p-1 m-1" style="background-color: #003366;">
+
   <!-- Skip link para accesibilidad -->
   <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 bg-primary text-white p-2 m-2" style="z-index: 9999;">Saltar al contenido principal</a>
-  <!-- Alerta por vacaciones Contenedor principal de la alerta con clases de Bootstrap para estilo y ocultado inicial -->
-
- <div class="contenedor-alerta-personalizado">
+  
+  <!-- Alerta por vacaciones - COMENTADO
+  <div class="contenedor-alerta-personalizado">
        
         <div id="recesoVacacionalAlerta" class="alert alert-dismissible fade aviso-vacaciones-alerta bg-danger text-white p-4 rounded-3 shadow d-none border border-light shadow-lg" role="alert">
             <h4 class="alert-heading">¡Aviso importante!</h4>
@@ -374,6 +446,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
         </div>
     </div>
+  -->
  
 <header>
 
@@ -419,9 +492,6 @@
 <li class=nav-item>
   <a class="nav-link text-white" href="https://www.otorrinoenpilar.com/info.html#qr-web">QR</a>
 </li>
-<li class=nav-item>
-  <a class="nav-link text-white" href="#dejarResenaGoogle">Tu Opinión</a>
-</li>
 <li class="nav-item"> 
     <a class="nav-link text-white" rel="noopener noreferrer" target="_blank" href="https://www.ketohoy.com/">Dieta</a>
 </li>
@@ -449,6 +519,8 @@
 </header>
 
 <main id="main-content">
+
+
   <section class="container" id="servicios">
     
   <div class="text-center text-white my-4">
@@ -494,6 +566,7 @@
     </div>
     <!-- Additional services row -->
     <div class="row g-4 mt-4">
+      
         <div class="col-md-4">
             <div class="card service-card h-100 text-center p-4">
                 <img loading="lazy" src="./imagenes/icons8-garganta-64.png" class="service-icon" alt="Enfermedades de la garganta y laringe - Especialista ORL" width="50" height="50">
@@ -527,64 +600,265 @@
     </div>
 </section>
 
+  <!-- Sección Destacada: Consultas con IA -->
+  <section class="container my-3">
+    <div class="card border-0" style="background: linear-gradient(90deg, #f0f8ff 0%, #ffffff 100%); border-left: 4px solid #ff9800; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+      <div class="card-body p-3">
+        <div class="row align-items-center g-3">
+          <div class="col-auto">
+            <i class="fas fa-brain" style="font-size: 32px; color: #ff9800;"></i>
+          </div>
+          <div class="col">
+            <h3 class="mb-1" style="color: #003366; font-weight: 600; font-size: 16px;">
+              Consultas Potenciadas por IA
+            </h3>
+            <p class="mb-0" style="font-size: 13px; color: #495057;">
+              Diagnóstico más preciso con inteligencia artificial y experiencia médica.
+              <a href="#contacto" style="color: #ff9800; text-decoration: none; font-weight: 600;"> Solicita una consulta →</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 <section class="container my-5">
     <style>
+        /* Mobile First - Diseño optimizado para dispositivos móviles */
+        .quick-access-section {
+            padding: 0;
+        }
+        
+        .quick-access-card {
+            border: none;
+            box-shadow: 0 2px 8px rgba(0, 51, 102, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .quick-access-header {
+            background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+            padding: 1.25rem 1rem;
+        }
+        
+        .quick-access-header h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: 0.3px;
+        }
+        
+        .quick-access-body {
+            background-color: #ffffff;
+            padding: 1.5rem 0.75rem;
+        }
+        
+        .quick-access-item {
+            padding: 0.5rem;
+        }
+        
         .quick-access-link {
-            transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #212529;
+            padding: 1.25rem 0.75rem;
+            border-radius: 12px;
+            background-color: #f8f9fa;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            min-height: 120px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
         }
-    
-        .quick-access-link:hover {
+        
+        .quick-access-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 51, 102, 0.05) 0%, rgba(0, 77, 153, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .quick-access-link:hover::before,
+        .quick-access-link:focus::before {
+            opacity: 1;
+        }
+        
+        .quick-access-link:hover,
+        .quick-access-link:focus {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 51, 102, 0.15);
+            color: #003366;
+            background-color: #ffffff;
+        }
+        
+        .quick-access-link:active {
+            transform: translateY(-2px);
+        }
+        
+        .quick-access-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+            color: #003366;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .quick-access-link:hover .quick-access-icon,
+        .quick-access-link:focus .quick-access-icon {
+            color: #0056b3;
             transform: scale(1.1);
-            color: #0056b3 !important; /* El !important anula la clase de Bootstrap link-dark para asegurar el cambio de color */
         }
-    
-        .quick-access-link:hover .fa-3x {
-            color: #0056b3 !important;
+        
+        .quick-access-text {
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-align: center;
+            line-height: 1.3;
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s ease;
+        }
+        
+        .quick-access-link:hover .quick-access-text,
+        .quick-access-link:focus .quick-access-text {
+            color: #003366;
+        }
+        
+        /* Mejora de accesibilidad - área de toque mínima 44x44px en móviles */
+        @media (max-width: 767.98px) {
+            .quick-access-link {
+                min-height: 110px;
+                padding: 1rem 0.5rem;
+            }
+            
+            .quick-access-icon {
+                font-size: 2.25rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .quick-access-text {
+                font-size: 0.875rem;
+            }
+            
+            .quick-access-header h2 {
+                font-size: 1.125rem;
+            }
+            
+            .quick-access-body {
+                padding: 1.25rem 0.5rem;
+            }
+        }
+        
+        /* Tablets */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .quick-access-link {
+                min-height: 130px;
+                padding: 1.5rem 1rem;
+            }
+            
+            .quick-access-icon {
+                font-size: 2.75rem;
+            }
+            
+            .quick-access-text {
+                font-size: 1rem;
+            }
+        }
+        
+        /* Desktop */
+        @media (min-width: 992px) {
+            .quick-access-link {
+                min-height: 140px;
+                padding: 1.75rem 1rem;
+            }
+            
+            .quick-access-icon {
+                font-size: 3rem;
+            }
+            
+            .quick-access-text {
+                font-size: 1rem;
+            }
+            
+            .quick-access-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Prefers reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .quick-access-link,
+            .quick-access-icon,
+            .quick-access-link::before {
+                transition: none;
+            }
         }
     </style>
 
-    <div class="card text-center">
-        <div class="card-header text-white" style="background-color: #003366;">
-            <h2 class="h4 mb-0">Temas de interés frecuente</h2>
+    <div class="quick-access-card card text-center">
+        <div class="quick-access-header card-header text-white">
+            <h2>Temas de interés frecuente</h2>
         </div>
-        <div class="card-body" style="background-color: #f8f9fa;">
-            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3">
-                <div class="col">
-                    <a href="https://www.otorrinoenpilar.com/oido.html#vppb" class="quick-access-link link-dark text-decoration-none d-flex flex-column align-items-center">
-                        <i class="fa-solid fa-head-side-virus fa-3x mb-2" style="color: #003366;"></i>
-                        <span class="fw-bold">Vértigo</span>
+        <div class="quick-access-body card-body">
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-2 g-md-3">
+                <div class="quick-access-item col">
+                    <a href="https://www.otorrinoenpilar.com/oido.html#vppb" class="quick-access-link" aria-label="Información sobre vértigo">
+                        <i class="fa-solid fa-head-side-virus quick-access-icon" aria-hidden="true"></i>
+                        <span class="quick-access-text">Vértigo</span>
                     </a>
                 </div>
-                <div class="col">
-                    <a href="https://www.otorrinoenpilar.com/oido.html#acufeno-apps" class="quick-access-link link-dark text-decoration-none d-flex flex-column align-items-center">
-                        <i class="fa-solid fa-headphones fa-3x mb-2" style="color: #003366;"></i>
-                        <span class="fw-bold">Tinnitus</span>
+                <div class="quick-access-item col">
+                    <a href="https://www.otorrinoenpilar.com/oido.html#acufeno-apps" class="quick-access-link" aria-label="Información sobre tinnitus">
+                        <i class="fa-solid fa-headphones quick-access-icon" aria-hidden="true"></i>
+                        <span class="quick-access-text">Tinnitus</span>
                     </a>
                 </div>
-                <div class="col">
-                    <a href="https://www.otorrinoenpilar.com/dormir.html" class="quick-access-link link-dark text-decoration-none d-flex flex-column align-items-center">
-                        <i class="fa-solid fa-bed fa-3x mb-2" style="color: #003366;"></i>
-                        <span class="fw-bold">Sueño</span>
+                <div class="quick-access-item col">
+                    <a href="https://www.otorrinoenpilar.com/dormir.html" class="quick-access-link" aria-label="Información sobre trastornos del sueño">
+                        <i class="fa-solid fa-bed quick-access-icon" aria-hidden="true"></i>
+                        <span class="quick-access-text">Sueño</span>
                     </a>
                 </div>
-                <div class="col">
-                    <a target="_blank" rel="noopener-noreferrer" href="https://www.ketohoy.com/" class="quick-access-link link-dark text-decoration-none d-flex flex-column align-items-center">
-                        <i class="fa-solid fa-utensils fa-3x mb-2" style="color: #003366;"></i>
-                        <span class="fw-bold">Dieta</span>
+                <div class="quick-access-item col">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.ketohoy.com/" class="quick-access-link" aria-label="Información sobre dieta - Abre en nueva pestaña">
+                        <i class="fa-solid fa-utensils quick-access-icon" aria-hidden="true"></i>
+                        <span class="quick-access-text">Dieta</span>
                     </a>
                 </div>
-                <div class="col">
-                    <a href="https://www.otorrinoenpilar.com/sinusitis.html#tabaco" class="quick-access-link link-dark text-decoration-none d-flex flex-column align-items-center">
-                        <i class="fa-solid fa-smoking fa-3x mb-2" style="color: #003366;"></i>
-                        <span class="fw-bold">Tabaco</span>
+                <div class="quick-access-item col">
+                    <a href="https://www.otorrinoenpilar.com/sinusitis.html#tabaco" class="quick-access-link" aria-label="Información sobre efectos del tabaco">
+                        <i class="fa-solid fa-smoking quick-access-icon" aria-hidden="true"></i>
+                        <span class="quick-access-text">Tabaco</span>
                     </a>
                 </div>
-                <div class="col">
-                    <a href="https://www.otorrinoenpilar.com/sinusitis.html#prevenir" class="quick-access-link link-dark text-decoration-none d-flex flex-column align-items-center">
-                        <i class="fa-solid fa-allergies fa-3x mb-2" style="color: #003366;"></i>
-                        <span class="fw-bold">Alergia</span>
+                <div class="quick-access-item col">
+                    <a href="https://www.otorrinoenpilar.com/sinusitis.html#prevenir" class="quick-access-link" aria-label="Información sobre alergia">
+                        <i class="fa-solid fa-allergies quick-access-icon" aria-hidden="true"></i>
+                        <span class="quick-access-text">Alergia</span>
                     </a>
                 </div>
+                <div class="quick-access-item col">
+                    <a href="https://www.fonoenpilar.com/" class="quick-access-link" aria-label="Información sobre fonoaudiología">
+                        <i class="fa-solid fa-comments quick-access-icon" aria-hidden="true"></i>
+                        <span class="quick-access-text">Fonoaudiología</span>
+                    </a>
+                </div>
+                <div class="quick-access-item col">
+                    <a href="https://www.otorrinoenpilar.com/oido.html#atm" class="quick-access-link" aria-label="Información sobre ATM - Articulación temporomandibular">
+                        <i class="fa-solid fa-teeth quick-access-icon" aria-hidden="true"></i>
+                        <span class="quick-access-text">ATM</span>
+                    </a>
+                </div>
+             
             </div>
         </div>
     </div>
@@ -856,6 +1130,7 @@
                                     </label>
                                     <select name="motivo" id="motivo" class="form-select form-select-lg" required>
                                         <option value="">Selecciona una opción...</option>
+                                        <option value="Consulta con IA">Consulta Potenciada por IA</option>
                                         <option value="Consulta General">Consulta General</option>
                                         <option value="Solicitud de Turno">Solicitud de Turno</option>
                                         <option value="Rinoplastia">Consulta sobre Rinoplastia</option>
@@ -1067,23 +1342,36 @@
             </div>
 
             <hr>
+            <div class="text-center mb-3">
+              <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" class="text-white social-link me-2" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="text-white social-link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
             <div class="derechos-de-autor">Desarrollo de <a target="_blank" rel="noopener noreferrer" href="https://devmedical.netlify.app/" style="color:aliceblue; "><strong>DevMed</strong></a> (2022) &#169;</div>
         </div>
     </div>
 </footer>
 
-<!-- Alerta por vacaciones -->
- <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Obtenemos el elemento de la alerta por su ID único
-            const alertElement = document.getElementById('recesoVacacionalAlerta');
+<!-- Alerta por vacaciones - COMENTADO
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Obtenemos el elemento de la alerta por su ID único
+    const alertElement = document.getElementById('recesoVacacionalAlerta');
 
-            // Hacemos que la alerta sea visible al cargar la página
-            alertElement.classList.remove('d-none');
-            alertElement.classList.add('show');
-        });
-  </script>
+    // Hacemos que la alerta sea visible al cargar la página
+    alertElement.classList.remove('d-none');
+    alertElement.classList.add('show');
+  });
+</script>
+-->
 
+
+  <button type="button" id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
 
 </body>
 <script src=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js integrity=sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p crossorigin=anonymous></script>
@@ -1160,6 +1448,28 @@
           submitBtn.innerHTML = 'Enviando...';
         }
       }
+    });
+  })();
+</script>
+
+<script>
+  (function() {
+    const scrollBtn = document.getElementById('scrollToTop');
+    if (!scrollBtn) return;
+
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
+    toggleVisibility();
+
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   })();
 </script>

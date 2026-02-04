@@ -33,10 +33,11 @@
 <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+<link rel="manifest" href="/favicon/site.webmanifest">
 <!--favicon-->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3 crossorigin=anonymous>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
   
@@ -74,7 +75,7 @@
       }
     },
     "datePublished": "2022-10-02T09:00:00-03:00",
-    "dateModified": "2025-12-19T10:00:00-03:00",
+    "dateModified": "2026-01-28T08:00:00-03:00",
     "inLanguage": "es-AR",
     "keywords": ["Enfermedades del oído", "Tinnitus", "Vértigo", "Audiometría", "Audífonos"],
     "hasPart": [
@@ -113,6 +114,10 @@
     "name": "Dr. Juan Mosovich - Otorrinolaringólogo",
     "description": "Especialista en enfermedades del oído, audífonos, audiometría y tratamientos de otitis, tinnitus y vértigo en Pilar y Zona Norte.",
     "url": "https://www.otorrinoenpilar.com",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=100063748789595",
+      "https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr"
+    ],
     "telephone": "+54-9-11",
     "address": {
       "@type": "PostalAddress",
@@ -299,6 +304,44 @@
             background-color: #f8d7da;
             border-color: #f5c6cb;
             color: #721c24;
+        }
+
+        .scroll-to-top {
+          position: fixed;
+          left: 16px;
+          bottom: 16px;
+          width: 44px;
+          height: 44px;
+          border-radius: 999px;
+          background-color: #003366;
+          color: #ffffff;
+          border: none;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.2s ease, transform 0.2s ease;
+          z-index: 1050;
+        }
+
+        .scroll-to-top.show {
+          opacity: 1;
+          pointer-events: auto;
+        }
+
+        .scroll-to-top:active {
+          transform: scale(0.96);
+        }
+
+        @media (min-width: 768px) {
+          .scroll-to-top {
+            left: 24px;
+            bottom: 24px;
+            width: 48px;
+            height: 48px;
+          }
         }
   
   </style>  
@@ -615,7 +658,7 @@
           </div>
 
           <div class="container-flex text-center my-4 p-0">
-            <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+            <a href="#ruido" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
           </div>
 
           <div class="container mt-5">
@@ -720,7 +763,7 @@
 
 
       <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+        <a href="#ruido" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
       </div>
 
       <h3 id="audiometria" class="text-center text-dark py-1" style="background-color: #d7e3f0; font-size: 1.5rem;">
@@ -747,7 +790,7 @@
       </div>
 
              <div class="container-flex text-center my-4 p-0">
-              <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+              <a href="#audiometria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
             </div>
 
 
@@ -910,11 +953,311 @@
 </div>
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#cera" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+</div>
+
+<div class="card-group"> 
+
+<div class="card p-3">
+    <img loading="lazy" src="./imagenes/oido-buceo.webp" class="card-img-top" alt="Prevención y salud auditiva en el buceo">
+    <div class="card-body">
+        <h3 class="card-title h5">Buceo: Salud Auditiva y Nutrición</h3>
+        <article class="card-text">
+            
+            <div class="text-center mb-2">
+                <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#diving-collapse" role="button" aria-expanded="false" aria-controls="diving-collapse">
+                    Ver más
+                </a>
+            </div>
+
+            <div class="collapse" 
+                id="diving-collapse" 
+                data-loaded="false" 
+                data-video-id="z8VW6abdyGA"
+                data-video-title="Técnicas de Compensación para Buceo"
+                data-video-description="Explicación detallada de las maniobras de Valsalva, Frenzel y Toynbee para igualar presión."
+                data-video-duration="PT5M12S">
+                
+                <h4>La Importancia de la Compensación</h4>
+                <p>En el buceo, la presión hidrostática aumenta rápidamente. Si no se iguala la presión del oído medio (compensar), se corre el riesgo de sufrir un <strong>barotrauma</strong>, dolor intenso o incluso la rotura del tímpano.</p>
+                
+                <h5>Maniobras Recomendadas:</h5>
+                <ul>
+                    <li><strong>Valsalva:</strong> Exhalar suavemente por la nariz pinzada.</li>
+                    <li><strong>Frenzel:</strong> Usar la lengua como pistón para empujar aire al oído.</li>
+                    <li><strong>Toynbee:</strong> Pinzar la nariz y tragar saliva.</li>
+                </ul>
+
+                <h4>Dieta Keto y Neuroprotección</h4>
+                <p>La cetosis nutricional ofrece beneficios estratégicos para el buceador:</p>
+                <ul>
+                    <li><strong>Umbral de convulsiones:</strong> Eleva la resistencia ante la toxicidad por oxígeno en inmersiones profundas.</li>
+                    <li><strong>Resistencia a la hipoxia:</strong> Mayor eficiencia cerebral con menor consumo de oxígeno.</li>
+                    <li><strong>Recuperación:</strong> Las cetonas reducen la inflamación en caso de daño neurológico.</li>
+                </ul>
+
+                <p>A continuación, puedes ver una demostración técnica de las maniobras de ecualización:</p>
+                
+                <div id="video-target-z8VW6abdyGA" class="iframe-placeholder">
+                </div>
+                
+                <p style="text-align: center;"><small><em>Video: Guía de compensación para buceo. Técnicas de ecualización y seguridad auditiva.</em></small></p>
+            
+            </div>
+        </article>
+        </div>
+        <div class="card-footer bg-primary"> 
+        
+    </div>
+</div>
+
+ <div class="card p-3">
+      <img loading="lazy" src="./imagenes/ome-tubo.webp"  class="card-img-top" alt="imagen de la trompa de Eustaquio">
+      <div class="card-body">
+      <h4 class="card-title h5">La relación entre la nariz y el oído.</h4> 
+       <article class="card-text">
+        <div class="text-center mb-2"> 
+          <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#oido-nariz" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Ver más
+        </a>
+           </div>
+           <span class="collapse" id="oido-nariz">     
+            <h4>La Intima Conexión entre la Nariz y el Oído: Cómo una Respiración Nasal Óptima Protege tu Audición</h4>
+
+            <p>Aunque aparentemente distantes, la nariz y el oído están intrínsecamente conectados a través de una estructura crucial: la trompa de Eustaquio. Entender esta relación es fundamental para comprender cómo los problemas nasales pueden afectar la salud del oído y cómo una respiración nasal adecuada puede contribuir a prevenir o aliviar ciertas dolencias auditivas.</p>
+            
+            <h5>La Trompa de Eustaquio: El Puente Aéreo entre la Nariz y el Oído Medio</h5>
+            
+            <p>La trompa de Eustaquio es un conducto estrecho que se extiende desde la parte posterior de la nariz y la garganta hasta el oído medio, el espacio que se encuentra detrás del tímpano. Su función principal es triple:</p>
+            <ul>
+                <li><strong>Ventilación del Oído Medio:</strong> Permite que el aire entre y salga del oído medio, igualando la presión del aire en este espacio con la presión del aire exterior. Esto es esencial para el correcto funcionamiento del tímpano y la audición.</li>
+                <li><strong>Drenaje de Secreciones:</strong> Facilita el drenaje de cualquier líquido o mucosidad que pueda acumularse en el oído medio hacia la nasofaringe (la parte superior de la garganta detrás de la nariz).</li>
+                <li><strong>Protección contra Infecciones:</strong> Actúa como una barrera parcial para evitar que las secreciones y los patógenos de la nariz y la garganta lleguen al oído medio.</li>
+            </ul>
+            
+            <h5>Cuando la Nariz se Inflama, la Trompa de Eustaquio Sufre</h5>
+            
+            <p>Diversas condiciones que afectan la nariz pueden provocar la inflamación de la mucosa que recubre la trompa de Eustaquio. Esto puede ocurrir en casos de:</p>
+            <ul>
+                <li><strong>Resfriados y Gripe:</strong> La inflamación nasal viral puede extenderse a la trompa de Eustaquio, estrechándola o bloqueándola.</li>
+                <li><strong>Alergias Nasales (Rinitis Alérgica):</strong> La exposición a alérgenos puede causar inflamación en la nariz y la garganta, afectando la trompa de Eustaquio.</li>
+                <li><strong>Sinusitis:</strong> La inflamación de los senos paranasales a menudo se acompaña de inflamación nasal que puede repercutir en la trompa de Eustaquio.</li>
+                <li><strong>Pólipos Nasales:</strong> Estas formaciones pueden obstruir la nariz y la apertura de la trompa de Eustaquio.</li>
+                <li><strong>Desviación del Tabique Nasal:</strong> Una desviación significativa puede dificultar el drenaje nasal y favorecer la inflamación cerca de la trompa de Eustaquio.</li>
+            </ul>
+            
+            <p>La inflamación de la trompa de Eustaquio puede impedir su correcto funcionamiento, lo que puede llevar a:</p>
+            <ul>
+                <li><strong>Sensación de Oído Tapado o Lleno.</strong></li>
+                <li><strong>Dolor de Oído.</strong></li>
+                <li><strong>Acúfenos (Zumbidos en los Oídos).</strong></li>
+                <li><strong>Dificultad para Igualar la Presión en los Oídos</strong>, especialmente durante cambios de altitud (viajes en avión, buceo).</li>
+                <li><strong>Otitis Media (Infección del Oído Medio)</strong>, debido a la acumulación de líquido que se convierte en un caldo de cultivo para las bacterias o virus.</li>
+            </ul>
+            
+            <h5>Cómo una Respiración Nasal Óptima Protege tus Oídos</h5>
+            
+            <p>Mantener una respiración nasal eficiente y saludable puede tener un impacto positivo en la función de la trompa de Eustaquio y, por ende, en la salud de tus oídos:</p>
+            <ul>
+                <li><strong>Reduce la Inflamación Nasal:</strong> Una respiración nasal adecuada, facilitada por fosas nasales despejadas, disminuye la probabilidad de inflamación crónica en la nariz y, por extensión, en la trompa de Eustaquio.</li>
+                <li><strong>Favorece el Drenaje Nasal:</strong> Un buen flujo de aire nasal ayuda a eliminar las secreciones y los patógenos de la nariz antes de que puedan ascender hacia la trompa de Eustaquio.</li>
+                <li><strong>Minimiza la Necesidad de Respiración Bucal:</strong> La respiración por la boca tiende a resecar la mucosa nasal y faríngea, lo que puede aumentar la irritación cerca de la apertura de la trompa de Eustaquio.</li>
+            </ul>
+            
+            <h5>La Importancia de una Limpieza Nasal Adecuada</h5>
+            
+            <p>Mantener las fosas nasales limpias es una estrategia clave para optimizar la respiración nasal y proteger la salud del oído. Algunas prácticas recomendadas incluyen:</p>
+            <ul>
+                <li><strong>Lavados Nasales con Solución Salina:</strong> Ayudan a eliminar la mucosidad, los alérgenos y los irritantes de las fosas nasales de forma suave y efectiva.</li>
+                <li><strong>Uso Adecuado de Pañuelos:</strong> Sonarse la nariz suavemente, ocluyendo una fosa nasal a la vez, evita la presión excesiva que podría empujar las secreciones hacia la trompa de Eustaquio.</li>
+                <li><strong>Control de Alérgenos Ambientales:</strong> Reducir la exposición a alérgenos conocidos puede disminuir la inflamación nasal alérgica.</li>
+                <li><strong>Humidificación del Ambiente:</strong> Un ambiente con la humedad adecuada puede prevenir la sequedad de la mucosa nasal.</li>
+            </ul>
+            
+            <h5>Conclusión: Cuidar tu Nariz es Cuidar tus Oídos</h5>
+            
+            <p>La nariz y el oído están inseparablemente unidos a través de la trompa de Eustaquio. Mantener una buena salud nasal y 
+              optimizar la respiración por la nariz es una estrategia proactiva para reducir la inflamación de la trompa de Eustaquio 
+              y prevenir problemas comunes del oído como la sensación de oído tapado, el dolor y las infecciones. Incorporar una 
+              limpieza nasal adecuada y abordar cualquier condición nasal subyacente puede contribuir significativamente a la salud 
+              y el bienestar de tu sistema auditivo. Visita la <a href="https://www.otorrinoenpilar.com/sinusitis.html">sección nariz</a> de este sitio para informarte mas.
+            </p>   
+            <div class="text-center my-1">
+              <a href="https://www.otorrinoenpilar.com/sinusitis.html" class="btn btn-sm btn-danger" type="button">Ver sección "nariz".</a>
+            </div>
+       </span>
+     </article>
+      </div>
+     <div class="card-footer bg-primary"> 
+   
+      </div>
+      </div>  
+
+ <div class="card p-3">
+    <img loading="lazy" src="./imagenes/exostosis1.webp"  class="card-img-top" alt="imagen de exostosis de oído">
+    <div class="card-body">
+    <h5 class="card-title">El "oído del surfista".</h5> 
+     <article class="card-text">
+      <div class="text-center mb-2"> 
+        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#osteom" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Ver más
+      </a>
+         </div>
+         <span class="collapse" id="osteom">     
+        <h6 class="h4">Exostosis: el oído del buzo o del surfista</h6>
+          <p>
+            Las exostosis son un crecimiento anormal del hueso en el conducto auditivo externo. Este fenómeno se asocia principalmente con la exposición frecuente al agua fría, lo que le ha valido el nombre de "oído del buzo" o "oído del surfista".
+          </p>
+          <p>
+            Aunque se trata de un problema benigno, en algunos casos puede generar complicaciones, como la acumulación de cerumen que obstruye el canal auditivo. Esto puede requerir limpiezas periódicas para mantener una audición adecuada y evitar molestias.
+          </p>
+          <h4>Características y tratamiento</h4>
+          <p>
+            La exostosis suele afectar ambos oídos y, dependiendo de su gravedad, puede requerir tratamiento quirúrgico. Si bien no siempre es necesario intervenir, es importante que las personas afectadas consulten con un especialista para determinar el manejo adecuado según su caso.
+          </p>
+     </span>
+   </article>
+   </div>
+   <div class="card-footer bg-primary"> 
+  
+    </div>
+    </div>
+
+
+</div>
+
+<div class="container-flex text-center my-4 p-0">
+  <a href="#cera" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
 
 <div class="card-group"> 
+
+<div class="card p-3">
+  <img loading="lazy" src="./imagenes/hisopo-cotonete.webp" class="card-img-top" alt="Cartel de evitar usar hisopos en el oido.">
+  <div class="card-body">
+    <h3 class="card-title h5">Tapones de cera en los oídos.</h3>
+    <article class="card-text">
+      <div class="text-center mb-2"> 
+        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#cerumen23" role="button" aria-expanded="false" aria-controls="cerumen">
+          Ver más
+        </a>
+      </div> 
+
+      <span class="collapse" id="cerumen23">    
+         <h4>Causas de los tapones de cera en los oidos y como manejarlos</h4>
+        <p>
+          El cerumen, conocido comúnmente como “cera del oído”, es una sustancia natural producida por el organismo para proteger el conducto auditivo. 
+          Actúa como barrera contra el polvo, bacterias y pequeños cuerpos extraños, además de mantener la piel del oído hidratada.
+        </p>
+
+        <p>
+          En condiciones normales, el cerumen se elimina solo hacia el exterior del oído. 
+          Sin embargo, cuando se acumula en exceso o se compacta, puede formar un <strong>tapón de cera</strong>, generando molestias y disminución de la audición.
+        </p>
+
+        <h4 class="h6 mt-3">¿Por qué se forman los tapones de cerumen?</h4>
+
+        <p>
+          Los tapones de cera pueden aparecer por diferentes motivos. Algunas personas producen más cerumen de lo habitual, 
+          mientras que otras tienen conductos auditivos más estrechos o curvos, lo que dificulta su eliminación natural.
+        </p>
+
+        <p>
+          El uso frecuente de hisopos, auriculares intraurales, tapones para dormir o audífonos también favorece la formación de tapones, 
+          ya que empuja la cera hacia el interior del oído en lugar de extraerla.
+        </p>
+
+        <p>
+          Con la edad, el cerumen suele volverse más seco y duro, aumentando la posibilidad de que se compacte. 
+          Además, algunas enfermedades de la piel como eczema o psoriasis pueden contribuir a este problema.
+        </p>
+
+        <h4 class="h6 mt-3">Síntomas frecuentes</h4>
+
+        <ul>
+          <li>Sensación de oído tapado o presión</li>
+          <li>Disminución de la audición</li>
+          <li>Zumbidos (tinnitus)</li>
+          <li>Picazón o molestias en el oído</li>
+          <li>Mareos en algunos casos</li>
+        </ul>
+
+        <h4 class="h6 mt-3">Qué NO hacer</h4>
+
+        <p>
+          Uno de los errores más comunes es intentar limpiar el oído introduciendo hisopos, dedos u otros objetos. 
+          Esto no solo no soluciona el problema, sino que suele empeorarlo, empujando la cera hacia el fondo del conducto y aumentando el riesgo de lesiones.
+        </p>
+
+        <p>
+          Tampoco se recomienda el uso de velas óticas o métodos caseros no controlados, ya que no son efectivos y pueden causar quemaduras o daño en el oído.
+        </p>
+
+        <h4 class="h6 mt-3">Cómo prevenir la formación de tapones</h4>
+
+        <p>
+          El oído no necesita una limpieza profunda. Basta con higienizar la parte externa durante el baño y secar suavemente con una toalla.
+        </p>
+
+        <p>
+          En personas con tendencia a formar tapones, puede ser útil realizar controles periódicos con un profesional de la salud 
+          para evitar acumulaciones importantes.
+        </p>
+
+        <h4 class="h6 mt-3">Protocolo seguro para la remoción de cerumen en casa</h4>
+
+        <p>
+          Este protocolo está indicado únicamente en personas sin dolor intenso, sin secreción, sin antecedentes de perforación del tímpano 
+          ni cirugías recientes de oído.
+        </p>
+
+        <p><strong>Paso 1: Ablandar el cerumen</strong></p>
+
+        <p>
+          El objetivo no es extraer la cera, sino ablandarla para que el oído la elimine por sí solo.
+          Se puede utilizar aceite mineral, aceite de oliva, glicerina o gotas comerciales para cerumen.
+        </p>
+
+        <ul>
+          <li>Colocar 2 a 3 gotas en el oído afectado</li>
+          <li>Mantener la cabeza inclinada durante 5 a 10 minutos</li>
+          <li>Realizar este procedimiento una vez por día durante 3 a 5 días</li>
+        </ul>
+
+        <p><strong>Paso 2: Limpieza externa suave</strong></p>
+
+        <p>
+          Si el cerumen comienza a salir, puede enjuagarse suavemente la parte externa del oído con agua tibia durante la ducha, dirigiendo 
+          el chorro suave directamente al conducto auditivo.
+        </p>
+
+        <h4 class="h6 mt-3">Cuándo consultar al médico</h4>
+
+        <p>
+          Se debe suspender cualquier intento de limpieza en casa y consultar a un profesional si aparece dolor, mareo, secreción, 
+          sangrado o si la sensación de oído tapado no mejora.
+        </p>
+
+        <p>
+          La extracción profesional del cerumen es un procedimiento sencillo, seguro y rápido cuando se realiza por personal capacitado.
+        </p>
+
+        <p class="mt-3">
+          <strong>Recordá:</strong> el cerumen cumple una función protectora. El objetivo no es eliminarlo por completo, 
+          sino evitar su acumulación excesiva y tratarlo de forma adecuada cuando genera síntomas.
+        </p>
+
+      </span>
+    </article>
+
+    <div class="card-footer bg-primary">
+
+    </div>
+  </div>
+</div>
+
+  
   <div class="card p-3">
 <img src="./imagenes/otomicroscopia.webp" class="card-img-top" alt="otorrinolaringólogo aspirando el oído de un paciente con lupas en el consultorio.">
 <div class="card-body">
@@ -999,86 +1342,7 @@
       </div>
       </div>
 
-    <div class="card p-3">
-      <img loading="lazy" src="./imagenes/ome-tubo.webp"  class="card-img-top" alt="imagen de la trompa de Eustaquio">
-      <div class="card-body">
-      <h4 class="card-title h5">La relación entre la nariz y el oído.</h4> 
-       <article class="card-text">
-        <div class="text-center mb-2"> 
-          <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#oido-nariz" role="button" aria-expanded="false" aria-controls="collapseExample">
-          Ver más
-        </a>
-           </div>
-           <span class="collapse" id="oido-nariz">     
-            <h4>La Intima Conexión entre la Nariz y el Oído: Cómo una Respiración Nasal Óptima Protege tu Audición</h4>
-
-            <p>Aunque aparentemente distantes, la nariz y el oído están intrínsecamente conectados a través de una estructura crucial: la trompa de Eustaquio. Entender esta relación es fundamental para comprender cómo los problemas nasales pueden afectar la salud del oído y cómo una respiración nasal adecuada puede contribuir a prevenir o aliviar ciertas dolencias auditivas.</p>
-            
-            <h5>La Trompa de Eustaquio: El Puente Aéreo entre la Nariz y el Oído Medio</h5>
-            
-            <p>La trompa de Eustaquio es un conducto estrecho que se extiende desde la parte posterior de la nariz y la garganta hasta el oído medio, el espacio que se encuentra detrás del tímpano. Su función principal es triple:</p>
-            <ul>
-                <li><strong>Ventilación del Oído Medio:</strong> Permite que el aire entre y salga del oído medio, igualando la presión del aire en este espacio con la presión del aire exterior. Esto es esencial para el correcto funcionamiento del tímpano y la audición.</li>
-                <li><strong>Drenaje de Secreciones:</strong> Facilita el drenaje de cualquier líquido o mucosidad que pueda acumularse en el oído medio hacia la nasofaringe (la parte superior de la garganta detrás de la nariz).</li>
-                <li><strong>Protección contra Infecciones:</strong> Actúa como una barrera parcial para evitar que las secreciones y los patógenos de la nariz y la garganta lleguen al oído medio.</li>
-            </ul>
-            
-            <h5>Cuando la Nariz se Inflama, la Trompa de Eustaquio Sufre</h5>
-            
-            <p>Diversas condiciones que afectan la nariz pueden provocar la inflamación de la mucosa que recubre la trompa de Eustaquio. Esto puede ocurrir en casos de:</p>
-            <ul>
-                <li><strong>Resfriados y Gripe:</strong> La inflamación nasal viral puede extenderse a la trompa de Eustaquio, estrechándola o bloqueándola.</li>
-                <li><strong>Alergias Nasales (Rinitis Alérgica):</strong> La exposición a alérgenos puede causar inflamación en la nariz y la garganta, afectando la trompa de Eustaquio.</li>
-                <li><strong>Sinusitis:</strong> La inflamación de los senos paranasales a menudo se acompaña de inflamación nasal que puede repercutir en la trompa de Eustaquio.</li>
-                <li><strong>Pólipos Nasales:</strong> Estas formaciones pueden obstruir la nariz y la apertura de la trompa de Eustaquio.</li>
-                <li><strong>Desviación del Tabique Nasal:</strong> Una desviación significativa puede dificultar el drenaje nasal y favorecer la inflamación cerca de la trompa de Eustaquio.</li>
-            </ul>
-            
-            <p>La inflamación de la trompa de Eustaquio puede impedir su correcto funcionamiento, lo que puede llevar a:</p>
-            <ul>
-                <li><strong>Sensación de Oído Tapado o Lleno.</strong></li>
-                <li><strong>Dolor de Oído.</strong></li>
-                <li><strong>Acúfenos (Zumbidos en los Oídos).</strong></li>
-                <li><strong>Dificultad para Igualar la Presión en los Oídos</strong>, especialmente durante cambios de altitud (viajes en avión, buceo).</li>
-                <li><strong>Otitis Media (Infección del Oído Medio)</strong>, debido a la acumulación de líquido que se convierte en un caldo de cultivo para las bacterias o virus.</li>
-            </ul>
-            
-            <h5>Cómo una Respiración Nasal Óptima Protege tus Oídos</h5>
-            
-            <p>Mantener una respiración nasal eficiente y saludable puede tener un impacto positivo en la función de la trompa de Eustaquio y, por ende, en la salud de tus oídos:</p>
-            <ul>
-                <li><strong>Reduce la Inflamación Nasal:</strong> Una respiración nasal adecuada, facilitada por fosas nasales despejadas, disminuye la probabilidad de inflamación crónica en la nariz y, por extensión, en la trompa de Eustaquio.</li>
-                <li><strong>Favorece el Drenaje Nasal:</strong> Un buen flujo de aire nasal ayuda a eliminar las secreciones y los patógenos de la nariz antes de que puedan ascender hacia la trompa de Eustaquio.</li>
-                <li><strong>Minimiza la Necesidad de Respiración Bucal:</strong> La respiración por la boca tiende a resecar la mucosa nasal y faríngea, lo que puede aumentar la irritación cerca de la apertura de la trompa de Eustaquio.</li>
-            </ul>
-            
-            <h5>La Importancia de una Limpieza Nasal Adecuada</h5>
-            
-            <p>Mantener las fosas nasales limpias es una estrategia clave para optimizar la respiración nasal y proteger la salud del oído. Algunas prácticas recomendadas incluyen:</p>
-            <ul>
-                <li><strong>Lavados Nasales con Solución Salina:</strong> Ayudan a eliminar la mucosidad, los alérgenos y los irritantes de las fosas nasales de forma suave y efectiva.</li>
-                <li><strong>Uso Adecuado de Pañuelos:</strong> Sonarse la nariz suavemente, ocluyendo una fosa nasal a la vez, evita la presión excesiva que podría empujar las secreciones hacia la trompa de Eustaquio.</li>
-                <li><strong>Control de Alérgenos Ambientales:</strong> Reducir la exposición a alérgenos conocidos puede disminuir la inflamación nasal alérgica.</li>
-                <li><strong>Humidificación del Ambiente:</strong> Un ambiente con la humedad adecuada puede prevenir la sequedad de la mucosa nasal.</li>
-            </ul>
-            
-            <h5>Conclusión: Cuidar tu Nariz es Cuidar tus Oídos</h5>
-            
-            <p>La nariz y el oído están inseparablemente unidos a través de la trompa de Eustaquio. Mantener una buena salud nasal y 
-              optimizar la respiración por la nariz es una estrategia proactiva para reducir la inflamación de la trompa de Eustaquio 
-              y prevenir problemas comunes del oído como la sensación de oído tapado, el dolor y las infecciones. Incorporar una 
-              limpieza nasal adecuada y abordar cualquier condición nasal subyacente puede contribuir significativamente a la salud 
-              y el bienestar de tu sistema auditivo. Visita la <a href="https://www.otorrinoenpilar.com/sinusitis.html">sección nariz</a> de este sitio para informarte mas.
-            </p>   
-            <div class="text-center my-1">
-              <a href="https://www.otorrinoenpilar.com/sinusitis.html" class="btn btn-sm btn-danger" type="button">Ver sección "nariz".</a>
-            </div>
-       </span>
-     </article>
-     <div class="card-footer bg-primary"> 
-    </div>
-      </div>
-      </div>  
+   
 
       
 
@@ -1138,7 +1402,7 @@
           </div>
 
           <div class="container-flex text-center my-4 p-0">
-            <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+            <a href="#cera" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
           </div> 
 
          
@@ -1454,41 +1718,13 @@
       </div>
         </div>
 
-        <div class="card p-3">
-    <img loading="lazy" src="./imagenes/exostosis1.webp"  class="card-img-top" alt="imagen de exostosis de oído">
-    <div class="card-body">
-    <h5 class="card-title">El "oído del surfista".</h5> 
-     <article class="card-text">
-      <div class="text-center mb-2"> 
-        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#osteom" role="button" aria-expanded="false" aria-controls="collapseExample">
-        Ver más
-      </a>
-         </div>
-         <span class="collapse" id="osteom">     
-        <h6 class="h4">Exostosis: el oído del buzo o del surfista</h6>
-          <p>
-            Las exostosis son un crecimiento anormal del hueso en el conducto auditivo externo. Este fenómeno se asocia principalmente con la exposición frecuente al agua fría, lo que le ha valido el nombre de "oído del buzo" o "oído del surfista".
-          </p>
-          <p>
-            Aunque se trata de un problema benigno, en algunos casos puede generar complicaciones, como la acumulación de cerumen que obstruye el canal auditivo. Esto puede requerir limpiezas periódicas para mantener una audición adecuada y evitar molestias.
-          </p>
-          <h4>Características y tratamiento</h4>
-          <p>
-            La exostosis suele afectar ambos oídos y, dependiendo de su gravedad, puede requerir tratamiento quirúrgico. Si bien no siempre es necesario intervenir, es importante que las personas afectadas consulten con un especialista para determinar el manejo adecuado según su caso.
-          </p>
-     </span>
-   </article>
-   </div>
-   <div class="card-footer bg-primary"> 
-  
-    </div>
-    </div>
+       
         </div>
         
           
 
           <div class="container-flex text-center my-4 p-0">
-            <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+            <a href="#oma-omc" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
           </div>       
 
 
@@ -1635,7 +1871,7 @@
          
 
           <div class="container-flex text-center my-4 p-0">
-            <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+            <a href="#oma-omc" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
           </div> 
 
           <h4 id="atm" class="text-center text-dark py-1" style="background-color: #d7e3f0;">
@@ -1808,7 +2044,7 @@
         
 
           <div class="container-flex text-center my-4 p-0">
-            <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+            <a href="#atm" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
           </div>  
 
   <h3 id="acufeno" class="text-center text-light py-3" style="background-color: #003366; font-size: 1.5rem;">
@@ -2002,7 +2238,7 @@
 </div>
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#acufeno-tipos" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
 <h4 id="enfermedades"  class="text-center text-dark py-1" style="background-color: #d7e3f0;">
@@ -2195,7 +2431,7 @@ Ver más
   </div>
 
   <div class="container-flex text-center my-4 p-0">
-    <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+    <a href="#enfermedades" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
   </div>
 
   <div class="card-group">
@@ -2312,7 +2548,7 @@ Ver más
   </div>
 
   <div class="container-flex text-center my-4 p-0">
-    <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+    <a href="#enfermedades" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
   </div>
 
 
@@ -2573,7 +2809,7 @@ Ver más
 
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#acufeno-tratamiento" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
   <h4 id="acufeno-apps"  class="text-center text-dark py-1" style="background-color: #d7e3f0;">
@@ -2736,7 +2972,7 @@ Ver más
     </section>
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#acufeno-apps" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
  <h4 id="ondas-binaurales"  class="text-center text-dark py-1" style="background-color: #d7e3f0;">
@@ -2875,7 +3111,7 @@ Ver más
 </div>
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#ondas-binaurales" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
 
@@ -2997,7 +3233,7 @@ Ver más
 </div>
   
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#masking" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
 <h2 id="vertigo" class="text-center text-white py-3" style="background-color: #003366; font-size: 1.5rem;">
@@ -3304,7 +3540,7 @@ Ver más
 
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#vertigo-mareo" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
 
@@ -3513,7 +3749,7 @@ Ver más
 
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#vertigo-mar" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
 <h3 id="vppb"  class="h4 text-center text-dark py-1" style="background-color: #d7e3f0;">
@@ -3722,7 +3958,7 @@ Ver más
    </div>  
    
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#vppb-byd" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
  <div id="vppb-post" class="d-grid gap-2">
@@ -4054,7 +4290,7 @@ Ver más
 
      
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#vppb-post" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
 <h3 id="vertigo-p"  class="h4 text-center text-dark py-1" style="background-color: #d7e3f0;">
@@ -4280,7 +4516,7 @@ Ver más
           
       
       <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+        <a href="#vertigo-p" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
       </div>    
 
   <h2 id="audifono"  class="h4 text-center text-white py-3" style="background-color: #003366;">
@@ -4474,7 +4710,7 @@ Ver más
 </div> 
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#otoamp1" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
        
       <div class="card-group">   
@@ -4610,8 +4846,8 @@ Ver más
       </div>
 
   <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
-      </div>   
+  <a href="#otoamp1" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+</div>
 
 <div class="card-group"> 
 
@@ -4875,9 +5111,9 @@ Ver más
 
       </div>
 
- <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
-</div>    
+  <div class="container-flex text-center my-4 p-0">
+        <a href="#otoamp1" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      </div>   
 
       <div class="card-group"> 
 
@@ -5066,7 +5302,7 @@ Ver más
     
     
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#otoamp1" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>   
 
       <h3 id="otoamp3"  class="h4 text-center text-dark py-1" style="background-color: #d7e3f0;">
@@ -5256,7 +5492,7 @@ Ver más
 </div>
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#otoamp3" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
 <div class="container-sm pl-5 ml-5">
@@ -5472,7 +5708,7 @@ Ver más
 
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#otoamp3" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
 <h3 id="otoamp2"  class=" h4 text-center text-dark py-1" style="background-color: #d7e3f0;">
@@ -5623,7 +5859,7 @@ Ver más
 </div>
 
  <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+        <a href="#otoamp2" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
       </div> 
 
 <div class="card-group">    
@@ -5824,7 +6060,7 @@ Ver más
 </div>
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#otoamp2" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
 
@@ -6029,7 +6265,7 @@ Ver más
 
 
   <div class="container-flex text-center my-4 p-0">
-    <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+    <a href="#implantes" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
   </div> 
 
 <h2 id="hipoac-ninos" class="text-center text-light py-3" style="background-color: #003366; font-size: 1.5rem;">
@@ -6215,7 +6451,7 @@ Ver más
                      
   </div>
   <div class="container-flex text-center my-4 p-0">
-    <a href="#top" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+    <a href="#hipoac-ninos" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
   </div>
 
   </main>
@@ -6240,6 +6476,14 @@ Ver más
     </div>
 
     <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
+      <div class="mb-2">
+        <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+          <i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i>
+        </a>
+        <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+          <i class="fab fa-instagram" style="font-size: 1.4rem;"></i>
+        </a>
+      </div>
       <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
         &copy; 2025 Otorrino en Pilar. Todos los derechos reservados.
       </p>
@@ -6849,6 +7093,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+        <button type="button" id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
+          <i class="fas fa-chevron-up" aria-hidden="true"></i>
+        </button>
+
+        <script>
+          (function() {
+            const scrollBtn = document.getElementById('scrollToTop');
+            if (!scrollBtn) return;
+
+            const toggleVisibility = () => {
+              if (window.scrollY > 300) {
+                scrollBtn.classList.add('show');
+              } else {
+                scrollBtn.classList.remove('show');
+              }
+            };
+
+            window.addEventListener('scroll', toggleVisibility, { passive: true });
+            toggleVisibility();
+
+            scrollBtn.addEventListener('click', () => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+          })();
+        </script>
 
         </body>
       </html>

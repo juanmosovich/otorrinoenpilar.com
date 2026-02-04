@@ -39,11 +39,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="/favicon/site.webmanifest">
   
     <!-- Bootstrap CSS -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
     <!-- Datos estructurados -->
    
@@ -136,6 +137,10 @@
     "name": "Dr. Juan Mosovich - Otorrinolaringólogo",
     "description": "Especialista en enfermedades de la garganta, trastornos de la voz, deglución, amigdalitis y reflujo gastroesofágico en Pilar y Zona Norte.",
     "url": "https://www.otorrinoenpilar.com",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=100063748789595",
+      "https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr"
+    ],
     "telephone": "+54-9-11",
     "address": {
       "@type": "PostalAddress",
@@ -264,6 +269,44 @@
         .floating-whatsapp img {
           width: 30px;
           height: 30px;
+        }
+      }
+
+      .scroll-to-top {
+        position: fixed;
+        left: 16px;
+        bottom: 16px;
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        background-color: #003366;
+        color: #ffffff;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 1050;
+      }
+
+      .scroll-to-top.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .scroll-to-top:active {
+        transform: scale(0.96);
+      }
+
+      @media (min-width: 768px) {
+        .scroll-to-top {
+          left: 24px;
+          bottom: 24px;
+          width: 48px;
+          height: 48px;
         }
       }
     </style>
@@ -544,7 +587,7 @@
       </div>
 
        <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú de trastornos de garganta">⬆ Menú</a>
+        <a href="#disfagia" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú de trastornos de garganta">⬆ Menú</a>
       </div>
 
 <div class="card-group"> 
@@ -743,7 +786,7 @@
 
  
       <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
+        <a href="#disfagia" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
       </div>
 
 
@@ -879,7 +922,7 @@
       
 
       <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal de trastornos de garganta">⬆ Menú</a>
+        <a href="#disfagia" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal de trastornos de garganta">⬆ Menú</a>
       </div>
 
           <div id="aliento" class="d-grid gap-2">
@@ -1101,7 +1144,7 @@
 </div>      
 
 <div class="container-flex text-center my-4 p-0"> 
-    <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
+  <a href="#aliento" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
 </div>
 
 
@@ -1346,7 +1389,7 @@
 
 
 <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
+  <a href="#amigdalas" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
 </div>
 
 <div class="card-group"> 
@@ -1588,7 +1631,7 @@
 </div>
 
 <div class="container-flex text-center my-4 p-0"> 
-  <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
+  <a href="#amigdalas" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
 </div>
 
 <div id="laringe" class="d-grid gap-2">
@@ -1667,9 +1710,9 @@
     </div>
 </div>
 
-   <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
-  </div>
+     <div class="container-flex text-center my-4 p-0">
+      <a href="#vox-cuidados" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
+    </div>
 
 
   
@@ -1982,7 +2025,7 @@
   </div>
 
 <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
+    <a href="#vox-cuidados" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
   </div>
 
 
@@ -2130,9 +2173,9 @@
       </div>
     </div>
 
-  <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
-  </div>
+    <div class="container-flex text-center my-4 p-0">
+      <a href="#vox-pro" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
+    </div>
 
     <div class="card-group">
 
@@ -2318,9 +2361,9 @@
         </div>
     </div>
 
-  <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
-  </div>  
+    <div class="container-flex text-center my-4 p-0">
+      <a href="#vox-pro" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
+    </div>  
 
   <h3 id="laringoscopy"  class="h4 text-center text-dark py-1" style="background-color: #d7e3f0;">
           4.3 Patologias Frecuentes de Laringe.
@@ -2567,9 +2610,9 @@
 
   
    
-  <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
-  </div>
+    <div class="container-flex text-center my-4 p-0">
+      <a href="#laringoscopy" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
+    </div>
 
   <div class="card-group"> 
 
@@ -2837,9 +2880,9 @@
  
   </div>
 
-  <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
-  </div>
+    <div class="container-flex text-center my-4 p-0">
+      <a href="#laringoscopy" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
+    </div>
 
   <div class="card-group">  
 
@@ -3214,9 +3257,9 @@
 
   </div>
 
-  <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
-  </div>
+    <div class="container-flex text-center my-4 p-0">
+      <a href="#laringoscopy" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
+    </div>
 
     <div class="card-group">
 
@@ -3568,7 +3611,7 @@
   </div>
 
       <div class="container-flex text-center my-4 p-0">
-        <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
+        <a href="#laringoscopy" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
       </div>      
 
       <div id="rge" class="d-grid gap-2">
@@ -3870,7 +3913,7 @@
 </div>
 
   <div id="rge-test" class="container-flex text-center my-4 p-0">
-    <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
+    <a href="#rge" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">⬆ Menú</a>
   </div>
 
   <div  class="d-grid gap-2">
@@ -3944,7 +3987,7 @@
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#top" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal de enfermedades de garganta">⬆ Menú</a>
+      <a href="#rge-test" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal de enfermedades de garganta">⬆ Menú</a>
     </div>
 
     </main>
@@ -3968,11 +4011,44 @@
   </div>
 
   <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
+    <div class="mb-2">
+      <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+        <i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i>
+      </a>
+      <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+        <i class="fab fa-instagram" style="font-size: 1.4rem;"></i>
+      </a>
+    </div>
     <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
       &copy; 2025 Otorrino en Pilar. Todos los derechos reservados.
     </p>
   </div>
 </footer>
+  <button type="button" id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <script>
+    (function() {
+      const scrollBtn = document.getElementById('scrollToTop');
+      if (!scrollBtn) return;
+
+      const toggleVisibility = () => {
+        if (window.scrollY > 300) {
+          scrollBtn.classList.add('show');
+        } else {
+          scrollBtn.classList.remove('show');
+        }
+      };
+
+      window.addEventListener('scroll', toggleVisibility, { passive: true });
+      toggleVisibility();
+
+      scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
         </body>
         </html>
      <script>

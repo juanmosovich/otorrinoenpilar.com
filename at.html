@@ -29,7 +29,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+<link rel="manifest" href="/favicon/site.webmanifest">
 <!--favicon-->
 
 <script type="application/ld+json">
@@ -50,6 +50,10 @@
     "publisher": {
       "@type": "Organization",
       "name": "Otorrino en Pilar",
+            "sameAs": [
+                "https://www.facebook.com/profile.php?id=100063748789595",
+                "https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr"
+            ],
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.otorrinoenpilar.com/favicon/favicon-32x32.png"
@@ -95,6 +99,7 @@
     <link rel="canonical" href="https://www.otorrinoenpilar.com/at.html"/>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <style>
@@ -154,6 +159,44 @@
         }
         .modal-content {
             border-radius: 8px;
+        }
+
+        .scroll-to-top {
+            position: fixed;
+            left: 16px;
+            bottom: 16px;
+            width: 44px;
+            height: 44px;
+            border-radius: 999px;
+            background-color: #003366;
+            color: #ffffff;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            z-index: 1050;
+        }
+
+        .scroll-to-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .scroll-to-top:active {
+            transform: scale(0.96);
+        }
+
+        @media (min-width: 768px) {
+            .scroll-to-top {
+                left: 24px;
+                bottom: 24px;
+                width: 48px;
+                height: 48px;
+            }
         }
     </style>
 </head>
@@ -317,11 +360,19 @@
     </div>
   </div>
 
-  <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
-    <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
-      &copy; 2025 Otorrino en Pilar. Todos los derechos reservados.
-    </p>
-  </div>
+    <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
+        <div class="mb-2">
+            <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+                <i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i>
+            </a>
+            <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+                <i class="fab fa-instagram" style="font-size: 1.4rem;"></i>
+            </a>
+        </div>
+        <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
+            &copy; 2025 Otorrino en Pilar. Todos los derechos reservados.
+        </p>
+    </div>
 </footer>
 
     <script>
@@ -481,6 +532,32 @@
             resetApp.addEventListener('click', resetAppFunction);
             downloadPdf.addEventListener('click', downloadPdfFunction);
         });
+    </script>
+
+    <button type="button" id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <script>
+        (function() {
+            const scrollBtn = document.getElementById('scrollToTop');
+            if (!scrollBtn) return;
+
+            const toggleVisibility = () => {
+                if (window.scrollY > 300) {
+                    scrollBtn.classList.add('show');
+                } else {
+                    scrollBtn.classList.remove('show');
+                }
+            };
+
+            window.addEventListener('scroll', toggleVisibility, { passive: true });
+            toggleVisibility();
+
+            scrollBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
     </script>
 </body>
 </html>

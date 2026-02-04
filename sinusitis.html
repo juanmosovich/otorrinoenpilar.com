@@ -25,7 +25,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+<link rel="manifest" href="/favicon/site.webmanifest">
 <!--favicon-->   
 <title>Sinusitis, Rinitis y Problemas Respiratorios Nasales en Pilar - Dr. Mosovich</title>
 <link rel="canonical" href="https://www.otorrinoenpilar.com/sinusitis.html"/>
@@ -69,6 +69,10 @@
       "name": "Otorrino en Pilar",
       "url": "https://www.otorrinoenpilar.com",
       "medicalSpecialty": "Otorrinolaringología",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=100063748789595",
+        "https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr"
+      ],
       "logo": {
         "@type": "ImageObject",
         "url": "https://www.otorrinoenpilar.com/favicon/apple-touch-icon.png"
@@ -314,6 +318,44 @@
           }
         }
 
+        .scroll-to-top {
+          position: fixed;
+          left: 16px;
+          bottom: 16px;
+          width: 44px;
+          height: 44px;
+          border-radius: 999px;
+          background-color: #003366;
+          color: #ffffff;
+          border: none;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.2s ease, transform 0.2s ease;
+          z-index: 1050;
+        }
+
+        .scroll-to-top.show {
+          opacity: 1;
+          pointer-events: auto;
+        }
+
+        .scroll-to-top:active {
+          transform: scale(0.96);
+        }
+
+        @media (min-width: 768px) {
+          .scroll-to-top {
+            left: 24px;
+            bottom: 24px;
+            width: 48px;
+            height: 48px;
+          }
+        }
+
   </style>  
 </head>
 <body id="menu"> 
@@ -551,7 +593,7 @@
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#ivn" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
     </div>
 
     <h2 id="nose" class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">
@@ -622,7 +664,7 @@
   </div>
   
   <div class="container-flex text-center my-4 p-0">
-    <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+    <a href="#nose" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
   </div>  
   
       <h2 id="higienico-dieteticas" class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;"> 
@@ -657,7 +699,7 @@
      
    
        <div class="container-flex text-center my-4 p-0">
-        <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+        <a href="#higienico-dieteticas" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
       </div>
 
       <h3 id="clean" class="h4 text-center text-white py-1" style="background-color: #003366;">
@@ -850,7 +892,7 @@
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#clean" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
     </div>  
 
     <div class="card-group"> 
@@ -1025,7 +1067,7 @@
         
     
               <div class="container-flex text-center my-4 p-0">
-                <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+                <a href="#clean" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
               </div>    
         
                
@@ -1582,7 +1624,7 @@
 </div>
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#prevenir" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
 <h3 id="remedios" class="h4 text-center text-white py-1" style="background-color: #003366;">
@@ -1798,7 +1840,7 @@
   
   
     <div class="container-flex text-center my-4 p-0">
-      <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#remedios" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
     </div>
 
     <h2 id="cornete" class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">
@@ -2020,7 +2062,7 @@
                   </div>
 
                        <div class="container-flex text-center my-4 p-0">
-                        <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+                        <a href="#cornete" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
                       </div>
 
 
@@ -2192,7 +2234,7 @@
      </div>
 
   <div class="container-flex text-center my-4 p-0">
-      <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#gripe" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
   </div>    
 
 <div id="sinusitis-checker-app-container">
@@ -2253,7 +2295,7 @@
 </div>
 
  <div class="container-flex text-center my-4 p-0">
-      <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+   <a href="#sinusitis-checker-app-container" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
   </div>
 
 <h3 id="cronic-sinusitis" class="h4 text-center text-white py-1" style="background-color: #003366;">
@@ -2451,7 +2493,7 @@
             </div>
 
  <div class="container-flex text-center my-4 p-0">
-      <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+   <a href="#cronic-sinusitis" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
   </div>
 
                  <div class="card-group"> 
@@ -2684,7 +2726,7 @@
             </div>
          
             <div class="container-flex text-center my-4 p-0">
-              <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+              <a href="#cronic-sinusitis" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
             </div>
 
 <!--trauma nasal y epistaxis-->
@@ -2937,7 +2979,7 @@
 </div>
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#epistaxis" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
   <div class="card-group">
@@ -3105,7 +3147,7 @@
 </div>  
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#epistaxis" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
 
@@ -3286,7 +3328,7 @@
 </div>
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#tabaco" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
 <h2 id="olfato" class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">
@@ -3410,7 +3452,7 @@
 
 
  <div class="container-flex text-center my-4 p-0">
-  <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#olfato" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
 <div class="container-sm mt-5 mx-6 px-6" style="background-color: #f8f9fa;">
@@ -3492,7 +3534,7 @@
 </div>
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#menu" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#olfato" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
 
     </main>
@@ -3516,6 +3558,14 @@
   </div>
 
   <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
+    <div class="mb-2">
+      <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+        <i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i>
+      </a>
+      <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+        <i class="fab fa-instagram" style="font-size: 1.4rem;"></i>
+      </a>
+    </div>
     <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
       &copy; 2025 Otorrino en Pilar. Todos los derechos reservados.
     </p>
@@ -3784,6 +3834,31 @@ document.addEventListener('DOMContentLoaded', () => {
       document.addEventListener('mouseleave', detectarSalida);
       setInterval(verificarCondiciones, 5000);
   });
+  </script>
+  <button type="button" id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <script>
+    (function() {
+      const scrollBtn = document.getElementById('scrollToTop');
+      if (!scrollBtn) return;
+
+      const toggleVisibility = () => {
+        if (window.scrollY > 300) {
+          scrollBtn.classList.add('show');
+        } else {
+          scrollBtn.classList.remove('show');
+        }
+      };
+
+      window.addEventListener('scroll', toggleVisibility, { passive: true });
+      toggleVisibility();
+
+      scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
   </script>
 </body>
 </html>

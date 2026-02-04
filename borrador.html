@@ -6,6 +6,18 @@
     <link href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3 crossorigin=anonymous>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Document</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Otorrino en Pilar",
+        "url": "https://www.otorrinoenpilar.com/",
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=100063748789595",
+          "https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr"
+        ]
+      }
+    </script>
 <style>
 /* 1. Corrección del Salto de Altura: Fija la altura del carrusel */
 .carousel-fixed-height {
@@ -54,6 +66,44 @@
     padding: 15px;
     border-radius: 50%;
 }
+
+  .scroll-to-top {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 1050;
+  }
+
+  .scroll-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .scroll-to-top:active {
+    transform: scale(0.96);
+  }
+
+  @media (min-width: 768px) {
+    .scroll-to-top {
+      left: 24px;
+      bottom: 24px;
+      width: 48px;
+      height: 48px;
+    }
+  }
 </style>
 
 </head>
@@ -291,7 +341,7 @@
                 data-video-title="Maniobra de Chin Down para Disfagia"
                 data-video-description="Descripción detallada de la Maniobra Chin Down para ejercicios de disfagia."
                 data-video-duration="PT1M45S">
-
+                 <h4>Lorem ipsum</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus in tenetur deserunt perferendis eius voluptatem soluta, veniam consectetur dolorem a sunt omnis pariatur fugiat culpa eaque accusamus neque inventore iusto.</p>
                 <p>A continuación, puede ver una demostración de la técnica del Mentón Abajo:</p>
                 
@@ -306,6 +356,7 @@
         </div>
     </div>
 </div>
+
 
 </div>
 <hr>
@@ -501,4 +552,47 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+<footer class="mt-5">
+  <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
+    <div class="mb-2">
+      <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+        <i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i>
+      </a>
+      <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+        <i class="fab fa-instagram" style="font-size: 1.4rem;"></i>
+      </a>
+    </div>
+    <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
+      &copy; 2025 Otorrino en Pilar. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+
+  <button type="button" id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </button>
+
+  <script>
+    (function() {
+      const scrollBtn = document.getElementById('scrollToTop');
+      if (!scrollBtn) return;
+
+      const toggleVisibility = () => {
+        if (window.scrollY > 300) {
+          scrollBtn.classList.add('show');
+        } else {
+          scrollBtn.classList.remove('show');
+        }
+      };
+
+      window.addEventListener('scroll', toggleVisibility, { passive: true });
+      toggleVisibility();
+
+      scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
+
 </html>
