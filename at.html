@@ -6,9 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#003366">
 <meta name="author" content="Dr. Juan Mosovich - OtorrinoEnPilar.com">
-<meta name="description" content="Audiometría online gratuita del Dr. Mosovich. Evalúa tu audición midiendo frecuencias e intensidades auditivas. Prueba de tono profesional para detectar problemas auditivos. Descarga resultados en PDF.">
+<meta name="description" content="Audiometria online gratuita en Pilar. Evalua tu audicion midiendo frecuencias e intensidades auditivas. Prueba de tono profesional y descarga resultados en PDF.">
 <meta name="keywords" content="audiometría online gratis, prueba de audición online, test auditivo, evaluar audición, audiometría tonal, pérdida auditiva, hipoacusia, salud auditiva Pilar, audiólogo online, examen de oído">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="geo.region" content="AR-B">
+<meta name="geo.placename" content="Pilar, Buenos Aires">
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
 <!-- Metadatos para redes sociales (Open Graph) -->
 <meta property="og:title" content="Audiometría Online Gratis | Test de Audición del Dr. Mosovich">
@@ -94,14 +99,77 @@
   }
 ]
 </script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Consultorio de Otorrinolaringologia del Dr. Juan Mosovich",
+    "url": "https://www.otorrinoenpilar.com/",
+    "telephone": "+541168212512",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Caamano 1100, Edificio Agora 2, Piso 1, Oficina 110",
+        "addressLocality": "Pilar",
+        "addressRegion": "Buenos Aires",
+        "postalCode": "1631",
+        "addressCountry": "AR"
+    },
+    "medicalSpecialty": "Otolaryngology",
+    "sameAs": [
+        "https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr",
+        "https://www.facebook.com/profile.php?id=100063748789595"
+    ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Cuanto dura la audiometria online?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La prueba suele durar entre 5 y 10 minutos, segun la cantidad de frecuencias que completes."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Necesito usar auriculares para el test?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Si. Para un resultado mas consistente, es importante usar auriculares y realizar la prueba en un ambiente silencioso."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "La audiometria online reemplaza un estudio profesional?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Es una herramienta orientativa y no reemplaza el estudio profesional realizado por un especialista."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Que hago con los resultados en PDF?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Podes descargar el informe y compartirlo con el especialista para una evaluacion mas completa."
+            }
+        }
+    ]
+}
+</script>
     
     <title>Audiometría Online Gratis | Test de Audición Dr. Mosovich | Otorrino en Pilar</title>
     <link rel="canonical" href="https://www.otorrinoenpilar.com/at.html"/>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js" defer></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -147,6 +215,40 @@
             flex: 1;
             margin: 0 10px;
         }
+        .btn-action-lg {
+            padding: 0.85rem 1rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+        .intensity-control {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 1rem;
+        }
+        .intensity-feedback {
+            font-size: 0.95rem;
+            color: #0d6efd;
+            font-weight: 600;
+        }
+        .text-muted {
+            color: #5f6b76 !important;
+        }
+        .hero-section {
+            padding: 1.2rem 1rem;
+        }
+        .hero-title {
+            font-size: clamp(1.9rem, 2.5vw + 1rem, 3rem);
+            line-height: 1.15;
+        }
+        .hero-subtitle {
+            font-size: clamp(0.95rem, 1vw + 0.7rem, 1.25rem);
+        }
+        #intensidadSlider {
+            accent-color: #0d6efd;
+            background: linear-gradient(90deg, #198754 0%, #ffc107 60%, #dc3545 100%);
+            border-radius: 999px;
+            height: 0.5rem;
+        }
         #setupModal {
             display: block;
             position: fixed;
@@ -159,6 +261,26 @@
         }
         .modal-content {
             border-radius: 8px;
+        }
+
+        .icon-inline {
+            width: 18px;
+            height: 18px;
+            margin-right: 0.5rem;
+            vertical-align: text-bottom;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #003366;
+            border: 1px solid #003366;
         }
 
         .scroll-to-top {
@@ -190,12 +312,89 @@
             transform: scale(0.96);
         }
 
+        .quick-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .toast-feedback {
+            position: fixed;
+            right: 16px;
+            bottom: 16px;
+            background: #003366;
+            color: #ffffff;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            z-index: 1060;
+            pointer-events: none;
+            font-size: 0.95rem;
+        }
+
+        .toast-feedback.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         @media (min-width: 768px) {
+            .hero-section {
+                padding: 2.5rem 1.5rem;
+            }
             .scroll-to-top {
                 left: 24px;
                 bottom: 24px;
                 width: 48px;
                 height: 48px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .intensidad-display {
+                font-size: 2.4rem;
+            }
+            .btn-action-lg {
+                padding: 0.7rem 0.85rem;
+                font-size: 0.95rem;
+            }
+            .quick-actions .btn {
+                font-size: 0.95rem;
+            }
+            .instructions ol {
+                padding-left: 1.1rem;
+            }
+            .action-buttons {
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+            .action-buttons .btn-action {
+                margin: 0;
+            }
+            .card.compact-card {
+                padding: 1rem !important;
+            }
+            .results-card {
+                padding: 0.85rem !important;
+            }
+            .chart-wrapper {
+                margin: 12px 0;
+                min-width: 100%;
+            }
+            .faq-card .card-body,
+            .info-card .card-body {
+                padding: 1.1rem;
+            }
+            .section-compact {
+                margin-top: 2rem !important;
+                margin-bottom: 2rem !important;
+            }
+            .text-muted,
+            .small {
+                font-size: 0.95rem;
+                line-height: 1.45;
             }
         }
     </style>
@@ -216,7 +415,10 @@
                     <p>
                         Utiliza auriculares de calidad y realiza la prueba en un ambiente silencioso.
                     </p>
-                    <img src="./imagenes/volmedio.gif" alt="Configuración de volumen del sistema al 50% para audiometría online" class="img-fluid my-3" width="400" height="300">
+                    <picture>
+                        <source srcset="/imagenes/volmedio.webp" type="image/webp">
+                        <img src="/imagenes/volmedio.gif" alt="Configuracion de volumen del sistema al 50% para audiometria online" class="img-fluid my-3" width="400" height="300" loading="eager" decoding="async" fetchpriority="high">
+                    </picture>
                 </div>
                 <div class="modal-footer">
                     <button id="confirmSetup" class="btn btn-primary">He ajustado el volumen</button>
@@ -224,10 +426,10 @@
             </div>
         </div>
     </div>
-   <header class="my-5">
+    <header class="my-3 my-md-4 my-lg-5">
     <!-- Simplificado para mobile first: el brand y el botón se distribuyen en cualquier pantalla -->
-    <nav class="navbar navbar-light bg-light py-3 shadow-sm">
-      <div class="container-fluid d-flex justify-content-between px-4">
+        <nav class="navbar navbar-light bg-light py-2 shadow-sm">
+            <div class="container-fluid d-flex justify-content-between px-3">
         <!-- El texto del brand es un poco más pequeño en móvil con 'fs-5' -->
         <a class="navbar-brand text-primary fw-bold fs-5" href="https://www.otorrinoenpilar.com/">
           Otorrino en Pilar
@@ -239,36 +441,48 @@
     </nav>
 
     <!-- Se ajusta el padding con clases responsivas: 'p-4' en móvil y 'p-lg-5' en pantallas grandes -->
-    <div class="p-4 p-lg-5 text-center text-white" style="background-color: #003366;">
+        <div class="text-center text-white hero-section" style="background-color: #003366;">
       <div class="container-fluid">
-        <h1 class="display-4 fw-bold">Audiometría Online Gratis - Dr. Mosovich</h1>
-        <p class="lead mb-4 text-white">Test de audición profesional. Evaluá tu salud auditiva y descargá los resultados en PDF.</p>
+            <h1 class="fw-bold hero-title">Audiometria Online en Pilar - Dr. Mosovich</h1>
+            <p class="lead mb-3 text-white d-none d-md-block hero-subtitle">Test de audicion profesional. Evalua tu salud auditiva y descarga los resultados en PDF.</p>
+            <p class="mb-0 text-white d-block d-md-none hero-subtitle">Test de audicion profesional con resultados descargables.</p>
       </div>
       </div>
     </div>
   </header>
-    
 
-        <!-- Instrucciones -->
-        <div class="instructions mb-4">
-            <h2 class="h3">Cómo Realizar la Audiometría Online</h2>
-            <p>Seguí estos pasos para evaluar tu audición de forma precisa:</p>
-            <ol>
-                <li>Selecciona el oído (derecho o izquierdo).</li>
-                <li>Selecciona la frecuencia deseada.</li>
-                <li>Presiona "Probar sonido" para escuchar el tono.</li>
-                <li>Si no percibes el tono, presiona "No lo percibo" para aumentar la intensidad.</li>
-                <li>Cuando percibas el tono, presiona "Lo percibo" para registrarlo.</li>
-                <li>Cambia de frecuencia para continuar la prueba.</li>
-                <li>Si lo necesitas, presiona "Reiniciar app" para comenzar desde cero.</li>
-                <li>Descarga el informe en PDF al finalizar la prueba.</li>
-                <li><strong><mark>Esta prueba es orientativa, no reemplaza el estudio hecho por el audiólogo profesional.</mark></strong></li>
+    <main class="container my-3 my-lg-5">
+        <!-- Flujo principal -->
+        <div class="instructions mb-3 mb-md-4">
+            <h2 class="h3">Pasos rapidos para la audiometria online en Pilar</h2>
+            <ol class="mb-2">
+                <li>Elegi el oido y la frecuencia.</li>
+                <li>Presiona "Probar sonido" y ajusta con "No lo percibo".</li>
+                <li>Cuando lo escuches, toca "Lo percibo" para guardar.</li>
+                <li>Repeti por cada frecuencia y descarga el informe.</li>
             </ol>
+            <p class="mb-0"><strong><mark>Esta prueba es orientativa y no reemplaza el estudio profesional.</mark></strong></p>
+        </div>
+
+        <div class="card shadow p-3 p-md-4 mb-3 mb-md-4 compact-card">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 text-center text-md-start">
+                <div>
+                    <p class="mb-1 text-muted">Estado de la prueba</p>
+                    <p class="mb-0 fw-semibold">Oido: <span id="estadoOido">Derecho</span> | Frecuencia: <span id="estadoFrecuencia">500 Hz</span></p>
+                </div>
+                <div class="text-md-end">
+                    <p class="mb-1 text-muted">Intensidad actual</p>
+                    <p class="mb-0 fw-semibold"><span id="estadoIntensidad">0</span> dB</p>
+                </div>
+            </div>
         </div>
 
         <!-- Controles -->
-        <div class="card shadow p-4">
+        <div class="card shadow p-4 compact-card">
             <h2 class="h4 mb-4 text-center">Panel de Control de la Audiometría</h2>
+            <p class="small text-muted text-center mb-4 d-none d-md-block">
+                Atajos: Espacio = Probar sonido · N = No lo percibo · L = Lo percibo · O = Cambiar oido · F = Frecuencia · R = Reiniciar · P = PDF
+            </p>
             <div class="mb-3">
                 <label for="oido" class="form-label"><strong>Selecciona el oído a evaluar:</strong></label>
                 <select class="form-select" id="oido">
@@ -288,25 +502,111 @@
                     <option value="3500">3500 Hz</option>
                     <option value="4000">4000 Hz</option>
                 </select>
+                <p class="small text-muted mt-2 mb-0" id="estadoFrecuenciaGuardada">Esta frecuencia aun no esta registrada.</p>
             </div>
 
             <div class="intensidad-display">
                 <span id="intensidadLabel">0</span> dB
             </div>
 
+            <button class="btn btn-primary w-100" id="probarSonido" aria-label="Reproducir tono de prueba">
+                <svg class="icon-inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M3 9h4l5-4v14l-5-4H3z"></path>
+                    <path fill="currentColor" d="M16 8a4 4 0 0 1 0 8" opacity="0.7"></path>
+                </svg>
+                Probar sonido
+            </button>
+            <p class="text-muted small mt-2 mb-3">Usa este boton para escuchar el tono antes de ajustar la intensidad.</p>
+
+            <div class="intensity-control mb-3">
+                <label for="intensidadSlider" class="form-label fw-semibold mb-2">Intensidad rapida (0-100)</label>
+                <input type="range" class="form-range" id="intensidadSlider" min="0" max="100" step="5" list="intensidadTicks" value="0" aria-label="Control rapido de intensidad">
+                <datalist id="intensidadTicks">
+                    <option value="0"></option>
+                    <option value="20"></option>
+                    <option value="40"></option>
+                    <option value="60"></option>
+                    <option value="80"></option>
+                    <option value="100"></option>
+                </datalist>
+                <div class="d-flex justify-content-between mt-2">
+                    <span class="small text-muted">Suave</span>
+                    <span class="intensity-feedback">Actual: <span id="intensidadFeedback">0</span> dB</span>
+                    <span class="small text-muted">Fuerte</span>
+                </div>
+                <p class="small text-muted mt-2 mb-0">Seguridad auditiva: no superes los 85 dB por tiempo prolongado.</p>
+                <div class="alert alert-warning mt-2 mb-0 py-2" id="alertSeguridad" style="display: none;">
+                    Aviso: llegaste a 100 dB. Baja la intensidad para cuidar tu audicion.
+                </div>
+            </div>
+
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="checkAuriculares">
+                <label class="form-check-label" for="checkAuriculares">Estoy usando auriculares</label>
+            </div>
+
             <p id="alertFrecuenciaGuardada">Frecuencia guardada, cambia la frecuencia.</p>
 
-            <div class="d-flex justify-content-center">
-                <button class="btn btn-warning btn-action" id="noLoPercibo" aria-label="No percibo el sonido, aumentar intensidad">No lo percibo</button>
-                <button class="btn btn-success btn-action" id="loPercibo" aria-label="Percibo el sonido, guardar resultado">Lo percibo</button>
+            <div class="quick-actions mb-3">
+                <button class="btn btn-outline-primary" id="nextFrequency" aria-label="Ir a la siguiente frecuencia pendiente">
+                    Siguiente frecuencia
+                </button>
+                <button class="btn btn-outline-primary" id="toggleOido" aria-label="Cambiar el oido activo">
+                    Cambiar oido
+                </button>
             </div>
-            <button class="btn btn-primary w-100 mt-3" id="probarSonido" aria-label="Reproducir tono de prueba">Probar sonido</button>
-            <button class="btn btn-danger w-100 mt-3" id="resetApp" aria-label="Reiniciar toda la audiometría">Reiniciar app</button>
-            <button class="btn btn-secondary w-100 mt-3" id="downloadPdf" aria-label="Descargar informe de audiometría en formato PDF">Descargar informe en PDF</button>
+
+            <div class="d-flex justify-content-center action-buttons">
+                <button class="btn btn-warning btn-action btn-action-lg" id="noLoPercibo" aria-label="No percibo el sonido, aumentar intensidad">
+                    <svg class="icon-inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path fill="currentColor" d="M3 9h4l5-4v14l-5-4H3z"></path>
+                        <path fill="currentColor" d="M16 8l4 4m0-4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                    </svg>
+                    No lo percibo
+                </button>
+                <button class="btn btn-success btn-action btn-action-lg" id="loPercibo" aria-label="Percibo el sonido, guardar resultado">
+                    <svg class="icon-inline" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    Lo percibo
+                </button>
+            </div>
+            <button class="btn btn-outline-secondary w-100 mt-3" id="borrarUltimo" aria-label="Borrar el ultimo registro" disabled>Borrar ultimo registro</button>
+            <div class="d-grid gap-2 mt-3">
+                <button class="btn btn-danger w-100" id="resetApp" aria-label="Reiniciar toda la audiometría">Reiniciar app</button>
+                <button class="btn btn-secondary w-100" id="downloadPdf" aria-label="Descargar informe de audiometría en formato PDF" disabled>Descargar informe en PDF</button>
+            </div>
         </div>
 
         <!-- Gráficos -->
-        <h2 class="h4 text-center my-4">Resultados de tu Audiometría</h2>
+        <h2 class="h4 text-center my-4">Resultados de tu audiometria online</h2>
+        <p class="text-center text-muted mb-4">Cuando guardes una frecuencia, apareceran los puntos en el audiograma.</p>
+        <div class="card shadow-sm p-3 mb-4 results-card">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2 text-center text-md-start">
+                <div>
+                    <p class="mb-1 text-muted">Frecuencias guardadas</p>
+                    <p class="mb-0 fw-semibold">Total: <span id="estadoTotalGuardadas">0</span> / <span id="estadoTotalFrecuencias">8</span></p>
+                </div>
+                <div>
+                    <p class="mb-1 text-muted">Oido derecho</p>
+                    <p class="mb-0 fw-semibold"><span id="estadoGuardadasDerecho">0</span> / <span id="estadoFrecuenciasDerecho">8</span></p>
+                </div>
+                <div>
+                    <p class="mb-1 text-muted">Oido izquierdo</p>
+                    <p class="mb-0 fw-semibold"><span id="estadoGuardadasIzquierdo">0</span> / <span id="estadoFrecuenciasIzquierdo">8</span></p>
+                </div>
+            </div>
+            <div class="mt-3">
+                <div class="progress" role="progressbar" aria-label="Progreso de la audiometria">
+                    <div class="progress-bar" id="estadoProgreso" style="width: 0%;"></div>
+                </div>
+                <p class="small text-muted mt-2 mb-0 text-center"><span id="estadoProgresoTexto">0%</span> completado</p>
+                <p class="small text-muted mb-0 text-center">Faltan <span id="estadoFaltan">0</span> mediciones</p>
+            </div>
+            <div class="alert alert-success mt-3 mb-0 text-center" id="estadoCompleto" style="display: none;">
+                Listo. Completaste todas las frecuencias.
+            </div>
+        </div>
         <div class="chart-container">
             <div class="chart-wrapper">
                 <h3 class="h5">Audiograma Oído Derecho</h3>
@@ -317,12 +617,14 @@
                 <canvas id="chartIzquierdo" role="img" aria-label="Gráfico audiométrico del oído izquierdo"></canvas>
             </div>
         </div>
-    </div>
+    </main>
+
+    <div class="toast-feedback" id="toastFeedback" role="status" aria-live="polite"></div>
     
-    <section class="container my-5">
-        <div class="card">
+    <section class="container my-5 section-compact">
+        <div class="card info-card">
             <div class="card-body">
-                <h2 class="h4 mb-3">¿Qué es una Audiometría?</h2>
+                <h2 class="h4 mb-3">¿Que es una audiometria online?</h2>
                 <p>La <strong>audiometría</strong> es un examen que evalúa la capacidad auditiva de una persona, midiendo su respuesta a diferentes <strong>frecuencias</strong> (tonos) e <strong>intensidades</strong> (volumen). Esta herramienta online proporciona una evaluación orientativa de tu audición.</p>
                 
                 <h3 class="h5 mt-4 mb-3">¿Cuándo deberías hacer una audiometría?</h3>
@@ -336,6 +638,30 @@
                 
                 <div class="alert alert-info mt-4">
                     <strong>⚠️ Importante:</strong> Esta prueba es orientativa. Para un diagnóstico profesional y preciso, agenda una consulta con el <a href="https://www.otorrinoenpilar.com/#contacto" class="alert-link">Dr. Mosovich, otorrinolaringólogo en Pilar</a>.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container my-5 section-compact">
+        <div class="card faq-card">
+            <div class="card-body">
+                <h2 class="h4 mb-3">Preguntas frecuentes sobre la audiometria online</h2>
+                <div class="mb-3">
+                    <h3 class="h6 mb-1">¿Cuanto dura la audiometria online?</h3>
+                    <p class="mb-0 text-muted">La prueba suele durar entre 5 y 10 minutos, segun la cantidad de frecuencias que completes.</p>
+                </div>
+                <div class="mb-3">
+                    <h3 class="h6 mb-1">¿Necesito usar auriculares para el test?</h3>
+                    <p class="mb-0 text-muted">Si. Para un resultado mas consistente, usa auriculares y un ambiente silencioso.</p>
+                </div>
+                <div class="mb-3">
+                    <h3 class="h6 mb-1">¿La audiometria online reemplaza un estudio profesional?</h3>
+                    <p class="mb-0 text-muted">No. Es orientativa y no reemplaza el estudio profesional con un especialista.</p>
+                </div>
+                <div>
+                    <h3 class="h6 mb-1">¿Que hago con los resultados en PDF?</h3>
+                    <p class="mb-0 text-muted">Podes descargar el informe y compartirlo con el especialista para una evaluacion mas completa.</p>
                 </div>
             </div>
         </div>
@@ -363,10 +689,10 @@
     <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
         <div class="mb-2">
             <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
-                <i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i>
+                <span class="social-icon" aria-hidden="true">f</span>
             </a>
             <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
-                <i class="fab fa-instagram" style="font-size: 1.4rem;"></i>
+                <span class="social-icon" aria-hidden="true">ig</span>
             </a>
         </div>
         <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
@@ -410,11 +736,41 @@
             const probarSonido = document.getElementById('probarSonido');
             const noLoPercibo = document.getElementById('noLoPercibo');
             const loPercibo = document.getElementById('loPercibo');
+            const intensidadSlider = document.getElementById('intensidadSlider');
+            const intensidadFeedback = document.getElementById('intensidadFeedback');
+            const borrarUltimo = document.getElementById('borrarUltimo');
             const resetApp = document.getElementById('resetApp');
             const downloadPdf = document.getElementById('downloadPdf');
+            const nextFrequency = document.getElementById('nextFrequency');
+            const toggleOido = document.getElementById('toggleOido');
+            const toastFeedback = document.getElementById('toastFeedback');
             const alertFrecuenciaGuardada = document.getElementById('alertFrecuenciaGuardada');
+            const estadoOido = document.getElementById('estadoOido');
+            const estadoFrecuencia = document.getElementById('estadoFrecuencia');
+            const estadoIntensidad = document.getElementById('estadoIntensidad');
+            const estadoFrecuenciaGuardada = document.getElementById('estadoFrecuenciaGuardada');
+            const estadoTotalGuardadas = document.getElementById('estadoTotalGuardadas');
+            const estadoTotalFrecuencias = document.getElementById('estadoTotalFrecuencias');
+            const estadoGuardadasDerecho = document.getElementById('estadoGuardadasDerecho');
+            const estadoGuardadasIzquierdo = document.getElementById('estadoGuardadasIzquierdo');
+            const estadoFrecuenciasDerecho = document.getElementById('estadoFrecuenciasDerecho');
+            const estadoFrecuenciasIzquierdo = document.getElementById('estadoFrecuenciasIzquierdo');
+            const estadoCompleto = document.getElementById('estadoCompleto');
+            const estadoProgreso = document.getElementById('estadoProgreso');
+            const estadoProgresoTexto = document.getElementById('estadoProgresoTexto');
+            const estadoFaltan = document.getElementById('estadoFaltan');
 
             let intensidadActual = 0;
+            let ultimoRegistro = null;
+
+            estadoOido.textContent = oidoSelect.value === 'derecho' ? 'Derecho' : 'Izquierdo';
+            estadoFrecuencia.textContent = `${frecuenciaSelect.value} Hz`;
+            estadoIntensidad.textContent = intensidadActual;
+
+            const totalFrecuencias = frecuenciaSelect.options.length;
+            estadoTotalFrecuencias.textContent = totalFrecuencias;
+            estadoFrecuenciasDerecho.textContent = totalFrecuencias;
+            estadoFrecuenciasIzquierdo.textContent = totalFrecuencias;
 
             const resultados = {
                 derecho: {},
@@ -460,6 +816,43 @@
             const resetIntensidad = () => {
                 intensidadActual = 0;
                 intensidadLabel.textContent = intensidadActual;
+                estadoIntensidad.textContent = intensidadActual;
+                intensidadSlider.value = intensidadActual;
+                intensidadFeedback.textContent = intensidadActual;
+            };
+
+            const updateResumen = () => {
+                const totalDerecho = Object.keys(resultados.derecho).length;
+                const totalIzquierdo = Object.keys(resultados.izquierdo).length;
+                const total = totalDerecho + totalIzquierdo;
+                estadoGuardadasDerecho.textContent = totalDerecho;
+                estadoGuardadasIzquierdo.textContent = totalIzquierdo;
+                estadoTotalGuardadas.textContent = total;
+                const totalEsperado = totalFrecuencias * 2;
+                estadoCompleto.style.display = total === totalEsperado ? 'block' : 'none';
+                const progreso = totalEsperado === 0 ? 0 : Math.round((total / totalEsperado) * 100);
+                estadoProgreso.style.width = `${progreso}%`;
+                estadoProgresoTexto.textContent = `${progreso}%`;
+                estadoFaltan.textContent = Math.max(totalEsperado - total, 0);
+                downloadPdf.disabled = total === 0;
+            };
+
+            const updateEstadoFrecuencia = () => {
+                const oido = oidoSelect.value;
+                const frecuencia = frecuenciaSelect.value;
+                const yaGuardada = resultados[oido][frecuencia] !== undefined;
+                if (yaGuardada) {
+                    estadoFrecuenciaGuardada.textContent = 'Esta frecuencia ya esta registrada para este oido.';
+                } else {
+                    estadoFrecuenciaGuardada.textContent = 'Esta frecuencia aun no esta registrada.';
+                }
+            };
+
+            const removeDataPoint = (chart, frequencyValue) => {
+                const idx = chart.data.datasets[0].data.findIndex((point) => point.x === frequencyValue);
+                if (idx === -1) return;
+                chart.data.datasets[0].data.splice(idx, 1);
+                chart.update();
             };
 
             const resetAppFunction = () => {
@@ -472,20 +865,171 @@
                 chartIzquierdo.update();
                 resetIntensidad();
                 alertFrecuenciaGuardada.style.display = 'none';
+                estadoOido.textContent = oidoSelect.value === 'derecho' ? 'Derecho' : 'Izquierdo';
+                estadoFrecuencia.textContent = `${frecuenciaSelect.value} Hz`;
+                ultimoRegistro = null;
+                borrarUltimo.disabled = true;
+                updateResumen();
+                updateEstadoFrecuencia();
+            };
+
+            let toastTimeout = null;
+            const showToast = (message) => {
+                if (!toastFeedback) return;
+                toastFeedback.textContent = message;
+                toastFeedback.classList.add('show');
+                if (toastTimeout) {
+                    clearTimeout(toastTimeout);
+                }
+                toastTimeout = setTimeout(() => {
+                    toastFeedback.classList.remove('show');
+                }, 2200);
+            };
+
+            const selectNextFrequency = () => {
+                const options = Array.from(frecuenciaSelect.options);
+                const currentIndex = options.findIndex((option) => option.value === frecuenciaSelect.value);
+                const oido = oidoSelect.value;
+                const totalOptions = options.length;
+                for (let offset = 1; offset <= totalOptions; offset += 1) {
+                    const nextIndex = (currentIndex + offset) % totalOptions;
+                    const nextValue = options[nextIndex].value;
+                    if (resultados[oido][nextValue] === undefined) {
+                        frecuenciaSelect.value = nextValue;
+                        frecuenciaSelect.dispatchEvent(new Event('change'));
+                        return;
+                    }
+                }
+                frecuenciaSelect.value = options[(currentIndex + 1) % totalOptions].value;
+                frecuenciaSelect.dispatchEvent(new Event('change'));
             };
 
             const downloadPdfFunction = () => {
                 const { jsPDF } = window.jspdf;
-                const doc = new jsPDF();
-                doc.text('Informe de Audiometría', 10, 10);
-                doc.text('Resultados Oído Derecho:', 10, 20);
-                Object.entries(resultados.derecho).forEach(([freq, intensity], index) => {
-                    doc.text(`${freq} Hz: ${intensity} dB`, 10, 30 + index * 10);
-                });
-                doc.text('Resultados Oído Izquierdo:', 10, 60);
-                Object.entries(resultados.izquierdo).forEach(([freq, intensity], index) => {
-                    doc.text(`${freq} Hz: ${intensity} dB`, 10, 70 + index * 10);
-                });
+                const doc = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' });
+                const pageWidth = doc.internal.pageSize.getWidth();
+                const pageHeight = doc.internal.pageSize.getHeight();
+                const margin = 14;
+                let cursorY = 16;
+
+                const drawTitle = () => {
+                    doc.setFont('helvetica', 'bold');
+                    doc.setFontSize(16);
+                    doc.text('Informe de Audiometria', margin, cursorY);
+                    doc.setFont('helvetica', 'normal');
+                    doc.setFontSize(10);
+                    doc.text(`Fecha: ${new Date().toLocaleDateString('es-AR')}`, pageWidth - margin, cursorY, { align: 'right' });
+                    cursorY += 8;
+                };
+
+                const getChartImage = (chart, scale = 2) => {
+                    const sourceCanvas = chart.canvas;
+                    const scaledCanvas = document.createElement('canvas');
+                    scaledCanvas.width = sourceCanvas.width * scale;
+                    scaledCanvas.height = sourceCanvas.height * scale;
+                    const ctx = scaledCanvas.getContext('2d');
+                    ctx.scale(scale, scale);
+                    ctx.drawImage(sourceCanvas, 0, 0);
+                    return scaledCanvas.toDataURL('image/png', 1.0);
+                };
+
+                const drawSectionTitle = (title) => {
+                    doc.setFont('helvetica', 'bold');
+                    doc.setFontSize(12);
+                    doc.text(title, margin, cursorY);
+                    cursorY += 6;
+                };
+
+                const drawResultsTable = () => {
+                    const frequencies = Array.from(frecuenciaSelect.options).map((option) => parseInt(option.value, 10));
+                    const tableWidth = pageWidth - margin * 2;
+                    const colWidths = [tableWidth * 0.3, tableWidth * 0.35, tableWidth * 0.35];
+                    const rowHeight = 7;
+                    const headers = ['Frecuencia (Hz)', 'Oido derecho (dB)', 'Oido izquierdo (dB)'];
+
+                    const ensureSpace = (rows) => {
+                        const needed = rows * rowHeight + 4;
+                        if (cursorY + needed > pageHeight - margin) {
+                            doc.addPage();
+                            cursorY = margin;
+                        }
+                    };
+
+                    ensureSpace(frequencies.length + 1);
+
+                    doc.setFont('helvetica', 'bold');
+                    doc.setFontSize(10);
+                    let x = margin;
+                    headers.forEach((header, idx) => {
+                        doc.rect(x, cursorY, colWidths[idx], rowHeight);
+                        doc.text(header, x + colWidths[idx] / 2, cursorY + 4.6, { align: 'center' });
+                        x += colWidths[idx];
+                    });
+
+                    doc.setFont('helvetica', 'normal');
+                    frequencies.forEach((freq) => {
+                        cursorY += rowHeight;
+                        const derecho = resultados.derecho[freq] !== undefined ? `${resultados.derecho[freq]} dB` : '-';
+                        const izquierdo = resultados.izquierdo[freq] !== undefined ? `${resultados.izquierdo[freq]} dB` : '-';
+                        const row = [String(freq), derecho, izquierdo];
+                        let cellX = margin;
+                        row.forEach((value, idx) => {
+                            doc.rect(cellX, cursorY, colWidths[idx], rowHeight);
+                            doc.text(value, cellX + colWidths[idx] / 2, cursorY + 4.6, { align: 'center' });
+                            cellX += colWidths[idx];
+                        });
+                    });
+
+                    cursorY += rowHeight + 6;
+                };
+
+                const drawCharts = () => {
+                    const chartImages = [
+                        { title: 'Audiograma oido derecho', chart: chartDerecho },
+                        { title: 'Audiograma oido izquierdo', chart: chartIzquierdo }
+                    ];
+
+                    chartImages.forEach(({ title, chart }) => {
+                        if (cursorY + 70 > pageHeight - margin) {
+                            doc.addPage();
+                            cursorY = margin;
+                        }
+
+                        doc.setFont('helvetica', 'bold');
+                        doc.setFontSize(11);
+                        doc.text(title, margin, cursorY);
+                        cursorY += 4;
+
+                        const imageData = getChartImage(chart, 2);
+                        const sourceRatio = chart.canvas.height / chart.canvas.width;
+                        const maxWidth = pageWidth - margin * 2;
+                        const maxHeight = 70;
+                        let imageWidth = maxWidth;
+                        let imageHeight = imageWidth * sourceRatio;
+                        if (imageHeight > maxHeight) {
+                            imageHeight = maxHeight;
+                            imageWidth = imageHeight / sourceRatio;
+                        }
+                        const imageX = margin + (maxWidth - imageWidth) / 2;
+                        doc.addImage(imageData, 'PNG', imageX, cursorY + 2, imageWidth, imageHeight);
+                        cursorY += imageHeight + 10;
+                    });
+                };
+
+                drawTitle();
+                drawSectionTitle('Resumen de resultados');
+                drawResultsTable();
+                drawSectionTitle('Audiogramas');
+                drawCharts();
+
+                doc.setFont('helvetica', 'normal');
+                doc.setFontSize(9);
+                if (cursorY + 10 > pageHeight - margin) {
+                    doc.addPage();
+                    cursorY = margin;
+                }
+                doc.text('Este informe es orientativo y no reemplaza un estudio profesional.', margin, cursorY + 2);
+
                 doc.save('Informe_Audiometria.pdf');
             };
 
@@ -504,6 +1048,16 @@
             noLoPercibo.addEventListener('click', () => {
                 intensidadActual = Math.min(intensidadActual + 5, 100);
                 intensidadLabel.textContent = intensidadActual;
+                estadoIntensidad.textContent = intensidadActual;
+                intensidadSlider.value = intensidadActual;
+                intensidadFeedback.textContent = intensidadActual;
+            });
+
+            intensidadSlider.addEventListener('input', () => {
+                intensidadActual = parseInt(intensidadSlider.value, 10);
+                intensidadLabel.textContent = intensidadActual;
+                estadoIntensidad.textContent = intensidadActual;
+                intensidadFeedback.textContent = intensidadActual;
             });
 
             loPercibo.addEventListener('click', () => {
@@ -517,25 +1071,84 @@
                 chart.update();
 
                 alertFrecuenciaGuardada.style.display = 'block';
+                ultimoRegistro = { oido, frecuencia };
+                borrarUltimo.disabled = false;
+                updateResumen();
+                updateEstadoFrecuencia();
+                const oidoLabel = oido === 'derecho' ? 'Derecho' : 'Izquierdo';
+                showToast(`Guardado: ${oidoLabel} ${frecuencia} Hz - ${intensidadActual} dB`);
+            });
+
+            borrarUltimo.addEventListener('click', () => {
+                if (!ultimoRegistro) return;
+                const { oido, frecuencia } = ultimoRegistro;
+                const chart = oido === 'derecho' ? chartDerecho : chartIzquierdo;
+                delete resultados[oido][frecuencia];
+                removeDataPoint(chart, frecuencia);
+                alertFrecuenciaGuardada.style.display = 'none';
+                ultimoRegistro = null;
+                borrarUltimo.disabled = true;
+                updateResumen();
+                updateEstadoFrecuencia();
             });
 
             frecuenciaSelect.addEventListener('change', () => {
                 alertFrecuenciaGuardada.style.display = 'none';
                 resetIntensidad();
+                estadoFrecuencia.textContent = `${frecuenciaSelect.value} Hz`;
+                updateEstadoFrecuencia();
             });
 
             oidoSelect.addEventListener('change', () => {
                 alertFrecuenciaGuardada.style.display = 'none';
                 resetIntensidad();
+                estadoOido.textContent = oidoSelect.value === 'derecho' ? 'Derecho' : 'Izquierdo';
+                updateEstadoFrecuencia();
+            });
+
+            nextFrequency.addEventListener('click', () => {
+                selectNextFrequency();
+            });
+
+            toggleOido.addEventListener('click', () => {
+                oidoSelect.value = oidoSelect.value === 'derecho' ? 'izquierdo' : 'derecho';
+                oidoSelect.dispatchEvent(new Event('change'));
             });
 
             resetApp.addEventListener('click', resetAppFunction);
             downloadPdf.addEventListener('click', downloadPdfFunction);
+
+            updateResumen();
+            updateEstadoFrecuencia();
+
+            document.addEventListener('keydown', (event) => {
+                const tagName = event.target && event.target.tagName ? event.target.tagName.toLowerCase() : '';
+                if (tagName === 'input' || tagName === 'textarea' || tagName === 'select') return;
+
+                const key = event.key.toLowerCase();
+                if (key === ' ' || key === 'spacebar') {
+                    event.preventDefault();
+                    probarSonido.click();
+                } else if (key === 'n') {
+                    noLoPercibo.click();
+                } else if (key === 'l') {
+                    loPercibo.click();
+                } else if (key === 'o') {
+                    oidoSelect.value = oidoSelect.value === 'derecho' ? 'izquierdo' : 'derecho';
+                    oidoSelect.dispatchEvent(new Event('change'));
+                } else if (key === 'f') {
+                    frecuenciaSelect.focus();
+                } else if (key === 'r') {
+                    resetApp.click();
+                } else if (key === 'p' && !downloadPdf.disabled) {
+                    downloadPdf.click();
+                }
+            });
         });
     </script>
 
     <button type="button" id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
-        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+        <span aria-hidden="true">^</span>
     </button>
 
     <script>

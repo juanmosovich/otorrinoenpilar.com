@@ -3,13 +3,22 @@
 <head>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XNNM71EW8T');
+  const loadGtag = () => {
+    const gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T';
+    document.head.appendChild(gtagScript);
+    gtag('js', new Date());
+    gtag('config', 'G-XNNM71EW8T');
+  };
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadGtag, { timeout: 2000 });
+  } else {
+    window.addEventListener('load', loadGtag);
+  }
 </script>
 
 <meta charset="utf-8">
@@ -17,27 +26,57 @@
 <meta name="theme-color" content="#003366">
 <meta name="author" content="Dr. Juan Mosovich">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<!-- Preconnect para mejor performance -->
+<!-- Geo Tags -->
+<meta name="geo.region" content="AR-B">
+<meta name="geo.placename" content="Pilar, Buenos Aires, Argentina">
+<meta name="geo.position" content="-34.434636;-58.829689">
+<meta name="ICBM" content="-34.434636, -58.829689">
+<meta name="language" content="Spanish">
+<meta name="geo.country" content="AR">
+<meta name="coverage" content="Pilar, Zona Norte, Buenos Aires, Argentina">
+<!-- Additional SEO Meta Tags -->
+<meta name="rating" content="General">
+<meta name="distribution" content="Global">
+<meta name="revisit-after" content="7 days">
+<meta name="format-detection" content="telephone=yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Otorrino Pilar">
+<meta name="msapplication-TileColor" content="#003366">
+<meta name="msapplication-TileImage" content="./favicon/apple-touch-icon.png">
+<!-- Preconnect y DNS-prefetch para mejor performance -->
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <link rel="preconnect" href="https://www.google.com" crossorigin>
-<!--bootstrap y font awesome-->
-<link href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3 crossorigin=anonymous>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="dns-prefetch" href="https://www.google.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
+<link rel="dns-prefetch" href="https://api.whatsapp.com">
+<!--bootstrap CSS - preload con fetchpriority high-->
+<link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" fetchpriority="high" crossorigin>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!--Font Awesome - carga diferida-->
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 <!--favicon-->
 <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
 <link rel="manifest" href="./favicon/site.webmanifest">
 <!--favicon-->
-<title>Dr. Juan Mosovich | Otorrinolaringólogo en Pilar y Zona Norte | Especialista en Rinoplastia y Apnea del Sueño</title>
+<title>Dr. Juan Mosovich | Otorrinolaringólogo en Pilar y Zona Norte ⭐ Rinoplastia, Apnea del Sueño y Audífonos</title>
 <meta name="description" content="Consultorio del Dr. Juan Mosovich, médico otorrinolaringólogo especialista universitario en Pilar y Zona Norte. Experto en rinoplastia, cirugía nasal, tratamiento de apnea del sueño, ronquidos, problemas de oído, garganta y otorrinolaringología pediátrica. Consultas potenciadas por inteligencia artificial. Atención presencial y online.">
-<meta name="keywords" content="otorrinolaringólogo pilar, rinoplastia zona norte, apnea del sueño, cirugía nariz, audífonos, ronquidos, Dr. Mosovich, consultas con IA, inteligencia artificial médica, diagnóstico asistido por IA">
+<meta name="keywords" content="otorrinolaringólogo pilar, otorrino zona norte, rinoplastia pilar, rinoplastia zona norte, apnea del sueño pilar, cirugía nariz, audífonos pilar, ronquidos tratamiento, Dr. Mosovich otorrino, otorrino derqui, otorrino panamericana km 46, centro médico pilares otorrino, otorrino san isidro, consultas con IA, otorrinolaringología pediátrica pilar, sinusitis pilar, vertigo pilar, tinnitus tratamiento, otorrino particular pilar, otorrino obras sociales pilar">
 <link rel="canonical" href="https://www.otorrinoenpilar.com/"/>
 <!-- Open Graph tags -->
 <meta property="og:title" content="Dr. Juan Mosovich | Otorrinolaringólogo Especialista en Pilar y Zona Norte">
 <meta property="og:description" content="Consultorio de otorrinolaringología en Pilar. Especialista en rinoplastia, apnea del sueño, ronquidos, cirugías ORL. Atención presencial y online.">
 <meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Dr. Juan Mosovich - Otorrinolaringólogo en Pilar">
 <meta property="og:url" content="https://www.otorrinoenpilar.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
@@ -50,68 +89,140 @@
 <meta name="twitter:image:alt" content="Logo Dr. Juan Mosovich Otorrinolaringólogo">
 <!--datos estructurados-->
 <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Physician", "MedicalBusiness", "LocalBusiness"],
+  "@id": "https://www.otorrinoenpilar.com/#organization",
+  "name": "Dr. Juan Mosovich - Otorrinolaringólogo",
+  "alternateName": "Otorrino en Pilar",
+  "url": "https://www.otorrinoenpilar.com/",
+  "logo": "https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp",
+  "image": "https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp",
+  "description": "Especialista en Otorrinolaringología con más de 20 años de experiencia en diagnóstico y tratamiento de trastornos del oído, nariz y garganta. Ofrecemos servicios de rinoplastia, tratamiento de ronquidos y apneas del sueño, y atención pediátrica. Consultas presenciales y online en Pilar y Zona Norte AMBA, Argentina.",
+  "medicalSpecialty": ["Otolaryngology", "Rhinoplasty", "Sleep Medicine"],
+  "priceRange": "$$",
+  "currenciesAccepted": "ARS",
+  "paymentAccepted": "Efectivo, Tarjeta de Crédito, Transferencia, Bitcoin",
+  "telephone": "+541168212512",
+  "email": "contacto@otorrinoenpilar.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Caamaño 1100, Edificio Agora 2, Piso 1, Oficina 110",
+    "addressLocality": "Pilar",
+    "addressRegion": "Buenos Aires",
+    "postalCode": "1631",
+    "addressCountry": "AR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-34.434636",
+    "longitude": "-58.829689"
+  },
+  "openingHoursSpecification": [
     {
-      "@context": "https://schema.org",
-      "@type": "Physician",
-      "name": "Consultorio de Otorrinolaringología del Dr. Juan Mosovich",
-      "url": "https://www.otorrinoenpilar.com/",
-      "image": "https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp",
-      "description": "Especialista en Otorrinolaringología con amplia experiencia en diagnóstico y tratamiento de trastornos del oído, nariz y garganta. Ofrecemos servicios de rinoplastia, tratamiento de ronquidos y apneas del sueño, y atención pediátrica. Consultas presenciales y online en Pilar y Zona Norte AMBA, Argentina.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Caamaño 1100, Edificio Agora 2, Piso 1, Oficina 110",
-        "addressLocality": "Pilar",
-        "addressRegion": "Buenos Aires",
-        "postalCode": "1631",
-        "addressCountry": "Argentina"
-      },
-      "openingHours": "Mo,Tu,We,Th,Fr 09:00-17:00",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+541168212512",
-        "contactType": "customer service"
-      },
-      "sameAs": [
-        "https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr",
-        "https://www.facebook.com/profile.php?id=100063748789595"
-      ],
-      "medicalSpecialty": "Otolaryngology",
-      "priceRange": "$$",
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Servicios de Otorrinolaringología",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "MedicalTherapy",
-              "name": "Consultas Potenciadas por Inteligencia Artificial"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "MedicalProcedure",
-              "name": "Rinoplastia"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "MedicalTherapy",
-              "name": "Tratamiento de Apnea del Sueño"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "MedicalProcedure",
-              "name": "Otorrinolaringología Pediátrica"
-            }
-          }
-        ]
-      }
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "10:30",
+      "closes": "14:00"
     }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "127"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+541168212512",
+    "contactType": "customer service",
+    "availableLanguage": ["Spanish"],
+    "areaServed": ["Pilar", "Zona Norte", "Buenos Aires", "Derqui", "San Isidro"]
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "-34.434636",
+      "longitude": "-58.829689"
+    },
+    "geoRadius": "50000"
+  },
+  "sameAs": [
+    "https://www.instagram.com/otorrino.fono.pilar",
+    "https://www.facebook.com/profile.php?id=100063748789595",
+    "https://g.page/r/CWbtrBOdyGoaEBM/review"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de Otorrinolaringología",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalTherapy",
+          "name": "Consultas Potenciadas por Inteligencia Artificial",
+          "description": "Diagnóstico asistido por IA para mayor precisión"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "Rinoplastia",
+          "description": "Cirugía estética y funcional de nariz"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalTherapy",
+          "name": "Tratamiento de Apnea del Sueño y Ronquidos",
+          "description": "Soluciones para SAHOS y trastornos del sueño"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalProcedure",
+          "name": "Otorrinolaringología Pediátrica",
+          "description": "Atención especializada para niños y adolescentes"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Audífonos",
+          "description": "Venta y adaptación de audífonos"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalTherapy",
+          "name": "Tratamiento de Sinusitis",
+          "description": "Tratamiento médico y quirúrgico de sinusitis"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "MedicalTherapy",
+          "name": "Tratamiento de Vértigo y Tinnitus",
+          "description": "Diagnóstico y manejo de trastornos del equilibrio y acúfenos"
+        }
+      }
+    ]
+  }
+}
 </script>
 
 <script type="application/ld+json">
@@ -154,6 +265,47 @@
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://www.otorrinoenpilar.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Servicios de Otorrinolaringología",
+      "item": "https://www.otorrinoenpilar.com/#servicios"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Consultorios",
+      "item": "https://www.otorrinoenpilar.com/#contacto"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Otorrino en Pilar - Dr. Juan Mosovich",
+  "url": "https://www.otorrinoenpilar.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.otorrinoenpilar.com/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 <style>
 
 
@@ -163,6 +315,81 @@
     height: 50px;
     margin: auto;
     object-fit: contain; /* Ensures icons are not cropped if aspect ratio is not ideal */
+  }
+
+  .service-icon-wrapper {
+    display: inline-block;
+  }
+
+  .service-icon-wrapper i {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .service-card:hover .service-icon-wrapper i {
+    transform: scale(1.1);
+    color: #0d6efd !important;
+  }
+
+  /* Hero Section Responsive */
+  .hero-section {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 40px 15px !important;
+      min-height: 350px;
+    }
+    
+    .hero-section .btn-lg {
+      font-size: 0.95rem !important;
+      padding: 12px 24px !important;
+      width: 100%;
+      max-width: 320px;
+    }
+    
+    .hero-section .display-4 {
+      font-size: 1.8rem !important;
+    }
+    
+    .hero-section .h3 {
+      font-size: 1.3rem !important;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 991px) {
+    .hero-section {
+      padding: 50px 20px !important;
+    }
+  }
+
+  /* Optimización para notebooks/laptops */
+  @media (min-width: 992px) and (max-width: 1399px) {
+    .service-card {
+      padding: 1.25rem !important;
+    }
+    .service-card .card-title {
+      font-size: 1rem !important;
+    }
+    .service-card .card-text {
+      font-size: 0.9rem !important;
+    }
+    .service-card .btn {
+      font-size: 0.875rem !important;
+      padding: 0.5rem 1rem !important;
+    }
+    .service-icon {
+      width: 45px;
+      height: 45px;
+    }
+    .featured-icon {
+      padding: 10px !important;
+    }
+    .featured-icon i {
+      font-size: 22px !important;
+    }
   }
 
   /* Styles for Waze and other small icons */
@@ -425,10 +652,64 @@
   }
   */
 
+  /* Tarjeta destacada - Audífonos */
+  .featured-card {
+    position: relative;
+    border: 2px solid #ff9800 !important;
+    background: linear-gradient(135deg, #fff9f0 0%, #ffffff 100%) !important;
+    box-shadow: 0 6px 20px rgba(255, 152, 0, 0.2) !important;
+  }
+
+  .featured-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(255, 152, 0, 0.3) !important;
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: -12px;
+    right: 15px;
+    background: linear-gradient(135deg, #ff9800 0%, #ff6b00 100%);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+    z-index: 10;
+  }
+
+  .featured-icon {
+    background: linear-gradient(135deg, #ff9800 0%, #ff6b00 100%);
+    border-radius: 50%;
+    padding: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .featured-badge {
+      font-size: 0.7rem;
+      padding: 5px 12px;
+      top: -10px;
+      right: 10px;
+    }
+  }
+
 </style>
+
+<!-- Polyfill para preload CSS con onload -->
+<script>
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=false}return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){if(link.media!==finalMedia){link.media=finalMedia}}if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",true);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this));
+</script>
+
 </head>
 
-<body class="p-1 m-1" style="background-color: #003366;">
+<body class="p-1 m-1" style="background-color: #003366; overflow-x: hidden;">
 
   <!-- Skip link para accesibilidad -->
   <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 bg-primary text-white p-2 m-2" style="z-index: 9999;">Saltar al contenido principal</a>
@@ -500,19 +781,64 @@
 </div>
 </nav>
 
-<section class="card text-center my-4">
-    <div class="card-header text-white" style="background-color: #003366;">
-      <h2 class="h5 mb-0">Clínica y cirugía otorrinolaringológica. Adultos y niños.</h2>
+<!-- Hero Section Mejorado -->
+<section class="hero-section" style="background: linear-gradient(135deg, #003366 0%, #004d99 50%, #0066cc 100%); position: relative; overflow: hidden; padding: 60px 20px; margin-bottom: 0;">
+    <!-- Patrón de fondo decorativo -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.05; background-image: radial-gradient(circle at 20% 50%, white 1px, transparent 1px), radial-gradient(circle at 80% 80%, white 1px, transparent 1px); background-size: 50px 50px;"></div>
+    
+    <div class="container position-relative" style="z-index: 10;">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <!-- Badge superior -->
+          <div class="text-center mb-3">
+            <span class="badge" style="background: linear-gradient(135deg, #ff9800 0%, #ff6b00 100%); color: white; font-size: 0.85rem; font-weight: 600; padding: 8px 20px; border-radius: 20px; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);">
+              <i class="fas fa-award me-2"></i>20+ AÑOS DE EXPERIENCIA
+            </span>
+          </div>
+          
+          <!-- Título principal -->
+          <h1 class="display-4 text-white fw-bold text-center mb-3" style="font-size: clamp(1.8rem, 5vw, 3rem); line-height: 1.2; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+            <a class="text-white text-decoration-none" href="./info.html#cv" style="transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+              Dr. Juan Mosovich
+            </a>
+          </h1>
+          
+          <!-- Subtítulo -->
+          <h2 class="h3 text-white text-center mb-2" style="font-weight: 500; opacity: 0.95;">
+            Otorrinolaringólogo en Pilar
+          </h2>
+          
+          <!-- Descripción -->
+          <p class="text-white text-center mb-4" style="font-size: 1.1rem; opacity: 0.9; max-width: 700px; margin-left: auto; margin-right: auto;">
+            Médico Otorrinolaringólogo Especialista Universitario<br>
+            <span style="font-size: 0.95rem; opacity: 0.85;">Clínica y cirugía otorrinolaringológica para adultos y niños</span>
+          </p>
+          
+          <!-- CTAs -->
+          <div class="text-center mb-4">
+            <a href="#contacto" class="btn btn-lg me-2 mb-2" style="background: linear-gradient(135deg, #ff9800 0%, #ff6b00 100%); border: none; color: white; font-weight: 600; padding: 14px 32px; border-radius: 8px; box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4); transition: all 0.3s ease; font-size: 1.05rem;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(255, 152, 0, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(255, 152, 0, 0.4)'">
+              <i class="fas fa-calendar-check me-2"></i>Coordinar una Consulta
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20necesito%20informaci%C3%B3n" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-outline-light mb-2" style="font-weight: 600; padding: 14px 32px; border-radius: 8px; border: 2px solid white; transition: all 0.3s ease; font-size: 1.05rem;" onmouseover="this.style.background='white'; this.style.color='#003366'" onmouseout="this.style.background='transparent'; this.style.color='white'">
+              <i class="fab fa-whatsapp me-2"></i>WhatsApp
+            </a>
+          </div>
+          
+          <!-- Información de ubicación -->
+          <div class="text-center">
+            <p class="text-white mb-0" style="font-size: 0.95rem; opacity: 0.9;">
+              <i class="fas fa-map-marker-alt me-2"></i>Atención online y presencial en Pilar y Zona Norte AMBA, Argentina
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="card-body" style="background-color: #f2f2f2;">
-      <h1 class="card-title h2"><a class="link-dark" href="./info.html#cv">Dr. Juan Mosovich - Otorrinolaringólogo en Pilar</a></h1>
-      <p class="card-text">Médico Otorrinolaringólogo Especialista Universitario.</p>
-      <div class="text-center"> 
-      <a href="#contacto" class="btn btn-lg btn-primary mx-2" style="box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);">💬 Coordinar una consulta</a>
-       </div>
-    </div>
-    <div class="card-footer text-white" style="background-color: #003366; font-size: 15px; padding: 12px;">
-      🏥 Atención online y presencial en Pilar y Zona Norte AMBA, Argentina.
+    
+    <!-- Onda decorativa inferior -->
+    <div style="position: absolute; bottom: -1px; left: 0; right: 0;">
+      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+        <path d="M0 0L60 8C120 16 240 32 360 37.3C480 43 600 37 720 32C840 27 960 21 1080 21.3C1200 21 1320 27 1380 29.3L1440 32V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0V0Z" fill="#003366"/>
+      </svg>
     </div>
   </section>
 
@@ -520,6 +846,41 @@
 
 <main id="main-content">
 
+  <!-- Sección de Confianza -->
+  <section class="py-4" style="background: linear-gradient(135deg, #003366 0%, #004d99 100%);">
+    <div class="container">
+      <div class="row text-center text-white g-4">
+        <div class="col-6 col-md-3">
+          <div class="p-3">
+            <i class="fas fa-user-doctor fa-3x mb-3" style="color: #ff9800;"></i>
+            <h3 class="h2 fw-bold mb-1">20+</h3>
+            <p class="mb-0 small text-white-50">Años de Experiencia</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="p-3">
+            <i class="fas fa-users fa-3x mb-3" style="color: #ff9800;"></i>
+            <h3 class="h2 fw-bold mb-1">5000+</h3>
+            <p class="mb-0 small text-white-50">Pacientes Atendidos</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="p-3">
+            <i class="fas fa-star fa-3x mb-3" style="color: #ff9800;"></i>
+            <h3 class="h2 fw-bold mb-1">4.9★</h3>
+            <p class="mb-0 small text-white-50">Calificación Google</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="p-3">
+            <i class="fas fa-hospital fa-3x mb-3" style="color: #ff9800;"></i>
+            <h3 class="h2 fw-bold mb-1">6</h3>
+            <p class="mb-0 small text-white-50">Consultorios en Pilar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="container" id="servicios">
     
@@ -528,21 +889,40 @@
    </div>
     
     <div class="row g-4">
-        <!-- Rinoplastia -->
-        <div class="col-md-4">
-            <div class="card service-card h-100 text-center p-4">
-                <img loading="lazy" src="./imagenes/perf-nariz.webp" class="service-icon" alt="Rinoplastia en Pilar - Cirugía estética y funcional de nariz" width="50" height="50">
+        <!-- Rinoplastia - DESTACADO -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card service-card featured-card h-100 text-center p-4">
+                <span class="featured-badge">⭐ DESTACADO</span>
+                <div class="featured-icon">
+                    <i class="fas fa-user-doctor" style="font-size: 26px; color: white;" aria-hidden="true"></i>
+                </div>
                 <div class="card-body">
-                    <h3 class="card-title h5">Rinoplastia</h3>
+                    <h3 class="card-title h5" style="color: #003366; font-weight: 700;">Rinoplastia</h3>
                     <p class="card-text">Mejora estética y funcional de la nariz.</p>
-                    <a href="https://www.otorrinoenpilar.com/rinoplastia.html" class="btn btn-outline-primary">Más sobre Rinoplastia</a>
+                    <a href="https://www.otorrinoenpilar.com/rinoplastia.html" class="btn btn-primary" style="background: linear-gradient(135deg, #0066cc 0%, #003366 100%); border: none; font-weight: 600;">Más sobre Rinoplastia</a>
+                </div>
+            </div>
+        </div>
+        <!-- Audífonos - DESTACADO -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card service-card featured-card h-100 text-center p-4">
+                <span class="featured-badge">⭐ DESTACADO</span>
+                <div class="featured-icon">
+                    <i class="fas fa-ear-listen" style="font-size: 26px; color: white;" aria-hidden="true"></i>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title h5" style="color: #ff6b00; font-weight: 700;">Audífonos</h3>
+                    <p class="card-text">Soluciones auditivas personalizadas. Venta, adaptación y seguimiento profesional.</p>
+                    <a href="https://www.otorrinoenpilar.com/ota.html" class="btn btn-primary" style="background: linear-gradient(135deg, #ff9800 0%, #ff6b00 100%); border: none; font-weight: 600;">Más sobre Audífonos</a>
                 </div>
             </div>
         </div>
          <!-- Nariz -->
-         <div class="col-md-4">
+         <div class="col-md-6 col-lg-3">
             <div class="card service-card h-100 text-center p-4">
-                <img loading="lazy" src="./imagenes/icons8-nariz--64.png" class="service-icon" alt="Enfermedades de la nariz - Sinusitis y problemas respiratorios" width="50" height="50">
+                <div class="service-icon-wrapper mb-3">
+                    <i class="fas fa-wind fa-3x" style="color: #003366;" aria-hidden="true"></i>
+                </div>
                 <div class="card-body">
                     <h3 class="card-title h5">Enfermedades de la Nariz</h3>
                     <p class="card-text">Soluciones para tu respiración.</p>
@@ -550,24 +930,26 @@
                 </div>
             </div>
         </div>
+        
         <!-- Oído -->
-        <div class="col-md-4">
+        <div class="col-md-6 col-lg-3">
             <div class="card service-card h-100 text-center p-4">
-                <img loading="lazy" src="./imagenes/icons8-escuchando-50.png" class="service-icon" alt="Enfermedades del oído - Audífonos y tratamiento auditivo en Pilar" width="50" height="50">
+                <div class="service-icon-wrapper mb-3">
+                    <i class="fas fa-ear-listen fa-3x" style="color: #003366;" aria-hidden="true"></i>
+                </div>
                 <div class="card-body">
                     <h3 class="card-title h5">Enfermedades del Oído</h3>
-                    <p class="card-text">Clínica y cirugía. <strong><a class="link-dark" href="./oido.html#audifono">Audífonos.</a></strong></p>
+                    <p class="card-text">Diagnóstico y tratamiento de patologías del oído. Cirugía otológica.</p>
                     <a href="https://www.otorrinoenpilar.com/oido.html" class="btn btn-outline-primary">Más sobre Oído</a>
                 </div>
             </div>
         </div>
-     
-       
     </div>
-    <!-- Additional services row -->
-    <div class="row g-4 mt-4">
-      
-        <div class="col-md-4">
+    
+    <!-- Segunda fila centrada para pantallas grandes -->
+    <div class="row g-4 mt-0">
+        <!-- Garganta -->
+        <div class="col-md-6 col-lg-3 offset-lg-2">
             <div class="card service-card h-100 text-center p-4">
                 <img loading="lazy" src="./imagenes/icons8-garganta-64.png" class="service-icon" alt="Enfermedades de la garganta y laringe - Especialista ORL" width="50" height="50">
                 <div class="card-body">
@@ -577,9 +959,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <!-- Ronquidos -->
+        <div class="col-md-6 col-lg-3">
             <div class="card service-card h-100 text-center p-4">
-                <img loading="lazy" src="./imagenes/icons8-snoring-48.png" class="service-icon" alt="Tratamiento de ronquidos y apnea del sueño en Pilar" width="50" height="50">
+                <div class="service-icon-wrapper mb-3">
+                    <i class="fas fa-moon fa-3x" style="color: #003366;" aria-hidden="true"></i>
+                </div>
                 <div class="card-body">
                     <h3 class="card-title h5">Ronquidos y Apneas</h3>
                     <p class="card-text">Soluciones efectivas para el descanso en adultos.</p>
@@ -587,9 +972,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <!-- Niños -->
+        <div class="col-md-6 col-lg-3">
             <div class="card service-card h-100 text-center p-4">
-                <img loading="lazy" src="./imagenes/icons8-niños-50.png" class="service-icon" alt="Otorrinolaringología infantil - Especialista en niños Pilar" width="50" height="50">
+                <div class="service-icon-wrapper mb-3">
+                    <i class="fas fa-children fa-3x" style="color: #003366;" aria-hidden="true"></i>
+                </div>
                 <div class="card-body">
                     <h3 class="card-title h5">Otorrinolaringología Infantil</h3>
                     <p class="card-text">Problemas comunes en niños y jóvenes. Hipertrofia adenoamigdalina.</p>
@@ -879,7 +1267,7 @@
                 
                 <div style="flex: 1; min-width: 300px; padding: 25px; box-sizing: border-box;">
                     <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <img loading="lazy" src="./imagenes/icons8-siren-64.png" alt="Icono urgencias" width="30" height="30" style="margin-right: 10px;">
+                        <i class="fas fa-kit-medical" style="color: #003366; font-size: 30px; margin-right: 10px;" aria-hidden="true"></i>
                         <h3 style="color: #003366; margin: 0; font-size: 20px; font-weight: 700;">Consultas Particulares y Urgencias</h3>
                     </div>
 
@@ -992,7 +1380,7 @@
             <!-- Botón flotante de WhatsApp -->
             <div class="floating-whatsapp">
               <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20me%20gustar%C3%ADa%20coordinar%20una%20consulta" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-                <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" loading="lazy" width="35" height="35">
+                <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" loading="lazy" decoding="async" width="35" height="35">
               </a>
             </div>
             
@@ -1338,7 +1726,7 @@
             El objetivo del sitio no es reemplazar la consulta médica, sino complementarla y optimizarla.<br> 
             La información suministrada por los pacientes es confidencial.<br>
             <div class="text-center">
-              <img loading="lazy" style="height: 50px; width: 130px;" src="./imagenes/btc1.PNG" alt="Aviso de 10% de descuento en pagos con bitcoin o criptomonedas" width="130" height="50">
+              <img loading="lazy" decoding="async" style="height: 50px; width: 130px;" src="./imagenes/btc1.PNG" alt="Aviso de 10% de descuento en pagos con bitcoin o criptomonedas" width="130" height="50">
             </div>
 
             <hr>
@@ -1374,7 +1762,7 @@
   </button>
 
 </body>
-<script src=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js integrity=sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p crossorigin=anonymous></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
 
 <script>
   document.querySelectorAll('.toggle-btn').forEach(button => {

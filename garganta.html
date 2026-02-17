@@ -2,38 +2,83 @@
 <html lang="es">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XNNM71EW8T');
+      const loadGtag = () => {
+        const gtagScript = document.createElement('script');
+        gtagScript.async = true;
+        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T';
+        document.head.appendChild(gtagScript);
+        gtag('js', new Date());
+        gtag('config', 'G-XNNM71EW8T');
+      };
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGtag, { timeout: 2000 });
+      } else {
+        window.addEventListener('load', loadGtag);
+      }
     </script>
   
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tratamiento especializado de enfermedades de garganta en Pilar: amigdalitis, trastornos de la voz, disfagia, reflujo gastroesofágico, halitosis y patologías laríngeas. Dr. Juan Mosovich - Otorrinolaringólogo.">
-    <meta name="keywords" content="otorrinolaringólogo Pilar, enfermedades de garganta, amigdalitis tratamiento, disfagia adultos, trastornos de la voz, cuerdas vocales, reflujo laringofaríngeo, halitosis crónica, mal aliento causas, laringe patologías, nódulos vocales, granulomas laringe, absceso periamigdalino, Dr Juan Mosovich, otorrino zona norte Buenos Aires">
+    <meta name="description" content="✅ Especialista en enfermedades de garganta en Pilar y Zona Norte. Tratamiento de amigdalitis, disfagia, disfonía, halitosis y reflujo. Estudio FEES y nasofibroscopía. Turnos online Dr. Mosovich.">
+    <meta name="keywords" content="otorrinolaringólogo Pilar, enfermedades garganta Pilar, amigdalitis crónica tratamiento, disfagia adultos mayores, trastornos voz Pilar, cuerdas vocales inflamadas, reflujo laringofaríngeo síntomas, halitosis crónica causas, mal aliento persistente, laringe patologías, nódulos vocales tratamiento, granulomas laringe, absceso periamigdalino, estudio FEES disfagia, nasofibroscopia laríngea, disfonía tratamiento, faringitis crónica, Dr Juan Mosovich, otorrino zona norte Buenos Aires, otorrino Escobar, otorrino Del Viso, atragantamiento adultos mayores, maniobra Heimlich, chin down disfagia">
     <meta name="author" content="Dr. Juan Mosovich">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="alternate" hreflang="es" href="https://www.otorrinoenpilar.com/garganta.html">
     
-    <!-- Open Graph tags -->
-    <meta property="og:title" content="Enfermedades de la Garganta | Dr. Juan Mosovich">
-    <meta property="og:description" content="Información detallada sobre enfermedades de la garganta, problemas de laringe, voz, deglución y mal aliento. Guía completa del Dr. Mosovich.">
+    <!-- Geo Tags para SEO Local -->
+    <meta name="geo.region" content="AR-B">
+    <meta name="geo.placename" content="Pilar, Buenos Aires, Argentina">
+    <meta name="geo.position" content="-34.458889;-58.913611">
+    <meta name="ICBM" content="-34.458889, -58.913611">
+    <meta name="language" content="Spanish">
+    <meta name="geo.country" content="AR">
+    <meta name="coverage" content="Pilar, Escobar, Del Viso, Tortuguitas, Derqui, Zona Norte Buenos Aires">
+    
+    <!-- Google Maps / Place Tags -->
+    <meta property="place:location:latitude" content="-34.458889">
+    <meta property="place:location:longitude" content="-58.913611">
+    <meta property="business:contact_data:street_address" content="Mariano Moreno 559">
+    <meta property="business:contact_data:locality" content="Pilar">
+    <meta property="business:contact_data:region" content="Buenos Aires">
+    <meta property="business:contact_data:postal_code" content="1629">
+    <meta property="business:contact_data:country_name" content="Argentina">
+    
+    <!-- Open Graph tags optimizados -->
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="Otorrino en Pilar - Dr. Juan Mosovich">
+    <meta property="og:title" content="Enfermedades de la Garganta en Pilar | Amigdalitis, Disfagia, Voz - Dr. Mosovich">
+    <meta property="og:description" content="Especialista en enfermedades de garganta en Pilar. Tratamiento de amigdalitis, disfagia, trastornos de la voz, halitosis y reflujo. Estudio FEES disponible. Turnos online.">
     <meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/cuerdas.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Cuerdas vocales - Tratamiento de enfermedades de garganta">
     <meta property="og:url" content="https://www.otorrinoenpilar.com/garganta.html">
     <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2023-10-26T09:00:00-03:00">
+    <meta property="article:modified_time" content="2026-02-17T10:00:00-03:00">
+    <meta property="article:author" content="Dr. Juan Mosovich">
+    <meta property="article:section" content="Salud">
+    <meta property="article:tag" content="Otorrinolaringología">
     
-    <!-- Twitter Cards -->
+    <!-- Additional Location Meta Tags -->
+    <link rel="me" href="https://maps.app.goo.gl/A2b3Nnef5qiYiXKP9">
+    <meta name="contact" content="Mariano Moreno 559, Pilar, Buenos Aires (1629), Argentina">
+    <meta name="location" content="Pilar, Buenos Aires, Argentina">
+    
+    <!-- Twitter Cards optimizados -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Enfermedades de la Garganta | Dr. Juan Mosovich">
-    <meta name="twitter:description" content="Información detallada sobre enfermedades de la garganta, problemas de laringe, voz, deglución y mal aliento.">
+    <meta name="twitter:title" content="Enfermedades de la Garganta en Pilar | Dr. Mosovich">
+    <meta name="twitter:description" content="Especialista en enfermedades de garganta: amigdalitis, disfagia, trastornos de voz, halitosis y reflujo. Estudio FEES en Pilar.">
     <meta name="twitter:image" content="https://www.otorrinoenpilar.com/imagenes/cuerdas.webp">
+    <meta name="twitter:image:alt" content="Tratamiento de enfermedades de garganta en Pilar">
+    <meta name="twitter:site" content="@otorrinopilar">
     
     <link rel="canonical" href="https://www.otorrinoenpilar.com/garganta.html"/>
-    <title>Enfermedades de la Garganta: Voz, Deglución y Amigdalitis en Pilar</title>
+    <title>Enfermedades de Garganta en Pilar: Amigdalitis, Disfagia y Voz | Dr. Mosovich</title>
   
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
@@ -41,10 +86,20 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
   
-    <!-- Bootstrap CSS -->
+    <!-- Resource hints optimizados para performance -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
+    <!-- Bootstrap CSS - Carga asíncrona -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></noscript>
+    
+    <!-- Font Awesome - Carga asíncrona -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
   
     <!-- Datos estructurados -->
    
@@ -83,7 +138,7 @@
       }
     },
     "datePublished": "2023-10-26T09:00:00-03:00",
-    "dateModified": "2025-12-22T09:40:00-03:00",
+    "dateModified": "2026-02-17T10:00:00-03:00",
     "keywords": [
       "Trastornos de la garganta",
       "Problemas de cuerdas vocales",
@@ -174,6 +229,141 @@
       {
         "@type": "MedicalProcedure",
         "name": "Estroboscopia Laríngea"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.otorrinoenpilar.com/#business",
+    "name": "Dr. Juan Mosovich - Otorrinolaringólogo",
+    "image": "https://www.otorrinoenpilar.com/imagenes/cuerdas.webp",
+    "description": "Especialista en enfermedades de la garganta, laringe, trastornos de la voz, deglución, amigdalitis y reflujo gastroesofágico en Pilar y Zona Norte de Buenos Aires.",
+    "url": "https://www.otorrinoenpilar.com",
+    "telephone": "+5411-6821-2512",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mariano Moreno 559",
+      "addressLocality": "Pilar",
+      "addressRegion": "Buenos Aires",
+      "postalCode": "1629",
+      "addressCountry": "AR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-34.458889",
+      "longitude": "-58.913611"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=100063748789595",
+      "https://www.instagram.com/otorrino.fono.pilar"
+    ],
+    "hasMap": "https://maps.app.goo.gl/A2b3Nnef5qiYiXKP9",
+    "areaServed": [
+      {"@type": "City", "name": "Pilar"},
+      {"@type": "City", "name": "Escobar"},
+      {"@type": "City", "name": "Del Viso"},
+      {"@type": "City", "name": "Tortuguitas"},
+      {"@type": "City", "name": "Derqui"},
+      {"@type": "AdministrativeArea", "name": "Zona Norte Buenos Aires"}
+    ],
+    "medicalSpecialty": "Otorrinolaringología"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalCondition",
+    "name": "Disfagia",
+    "alternateName": "Trastornos de la deglución",
+    "associatedAnatomy": {"@type": "AnatomicalStructure", "name": "Faringe y Laringe"},
+    "possibleTreatment": [
+      {"@type": "MedicalTherapy", "name": "Terapia de deglución"},
+      {"@type": "MedicalTherapy", "name": "Maniobras compensatorias"},
+      {"@type": "MedicalProcedure", "name": "Estudio FEES"}
+    ],
+    "signOrSymptom": [
+      "Dificultad para tragar",
+      "Atragantamiento",
+      "Tos al comer",
+      "Pérdida de peso"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalCondition",
+    "name": "Amigdalitis",
+    "alternateName": "Inflamación de amígdalas",
+    "associatedAnatomy": {"@type": "AnatomicalStructure", "name": "Amígdalas palatinas"},
+    "possibleTreatment": [
+      {"@type": "Drug", "name": "Antibióticos"},
+      {"@type": "MedicalProcedure", "name": "Amigdalectomía"}
+    ],
+    "signOrSymptom": [
+      "Dolor de garganta",
+      "Fiebre",
+      "Dificultad para tragar",
+      "Placas en garganta"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué es el estudio FEES para disfagia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El FEES (Evaluación Endoscópica de la Deglución) es un procedimiento moderno y seguro que permite ver en tiempo real qué ocurre en la garganta cuando se traga. Se utiliza un nasofibroscopio que se introduce por la nariz para observar la faringe y laringe, permitiendo detectar problemas de aspiración y diseñar tratamientos específicos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuándo está indicado el tratamiento de amigdalitis crónica?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El tratamiento quirúrgico (amigdalectomía) está indicado cuando hay episodios recurrentes (más de 4-5 episodios anuales), abscesos periamigdalinos, hipertrofia que causa obstrucción respiratoria o apnea del sueño, o cuando el tratamiento médico no es efectivo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo se realiza la maniobra Chin Down para disfagia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La maniobra Chin Down consiste en inclinar el mentón hacia el pecho antes y durante la deglución. Esto estrecha la entrada a la vía respiratoria, protege la tráquea y da más tiempo para que se activen los mecanismos de protección, reduciendo el riesgo de aspiración."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué causa el mal aliento o halitosis crónica?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La halitosis crónica puede ser causada por problemas dentales, caseum en las amígdalas, sinusitis crónica, reflujo gastroesofágico, problemas de higiene oral, o en casos menos frecuentes, enfermedades sistémicas. Un examen otorrinolaringológico puede identificar la causa específica."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuándo debo consultar por problemas de voz?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Debe consultar si presenta disfonía (ronquera) que persiste más de 2 semanas, cambios en la voz sin causa aparente, dolor al hablar, fatiga vocal frecuente, o si es un profesional de la voz. Una nasofibroscopía laríngea permite evaluar el estado de las cuerdas vocales."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué es el reflujo laringofaríngeo y cómo afecta la garganta?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El reflujo laringofaríngeo ocurre cuando el ácido del estómago llega hasta la garganta y laringe. Puede causar carraspera crónica, sensación de cuerpo extraño en garganta, tos crónica, disfonía y puede dañar las cuerdas vocales. El diagnóstico se realiza mediante examen laríngeo y puede tratarse con cambios en la dieta y medicación."
+        }
       }
     ]
   }
@@ -309,9 +499,86 @@
           height: 48px;
         }
       }
+
+      /* Mejoras UX/UI */
+      .reading-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, #003366, #0066cc);
+        z-index: 9999;
+        transition: width 0.1s ease;
+      }
+
+      .scroll-to-top {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #003366;
+        color: white;
+        border: none;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .scroll-to-top.show {
+        display: flex;
+      }
+
+      .scroll-to-top:hover {
+        background-color: #0066cc;
+        transform: translateY(-3px);
+      }
+
+      .nav-card {
+        transition: all 0.3s ease;
+        border: 2px solid #e9ecef;
+        cursor: pointer;
+      }
+
+      .nav-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 51, 102, 0.15);
+        border-color: #003366;
+      }
+
+      .nav-card-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #003366 0%, #0066cc 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+      }
+
+      .card-img-top {
+        height: 250px;
+        object-fit: cover;
+      }
+
+      @media (hover: hover) {
+        .toggle-btn:hover {
+          transform: scale(1.05);
+        }
+      }
     </style>
   </head>
  <body>
+  <!-- Barra de progreso de lectura -->
+  <div class="reading-progress" id="readingProgress"></div>
+
 <header class="my-5">
     <!-- Simplificado para mobile first: el brand y el botón se distribuyen en cualquier pantalla -->
     <nav class="navbar navbar-light bg-light py-3 shadow-sm">
@@ -326,43 +593,106 @@
       </div>
     </nav>
 
-    <!-- Se ajusta el padding con clases responsivas: 'p-4' en móvil y 'p-lg-5' en pantallas grandes -->
+    <!-- Hero Section mejorado -->
     <div class="p-4 p-lg-5 text-center text-white" style="background-color: #003366;">
-      <div class="container-fluid">
-        <h1 class="display-4 fw-bold">Enfermedades de la Garganta: Voz, Deglución y Amigdalitis en Pilar</h1>
+      <div class="container">
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb justify-content-center" style="background: transparent;">
+            <li class="breadcrumb-item"><a href="https://www.otorrinoenpilar.com/" class="text-white">Inicio</a></li>
+            <li class="breadcrumb-item active text-white-50" aria-current="page">Trastornos de la Garganta</li>
+          </ol>
+        </nav>
+        <h1 class="display-4 fw-bold mb-3">Enfermedades de la Garganta: Voz, Deglución y Amigdalitis en Pilar</h1>
         <p class="lead mb-4">Tratamiento especializado de trastornos de la laringe y garganta. Dr. Juan Mosovich.</p>
-      </div>
+        <div class="d-flex gap-2 justify-content-center flex-wrap">
+          <a href="#disfagia" class="btn btn-light fw-bold rounded-pill px-4">Ver información</a>
+          <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-outline-light fw-bold rounded-pill px-4">Solicitar turno</a>
+        </div>
       </div>
     </div>
   </header>
   
-    <style>img, video {width: 100%; height: 250px; object-fit: contain;}</style>
     <main>
     <!-- Contenido introductorio optimizado para SEO -->
-    <div class="container my-4">
-      <p class="lead">
+    <div class="container my-5">
+      <p class="lead text-center">
         Médico Especialista en <strong>otorrinolaringología</strong>, (<strong>enfermedades de la garganta</strong>, <strong>trastornos de la voz</strong> y <strong>problemas de deglución)</strong> en Pilar y Zona Norte de Buenos Aires.
         Ofrecemos diagnóstico y tratamiento de <strong>amigdalitis</strong>, <strong>disfagia</strong>, <strong>halitosis</strong>, <strong>reflujo gastroesofágico</strong>,
         y <strong>patologías de la laringe y cuerdas vocales</strong>. Atención especializada con estudios de <strong>nasofibroscopía laríngea</strong>.
       </p>
     </div>
-      <div class="container-sm text-center">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb justify-content-center">
-            <li class="breadcrumb-item"><a href="https://www.otorrinoenpilar.com/">Inicio</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Trastornos de la Garganta</li>
-          </ol>
-        </nav>
-        <h2><a href="#disfagia" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">1 Trastornos en la deglución.</a></h2>
-       <hr>
-        <h2><a href="#aliento" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">2 Mal aliento.</a></h2>
-        <hr>
-        <h2><a href="#amigdalas" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">3 Dolor de garganta. Amigdalitis.</a></h2>
-        <hr>
-        <h2><a href="#laringe" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">4 Problemas vocales.</a></h2>
-       <hr>
-      <h2><a href="#rge" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">5 Reflujo gastro-esofágico y voz.</a></h2>
-       <hr>
+
+      <!-- Índice de navegación visual mejorado -->
+      <div class="container my-5">
+        <h2 class="text-center mb-4 h3">Contenidos de esta página</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <a href="#disfagia" class="text-decoration-none">
+              <div class="card nav-card h-100 p-4 text-center">
+                <div class="nav-card-icon">
+                  <i class="fas fa-utensils fa-2x text-white"></i>
+                </div>
+                <h3 class="h5 mb-2">Trastornos en la deglución</h3>
+                <p class="text-muted small mb-0">Disfagia, maniobras y evaluación FEES</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="#aliento" class="text-decoration-none">
+              <div class="card nav-card h-100 p-4 text-center">
+                <div class="nav-card-icon">
+                  <i class="fas fa-wind fa-2x text-white"></i>
+                </div>
+                <h3 class="h5 mb-2">Mal aliento</h3>
+                <p class="text-muted small mb-0">Halitosis crónica y tratamiento</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="#amigdalas" class="text-decoration-none">
+              <div class="card nav-card h-100 p-4 text-center">
+                <div class="nav-card-icon">
+                  <i class="fas fa-throat fa-2x text-white"></i>
+                </div>
+                <h3 class="h5 mb-2">Dolor de garganta</h3>
+                <p class="text-muted small mb-0">Amigdalitis y sus tratamientos</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="#laringe" class="text-decoration-none">
+              <div class="card nav-card h-100 p-4 text-center">
+                <div class="nav-card-icon">
+                  <i class="fas fa-microphone fa-2x text-white"></i>
+                </div>
+                <h3 class="h5 mb-2">Problemas vocales</h3>
+                <p class="text-muted small mb-0">Cuerdas vocales y laringe</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="#rge" class="text-decoration-none">
+              <div class="card nav-card h-100 p-4 text-center">
+                <div class="nav-card-icon">
+                  <i class="fas fa-fire-flame-curved fa-2x text-white"></i>
+                </div>
+                <h3 class="h5 mb-2">Reflujo gastroesofágico</h3>
+                <p class="text-muted small mb-0">RGE y su relación con la voz</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <a href="#eat10Form" class="text-decoration-none">
+              <div class="card nav-card h-100 p-4 text-center">
+                <div class="nav-card-icon">
+                  <i class="fas fa-clipboard-check fa-2x text-white"></i>
+                </div>
+                <h3 class="h5 mb-2">Evaluación EAT-10</h3>
+                <p class="text-muted small mb-0">Test de disfagia online</p>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
       
       <!--oido generalidades-->
@@ -374,7 +704,7 @@
        
 
    <div class="card p-3">
-<img loading="lazy" src="./imagenes/disfag-400.webp" class="card-img-top" alt="Persona mayor con disfagia comiendo - trastornos de deglución en adultos mayores">
+<img fetchpriority="high" src="./imagenes/disfag-400.webp" class="card-img-top" alt="Persona mayor con disfagia comiendo - trastornos de deglución en adultos mayores">
 <div class="card-body">
   <h3 class="card-title h5">Trastornos de la Deglución y su Impacto en la Salud.</h3>
   <article class="card-text">
@@ -406,9 +736,8 @@
                </span>
           </article>
           </div>
-          <div class="card-footer bg-primary text-white">
-            Trastornos en la deglución
-          </div>
+          <div class="card-footer bg-primary">
+            </div>
           </div>
 
        <div class="card p-3">
@@ -501,8 +830,7 @@
     </article>
   </div>
   
-  <div class="card-footer bg-primary text-white">
-    Trastornos en la deglución
+  <div class="card-footer bg-primary">
   </div>
 </div>
 
@@ -580,9 +908,8 @@
                  </span>
             </article>
             </div>
-            <div class="card-footer bg-primary text-white">
-              Trastornos en la deglución
-            </div>
+            <div class="card-footer bg-primary">
+             </div>
             </div>
       </div>
 
@@ -638,9 +965,8 @@
                </span>
           </article>
           </div>
-          <div class="card-footer bg-primary text-white">
-            Trastornos en la deglución
-          </div>
+          <div class="card-footer bg-primary">
+            </div>
           </div>
 
 <div class="card p-3">
@@ -717,9 +1043,8 @@
 </div>
     </article>
       </div>
-    <div class="card-footer bg-primary text-white"> 
-     Trastornos en la deglución
-      </div>
+    <div class="card-footer bg-primary"> 
+        </div>
     </div> 
 
   <div class="card p-3">
@@ -777,9 +1102,8 @@
         </article>
     </div>
     
-    <div class="card-footer bg-primary text-white">
-       Trastornos en la deglución
-    </div>
+    <div class="card-footer bg-primary">
+        </div>
 </div>
           
       </div>
@@ -4028,7 +4352,7 @@
     <i class="fas fa-chevron-up" aria-hidden="true"></i>
   </button>
 
-  <script>
+  <script defer>
     (function() {
       const scrollBtn = document.getElementById('scrollToTop');
       if (!scrollBtn) return;
@@ -4049,9 +4373,8 @@
       });
     })();
   </script>
-        </body>
-        </html>
-     <script>
+  
+  <script defer>
       function calculateResult() {
         let totalScore = 0;
         let completed = true;
@@ -4093,7 +4416,7 @@
       }
     </script>
 
-    <script>
+    <script defer>
       function calculateScorerge() {
           let totalScorerge = 0;
           for (let b = 1; b <= 5; b++) {
@@ -4118,7 +4441,7 @@
           resultDiv.textContent = ''; // Limpia el resultado anterior
       }
   </script>
-   <script>
+   <script defer>
     document.querySelectorAll('.toggle-btn').forEach(button => {
       button.addEventListener('click', function () {
         setTimeout(() => {
@@ -4135,12 +4458,48 @@
     <!-- Botón flotante de WhatsApp -->
     <div class="floating-whatsapp">
       <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20me%20gustar%C3%ADa%20coordinar%20una%20consulta" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-        <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" loading="lazy">
+        <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" loading="lazy" width="60" height="60" decoding="async">
       </a>
     </div>
 
+    <!-- Botón scroll to top -->
+    <button type="button" id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Footer profesional -->
+    <footer class="mt-5">
+      <div class="container-fluid py-4" style="background-color: #d7e3f0;">
+        <div class="row align-items-center justify-content-center text-center px-3">
+          <div class="col-12 col-md-8 col-lg-6 mb-3 mb-md-0">
+            <p class="h6 mb-2" style="color: #003366; font-weight: 500;">
+              El contenido de este sitio es meramente informativo y no reemplaza la consulta médica.
+              La responsabilidad de los contenidos es del Dr. Juan Mosovich.
+            </p>
+          </div>
+          <div class="col-12 col-md-4 col-lg-3 d-flex flex-column flex-md-row justify-content-center justify-content-md-end gap-2">
+            <a href="https://www.otorrinoenpilar.com/" class="btn btn-outline-primary" style="color: #003366; border-color: #003366;">Inicio</a>
+            <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-primary" style="background-color: #003366; border-color: #003366;">Contáctenos</a>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
+        <div class="mb-2">
+          <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+            <i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i>
+          </a>
+          <a href="https://www.instagram.com/otorrino.fono.pilar" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+            <i class="fab fa-instagram" style="font-size: 1.4rem;"></i>
+          </a>
+        </div>
+        <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
+          &copy; 2025 Otorrino en Pilar. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
     <!--ver mas en video para iframe-->
-    <script> 
+    <script defer> 
 document.addEventListener('DOMContentLoaded', function() {
     var videoCollapses = document.querySelectorAll('.collapse[data-video-id]');
 
@@ -4181,7 +4540,29 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
     
-    <script src=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js integrity=sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p crossorigin=anonymous></script>
+    <!-- Bootstrap JS - Carga diferida -->
+    <script defer>
+      // Cargar Bootstrap de forma diferida
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          const bootstrapScript = document.createElement('script');
+          bootstrapScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js';
+          bootstrapScript.integrity = 'sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p';
+          bootstrapScript.crossOrigin = 'anonymous';
+          bootstrapScript.defer = true;
+          document.head.appendChild(bootstrapScript);
+        }, { timeout: 2000 });
+      } else {
+        window.addEventListener('load', () => {
+          const bootstrapScript = document.createElement('script');
+          bootstrapScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js';
+          bootstrapScript.integrity = 'sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p';
+          bootstrapScript.crossOrigin = 'anonymous';
+          bootstrapScript.defer = true;
+          document.head.appendChild(bootstrapScript);
+        });
+      }
+    </script>
 
 <!-- Modal de Reseña -->
 <div class="modal fade" id="modalResena" tabindex="-1" aria-labelledby="modalResenaLabel" aria-hidden="true">
@@ -4205,7 +4586,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<script>
+<script defer>
 document.addEventListener("DOMContentLoaded", function() {
     if (sessionStorage.getItem('resenaMostrada')) {
         return;
@@ -4252,6 +4633,47 @@ document.addEventListener("DOMContentLoaded", function() {
     document.addEventListener('mouseleave', detectarSalida);
     setInterval(verificarCondiciones, 5000);
 });
+</script>
+
+<!-- Script para barra de progreso -->
+<script defer>
+  (function() {
+    const progressBar = document.getElementById('readingProgress');
+    if (!progressBar) return;
+
+    const updateProgress = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / docHeight) * 100;
+      progressBar.style.width = progress + '%';
+    };
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  })();
+</script>
+
+<!-- Script para botón scroll to top -->
+<script defer>
+  (function() {
+    const scrollBtn = document.getElementById('scrollToTop');
+    if (!scrollBtn) return;
+
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
+    toggleVisibility();
+
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
 </script>
 </body>
 </html>

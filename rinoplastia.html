@@ -3,19 +3,34 @@
 <html lang="es">
 <head>
   
+<!-- Resource hints para performance -->
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
 <!-- Preload critical resources -->
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" href="./imagenes/perf-nariz.webp" as="image">
-<link rel="preload" href="./imagenes/blogrino2.webp" as="image">
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 <!-- Google Tag Manager -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XNNM71EW8T');
+  const loadGtag = () => {
+    const gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T';
+    document.head.appendChild(gtagScript);
+    gtag('js', new Date());
+    gtag('config', 'G-XNNM71EW8T');
+  };
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadGtag, { timeout: 2000 });
+  } else {
+    window.addEventListener('load', loadGtag);
+  }
 </script>
 
 <!-- Metadatos esenciales -->
@@ -41,11 +56,39 @@
 <meta name="twitter:description" content="Rinoplastia y rinoseptumplastia con simulación digital preoperatoria en Pilar, Buenos Aires.">
 <meta name="twitter:image" content="https://otorrinoenpilar.com/imagenes/rinop.webp">
 
+<!-- Geo Tags para SEO local -->
+<meta name="geo.region" content="AR-B">
+<meta name="geo.placename" content="Pilar">
+<meta name="geo.position" content="-34.458889;-58.913611">
+<meta name="ICBM" content="-34.458889, -58.913611">
+<meta name="DC.title" content="Rinoplastia en Pilar - Dr. Juan Mosovich">
+<meta name="DC.description" content="Cirugía de rinoplastia y rinoseptumplastia en Pilar, Buenos Aires. Simulación digital preoperatoria.">
+<meta name="DC.subject" content="Rinoplastia, Cirugía de nariz, Otorrinolaringología">
+<meta name="DC.creator" content="Dr. Juan Mosovich">
+<meta name="DC.language" content="es-AR">
+
 <!-- Critical CSS inlined for faster FCP -->
 <style>
   /* Critical above-the-fold styles */
   body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
-  .navbar { background-color: #f8f9fa !important; box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075); }
+  
+  /* Navegación sticky mobile-first */
+  .navbar { 
+    position: relative;
+    background-color: #f8f9fa !important; 
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+    transition: all 0.3s ease;
+    z-index: 1030;
+    will-change: transform;
+  }
+  
+  @media (min-width: 768px) {
+    .navbar {
+      position: sticky;
+      top: 0;
+    }
+  }
+  
   .navbar-brand { color: #0d6efd !important; font-weight: 700 !important; }
   .btn-outline-primary { color: #0d6efd; border-color: #0d6efd; }
   .display-4 { font-size: calc(1.475rem + 2.7vw); font-weight: 700; }
@@ -62,6 +105,53 @@
   .my-5 { margin-top: 3rem !important; margin-bottom: 3rem !important; }
   @media (min-width: 992px) {
     .p-lg-5 { padding: 3rem !important; }
+  }
+
+  /* Estilos mejorados para galería con hover effects */
+  .gallery-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .gallery-img-wrapper img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  @media (hover: hover) {
+    .gallery-img-wrapper:hover img {
+      transform: scale(1.05);
+      filter: brightness(0.9);
+    }
+    
+    .gallery-img-wrapper::after {
+      content: '🔍';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+    
+    .gallery-img-wrapper:hover::after {
+      opacity: 1;
+    }
+  }
+  
+  /* Barra de progreso de lectura */
+  .reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #003366, #0066cc);
+    z-index: 9999;
+    transition: width 0.1s ease;
   }
 
   .scroll-to-top {
@@ -101,13 +191,73 @@
       height: 48px;
     }
   }
+  
+  /* Hero optimizado para móviles */
+  .hero-banner {
+    padding: 2rem 1rem !important;
+  }
+  
+  @media (min-width: 768px) {
+    .hero-banner {
+      padding: 3rem 2rem !important;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .hero-banner {
+      padding: 4rem 3rem !important;
+    }
+  }
+  
+  /* Títulos con mejor jerarquía */
+  .section-title-primary {
+    background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+    padding: 1.5rem 1rem;
+    margin: 2rem 0 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-title-secondary {
+    background: linear-gradient(135deg, #0066cc 0%, #0080ff 100%);
+    padding: 1rem;
+    margin: 1.5rem 0 1rem;
+  }
+  
+  /* Botones de navegación mejorados */
+  .nav-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px solid #dee2e6;
+    font-weight: 600;
+  }
+  
+  .nav-menu-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #003366;
+    color: #003366;
+  }
+  
+  /* Estilos para sección de ubicación */
+  .location-info {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-left: 4px solid #003366;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+  }
 </style>
 
 <!-- Non-critical CSS loaded asynchronously -->
-<noscript><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></noscript>
-<!-- Font Awesome loaded asynchronously -->
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+<noscript>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</noscript>
 
 <!-- Favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -173,6 +323,60 @@
         "item": "https://www.otorrinoenpilar.com/rinoplastia.html"
       }
     ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Juan Mosovich",
+    "medicalSpecialty": "Otolaryngology",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mariano Moreno 559",
+      "addressLocality": "Pilar",
+      "addressRegion": "Buenos Aires",
+      "postalCode": "1629",
+      "addressCountry": "AR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-34.458889",
+      "longitude": "-58.913611"
+    },
+    "url": "https://www.otorrinoenpilar.com",
+    "telephone": "+54-11-6821-2512",
+    "hasMap": "https://maps.app.goo.gl/A2b3Nnef5qiYiXKP9",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Pilar"
+      },
+      {
+        "@type": "City",
+        "name": "Escobar"
+      },
+      {
+        "@type": "City",
+        "name": "Del Viso"
+      },
+      {
+        "@type": "City",
+        "name": "Tortuguitas"
+      },
+      {
+        "@type": "City",
+        "name": "Derqui"
+      },
+      {
+        "@type": "City",
+        "name": "Belén de Escobar"
+      },
+      {
+        "@type": "City",
+        "name": "Zona Norte Buenos Aires"
+      }
+    ],
+    "image": "https://www.otorrinoenpilar.com/imagenes/rinop.webp"
   },
   {
     "@context": "https://schema.org",
@@ -285,26 +489,58 @@
 }
 
   .btn-whatsapp {
-            background-color: #25D366; /* Color verde de WhatsApp */
-            border-color: #25D366;
+            background: linear-gradient(135deg, #25D366 0%, #1DA851 100%);
+            border: none;
             color: white;
             font-size: 1.2rem;
-            padding: 0.8rem 2.5rem;
-            border-radius: 30px; /* Botón redondeado */
-            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+            font-weight: 700;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
+        
+        .btn-whatsapp::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
         .btn-whatsapp:hover {
-            background-color: #1DA851; /* Un verde más oscuro al pasar el mouse */
-            border-color: #1DA851;
-            transform: translateY(-2px); /* Pequeño efecto de elevación */
+            background: linear-gradient(135deg, #1DA851 0%, #128C40 100%);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
             color: white;
         }
-       .contact-card    {   max-width: 450px; /* Ancho máximo para la tarjeta de contacto */
+        
+        .btn-whatsapp:hover::before {
+            left: 100%;
+        }
+        
+        .btn-whatsapp:active {
+            transform: translateY(-1px);
+        }
+       .contact-card {
+            max-width: 500px;
             margin: auto;
-            border-radius: 15px; /* Bordes más redondeados */
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
-            padding: 2.5rem; /* Más padding interno */
-            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 3rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 1px solid rgba(0, 51, 102, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
         }
         .contact-card img {
             width: 120px; /* Tamaño ligeramente mayor para la imagen del perfil */
@@ -423,20 +659,35 @@
         
         /* Mejora de transiciones en cards (solo dispositivos con hover real) */
         .card {
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          transition: all 0.3s ease;
+          border: 1px solid rgba(0, 0, 0, 0.08);
+          border-radius: 12px;
+          overflow: hidden;
         }
 
         @media (hover: hover) and (pointer: fine) {
           .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border-color: rgba(0, 51, 102, 0.2);
           }
+          
           .card img[onclick] {
             cursor: pointer;
-            transition: opacity 0.2s ease;
+            transition: all 0.3s ease;
           }
+          
           .card img[onclick]:hover {
-            opacity: 0.9;
+            transform: scale(1.02);
+            filter: brightness(0.95);
+          }
+          
+          .card-body {
+            transition: background-color 0.3s ease;
+          }
+          
+          .card:hover .card-body {
+            background-color: rgba(0, 51, 102, 0.02);
           }
         }
 
@@ -507,12 +758,31 @@
           height: auto;
         }
 
+        /* Espaciado responsivo mejorado */
+        .section-spacing {
+          margin: 2rem 0;
+        }
+        
+        @media (min-width: 768px) {
+          .section-spacing {
+            margin: 3rem 0;
+          }
+        }
+        
+        @media (min-width: 992px) {
+          .section-spacing {
+            margin: 4rem 0;
+          }
+        }
+        
         @media (max-width: 576px) {
           .hero-banner .display-4 {
-            font-size: clamp(1.6rem, 5vw, 2.2rem);
+            font-size: clamp(1.5rem, 5vw, 2rem);
+            line-height: 1.2;
           }
           .hero-banner .lead {
-            font-size: 1.05rem;
+            font-size: 1rem;
+            line-height: 1.5;
           }
           .navbar .btn {
             padding: 0.5rem 1rem;
@@ -561,6 +831,9 @@
 </head>
 
 <body id="top">
+  <!-- Barra de progreso de lectura -->
+  <div class="reading-progress" id="readingProgress"></div>
+  
   <!-- Skip link para accesibilidad -->
   <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 bg-primary text-white p-2 m-2" style="z-index: 9999;">Saltar al contenido principal</a>
 
@@ -581,9 +854,14 @@
     <!-- Se ajusta el padding con clases responsivas: 'p-4' en móvil y 'p-lg-5' en pantallas grandes -->
     <div class="p-4 p-lg-5 text-center text-white hero-banner" style="background-color: #003366;">
         <h1 class="display-4 fw-bold">Rinoplastia y Rinoseptumplastia en Pilar: Cirugía Estética y Funcional de Nariz</h1>
-        <p class="lead mb-4">Simulación digital preoperatoria y tratamientos personalizados. Dr. Juan Mosovich.</p>
+        <p class="lead mb-4">Simulación digital preoperatoria y tratamientos personalizados. Dr. Juan Mosovich - Pilar y Zona Norte.</p>
         <div class="quick-actions">
-          <a href="#consulrino" class="btn btn-light fw-bold rounded-pill">Consultar por WhatsApp</a>
+          <a href="#consulrino" class="btn btn-light fw-bold rounded-pill">
+            <i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp
+          </a>
+          <a href="https://maps.app.goo.gl/A2b3Nnef5qiYiXKP9" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light fw-bold rounded-pill">
+            <i class="fas fa-map-marker-alt me-2"></i>Cómo llegar
+          </a>
           <a href="#galeria" class="btn btn-outline-light fw-bold rounded-pill">Ver casos clínicos</a>
         </div>
       </div>
@@ -595,10 +873,14 @@
     <!-- Contenido introductorio optimizado para SEO -->
     <div class="container my-4 section-intro">
       <p class="lead">
-        Especialista en <strong>rinoplastia</strong> y <strong>rinoseptumplastia</strong> en Pilar y Zona Norte de Buenos Aires. 
+        Especialista en Otorrinolaringología. <strong>Rinoplastia</strong> y <strong>rinoseptumplastia</strong> en <strong>Pilar</strong> y <strong>Zona Norte de Buenos Aires</strong> 
+        (<strong>Escobar</strong>, <strong>Del Viso</strong>, <strong>Tortuguitas</strong>, <strong>Derqui</strong>, <strong>Belén de Escobar</strong>). 
         Ofrecemos <strong>cirugía estética y funcional de la nariz</strong> con tecnología de <strong>simulación digital preoperatoria</strong> 
         para que pueda visualizar el resultado antes de la intervención. Tratamientos personalizados para mejorar tanto la 
-        <strong>estética facial</strong> como la <strong>función respiratoria</strong>. Conozca el <a href="https://www.otorrinoenpilar.com/info.html#rino" class="link-primary">consentimiento informado</a>.
+        <strong>estética facial</strong> como la <strong>función respiratoria</strong>. 
+        Consultorio ubicado en <strong>Mariano Moreno 559, Pilar</strong>. 
+        <a href="https://maps.app.goo.gl/A2b3Nnef5qiYiXKP9" target="_blank" rel="noopener noreferrer" class="link-primary"><i class="fas fa-map-marker-alt"></i> Ver en Google Maps</a>. 
+        Conozca el <a href="https://www.otorrinoenpilar.com/info.html#rino" class="link-primary">consentimiento informado</a>.
       </p>
     </div>
       <div class="container-sm text-center my-3 py-3">
@@ -617,32 +899,51 @@
       </div>
        
 
-  <h2 id="consulrino" class="text-center text-white my-3 py-3" style="background-color: #003366; font-size: 1.5rem;">Consúltenos su caso sin cargo por chat.</h2>
+  <h2 id="consulrino" class="text-center text-white section-title-primary">Consúltenos su caso sin cargo por chat.</h2>
       
  <div class="container-sm text-center my-4">
             <div class="card contact-card">
-                <img src="./imagenes/perf-nariz.webp" class="card-img-top mx-auto mb-4" alt="Perfil femenino antes de rinoplastia - Consulta de cirugía nasal" loading="lazy" width="120" height="120">
+                <img src="./imagenes/perf-nariz.webp" class="card-img-top mx-auto mb-4" alt="Perfil femenino antes de rinoplastia - Consulta de cirugía nasal" fetchpriority="high" width="120" height="120">
                 <div class="card-body p-0">
                     <p class="card-text mb-4" style="color: #555;">
                         Resuelva todas sus dudas sobre la rinoseptumplastia de forma rápida y confidencial a través de WhatsApp.
                     </p>
-                    <a href="https://api.whatsapp.com/send?phone=541168212512&text=Quiero%20una%20consulta%20%20por%20chat%20con%20el%20Dr.%20Mosovich%20por%20una%20rinoplastia" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" aria-label="Iniciar chat por WhatsApp">
+                    <a href="https://api.whatsapp.com/send?phone=541168212512&text=Quiero%20una%20consulta%20%20por%20chat%20con%20el%20Dr.%20Mosovich%20por%20una%20rinoplastia" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp mb-3" aria-label="Iniciar chat por WhatsApp">
                         <i class="fab fa-whatsapp me-2"></i> Iniciar chat
                     </a>
+                    
+                    <div class="mt-4 pt-3 border-top">
+                        <p class="text-muted mb-2" style="font-size: 0.9rem;">
+                            <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                            <strong>Consultorio en Pilar</strong>
+                        </p>
+                        <p class="mb-2" style="color: #333; font-size: 0.95rem;">
+                            Mariano Moreno 559, Pilar, Buenos Aires
+                        </p>
+                        <a href="https://maps.app.goo.gl/A2b3Nnef5qiYiXKP9" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm" aria-label="Ver ubicación en Google Maps">
+                            <i class="fas fa-directions me-1"></i> Cómo llegar
+                        </a>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <p class="text-muted mb-1" style="font-size: 0.85rem;">
+                            Atención en: Pilar, Escobar, Del Viso, Tortuguitas, Derqui y Zona Norte
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#consulrino" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+  <a href="#consulrino" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver al menú</a>
 </div> 
 
-  <h2 id="info" class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">Información sobre rinoplastias.</h2>
+  <h2 id="info" class="text-center text-white section-title-primary">Información sobre rinoplastias.</h2>
       
 <div class="card-group p-1">
   
     <div class="card p-3">
-        <img loading="lazy" decoding="async" src="./imagenes/blogrino2.webp" class="card-img-top info-card-img" alt="Perfil de una persona con una nariz armoniosa, mostrando mejora estética y respiración clara después de la rinoplastia" width="350" height="230">
+        <img fetchpriority="high" decoding="async" src="./imagenes/blogrino2.webp" class="card-img-top info-card-img" alt="Perfil de una persona con una nariz armoniosa, mostrando mejora estética y respiración clara después de la rinoplastia" width="350" height="230">
         <div class="card-body">
             <h3 class="card-title h5">Rinoplastia: La Armonía Perfecta entre Belleza y Salud.</h3>
             <article class="card-text">
@@ -749,7 +1050,7 @@
 
 
                               <div class="container-flex text-center my-4 p-0">
-                            <a href="#info" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+                            <a href="#info" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver al menú</a>
                            </div> 
 
                 
@@ -855,11 +1156,11 @@
 
 
               <div class="container-flex text-center my-4 p-0">
-                <a href="#info" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+                <a href="#info" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver al menú</a>
               </div> 
 
-              <section id="faq" class="container my-4">
-                <h2 class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">Preguntas frecuentes sobre rinoplastia</h2>
+              <section id="faq" class="container my-4 section-spacing">
+                <h2 class="text-center text-white section-title-secondary">Preguntas frecuentes sobre rinoplastia</h2>
                 <div class="accordion my-3" id="faqRino">
                   <div class="accordion-item">
                     <h3 class="accordion-header" id="faqOne">
@@ -914,9 +1215,9 @@
 
                         <section id="galeria-section" class="gallery-section">
                         <!--galeria rino-->  
-                    <div class="py-2 my-2" style="background-color: #003366; color: white;">
-        <h2 id="galeria" class="text-center py-1 my-1" style="font-size: 1.5rem;">Algunos casos clínicos.</h2>
-        <p class="card-title text-center py-1 my-1" style="font-size: 1.25rem; margin: 0;">Dr. Juan Mosovich.</p>
+                    <div class="py-3 my-2 section-title-primary">
+        <h2 id="galeria" class="text-center text-white mb-2">Algunos casos clínicos.</h2>
+        <p class="card-title text-center text-white" style="font-size: 1.15rem; margin: 0;">Dr. Juan Mosovich.</p>
     </div>
 
     <div class="text-center my-3 py-3">
@@ -947,7 +1248,7 @@
         </div>
     </div>
     <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
     </div>
 
     <!-- Repite la misma estructura para cada caso (Casos 2 a 12) -->
@@ -974,7 +1275,7 @@
         </div>
     </div>
     <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
     </div>
 
     <!-- Continúa con los demás casos de la misma forma -->
@@ -1009,7 +1310,7 @@
         </div>
 
         <div class="container-flex text-center my-4 p-0">
-          <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+          <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
         </div>   
         <div class="text-center bg-primary text-white">
             <a target="_blank" rel="noopener-noreferrer" href="https://bejewelled-daffodil-60c301.netlify.app"><h6 class="text-white" >🔍Caso 4</h6></a>
@@ -1034,7 +1335,7 @@
            </div>
 
            <div class="container-flex text-center my-4 p-0">
-            <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+            <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
           </div> 
 
            <div class="text-center bg-primary text-white">
@@ -1071,7 +1372,7 @@
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
     </div> 
 
     <div class="text-center bg-primary text-white">
@@ -1105,7 +1406,7 @@
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
     </div> 
 
 
@@ -1140,7 +1441,7 @@
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
     </div> 
 
 
@@ -1176,7 +1477,7 @@
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
     </div> 
 
     <div class="text-center bg-primary text-white">
@@ -1210,7 +1511,7 @@
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
     </div> 
 
     <div class="text-center bg-primary text-white">
@@ -1244,7 +1545,7 @@
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
     </div> 
 
     <div class="text-center bg-primary text-white">
@@ -1275,7 +1576,7 @@
      </div>
 
      <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
     </div> 
 
      <div class="text-center bg-primary text-white">
@@ -1325,7 +1626,7 @@
     </div>
 
     <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
 </div> 
 
 </main>
@@ -1333,7 +1634,7 @@
 <!-- Botón flotante de WhatsApp -->
 <div class="floating-whatsapp">
   <a href="https://api.whatsapp.com/send?phone=541168212512&text=Quiero%20una%20consulta%20%20por%20chat%20con%20el%20Dr.%20Mosovich%20por%20una%20rinoplastia" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp sobre rinoplastia">
-    <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" loading="lazy" width="35" height="35">
+    <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" loading="lazy" width="35" height="35" decoding="async">
   </a>
 </div>
 
@@ -1372,62 +1673,42 @@
 </footer>
 
     <!-- Load Bootstrap JS asynchronously -->
-    <script>
-      function loadScript(src) {
-        const script = document.createElement('script');
-        script.src = src;
-        script.async = true;
-        document.head.appendChild(script);
+    <script defer>
+      // Load scripts after initial content
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          const bootstrapScript = document.createElement('script');
+          bootstrapScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js';
+          bootstrapScript.defer = true;
+          document.head.appendChild(bootstrapScript);
+        }, { timeout: 2000 });
+      } else {
+        window.addEventListener('load', () => {
+          const bootstrapScript = document.createElement('script');
+          bootstrapScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js';
+          bootstrapScript.defer = true;
+          document.head.appendChild(bootstrapScript);
+        });
       }
-      
-      // Load scripts after page load to improve FCP
-      window.addEventListener('load', function() {
-        loadScript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js');
-        loadScript('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js');
-      });
     </script>
-  <script>
+  <script defer>
     let currentImageIndex = 0;
-    // Seleccionamos todas las imágenes y luego creamos un subconjunto.
     const allImages = document.querySelectorAll('.card img');
-    // Creamos un array con las imágenes que realmente queremos en el slider (excluyendo las 7 primeras).
-    const sliderImages = Array.from(allImages).slice(7); // .slice(7) excluye los primeros 7 elementos.
+    const sliderImages = Array.from(allImages).slice(7);
 
     function openModal(imgElement) {
-        // Obtenemos la URL de la imagen clickeada.
         const clickedImgSrc = imgElement.src;
-        
-        // Encontramos el índice de la imagen clickeada dentro del array 'sliderImages'.
-        // Si la imagen clickeada es una de las primeras 7, no debería abrir el modal con navegación,
-        // pero la abrimos si está en 'sliderImages'.
         currentImageIndex = sliderImages.findIndex(img => img.src === clickedImgSrc);
 
-        // Solo abrimos el modal si la imagen clickeada es parte de 'sliderImages' (es decir, no es una de las 7 primeras).
         if (currentImageIndex !== -1) {
             document.getElementById('modalImage').src = clickedImgSrc;
             const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
             imageModal.show();
-        } else {
-            // Opcional: Podrías hacer algo aquí si se hace clic en una de las primeras 7 imágenes
-            // Por ejemplo, no hacer nada, o mostrar un mensaje, etc.
-            console.log('Esta imagen no forma parte del slider navegable.');
-            // Para asegurar que si alguien intenta abrir las primeras 7, el modal no se abra navegablemente.
-            const imageModal = bootstrap.Modal.getInstance(document.getElementById('imageModal'));
-            if (imageModal) {
-                imageModal.hide(); // Asegúrate de que el modal esté cerrado si se intenta abrir con una imagen no deseada.
-            }
-            // Si igual querés que las 7 primeras abran el modal (pero sin navegación), podrías
-            // simplemente setear currentImageIndex a -1 para indicar que no es navegable.
-            // Para tu caso, como la navegación es lo importante, es mejor solo abrir si está en sliderImages.
-            // Si quisieras que *solo* las que no están en sliderImages no abran el modal, tendrías que ajustar la lógica.
-            // Por el momento, la lógica actual previene la apertura si no está en sliderImages para la navegación.
         }
     }
 
     function navigateImage(direction) {
-        // Asegurarse de que tenemos imágenes para navegar
         if (sliderImages.length === 0) return;
-
         currentImageIndex = (currentImageIndex + direction + sliderImages.length) % sliderImages.length;
         document.getElementById('modalImage').src = sliderImages[currentImageIndex].src;
     }
@@ -1440,7 +1721,7 @@
     });
 </script>
 
-<script>
+<script defer>
     document.querySelectorAll('.toggle-btn').forEach(button => {
         button.addEventListener('click', function () {
             setTimeout(() => {
@@ -1449,15 +1730,34 @@
                 } else {
                     button.textContent = '¡Conoce más!';
                 }
-            }, 300); // Tiempo para asegurar la actualización después de la animación del colapso
+            }, 300);
         });
     });
 </script>
+
+<script defer>
+  // Barra de progreso de lectura
+  (function() {
+    const progressBar = document.getElementById('readingProgress');
+    if (!progressBar) return;
+
+    const updateProgress = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / docHeight) * 100;
+      progressBar.style.width = progress + '%';
+    };
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  })();
+</script>
+
 <button type="button" id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
   <i class="fas fa-chevron-up" aria-hidden="true"></i>
 </button>
 
-<script>
+<script defer>
   (function() {
     const scrollBtn = document.getElementById('scrollToTop');
     if (!scrollBtn) return;

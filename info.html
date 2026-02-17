@@ -3,29 +3,45 @@
   <head>
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-XNNM71EW8T');
+      const loadGtag = () => {
+        const gtagScript = document.createElement('script');
+        gtagScript.async = true;
+        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T';
+        document.head.appendChild(gtagScript);
+        gtag('js', new Date());
+        gtag('config', 'G-XNNM71EW8T');
+      };
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGtag, { timeout: 2000 });
+      } else {
+        window.addEventListener('load', loadGtag);
+      }
     </script>
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#003366">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Geo-Location Meta Tags -->
+    <meta name="ICBM" content="-34.434636, -58.829689">
+    <meta name="geo.position" content="-34.434636;-58.829689">
+    <meta name="geo.placename" content="Pilar, Buenos Aires, Argentina">
+    <meta name="geo.region" content="AR-B">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Guía completa de otorrinolaringología del Dr. Juan Mosovich: información sobre cirugías ORL (amígdalas, adenoides, rinoplastia), uso de audífonos, control de alergias, disfagia, ejercicios para ronquidos. Recomendaciones pre y postoperatorias. CV profesional.">
-    <meta name="keywords" content="cirugía otorrinolaringología Pilar, adenoamigdalectomía, rinoplastia información, audífonos guía, disfagia tratamiento, ejercicios ronquidos, Dr. Mosovich CV, cirugía nariz, cirugía amígdalas niños, postoperatorio ORL">
+    <meta name="description" content="Guía completa de otorrinolaringología del Dr. Juan Mosovich: información sobre cirugías ORL (amígdalas, adenoides, rinoplastia, septoplastia), prevención de alergias ambientales, disfagia, ejercicios para ronquidos. Recomendaciones pre y postoperatorias. CV profesional.">
+    <meta name="keywords" content="cirugía otorrinolaringología Pilar, adenoamigdalectomía, rinoplastia información, septoplastia, disfagia tratamiento, ejercicios ronquidos, Dr. Mosovich CV, cirugía nariz, cirugía amígdalas niños, postoperatorio ORL, alergias ambientales, terapia miofuncional">
     <meta name="author" content="Dr. Juan Mosovich - Otorrinolaringólogo">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
     <!-- Open Graph Meta Tags for Social Sharing -->
     <meta property="og:title" content="Guía Completa de Cirugías ORL y Cuidados | Dr. Juan Mosovich">
-    <meta property="og:description" content="Información detallada sobre cirugías de otorrinolaringología, guía de audífonos, prevención de alergias, tratamiento de disfagia y ejercicios para ronquidos. Recomendaciones del Dr. Mosovich en Pilar.">
+    <meta property="og:description" content="Información detallada sobre cirugías de otorrinolaringología, prevención de alergias ambientales, tratamiento de disfagia y ejercicios para ronquidos. Guía completa del Dr. Mosovich en Pilar.">
     <meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp">
     <meta property="og:url" content="https://www.otorrinoenpilar.com/info.html">
     <meta property="og:type" content="website">
@@ -35,7 +51,7 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Guía de Cirugías ORL y Cuidados | Dr. Mosovich Pilar">
-    <meta name="twitter:description" content="Información completa sobre cirugías otorrinolaringológicas, audífonos, alergias, disfagia y ejercicios para ronquidos. Guía del Dr. Mosovich.">
+    <meta name="twitter:description" content="Información completa sobre cirugías otorrinolaringológicas, prevención de alergias, disfagia y ejercicios para ronquidos. Guía del Dr. Mosovich.">
     <meta name="twitter:image" content="https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp">
     <meta name="twitter:image:alt" content="Dr. Juan Mosovich - Otorrinolaringólogo en Pilar">
     
@@ -44,7 +60,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="/favicon/site.webmanifest">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <script type="application/ld+json">
 [
@@ -52,7 +67,7 @@
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     "name": "Guía de Cirugías Otorrinolaringológicas y Cuidados",
-    "description": "Guía completa sobre cirugías de otorrinolaringología (amígdalas, adenoides, rinoplastia, septoplastia), uso de audífonos, prevención de alergias, manejo de disfagia y ejercicios para ronquidos. Información profesional del Dr. Juan Mosovich, otorrinolaringólogo especialista en Pilar.",
+    "description": "Guía completa sobre cirugías de otorrinolaringología (amígdalas, adenoides, rinoplastia, septoplastia, microcirugía de laringe, cirugías de oído), prevención de alergias ambientales, manejo de disfagia y ejercicios para ronquidos. Información profesional del Dr. Juan Mosovich, otorrinolaringólogo especialista en Pilar.",
     "url": "https://www.otorrinoenpilar.com/info.html",
     "medicalAudience": ["Patient"],
     "about": {
@@ -65,14 +80,7 @@
       "medicalSpecialty": "Otolaryngology",
       "url": "https://www.otorrinoenpilar.com/info.html#cv",
       "worksFor": {
-        "@type": "MedicalOrganization",
-        "name": "Consultorio de Otorrinolaringología Dr. Juan Mosovich",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Pilar",
-          "addressRegion": "Buenos Aires",
-          "addressCountry": "AR"
-        }
+        "@id": "https://www.otorrinoenpilar.com/#medicalbusiness"
       }
     },
     "publisher": {
@@ -90,12 +98,12 @@
       }
     },
     "datePublished": "2023-01-15T09:00:00-03:00",
-    "dateModified": "2025-12-19T10:00:00-03:00",
+    "dateModified": "2026-02-16T10:00:00-03:00",
     "inLanguage": "es-AR",
     "mainEntity": {
       "@type": "FAQPage",
       "name": "Preguntas frecuentes sobre cirugías ORL y cuidados otorrinolaringológicos",
-      "description": "Información detallada sobre cirugías de otorrinolaringología, cuidados pre y postoperatorios, uso de audífonos, control de alergias y tratamiento de disfagia.",
+      "description": "Información detallada sobre cirugías de otorrinolaringología, cuidados pre y postoperatorios, prevención de alergias ambientales y tratamiento de disfagia.",
       "mainEntity": [
         {
           "@type": "Question",
@@ -103,14 +111,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Los riesgos incluyen sangrado postoperatorio, infección, deshidratación y complicaciones anestésicas. El riesgo de mortalidad es extremadamente bajo (1 en 50,000 a 150,000 casos). La mayoría de las complicaciones se resuelven con tratamiento médico adecuado."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cómo adaptarse correctamente a un audífono?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La adaptación a un audífono requiere paciencia, uso constante (empezar con pocas horas e incrementar gradualmente), ajustes personalizados con el audiólogo, y comprensión de que el cerebro necesita tiempo para reaprender a procesar los sonidos. Es fundamental no abandonar el proceso durante las primeras semanas."
           }
         },
         {
@@ -134,6 +134,47 @@
   },
   {
     "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "@id": "https://www.otorrinoenpilar.com/#medicalbusiness",
+    "name": "Otorrino en Pilar - Dr. Juan Mosovich",
+    "description": "Consultorio de otorrinolaringología especializado en cirugías ORL, tratamiento de alergias y trastornos del sueño en Pilar y Zona Norte",
+    "url": "https://www.otorrinoenpilar.com/",
+    "telephone": "+54-11-6821-2512",
+    "email": "contacto@otorrinoenpilar.com",
+    "priceRange": "$$",
+    "image": "https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Caamaño 1100, Edificio Agora 2, Piso 1, Oficina 110",
+      "addressLocality": "Pilar",
+      "addressRegion": "Buenos Aires",
+      "postalCode": "1631",
+      "addressCountry": "AR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-34.434636",
+      "longitude": "-58.829689"
+    },
+    "hasMap": "https://maps.app.goo.gl/H8MGdSrEawJcMZxE6",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "-34.434636",
+        "longitude": "-58.829689"
+      },
+      "geoRadius": "50000"
+    },
+    "openingHours": "Mo,Tu,We,Th,Fr 09:00-17:00",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=100063748789595",
+      "https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr"
+    ],
+    "medicalSpecialty": "Otorhinolaryngology"
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       {
@@ -154,10 +195,360 @@
 </script>
       
       <link rel="canonical" href="https://www.otorrinoenpilar.com/info.html"/>
-      <title>Guía de Cirugías ORL, Audífonos y Cuidados | Dr. Juan Mosovich | Otorrino en Pilar</title>
-    <link rel="stylesheet" href="./info.css">
+      <title>Guía de Cirugías ORL y Cuidados | Dr. Juan Mosovich | Otorrino en Pilar</title>
+    
+    <!-- Resource Hints para performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Bootstrap CSS con prioridad alta -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" as="style" fetchpriority="high" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"></noscript>
+    
+    <!-- Google Fonts optimizadas -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap"></noscript>
+    
+    <!-- Font Awesome con carga diferida -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <style>
+      /* Variables CSS para Design System */
+      :root {
+        --brand-navy: #003366;
+        --brand-blue: #007bff;
+        --brand-teal: #1b8f8a;
+        --brand-light: #d7e3f0;
+        --brand-ice: #e7f3ff;
+        --text-dark: #1a1a1a;
+        --text-gray: #4d4e53;
+        --border-color: rgba(0, 22, 22, 0.1);
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+        --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+        --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+        --transition-base: all 0.3s ease;
+      }
+
+      /* Reset y Base */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        color: var(--text-dark);
+        line-height: 1.7;
+        background: #f8f9fa;
+        overflow-x: hidden;
+      }
+
+      /* Progress Bar de Lectura */
+      .reading-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--brand-teal), var(--brand-navy));
+        z-index: 9999;
+        transition: width 0.1s ease;
+      }
+
+      /* Sticky Navigation Top */
+      .sticky-nav {
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition-base);
+      }
+
+      .sticky-nav.scrolled {
+        box-shadow: var(--shadow-md);
+      }
+
+      .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0.75rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .nav-brand {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--brand-navy);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin: 0;
+      }
+
+      .nav-item {
+        position: relative;
+      }
+
+      .nav-link {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: var(--text-gray);
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: var(--transition-base);
+        border: 2px solid transparent;
+      }
+
+      .nav-link:hover {
+        background: var(--brand-ice);
+        color: var(--brand-navy);
+        transform: translateY(-2px);
+      }
+
+      .nav-link.active {
+        background: linear-gradient(135deg, rgba(27, 143, 138, 0.15), rgba(0, 51, 102, 0.1));
+        color: var(--brand-navy);
+        font-weight: 600;
+        border-color: var(--brand-teal);
+      }
+
+      /* Breadcrumbs */
+      .breadcrumb-container {
+        background: white;
+        border-bottom: 1px solid var(--border-color);
+        padding: 0.75rem 1.5rem;
+      }
+
+      .breadcrumb {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--text-gray);
+      }
+
+      .breadcrumb a {
+        color: var(--brand-blue);
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      /* Hero Section con Tabla de Contenidos */
+      .hero-section {
+        background: linear-gradient(135deg, var(--brand-navy), var(--brand-teal));
+        color: white;
+        padding: 3rem 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .hero-content {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .hero-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #ffffff;
+      }
+
+      .hero-description {
+        font-size: 1.15rem;
+        opacity: 0.95;
+        margin-bottom: 2rem;
+        max-width: 800px;
+        color: #ffffff;
+      }
+
+      .toc-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-lg);
+        color: var(--text-dark);
+      }
+
+      .toc-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--brand-navy);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .toc-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 0.75rem;
+      }
+
+      .toc-link {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem;
+        background: white;
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--text-dark);
+        transition: var(--transition-base);
+        border: 2px solid transparent;
+      }
+
+      .toc-link:hover {
+        background: var(--brand-ice);
+        border-color: var(--brand-teal);
+        transform: translateX(8px);
+      }
+
+      .toc-icon {
+        font-size: 1.5rem;
+        color: var(--brand-teal);
+      }
+
+      .toc-text {
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+
+      /* Main Content Container */
+      .main-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 1.5rem 3rem;
+      }
+
+      /* Section Cards */
+      .section-card {
+        background: white;
+        border-radius: 16px;
+        padding: 2.5rem;
+        margin-bottom: 2rem;
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition-base);
+        border: 1px solid var(--border-color);
+      }
+
+      .section-card:hover {
+        box-shadow: var(--shadow-md);
+        transform: translateY(-4px);
+      }
+
+      /* Typography Scale */
+      h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--brand-navy);
+        margin-bottom: 1.5rem;
+        line-height: 1.3;
+      }
+
+      h2 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--brand-navy);
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+      }
+
+      h3 {
+        font-size: 1.35rem;
+        font-weight: 600;
+        color: var(--text-dark);
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      h4 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--text-dark);
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Enlaces Mejorados */
+      a:not(.nav-link):not(.toc-link):not(.btn) {
+        color: var(--brand-blue);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: var(--transition-base);
+      }
+
+      a:not(.nav-link):not(.toc-link):not(.btn):hover {
+        border-bottom-color: var(--brand-blue);
+      }
+
+      /* Enlaces a Spotify Destacados */
+      .spotify-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 1.5rem;
+        background: linear-gradient(135deg, #1DB954, #1ed760);
+        color: white;
+        text-decoration: none;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: var(--transition-base);
+        box-shadow: 0 4px 12px rgba(29, 185, 84, 0.3);
+        margin: 0.5rem 0;
+      }
+
+      .spotify-link:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(29, 185, 84, 0.4);
+        color: white;
+        border: none;
+      }
+
+      .spotify-icon {
+        font-size: 1.25rem;
+      }
+
+      /* Separadores Modernos */
+      .section-divider {
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--brand-teal), transparent);
+        margin: 3rem 0;
+        border: none;
+      }
+
       /* Botón flotante de WhatsApp */
       .floating-whatsapp {
         position: fixed;
@@ -240,17 +631,18 @@
         width: 44px;
         height: 44px;
         border-radius: 999px;
-        background-color: #003366;
+        background-color: var(--brand-navy);
         color: #ffffff;
         border: none;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        box-shadow: var(--shadow-lg);
         opacity: 0;
         pointer-events: none;
-        transition: opacity 0.2s ease, transform 0.2s ease;
+        transition: var(--transition-base);
         z-index: 1050;
+        cursor: pointer;
       }
 
       .scroll-to-top.show {
@@ -258,8 +650,87 @@
         pointer-events: auto;
       }
 
+      .scroll-to-top:hover {
+        background-color: var(--brand-teal);
+        transform: translateY(-3px);
+      }
+
       .scroll-to-top:active {
         transform: scale(0.96);
+      }
+
+      /* Callouts / Alerts */
+      .callout {
+        padding: 1.25rem;
+        border-left: 4px solid var(--brand-teal);
+        background: var(--brand-ice);
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .callout-warning {
+        border-left-color: #ffc107;
+        background: #fff8e1;
+      }
+
+      .callout-danger {
+        border-left-color: #dc3545;
+        background: #ffe5e5;
+      }
+
+      .callout-title {
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      /* Listas mejoradas */
+      ul, ol {
+        margin: 1rem 0;
+        padding-left: 1.5rem;
+      }
+
+      li {
+        margin: 0.5rem 0;
+        line-height: 1.7;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2rem;
+          color: #ffffff;
+        }
+
+        h1 {
+          font-size: 1.75rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        .section-card {
+          padding: 1.5rem;
+        }
+
+        .nav-menu {
+          width: 100%;
+          justify-content: center;
+        }
+
+        .toc-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .scroll-to-top {
+          left: 16px;
+          bottom: 16px;
+          width: 44px;
+          height: 44px;
+        }
       }
 
       @media (min-width: 768px) {
@@ -270,41 +741,128 @@
           height: 48px;
         }
       }
+
+      /* Animaciones de entrada */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-in-up {
+        animation: fadeInUp 0.6s ease-out;
+        will-change: transform, opacity;
+      }
+
+      /* Smooth scroll */
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
     
     </head>
     
-<body id="comunes" >
-<nav id=navbar>
-<a href="https://www.otorrinoenpilar.com/"><button id="top">Inicio</button></a>
+<body id="top">
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress" id="readingProgress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 
-<ul >
+  <!-- Skip Link para accesibilidad -->
+  <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 bg-primary text-white p-2 m-2" style="z-index: 9999;">Saltar al contenido principal</a>
 
-<li>
-  <a class=nav-link href=#consideraciones-cirugia>Información sobre cirugías.</a>
-</li>
-<li>
-  <a class=nav-link href=#intro-ota>Guía de uso de audífonos.</a>
-</li>
-  <li>
-    <a class=nav-link href=#alergia>Prevención de alergias ambientales.</a>
-   </li>
-   <li>
-    <a class=nav-link href=#disfagia>Recomendaciones para pacientes con disfagia.</a>
-   </li> 
-   <li>
-    <a class=nav-link href=#ejercicios-ronquidos>Ejercicios para dejar de roncar.</a>
-   </li> 
-   <li>
-    <a class=nav-link href=#cv>C.V. de Juan Mosovich.</a>
-   </li> 
-  </ul>
-</nav>
+  <!-- Sticky Navigation -->
+  <nav class="sticky-nav" id="stickyNav">
+    <div class="nav-container">
+      <a href="https://www.otorrinoenpilar.com/" class="nav-brand">
+        <i class="fas fa-home"></i>
+        Otorrino en Pilar
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a class="nav-link" href="#consideraciones-cirugia" data-section="consideraciones-cirugia">
+            <i class="fas fa-info-circle"></i> Cirugías
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#alergia" data-section="alergia">
+            <i class="fas fa-allergies"></i> Alergias
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#disfagia" data-section="disfagia">
+            <i class="fas fa-utensils"></i> Disfagia
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ejercicios-ronquidos" data-section="ejercicios-ronquidos">
+            <i class="fas fa-dumbbell"></i> Ronquidos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#cv" data-section="cv">
+            <i class="fas fa-user-md"></i> CV
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-<main id=main-doc>
+  <!-- Breadcrumbs -->
+  <div class="breadcrumb-container">
+    <nav aria-label="breadcrumb" class="breadcrumb">
+      <a href="https://www.otorrinoenpilar.com/">Inicio</a>
+      <span>›</span>
+      <span>Información y Guías</span>
+    </nav>
+  </div>
+
+  <!-- Hero Section con Tabla de Contenidos -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Guía Completa de Cirugías ORL y Cuidados</h1>
+      <p class="hero-description">
+        Información detallada sobre cirugías otorrinolaringológicas, prevención de alergias, tratamiento de disfagia y ejercicios para ronquidos. Recomendaciones profesionales del Dr. Juan Mosovich.
+      </p>
+      
+      <div class="toc-card">
+        <div class="toc-title">
+          <i class="fas fa-bars"></i>
+          Contenidos de esta guía
+        </div>
+        <div class="toc-grid">
+          <a href="#consideraciones-cirugia" class="toc-link">
+            <span class="toc-icon">🏥</span>
+            <span class="toc-text">Información sobre Cirugías</span>
+          </a>
+          <a href="#alergia" class="toc-link">
+            <span class="toc-icon">🤧</span>
+            <span class="toc-text">Prevención de Alergias</span>
+          </a>
+          <a href="#disfagia" class="toc-link">
+            <span class="toc-icon">🍽️</span>
+            <span class="toc-text">Recomendaciones para Disfagia</span>
+          </a>
+          <a href="#ejercicios-ronquidos" class="toc-link">
+            <span class="toc-icon">😴</span>
+            <span class="toc-text">Ejercicios para Ronquidos</span>
+          </a>
+          <a href="#cv" class="toc-link">
+            <span class="toc-icon">👨‍⚕️</span>
+            <span class="toc-text">CV del Dr. Mosovich</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main-content" class="main-container">
 <hr id="consideraciones-cirugia">
 
-<section class="main-section">
+<section class="section-card fade-in-up">
     <header>
         <h1>🚩 Guía Completa: Consideraciones Importantes para Cirugías Otorrinolaringológicas</h1>
     </header>
@@ -342,7 +900,7 @@
                 <p><strong>Recuerde llevar todos estos estudios el día de la cirugía.</strong></p>
             </section>
             
-            <hr>
+            <hr class="section-divider">
             
             <section>
                 <h3>3. Comunicación de Alergias y Antecedentes Médicos</h3>
@@ -356,21 +914,29 @@
                 <p>Debe comunicar también cualquier antecedente personal o familiar de hemorragias severas (por ejemplo, en cirugías previas, extracciones dentarias o procedimientos ginecológicos). Si tiene un marcapasos, cardiodesfibrilador, implante coclear u otro tipo de implante electrónico, esto también debe ser informado al equipo de salud.</p>
             </section>
             
-            <hr>
+            <hr class="section-divider">
             
             <section>
                 <h3>4. Higiene y Vestimenta Preoperatoria</h3>
                 <p>La noche previa a la cirugía, es recomendable realizar un baño completo con jabones antisépticos, incluyendo el cabello. El pelo debe estar corto o recogido, y las uñas limpias y cortas, sin esmalte. La ropa debe ser de algodón (evite materiales sintéticos como la lycra). Es fundamental quitarse cualquier objeto metálico como aros, anillos, cadenas, piercings, etc.</p>
             </section>
             
-            <hr>
+            <hr class="section-divider">
             
             <section>
                 <h3>5. El Ayuno Preoperatorio: Una Medida Crítica</h3>
                 <p>Debe guardar un ayuno completo de sólidos y líquidos durante al menos 6 horas antes de la intervención. Esta es una medida de seguridad fundamental. No respetar el ayuno, ya sea de sólidos o líquidos, puede poner en riesgo su vida. Durante la anestesia general, el contenido del estómago puede pasar a los pulmones, una complicación extremadamente grave que puede ser mortal. Sea extremadamente cuidadoso y riguroso con el ayuno preoperatorio.</p>
+                
+                <div class="callout callout-danger">
+                  <div class="callout-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Advertencia Crítica
+                  </div>
+                  <p class="mb-0">No respetar el ayuno preoperatorio puede causar broncoaspiración, una complicación potencialmente mortal. Siga estrictamente las instrucciones de ayuno de su médico.</p>
+                </div>
             </section>
             
-            <hr>
+            <hr class="section-divider">
             
             <section>
                 <h3>6. Medicamentos Habituales</h3>
@@ -393,8 +959,9 @@
                 <cite>"He leído y comprendido el presente. El médico me ha explicado los riesgos y beneficios de la cirugía de manera satisfactoria y las alternativas a la misma. He comprendido también las recomendaciones postquirúrgicas y autorizo al médico a realizar sobre mí o la persona a mi cargo la cirugía en cuestión."</cite>
                 
                 <div style="text-align: center; margin: 30px 0;">
-                    <a href="https://open.spotify.com/episode/6474tfhKLL1CPM968R3US2" target="_blank" rel="noopener noreferrer" style="background-color: #1DB954; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-size: 1.1em; font-weight: bold;">
-                        Charla consentimiento.
+                    <a href="https://open.spotify.com/episode/6474tfhKLL1CPM968R3US2" target="_blank" rel="noopener noreferrer" class="spotify-link">
+                        <i class="fab fa-spotify spotify-icon"></i>
+                        Charla sobre consentimiento informado
                     </a>
                 </div>
            
@@ -415,15 +982,7 @@
   </section>
 
 
-<a style="text-decoration: none;" href="#top"> 
-  <hr>
-<div class="separador">
-     🔝menu
-</div>
-<hr id=hava>
-</a>
-
-<section class="main-section">
+<section class="section-card fade-in-up" id="hava">
   <header>
     <h1>Adenoamigdalectomía: Cirugía de Amígdalas y Adenoides - Beneficios, Riesgos y Cuidados Postoperatorios</h1>
   </header>
@@ -494,27 +1053,27 @@
       <h2>Recursos Adicionales</h2>
       <p>
         Si desea profundizar en el tema, le invitamos a escuchar estas charlas informativas:
-        <br>
-        <br>
-        <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/4tnBxmujsM6w22OfqUL9YR"><h4>Charla sobre la utilidad de la cirugía de amígdalas</h4></a>
-        <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/0Em3iAhPzCjMs1Qd1AQgZO"><h4>Recomendaciones postoperatorias de la cirugía de amígdalas</h4></a>
-        <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/50cPdFcfjDg0UdLJjDaRlo"><h4>Charla sobre los tubos de ventilación timpánica</h4></a>
       </p>
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+        <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/4tnBxmujsM6w22OfqUL9YR" class="spotify-link">
+          <i class="fab fa-spotify spotify-icon"></i>
+          Charla sobre la utilidad de la cirugía de amígdalas
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/0Em3iAhPzCjMs1Qd1AQgZO" class="spotify-link">
+          <i class="fab fa-spotify spotify-icon"></i>
+          Recomendaciones postoperatorias de la cirugía de amígdalas
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/50cPdFcfjDg0UdLJjDaRlo" class="spotify-link">
+          <i class="fab fa-spotify spotify-icon"></i>
+          Charla sobre los tubos de ventilación timpánica
+        </a>
+      </div>
     </section>
   </article>
 </section>
-```
 
-<a style="text-decoration: none;" href="#top"> 
-  <hr>
-<div class="separador">
-     🔝menu
-</div>
-<hr>
-</a>
-
-<section class=main-section >
-<header><h1 id="crfc">Cirugía con radiofrecuencia de cornetes nasales (mini-invasiva).</h1></header>
+<section class="section-card fade-in-up" id="crfc">
+<header><h1>Cirugía con radiofrecuencia de cornetes nasales (mini-invasiva)</h1></header>
 <article>
 <p>
 <h2>Riesgos y efectos adversos.</h2>
@@ -545,16 +1104,8 @@ En casos más graves o cuando otras opciones de tratamiento no han tenido éxito
 </article>
 </section>
 
-<a style="text-decoration: none;" href="#top"> 
-  <hr>
-<div class="separador">
-     🔝menu
-</div>
-<hr>
-</a>
-
-<section class=main-section >
-<header><h1 id="cers">Cirugía endonasal (videoendoscópica o microscópica), septumplastia.</h1>
+<section class="section-card fade-in-up" id="cers">
+<header><h1>Cirugía endonasal (videoendoscópica o microscópica), septumplastia</h1>
 </header>
 <article>
 <p>
@@ -641,24 +1192,18 @@ En casos más graves o cuando otras opciones de tratamiento no han tenido éxito
     <hr>
     <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/3dx3ytOciWVc2t7bcm4dmT"><h3>¿Es adicto a las gotas nasales?.</h3></a> 
     <hr>
-    <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/4H2hBpYkhUgbevZBW2HpTw"> <h3>Cirugía de radiofrecuencia de cornetes.</h3></a>
-    <hr>
+    <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/4H2hBpYkhUgbevZBW2HpTw" class="spotify-link">
+      <i class="fab fa-spotify spotify-icon"></i>
+      Cirugía de radiofrecuencia de cornetes
+    </a>
     <br>
   </p>
 </article>
+</section>
 
-<a style="text-decoration: none;" href="#top"> 
-  <hr>
-<div class="separador">
-     🔝menu
-</div>
-<hr id="rino">
-</a>
-
-
-<section class="main-section">
+<section class="section-card fade-in-up" id="rino">
     <header>
-        <h1 >Rinoplastia y Rinoseptoplastia: Guía Informativa para Pacientes</h1>
+        <h1>Rinoplastia y Rinoseptoplastia: Guía Informativa para Pacientes</h1>
     </header>
     <article>
         <h4>Información General sobre la Intervención</h4>
@@ -691,23 +1236,15 @@ En casos más graves o cuando otras opciones de tratamiento no han tenido éxito
         ---
 
         <div style="text-align: center; margin: 30px 0;">
-            <a href="https://open.spotify.com/episode/200Y87ZvyxOc0NdVG29bu7" target="_blank" rel="noopener noreferrer" style="background-color: #1DB954; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-size: 1.1em; font-weight: bold;">
+            <a href="https://open.spotify.com/episode/200Y87ZvyxOc0NdVG29bu7" target="_blank" rel="noopener noreferrer" class="spotify-link">
+                <i class="fab fa-spotify spotify-icon"></i>
                 Charla sobre rinoplastia
             </a>
         </div>
     </article>
 </section>
-```
 
-<a style="text-decoration: none;" href="#top"> 
-  <hr>
-<div class="separador">
-     🔝menu
-</div>
-<hr id="mcl">
-</a>
-
-<section class="main-section">
+<section class="section-card fade-in-up" id="mcl">
   <header>
     <h1>Microcirugía de laringe, laringoscopia directa y cordectomía</h1>
   </header>
@@ -782,18 +1319,8 @@ En casos más graves o cuando otras opciones de tratamiento no han tenido éxito
   </article>
 </section>
 
-
-
-  <a style="text-decoration: none;" href="#top"> 
-    <hr>
-  <div class="separador">
-       🔝menu
-  </div>
-  <hr>
-  </a>  
-
-<section class=main-section >
-<header><h1 id=omc>Cirugías comunes sobre el oído.</h1>
+<section class="section-card fade-in-up" id="omc">
+<header><h1>Cirugías comunes sobre el oído</h1>
 </header>
 <article>
 <p>
@@ -829,21 +1356,14 @@ En casos más graves o cuando otras opciones de tratamiento no han tenido éxito
       con tratamiento médico pero a veces requieren nuevas intervenciones. Ningún procedimiento invasivo 
       está absolutamente exento de riesgos importantes, incluyendo el de mortalidad, si bien esta posibilidad
        es muy infrecuente. Cualquier duda consulte en la casilla de consulta de la página.
-<hr>
-    <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/0yJSm5iFPv1HzyHl66OywN">
-      <h3>Informese más sobre otitis cronica escuchando este podcast.</h3>
+ <hr>
+  <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/0yJSm5iFPv1HzyHl66OywN" class="spotify-link">
+    <i class="fab fa-spotify spotify-icon"></i>
+    Infórmese más sobre otitis crónica escuchando este podcast
   </a>
  <hr>
 </p>
 </article>
-
-<a style="text-decoration: none;" href="#top"> 
-  <hr>
-<div class="separador">
-     🔝menu
-</div>
-<hr>
-</a>
 
 <article> 
 <h2>Cirugía por otoesclerosis.</h2>
@@ -861,487 +1381,27 @@ En casos más graves o cuando otras opciones de tratamiento no han tenido éxito
   exenta de complicaciones. La más común es la sordera. En algunos casos se puede afectar el oído interno dañando las células 
   receptoras y generando una hipoacusia profunda en este oído operado. La protesis también se puede desplazar, correr, infectar etc.
   Otras complicaciones pueden ser el vertigo postoperatorio, la parálisis facial o las infecciones graves del sistema nervioso (meningitis).<br>
- <hr>
-  <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/08un5ctQrC57jpyz0S3c5T"><h3>Escuche un pod sobre otoesclerosis.</h3></a>
   <hr>
-  <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/50cPdFcfjDg0UdLJjDaRlo"><h3>Sepa que son los diabolos o tubos de ventilación en este pod.</h3></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/08un5ctQrC57jpyz0S3c5T" class="spotify-link">
+    <i class="fab fa-spotify spotify-icon"></i>
+    Escuche un podcast sobre otoesclerosis
+  </a>
   <hr>
-  <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/2rqBjrlzETtqllTVivhgrq"><h3>Pod sobre efectuar una audiometria y probarse un audífono con su celular</h3></a>
+  <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/50cPdFcfjDg0UdLJjDaRlo" class="spotify-link">
+    <i class="fab fa-spotify spotify-icon"></i>
+    Sepa qué son los diábolos o tubos de ventilación en este podcast
+  </a>
+  <hr>
+  <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/2rqBjrlzETtqllTVivhgrq" class="spotify-link">
+    <i class="fab fa-spotify spotify-icon"></i>
+    Podcast sobre efectuar una audiometría y probarse un audífono con su celular
+  </a>
 <hr>
 </p>
 </article>
 </section>
 
-<a style="text-decoration: none;" href="#top"> 
-  <hr>
-<div class="separador">
-     🔝menu
-</div>
-<hr>
-</a>
-
-<section id="intro-ota" class="main-section"  >
-  <header><h1 >🚩 Guía de uso de audífonos para principiantes.</h1></header>
-  <article>
-  <p>
-  Bienvenidos a este pequeño curso para usuarios de audífonos. El objetivo de este curso es que usted tenga la información 
-  necesaria para saber qué beneficios puede obtener de un audífono y como lograr el máximo de sus audífonos sin frustrarse. 
-  </p>
- <ul> 
-   <li>
-  <a class=nav-link href=#valor-ota>¿Puede ayudarme un audífono?.  Valoración inicial.</a>
-  </li>
-  <li>
-  <a class=nav-link href=#hipoac-ota>¿Qué tipo de hipoacusia tengo?</a>
-  </li>
-  <li>
-  <a class=nav-link href=#ota-ota>Audífonos. Tipos y características.</a>
-  </li>
-  <li>
-  <a class=nav-link href=#ota1-ota>Qué debo saber sobre mi audífono.</a>
-  </li>
-  <li>
-  <a class=nav-link href=#otadapt-ota>Proceso de adaptación al audífono.</a>
-  </li>
-  <li>
-  <a class=nav-link href=#otacare-ota>Cuidados del audífono.</a>
-  </li>
-  <li>
-   <a class=nav-link href=#estrat-ota>Otras estrategias para comunicarnos mejor.</a>
-  </li>
-  <li>
-   <a class=nav-link href=#daño-ota>Daño inducido por ruido en usuarios de audífonos.</a>
-  </li>
- </ul>
- <p> 
-  Acceda a más material complementario al curso en los siguientes vínculos:<br>
- </p>
- 
-   <h2>Guía visual complementaria</h2>
-   <hr>
-   <a href="https://www.otorrinoenpilar.com/oido.html#audifono">
-    <h3>Aquí puede ver imágenes de los audífonos, los tipos y funcionalidades.
-
-    </h3>
-  </a>
-  <hr>
-  <h2>Charla "audífonos y su utilidad"</h2>
-    Se describen las preguntas mas comunes que nos hacen los pacientes en relación al uso de audífonos.
-   ¿Cuando un audífono pude sernos útil?.  ¿Cómo es le proceso de adaptación al audífono?. ¿Es mejor uno
-    o dos? Tipos de audífonos. Audífonos invisibles. Indicaciones en cada caso. Costos. Cuidados y 
-    mantenimiento. Funcionalidades. Sistemas FM y su utilidad. Implantes cocleares.
-    <hr>
-     <a target="_blank" rel="noopener noreferrer" href="https://anchor.fm/juan-mosovich/episodes/Audifonos-y-su-utilidad-eghcgc">
-      <h3>
-        Acceda a la charla sobre audífonos 1
-      </h3>
-     </a>
-    <hr>
-
-   <h2>Charla "más sobre audífonos en adultos y niños"</h2>
-     Se describe el funcionamiento y algunas funciones de los audifonos, causas del feedback o "acople". 
-    Concepto de rango dinámico, hipoacusias conductivas y perceptivas, relación señal-ruido, micrófonos direccionales.
-     Detección temprana de hipoacusias en los niños. Dificultades en el ajuste de los audífonos y su importancia 
-     para el desarrollo del lenguaje.
-     <hr>
-     <a rel="noopener noreferrer" target="_blank" href="https://open.spotify.com/episode/4IJN50x0Fe5gNdVlltAKUm">
-      <h3>Charla sobre audifonos 2.</h3>
-    </a>
-  <hr>
-     <h2>Charla "audífonos y audiometría gratis con su celular"</h2>
-     Existen aplicaciones que, con auriculares, le permiten hacer funcionar su celular como un audífono. 
-     Incluso hacerse una audiometría.
-     <hr> 
-     <a rel="noopener noreferrer" target="_blank" href="https://open.spotify.com/episode/2rqBjrlzETtqllTVivhgrq"> 
-      <h3>
-      Analizamos una de estas aplicaciones en esta charla.
-    </h3>
-     </a>
-    <hr>
-    </p>
-  </article>
-  </section>
-
-  <a style="text-decoration: none;" href="#top"> 
-    <hr>
-  <div class="separador">
-       🔝menu
-  </div>
-  <hr>
-  </a>
-
-
-  <section class=main-section >
-  <header><h1 id="valor-ota">¿Puede ayudarme un audífono?.  Valoración inicial.</h1></header>
-  <article>
-  <p>
-      Si notamos que no escuchamos bien lo primero que debemos hacer es consultar al médico especialista. 
-      El otorrinolaringólogo va a examinar nuestros oídos y seguramente indicará algunos estudios complementarios para 
-      determinar si existe una pérdida auditiva, la ubicación y el grado. Esto es importante porque debemos DIAGNOSTICAR la 
-      causa que origina la pérdida auditiva.  La hipoacusia, sordera o pérdida auditiva es solo un SINTOMA. Hay muchas 
-      enfermedades diferentes que pueden originarla. En algunos casos (no muy frecuentes, no te asustes) la pérdida auditiva
-       puede ser causada por enfermedades POTENCIALMENTE GRAVES y es bueno diagnosticarlas rápidamente. Entre los exámenes más
-        utilizados están:
-      <ul>
-      <li>Audiometría: Permite evaluar la audición de los tonos puros.</li>
-     <li>Logoaudiometría: Evalúa la audición mediante el reconocimiento de palabras.</li>
-      <li>Timpanometria e impedanciometía: Es una evaluación de las presiones del oído medio, los reflejos auditivos de protección
-       entre otros parámetros.</li>
-      </ul>
-      
-      A veces puede indicarse algún estudio por imágenes (tomografía o resonancia magnética) según el caso.
-      En la mayoría de los casos se arriba a un diagnóstico de la causa de la hipoacusia y su localización. Entonces de existir
-       la opción de un audífono como tratamiento y el paciente optar por esta opción, el médico lo derivará al audioprotesista
-      para el ajuste de el o los audífonos. La necesidad del audífono es individual, depende de cada paciente en particular.
-      Hay personas que son muy exigentes con su audición (por su tipo de personalidad) o la actividad que realizan 
-      (que requiere perfecta audición). Otras personas pueden tolerar mejor las pérdidas auditivas y continuar manejándose 
-      sin audífonos.   
-  </p>
-  </article>
-  </section>
-
-  <a style="text-decoration: none;" href="#top"> 
-    <hr>
-  <div class="separador">
-       🔝menu
-  </div>
-  <hr>
-  </a>
-
-  <section class=main-section >
-  <header><h1 id=hipoac-ota>¿Qué tipo de hipoacusia tengo?.</h1></header>
-  <article>
-  <p> 
-      <h2>Hipoacusias según su localización.</h2>
-      <ul>
-      <li>Hipoacusias conductivas o de transmisión: Estas hipoacusias se originan en el oído medio o externo.
-       En muchos casos son transitorias o pueden tratarse con otros métodos (por ejemplo cirugía). Son un ejemplo
-       de hipoacusias conductivas  las otitis crónicas, la otoesclerosis,  algunas malformaciones del oído medio
-       o externo, el moco en el oído medio, otitis media aguda, otitis externa y un simple tapón de cerumen. Si 
-       usted introduce su dedo en el conducto auditivo externo o se coloca alguna protección auditiva está 
-       generando una hipoacusia conductiva. Muchos pacientes pueden optar por usar audífonos si la hipoacusia
-       conductiva es crónica, no se puede o no se quiere resolver con cirugía. Los audífonos funcionan
-        fantástico en las hipoacusias conductivas.</li>
-      <li>Hipoacusias neurosensoriales: Se originan en el oído interno  o el nervio auditivo.  Por lejos las más
-       comunes son las causadas por daños en el oído interno o cóclea, específicamente el órgano de corti. 
-       Hay muchas causas que pueden generar estas hipoacusias, como la exposición  a ruidos, enfermedades 
-       virales, medicamentos, enfermedades autoinmunes, traumatismos etc. La adaptación a los audífonos en estas
-        hipoacusias es algo más laboriosa. Muchos pacientes no logran adaptarse.</li>
-     <li>Hipoacusias mixtas: Son una combinación de las dos anteriores.</li>
-      </ul>
-      <h2>Entendiendo el problema del rango dinámico.</h2>
-       Existe un umbral en el que comenzamos a  percibir  el sonido, es el umbral de percepción. También hay un 
-       punto en el que un sonido muy intenso nos molesta. Es el umbral de molestia. El campo que existe entre el
-       umbral de percepción y el de molestia es el rango dinámico. Las personas con hipoacusia conductiva tienen
-       el rango dinámico conservado. El umbral de percepción aumenta pero también el umbral de molestia. Las
-       personas con hipoacusia perceptiva en cambio tienen reducido su rango dinámico. Perciben el sonido a un
-       nivel más alto como los que presentan hipoacusia conductiva, pero el umbral de molestia se reduce 
-      reduciéndose entonces el rango dinámico. Eso hace a veces más difícil la adaptación de los audífonos en 
-      los pacientes con hipoacusia perceptiva que conductiva.<br>
-      Una situación típica que ocurre con gente que sufre hipoacusia perceptiva y tiene el rango dinámico
-       estrecho es que nos pida que hablemos más fuerte porque no nos escucha y cuando elevamos la voz nos diga
-        “¡no me grites que no soy sordo!”.<br>
-      <h2>Hipoacusias según la severidad</h2>
-      Se pueden clasificar en leves, moderadas, severas y profundas según el grado de decibeles de pérdida
-      que se registre en la audiometría. También es importante conocer qué frecuencias se ven afectadas por
-      la pérdida. Las frecuencias agudas, por ejemplo, son las más comúnmente afectadas en las hipoacusias
-       perceptivas o cocleares.
-  </p>
-  </article>
-  </section>
-
-  <a style="text-decoration: none;" href="#top"> 
-    <hr>
-  <div class="separador">
-       🔝menu
-  </div>
-  <hr>
-  </a>
-  
-  <section class=main-section >
-  <header><h1 id=ota-ota>Audífonos, tipos, características.</h1></header>
-  <article>
-  <p>
-      Existen múltiples tipos diferentes de audífonos según las características, tecnología etc. Algunos tipos de
-      audífonos funcionan mejor para determinadas pérdidas que otros. Por ejemplo el  audífono  tipo CIC  se 
-      utiliza más en pérdidas leves a moderadas. El audífono “invisible” de “pie abierto” en pérdidas ubicadas
-     más en tonos agudos. Las hipoacusias más severas requieren habitualmente un audífono tradicional 
-     retroauricular con molde y tubo no tan “invisible”. En los niños también se suele optar por este tipo de
-      audífono por ser más simple de colocar y resistente. La vida media de un audífono es de 5 años 
-     aproximadamente. Se pueden dañar con facilidad con golpes o al mojarlos por ejemplo. Requieren baterías que
-      deben cambiarse frecuentemente.<br>
-     Si la sordera es en ambos oídos puede optarse por dos audífonos (equipamiento bilateral) . Ésta, en general, 
-     es la mejor opción. Igualmente muchos pacientes por razones económicas o estéticas deciden utilizar audífonos
-      solamente en un oído. En estos casos el equipamiento unilateral es mucho mejor que nada. Piense que si 
-      el equipamiento con audífonos es en ambos oídos el gasto en baterías se duplica. De decidir usar el audífono
-      su uso debe ser PERMANENTE. El cerebro se debe adaptar a esta nueva forma de escuchar y requiere una 
-     exposición continua al audífono para lograrlo. Si usted quiere usar el audífono solo para “situaciones 
-     especiales” por ejemplo usarlo cuando tiene una reunión familiar o para ir al cine seguramente no va a tener
-      una buena experiencia. Estas situaciones son muy exigentes para su oído y seguramente se va a frustrar 
-      e incluso puede quedar con una falsa impresión de que el audífono no le da resultado. Para sacar lo mejor 
-      de su audífono el proceso de adaptación y la exposición a diferentes ambientes debe ser gradual (ver más 
-      adelante).<br>
-      Otras funcionalidades comunes de la mayoría de
-      los audífonos son las de reconocimiento de las señales del habla y de supresión de ruidos
-      (amplifica la voz humana y reduce el ruido ambiental). Los micrófonos direccionales también son otra
-      herramienta común de los audífonos que permiten dirigir el micrófono según la conveniencia del
-      paciente en cada situación, mejorando la relación señal ruido.
-    </p>
-  </article>
-  </section>
-
-  <a style="text-decoration: none;" href="#top"> 
-    <hr>
-  <div class="separador">
-       🔝menu
-  </div>
-  <hr>
-  </a>
-
-  <section class=main-section >
-  <header><h1 id=ota1-ota>Qué debo saber sobre mi audífono</h1></header>
-  <article>
-  <p>
-      Como destrezas mínimas debe saber colocarse y quitarse el audífono, encenderlo y apagarlo, manipular los 
-      controles que tiene y cambiarle las pilas. Debe saber cuánto duran las pilas. Un detalle importante es que 
-      las pilas de los audífonos se agotan una vez quitado el papel adhesivo que las cubre, use usted el audífono o 
-      no, en un lapso de 7 días aproximadamente. Existen dispositivos que permiten testear las baterías. 
-      Si depende mucho de su audífono es conveniente llevar baterías de reemplazo por si se agota la que tiene
-       el audífono. Se debe tener cuidado con la ingestión accidental de estas baterías, especialmente si hay 
-       niños pequeños, porque su ingestión es un evento muy grave potencialmente fatal. En caso de ser ingeridas 
-       debe consultar a una guardia de emergencias a la brevedad.
-  </p>
-  </article>
-  </section>
-
-  <a style="text-decoration: none;" href="#top"> 
-    <hr>
-  <div class="separador">
-       🔝menu
-  </div>
-  <hr>
-  </a>
-
-  <section class=main-section >
-  <header><h1 id="otadapt-ota">Proceso de adaptación al audífono.</h1></header>
-  <article>
-  <p>
-  
-      Cuando se coloca un audífono por primera vez, su cerebro va a recibir una avalancha de sonidos nuevos,
-      fundamentalmente de los tonos más agudos. El proceso de adaptación debe ser gradual. Inicialmente es
-      conveniente usarlo en su casa no más de dos horas (y no menos de media hora) por día la primera semana,
-      en ambientes silenciosos, hasta que se sienta cómodo.<br>
-  
-      Trate de usar los audífonos en los siguientes contextos, en el orden en que se exponen:
-      <ol>
-      <li>Escuche hablar a una persona en casa mientras puede verle la cara en un ambiente silencioso.</li>
-      <li>Escuche radio o televisión en casa.</li>
-      <li>Camine por su casa tratando de identificar nuevos sonidos.</li>
-      <li>Escuche a una persona en casa, en un ambiente silencioso, sin mirar su cara.</li>
-      <li>Escuche música.</li>
-      <li>Escuche su voz mientras lee en voz alta un texto.</li>
-      <li>Converse con dos o tres personas en un ambiente ruidoso.</li>
-      <li>Salga a caminar fuera de casa escuchando los sonidos de la calle.</li>
-      <li>Vaya a hacer compras y hable con los comerciantes en ambientes ruidosos.</li>
-      <li>Converse con dos o tres personas en un ambiente ruidoso.</li>
-      <li>Converse en un ambiente ruidoso como un restaurante.</li>
-      </ol>
-      
-  Podrá ver que el audífono puede ser útil en algunas situaciones y no en otras. Es importante no explorar
-  las situaciones de mayor exigencia al inicio porque esto nos puede transmitir una idea equivocada de que
-  el audífono no nos es útil. El uso inicial gradual también es importante para adaptarse a los moldes del
-  audífono. Llevar los audífonos puede inicialmente causar disconfort, molestias e irritación en el oído al
-  comienzo, como ocurre con un par de zapatos nuevos. Es bueno saber que va a oír sonidos que no ha 
-  escuchado en años. Puede hacerse molesto el ruido del refrigerador,  algún ventilador que antes no notaba. 
-  Lentamente el cerebro aprenderá a ignorarlos si no son importantes.
-  </p>
-  </article>
-  </section>
-
-  <a style="text-decoration: none;" href="#top"> 
-    <hr>
-  <div class="separador">
-       🔝menu
-  </div>
-  <hr>
-  </a>
-  
-  <section class=main-section >
-  <header><h1 id=otacare-ota>Cuidados y mantenimiento del audífono.</h1></header>
-  <article>
-  <p>
-    <h2>Cómo cuidar los audífonos</h2>  
-  
-      <h3>Que NO HACER</h3>
-      <ul>
-      <li>No los moje ni los lave.</li>
-      <li>No los use en la ducha, en el baño o en la pileta de natación. Si esto ocurre accidentalmente NO
-           los seque en el microondas o el horno.</li>
-      <li>No introduzca nada a más de 3mm dentro del orificio del audífono.</li>
-      <li> No los rocíe con spray fijador para el pelo.</li>
-      <li> No los deje al sol en el auto.</li>
-      </ul>
-      
-      <h3>Que SI HACER</h3>
-      <ul>
-       <li>Límpielos regularmente con un papel absorbente o higiénico. También con una esponja húmeda.</li>
-       <li>Desconecte el molde del audífono retroauricular del audífono ocasionalmente, lave el molde en agua
-           jabonosa. La tubuladura del audífono puede tardar un día en secar</li>
-      <li>Limpie la cera acumulada en la punta de molde con un cepillo. Puede funcionar también una tanza.</li>
-      <li>Guárdelo durante la noche en su estuche o algún contenedor apropiado.</li>
-      <li>Quíte las pilas si lo va a dejar por más de un día.</li>
-      <li>Si vive en ambientes húmedos o se acumula cera con regularidad puede ser útil guardar el audífono 
-          en un contenedor con productos que quiten la humedad. Existen contenedores con ese fin especiales
-           para los audífonos. Al colocarlos en estos deshumidificadores debemos quitarle la batería y dejar 
-           abierto su compartimiento.</li>
-      </ul>
-  </p>
-  </article>
-  </section>
-
-  <a style="text-decoration: none;" href="#top"> 
-    <hr>
-  <div class="separador">
-       🔝menu
-  </div>
-  <hr>
-  </a>
-
-  <section class=main-section >
-  <header><h1 id=estrat-ota>Estrategias de comunicacion alternativas</h1></header>
-  <article>
-  <p>
-    <h2>Además de los audífonos existen estrategias accesorias que nos permiten comunicarnos mejor y apoyar el uso 
-      de los audífonos. A continuación algunas de ellas.</h2>
-
-  <h3>Observar a quien nos habla y su entorno.</h3>
-      <ul>
-      <li>
-        Lectura labial: Acostumbre a mirar a los labios de quien le habla. El mirar los labios ayuda a interpretar las palabras.
-       Explique a la persona con la que habla que trate de hablarle de frente y no cubra su boca para comunicarse
-        con usted para optimizar la comunicación. Incluso las personas que oyen bien necesitan apoyarse en la
-         lectura labial en algunas ocasiones.
-        </li>
-      <li>
-        Señales no verbales: Los gestos como la sonrisa pueden ayudar a interpretar los mensajes orales. Se combinan la lectura labial,
-       facial y corporal.
-      </li>
-      <li>
-        Llenar los espacios de la conversación que no se comprenden
-      </li>
-      </ul>
-
-      <h3>
-        La lectura labial y las señales no verbales permiten a veces adivinar y completar frases que no se
-        pueden discriminar correctamente.
-      </h3>
-        
-      <h3>
-        Manipular las interacciones sociales.
-      </h3>
-      <ul>
-      <li>Pedir que hablen con claridad: Hablar en forma clara, pausada y con una intensidad adecuada permite
-       comprender mejor la conversación. Los miembros de la familia deben colaborar en ese sentido.
-      </li>
-       <li>
-         Ganar la atención del oyente: Cuando queremos comunicarnos con alguien, debemos ganar su atención para
-       que nos hable directamente y nos permita ver su cara y labios. Esto se puede lograr llamándolo por su
-      nombre y haciendo una pausa hasta que haga contacto visual con nosotros. Recién ahí iniciar la charla.
-      O también puede lograrse el mismo cometido tocando a la persona para llamar su atención.
-    </li>
-      <li> 
-        Conocer el tema de conversación:  Al entrar en una conversación grupal es más fácil si se puede 
-      identificar antes el tema de conversación. Una manera es apartar a algunas de las personas del grupo y
-       pedirle que lo ponga al tanto del tema de conversación. Saber de antemano el tema del que se habla va a 
-       facilitar su comprensión en la conversación grupal.
-      </li>
-      <li> Estrategias de reparación:  Si no comprendimos alguna frase clave de la conversación, es bueno tratar
-       de pesquisar este dato procurando entorpecer al mínimo la charla. Algunas opciones pueden ser:
-       <li>Repetir las palabras previas a la frase que no se comprendió con una entonación de pregunta acompañada
-              de las expresiones faciales correspondientes.
-          </li>
-          <li>
-              Hacer una pregunta específica que señale lo que no se logró comprender: ¿de qué marca dices que era 
-               el auto?.
-          </li>
-          <li>
-            Repetir la frase como uno la  interpretó para corroborar si es correcta.
-          </li>
-          <li>
-          Pedirle al orador que repita la idea de otra manera.
-         </li>
-      </li>
-      Si todo falla pedir que deletree la palabra que no se comprende
-      </li>
-  
-      <li>Demuestre que comprende a su interlocutor: De señales mediante gestos que sigue la conversación y 
-      la comprende. Esto incluye sonreir, asentir, decir si, aha etc. 
-    </li>
-      <li>Revele su hipoacusia: Haga saber a su interlocutor que tiene dificultades para escuchar. Esto hará
-       que se esfuerce para comunicarse con usted.
-      </li>
-      </ul>
-      
-      <h3>Manipulando el entorno</h3>
-      <ul>
-      <li>
-          iluminación: Ilumine bien la habitación para pemitir la visualización labial facial y corporal.
-      </li>
-     <li>
-      Posición: Coloque su mejor oído del lado del orador que quiere escuchar. Si hay ruido de fondo el peor oído debe dirigirse al ruido. 
-     </li>
-     <li>
-      Ruido ambiente: Trate de reducir al máximo el ruido ambiente. Apague la radio y la TV. Cierre la puerta  o ventana si hay ruido fuera.  Vaya a una habitación más silenciosa.
-     </li>
-     <li>
-      Minimice la reverberación: Agregar alfombras gruesas, cortinas pesadas, sillas acolchadas, almohadones mullidos,  en la habitación ayuda a disminuir la reverberación del sonido y mejora la comprensión del habla
-     </li>
-      <li>
-     Colaboracion de un familiar: Un miembro de la familia puede colaborar con la adaptación y el ajuste del audífono ayudando en cualquier aspecto al paciente.
-      </li>
-      </ul>
-  </p>
-  </article>
-  </section>
-
-  <a style="text-decoration: none;" href="#top"> 
-    <hr>
-  <div class="separador">
-       🔝menu
-  </div>
-  <hr>
-  </a>
-
-  <section class=main-section >
-      <header><h1 id="daño-ota">Daño inducido por ruido en los usuarios de audífonos</h1></header>
-      <article>
-      <p>
-      Los audífonos tienen sistemas de protección para evitar el daño por exposición a ruidos. Tienen
-      sistemas de compresión que captan el sonido ambiente y lo “comprimen” dentro del rango dinámico del
-      paciente (esto es, reducen la intensidad de los sonidos fuertes e incrementan los sonidos débiles para
-      adaptarlos a las posibilidades auditivas del paciente). Sin embargo esto no quita que la exposición a 
-      ambientes ruidosos pueda dañar aún más el oído. Debemos continuar protegiéndonos de los ruidos intensos.<br>
-      Si usted compra un audífono en la calle, sin ser adaptado por un profesional, existe la posibilidad 
-      que el audífono dañe su oído. También los profesionales pueden cometer errores en la adaptación. El el 
-      caso de parecernos muy intenso el sonido o tener que recurrir demasiado al control de volumen manual 
-      debemos consultar esta situación con el audioprotesista para evitar problemas.
-      En el caso del equipamiento de niños pequeños o bebés la situación es más delicada, ya que es un oído en 
-      crecimiento y requiere ajustes y seguimiento estrecho de la presión de sonido que el audífono entrega al 
-      oido para evitar dañarlo.
-       </p>
-      </article>
-      </section>
-
-      <a style="text-decoration: none;" href="#top"> 
-        <hr>
-      <div class="separador">
-           🔝menu
-      </div>
-      <hr id="alergia">
-      </a>     
-
-
-<section  class="main-section">
+<section class="section-card fade-in-up" id="alergia">
   <header>
     <h1>🚩 Prevención de Alergias Ambientales: Estrategias Detalladas para Proteger tu Salud Respiratoria</h1>
   </header>
@@ -1455,18 +1515,8 @@ En casos más graves o cuando otras opciones de tratamiento no han tenido éxito
   </article>
 </section>
 
-   <a style="text-decoration: none;" href="#top"> 
-        <hr>
-      <div class="separador">
-           🔝menu
-      </div>
-      <hr>
-      </a>     
-
-
-
-<section id="disfagia" class="main-section" >
-          <header><h1 >🚩 Recomendaciones para pacientes con disfagia.</h1></header>
+<section id="disfagia" class="section-card fade-in-up">
+          <header><h1>🚩 Recomendaciones para pacientes con disfagia</h1></header>
           <article>
           <p> 
   <h2>Que es la disfagia y que problemas genera</h2>
@@ -1696,33 +1746,41 @@ El riesgo de broncoaspiracion disminuye en relacion al auento de la viscosidad d
      </li>
   </ul>
 
-  <h2>Vinculos de interés para la adaptación de los alimentos en pacientes con disfagia.</h2>
-  <hr>
-  <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3NgxFWbVHa8&t=641s">Taller de alimentos adaptados para pacientes con disfagia</a>
-  <hr>
-  <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=XYVy4TNmCw8&t=194s">Vea un ejemplo del uso de espesantes comerciales</a>
-<hr>
- <a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=yFFroPIq8mk">Ejemplo de comidas adaptadas con textura pudding (milanesa con ensalada)</a>
-<hr>
- <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=QL83qzMzxAc">Pastel de papas adaptado.</a>
-<hr>
- <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=98ha1h1vRGQ">Ensalada de frutas adaptada.</a>
-<hr>
+  <h2>Vínculos de interés para la adaptación de los alimentos en pacientes con disfagia</h2>
+  
+  <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
+    <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3NgxFWbVHa8&t=641s" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background: linear-gradient(135deg, #FF0000, #CC0000); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(255, 0, 0, 0.2);">
+      <i class="fab fa-youtube" style="font-size: 1.5rem;"></i>
+      Taller de alimentos adaptados para pacientes con disfagia
+    </a>
+    
+    <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=XYVy4TNmCw8&t=194s" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background: linear-gradient(135deg, #FF0000, #CC0000); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(255, 0, 0, 0.2);">
+      <i class="fab fa-youtube" style="font-size: 1.5rem;"></i>
+      Vea un ejemplo del uso de espesantes comerciales
+    </a>
+    
+    <a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=yFFroPIq8mk" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background: linear-gradient(135deg, #FF0000, #CC0000); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(255, 0, 0, 0.2);">
+      <i class="fab fa-youtube" style="font-size: 1.5rem;"></i>
+      Ejemplo de comidas adaptadas con textura pudding (milanesa con ensalada)
+    </a>
+    
+    <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=QL83qzMzxAc" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background: linear-gradient(135deg, #FF0000, #CC0000); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(255, 0, 0, 0.2);">
+      <i class="fab fa-youtube" style="font-size: 1.5rem;"></i>
+      Pastel de papas adaptado
+    </a>
+    
+    <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=98ha1h1vRGQ" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 1.5rem; background: linear-gradient(135deg, #FF0000, #CC0000); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(255, 0, 0, 0.2);">
+      <i class="fab fa-youtube" style="font-size: 1.5rem;"></i>
+      Ensalada de frutas adaptada
+    </a>
+  </div>
   
   </p>
  </article>
   </section>
 
-  <a style="text-decoration: none;" href="#top"> 
-    <hr>
-  <div class="separador">
-       🔝menu
-  </div>
-  <hr>
-  </a>     
-  
-  <section id="ejercicios-ronquidos" class=main-section >
-    <header><h1 >🚩 Ejercicios para dejar de roncar. Terapia miofuncional.</h1></header>
+  <section id="ejercicios-ronquidos" class="section-card fade-in-up">
+    <header><h1>🚩 Ejercicios para dejar de roncar. Terapia miofuncional</h1></header>
     <article>
     <p>
 Estos ejercicios estan recomendados para mejorar los ronquidos y hasta la apnea de sueño degrado leve a moderada. 
@@ -1781,16 +1839,8 @@ Se recomienda efectuarlos varias veces al dia en forma diaria.
     </article>
     </section>
 
-    <a style="text-decoration: none;" href="#top"> 
-      <hr>
-    <div class="separador">
-         🔝menu
-    </div>
-    <hr>
-    </a>     
-
-    <section id="cv" class=main-section >
-      <header><h1 >🚩 Curriculum Juan Mosovich.</h1></header>
+    <section id="cv" class="section-card fade-in-up">
+      <header><h1>🚩 Curriculum Vitae - Dr. Juan Mosovich</h1></header>
     <article> 
        
     <h2>Antecedentes</h2>
@@ -1945,46 +1995,22 @@ Se recomienda efectuarlos varias veces al dia en forma diaria.
 </article>
 </section>
 
-<a style="text-decoration: none;" href="#top"> 
-  <hr>
-<div class="separador">
-     🔝menu
-</div>
-<hr>
-</a>    
-
-<section> 
+<section class="section-card fade-in-up"> 
   <hr>
 <article id="qr-web" style="display: flex; justify-content: center; text-align: center;">
-  <img src="./imagenes/qr-otorrinoenpilar.webp" alt="qr de web otorrinoenpilar.com" loading="lazy">
+  <img src="./imagenes/qr-otorrinoenpilar.webp" alt="QR código web otorrinoenpilar.com" width="200" height="200" loading="lazy" decoding="async">
 </article>
 </section>  
 
-<a style="text-decoration: none;" href="#top"> 
-  <hr>
-<div class="separador">
-     🔝menu
-</div>
-<hr>
-</a>    
-
-<section> 
-<article  style="display: flex; justify-content: center; text-align: center;">
-  <img src="./imagenes/qr-maps-referencias.webp" alt="qr de web otorrinoenpilar.com" loading="lazy">
+<section class="section-card fade-in-up"> 
+<article style="display: flex; justify-content: center; text-align: center;">
+  <img src="./imagenes/qr-maps-referencias.webp" alt="QR código Google Maps consultorio" width="200" height="200" loading="lazy" decoding="async">
 </article>
 </section>
 
-<a style="text-decoration: none;" href="#top"> 
-  <hr>
-<div class="separador">
-     🔝menu
-</div>
-<hr>
-</a>    
-
-<section>
+<section class="section-card fade-in-up">
    <header>
-    <h1>🚩 Colaboraron e esta web:</h1>
+    <h1>🚩 Colaboraron en esta web</h1>
   </header>
   <article>
 <p> 
@@ -2007,7 +2033,7 @@ Se recomienda efectuarlos varias veces al dia en forma diaria.
 <!-- Botón flotante de WhatsApp -->
 <div class="floating-whatsapp">
   <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20me%20gustar%C3%ADa%20coordinar%20una%20consulta" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-    <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" loading="lazy">
+    <img src="./imagenes/icons8-whatsapp-100.png" alt="Icono WhatsApp" width="35" height="35" loading="lazy" decoding="async">
   </a>
 </div>
 
@@ -2031,25 +2057,152 @@ Se recomienda efectuarlos varias veces al dia en forma diaria.
   <i class="fas fa-chevron-up" aria-hidden="true"></i>
 </button>
 
-<script>
-  (function() {
-    const scrollBtn = document.getElementById('scrollToTop');
-    if (!scrollBtn) return;
+<!-- Bootstrap JS con defer -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" defer crossorigin="anonymous"></script>
 
-    const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        scrollBtn.classList.add('show');
-      } else {
-        scrollBtn.classList.remove('show');
+<script>
+  // UX/UI Enhancements Script
+  (function() {
+    // Progress Bar de Lectura
+    const progressBar = document.getElementById('readingProgress');
+    let ticking = false;
+    
+    const updateProgress = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const windowHeight = window.innerHeight;
+          const documentHeight = document.documentElement.scrollHeight - windowHeight;
+          const scrolled = window.scrollY;
+          const progress = (scrolled / documentHeight) * 100;
+          if (progressBar) {
+            progressBar.style.width = progress + '%';
+            progressBar.setAttribute('aria-valuenow', Math.round(progress));
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', toggleVisibility, { passive: true });
-    toggleVisibility();
+    window.addEventListener('scroll', updateProgress, { passive: true });
 
-    scrollBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Navegación Sticky con detección de sección activa
+    const stickyNav = document.getElementById('stickyNav');
+    const sections = ['consideraciones-cirugia', 'alergia', 'disfagia', 'ejercicios-ronquidos', 'cv'];
+    const navItems = document.querySelectorAll('.nav-link[data-section]');
+
+    let tickingSection = false;
+    const updateActiveSection = () => {
+      if (!stickyNav || tickingSection) return;
+      
+      tickingSection = true;
+      window.requestAnimationFrame(() => {
+        // Añadir clase scrolled al nav
+        if (window.scrollY > 100) {
+          stickyNav.classList.add('scrolled');
+        } else {
+          stickyNav.classList.remove('scrolled');
+        }
+
+        // Detectar sección activa
+        let currentSection = '';
+        sections.forEach(sectionId => {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= 150 && rect.bottom >= 150) {
+              currentSection = sectionId;
+            }
+          }
+        });
+
+        // Actualizar clases activas
+        navItems.forEach(item => {
+          if (item.getAttribute('data-section') === currentSection) {
+            item.classList.add('active');
+            item.setAttribute('aria-current', 'page');
+          } else {
+            item.classList.remove('active');
+            item.removeAttribute('aria-current');
+          }
+        });
+
+        tickingSection = false;
+      });
+    };
+
+    window.addEventListener('scroll', updateActiveSection, { passive: true });
+    updateActiveSection();
+
+    // Smooth scroll con offset para navegación
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#' || href === '#top') {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
+        }
+        
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          e.preventDefault();
+          const navHeight = stickyNav ? stickyNav.offsetHeight : 0;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight - 20;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
     });
+
+    // Botón Scroll to Top
+    const scrollBtn = document.getElementById('scrollToTop');
+    if (scrollBtn) {
+      const toggleVisibility = () => {
+        if (window.scrollY > 300) {
+          scrollBtn.classList.add('show');
+        } else {
+          scrollBtn.classList.remove('show');
+        }
+      };
+
+      window.addEventListener('scroll', toggleVisibility, { passive: true });
+      toggleVisibility();
+
+      scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // Animaciones de entrada en scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in-up');
+          // Limpiar will-change después de la animación para mejor performance
+          entry.target.addEventListener('animationend', function cleanup() {
+            entry.target.style.willChange = 'auto';
+            entry.target.removeEventListener('animationend', cleanup);
+          }, { once: true });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.section-card').forEach(card => {
+      observer.observe(card);
+    });
+
   })();
 </script>
 

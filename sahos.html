@@ -3,40 +3,94 @@
 <head>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XNNM71EW8T');
+  const loadGtag = () => {
+    const gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T';
+    document.head.appendChild(gtagScript);
+    gtag('js', new Date());
+    gtag('config', 'G-XNNM71EW8T');
+  };
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(loadGtag, { timeout: 2000 });
+  } else {
+    window.addEventListener('load', loadGtag);
+  }
 </script>
 
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width, initial-scale=1">
-<meta name="description" content="Dr. Juan Mosovich: Especialista en ronquidos y apneas del sueño en adultos. Diagnóstico domiciliario, tratamientos CPAP y medicina del sueño en Pilar y Zona Norte.">
-<meta name="keywords" content="apnea del sueño, ronquidos, medicina del sueño, CPAP, estudio domiciliario, Dr. Mosovich, otorrino Pilar">
+<meta name="description" content="✅ Especialista en ronquidos y apnea del sueño | Dr. Mosovich | Diagnóstico con poligrafía domiciliaria, tratamiento CPAP, medicina del sueño en Pilar y Zona Norte | Solicite turno">
+<meta name="keywords" content="apnea del sueño, ronquidos, medicina del sueño, CPAP, estudio domiciliario, Dr. Mosovich, otorrino Pilar, poligrafía respiratoria, polisomnografía, SAHOS, síndrome de apnea hipopnea obstructiva del sueño, tratamiento ronquidos adultos, CPAP Pilar, máscaras CPAP, termohumidificador CPAP, estudio del sueño domiciliario, somnolencia diurna, medicina del sueño Pilar, apnea obstructiva del sueño, cirugía ronquidos, test Epworth, test Berlin, oximetría nocturna, trastornos respiratorios del sueño, otorrino Escobar, Del Viso, medicina del sueño zona norte, BiPAP, AutoCPAP, hipopnea, desaturación nocturna">
 <meta name="author" content="Dr. Juan Mosovich">
+
+<!-- Geo Tags -->
+<meta name="geo.region" content="AR-B">
+<meta name="geo.placename" content="Pilar, Buenos Aires">
+<meta name="geo.position" content="-34.458889;-58.913611">
+<meta name="ICBM" content="-34.458889, -58.913611">
+<meta name="coverage" content="Pilar, Del Viso, Escobar, Tortuguitas, Belén de Escobar, Zona Norte Buenos Aires">
 <!-- Open Graph tags -->
-<meta property="og:title" content="Ronquidos y Apneas del Sueño - Dr. Juan Mosovich">
-<meta property="og:description" content="Especialista en medicina del sueño. Diagnóstico y tratamiento de ronquidos y apneas del sueño en adultos. Estudios domiciliarios y tratamientos CPAP.">
+<meta property="og:title" content="Ronquidos y Apnea del Sueño: Diagnóstico y Tratamiento CPAP | Dr. Mosovich">
+<meta property="og:description" content="Especialista en medicina del sueño en Pilar. Diagnóstico con poligrafía domiciliaria y tratamiento de ronquidos y apneas del sueño en adultos. Estudios del sueño y tratamientos CPAP personalizados.">
 <meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/snoringmen.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tratamiento de ronquidos y apnea del sueño con CPAP - Dr. Juan Mosovich">
 <meta property="og:url" content="https://www.otorrinoenpilar.com/sahos.html">
 <meta property="og:type" content="article">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Otorrino en Pilar - Dr. Juan Mosovich">
+<meta property="article:published_time" content="2024-06-17T09:00:00-03:00">
+<meta property="article:modified_time" content="2026-02-17T10:00:00-03:00">
+<meta property="article:author" content="Dr. Juan Mosovich">
+<meta property="article:section" content="Medicina del Sueño">
+<meta property="article:tag" content="Apnea del Sueño">
+<meta property="article:tag" content="Ronquidos">
+<meta property="article:tag" content="CPAP">
+<meta property="article:tag" content="Poligrafía">
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ronquidos y Apneas del Sueño - Dr. Juan Mosovich">
-<meta name="twitter:description" content="Especialista en medicina del sueño. Diagnóstico y tratamiento de ronquidos y apneas del sueño en adultos.">
+<meta name="twitter:title" content="Ronquidos y Apnea del Sueño: Diagnóstico y Tratamiento CPAP | Dr. Mosovich">
+<meta name="twitter:description" content="Especialista en medicina del sueño en Pilar. Diagnóstico con poligrafía domiciliaria y tratamiento CPAP personalizado para ronquidos y apneas del sueño.">
 <meta name="twitter:image" content="https://www.otorrinoenpilar.com/imagenes/snoringmen.webp">
+<meta name="twitter:image:alt" content="Tratamiento de ronquidos y apnea del sueño - Dr. Juan Mosovich Pilar">
 <!--favicon-->
 <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
 <link rel="manifest" href="/favicon/site.webmanifest">
 <!--favicon-->
+
+<!-- Google Maps Metadata -->
+<meta property="place:location:latitude" content="-34.458889">
+<meta property="place:location:longitude" content="-58.913611">
+<meta property="business:contact_data:street_address" content="Consultorio de Otorrinolaringología, Pilar">
+<meta property="business:contact_data:locality" content="Pilar">
+<meta property="business:contact_data:region" content="Buenos Aires">
+<meta property="business:contact_data:postal_code" content="1629">
+<meta property="business:contact_data:country_name" content="Argentina">
+<meta property="business:contact_data:email" content="contacto@otorrinoenpilar.com">
+<meta property="business:contact_data:phone_number" content="+54-9-11-5757-3576">
+<meta property="business:contact_data:website" content="https://www.otorrinoenpilar.com">
+<link rel="me" href="https://g.page/r/CWbtrBOdyGoaEBM">
+
+<!-- DNS Prefetch y Preconnect optimizados -->
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3 crossorigin=anonymous>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+<!-- CSS async loading con preload -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></noscript>
+
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 <title>Ronquidos y Apnea del Sueño en Adultos: CPAP y Tratamientos en Pilar</title>
 <link rel="canonical" href="https://www.otorrinoenpilar.com/sahos.html"/>
 <script type="application/ld+json">
@@ -75,7 +129,7 @@
       }
     },
     "datePublished": "2024-06-17T09:00:00-03:00",
-    "dateModified": "2025-12-19T14:00:00-03:00",
+    "dateModified": "2026-02-17T10:00:00-03:00",
     "keywords": [
       "Ronquidos",
       "Apnea del sueño",
@@ -143,18 +197,57 @@
   },
   {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
+    "@type": "LocalBusiness",
     "name": "Dr. Juan Mosovich - Especialista en Medicina del Sueño",
     "description": "Especialista en ronquidos, apnea del sueño y medicina del sueño en adultos. Estudios domiciliarios y tratamientos CPAP en Pilar y Zona Norte.",
     "url": "https://www.otorrinoenpilar.com",
-    "telephone": "+54-9-11",
+    "telephone": "+54-9-11-5757-3576",
+    "email": "contacto@otorrinoenpilar.com",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Consultorio de Otorrinolaringología",
       "addressLocality": "Pilar",
       "addressRegion": "Buenos Aires",
+      "postalCode": "1629",
       "addressCountry": "AR"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-34.458889",
+      "longitude": "-58.913611"
+    },
+    "hasMap": "https://g.page/r/CWbtrBOdyGoaEBM",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
     "priceRange": "$$",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Pilar"
+      },
+      {
+        "@type": "City",
+        "name": "Del Viso"
+      },
+      {
+        "@type": "City",
+        "name": "Escobar"
+      },
+      {
+        "@type": "City",
+        "name": "Tortuguitas"
+      },
+      {
+        "@type": "City",
+        "name": "Belén de Escobar"
+      }
+    ],
     "medicalSpecialty": "Medicina del Sueño",
     "availableService": [
       {
@@ -178,9 +271,33 @@
         "name": "Terapia CPAP"
       },
       {
+        "@type": "MedicalTherapy",
+        "name": "Terapia BiPAP"
+      },
+      {
+        "@type": "MedicalTherapy",
+        "name": "Terapia AutoCPAP"
+      },
+      {
         "@type": "MedicalProcedure",
         "name": "Cirugía de Ronquidos"
+      },
+      {
+        "@type": "MedicalTest",
+        "name": "Test de Epworth"
+      },
+      {
+        "@type": "MedicalTest",
+        "name": "Test de Berlin"
+      },
+      {
+        "@type": "MedicalTest",
+        "name": "Oximetría Nocturna"
       }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=100063748789595",
+      "https://www.instagram.com/otorrino.fono.pilar"
     ]
   },
   {
@@ -197,6 +314,143 @@
         "position": 2,
         "name": "Ronquidos y Apneas del Sueño",
         "item": "https://www.otorrinoenpilar.com/sahos.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalCondition",
+    "name": "Apnea Obstructiva del Sueño (SAHOS)",
+    "alternateName": "Síndrome de Apnea-Hipopnea Obstructiva del Sueño",
+    "description": "Trastorno respiratorio del sueño caracterizado por pausas repetidas en la respiración durante el sueño, causando desaturaciones de oxígeno y fragmentación del sueño.",
+    "code": {
+      "@type": "MedicalCode",
+      "code": "G47.33",
+      "codingSystem": "ICD-10"
+    },
+    "signOrSymptom": [
+      {
+        "@type": "MedicalSymptom",
+        "name": "Ronquidos fuertes y habituales"
+      },
+      {
+        "@type": "MedicalSymptom",
+        "name": "Pausas respiratorias observadas durante el sueño"
+      },
+      {
+        "@type": "MedicalSymptom",
+        "name": "Somnolencia diurna excesiva"
+      },
+      {
+        "@type": "MedicalSymptom",
+        "name": "Despertares bruscos con sensación de ahogo"
+      },
+      {
+        "@type": "MedicalSymptom",
+        "name": "Dolor de cabeza matutino"
+      },
+      {
+        "@type": "MedicalSymptom",
+        "name": "Dificultad para concentrarse"
+      },
+      {
+        "@type": "MedicalSymptom",
+        "name": "Irritabilidad y cambios de humor"
+      },
+      {
+        "@type": "MedicalSymptom",
+        "name": "Hipertensión arterial"
+      }
+    ],
+    "riskFactor": [
+      "Obesidad",
+      "Cuello ancho (circunferencia mayor a 43 cm en hombres)",
+      "Vías aéreas estrechas",
+      "Sexo masculino",
+      "Edad avanzada",
+      "Historia familiar de apnea del sueño",
+      "Consumo de alcohol",
+      "Tabaquismo",
+      "Congestión nasal"
+    ],
+    "possibleTreatment": [
+      {
+        "@type": "MedicalTherapy",
+        "name": "Terapia CPAP (Presión Positiva Continua en las Vías Aéreas)"
+      },
+      {
+        "@type": "LifestyleModification",
+        "name": "Pérdida de peso"
+      },
+      {
+        "@type": "LifestyleModification",
+        "name": "Cambios en la posición al dormir"
+      },
+      {
+        "@type": "MedicalProcedure",
+        "name": "Cirugía de vías aéreas superiores"
+      },
+      {
+        "@type": "MedicalDevice",
+        "name": "Dispositivos de avance mandibular"
+      }
+    ],
+    "associatedAnatomy": {
+      "@type": "AnatomicalStructure",
+      "name": "Vías aéreas superiores"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué es el CPAP y cómo funciona para tratar la apnea del sueño?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El CPAP (Continuous Positive Airway Pressure) es un dispositivo médico que administra aire a presión continua a través de una máscara nasal o facial. Esta presión mantiene las vías aéreas superiores abiertas durante el sueño, evitando las pausas respiratorias características de la apnea obstructiva del sueño. Es el tratamiento más efectivo para casos moderados a severos de SAHOS, mejorando la calidad del sueño, reduciendo la somnolencia diurna y disminuyendo los riesgos cardiovasculares asociados."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué es la poligrafía respiratoria domiciliaria y en qué se diferencia de la polisomnografía?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La poligrafía respiratoria es un estudio simplificado del sueño que se realiza en el domicilio del paciente. Registra parámetros respiratorios como el flujo de aire, el esfuerzo respiratorio, la saturación de oxígeno y la frecuencia cardíaca. La polisomnografía es más completa y se realiza en un laboratorio del sueño, incluyendo además el registro de ondas cerebrales (EEG), movimientos oculares y musculares. La poligrafía domiciliaria es más cómoda, económica y suficiente para diagnosticar la mayoría de casos de apnea del sueño."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuáles son los riesgos de no tratar la apnea del sueño?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La apnea del sueño no tratada puede aumentar significativamente el riesgo de hipertensión arterial, enfermedades cardiovasculares, arritmias cardíacas, accidente cerebrovascular, diabetes tipo 2, y síndrome metabólico. También aumenta el riesgo de accidentes de tránsito o laborales debido a la somnolencia diurna excesiva. A largo plazo, puede afectar la calidad de vida, la función cognitiva y la memoria."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo puedo saber si tengo apnea del sueño?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los síntomas más comunes incluyen ronquidos fuertes, pausas respiratorias observadas por la pareja, despertares bruscos con sensación de ahogo, somnolencia diurna excesiva, dolores de cabeza matutinos, dificultad para concentrarse e irritabilidad. El Test de Berlin y el Test de Epworth son herramientas de screening que ayudan a identificar personas en riesgo. Sin embargo, el diagnóstico definitivo requiere un estudio del sueño (poligrafía respiratoria o polisomnografía) realizado por un especialista en medicina del sueño."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es necesario usar el CPAP toda la vida?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "En la mayoría de los casos, el CPAP debe usarse de forma indefinida mientras persistan los factores de riesgo. Sin embargo, algunos pacientes pueden dejar de necesitarlo si logran una pérdida de peso significativa (en casos donde la obesidad es el factor principal) o si se someten a cirugías correctivas exitosas de las vías aéreas. Es fundamental mantener controles periódicos con el especialista para evaluar la evolución y ajustar el tratamiento según sea necesario."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué tipos de máscaras CPAP existen y cuál es mejor para mí?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Existen tres tipos principales de máscaras CPAP: nasales (cubren solo la nariz), oronasales o faciales (cubren nariz y boca), y de almohadillas nasales (se insertan en las fosas nasales). La elección depende de varios factores: si respiras por la boca durante el sueño, el nivel de presión requerido, la forma de tu rostro, si tienes barba, y tus preferencias personales. Las máscaras nasales son más cómodas para presiones bajas a moderadas, mientras que las faciales son mejores para respiradores bucales o presiones altas. Es importante probar diferentes opciones con la guía de un especialista para encontrar la más adecuada."
+        }
       }
     ]
   }
@@ -439,10 +693,102 @@
     }
   }
 
+  /* Barra de progreso de lectura */
+  #readingProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, #0066cc, #003366);
+    z-index: 9999;
+    transition: width 0.1s ease;
+  }
+
+  /* Índice visual con tarjetas */
+  .nav-card {
+    transition: all 0.3s ease;
+    border: 2px solid #e0e0e0;
+    cursor: pointer;
+    background: white;
+  }
+
+  .nav-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 102, 204, 0.15);
+    border-color: #0066cc;
+  }
+
+  .nav-card-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 12px;
+    background: linear-gradient(135deg, #0066cc, #003366);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+  }
+
+  .nav-card h3 {
+    font-size: 1.1rem;
+    color: #003366;
+    margin-bottom: 8px;
+  }
+
+  .nav-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+  }
+
+  /* Mejoras en cards de contenido */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+
+  /* Hero mejorado */
+  .hero-section {
+    background: linear-gradient(135deg, #003366 0%, #0066cc 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+  }
+
+  /* Optimizaciones de rendimiento */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .navbar {
+    will-change: transform;
+  }
+
 </style>
 </head>
 
 <body id="menu"  class="p-1 m-1" style="background-color: #ffffff;">
+  
+  <!-- Barra de progreso de lectura -->
+  <div id="readingProgress"></div>
   
   <header class="my-5">
     <!-- Simplificado para mobile first: el brand y el botón se distribuyen en cualquier pantalla -->
@@ -458,12 +804,26 @@
       </div>
     </nav>
 
-    <!-- Se ajusta el padding con clases responsivas: 'p-4' en móvil y 'p-lg-5' en pantallas grandes -->
-    <div class="p-4 p-lg-5 text-center text-white" style="background-color: #003366;">
-      <div class="container-fluid">
-        <h1 class="display-4 fw-bold">Ronquidos y Apnea del Sueño en Adultos: CPAP y Estudios en Pilar</h1>
-        <p class="lead mb-4">Diagnóstico y tratamiento especializado de medicina del sueño. Dr. Juan Mosovich.</p>
-      </div>
+    <!-- Hero section mejorado -->
+    <div class="hero-section p-4 p-lg-5 text-center text-white position-relative">
+      <div class="container-fluid position-relative" style="z-index: 1;">
+        <nav aria-label="breadcrumb" class="d-flex justify-content-center mb-3">
+          <ol class="breadcrumb bg-transparent mb-0">
+            <li class="breadcrumb-item"><a href="https://www.otorrinoenpilar.com/" class="text-white text-decoration-none"><i class="fas fa-home"></i> Inicio</a></li>
+            <li class="breadcrumb-item active text-white" aria-current="page">Ronquidos y Apnea del Sueño</li>
+          </ol>
+        </nav>
+        <h1 class="display-4 fw-bold mb-3">Ronquidos y Apnea del Sueño en Adultos</h1>
+        <p class="lead mb-4">Diagnóstico y tratamiento especializado de medicina del sueño | CPAP y Estudios en Pilar</p>
+        <p class="mb-4"><strong>Dr. Juan Mosovich</strong> - Medico ORL - Medicina del Sueño</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="#intro" class="btn btn-light btn-lg px-4 rounded-pill">
+            <i class="fas fa-book-medical"></i> Información Completa
+          </a>
+          <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-outline-light btn-lg px-4 rounded-pill">
+            <i class="fas fa-calendar-check"></i> Solicitar Turno
+          </a>
+        </div>
       </div>
     </div>
   </header>
@@ -473,31 +833,77 @@
   <!-- Contenido introductorio optimizado para SEO -->
   <div class="container my-4">
     <p class="lead">
-      Especialista en <strong>ronquidos</strong> y <strong>apnea del sueño</strong> en adultos en Pilar y Zona Norte de Buenos Aires.
+      Otorrinolaringólogo, tratamiento de <strong>ronquidos</strong> y <strong>apnea del sueño</strong> en adultos en Pilar y Zona Norte de Buenos Aires.
       Ofrecemos <strong>estudios del sueño domiciliarios</strong>, <strong>poligrafía respiratoria</strong>, <strong>polisomnografía</strong> y tratamientos con <strong>CPAP</strong>.
       Diagnóstico preciso y soluciones efectivas para mejorar su calidad de sueño y salud. 
       <a href="https://www.otorrinoenpilar.com/dormir.html">Aprenda también como optimizar su sueño.</a>
     </p>
   </div>
-  <div class="container-sm text-center">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb justify-content-center">
-      <li class="breadcrumb-item"><a href="https://www.otorrinoenpilar.com/">Inicio</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Ronquidos y Apnea del Sueño</li>
-    </ol>
-  </nav>
-
-  <h2><a href="#intro" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">1 Ronquido y apnea de sueño.</a></h2>
-  <hr>
-  <h2><a href="#dieta" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">2 Tratamientos.</a></h2>
-  <hr>
-  <h2><a href="#diagnos" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">3 Estudios de diagnóstico de la apnea de sueño.</a></h2>
-  <hr>
-  <h2><a href="#testsyr" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">4 Test de somnolencia y reacción.</a></h2>
-  <hr>
-  <h2><a href="https://www.otorrinoenpilar.com/dormir.html" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">😴optimizar su sueño.</a></h2>
-  <hr>
-</div>
+  
+  <!-- Índice visual con tarjetas -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4 fw-bold" style="color: #003366;">Índice de Contenidos</h2>
+    <div class="row g-4">
+      <!-- Tarjeta 1: Ronquido y apnea de sueño -->
+      <div class="col-md-6 col-lg-3">
+        <a href="#intro" class="text-decoration-none">
+          <div class="nav-card card h-100 p-4 text-center">
+            <div class="nav-card-icon">
+              <i class="fas fa-bed"></i>
+            </div>
+            <h3>Ronquido y Apnea de Sueño</h3>
+            <p>Diferencias, problemas relacionados y tests de riesgo</p>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Tarjeta 2: Tratamientos -->
+      <div class="col-md-6 col-lg-3">
+        <a href="#dieta" class="text-decoration-none">
+          <div class="nav-card card h-100 p-4 text-center">
+            <div class="nav-card-icon">
+              <i class="fas fa-notes-medical"></i>
+            </div>
+            <h3>Tratamientos</h3>
+            <p>Opciones terapéuticas, CPAP y soluciones quirúrgicas</p>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Tarjeta 3: Estudios de diagnóstico -->
+      <div class="col-md-6 col-lg-3">
+        <a href="#diagnos" class="text-decoration-none">
+          <div class="nav-card card h-100 p-4 text-center">
+            <div class="nav-card-icon">
+              <i class="fas fa-stethoscope"></i>
+            </div>
+            <h3>Estudios de Diagnóstico</h3>
+            <p>Poligrafía respiratoria y polisomnografía</p>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Tarjeta 4: Tests -->
+      <div class="col-md-6 col-lg-3">
+        <a href="#testsyr" class="text-decoration-none">
+          <div class="nav-card card h-100 p-4 text-center">
+            <div class="nav-card-icon">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <h3>Tests de Somnolencia</h3>
+            <p>Evaluación de somnolencia diurna y reacción</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Botón adicional para optimizar sueño -->
+    <div class="text-center mt-4">
+      <a href="https://www.otorrinoenpilar.com/dormir.html" class="btn btn-outline-primary btn-lg px-4 rounded-pill">
+        <i class="fas fa-moon"></i> Optimizar su Sueño
+      </a>
+    </div>
+  </div>
 
 
 
@@ -526,7 +932,7 @@
 <section class="card-group">
 
   <div class="card p-1">
-    <img src="./imagenes/app-ronquidos.webp"  class="card-img-top" alt="imagen de pantalla de un movil" loading="lazy">
+    <img fetchpriority="high" src="./imagenes/app-ronquidos.webp"  class="card-img-top" alt="imagen de pantalla de un movil">
     <div class="card-body">
     <h4 class="card-title h5">Sepa si ronca.</h4> 
      <article class="card-text">
@@ -3950,8 +4356,31 @@
     </p>
   </div>
 </footer>
-<script src=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js integrity=sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p crossorigin=anonymous></script>
-<script>
+
+<!-- Bootstrap JS - Carga diferida con requestIdleCallback -->
+<script defer>
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(() => {
+      const bootstrapScript = document.createElement('script');
+      bootstrapScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js';
+      bootstrapScript.integrity = 'sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p';
+      bootstrapScript.crossOrigin = 'anonymous';
+      bootstrapScript.defer = true;
+      document.head.appendChild(bootstrapScript);
+    }, { timeout: 2000 });
+  } else {
+    window.addEventListener('load', () => {
+      const bootstrapScript = document.createElement('script');
+      bootstrapScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js';
+      bootstrapScript.integrity = 'sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p';
+      bootstrapScript.crossOrigin = 'anonymous';
+      bootstrapScript.defer = true;
+      document.head.appendChild(bootstrapScript);
+    });
+  }
+</script>
+
+<script defer>
   function calcularResultado() {
     const form = document.forms['epworthForm'];
     let score = 0;
@@ -4089,7 +4518,8 @@
   // Cargar resultados al iniciar la página
   loadResults();
 </script>
-<script>
+
+<script defer>
   document.querySelectorAll('.toggle-btn').forEach(button => {
     button.addEventListener('click', function () {
       setTimeout(() => {
@@ -4106,7 +4536,7 @@
 </script>
 
 <!--berlin-->
-<script>
+<script defer>
   document.getElementById('formularioApnea').addEventListener('submit', function(event) {
       event.preventDefault();
 
@@ -4156,13 +4586,13 @@
 <!-- Botón flotante de WhatsApp -->
 <div class="floating-whatsapp">
   <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20me%20gustar%C3%ADa%20coordinar%20una%20consulta" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-    <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" loading="lazy">
+    <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" width="60" height="60" decoding="async" loading="lazy">
   </a>
 </div>
 
 
 <!--visualizacion videos en cards -->
-<script> 
+<script defer> 
 document.addEventListener('DOMContentLoaded', function() {
     var videoCollapses = document.querySelectorAll('.collapse[data-video-id]');
 
@@ -4200,8 +4630,81 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
+});  
 </script>
+
+<!-- Footer profesional -->
+<footer class="bg-dark text-white py-5 mt-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Columna 1: Información del doctor -->
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3"><i class="fas fa-user-md"></i> Dr. Juan Mosovich</h5>
+        <p class="small">Especialista en Otorrinolaringología y Medicina del Sueño. Experto en tratamiento de ronquidos, apnea del sueño y trastornos respiratorios nocturnos.</p>
+        <p class="small mb-0"><i class="fas fa-map-marker-alt"></i> Pilar y Zona Norte - Buenos Aires</p>
+      </div>
+      
+      <!-- Columna 2: Contacto -->
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3"><i class="fas fa-envelope"></i> Contacto</h5>
+        <ul class="list-unstyled small">
+          <li class="mb-2">
+            <a href="https://www.otorrinoenpilar.com/#contacto" class="text-white text-decoration-none">
+              <i class="fas fa-calendar-check"></i> Solicitar Turno
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="https://wa.me/5491157573576" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="https://www.otorrinoenpilar.com/" class="text-white text-decoration-none">
+              <i class="fas fa-home"></i> Página Principal
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Columna 3: Enlaces rápidos -->
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3"><i class="fas fa-link"></i> Enlaces Rápidos</h5>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="#intro" class="text-white text-decoration-none">Ronquido y Apnea</a></li>
+          <li class="mb-2"><a href="#dieta" class="text-white text-decoration-none">Tratamientos</a></li>
+          <li class="mb-2"><a href="#diagnos" class="text-white text-decoration-none">Estudios de Diagnóstico</a></li>
+          <li class="mb-2"><a href="https://www.otorrinoenpilar.com/dormir.html" class="text-white text-decoration-none">Optimizar Sueño</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Redes sociales -->
+    <div class="row mt-4 pt-4 border-top border-secondary">
+      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+        <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+          <a href="https://www.facebook.com/profile.php?id=100063748789595" class="text-white" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a href="https://www.instagram.com/otorrino.fono.pilar" class="text-white" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <p class="small mb-0">&copy; 2026 Dr. Juan Mosovich - Todos los derechos reservados</p>
+      </div>
+    </div>
+    
+    <!-- Disclaimer médico -->
+    <div class="row mt-3">
+      <div class="col-12">
+        <p class="small text-muted text-center mb-0">
+          <i class="fas fa-info-circle"></i> La información proporcionada en este sitio es de carácter informativo y educativo. No sustituye la consulta médica profesional. Ante cualquier duda o síntoma, consulte a su médico.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <!-- Modal de Reseña -->
 <div class="modal fade" id="modalResena" tabindex="-1" aria-labelledby="modalResenaLabel" aria-hidden="true">
@@ -4225,7 +4728,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<script>
+<script defer>
 document.addEventListener("DOMContentLoaded", function() {
     if (sessionStorage.getItem('resenaMostrada')) {
         return;
@@ -4278,7 +4781,7 @@ document.addEventListener("DOMContentLoaded", function() {
   <i class="fas fa-chevron-up" aria-hidden="true"></i>
 </button>
 
-<script>
+<script defer>
   (function() {
     const scrollBtn = document.getElementById('scrollToTop');
     if (!scrollBtn) return;
@@ -4297,6 +4800,24 @@ document.addEventListener("DOMContentLoaded", function() {
     scrollBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+  })();
+</script>
+
+<!-- Script para barra de progreso de lectura -->
+<script defer>
+  (function() {
+    const progressBar = document.getElementById('readingProgress');
+    if (!progressBar) return;
+
+    const updateProgress = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / docHeight) * 100;
+      progressBar.style.width = progress + '%';
+    };
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
   })();
 </script>
 

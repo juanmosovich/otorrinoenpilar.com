@@ -3,40 +3,93 @@
 <head>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XNNM71EW8T');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    const loadGtag = () => {
+        const gtagScript = document.createElement('script');
+        gtagScript.async = true;
+        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T';
+        document.head.appendChild(gtagScript);
+        gtag('js', new Date());
+        gtag('config', 'G-XNNM71EW8T');
+    };
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGtag, { timeout: 2000 });
+    } else {
+        window.addEventListener('load', loadGtag);
+    }
 </script>
 
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width, initial-scale=1">
-<meta name="description" content="Dr. Juan Mosovich: Guía completa sobre medicina del sueño, higiene del sueño, meditación, cronotipos y técnicas para optimizar tu descanso. Mejora tu calidad de vida durmiendo mejor."/>
-<meta name="keywords" content="medicina del sueño, higiene del sueño, insomnio, cronotipos, meditación para dormir, Dr. Mosovich, optimizar sueño, calidad del sueño">
+<meta name="description" content="😴 Guía completa de medicina del sueño | Dr. Mosovich | Higiene del sueño, meditación, cronotipos, insomnio | Técnicas para dormir mejor en Pilar | Mejora tu descanso hoy"/>
+<meta name="keywords" content="medicina del sueño, higiene del sueño, insomnio, cronotipos, meditación para dormir, Dr. Mosovich, optimizar sueño, calidad del sueño, trastornos del sueño, insomnio crónico, ciclo circadiano, melatonina natural, sueño profundo, sueño REM, fases del sueño, síndrome de piernas inquietas, apnea del sueño, medicina del sueño Pilar, especialista sueño zona norte, terapia cognitivo conductual insomnio, higiene del sueño adultos, técnicas relajación dormir, meditación mindfulness sueño, cronotipos alondra búho, test cronotipo, optimizar descanso, somníferos naturales, suplementos melatonina, ejercicios para dormir, ambiente ideal sueño, temperatura habitación dormir, otorrino Pilar, Del Viso, Escobar">
 <meta name="author" content="Dr. Juan Mosovich">
+
+<!-- Geo Tags -->
+<meta name="geo.region" content="AR-B">
+<meta name="geo.placename" content="Pilar, Buenos Aires">
+<meta name="geo.position" content="-34.458889;-58.913611">
+<meta name="ICBM" content="-34.458889, -58.913611">
+<meta name="coverage" content="Pilar, Del Viso, Escobar, Tortuguitas, Belén de Escobar, Zona Norte Buenos Aires">
 <!-- Open Graph tags -->
-<meta property="og:title" content="Optimizando el Sueño - Dr. Juan Mosovich">
-<meta property="og:description" content="Guía completa sobre medicina del sueño. Aprende técnicas de higiene del sueño, meditación, y descubre tu cronotipo para mejorar tu descanso.">
+<meta property="og:title" content="Medicina del Sueño: Guía Completa para Dormir Mejor | Dr. Mosovich">
+<meta property="og:description" content="Guía completa sobre medicina del sueño en Pilar. Aprende técnicas de higiene del sueño, meditación, descubre tu cronotipo y mejora tu descanso. Tratamiento del insomnio y trastornos del sueño.">
 <meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/zorro-dormido.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Medicina del sueño - Dr. Juan Mosovich - Guía para dormir mejor">
 <meta property="og:url" content="https://www.otorrinoenpilar.com/dormir.html">
 <meta property="og:type" content="article">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Otorrino en Pilar - Dr. Juan Mosovich">
+<meta property="article:published_time" content="2024-06-17T09:00:00-03:00">
+<meta property="article:modified_time" content="2026-02-17T11:00:00-03:00">
+<meta property="article:author" content="Dr. Juan Mosovich">
+<meta property="article:section" content="Medicina del Sueño">
+<meta property="article:tag" content="Higiene del Sueño">
+<meta property="article:tag" content="Insomnio">
+<meta property="article:tag" content="Cronotipos">
+<meta property="article:tag" content="Meditación">
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Optimizando el Sueño - Dr. Juan Mosovich">
-<meta name="twitter:description" content="Guía completa sobre medicina del sueño. Técnicas para mejorar tu descanso y calidad de vida.">
+<meta name="twitter:title" content="Medicina del Sueño: Guía Completa para Dormir Mejor | Dr. Mosovich">
+<meta name="twitter:description" content="Guía completa sobre medicina del sueño. Técnicas de higiene del sueño, meditación, cronotipos y tratamiento del insomnio en Pilar.">
 <meta name="twitter:image" content="https://www.otorrinoenpilar.com/imagenes/zorro-dormido.webp">
+<meta name="twitter:image:alt" content="Medicina del sueño - Guía para dormir mejor - Dr. Juan Mosovich Pilar">
 <!--favicon-->
 <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
 <link rel="manifest" href="/favicon/site.webmanifest">
 <!--favicon-->
+
+<!-- Google Maps Metadata -->
+<meta property="place:location:latitude" content="-34.458889">
+<meta property="place:location:longitude" content="-58.913611">
+<meta property="business:contact_data:street_address" content="Consultorio de Otorrinolaringología, Pilar">
+<meta property="business:contact_data:locality" content="Pilar">
+<meta property="business:contact_data:region" content="Buenos Aires">
+<meta property="business:contact_data:postal_code" content="1629">
+<meta property="business:contact_data:country_name" content="Argentina">
+<meta property="business:contact_data:email" content="contacto@otorrinoenpilar.com">
+<meta property="business:contact_data:phone_number" content="+54-9-11-5757-3576">
+<meta property="business:contact_data:website" content="https://www.otorrinoenpilar.com">
+<link rel="me" href="https://g.page/r/CWbtrBOdyGoaEBM">
+
+<!-- DNS Prefetch para CDNs -->
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link href=https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3 crossorigin=anonymous>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- CSS Async Loading para mejor rendimiento -->
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></noscript>
+
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 <title>Medicina del Sueño: Guía para Dormir Mejor | Dr. Mosovich - Pilar</title>
 <link rel="canonical" href="https://www.otorrinoenpilar.com/dormir.html"/>
  <script type="application/ld+json">
@@ -72,7 +125,7 @@
         }
       },
       "datePublished":"2024-06-17T09:00:00-03:00",
-      "dateModified":"2025-12-19T14:30:00-03:00",
+      "dateModified":"2026-02-17T11:00:00-03:00",
       "inLanguage":"es-AR",
       "keywords":["medicina del sueño","higiene del sueño","insomnio","cronotipos","meditación"],
       "hasPart": [
@@ -116,22 +169,57 @@
     },
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
+      "@type": "LocalBusiness",
       "name": "Dr. Juan Mosovich - Medicina del Sueño",
       "description": "Especialista en medicina del sueño, trastornos del sueño e insomnio. Guía completa sobre higiene del sueño, meditación y cronotipos en Pilar.",
       "url": "https://www.otorrinoenpilar.com",
-            "sameAs": [
-                "https://www.facebook.com/profile.php?id=100063748789595",
-                "https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr"
-            ],
-      "telephone": "+54-9-11",
+      "telephone": "+54-9-11-5757-3576",
+      "email": "contacto@otorrinoenpilar.com",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Consultorio de Otorrinolaringología",
         "addressLocality": "Pilar",
         "addressRegion": "Buenos Aires",
+        "postalCode": "1629",
         "addressCountry": "AR"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-34.458889",
+        "longitude": "-58.913611"
+      },
+      "hasMap": "https://g.page/r/CWbtrBOdyGoaEBM",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
       "priceRange": "$$",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Pilar"
+        },
+        {
+          "@type": "City",
+          "name": "Del Viso"
+        },
+        {
+          "@type": "City",
+          "name": "Escobar"
+        },
+        {
+          "@type": "City",
+          "name": "Tortuguitas"
+        },
+        {
+          "@type": "City",
+          "name": "Belén de Escobar"
+        }
+      ],
       "medicalSpecialty": "Medicina del Sueño",
       "availableService": [
         {
@@ -147,8 +235,157 @@
           "name": "Evaluación de Trastornos del Sueño"
         },
         {
-          "@type": "HealthAndBeautyBusiness",
+          "@type": "MedicalTherapy",
           "name": "Asesoramiento en Higiene del Sueño"
+        },
+        {
+          "@type": "MedicalTest",
+          "name": "Test de Cronotipos"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Terapia de Relajación y Meditación"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=100063748789595",
+        "https://www.instagram.com/otorrino.fono.pilar"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalCondition",
+      "name": "Insomnio",
+      "alternateName": "Trastorno de Insomnio",
+      "description": "El insomnio es un trastorno del sueño caracterizado por la dificultad persistente para conciliar el sueño, mantenerlo o despertarse demasiado temprano. Afecta la calidad de vida, el rendimiento diario y la salud general. Puede ser agudo (corta duración) o crónico (más de 3 meses). El tratamiento incluye terapia cognitivo-conductual, higiene del sueño y técnicas de relajación.",
+      "code": {
+        "@type": "MedicalCode",
+        "code": "G47.00",
+        "codingSystem": "ICD-10"
+      },
+      "signOrSymptom": [
+        {
+          "@type": "MedicalSymptom",
+          "name": "Dificultad para conciliar el sueño"
+        },
+        {
+          "@type": "MedicalSymptom",
+          "name": "Despertares frecuentes durante la noche"
+        },
+        {
+          "@type": "MedicalSymptom",
+          "name": "Despertar muy temprano en la mañana"
+        },
+        {
+          "@type": "MedicalSymptom",
+          "name": "Fatiga y somnolencia diurna"
+        },
+        {
+          "@type": "MedicalSymptom",
+          "name": "Irritabilidad y cambios de humor"
+        },
+        {
+          "@type": "MedicalSymptom",
+          "name": "Dificultad para concentrarse"
+        },
+        {
+          "@type": "MedicalSymptom",
+          "name": "Ansiedad relacionada con el sueño"
+        },
+        {
+          "@type": "MedicalSymptom",
+          "name": "Bajo rendimiento laboral o académico"
+        }
+      ],
+      "riskFactor": [
+        "Estrés crónico",
+        "Horarios irregulares de sueño",
+        "Consumo excesivo de cafeína",
+        "Consumo de alcohol antes de dormir",
+        "Uso de dispositivos electrónicos antes de dormir",
+        "Condiciones médicas crónicas",
+        "Algunos medicamentos",
+        "Edad mayor de 60 años",
+        "Trastornos de ansiedad o depresión"
+      ],
+      "possibleTreatment": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "Terapia Cognitivo-Conductual para Insomnio (TCC-I)"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Técnicas de Higiene del Sueño"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Ejercicios de Relajación y Meditación"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Suplementación con Melatonina"
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Terapia de Restricción del Sueño"
+        }
+      ],
+      "associatedAnatomy": {
+        "@type": "AnatomicalStructure",
+        "name": "Sistema Nervioso Central"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es la higiene del sueño y cómo practicarla?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La higiene del sueño es un conjunto de prácticas y hábitos que favorecen un sueño reparador. Incluye: mantener horarios regulares para acostarse y levantarse, crear un ambiente oscuro y fresco (18-21°C), evitar pantallas 1-2 horas antes de dormir, limitar cafeína después del mediodía, no comer en exceso por la noche, realizar actividad física durante el día (no antes de dormir), y crear una rutina relajante previa al sueño (lectura, baño tibio, respiración). La consistencia es clave: el cerebro necesita 4-6 semanas para establecer nuevos patrones de sueño."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo saber si soy alondra o búho (cronotipo)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tu cronotipo determina tus momentos de máxima energía y alerta. Las 'alondras' son personas matutinas: se levantan temprano con facilidad, están más alertas por la mañana y prefieren acostarse antes de las 22h. Los 'búhos' son vespertinos: les cuesta madrugar, rinden mejor por la tarde-noche y prefieren acostarse tarde. El cronotipo tiene base genética y cambia con la edad (los jóvenes tienden a ser búhos, los adultos mayores alondras). Para identificar el tuyo, observa cuándo tienes más energía de forma natural durante días libres, o realiza el Test de Matutinidad-Vespertinidad de Horne-Östberg."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puede la meditación ayudarme a dormir mejor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, la meditación mindfulness es efectiva para mejorar el sueño según múltiples estudios científicos. Reduce la activación del sistema nervioso simpático (respuesta de estrés), disminuye los pensamientos rumiativos que impiden dormir, y activa la respuesta parasimpática (relajación). Técnicas efectivas incluyen: body scan (escaneo corporal), respiración 4-7-8 (inhalar 4 segundos, retener 7, exhalar 8), meditación guiada enfocada en el sueño, y visualización de imágenes tranquilas. Practicar 10-20 minutos antes de dormir puede reducir el tiempo de conciliación del sueño hasta 30 minutos. La constancia durante 3-4 semanas genera mejores resultados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo se necesita para tratar el insomnio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El tratamiento del insomnio varía según su duración y causa. La Terapia Cognitivo-Conductual para Insomnio (TCC-I), tratamiento de primera línea, dura típicamente 6-8 semanas con sesiones semanales. Las primeras mejoras pueden verse en 2-3 semanas, pero la consolidación del nuevo patrón de sueño requiere 4-8 semanas de práctica consistente. El insomnio agudo (menos de 3 meses) responde más rápido que el crónico. La terapia de restricción del sueño, componente clave de TCC-I, puede causar somnolencia inicial durante 1-2 semanas antes de la mejoría. Los cambios en higiene del sueño requieren al menos 21 días para convertirse en hábitos automáticos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es seguro tomar melatonina a largo plazo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La melatonina es una hormona que regula el ciclo sueño-vigilia. La suplementación en dosis bajas (0.5-3mg) es generalmente segura para uso a corto-mediano plazo según estudios actuales. Es más efectiva para jet lag, trabajo por turnos o desajustes circadianos que para insomnio crónico. Debe tomarse 30-60 minutos antes de dormir. Efectos secundarios son raros pero incluyen somnolencia matutina, dolor de cabeza leve o sueños vívidos. No se recomienda en embarazo, lactancia o enfermedades autoinmunes sin supervisión médica. La seguridad del uso prolongado (más de 6 meses) aún está en estudio. Consulte siempre con un especialista antes de iniciar suplementación, especialmente si toma otros medicamentos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué ejercicios de relajación son más efectivos antes de dormir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los ejercicios de relajación más efectivos para conciliar el sueño incluyen: 1) Relajación Muscular Progresiva (RMP): tensar y relajar grupos musculares secuencialmente desde los pies hasta la cabeza, toma 10-15 minutos. 2) Respiración 4-7-8: inhalar por nariz 4 segundos, retener 7, exhalar por boca 8 segundos, repetir 4 ciclos. 3) Body Scan o escaneo corporal: dirigir atención consciente a cada parte del cuerpo desde pies hasta cabeza, notando sensaciones sin juzgar. 4) Visualización guiada: imaginar escenas tranquilas con detalle sensorial (playa, bosque). Practicar 15-20 minutos antes de acostarse. La clave es la respiración lenta y profunda que activa el sistema nervioso parasimpático."
+          }
         }
       ]
     }
@@ -399,71 +636,235 @@ img {width: 100%; height: 250px; object-fit: contain;}
     }
 }
 
+/* Barra de progreso de lectura */
+#readingProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: linear-gradient(90deg, #0066cc, #003366);
+    z-index: 9999;
+    transition: width 0.1s ease;
+}
+
+/* Índice visual con tarjetas */
+.nav-card {
+    transition: all 0.3s ease;
+    border: 2px solid #e0e0e0;
+    cursor: pointer;
+    background: white;
+}
+
+.nav-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 102, 204, 0.15);
+    border-color: #0066cc;
+}
+
+.nav-card-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 12px;
+    background: linear-gradient(135deg, #0066cc, #003366);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
+
+.nav-card h3 {
+    font-size: 1.1rem;
+    color: #003366;
+    margin-bottom: 8px;
+}
+
+.nav-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Mejoras en cards de contenido */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Hero mejorado */
+.hero-section {
+    background: linear-gradient(135deg, #003366 0%, #0066cc 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+}
+
 
 </style>
 </head>
 <body id="top">
+ 
+ <!-- Barra de progreso de lectura -->
+ <div id="readingProgress"></div>
+ 
  <!-- Navbar -->
   <nav class="navbar navbar-light bg-light shadow-sm">
-    <div class="container-fluid">
+    <div class="container-fluid d-flex justify-content-between px-4">
       <a class="navbar-brand fw-bold text-primary fs-5" href="https://www.otorrinoenpilar.com/">Otorrino en Pilar</a>
-      <div class="d-flex gap-2">
-        <a class="btn btn-outline-primary btn-sm" href="https://www.otorrinoenpilar.com/#contacto">Contáctenos</a>
-      </div>
+      <a class="btn btn-outline-primary btn-sm" href="https://www.otorrinoenpilar.com/#contacto">Contáctenos</a>
     </div>
   </nav>
 
-  <!-- Header -->
-  <header class="py-4 text-center text-white" style="background:#003366;">
-    <div class="container">
-      <h1 class="display-5 fw-bold mb-1">Medicina del Sueño: Guía Completa para Dormir Mejor | Pilar</h1>
-      <p class="lead mb-0">Higiene del sueño, meditación, cronotipos y técnicas para mejorar tu descanso. Dr. Juan Mosovich.</p>
+  <!-- Header mejorado -->
+  <header class="hero-section py-5 text-center text-white position-relative">
+    <div class="container position-relative" style="z-index: 1;">
+      <nav aria-label="breadcrumb" class="d-flex justify-content-center mb-3">
+        <ol class="breadcrumb bg-transparent mb-0">
+          <li class="breadcrumb-item"><a href="https://www.otorrinoenpilar.com/" class="text-white text-decoration-none"><i class="fas fa-home"></i> Inicio</a></li>
+          <li class="breadcrumb-item active text-white" aria-current="page">Optimizando el Sueño</li>
+        </ol>
+      </nav>
+      <h1 class="display-4 fw-bold mb-3">Medicina del Sueño: Guía Completa para Dormir Mejor</h1>
+      <p class="lead mb-4">Higiene del sueño, meditación, cronotipos y técnicas para mejorar tu descanso</p>
+      <p class="mb-4"><strong>Dr. Juan Mosovich</strong> - ORL - Medicina del Sueño</p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap">
+        <a href="#dormir" class="btn btn-light btn-lg px-4 rounded-pill">
+          <i class="fas fa-book-medical"></i> Guía Completa
+        </a>
+        <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-outline-light btn-lg px-4 rounded-pill">
+          <i class="fas fa-calendar-check"></i> Solicitar Turno
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Breadcrumb visible + responsive ToC -->
-  <div class="container-sm my-3">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb small mb-2">
-        <li class="breadcrumb-item"><a href="https://www.otorrinoenpilar.com/">Inicio</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Optimizando el Sueño</li>
-      </ol>
-    </nav>
-
-    <!-- Mobile: collapsible TOC -->
-    <div class="d-md-none mb-2">
-      <button class="btn btn-outline-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#tocCollapse" aria-expanded="false" aria-controls="tocCollapse">
-        Contenido de la página
-      </button>
-      <div class="collapse mt-2" id="tocCollapse">
-        <div class="list-group">
-          <a class="list-group-item list-group-item-action" href="#dormir">1. La importancia de dormir bien</a>
-          <a class="list-group-item list-group-item-action" href="#higiene">2. Higiene del sueño</a>
-          <a class="list-group-item list-group-item-action" href="#enemigos">3. Enemigos del sueño</a>
-          <a class="list-group-item list-group-item-action" href="#meditar">4. Calmar la mente</a>
-          <a class="list-group-item list-group-item-action" href="#suplementos">5. Ayudas para dormir</a>
-          <a class="list-group-item list-group-item-action" href="#dormir-fisio">6. Por qué dormimos</a>
-          <a class="list-group-item list-group-item-action" href="#insomnio">7. Insomnio</a>
-        <a class="list-group-item list-group-item-action" href="#aams">8. Clasificación AAMS</a>
-          
-        </div>
+  <!-- Índice visual con tarjetas -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4 fw-bold" style="color: #003366;">Índice de Contenidos</h2>
+    <div class="row g-4">
+      <!-- Tarjeta 1 -->
+      <div class="col-md-6 col-lg-3">
+        <a href="#dormir" class="text-decoration-none">
+          <div class="nav-card card h-100 p-4 text-center">
+            <div class="nav-card-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Importancia de Dormir</h3>
+            <p>Beneficios del sueño para la salud física y mental</p>
+          </div>
+        </a>
       </div>
-    </div>
-
-    <!-- Desktop: horizontal button group -->
-    <div class="d-none d-md-flex justify-content-center gap-2 flex-wrap toc-desktop">
-      <a class="btn btn-sm btn-outline-primary toc-btn" href="#dormir">1. Importancia</a>
-      <a class="btn btn-sm btn-outline-primary toc-btn" href="#higiene">2. Higiene</a>
-      <a class="btn btn-sm btn-outline-primary toc-btn" href="#enemigos">3. Enemigos</a>
-      <a class="btn btn-sm btn-outline-primary toc-btn" href="#meditar">4. Meditar</a>
-      <a class="btn btn-sm btn-outline-primary toc-btn" href="#suplementos">5. Suplementos</a>
-      <a class="btn btn-sm btn-outline-primary toc-btn" href="#dormir-fisio">6. Fisiología</a>
-      <a class="btn btn-sm btn-outline-primary toc-btn" href="#insomnio">7. Insomnio</a>
-      <a class="btn btn-sm btn-outline-primary toc-btn" href="#aams">8. Clasificación AASM</a>
+      
+      <!-- Tarjeta 2 -->
+      <div class="col-md-6 col-lg-3">
+        <a href="#higiene" class="text-decoration-none">
+          <div class="nav-card card h-100 p-4 text-center">
+            <div class="nav-card-icon">
+              <i class="fas fa-bed"></i>
+            </div>
+            <h3>Higiene del Sueño</h3>
+            <p>Prácticas y hábitos para optimizar tu descanso</p>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Tarjeta 3 -->
+      <div class="col-md-6 col-lg-3">
+        <a href="#enemigos" class="text-decoration-none">
+          <div class="nav-card card h-100 p-4 text-center">
+            <div class="nav-card-icon">
+              <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <h3>Enemigos del Sueño</h3>
+            <p>Factores que alteran la calidad del descanso</p>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Tarjeta 4 -->
+      <div class="col-md-6 col-lg-3">
+        <a href="#meditar" class="text-decoration-none">
+          <div class="nav-card card h-100 p-4 text-center">
+            <div class="nav-card-icon">
+              <i class="fas fa-spa"></i>
+            </div>
+            <h3>Calmar la Mente</h3>
+            <p>Meditación y técnicas de relajación</p>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Tarjeta 5 -->
+      <div class="col-md-6 col-lg-3">
+        <a href="#suplementos" class="text-decoration-none">
+          <div class="nav-card card h-100 p-4 text-center">
+            <div class="nav-card-icon">
+              <i class="fas fa-pills"></i>
+            </div>
+            <h3>Ayudas para Dormir</h3>
+            <p>Suplementos naturales y melatonina</p>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Tarjeta 6 -->
+      <div class="col-md-6 col-lg-3">
+        <a href="#dormir-fisio" class="text-decoration-none">
+          <div class="nav-card card h-100 p-4 text-center">
+            <div class="nav-card-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>Fisiología del Sueño</h3>
+            <p>Por qué dormimos y cronotipos</p>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Tarjeta 7 -->
+      <div class="col-md-6 col-lg-3">
+        <a href="#insomnio" class="text-decoration-none">
+          <div class="nav-card card h-100 p-4 text-center">
+            <div class="nav-card-icon">
+              <i class="fas fa-moon"></i>
+            </div>
+            <h3>Insomnio</h3>
+            <p>Causas, consecuencias y tratamiento</p>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Tarjeta 8 -->
+      <div class="col-md-6 col-lg-3">
+        <a href="#aams" class="text-decoration-none">
+          <div class="nav-card card h-100 p-4 text-center">
+            <div class="nav-card-icon">
+              <i class="fas fa-clipboard-list"></i>
+            </div>
+            <h3>Clasificación AASM</h3>
+            <p>Trastornos del sueño clasificados</p>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 
-
+<main>
  <div id="dormir" class="d-grid gap-2">
   <h2 class="text-center text-white pt-3 pb-3" style="background-color: #003366; color: white; font-size: 1.5rem;">1 La importancia de dormir bien.</h2>
 </div> 
@@ -1068,7 +1469,7 @@ img {width: 100%; height: 250px; object-fit: contain;}
 
   
   <div class="card p-3">
-    <img src="./imagenes/oso-enfermo.webp"  class=card-img-top alt="oso de peluche con barbijo y termómetro (enfermo)" loading="lazy">
+    <img src="./imagenes/oso-enfermo.webp" class=card-img-top alt="oso de peluche con barbijo y termómetro (enfermo)" fetchpriority="high">
     <div class=card-body>
     <h3 class="card-title h5">Sistema inmune, memoria y creatividad.</h3>
     <article class="card-text"> 
@@ -4059,41 +4460,83 @@ img {width: 100%; height: 250px; object-fit: contain;}
 </div>
 
 </main>
-<footer class="mt-5">
-  <div class="container-fluid py-4" style="background-color: #d7e3f0;">
-    <div class="row align-items-center justify-content-center text-center px-3">
 
-      <div class="col-12 col-md-8 col-lg-6 mb-3 mb-md-0">
-        <p class="h6 mb-2" style="color: #003366; font-weight: 500;">
-          El contenido de este blog es meramente informativo y no reemplaza la consulta médica.
-          La responsabilidad de los contenidos es de los médicos editores.
+<!-- Footer profesional -->
+<footer class="bg-dark text-white py-5 mt-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Columna 1: Información del doctor -->
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3"><i class="fas fa-user-md"></i> Dr. Juan Mosovich</h5>
+        <p class="small">Especialista en Otorrinolaringología y Medicina del Sueño. Experto en optimización del descanso, higiene del sueño y tratamiento de trastornos del sueño.</p>
+        <p class="small mb-0"><i class="fas fa-map-marker-alt"></i> Pilar y Zona Norte - Buenos Aires</p>
+      </div>
+      
+      <!-- Columna 2: Contacto -->
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3"><i class="fas fa-envelope"></i> Contacto</h5>
+        <ul class="list-unstyled small">
+          <li class="mb-2">
+            <a href="https://www.otorrinoenpilar.com/#contacto" class="text-white text-decoration-none">
+              <i class="fas fa-calendar-check"></i> Solicitar Turno
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="https://api.whatsapp.com/send?phone=541168212512" class="text-white text-decoration-none" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </li>
+          <li class="mb-2">
+            <a href="https://www.otorrinoenpilar.com/" class="text-white text-decoration-none">
+              <i class="fas fa-home"></i> Página Principal
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Columna 3: Enlaces rápidos -->
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3"><i class="fas fa-link"></i> Enlaces Rápidos</h5>
+        <ul class="list-unstyled small">
+          <li class="mb-2"><a href="#dormir" class="text-white text-decoration-none">Importancia de Dormir</a></li>
+          <li class="mb-2"><a href="#higiene" class="text-white text-decoration-none">Higiene del Sueño</a></li>
+          <li class="mb-2"><a href="#meditar" class="text-white text-decoration-none">Meditación</a></li>
+          <li class="mb-2"><a href="#insomnio" class="text-white text-decoration-none">Insomnio</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Redes sociales -->
+    <div class="row mt-4 pt-4 border-top border-secondary">
+      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+        <div class="d-flex gap-3 justify-content-center justify-content-md-start">
+          <a href="https://www.facebook.com/profile.php?id=100063748789595" class="text-white" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a href="https://www.instagram.com/otorrino.fono.pilar" class="text-white" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <p class="small mb-0">&copy; 2026 Dr. Juan Mosovich - Todos los derechos reservados</p>
+      </div>
+    </div>
+    
+    <!-- Disclaimer médico -->
+    <div class="row mt-3">
+      <div class="col-12">
+        <p class="small text-muted text-center mb-0">
+          <i class="fas fa-info-circle"></i> El contenido de este blog es meramente informativo y no reemplaza la consulta médica profesional. La responsabilidad de los contenidos es de los médicos editores.
         </p>
       </div>
-
-      <div class="col-12 col-md-4 col-lg-3 d-flex flex-column flex-md-row justify-content-center justify-content-md-end gap-2">
-        <a href="https://www.otorrinoenpilar.com/" class="btn btn-outline-primary" style="color: #003366; border-color: #003366;">Inicio</a>
-        <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-primary" style="background-color: #003366; border-color: #003366;">Contáctenos</a>
-      </div>
-
     </div>
   </div>
-
-    <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
-        <div class="mb-2">
-            <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
-                <i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i>
-            </a>
-            <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
-                <i class="fab fa-instagram" style="font-size: 1.4rem;"></i>
-            </a>
-        </div>
-        <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
-            &copy; 2025 Otorrino en Pilar. Todos los derechos reservados.
-        </p>
-    </div>
 </footer>
 
-<script>
+</footer>
+
+<script defer>
   function calculateInsomnia() {
       const form = document.getElementById('insomniaForm');
       let score = 0;
@@ -4129,7 +4572,7 @@ img {width: 100%; height: 250px; object-fit: contain;}
   }
 </script>
 
-<script>
+<script defer>
   document.querySelectorAll('.toggle-btn').forEach(button => {
     button.addEventListener('click', function () {
       setTimeout(() => {
@@ -4142,7 +4585,7 @@ img {width: 100%; height: 250px; object-fit: contain;}
     });
   });
 </script>
-<script> 
+<script defer>
 // cronotipo-script.js
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -4218,12 +4661,29 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- Bootstrap JS con requestIdleCallback para carga lazy -->
+<script>
+(function() {
+    const loadBootstrap = () => {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js';
+        script.integrity = 'sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz';
+        script.crossOrigin = 'anonymous';
+        document.body.appendChild(script);
+    };
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadBootstrap, { timeout: 2000 });
+    } else {
+        window.addEventListener('load', loadBootstrap);
+    }
+})();
+</script>
 
 <!-- Botón flotante de WhatsApp -->
 <div class="floating-whatsapp">
   <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20me%20gustar%C3%ADa%20coordinar%20una%20consulta" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-    <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" loading="lazy">
+    <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" width="35" height="35" decoding="async">
   </a>
 </div>
 
@@ -4231,7 +4691,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <i class="fas fa-chevron-up" aria-hidden="true"></i>
 </button>
 
-<script>
+<script defer>
     (function() {
         const scrollBtn = document.getElementById('scrollToTop');
         if (!scrollBtn) return;
@@ -4252,9 +4712,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     })();
 </script>
-</body>
+
 <!--visualizacion videos en cards -->
-<script> 
+<script defer>
 document.addEventListener('DOMContentLoaded', function() {
     var videoCollapses = document.querySelectorAll('.collapse[data-video-id]');
 
@@ -4317,7 +4777,7 @@ document.addEventListener('DOMContentLoaded', function() {
   </div>
 </div>
 
-<script>
+<script defer>
 document.addEventListener("DOMContentLoaded", function() {
     if (sessionStorage.getItem('resenaMostrada')) {
         return;
@@ -4365,4 +4825,24 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(verificarCondiciones, 5000);
 });
 </script>
+
+<!-- Script para barra de progreso de lectura -->
+<script defer>
+  (function() {
+    const progressBar = document.getElementById('readingProgress');
+    if (!progressBar) return;
+
+    const updateProgress = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = (scrollTop / docHeight) * 100;
+      progressBar.style.width = progress + '%';
+    };
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+  })();
+</script>
+
+</body>
 </html>
