@@ -51,12 +51,16 @@
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <link rel="preconnect" href="https://www.google.com" crossorigin>
 <link rel="dns-prefetch" href="https://www.google.com">
+<link rel="preconnect" href="https://maps.googleapis.com" crossorigin>
+<link rel="dns-prefetch" href="https://maps.googleapis.com">
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
 <link rel="dns-prefetch" href="https://api.whatsapp.com">
-<!--bootstrap CSS - preload con fetchpriority high-->
-<link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" fetchpriority="high" crossorigin>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!--Bootstrap CSS - carga asíncrona para no bloquear render-->
+<link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></noscript>
+
 <!--Font Awesome - carga diferida-->
 <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
@@ -307,7 +311,38 @@
 }
 </script>
 <style>
+  /* Forzar font-display: swap en todas las fuentes web para prevenir FOIT */
+  * {
+    font-display: swap !important;
+  }
 
+  /* Prevenir FOIT (Flash of Invisible Text) para iconos de Font Awesome */
+  .fa, .fas, .far, .fab, .fal, .fad {
+    font-display: swap;
+  }
+
+  /* Estilos críticos para reducir CLS */
+  body {
+    min-height: 100vh;
+    contain: layout style paint;
+  }
+
+  /* Reservar espacio para SVG decorativos */
+  .svg-wave-container {
+    aspect-ratio: 1440 / 80;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+  }
+
+  .svg-wave-container svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
 
   /* Styles for service icons, making their size consistent */
   .service-icon {
@@ -323,6 +358,8 @@
 
   .service-icon-wrapper i {
     transition: transform 0.3s ease, color 0.3s ease;
+    will-change: transform;
+    backface-visibility: hidden;
   }
 
   .service-card:hover .service-icon-wrapper i {
@@ -335,6 +372,7 @@
     min-height: 400px;
     display: flex;
     align-items: center;
+    contain: layout style;
   }
 
   @media (max-width: 768px) {
@@ -425,8 +463,10 @@
     border-radius: 50%;
     background-color: #25d366;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
     animation: pulse 2s infinite;
+    will-change: transform;
+    contain: layout;
   }
 
   .floating-whatsapp:hover {
@@ -514,9 +554,11 @@
     scroll-behavior: smooth;
   }
   
-  /* Mejora de transiciones */
+  /* Mejora de transiciones con hardware acceleration */
   .card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform;
+    backface-visibility: hidden;
   }
   
   .card:hover {
@@ -525,7 +567,9 @@
   }
   
   .btn {
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+    backface-visibility: hidden;
   }
   
   .btn:hover {
@@ -622,6 +666,8 @@
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.2s ease;
     z-index: 1050;
+    will-change: opacity, transform;
+    backface-visibility: hidden;
   }
 
   .scroll-to-top.show {
@@ -658,6 +704,9 @@
     border: 2px solid #ff9800 !important;
     background: linear-gradient(135deg, #fff9f0 0%, #ffffff 100%) !important;
     box-shadow: 0 6px 20px rgba(255, 152, 0, 0.2) !important;
+    will-change: transform;
+    backface-visibility: hidden;
+    overflow: visible;
   }
 
   .featured-card:hover {
@@ -667,17 +716,18 @@
 
   .featured-badge {
     position: absolute;
-    top: -12px;
-    right: 15px;
+    top: 10px;
+    right: 10px;
     background: linear-gradient(135deg, #ff9800 0%, #ff6b00 100%);
     color: white;
-    padding: 6px 16px;
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.5px;
-    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+    box-shadow: 0 3px 8px rgba(255, 152, 0, 0.4);
     z-index: 10;
+    white-space: nowrap;
   }
 
   .featured-icon {
@@ -692,11 +742,46 @@
 
   @media (max-width: 768px) {
     .featured-badge {
-      font-size: 0.7rem;
-      padding: 5px 12px;
-      top: -10px;
-      right: 10px;
+      font-size: 0.6rem;
+      padding: 5px 10px;
+      top: 8px;
+      right: 8px;
     }
+  }
+
+  /* Ajustes para tablets */
+  @media (min-width: 769px) and (max-width: 991px) {
+    .featured-badge {
+      font-size: 0.65rem;
+      padding: 5px 12px;
+    }
+  }
+
+  /* Optimizaciones adicionales para reducir CLS y mejorar rendimiento */
+  .navbar {
+    contain: layout style;
+    will-change: auto;
+  }
+
+  /* Optimización para tarjetas de servicios */
+  .service-card {
+    contain: layout style paint;
+  }
+
+  /* Optimización de contenedores principales */
+  main, header, footer {
+    contain: layout style;
+  }
+
+  /* Prevenir layout shift en imágenes */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Optimización del hero section para LCP */
+  .hero-section * {
+    font-display: swap;
   }
 
 </style>
@@ -709,7 +794,7 @@
 
 </head>
 
-<body class="p-1 m-1" style="background-color: #003366; overflow-x: hidden;">
+<body class="p-1 m-1" style="background-color: #003366; overflow-x: hidden; min-height: 100vh;">
 
   <!-- Skip link para accesibilidad -->
   <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 bg-primary text-white p-2 m-2" style="z-index: 9999;">Saltar al contenido principal</a>
@@ -835,8 +920,8 @@
     </div>
     
     <!-- Onda decorativa inferior -->
-    <div style="position: absolute; bottom: -1px; left: 0; right: 0;">
-      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; display: block;">
+    <div class="svg-wave-container">
+      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="1440" height="80">
         <path d="M0 0L60 8C120 16 240 32 360 37.3C480 43 600 37 720 32C840 27 960 21 1080 21.3C1200 21 1320 27 1380 29.3L1440 32V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0V0Z" fill="#003366"/>
       </svg>
     </div>
@@ -951,7 +1036,9 @@
         <!-- Garganta -->
         <div class="col-md-6 col-lg-3 offset-lg-2">
             <div class="card service-card h-100 text-center p-4">
-                <img loading="lazy" src="./imagenes/icons8-garganta-64.png" class="service-icon" alt="Enfermedades de la garganta y laringe - Especialista ORL" width="50" height="50">
+                <div class="service-icon-wrapper mb-3">
+                    <i class="fas fa-head-side-cough fa-3x" style="color: #003366;" aria-hidden="true"></i>
+                </div>
                 <div class="card-body">
                     <h3 class="card-title h5">Enfermedades de la Garganta</h3>
                     <p class="card-text">Tratamientos para problemas de laringe, garganta, deglución.</p>
@@ -1762,9 +1849,26 @@
   </button>
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
 
+<!-- Bootstrap JS con requestIdleCallback para carga lazy sin bloquear -->
 <script>
+(function() {
+    const loadBootstrap = () => {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js';
+        script.integrity = 'sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p';
+        script.crossOrigin = 'anonymous';
+        document.body.appendChild(script);
+    };
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadBootstrap, { timeout: 2000 });
+    } else {
+        window.addEventListener('load', loadBootstrap);
+    }
+})();
+</script>
+
+<script defer>
   document.querySelectorAll('.toggle-btn').forEach(button => {
     button.addEventListener('click', function () {
       setTimeout(() => {
@@ -1778,7 +1882,7 @@
   });
 </script>
 
-<script>
+<script defer>
   // Validación de formulario en tiempo real
   (function() {
     'use strict';
@@ -1840,7 +1944,7 @@
   })();
 </script>
 
-<script>
+<script defer>
   (function() {
     const scrollBtn = document.getElementById('scrollToTop');
     if (!scrollBtn) return;
