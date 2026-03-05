@@ -1,0 +1,10 @@
+/* Bootstrap Icons solo los usados en dormir.html */
+@import url("bootstrap-icons.min.css");
+
+/* Safelist manual para bi, bi-play-fill, bi-facebook, bi-instagram */
+.bi,
+.bi-play-fill,
+.bi-facebook,
+.bi-instagram {
+  /* No se elimina por PurgeCSS */
+}

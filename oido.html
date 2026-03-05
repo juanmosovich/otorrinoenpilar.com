@@ -2,24 +2,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google tag (gtag.js) -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  const loadGtag = () => {
-    const gtagScript = document.createElement('script');
-    gtagScript.async = true;
-    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T';
-    document.head.appendChild(gtagScript);
-    gtag('js', new Date());
-    gtag('config', 'G-XNNM71EW8T');
-  };
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(loadGtag, { timeout: 2000 });
-  } else {
-    window.addEventListener('load', loadGtag);
-  }
-</script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,304 +51,127 @@
     <!-- Preconnect y DNS-prefetch para mejor performance -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
-    <link rel="dns-prefetch" href="https://api.whatsapp.com">
-    <link rel="dns-prefetch" href="https://www.google.com">
+    <!-- Solo preconnect a recursos críticos -->
     <!--Bootstrap CSS - preload con fetchpriority high-->
     <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" fetchpriority="high" crossorigin>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!--Fonts - preload critical fonts-->
-    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/sourcesans3/v15/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Kw461EN_io6npfB.woff2" type="font/woff2" crossorigin>
-    <link rel="preload" as="font" href="https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvUDQ.woff2" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=optional">
+    <!-- Google Fonts eliminado para mejorar velocidad -->
     <!--Polyfill loadCSS para compatibilidad con preload en navegadores antiguos-->
-    <script>
-      !function(e){"use strict";var t=function(t,n,r,o){var i,a=e.document,d=a.createElement("link");if(n)i=n;else{var l=(a.body||a.getElementsByTagName("head")[0]).childNodes;i=l[l.length-1]}var s=a.styleSheets;if(o)for(var u=0;u<s.length;u++)s[u].href&&s[u].href.indexOf(t)>-1&&(i=o);d.rel="stylesheet",d.href=t,d.media="only x",function e(t){if(a.body)return t();setTimeout(function(){e(t)})}(function(){i.parentNode.insertBefore(d,n?i:i.nextSibling)});var f=function(e){for(var t=d.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",f),d.onloadcssdefined=f,f(function(){d.media=r||"all"}),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
-    </script>
   
     <link rel="canonical" href="https://www.otorrinoenpilar.com/oido.html"/>
     <title>Enfermedades del Oído en Pilar y Zona Norte | Dr. Mosovich</title>
     
     <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.otorrinoenpilar.com/oido.html"
-    },
-    "headline": "Enfermedades del oído, hipoacusias, vértigo, tinnitus - Dr. Juan Mosovich",
-    "description": "Información sobre enfermedades del oído, tinnitus, vértigos. Incluye video de ejercicios de Brandt-Daroff y terapias sonoras para tinnitus.",
-    "image": [
-      "https://www.otorrinoenpilar.com/imagenes/otoscopia.webp"
-    ],
-    "author": {
-      "@type": "Person",
-      "name": "Dr. Juan Mosovich",
-      "url": "https://www.otorrinoenpilar.com/info.html#cv",
-      "jobTitle": "Otorrinolaringólogo"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Otorrino en Pilar",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.otorrinoenpilar.com/imagenes/otoscopia.webp",
-        "width": 600,
-        "height": 60
-      }
-    },
-    "datePublished": "2022-10-02T09:00:00-03:00",
-    "dateModified": "2026-02-11T09:30:00-09:00",
-    "inLanguage": "es-AR",
-    "keywords": [
-      "Enfermedades del oído",
-      "Otitis",
-      "Tinnitus",
-      "Acúfenos",
-      "Vértigo",
-      "Mareos",
-      "Audiometría",
-      "Audífonos",
-      "Hipoacusia",
-      "Pérdida auditiva",
-      "Otitis media",
-      "Otitis externa",
-      "Cerumen",
-      "Tapón de cera",
-      "Vértigo posicional",
-      "Barotrauma",
-      "Otomicroscopía",
-      "Implantes auditivos",
-      "Terapia sonora",
-      "Audiometría online"
-    ],
-    "hasPart": [
-      {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.otorrinoenpilar.com/oido.html#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.otorrinoenpilar.com/oido.html"
+      },
+      "headline": "Enfermedades del oído, hipoacusias, vértigo, tinnitus - Dr. Juan Mosovich",
+      "description": "Información sobre enfermedades del oído, tinnitus y vértigos. Incluye video de ejercicios de Brandt-Daroff y terapias sonoras.",
+      "image": ["https://www.otorrinoenpilar.com/imagenes/otoscopia.webp"],
+      "datePublished": "2022-10-02T09:00:00-03:00",
+      "dateModified": "2026-03-05T07:00:00-03:00",
+      "author": {
+        "@type": "Person",
+        "@id": "https://www.otorrinoenpilar.com/info.html#cv",
+        "name": "Dr. Juan Mosovich",
+        "url": "https://www.otorrinoenpilar.com/info.html#cv"
+      },
+      "publisher": { "@id": "https://www.otorrinoenpilar.com/#organization" },
+      "video": {
         "@type": "VideoObject",
         "name": "Ejercicios de Brandt-Daroff",
-        "description": "Demostración de los ejercicios de Brandt-Daroff para el tratamiento del vértigo posicional paroxístico benigno (VPPB).",
+        "description": "Ejercicios para el tratamiento del vértigo posicional paroxístico benigno.",
         "thumbnailUrl": "https://www.otorrinoenpilar.com/imagenes/video-brandt-daroff.webp",
         "uploadDate": "2023-06-01T12:00:00-03:00",
-        "contentUrl": "https://www.otorrinoenpilar.com/videos/Brandt-Daroff.mp4",
-        "embedUrl": "https://www.otorrinoenpilar.com/videos/Brandt-Daroff.mp4"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Inicio",
-        "item": "https://www.otorrinoenpilar.com/"
+        "contentUrl": "https://www.otorrinoenpilar.com/videos/Brandt-Daroff.mp4"
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Enfermedades del Oído",
-        "item": "https://www.otorrinoenpilar.com/oido.html"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": ["Physician", "MedicalBusiness", "LocalBusiness"],
-    "@id": "https://www.otorrinoenpilar.com/#organization",
-    "name": "Dr. Juan Mosovich - Otorrinolaringólogo",
-    "alternateName": "Otorrino en Pilar",
-    "description": "Especialista en enfermedades del oído, audífonos, audiometría y tratamientos de otitis, tinnitus y vértigo en Pilar y Zona Norte.",
-    "url": "https://www.otorrinoenpilar.com",
-    "logo": "https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp",
-    "image": "https://www.otorrinoenpilar.com/imagenes/otoscopia.webp",
-    "sameAs": [
-      "https://www.facebook.com/profile.php?id=100063748789595",
-      "https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr",
-      "https://g.page/r/CWbtrBOdyGoaEBM/review",
-      "https://maps.app.goo.gl/YBpxVGoSiMQhbxru8"
-    ],
-    "telephone": "+541168212512",
-    "email": "contacto@otorrinoenpilar.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Caamaño 1100, Edificio Agora 2, Piso 1, Oficina 110",
-      "addressLocality": "Pilar",
-      "addressRegion": "Buenos Aires",
-      "postalCode": "1631",
-      "addressCountry": "AR"
+      "hasPart": [
+        {
+          "@type": "WebPageElement",
+          "name": "Vértigo Agudo: ¿Oído o Cerebro?",
+          "description": "El síndrome vestibular agudo suele ser benigno, pero un 25% de los casos tiene un origen central.",
+          "url": "https://www.otorrinoenpilar.com/oido.html#vertigo-central"
+        },
+        {
+          "@type": "WebPageElement",
+          "name": "Protocolo HINTS: Paso a Paso",
+          "description": "El examen físico HINTS es clave para diferenciar vértigo periférico de infarto cerebral.",
+          "url": "https://www.otorrinoenpilar.com/oido.html#vertigo-central"
+        }
+      ]
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "-34.434636",
-      "longitude": "-58.829689"
-    },
-    "priceRange": "$$",
-    "currenciesAccepted": "ARS",
-    "paymentAccepted": "Efectivo, Tarjeta de Crédito, Transferencia, Bitcoin",
-    "medicalSpecialty": ["Otolaryngology", "Audiology", "Vestibular Disorders"],
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "19:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "10:30",
-        "closes": "14:00"
-      }
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "bestRating": "5",
-      "worstRating": "1",
-      "ratingCount": "127"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
+    {
+      "@type": ["Physician", "MedicalBusiness"],
+      "@id": "https://www.otorrinoenpilar.com/#organization",
+      "name": "Dr. Juan Mosovich - Otorrinolaringólogo",
+      "url": "https://www.otorrinoenpilar.com",
+      "logo": "https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp",
+      "image": "https://www.otorrinoenpilar.com/imagenes/otoscopia.webp",
       "telephone": "+541168212512",
-      "contactType": "customer service",
-      "availableLanguage": ["Spanish"],
-      "areaServed": ["Pilar", "Zona Norte", "Buenos Aires", "Derqui", "San Isidro"]
-    },
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": "-34.434636",
-        "longitude": "-58.829689"
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Caamaño 1100, Edificio Agora 2, Piso 1, Oficina 110",
+        "addressLocality": "Pilar",
+        "addressRegion": "Buenos Aires",
+        "addressCountry": "AR"
       },
-      "geoRadius": "50000"
-    },
-    "availableService": [
-      {
-        "@type": "MedicalProcedure",
-        "name": "Audiometría"
-      },
-      {
-        "@type": "MedicalTherapy",
-        "name": "Tratamiento de Tinnitus"
-      },
-      {
-        "@type": "MedicalTherapy",
-        "name": "Tratamiento de Otitis"
-      },
-      {
-        "@type": "MedicalTherapy",
-        "name": "Tratamiento de Vértigo"
-      },
-      {
-        "@type": "MedicalDevice",
-        "name": "Audífonos e Implantes Auditivos"
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127",
+        "bestRating": "5",
+        "worstRating": "1"
       }
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Servicios de Otología",
-      "itemListElement": [
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "MedicalProcedure",
-            "name": "Audiometría Online Gratuita",
-            "description": "Test de audición online sin costo"
+          "@type": "Question",
+          "name": "¿Cómo se trata el tinnitus o acúfenos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El tratamiento incluye terapia sonora, habituación y tratamiento de causas subyacentes."
           }
         },
         {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "MedicalTherapy",
-            "name": "Tratamiento de Tinnitus con Terapia Sonora",
-            "description": "Terapia sonora personalizada para acúfenos"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "MedicalTherapy",
-            "name": "Tratamiento de Vértigo VPPB",
-            "description": "Maniobras de reposicionamiento y ejercicios"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "MedicalProcedure",
-            "name": "Otomicroscopía",
-            "description": "Limpieza de oídos con visión microscópica"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Product",
-            "name": "Audífonos Digitales",
-            "description": "Venta y adaptación de audífonos"
+          "@type": "Question",
+          "name": "¿Qué es el vértigo posicional paroxístico benigno?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es la causa más común de vértigo y se trata con maniobras de reposicionamiento."
           }
         }
       ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.otorrinoenpilar.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Enfermedades del Oído",
+          "item": "https://www.otorrinoenpilar.com/oido.html"
+        }
+      ]
     }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Dónde puedo hacer una audiometría online gratuita?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "En esta página ofrecemos audiometría online gratuita. La audiometría es un estudio que evalúa tu capacidad auditiva en diferentes frecuencias."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cómo se trata el tinnitus o acúfenos?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El tratamiento del tinnitus incluye terapia sonora, habituación, tratamiento de causas subyacentes como cerumen o infecciones, y en algunos casos medicación específica."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué es el vértigo posicional paroxístico benigno?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El VPPB es la causa más común de vértigo. Se trata con maniobras de reposicionamiento como la maniobra de Epley y ejercicios de Brandt-Daroff que pueden realizarse en casa."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cómo se quita un tapón de cera del oído?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El método más seguro es la extracción profesional mediante otomicroscopía (aspiración con microscopio) o lavaje. Nunca use hisopos que pueden compactar la cera."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Dónde está ubicado el consultorio?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El Dr. Mosovich atiende en Centro Médico Pilares (Panamericana Km 49.5) y Complejo 46 Plaza Edificio Agora 2 (Panamericana km 46, Pilar). Ver ubicación en Google Maps."
-        }
-      }
-    ]
-  }
-]
+  ]
+}
 </script>
     <style>
       :root {
@@ -380,7 +185,7 @@
       body {
         background-color: #f7f9fb;
         color: var(--brand-ink);
-        font-family: "Source Sans 3", "Segoe UI", sans-serif;
+        font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
         font-size-adjust: 0.52;
       }
 
@@ -460,7 +265,7 @@
       }
 
       .hero-title {
-        font-family: "Playfair Display", "Times New Roman", serif;
+        font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
         letter-spacing: 0.3px;
         font-size: clamp(2rem, 4vw, 3rem);
       }
@@ -707,14 +512,7 @@
   }
   
   /* Mejora de transiciones */
-  .card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
+  /* Elimino hover personalizado en cards, solo Bootstrap */
   
   .btn {
     transition: all 0.3s ease;
@@ -745,11 +543,7 @@
             text-decoration: none;
             color: inherit;
         }
-        .ts-card:hover {
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+        /* Elimino hover personalizado en ts-card, solo Bootstrap */
         .ts-tinnitus-container {
             max-width: 700px;
         }
@@ -810,22 +604,6 @@
         }
 
   /* Barra de progreso de lectura */
-  .reading-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: rgba(10, 43, 79, 0.1);
-    z-index: 1040;
-  }
-
-  .reading-progress-bar {
-    height: 100%;
-    background: linear-gradient(90deg, #1b8f8a 0%, #0a2b4f 100%);
-    width: 0%;
-    transition: width 0.1s ease-out;
-  }
 
   /* TOC Sticky Lateral */
   .sticky-toc {
@@ -969,11 +747,7 @@
   </style>  
 </head>
 <body id="top">
-  <!-- Barra de progreso de lectura -->
-  <div class="reading-progress" role="progressbar" aria-label="Progreso de lectura" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-    <div class="reading-progress-bar" id="progressBar"></div>
-  </div>
-
+ 
   <!-- Skip link para accesibilidad -->
   <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 bg-primary text-white p-2 m-2" style="z-index: 9999;">Saltar al contenido principal</a>
 
@@ -1129,10 +903,10 @@
       <nav class="navbar navbar-expand-lg bg-white border-bottom" aria-label="Navegación principal">
         <div class="container-fluid d-flex justify-content-between px-4 py-3">
           <a class="navbar-brand text-primary fw-bold fs-5" href="https://www.otorrinoenpilar.com/">
-            Otorrino en Pilar
+            OtorrinoEnPilar
           </a>
           <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-outline-primary fw-bold rounded-pill px-4">
-            Solicitar turno
+            Contacto
           </a>
         </div>
       </nav>
@@ -1313,20 +1087,22 @@
     </section>
 
     <section class="container my-4">
-      <div class="urgent-card">
-        <div class="d-flex flex-column flex-lg-row justify-content-between gap-3">
-          <div>
-            <h3 class="h5 fw-bold">Cuándo consultar de forma urgente</h3>
-            <p class="mb-2">Si aparece alguno de estos signos, buscá atención médica sin demoras:</p>
-            <ul class="urgent-list">
-              <li>Perdida de audición repentina o en un solo oído.</li>
-              <li>Dolor de oído intenso con fiebre o supuración.</li>
-              <li>Vértigo fuerte con náuseas o vómitos persistentes.</li>
-            </ul>
-          </div>
-          <div class="urgent-actions">
-            <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-danger rounded-pill">Agendar consulta urgente</a>
-            <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20tengo%20s%C3%ADntomas%20urgentes%20y%20necesito%20una%20consulta" class="btn btn-outline-danger rounded-pill" target="_blank" rel="noopener noreferrer">WhatsApp urgente</a>
+      <div class="card border-danger mb-4 shadow-sm bg-warning bg-gradient" style="border-width:2px;">
+        <div class="card-body">
+          <div class="d-flex flex-column flex-lg-row justify-content-between gap-3">
+            <div>
+              <h3 class="h5 fw-bold text-danger">Cuándo consultar de forma urgente</h3>
+              <p class="mb-2">Si aparece alguno de estos signos, buscá atención médica sin demoras:</p>
+              <ul class="list-group list-group-flush mb-3">
+                <li class="list-group-item bg-transparent">Perdida de audición repentina o en un solo oído.</li>
+                <li class="list-group-item bg-transparent">Dolor de oído intenso con fiebre o supuración.</li>
+                <li class="list-group-item bg-transparent">Vértigo fuerte con náuseas o vómitos persistentes.</li>
+              </ul>
+            </div>
+            <div class="d-flex flex-column gap-2 align-items-stretch">
+              <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-danger rounded-pill fw-semibold shadow-sm">Agendar consulta urgente</a>
+              <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20tengo%20s%C3%ADntomas%20urgentes%20y%20necesito%20una%20consulta" class="btn btn-outline-danger rounded-pill fw-semibold shadow-sm" target="_blank" rel="noopener noreferrer">WhatsApp urgente</a>
+            </div>
           </div>
         </div>
       </div>
@@ -3605,69 +3381,74 @@ Ver más
 </div>
   </div>
 </div>
- 
 
 <div class="card p-3">
-  <img loading="lazy" decoding="async" src="./imagenes/imagen-keto-alimentos.webp" class=card-img-top alt="alimentos bajos en carbohidratos">
-  <div class=card-body>
-  <h5 class="card-title">Acúfenos y dieta.</h5>
-  <article class=card-text>
-    <div class="text-center mb-2"> 
-      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#Barry" role="button" aria-expanded="false" aria-controls="collapseExample">
-      Ver más
-    </a>
-       </div>   
-       <span class="collapse" id="Barry">   
-       <h6 class="h4">Tinnitus y Resistencia a la Insulina: Una Perspectiva Metabólica</h6>
+  <img loading="lazy" src="./imagenes/imagen-keto-alimentos.webp" class="card-img-top" alt="Conexión entre salud auditiva y metabolismo">
+  <div class="card-body">
+    <h3 class="card-title h5">Tinnitus, Vértigo y Dieta</h3>
+    <article class="card-text">
+      
+      <div class="text-center mb-2"> 
+        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#ketoOido" role="button" aria-expanded="false" aria-controls="ketoOido">
+          Ver más
+        </a>
+      </div> 
 
-        <p>Barry Keate, un investigador con 40 años de experiencia personal con el tinnitus y más de 150 publicaciones científicas sobre el tema, ha arrojado luz sobre una conexión significativa entre el tinnitus (o acúfenos) y problemas metabólicos relacionados con el azúcar en sangre. Su investigación revela que una gran mayoría de pacientes con tinnitus (entre el 84% y el 92%) también presentan una de las siguientes dos condiciones:</p>
-    
-       <h6 class="h4">1. Resistencia a la Insulina e Hiperinsulinemia</h6>
-        <p>La resistencia a la insulina se caracteriza por una disminución en la capacidad de las células del cuerpo para responder a la insulina, una hormona crucial para regular los niveles de glucosa en sangre. Para compensar esta resistencia, el páncreas produce cantidades elevadas de insulina, una condición conocida como hiperinsulinemia. Este fenómeno a menudo es una respuesta del organismo a la alta carga de carbohidratos en la dieta.</p>
-    
-        <h6 class="h4">2. Diabetes Tipo 2</h6>
-        <p>Si la producción de insulina no logra superar la resistencia de las células, los niveles de glucosa en sangre se elevan de manera crónica, lo que conduce al desarrollo de la diabetes tipo 2.</p>
-    
-       <h6 class="h4">La Vulnerabilidad del Oído Interno y el Vínculo Metabólico</h6>
-        <p>El oído interno, al igual que el cerebro, depende críticamente de un suministro constante y eficiente de oxígeno y nutrientes a través del torrente sanguíneo para funcionar correctamente. Cuando este suministro se ve comprometido debido a problemas metabólicos como la resistencia a la insulina o la diabetes, el oído interno puede verse afectado, lo que podría manifestarse en problemas de equilibrio, tinnitus e incluso pérdida de audición (hipoacusia).</p>
-    
-       <h6 class="h4">La Dieta Baja en Carbohidratos: Una Estrategia para la Mejora</h6>
-        <p>Interesantemente, la investigación sugiere que esta situación metabólica y sus efectos en el oído interno podrían ser reversibles mediante la adopción de una dieta baja en carbohidratos y la práctica regular de ejercicio. Un estudio que siguió a pacientes con tinnitus durante dos años bajo una dieta baja en carbohidratos reportó mejoras en el 74% de los casos, y dentro de este grupo, un notable 54% experimentó mejoras significativas o una resolución completa del tinnitus <a class="link-dark" href="https://pubmed.ncbi.nlm.nih.gov/15379344/" rel="noopener noreferrer" target="_blank">(Ver cita).</a></p>
-    
-      <h6 class="h4">Mecanismos Potenciales de Mejora</h6>
-        <p>Si bien los mecanismos exactos detrás de estas mejoras aún se están investigando, se han propuesto varias hipótesis:</p>
-    
+      <span class="collapse" id="ketoOido">    
+      <hr>
+        
+        <h4>El Oído Interno: Un Órgano de "Alto Voltaje"</h4>
+        <p>
+        ¿Sabías que entre el <strong>84% y el 92%</strong> de los pacientes con tinnitus presentan resistencia a la insulina? La solución a los zumbidos y mareos podría estar en tu metabolismo, no en una pastilla.
+      </p>
+
+        <p>Para procesar el sonido y mantener el equilibrio, el oído depende de la <strong>estría vascular</strong>. Esta estructura mantiene la endolinfa (rica en potasio y baja en sodio) mediante la "bomba de sodio-potasio", un mecanismo que consume muchísima energía y es extremadamente sensible a la insulina.</p>
+
+        
+
+        <h6>El Caos del Azúcar</h6>
+        <p>El exceso de carbohidratos provoca hiperinsulinismo, lo que genera:</p>
+        <ul>
+          <li><strong>Alteración de la Endolinfa:</strong> Retención de sodio y pérdida de potasio.</li>
+          <li><strong>Hidropesía Metabólica:</strong> Hinchazón por presión osmótica (oído tapado).</li>
+          <li><strong>Inflamación:</strong> Radicales libres que dañan las células ciliadas.</li>
+        </ul>
+
+        <h6>La Propuesta Cetogénica: Combustible Superior</h6>
         <ol>
-            <li><strong>Mejora del Aporte Nutricional:</strong> Las dietas ricas en carbohidratos a menudo son deficientes en nutrientes esenciales. Al priorizar alimentos como carnes, huevos y grasas saludables, una dieta baja en carbohidratos puede corregir déficits nutricionales importantes, proporcionando al oído interno los elementos necesarios para su óptimo funcionamiento.</li>
-            <li><strong>Producción de Cetonas:</strong> Los cuerpos cetónicos, producidos cuando la ingesta de carbohidratos es baja, representan una fuente de combustible más eficiente y estable para el cerebro en comparación con la glucosa. A diferencia de las fluctuaciones en los niveles de azúcar en sangre dependientes de la ingesta de carbohidratos, la provisión de cetonas es más constante. La dieta cetogénica también ha demostrado ser eficaz en el manejo de las convulsiones en pacientes con epilepsia durante décadas, y algunos medicamentos antiepilépticos han mostrado utilidad en el tratamiento de ciertos tipos de acúfenos. La dieta cetogénica podría ofrecer una forma natural de abordar el problema con menos efectos adversos que los fármacos.</li>
-            <li><strong>Reducción de la Inflamación:</strong> El cambio metabólico inducido por una dieta baja en carbohidratos generalmente resulta en una menor producción de radicales libres y una reducción de la inflamación sistémica. La inflamación crónica puede desempeñar un papel en diversas condiciones de salud, incluyendo problemas del oído interno.</li>
+          <li><strong>Cetonas:</strong> Energía estable que estabiliza la actividad eléctrica del nervio auditivo, actuando como un neuroprotector natural.</li>
+          <li><strong>Equilibrio Químico:</strong> Al bajar la insulina, la bomba de sodio-potasio recupera su función, reduciendo la presión y el vértigo.</li>
+          <li><strong>Menos Inflamación:</strong> La cetosis reduce el estrés oxidativo y aporta nutrientes esenciales (grasas saludables y proteínas).</li>
         </ol>
-    
-        <h6 class="h4">Consideraciones Finales</h6>
-        <p>Es importante reconocer que aproximadamente un 26% de los pacientes en el estudio no experimentaron beneficios en relación con el tinnitus al seguir una dieta baja en carbohidratos. Sin embargo, incluso para ellos, el esfuerzo de adoptar una dieta baja en carbohidratos o cetogénica no es en vano, ya que este enfoque nutricional puede aportar numerosos beneficios para la salud metabólica general.</p>
-    
 
-<a class="link-dark" href="https://open.spotify.com/episode/6ES8Q3CBuG7gUJXzs0Hlmc" target=_blank rel="noopener noreferrer">
-  1 - La historia de la dieta baja en carbohidratos en el tratamiento de los acúfenos.
-</a>
-  <br>
-  <a class="link-dark" rel="noopener noreferrer" target="_blank" href="https://open.spotify.com/episode/3dks6J8hvZS5xECelMWqbB?si=78ac2314bc314291">
-  2 - Como eliminar los tinnitus o acúfenos de manera efectiva</a>.
-  <br>
-  3 - <a class="link-dark" rel="noopener noreferrer" target="_blank" href="https://open.spotify.com/episode/1iZT0e9felkgFgDwuWpuD3?si=ebb73eebcc8d467e">Medidas para evitar o reducir tinnitus o acúfenos.</a>
+        
 
-  <div class="text-center my-2">
+        <h6>Evidencia y Resultados</h6>
+        <p>Estudios en pacientes con tinnitus bajo dieta baja en carbohidratos reportan:</p>
+        <ul>
+          <li><strong>74%</strong> de mejoría general.</li>
+          <li><strong>54%</strong> de resolución significativa o total del tinnitus.</li>
+        </ul>
+
+        <div class="alert alert-secondary p-2 small">
+          <strong>Síntomas de alerta:</strong> Mareos (caminar sobre nubes), sensación de oído tapado, tinnitus constante e hipersensibilidad al ruido.
+        </div>
+
+        <p class="text-muted small"><em>Nota: La dieta cetogénica no solo ayuda a la audición, sino que previene la diabetes tipo 2 y protege tu salud cerebral.</em></p>
+        <div class="text-center my-2">
   <a class="btn btn-sm btn-danger" type="button" target="_blank" rel="noopener noreferrer" href="https://www.ketohoy.com/">
       Ver dieta <strong>"🍓Ketohoy.com"</strong>
   </a>
   </div>
-</span>
-</article>
-<div class="card-footer bg-primary"> 
-</div>
+      
+      </span>
+    </article>
+
+  <div class="card-footer bg-primary"> 
+      </div>
   </div>
 </div>
-
+ 
 
   <div class="card p-3">
     <img loading="lazy" decoding="async" src="./imagenes/tinnitus-stop.webp" class=card-img-top alt="imagen de joven escuchando musica con auriculares">
@@ -3744,7 +3525,7 @@ Ver más
             
             <div class="row g-4">
                 <div class="col-md-6">
-                    <a href="#tinnitus-notch" class="ts-card-link" id="ts-notch-link">
+                    <a href="#tinnitus-notch-section" class="ts-card-link" id="ts-notch-link">
                         <div class="ts-card p-4 h-100 shadow-sm">
                             <div class="card-body">
                                 <h5 class="card-title">Tinnitus de un Solo Tono</h5>
@@ -3755,7 +3536,7 @@ Ver más
                 </div>
                 
                 <div class="col-md-6">
-                    <a href="#tinnitus-complex" class="ts-card-link" id="ts-complex-link">
+                    <a href="#tinnitus-complex-section" class="ts-card-link" id="ts-complex-link">
                         <div class="ts-card p-4 h-100 shadow-sm">
                             <div class="card-body">
                                 <h5 class="card-title">Tinnitus Complejo</h5>
@@ -4193,13 +3974,19 @@ Ver más
     <hr>
     <h3 class="h4">
       <a href="#vertigo-p" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
-       4.4 Prevención y Rehabilitacion
+       4.4 Prevención y Rehabilitacion.
+      </a>
+    </h3>
+    <hr>
+    <h3 class="h4">
+      <a href="#vertigo-central" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+       4.5 Vertigo Agudo de Causa Central.
       </a>
     </h3>
     <hr>
    </div>
 
-
+   
    <h3 id="vertigo-mareo"  class="h4 text-center text-dark py-1" style="background-color: #d7e3f0;">
     4.1 Diferencia entre Vértigo y Mareo.
   </h3>
@@ -5447,60 +5234,236 @@ Ver más
       <div class="container-flex text-center my-4 p-0">
         <a href="#vertigo-p" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
       </div>    
+ 
+   <h3 id="vertigo-central"  class="h4 text-center text-dark py-1" style="background-color: #d7e3f0;">
+    4.5 Vertigo Agudo de Causa Central.
+  </h3>
 
+  <div class="card-group">
+
+<div class="card p-3">
+  <img loading="lazy" src="./imagenes/hints.webp" class="card-img-top" alt="Medico examinando los ojos de un paciente en sala de urgencias.">
   
+  <div class="card-body">
+    <h4 class="card-title h5">Vértigo Agudo: ¿Oído o Cerebro?</h4>
+    
+    <article class="card-text">
+      <p class="small">
+        El síndrome vestibular agudo suele ser benigno, pero un <strong>25% de los casos</strong> tiene un origen central (cerebro) que requiere atención urgente.
+      </p>
+
+      <div class="text-center mb-2"> 
+        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#infoVertigo" role="button" aria-expanded="false" aria-controls="infoVertigo">
+          Leer protocolo y causas
+        </a>
+      </div> 
+
+      <span class="collapse" id="infoVertigo">    
+        <p><strong>Causas Centrales Graves:</strong></p>
+        <ul class="small">
+          <li><strong>Ictus Isquémico:</strong> Infarto en el cerebelo o tronco.</li>
+          <li><strong>Hemorragia:</strong> Sangrado en la fosa posterior.</li>
+          <li><strong>Desmielinización:</strong> Brotes de Esclerosis Múltiple.</li>
+        </ul>
+
+        <p><strong>¿Cómo identificarlo?</strong><br>
+        Presta atención a la inestabilidad severa (incapacidad para estar en pie), visión doble, dificultad para hablar o debilidad en el cuerpo.</p>
+
+        <p><strong>El Protocolo HINTS:</strong><br>
+        Es un examen de 3 pasos más sensible que una resonancia en las primeras horas:</p>
+        <ol class="small">
+          <li><strong>Head Impulse:</strong> Si es normal, el riesgo central es mayor.</li>
+          <li><strong>Nystagmus:</strong> Sospecha si cambia de dirección o es vertical.</li>
+          <li><strong>Test of Skew:</strong> Es positivo si hay desalineación vertical de los ojos.</li>
+        </ol>
+
+        <div class="alert alert-danger small p-2">
+          <strong>Importante:</strong> Si el HINTS detecta un solo signo central, se requiere hospitalización inmediata para descartar un infarto cerebral.
+        </div>
+      </span>
+    </article>
+
+    <div class="card-footer bg-primary"> 
+    </div>
+  </div>
+</div>
+
+<div class="card p-3">
+  <img loading="lazy" src="./imagenes/hints-ojos.webp" class="card-img-top" alt="Evaluación del protocolo HINTS">
+    <div class="card-body">
+    <h4 class="card-title h5">Protocolo HINTS: Paso a Paso</h4>
+    
+    <article class="card-text">
+      <p class="small">
+        Este examen físico es una herramienta vital en urgencias para diferenciar un vértigo periférico de un <strong>infarto cerebral</strong>.
+      </p>
+
+      <div class="text-center mb-2"> 
+        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#detallesHINTS" role="button" aria-expanded="false" aria-controls="detallesHINTS">
+          Ver maniobras y videos
+        </a>
+      </div> 
+
+      <span class="collapse" id="detallesHINTS">    
+        <p><strong>1. Head Impulse (Impulso Cefálico):</strong><br>
+        Se gira la cabeza 20 grados rápido. Si los ojos <strong>no</strong> pierden la fijación (se mantienen centrados), el riesgo central es muy alto.</p>
+        <div class="mb-3">
+          <a href="https://www.youtube.com/watch?v=UnVgVD1XNsE" target="_blank" rel="noopener noreferrer" class="btn btn-link btn-sm p-0">Ejemplo: Oído fallando (Sacada)</a>
+          <a href="https://www.youtube.com/watch?v=1q-VTKPweuk" target="_blank" rel="noopener noreferrer" class="btn btn-link btn-sm p-0">Ejemplo: Cerebral (Normal)</a>
+        </div>
+
+        <p><strong>2. Nystagmus (Nistagmo):</strong><br>
+        Movimiento involuntario del ojo. Si el nistagmo <strong>bate</strong> hacia diferentes lados al cambiar la mirada (bidireccional), es una señal de alarma grave.</p>
+        <div class="mb-3">
+          <a href="https://www.youtube.com/watch?v=-VXwD2nskhQ" target="_blank" rel="noopener noreferrer" class="btn btn-link btn-sm p-0">Ver Nistagmo Central vs Periférico</a>
+        </div>
+
+        <p><strong>3. Test of Skew (Desviación Vertical):</strong><br>
+        Al tapar/destapar un ojo, si este se mueve <strong>verticalmente</strong> para corregir la posición, indica daño en el tronco del encéfalo.</p>
+        <div class="mb-3">
+          <a href="https://www.youtube.com/watch?v=zgqCXef-qPs" target="_blank" rel="noopener noreferrer" class="btn btn-link btn-sm p-0">Ejemplo: Desviación Skew Positiva</a>
+        </div>
+
+        <div class="alert alert-warning small p-2 mt-2">
+          <strong>Regla de Oro:</strong> Para diagnosticar una causa benigna, el impulso debe ser anormal, el nistagmo unidireccional y el skew ausente. <strong>Un solo signo central obliga a hospitalizar.</strong>
+        </div>
+      </span>
+    </article>
+
+    <div class="card-footer bg-primary"> 
+    </div>
+  </div>
+</div>
+
+<div class="card p-3">
+  <img loading="lazy" src="./imagenes/neuro-test.webp" class="card-img-top" alt="Medico efectuando pruebas neurologicas a paciente en emergencias.">
+  <div class="card-body">
+    <h4 class="card-title h5">Más allá de los ojos: INFED y Marcha</h4>
+    
+    <article class="card-text">
+      <p class="small">
+        El diagnóstico se completa evaluando cómo el paciente camina y coordina sus movimientos, lo que aumenta la precisión diagnóstica.
+      </p>
+
+      <div class="text-center mb-2"> 
+        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#detallesExtra" role="button" aria-expanded="false" aria-controls="detallesExtra">
+          Ver pruebas de equilibrio
+        </a>
+      </div> 
+
+      <span class="collapse" id="detallesExtra">    
+        <p><strong>Ataxia de Tronco (Marcha):</strong><br>
+        Es el signo más fiable fuera de los ojos. Si el paciente <strong>no puede mantenerse en pie</strong> sin ayuda, el riesgo de infarto cerebeloso es altísimo.</p>
+
+        <p><strong>Pruebas Cerebelosas:</strong><br>
+        La prueba "dedo-nariz" busca <strong>dismetría</strong> (falta de puntería). Un paciente con vértigo periférico suele tener buena puntería; uno central, no.</p>
+
+        <div class="alert alert-info small p-2 mt-2">
+          <strong>Regla INFED:</strong> Combina el HINTS con la evaluación de la estabilidad. Un "HINTS benigno" pero con un paciente que no puede caminar, debe tratarse como una emergencia.
+        </div>
+        
+        <div class="mb-3">
+          <a href="https://www.youtube.com/watch?v=68SSTon-sTo" target="_blank" rel="noopener noreferrer" class="btn btn-link btn-sm p-0">Video: Evaluación de Ataxia Cerebelosa</a>
+        </div>
+      </span>
+    </article>
+
+    <div class="card-footer bg-primary"> 
+    </div>
+  </div>
+</div>
+  </div>
+
+  <div class="card p-3 shadow-sm">
+  <div class="card-body">
+    <h4 class="card-title h5 mb-3 text-primary">Resumen Diagnóstico: Periférico vs. Central</h4>
+    
+    <div class="table-responsive">
+      <table class="table table-hover table-bordered small">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Característica</th>
+            <th scope="col">Periférico (Oído)</th>
+            <th scope="col">Central (Cerebro)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="bg-light">Nistagmo</th>
+            <td>Unidireccional (siempre bate al mismo lado)</td>
+            <td class="table-danger">Cambiante con la mirada o vertical</td>
+          </tr>
+          <tr>
+            <th class="bg-light">Impulso Cefálico</th>
+            <td><strong>Anormal</strong> (ojo pierde el foco y corrige)</td>
+            <td class="table-danger"><strong>Normal</strong> (ojo fijo en la nariz)</td>
+          </tr>
+          <tr>
+            <th class="bg-light">Skew (Vertical)</th>
+            <td>Ausente</td>
+            <td class="table-danger">Presente (ojo se mueve arriba/abajo)</td>
+          </tr>
+          <tr>
+            <th class="bg-light">Marcha</th>
+            <td>Puede caminar con apoyo</td>
+            <td class="table-danger"><strong>Imposible</strong> (caída inmediata)</td>
+          </tr>
+          <tr>
+            <th class="bg-light">Dedo-Nariz</th>
+            <td>Normal (buena puntería)</td>
+            <td class="table-danger">Dismetría (falla el objetivo)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="alert alert-secondary small mt-2 py-2">
+      <p class="mb-0"><strong>Nota:</strong> Las celdas en rojo indican señales de alerta que requieren una resonancia magnética inmediata.</p>
+    </div>
+  </div>
+</div>
+
+   <div class="container-flex text-center my-4 p-0">
+        <a href="#vertigo-p" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+      </div>  
 
   </main>
   
-  <footer class="mt-5">
-    <div class="container-fluid py-4" style="background-color: #d7e3f0;">
-      <div class="row align-items-center justify-content-center text-center px-3">
+ 
+<footer class="mt-1">
+  <div class="container-fluid py-2" style="background-color: #d7e3f0;">
+    <div class="row align-items-center justify-content-center text-center px-3">
 
-        <div class="col-12 col-md-8 col-lg-6 mb-3 mb-md-0">
-          <p class="h6 mb-2" style="color: #003366; font-weight: 500;">
-            El contenido de este blog es meramente informativo y no reemplaza la consulta médica.
-            La responsabilidad de los contenidos es de los médicos editores.
-          </p>
-        </div>
-
-        <div class="col-12 col-md-4 col-lg-3 d-flex flex-column flex-md-row justify-content-center justify-content-md-end gap-2">
-          <a href="https://www.otorrinoenpilar.com/" class="btn btn-outline-primary" style="color: #003366; border-color: #003366;">Inicio</a>
-          <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-primary" style="background-color: #003366; border-color: #003366;">Contáctenos</a>
-          <a href="https://maps.app.goo.gl/YBpxVGoSiMQhbxru8" class="btn btn-outline-success" style="color: #1b8f8a; border-color: #1b8f8a;" target="_blank" rel="noopener noreferrer" aria-label="Ver ubicación en Google Maps">
-            <svg width="16" height="16" fill="currentColor" class="me-1" viewBox="0 0 16 16" aria-hidden="true">
-              <path d="M8 0a5 5 0 0 0-5 5c0 2.192 5 11 5 11s5-8.808 5-11a5 5 0 0 0-5-5zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-            </svg>
-            Ubicación
-          </a>
-        </div>
-
+      <div class="col-12 col-md-8 col-lg-6 mb-3 mb-md-0">
+        <p class="h6 mb-2" style="color: #003366; font-weight: 500;">
+          El contenido de este blog es meramente informativo y no reemplaza la consulta médica.
+          La responsabilidad de los contenidos es de los médicos editores.
+        </p>
       </div>
-    </div>
 
-    <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
-      <div class="mb-2">
-        <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
-          <svg class="icon-inline" aria-hidden="true"><use href="#icon-facebook"></use></svg>
-        </a>
-        <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
-          <svg class="icon-inline" aria-hidden="true"><use href="#icon-instagram"></use></svg>
-        </a>
-        <a href="https://maps.app.goo.gl/YBpxVGoSiMQhbxru8" target="_blank" rel="noopener noreferrer" aria-label="Google Maps" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
-          <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-            <path d="M8 0a5 5 0 0 0-5 5c0 2.192 5 11 5 11s5-8.808 5-11a5 5 0 0 0-5-5zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
-          </svg>
-        </a>
+      <div class="col-12 col-md-4 col-lg-3 d-flex flex-column flex-md-row justify-content-center justify-content-md-end gap-2">
+        <a href="https://www.otorrinoenpilar.com/" class="btn btn-outline-primary" style="color: #003366; border-color: #003366;">Inicio</a>
+        <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-primary" style="background-color: #003366; border-color: #003366;">Contáctenos</a>
       </div>
-      <p class="small mb-1">
-        <a href="https://maps.app.goo.gl/YBpxVGoSiMQhbxru8" target="_blank" rel="noopener noreferrer" class="text-decoration-none" style="color: #0a2b4f; font-weight: 500;">
-          📍 Caamaño 1100, Pilar - Ver en Google Maps
-        </a>
-      </p>
-      <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
-        &copy; 2026 Otorrino en Pilar. Todos los derechos reservados.
-      </p>
+
     </div>
-  </footer>
+  </div>
+
+  <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
+    <div class="mb-2">
+      <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+        <i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i>
+      </a>
+      <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+        <i class="fab fa-instagram" style="font-size: 1.4rem;"></i>
+      </a>
+    </div>
+    <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
+      &copy; 2025 Otorrino en Pilar. Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+
 
   <!-- Modal de Reseña -->
   <div class="modal fade" id="modalResena" tabindex="-1" aria-labelledby="modalResenaLabel" aria-hidden="true">
@@ -5571,21 +5534,6 @@ Ver más
   (function() {
     'use strict';
     
-    const progressBar = document.getElementById('progressBar');
-    if (!progressBar) return;
-
-    const updateProgress = () => {
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
-      
-      progressBar.style.width = Math.min(scrollPercent, 100) + '%';
-      progressBar.parentElement.setAttribute('aria-valuenow', Math.round(scrollPercent));
-    };
-
-    window.addEventListener('scroll', updateProgress, { passive: true });
-    updateProgress();
   })();
 
   // TOC sticky con active state
@@ -5653,6 +5601,22 @@ Ver más
           <svg class="icon-inline" aria-hidden="true"><use href="#icon-chevron-up"></use></svg>
         </button>
 
+<script>
+document.querySelectorAll('.ts-card-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const hash = this.getAttribute('href');
+    const target = document.querySelector(hash);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Mostrar la sección si está oculta
+      if (target.classList.contains('ts-hidden')) {
+        target.classList.remove('ts-hidden');
+      }
+    }
+  });
+});
+</script>
 
         </body>
       </html>

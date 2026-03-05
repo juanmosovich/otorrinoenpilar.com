@@ -146,16 +146,26 @@
         if (!formulario) return;
 
         formulario.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
             // Validar formulario Bootstrap
             if (!formulario.checkValidity()) {
+                e.preventDefault();
                 e.stopPropagation();
                 formulario.classList.add('was-validated');
                 return;
             }
-            
-            enviarConsulta();
+
+            // Integrar preferencias de encuesta al formulario de contacto
+            // Elimina campos previos para evitar duplicados
+            Array.from(formulario.querySelectorAll('.ha-preferencia-hidden')).forEach(el => el.remove());
+            for (let [key, value] of Object.entries(preferenciasUsuario)) {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = 'Preferencia: ' + key;
+                input.value = value;
+                input.className = 'ha-preferencia-hidden';
+                formulario.appendChild(input);
+            }
+            // El submit continúa y Formsubmit enviará los datos
         });
     }
 
@@ -220,126 +230,10 @@
         const contactoPreferido = document.getElementById('ha_contacto_preferido')?.value || '';
         const horarioPreferido = document.getElementById('ha_horario_preferido')?.value || '';
 
-        // Preparar contenido del email
-        const contenidoEmail = generarContenidoEmail(
-            nombre, email, telefono, edad, tieneAudiometria, 
-            consultas, contactoPreferido, horarioPreferido
-        );
 
-        // En un entorno real, aquí se enviaría el email usando un backend
-        // Por ahora, mostramos la información y abrimos el cliente de email del usuario
-        abrirClienteEmail(contenidoEmail);
-
-        // Mostrar confirmación
-        setTimeout(() => {
-            mostrarConfirmacion();
-            resetearFormularios();
-            botonEnviar.disabled = false;
-            botonEnviar.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Enviar Consulta';
-        }, 1000);
     }
 
-    // Generar contenido del email
-    function generarContenidoEmail(nombre, email, telefono, edad, tieneAudiometria, consultas, contactoPreferido, horarioPreferido) {
-        let contenido = `CONSULTA SOBRE AUDÍFONOS\n\n`;
-        contenido += `=================================\n`;
-        contenido += `DATOS DE CONTACTO\n`;
-        contenido += `=================================\n`;
-        contenido += `Nombre: ${nombre}\n`;
-        contenido += `Email: ${email}\n`;
-        contenido += `Teléfono: ${telefono}\n`;
-        contenido += `Edad: ${edad}\n`;
-        contenido += `Contacto preferido: ${contactoPreferido}\n`;
-        contenido += `Horario preferido: ${horarioPreferido}\n\n`;
-        
-        contenido += `=================================\n`;
-        contenido += `AUDIOMETRÍA\n`;
-        contenido += `=================================\n`;
-        const audiometriaTexto = {
-            'si': 'Tiene una audiometría (adjuntará al email)',
-            'realizare': 'Realizará la audiometría online',
-            'no': 'No tiene audiometría - solicita que se la realicen'
-        };
-        contenido += `Estado: ${audiometriaTexto[tieneAudiometria] || tieneAudiometria}\n\n`;
-        
-        contenido += `=================================\n`;
-        contenido += `PREFERENCIAS DE AUDÍFONOS\n`;
-        contenido += `=================================\n`;
-        
-        for (let [key, value] of Object.entries(preferenciasUsuario)) {
-            contenido += `${key}: ${value}\n`;
-        }
-        
-        contenido += `\n=================================\n`;
-        contenido += `CONSULTAS ADICIONALES\n`;
-        contenido += `=================================\n`;
-        contenido += consultas || 'Sin consultas adicionales';
-        
-        if (audiometriaArchivo) {
-            contenido += `\n\n=================================\n`;
-            contenido += `NOTA: El paciente adjuntará audiometría (${audiometriaArchivo.name})\n`;
-        }
-        
-        return contenido;
-    }
 
-    // Abrir cliente de email
-    function abrirClienteEmail(contenido) {
-        const asunto = 'Consulta sobre Audífonos - Sitio Web';
-        const cuerpo = encodeURIComponent(contenido);
-        const mailto = `mailto:${CONFIG.emailDestino}?subject=${encodeURIComponent(asunto)}&body=${cuerpo}`;
-        
-        // Nota para el usuario
-        const mensajeAdjunto = audiometriaArchivo 
-            ? '\n\nNOTA IMPORTANTE: No olvide adjuntar su audiometría al email que se abrirá.'
-            : '';
-        
-        if (confirm(`Se abrirá su cliente de email para enviar la consulta.${mensajeAdjunto}\n\n¿Desea continuar?`)) {
-            window.location.href = mailto;
-        }
-    }
-
-    // Mostrar confirmación
-    function mostrarConfirmacion() {
-        const divConfirmacion = document.getElementById('ha_confirmacion');
-        if (!divConfirmacion) return;
-
-        divConfirmacion.style.display = 'block';
-        divConfirmacion.innerHTML = `
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <h5 class="alert-heading"><i class="fas fa-check-circle me-2"></i>¡Gracias por su consulta!</h5>
-                <p>Hemos preparado su consulta. ${audiometriaArchivo ? 'No olvide adjuntar su audiometría al email.' : ''}</p>
-                <p class="mb-0"><small>Nos pondremos en contacto con usted a la brevedad.</small></p>
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            </div>
-        `;
-        
-        divConfirmacion.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-
-    // Resetear formularios
-    function resetearFormularios() {
-        const formEncuesta = document.getElementById('ha_formulario_encuesta');
-        const formContacto = document.getElementById('ha_formulario_contacto_form');
-        
-        if (formEncuesta) formEncuesta.reset();
-        if (formContacto) {
-            formContacto.reset();
-            formContacto.classList.remove('was-validated');
-        }
-        
-        audiometriaArchivo = null;
-        preferenciasUsuario = {};
-        
-        const infoArchivo = document.getElementById('ha_info_archivo');
-        if (infoArchivo) infoArchivo.innerHTML = '';
-        
-        const formularioContacto = document.getElementById('ha_formulario_contacto');
-        if (formularioContacto) formularioContacto.style.display = 'none';
-        
-        const resultados = document.getElementById('ha_resultados');
-        if (resultados) resultados.style.display = 'none';
-    }
 
     // Configurar botones de toggle (Ver más/Ver menos)
     function setupToggleButtons() {

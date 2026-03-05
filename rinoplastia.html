@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,17 +7,15 @@
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
-<!-- Preload critical resources -->
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 <!-- Google Tag Manager -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  let gtagLoaded = false;
   const loadGtag = () => {
+    if (gtagLoaded) return;
+    gtagLoaded = true;
     const gtagScript = document.createElement('script');
     gtagScript.async = true;
     gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T';
@@ -26,11 +23,7 @@
     gtag('js', new Date());
     gtag('config', 'G-XNNM71EW8T');
   };
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(loadGtag, { timeout: 2000 });
-  } else {
-    window.addEventListener('load', loadGtag);
-  }
+  window.addEventListener('click', loadGtag, { once: true });
 </script>
 
 <!-- Metadatos esenciales -->
@@ -67,197 +60,8 @@
 <meta name="DC.creator" content="Dr. Juan Mosovich">
 <meta name="DC.language" content="es-AR">
 
-<!-- Critical CSS inlined for faster FCP -->
-<style>
-  /* Critical above-the-fold styles */
-  body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
-  
-  /* Navegación sticky mobile-first */
-  .navbar { 
-    position: relative;
-    background-color: #f8f9fa !important; 
-    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
-    transition: all 0.3s ease;
-    z-index: 1030;
-    will-change: transform;
-  }
-  
-  @media (min-width: 768px) {
-    .navbar {
-      position: sticky;
-      top: 0;
-    }
-  }
-  
-  .navbar-brand { color: #0d6efd !important; font-weight: 700 !important; }
-  .btn-outline-primary { color: #0d6efd; border-color: #0d6efd; }
-  .display-4 { font-size: calc(1.475rem + 2.7vw); font-weight: 700; }
-  .lead { font-size: 1.25rem; font-weight: 300; }
-  .container-fluid { width: 100%; padding-right: var(--bs-gutter-x, 0.75rem); padding-left: var(--bs-gutter-x, 0.75rem); margin-right: auto; margin-left: auto; }
-  .d-flex { display: flex !important; }
-  .justify-content-between { justify-content: space-between !important; }
-  .text-center { text-align: center !important; }
-  .text-white { color: #fff !important; }
-  .py-3 { padding-top: 1rem !important; padding-bottom: 1rem !important; }
-  .px-4 { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
-  .p-4 { padding: 1.5rem !important; }
-  .mb-4 { margin-bottom: 1.5rem !important; }
-  .my-5 { margin-top: 3rem !important; margin-bottom: 3rem !important; }
-  @media (min-width: 992px) {
-    .p-lg-5 { padding: 3rem !important; }
-  }
 
-  /* Estilos mejorados para galería con hover effects */
-  .gallery-img-wrapper {
-    position: relative;
-    overflow: hidden;
-    border-radius: 0.5rem;
-    cursor: pointer;
-  }
-  
-  .gallery-img-wrapper img {
-    transition: transform 0.3s ease, filter 0.3s ease;
-  }
-  
-  @media (hover: hover) {
-    .gallery-img-wrapper:hover img {
-      transform: scale(1.05);
-      filter: brightness(0.9);
-    }
-    
-    .gallery-img-wrapper::after {
-      content: '🔍';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 2rem;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      pointer-events: none;
-    }
-    
-    .gallery-img-wrapper:hover::after {
-      opacity: 1;
-    }
-  }
-  
-  /* Barra de progreso de lectura */
-  .reading-progress {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 3px;
-    background: linear-gradient(90deg, #003366, #0066cc);
-    z-index: 9999;
-    transition: width 0.1s ease;
-  }
 
-  .scroll-to-top {
-    position: fixed;
-    left: 16px;
-    bottom: 16px;
-    width: 44px;
-    height: 44px;
-    border-radius: 999px;
-    background-color: #003366;
-    color: #ffffff;
-    border: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    z-index: 1050;
-  }
-
-  .scroll-to-top.show {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .scroll-to-top:active {
-    transform: scale(0.96);
-  }
-
-  @media (min-width: 768px) {
-    .scroll-to-top {
-      left: 24px;
-      bottom: 24px;
-      width: 48px;
-      height: 48px;
-    }
-  }
-  
-  /* Hero optimizado para móviles */
-  .hero-banner {
-    padding: 2rem 1rem !important;
-  }
-  
-  @media (min-width: 768px) {
-    .hero-banner {
-      padding: 3rem 2rem !important;
-    }
-  }
-  
-  @media (min-width: 992px) {
-    .hero-banner {
-      padding: 4rem 3rem !important;
-    }
-  }
-  
-  /* Títulos con mejor jerarquía */
-  .section-title-primary {
-    background: linear-gradient(135deg, #003366 0%, #004d99 100%);
-    padding: 1.5rem 1rem;
-    margin: 2rem 0 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .section-title-secondary {
-    background: linear-gradient(135deg, #0066cc 0%, #0080ff 100%);
-    padding: 1rem;
-    margin: 1.5rem 0 1rem;
-  }
-  
-  /* Botones de navegación mejorados */
-  .nav-menu-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1.25rem;
-    border-radius: 2rem;
-    transition: all 0.3s ease;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border: 2px solid #dee2e6;
-    font-weight: 600;
-  }
-  
-  .nav-menu-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    border-color: #003366;
-    color: #003366;
-  }
-  
-  /* Estilos para sección de ubicación */
-  .location-info {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-    border-left: 4px solid #003366;
-    padding: 1rem;
-    border-radius: 8px;
-    margin: 1rem 0;
-  }
-</style>
-
-<!-- Non-critical CSS loaded asynchronously -->
-<noscript>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</noscript>
 
 <!-- Favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -265,574 +69,151 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
 <link rel="manifest" href="/favicon/site.webmanifest">
 
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
 <title>Rinoplastia en Pilar | Simulación Digital - Dr. Mosovich</title>
 <link rel="canonical" href="https://www.otorrinoenpilar.com/rinoplastia.html"/>
 <!-- Datos estructurados JSON-LD -->
 <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.otorrinoenpilar.com/rinoplastia.html"
-    },
-    "headline": "Rinoplastia y Rinoseptumplastia en Pilar, Buenos Aires - Simulación Digital Preoperatoria",
-    "description": "Información detallada sobre rinoplastia, rinoseptumplastia y procedimientos estéticos y funcionales de la nariz en Pilar, Buenos Aires. Conozca los beneficios de la simulación digital preoperatoria.",
-    "image": [
-      "https://www.otorrinoenpilar.com/imagenes/rinop.webp",
-      "https://www.otorrinoenpilar.com/imagenes/consultaonline.webp",
-      "https://www.otorrinoenpilar.com/imagenes/65.webp"
-    ],
-    "author": {
-      "@type": "Person",
-      "name": "Dr. Juan Mosovich",
-      "url": "https://www.otorrinoenpilar.com/info.html#cv"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Otorrino en Pilar",
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=100063748789595",
-        "https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr"
-      ],
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.otorrinoenpilar.com/imagenes/rino.webp",
-        "width": 600,
-        "height": 60
-      }
-    },
-    "datePublished": "2022-06-14T09:00:00-03:00",
-    "dateModified": "2025-12-19T11:00:00-03:00"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Inicio",
-        "item": "https://www.otorrinoenpilar.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Rinoplastia y Rinoseptumplastia",
-        "item": "https://www.otorrinoenpilar.com/rinoplastia.html"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Physician",
-    "name": "Dr. Juan Mosovich",
-    "medicalSpecialty": "Otolaryngology",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Caamaño 1100, Edificio Agora 2, Piso 1, Oficina 110",
-      "addressLocality": "Pilar",
-      "addressRegion": "Buenos Aires",
-      "postalCode": "1631",
-      "addressCountry": "AR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "-34.434636",
-      "longitude": "-58.829689"
-    },
-    "url": "https://www.otorrinoenpilar.com",
-    "telephone": "+54-11-6821-2512",
-    "hasMap": "https://maps.app.goo.gl/H8MGdSrEawJcMZxE6",
-    "areaServed": [
-      {
-        "@type": "City",
-        "name": "Pilar"
-      },
-      {
-        "@type": "City",
-        "name": "Escobar"
-      },
-      {
-        "@type": "City",
-        "name": "Del Viso"
-      },
-      {
-        "@type": "City",
-        "name": "Tortuguitas"
-      },
-      {
-        "@type": "City",
-        "name": "Derqui"
-      },
-      {
-        "@type": "City",
-        "name": "Belén de Escobar"
-      },
-      {
-        "@type": "City",
-        "name": "Zona Norte Buenos Aires"
-      }
-    ],
-    "image": "https://www.otorrinoenpilar.com/imagenes/rinop.webp"
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
-    "name": "Rinoplastia y Rinoseptumplastia",
-    "description": "Procedimiento estético y funcional de la nariz con simulación digital preoperatoria.",
-    "bodyLocation": "Nariz",
-    "procedureType": "Surgical",
-    "performer": {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
       "@type": "Physician",
+      "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich",
       "name": "Dr. Juan Mosovich",
-      "url": "https://www.otorrinoenpilar.com/info.html#cv",
-      "medicalSpecialty": "Otolaryngology"
+      "medicalSpecialty": "Otolaryngology",
+      "url": "https://www.otorrinoenpilar.com",
+      "telephone": "+54 11 6821-2512",
+      "priceRange": "$$",
+      "image": "https://www.otorrinoenpilar.com/imagenes/rinop.webp",
+      "hasMap": "https://www.google.com/maps?cid=12140810488927800678",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Caamaño 1100, Edificio Agora 2, Piso 1, Oficina 110",
+        "addressLocality": "Pilar",
+        "addressRegion": "Buenos Aires",
+        "postalCode": "1631",
+        "addressCountry": "AR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.4346398,
+        "longitude": -58.8299421
+      },
+      "knowsAbout": [
+        "Rinoplastia Ultrasónica",
+        "Rinoseptumplastia",
+        "Otorrinolaringología",
+        "Cirugía de nariz sin taponajes"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "19:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "12:00",
+          "closes": "13:00"
+        }
+      ]
     },
-    "areaServed": {
-      "@type": "AdministrativeArea",
-      "name": "Pilar, Buenos Aires"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿La rinoplastia mejora la respiración?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "En muchos casos sí. La rinoseptumplastia corrige desvíos del tabique y otras causas de obstrucción nasal, mejorando el flujo de aire."
+    {
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.otorrinoenpilar.com/rinoplastia.html"
+      },
+      "headline": "Rinoplastia Ultrasónica en Pilar - Dr. Juan Mosovich",
+      "description": "Cirugía de nariz avanzada en Pilar, Buenos Aires. Especialista en Rinoplastia Ultrasónica de alta precisión, recuperación rápida y simulación digital preoperatoria.",
+      "image": [
+        "https://www.otorrinoenpilar.com/imagenes/rinop.webp",
+        "https://www.otorrinoenpilar.com/imagenes/consultaonline.webp"
+      ],
+      "author": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Otorrino en Pilar",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.otorrinoenpilar.com/imagenes/rino.webp"
         }
       },
-      {
-        "@type": "Question",
-        "name": "¿Qué es la simulación digital preoperatoria?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Es una herramienta que permite visualizar un resultado estimado antes de la cirugía para alinear expectativas con objetivos reales."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cuánto tiempo dura la recuperación?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "La recuperación inicial suele ser de 7 a 14 días, y la desinflamación completa puede tardar varios meses."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿La rinoplastia deja cicatrices visibles?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "En la técnica cerrada las incisiones son internas. En la abierta puede existir una cicatriz mínima que suele ser poco visible."
-        }
+      "datePublished": "2022-06-14T09:00:00-03:00",
+      "dateModified": "2026-03-05T07:00:00-03:00"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Rinoplastia Ultrasónica y Rinoseptumplastia",
+      "description": "Procedimiento quirúrgico con tecnología piezoeléctrica para remodelar la estructura nasal con mínima inflamación y resultados precisos.",
+      "bodyLocation": "Nariz",
+      "procedureType": "Surgical",
+      "performer": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Pilar, Buenos Aires"
       }
-    ]
-  }
-]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.otorrinoenpilar.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Rinoplastia",
+          "item": "https://www.otorrinoenpilar.com/rinoplastia.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué beneficios tiene la Rinoplastia Ultrasónica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La rinoplastia ultrasónica ofrece mayor precisión, menos moretones, una recuperación más rápida y permite evitar los incómodos taponajes nasales en la mayoría de los casos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿La rinoplastia mejora la respiración?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, la rinoseptumplastia corrige desvíos del tabique y otros problemas funcionales para mejorar el flujo de aire nasal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es la simulación digital preoperatoria?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es una herramienta que permite visualizar un resultado estimado antes de la cirugía para alinear expectativas entre el paciente y el Dr. Mosovich."
+          }
+        }
+      ]
+    }
+  ]
+}
 </script>
-<style>
-   .nav-btn {
-    /* Posicionamiento absoluto para que floten sobre la imagen */
-    position: absolute;
-    top: 50%; /* Centrar verticalmente */
-    transform: translateY(-50%); /* Ajuste fino para centrado vertical */
-    background-color: rgba(0, 0, 0, 0.1); /* Fondo muy sutil y casi transparente */
-    color: rgba(255, 255, 255, 0.6); /* Color de flecha sutil */
-    border: none; /* Sin borde */
-    padding: 6px 9px; /* Espaciado interno aún más pequeño */
-    font-size: 16px; /* Tamaño de la flecha más pequeño */
-    cursor: pointer; /* Indica que es clickeable */
-    z-index: 10; /* Asegura que estén por encima de la imagen */
-    border-radius: 50%; /* Mantenerlos circulares */
-    width: 36px; /* Ancho fijo más pequeño */
-    height: 36px; /* Alto fijo más pequeño */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.2s, color 0.2s, opacity 0.2s; /* Transición suave */
-    opacity: 0.7; /* Opacidad inicial para que sean más discretos */
-}
 
-.nav-btn-left {
-    left: -20px; /* Mueve el botón izquierdo 20px fuera del modal */
-}
-
-.nav-btn-right {
-    right: -20px; /* Mueve el botón derecho 20px fuera del modal */
-}
-
-/* Estilo al pasar el mouse por encima (hover) */
-.nav-btn:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Se oscurece un poco más al pasar el mouse */
-    color: white; /* La flecha se vuelve blanca al pasar el mouse */
-    opacity: 1; /* Se vuelve completamente visible al pasar el mouse */
-}
-
-/* Opcional: Para asegurar que los botones no se salgan del modal-dialog en pantallas muy pequeñas,
-   o si el modal-dialog no tiene un overflow: visible. Puedes experimentar con esto. */
-.modal-dialog {
-    overflow: visible; /* Permite que el contenido "sobresalga" de los límites */
-}
-
-/* Rendimiento (desktop): evita renderizar contenido fuera de pantalla */
-@media (min-width: 992px) {
-  .gallery-section {
-      content-visibility: auto;
-      contain-intrinsic-size: 1px 1200px;
-  }
-}
-
-  .btn-whatsapp {
-            background: linear-gradient(135deg, #25D366 0%, #1DA851 100%);
-            border: none;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 700;
-            padding: 1rem 3rem;
-            border-radius: 50px;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn-whatsapp::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s;
-        }
-        
-        .btn-whatsapp:hover {
-            background: linear-gradient(135deg, #1DA851 0%, #128C40 100%);
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
-            color: white;
-        }
-        
-        .btn-whatsapp:hover::before {
-            left: 100%;
-        }
-        
-        .btn-whatsapp:active {
-            transform: translateY(-1px);
-        }
-       .contact-card {
-            max-width: 500px;
-            margin: auto;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            padding: 3rem;
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-            border: 1px solid rgba(0, 51, 102, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-        }
-        .contact-card img {
-            width: 120px; /* Tamaño ligeramente mayor para la imagen del perfil */
-            height: 120px;
-            object-fit: contain;
-            border-radius: 50%; /* Hacer la imagen circular */
-            border: 3px solid #d7e3f0; /* Borde suave alrededor de la imagen */
-        }
-
-        /* Botón flotante de WhatsApp */
-        .floating-whatsapp {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          z-index: 1000;
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
-          background-color: #25d366;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-          transition: all 0.3s ease;
-          animation: pulse 2s infinite;
-        }
-        
-        .floating-whatsapp:hover {
-          transform: scale(1.1);
-          box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-        }
-        
-        .floating-whatsapp a {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          height: 100%;
-          text-decoration: none;
-        }
-        
-        .floating-whatsapp img {
-          width: 35px;
-          height: 35px;
-          filter: brightness(0) invert(1);
-        }
-        
-        @keyframes pulse {
-          0% {
-            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-          }
-          70% {
-            box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-          }
-          100% {
-            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-          }
-        }
-        
-        /* Mejoras responsive adicionales */
-        @media (max-width: 768px) {
-          .floating-whatsapp {
-            bottom: 15px;
-            right: 15px;
-            width: 55px;
-            height: 55px;
-          }
-          .floating-whatsapp img {
-            width: 30px;
-            height: 30px;
-          }
-          
-          /* Fix gallery centering on mobile */
-          .card-group {
-            flex-direction: column;
-            align-items: center;
-          }
-          .card-group .card {
-            width: 100% !important;
-            max-width: 300px;
-            margin: 0.5rem auto;
-          }
-          .card-group .card img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-          }
-          
-          /* Evitar que WhatsApp flotante cubra contenido */
-          main, footer {
-            padding-bottom: 100px;
-          }
-        }
-        
-        /* Skip link visible on focus */
-        .visually-hidden-focusable:focus {
-          width: auto;
-          height: auto;
-          clip: auto;
-        }
-        
-        /* Mejorar estados focus para accesibilidad */
-        a:focus, button:focus, input:focus, textarea:focus, select:focus {
-          outline: 3px solid #0d6efd;
-          outline-offset: 2px;
-        }
-        
-        /* Mejorar contraste en navegación */
-        .navbar-light .navbar-nav .nav-link:hover,
-        .navbar-light .navbar-nav .nav-link:focus {
-          background-color: rgba(13, 110, 253, 0.1);
-          border-radius: 4px;
-        }
-        
-        /* Smooth scroll */
-        html {
-          scroll-behavior: smooth;
-        }
-        
-        /* Mejora de transiciones en cards (solo dispositivos con hover real) */
-        .card {
-          transition: all 0.3s ease;
-          border: 1px solid rgba(0, 0, 0, 0.08);
-          border-radius: 12px;
-          overflow: hidden;
-        }
-
-        @media (hover: hover) and (pointer: fine) {
-          .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            border-color: rgba(0, 51, 102, 0.2);
-          }
-          
-          .card img[onclick] {
-            cursor: pointer;
-            transition: all 0.3s ease;
-          }
-          
-          .card img[onclick]:hover {
-            transform: scale(1.02);
-            filter: brightness(0.95);
-          }
-          
-          .card-body {
-            transition: background-color 0.3s ease;
-          }
-          
-          .card:hover .card-body {
-            background-color: rgba(0, 51, 102, 0.02);
-          }
-        }
-
-        .info-card-img {
-          width: 100%;
-          aspect-ratio: 4 / 3;
-          object-fit: cover;
-        }
-        
-        /* Tablet responsive improvements */
-        @media (min-width: 769px) and (max-width: 1024px) {
-          .card-group {
-            justify-content: center;
-          }
-          .card-group .card {
-            flex: 0 1 calc(50% - 1rem);
-            margin: 0.5rem;
-          }
-        }
-
-        .hero-banner .lead {
-          max-width: 60ch;
-          margin: 0 auto 1rem;
-        }
-
-        .section-intro .lead {
-          max-width: 75ch;
-          margin: 0 auto;
-          line-height: 1.65;
-        }
-
-        .quick-actions {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.75rem;
-          justify-content: center;
-        }
-
-        .gallery-section .card-group {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.5rem;
-          justify-content: center;
-        }
-
-        .gallery-section .card {
-          flex: 1 0 160px;
-          border: none;
-        }
-
-        .gallery-section .card img {
-          border-radius: 0.5rem;
-        }
-
-        img {
-          max-width: 100%;
-          height: auto;
-        }
-
-        .gallery-section .card img {
-          aspect-ratio: 4 / 3;
-          object-fit: cover;
-          display: block;
-        }
-
-        .modal-img {
-          max-width: 100%;
-          height: auto;
-        }
-
-        /* Espaciado responsivo mejorado */
-        .section-spacing {
-          margin: 2rem 0;
-        }
-        
-        @media (min-width: 768px) {
-          .section-spacing {
-            margin: 3rem 0;
-          }
-        }
-        
-        @media (min-width: 992px) {
-          .section-spacing {
-            margin: 4rem 0;
-          }
-        }
-        
-        @media (max-width: 576px) {
-          .hero-banner .display-4 {
-            font-size: clamp(1.5rem, 5vw, 2rem);
-            line-height: 1.2;
-          }
-          .hero-banner .lead {
-            font-size: 1rem;
-            line-height: 1.5;
-          }
-          .navbar .btn {
-            padding: 0.5rem 1rem;
-          }
-          .btn-whatsapp {
-            width: 100%;
-          }
-          .contact-card {
-            padding: 1.5rem;
-          }
-          .gallery-section .card-group {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 0.5rem;
-          }
-          .gallery-section .card {
-            width: 100% !important;
-          }
-          .gallery-section .card img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-          }
-          .nav-btn-left {
-            left: 6px;
-          }
-          .nav-btn-right {
-            right: 6px;
-          }
-          .modal-dialog {
-            margin: 0.5rem;
-          }
-        }
-
-        @media (min-width: 577px) and (max-width: 992px) {
-          .gallery-section .card-group {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 0.75rem;
-          }
-          .gallery-section .card {
-            width: 100% !important;
-          }
-        }
-</style>
 </head>
 
 <body id="top">
-  <!-- Barra de progreso de lectura -->
-  <div class="reading-progress" id="readingProgress"></div>
+
+
   
   <!-- Skip link para accesibilidad -->
   <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 bg-primary text-white p-2 m-2" style="z-index: 9999;">Saltar al contenido principal</a>
@@ -840,33 +221,212 @@
   <header>
     <!-- Simplificado para mobile first: el brand y el botón se distribuyen en cualquier pantalla -->
     <nav class="navbar navbar-light bg-light py-3 shadow-sm" aria-label="Navegación principal">
-      <div class="container-fluid d-flex justify-content-between px-4">
-        <!-- El texto del brand es un poco más pequeño en móvil con 'fs-5' -->
-        <a class="navbar-brand text-primary fw-bold fs-5" href="https://www.otorrinoenpilar.com/">
-          Otorrino en Pilar
+      <div class="container-fluid d-flex justify-content-between px-3">
+        <a class="navbar-brand text-primary fw-bold" href="index.html">
+          OtorrinoEnPilar
         </a>
-        <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-outline-primary fw-bold rounded-pill px-4">
-          Contáctenos
+        <a href="#contacto" class="btn btn-primary">
+          Contacto
         </a>
       </div>
     </nav>
 
     <!-- Se ajusta el padding con clases responsivas: 'p-4' en móvil y 'p-lg-5' en pantallas grandes -->
     <div class="p-4 p-lg-5 text-center text-white hero-banner" style="background-color: #003366;">
-        <h1 class="display-4 fw-bold">Rinoplastia y Rinoseptumplastia en Pilar: Cirugía Estética y Funcional de Nariz</h1>
-        <p class="lead mb-4">Simulación digital preoperatoria y tratamientos personalizados. Dr. Juan Mosovich - Pilar y Zona Norte.</p>
-        <div class="quick-actions">
-          <a href="#consulrino" class="btn btn-light fw-bold rounded-pill">
-            <i class="fab fa-whatsapp me-2"></i>Consultar por WhatsApp
+        <h1 class="h2 fw-bold mb-3">Rinoplastia y Rinoseptumplastia en Pilar</h1>
+        <p class="mb-4">Simulación digital preoperatoria y tratamientos personalizados.<br>Dr. Juan Mosovich - Pilar y Zona Norte.</p>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> -->
+<script>
+// Alterna visibilidad y texto de los botones 'Ver más'/'Ver menos' sin Bootstrap
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.toggle-btn').forEach(function(btn) {
+    var targetId = btn.getAttribute('href');
+    if (!targetId) return;
+    var target = document.querySelector(targetId);
+    if (!target) return;
+    // Inicializa estado
+    target.style.display = target.classList.contains('show') ? 'block' : 'none';
+    btn.textContent = target.classList.contains('show') ? 'Ver menos' : 'Ver más';
+    btn.setAttribute('aria-expanded', target.classList.contains('show') ? 'true' : 'false');
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var visible = target.style.display === 'block';
+      if (visible) {
+        target.style.display = 'none';
+        btn.textContent = 'Ver más';
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        target.style.display = 'block';
+        btn.textContent = 'Ver menos';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+});
+</script>
+<script>
+// Sincroniza el texto de los botones 'Ver más'/'Ver menos' con el estado del collapse
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() { // Espera a que Bootstrap inicialice
+    document.querySelectorAll('.toggle-btn').forEach(function(btn) {
+      var targetId = btn.getAttribute('href');
+      if (!targetId) return;
+      var target = document.querySelector(targetId);
+      if (!target) return;
+      // Cambia el texto al abrir
+      target.addEventListener('show.bs.collapse', function() {
+        btn.textContent = 'Ver menos';
+        btn.setAttribute('aria-expanded', 'true');
+      });
+      // Cambia el texto al cerrar
+      target.addEventListener('hide.bs.collapse', function() {
+        btn.textContent = 'Ver más';
+        btn.setAttribute('aria-expanded', 'false');
+      });
+      // Estado inicial
+      if (target.classList.contains('show')) {
+        btn.textContent = 'Ver menos';
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        btn.textContent = 'Ver más';
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }, 100);
+});
+</script>
+<script>
+// Sincroniza el texto de los botones 'Ver más'/'Ver menos' con el estado del collapse
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.toggle-btn').forEach(function(btn) {
+    var targetId = btn.getAttribute('href');
+    if (!targetId) return;
+    var target = document.querySelector(targetId);
+    if (!target) return;
+    // Cambia el texto al abrir
+    target.addEventListener('show.bs.collapse', function() {
+      btn.textContent = 'Ver menos';
+      btn.setAttribute('aria-expanded', 'true');
+    });
+    // Cambia el texto al cerrar
+    target.addEventListener('hide.bs.collapse', function() {
+      btn.textContent = 'Ver más';
+      btn.setAttribute('aria-expanded', 'false');
+    });
+    // Estado inicial
+    if (target.classList.contains('show')) {
+      btn.textContent = 'Ver menos';
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      btn.textContent = 'Ver más';
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+</script>
+<script>
+// Sincroniza el texto de los botones 'Ver más'/'Ver menos' con el estado del collapse
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.toggle-btn').forEach(function(btn) {
+    var targetId = btn.getAttribute('href');
+    if (!targetId) return;
+    var target = document.querySelector(targetId);
+    if (!target) return;
+    // Cambia el texto al abrir
+    target.addEventListener('show.bs.collapse', function() {
+      btn.textContent = 'Ver menos';
+      btn.setAttribute('aria-expanded', 'true');
+    });
+    // Cambia el texto al cerrar
+    target.addEventListener('hide.bs.collapse', function() {
+      btn.textContent = 'Ver más';
+      btn.setAttribute('aria-expanded', 'false');
+    });
+    // Estado inicial
+    if (target.classList.contains('show')) {
+      btn.textContent = 'Ver menos';
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      btn.textContent = 'Ver más';
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+</script>
+<script>
+// Sincroniza el texto de los botones 'Ver más'/'Ver menos' con el estado del collapse
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.toggle-btn').forEach(function(btn) {
+    var targetId = btn.getAttribute('href');
+    if (!targetId) return;
+    var target = document.querySelector(targetId);
+    if (!target) return;
+    // Cambia el texto al abrir
+    target.addEventListener('show.bs.collapse', function() {
+      btn.textContent = 'Ver menos';
+      btn.setAttribute('aria-expanded', 'true');
+    });
+    // Cambia el texto al cerrar
+    target.addEventListener('hide.bs.collapse', function() {
+      btn.textContent = 'Ver más';
+      btn.setAttribute('aria-expanded', 'false');
+    });
+    // Estado inicial
+    if (target.classList.contains('show')) {
+      btn.textContent = 'Ver menos';
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      btn.textContent = 'Ver más';
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+</script>
+<script>
+// Sincroniza el texto de los botones 'Ver más'/'Ver menos' con el estado del collapse
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.toggle-btn').forEach(function(btn) {
+    var targetId = btn.getAttribute('href');
+    if (!targetId) return;
+    var target = document.querySelector(targetId);
+    if (!target) return;
+    // Cambia el texto al abrir
+    target.addEventListener('show.bs.collapse', function() {
+      btn.textContent = 'Ver menos';
+      btn.setAttribute('aria-expanded', 'true');
+    });
+    // Cambia el texto al cerrar
+    target.addEventListener('hide.bs.collapse', function() {
+      btn.textContent = 'Ver más';
+      btn.setAttribute('aria-expanded', 'false');
+    });
+    // Estado inicial
+    if (target.classList.contains('show')) {
+      btn.textContent = 'Ver menos';
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      btn.textContent = 'Ver más';
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
+</script>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <a href="#consulrino" class="btn btn-success">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-whatsapp" viewBox="0 0 16 16">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+</svg> Consultar WhatsApp
           </a>
-          <a href="https://maps.app.goo.gl/H8MGdSrEawJcMZxE6" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light fw-bold rounded-pill">
-            <i class="fas fa-map-marker-alt me-2"></i>Cómo llegar
+          <a href="https://maps.app.goo.gl/H8MGdSrEawJcMZxE6" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+</svg> Cómo llegar
           </a>
-          <a href="#galeria" class="btn btn-outline-light fw-bold rounded-pill">Ver casos clínicos</a>
+          <a href="#galeria" class="btn btn-outline-light">Ver casos clínicos</a>
         </div>
       </div>
-      </div>
-    </div>
   </header>
    
     <main id="main-content">
@@ -902,49 +462,59 @@
   <h2 id="consulrino" class="text-center text-white section-title-primary">Consúltenos su caso sin cargo por chat.</h2>
       
  <div class="container-sm text-center my-4">
-            <div class="card contact-card">
-                <img src="./imagenes/perf-nariz.webp" class="card-img-top mx-auto mb-4" alt="Perfil femenino antes de rinoplastia - Consulta de cirugía nasal" fetchpriority="high" width="120" height="120">
-                <div class="card-body p-0">
-                    <p class="card-text mb-4" style="color: #555;">
-                        Resuelva todas sus dudas sobre la rinoseptumplastia de forma rápida y confidencial a través de WhatsApp.
-                    </p>
-                    <a href="https://api.whatsapp.com/send?phone=541168212512&text=Quiero%20una%20consulta%20%20por%20chat%20con%20el%20Dr.%20Mosovich%20por%20una%20rinoplastia" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp mb-3" aria-label="Iniciar chat por WhatsApp">
-                        <i class="fab fa-whatsapp me-2"></i> Iniciar chat
-                    </a>
-                    
-                    <div class="mt-4 pt-3 border-top">
-                        <p class="text-muted mb-2" style="font-size: 0.9rem;">
-                            <i class="fas fa-map-marker-alt text-primary me-2"></i>
-                            <strong>Consultorio Particular en Pilar</strong>
-                        </p>
-                        <p class="mb-2" style="color: #333; font-size: 0.95rem;">
-                            Complejo 46 Plaza, Caamaño 1100, Ed. Agora 2, 1er Piso, Of. 110<br>
-                            <small class="text-muted">(Panamericana km 46)</small>
-                        </p>
-                        <a href="https://maps.app.goo.gl/H8MGdSrEawJcMZxE6" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm" aria-label="Ver ubicación en Google Maps">
-                            <i class="fas fa-directions me-1"></i> Cómo llegar
-                        </a>
-                    </div>
-                    
-                    <div class="mt-3">
-                        <p class="text-muted mb-1" style="font-size: 0.85rem;">
-                            Atención en: Pilar, Escobar, Del Viso, Tortuguitas, Derqui y Zona Norte
-                        </p>
-                    </div>
-                </div>
-            </div>
+  <div class="card border-0 mx-auto" style="max-width: 420px;">
+    <img src="./imagenes/perf-nariz.webp" class="rounded-circle mx-auto d-block mt-4 mb-3" alt="Perfil femenino antes de rinoplastia - Consulta de cirugía nasal" fetchpriority="high" width="50" height="50" style="object-fit:cover;">
+    <div class="card-body d-flex flex-column align-items-center gap-3 p-3">
+      <p class="card-text text-secondary text-center mb-0">
+        Resuelva todas sus dudas sobre la rinoseptumplastia de forma rápida y confidencial a través de WhatsApp.
+      </p>
+      <a href="https://api.whatsapp.com/send?phone=541168212512&text=Quiero%20una%20consulta%20%20por%20chat%20con%20el%20Dr.%20Mosovich%20por%20una%20rinoplastia" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-lg w-100 d-flex align-items-center justify-content-center gap-2" aria-label="Iniciar chat por WhatsApp">
+           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-whatsapp" viewBox="0 0 16 16">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+</svg> Iniciar chat
+      </a>
+      <div class="w-100 mt-2 pt-2 border-top">
+        <p class="text-muted mb-2 small">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
+  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+</svg>
+         
+          <strong>Consultorio Particular en Pilar</strong>
+        </p>
+        <p class="mb-2 text-secondary small">
+          Complejo 46 Plaza, Caamaño 1100, Ed. Agora 2, 1er Piso, Of. 110<br>
+          <span class="text-muted">(Panamericana km 46)</span>
+        </p>
+        <a href="https://maps.app.goo.gl/H8MGdSrEawJcMZxE6" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-signpost" viewBox="0 0 16 16">
+  <path d="M7 1.414V4H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h5v6h2v-6h3.532a1 1 0 0 0 .768-.36l1.933-2.32a.5.5 0 0 0 0-.64L13.3 4.36a1 1 0 0 0-.768-.36H9V1.414a1 1 0 0 0-2 0M12.532 5l1.666 2-1.666 2H2V5z"/>
+</svg> Cómo llegar
+      
+          </a>
+      </div>
+      <div class="w-100 mt-2">
+        <p class="text-muted mb-0 small text-center">
+          Atención en: Pilar, Escobar, Del Viso, Tortuguitas, Derqui y Zona Norte
+        </p>
+      </div>
+    </div>
+  </div>
         </div>
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#consulrino" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver al menú</a>
+  <a href="#main-content" class="btn btn-sm nav-menu-btn" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894z"/>
+</svg> Volver al menú</a>
 </div> 
 
   <h2 id="info" class="text-center text-white section-title-primary">Información sobre rinoplastias.</h2>
       
-<div class="card-group p-1">
+<div class="card-group">
   
-    <div class="card p-3">
-        <img fetchpriority="high" decoding="async" src="./imagenes/blogrino2.webp" class="card-img-top info-card-img" alt="Perfil de una persona con una nariz armoniosa, mostrando mejora estética y respiración clara después de la rinoplastia" width="350" height="230">
+      <div class="card">
+        <img fetchpriority="high" decoding="async" src="./imagenes/blogrino2.webp" class="card-img-top" alt="Perfil de una persona con una nariz armoniosa, mostrando mejora estética y respiración clara después de la rinoplastia" width="350" height="245" style="max-width:100%;height:auto;">
         <div class="card-body">
             <h3 class="card-title h5">Rinoplastia: La Armonía Perfecta entre Belleza y Salud.</h3>
             <article class="card-text">
@@ -975,9 +545,11 @@
         </div>
     </div>
 
-      <div class="card p-3">
-        <img loading="lazy" decoding="async" src="./imagenes/rinoplastia-800.webp" srcset="./imagenes/rinoplastia-400.webp 400w, ./imagenes/rinoplastia-800.webp 800w, ./imagenes/rinoplastia-1200.webp 1200w" sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 350px" class="card-img-top info-card-img" alt="Mujer sonriendo con confianza después de una rinoplastia exitosa, con una nariz sutil y de aspecto natural." width="350" height="200">
-        <div class="card-body">
+    
+
+        <div class="card">
+          <img loading="lazy" decoding="async" src="./imagenes/rinoplastia-400.webp" class="card-img-top" alt="Mujer sonriendo con confianza después de una rinoplastia exitosa, con una nariz sutil y de aspecto natural." width="350" height="245" style="max-width:100%;height:auto;">
+          <div class="card-body">
             <h3 class="card-title h5">Beneficios de la Rinoplastia: Más Allá de la Estética.</h3>
             <article class="card-text">
                 <div class="text-center mb-2">
@@ -1005,13 +577,13 @@
                 </span>
             </article>
         </div>
-        <div class="card-footer bg-primary text-white">
+        <div class="card-footer bg-primary">
         </div>
     </div>
 
 
-    <div class="card p-3">
-        <img loading="lazy" decoding="async" src="./imagenes/blogrino3.webp" class="card-img-top info-card-img" alt="Ilustración realista de una nariz, enfatizando la armonía natural con el rostro en lugar de la perfección idealizada." width="350" height="230">
+    <div class="card">
+        <img loading="lazy" decoding="async" src="./imagenes/blogrino3.webp" class="card-img-top info-card-img" alt="Ilustración realista de una nariz, enfatizando la armonía natural con el rostro en lugar de la perfección idealizada." width="348" height="244" style="max-width:100%;height:auto;">
         <div class="card-body">
             <h3 class="card-title h5">Rinoplastia: La Verdad Detrás de la Perfección.</h3>
             <article class="card-text">
@@ -1043,24 +615,27 @@
                 </span>
             </article>
         </div>
-        <div class="card-footer bg-primary text-white">
+        <div class="card-footer bg-primary">
         </div>
     </div>
 </div>
 
 
 
-                              <div class="container-flex text-center my-4 p-0">
-                            <a href="#info" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver al menú</a>
-                           </div> 
+      <div class="container-flex text-center my-4 p-0">
+  <a href="#main-content" class="btn btn-sm nav-menu-btn" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894z"/>
+</svg> Volver al menú</a>
+    </div> 
 
                 
                                                             
                        
 
     <div class="card-group p-1">
+
     <div class="card p-3">
-      <img loading="lazy" decoding="async" src="./imagenes/simulacion-rino-gemini.webp"  class="card-img-top info-card-img" alt="hombre haciendo una simulación de rinoplastia en una computadora." width="350" height="230">
+      <img loading="lazy" decoding="async" src="./imagenes/simulacion-rino-gemini.webp"  class="card-img-top info-card-img" alt="hombre haciendo una simulación de rinoplastia en una computadora." style="aspect-ratio:370/280;width:100%;height:auto;">
         <div class="card-body">
             <h3 class="card-title h5">Tu Futuro Rostro Hoy: La Magia de la Simulación en Rinoplastia.</h3>
             <article class="card-text">
@@ -1084,13 +659,13 @@
                 </span>
             </article>
         </div>
-        <div class="card-footer bg-primary text-white">
+        <div class="card-footer bg-primary">
         </div>
     </div>
 
     <div class="card p-3">
         <div class="card-body">
-            <img loading="lazy" decoding="async" src="./imagenes/avion.webp"  class="card-img-top info-card-img" alt="avion" width="350" height="230">
+            <img loading="lazy" decoding="async" src="./imagenes/avion.webp"  class="card-img-top info-card-img" alt="avion" style="aspect-ratio:338/225;width:100%;height:auto;">
             <h3 class="card-title h5">¿Rinoplastia en el Extranjero? Lo Que Nadie Te Cuenta Antes de Viajar.</h3>
             <article class="card-text">
                 <div class="text-center mb-2">
@@ -1101,13 +676,10 @@
                 <span class="collapse" id="turismoRino">
                     <h4>La Promesa del Ahorro: ¿Vale la Pena el Riesgo de un Viaje por tu Nariz?</h4>
                     <p>La <strong>rinoplastia</strong> es una de las cirugías estéticas más buscadas, y con los costos variables a nivel global, el <strong>turismo médico</strong> se ha disparado. ¿Es el ahorro económico una razón suficiente para cruzar fronteras en busca de tu nueva nariz? Te invitamos a explorar las dos caras de la moneda antes de tomar una decisión que impactará tu salud y tu bolsillo.</p>
-
                     <h4>El Atractivo de lo Lejano: Ventajas y Consideraciones de Costo</h4>
                     <p>Países como Argentina, México o Turquía seducen con precios significativamente más bajos que en Estados Unidos o Europa. Este ahorro, junto con el acceso a <strong>cirujanos especializados</strong> y <strong>paquetes de turismo médico</strong> que incluyen alojamiento y transporte, puede parecer irresistible. Además, las menores listas de espera prometen una solución más rápida. Sin embargo, es vital entender que la cobertura de obras sociales y prepagas suele limitarse a rinoplastias con fines de reparación (funcionales), dejando las estéticas fuera de la mayoría de los planes, salvo algunas prepagas exclusivas.</p>
-
                     <h4>La Cara Oculta del Viaje: Riesgos y Desafíos Inesperados</h4>
                     <p>Pero la tentación del ahorro esconde desafíos significativos. Las <strong>barreras culturales y de idioma</strong> pueden llevar a malentendidos cruciales sobre el procedimiento y el postoperatorio. Los <strong>riesgos de calidad y seguridad</strong> varían enormemente entre países, y la falta de regulación puede poner en peligro tu salud. El <strong>seguimiento postoperatorio</strong> se vuelve una odisea, y en caso de <strong>complicaciones o necesidad de revisión</strong>, podrías encontrarte en una situación muy difícil, con cirujanos locales reacios a intervenir en trabajos ajenos. ¡Cuidado con los <strong>gastos adicionales no anticipados</strong> que pueden anular cualquier ahorro inicial!</p>
-
                     <h4>Tu Decisión Informada: Coordinación y Preparación Esencial</h4>
                     <p>Si resides fuera del país, la <strong>coordinación online</strong> puede facilitar la consulta inicial. La rinoplastia puede realizarse bajo <strong>anestesia local o general</strong>, adaptándose a cada caso. Sin embargo, la decisión de operarte en el extranjero no debe tomarse a la ligera. Investiga a fondo las credenciales del cirujano, la reputación de las instalaciones y ten un plan de contingencia. Consultar a un médico local para una evaluación prequirúrgica es un paso indispensable. Tu salud y tu bienestar merecen la máxima diligencia.</p>
                 </span>
@@ -1118,7 +690,7 @@
     </div>
 
     <div class="card p-3">
-      <img loading="lazy" decoding="async" src="./imagenes/rinop.webp"  class="card-img-top info-card-img" alt="foto de antes y después de una rinoplastia" width="350" height="230">
+      <img loading="lazy" decoding="async" src="./imagenes/rinop.webp"  class="card-img-top info-card-img" alt="foto de antes y después de una rinoplastia" width="330" height="220" style="max-width:100%;height:auto;">
         <div class="card-body">
             <h3 class="card-title h5">Desvelando los Secretos: ¿Qué Tipo de Rinoplastia es Para Ti?</h3>
             <article class="card-text">
@@ -1157,11 +729,17 @@
 
 
               <div class="container-flex text-center my-4 p-0">
-                <a href="#info" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver al menú</a>
+                <a href="#main-content" class="btn btn-sm nav-menu-btn" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894z"/>
+</svg> Volver al menú
+</a>
               </div> 
 
-              <section id="faq" class="container my-4 section-spacing">
-                <h2 class="text-center text-white section-title-secondary">Preguntas frecuentes sobre rinoplastia</h2>
+
+ 
+              <section  class="container my-1 section-spacing">
+               <h2 id="faq" class="text-center section-title-secondary">Preguntas frecuentes sobre rinoplastia</h2>
                 <div class="accordion my-3" id="faqRino">
                   <div class="accordion-item">
                     <h3 class="accordion-header" id="faqOne">
@@ -1211,433 +789,73 @@
                       </div>
                     </div>
                   </div>
+                   <div class="accordion-item">
+                    <h3 class="accordion-header" id="faqFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                        ¿Qué es la Rinoplastia Ultrasónica?
+                      </button>
+                    </h3>
+                    <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqFive" data-bs-parent="#faqRino">
+                      <div class="accordion-body">
+                        La Rinoplastia Ultrasónica es una técnica avanzada que utiliza un dispositivo ultrasónico para esculpir el hueso nasal con mayor precisión y menor trauma.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="faqSix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseSix" aria-expanded="false" aria-controls="faqCollapseSix">
+                        ¿Se pueden evitar los taponajes nasales en el postquirúrgico?
+                      </button>
+                    </h3>
+                    <div id="faqCollapseSix" class="accordion-collapse collapse" aria-labelledby="faqSix" data-bs-parent="#faqRino">
+                      <div class="accordion-body">
+                        En casi todos los casos, es posible evitar los taponajes nasales gracias a técnicas avanzadas como la Rinoplastia Ultrasónica, que reduce el trauma y la inflamación.
+
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </section>
 
-                        <section id="galeria-section" class="gallery-section">
+        
+
+                        <section id="galeria-section" class="container my-5">
                         <!--galeria rino-->  
                     <div class="py-3 my-2 section-title-primary">
-        <h2 id="galeria" class="text-center text-white mb-2">Algunos casos clínicos.</h2>
-        <p class="card-title text-center text-white" style="font-size: 1.15rem; margin: 0;">Dr. Juan Mosovich.</p>
-    </div>
-
-    <div class="text-center my-3 py-3">
-        <a target="_blank" rel="noopener noreferrer" href="https://bejewelled-daffodil-60c301.netlify.app">
+        <h2 id="galeria" class="text-center text-white mb-2">Casos reales de rinoplastia</h2>
+        <div class="text-center my-3 py-3">
+          <a target="_blank" rel="noopener noreferrer" href="https://bejewelled-daffodil-60c301.netlify.app">
             <button type="button" class="btn btn-secondary btn-lg">
-                🔍 Ver todas las imágenes
+              🔍 Ver galería de imágenes
             </button>
-        </a>
-    </div>
-
-    <!-- Inicio de casos -->
-    <div class="text-center bg-primary text-white">
-        <h6 class="text-white">🔍Caso 1</h6>
-        <p>Rinoplastia abierta, con tratamiento de giba y punta. <br> (click sobre imagen para ampliar).</p>
-    </div>
-    <div class="card-group align-items-stretch">
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/1pd-800.webp" srcset="./imagenes/1pd-400.webp 400w, ./imagenes/1pd-800.webp 800w, ./imagenes/1pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 1 perfil derecho antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/1pi-800.webp" srcset="./imagenes/1pi-400.webp 400w, ./imagenes/1pi-800.webp 800w, ./imagenes/1pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 1 perfil izquierdo antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/1od-800.webp" srcset="./imagenes/1od-400.webp 400w, ./imagenes/1od-800.webp 800w, ./imagenes/1od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 1 oblicuo derecho antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/1oi-800.webp" srcset="./imagenes/1oi-400.webp 400w, ./imagenes/1oi-800.webp 800w, ./imagenes/1oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 1 oblicuo izquierdo antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-    </div>
-    <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
-    </div>
-
-    <!-- Repite la misma estructura para cada caso (Casos 2 a 12) -->
-    <!-- Ejemplo de otro caso -->
-    <div class="text-center bg-primary text-white">
-        <h6 class="text-white">🔍Caso 2</h6>
-        <p>Rinoplastia abierta, con tratamiento de giba y punta. <br> (click sobre imagen para ampliar).</p>
-    </div>
-    <div class="card-group">
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/2f-800.webp" srcset="./imagenes/2f-400.webp 400w, ./imagenes/2f-800.webp 800w, ./imagenes/2f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 2 frontal antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/2od-800.webp" srcset="./imagenes/2od-400.webp 400w, ./imagenes/2od-800.webp 800w, ./imagenes/2od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 2 oblicuo derecho antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/2oi-800.webp" srcset="./imagenes/2oi-400.webp 400w, ./imagenes/2oi-800.webp 800w, ./imagenes/2oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 2 oblicuo izquierdo antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/2pd-800.webp" srcset="./imagenes/2pd-400.webp 400w, ./imagenes/2pd-800.webp 800w, ./imagenes/2pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 2 perfil derecho antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/2pi-800.webp" srcset="./imagenes/2pi-400.webp 400w, ./imagenes/2pi-800.webp 800w, ./imagenes/2pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top" alt="rinoplastia caso 2 perfil izquierdo antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-    </div>
-    <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
-    </div>
-
-    <!-- Continúa con los demás casos de la misma forma -->
-    <div class="text-center bg-primary text-white">
-        <a target="_blank" rel="noopener-noreferrer" href="https://bejewelled-daffodil-60c301.netlify.app"><h6 class="text-white" >🔍Caso 3</h6></a>
-          <p>Rinoplastia abierta, nariz torcida con tratamiento de giba y punta. <br> (click sobre imagen para ampliar).</p>
-       </div>
-      
-      <div class="card-group">
-            
-            <div class="card" style="width: 18rem;">
-                <img src="./imagenes/3f-800.webp" srcset="./imagenes/3f-400.webp 400w, ./imagenes/3f-800.webp 800w, ./imagenes/3f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-            </div>
-      
-              <div class="card" style="width: 18rem;">
-                <img src="./imagenes/3od-800.webp" srcset="./imagenes/3od-400.webp 400w, ./imagenes/3od-800.webp 800w, ./imagenes/3od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-           </div>
-      
-              <div class="card" style="width: 18rem;">
-                <img src="./imagenes/3oi-800.webp" srcset="./imagenes/3oi-400.webp 400w, ./imagenes/3oi-800.webp 800w, ./imagenes/3oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-             </div>
-      
-              <div class="card" style="width: 18rem;">
-                <img src="./imagenes/3pd-800.webp" srcset="./imagenes/3pd-400.webp 400w, ./imagenes/3pd-800.webp 800w, ./imagenes/3pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-             </div>
-             <div class="card" style="width: 18rem;">
-              <img src="./imagenes/3pi-800.webp" srcset="./imagenes/3pi-400.webp 400w, ./imagenes/3pi-800.webp 800w, ./imagenes/3pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-           </div>
-           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/3b-800.webp" srcset="./imagenes/3b-400.webp 400w, ./imagenes/3b-800.webp 800w, ./imagenes/3b-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
-        </div>
-
-        <div class="container-flex text-center my-4 p-0">
-          <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
-        </div>   
-        <div class="text-center bg-primary text-white">
-            <a target="_blank" rel="noopener-noreferrer" href="https://bejewelled-daffodil-60c301.netlify.app"><h6 class="text-white" >🔍Caso 4</h6></a>
-            <p>Nariz con dorso en silla de montar por traumatismo. Rinoplastia abierta con injerto de fascia temporal y cartílago en dorso. <br> (click sobre imagen para ampliar).</p>
-         </div>
-        
-        <div class="card-group">
-              
-              <div class="card" style="width: 18rem;">
-                  <img src="./imagenes/4f-800.webp" srcset="./imagenes/4f-400.webp 400w, ./imagenes/4f-800.webp 800w, ./imagenes/4f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después perfil caso 1" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-              </div>
-              <div class="card" style="width: 18rem;">
-                  <img src="./imagenes/4oi-800.webp" srcset="./imagenes/4oi-400.webp 400w, ./imagenes/4oi-800.webp 800w, ./imagenes/4oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después oblic caso 1" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-               </div>
-        
-                <div class="card" style="width: 18rem;">
-                  <img src="./imagenes/4pd-800.webp" srcset="./imagenes/4pd-400.webp 400w, ./imagenes/4pd-800.webp 800w, ./imagenes/4pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después oblic aso 1" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-               </div>
-               <div class="card" style="width: 18rem;">
-                <img src="./imagenes/4pi-800.webp" srcset="./imagenes/4pi-400.webp 400w, ./imagenes/4pi-800.webp 800w, ./imagenes/4pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después oblic aso 1" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-             </div>
-           </div>
-
-           <div class="container-flex text-center my-4 p-0">
-            <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
-          </div> 
-
-           <div class="text-center bg-primary text-white">
-            <a target="_blank" rel="noopener-noreferrer" href="https://bejewelled-daffodil-60c301.netlify.app"><h6 class="text-white" >🔍Caso 5</h6></a>
-            <p>Resección de giba con rotación y proyección de punta. <br> (click sobre imagen para ampliar).</p>
-         </div>
-
-
-          <div class="card-group">
-              
-            <div class="card" style="width: 18rem;">
-                <img src="./imagenes/5f-800.webp" srcset="./imagenes/5f-400.webp 400w, ./imagenes/5f-800.webp 800w, ./imagenes/5f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-            </div>
-      
-              <div class="card" style="width: 18rem;">
-                <img src="./imagenes/5od-800.webp" srcset="./imagenes/5od-400.webp 400w, ./imagenes/5od-800.webp 800w, ./imagenes/5od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-           </div>
-      
-              <div class="card" style="width: 18rem;">
-                <img src="./imagenes/5oi-800.webp" srcset="./imagenes/5oi-400.webp 400w, ./imagenes/5oi-800.webp 800w, ./imagenes/5oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-             </div>
-      
-              <div class="card" style="width: 18rem;">
-                <img src="./imagenes/5pd-800.webp" srcset="./imagenes/5pd-400.webp 400w, ./imagenes/5pd-800.webp 800w, ./imagenes/5pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-             </div>
-             <div class="card" style="width: 18rem;">
-              <img src="./imagenes/5pi-800.webp" srcset="./imagenes/5pi-400.webp 400w, ./imagenes/5pi-800.webp 800w, ./imagenes/5pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-           </div>
-           <div class="card" style="width: 18rem;">
-            <img src="./imagenes/5b-800.webp" srcset="./imagenes/5b-400.webp 400w, ./imagenes/5b-800.webp 800w, ./imagenes/5b-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
+          </a>
         </div>
         </div>
-    </div>
 
-    <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
-    </div> 
+    </main>
 
-    <div class="text-center bg-primary text-white">
-      <a target="_blank" rel="noopener-noreferrer" href="https://bejewelled-daffodil-60c301.netlify.app"><h6 class="text-white" >🔍Caso 6</h6></a>
-      <p>Rinoplastia abierta,con tratamiento de giba, proyección y rotación de punta. <br> (click sobre imagen para ampliar).</p>
-   </div>
-  
-  <div class="card-group">
-        
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/6f-800.webp" srcset="./imagenes/6f-400.webp 400w, ./imagenes/6f-800.webp 800w, ./imagenes/6f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/6od-800.webp" srcset="./imagenes/6od-400.webp 400w, ./imagenes/6od-800.webp 800w, ./imagenes/6od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-       </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/6oi-800.webp" srcset="./imagenes/6oi-400.webp 400w, ./imagenes/6oi-800.webp 800w, ./imagenes/6oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/6pd-800.webp" srcset="./imagenes/6pd-400.webp 400w, ./imagenes/6pd-800.webp 800w, ./imagenes/6pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
-         <div class="card" style="width: 18rem;">
-          <img src="./imagenes/6pi-800.webp" srcset="./imagenes/6pi-400.webp 400w, ./imagenes/6pi-800.webp 800w, ./imagenes/6pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-       </div>
-       <div class="card" style="width: 18rem;">
-        <img src="./imagenes/6b-800.webp" srcset="./imagenes/6b-400.webp 400w, ./imagenes/6b-800.webp 800w, ./imagenes/6b-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-     </div>
-    </div>
+  <!-- Botón flotante WhatsApp a la derecha -->
 
-    <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
-    </div> 
+  <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich%2C%20quiero%20consultar%20por%20rinoplastia" target="_blank" rel="noopener noreferrer" class="btn btn-success btn-lg rounded-circle shadow position-fixed" style="bottom: 24px; right: 24px; z-index: 1050; width:56px; height:56px; display:flex; align-items:center; justify-content:center; font-size:2rem;">
+   
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-whatsapp" viewBox="0 0 16 16">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+</svg>
 
-
-    <div class="text-center bg-primary text-white">
-      <a target="_blank" rel="noopener-noreferrer" href="https://bejewelled-daffodil-60c301.netlify.app"><h6 class="text-white" >🔍Caso 7</h6></a>
-      <p>Rinoplastia abierta,con tratamiento de giba, proyección y rotación de punta. <br> (click sobre imagen para ampliar).</p>
-   </div>
-  
-  <div class="card-group">
-        
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/7f-800.webp" srcset="./imagenes/7f-400.webp 400w, ./imagenes/7f-800.webp 800w, ./imagenes/7f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/7od-800.webp" srcset="./imagenes/7od-400.webp 400w, ./imagenes/7od-800.webp 800w, ./imagenes/7od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-       </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/7oi-800.webp" srcset="./imagenes/7oi-400.webp 400w, ./imagenes/7oi-800.webp 800w, ./imagenes/7oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/7pd-800.webp" srcset="./imagenes/7pd-400.webp 400w, ./imagenes/7pd-800.webp 800w, ./imagenes/7pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
-         <div class="card" style="width: 18rem;">
-          <img src="./imagenes/7pi-800.webp" srcset="./imagenes/7pi-400.webp 400w, ./imagenes/7pi-800.webp 800w, ./imagenes/7pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-       </div>
-       <div class="card" style="width: 18rem;">
-        <img src="./imagenes/7b-800.webp" srcset="./imagenes/7b-400.webp 400w, ./imagenes/7b-800.webp 800w, ./imagenes/7b-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-     </div>
-    </div>
-
-    <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
-    </div> 
-
-
-
-    <div class="text-center bg-primary text-white">
-      <a target="_blank" rel="noopener-noreferrer" href="https://bejewelled-daffodil-60c301.netlify.app"><h6 class="text-white" >🔍Caso 8</h6></a>
-      <p>Rinoplastia abierta,con tratamiento de giba, proyección y rotación de punta. <br> (click sobre imagen para ampliar).</p>
-   </div>
-  
-  <div class="card-group">
-        
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/8f-800.webp" srcset="./imagenes/8f-400.webp 400w, ./imagenes/8f-800.webp 800w, ./imagenes/8f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/8od-800.webp" srcset="./imagenes/8od-400.webp 400w, ./imagenes/8od-800.webp 800w, ./imagenes/8od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-       </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/8oi-800.webp" srcset="./imagenes/8oi-400.webp 400w, ./imagenes/8oi-800.webp 800w, ./imagenes/8oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/8pd-800.webp" srcset="./imagenes/8pd-400.webp 400w, ./imagenes/8pd-800.webp 800w, ./imagenes/8pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
-         <div class="card" style="width: 18rem;">
-          <img src="./imagenes/8pi-800.webp" srcset="./imagenes/8pi-400.webp 400w, ./imagenes/8pi-800.webp 800w, ./imagenes/8pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-       </div>
-       <div class="card" style="width: 18rem;">
-        <img src="./imagenes/8b-800.webp" srcset="./imagenes/8b-400.webp 400w, ./imagenes/8b-800.webp 800w, ./imagenes/8b-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-     </div>
-    </div>
-
-    <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
-    </div> 
-
-    <div class="text-center bg-primary text-white">
-      <a target="_blank" rel="noopener-noreferrer" href="https://bejewelled-daffodil-60c301.netlify.app"><h6 class="text-white" >🔍Caso 9</h6></a>
-      <p>Rinoplastia abierta,con tratamiento de giba, proyección y rotación de punta. <br> (click sobre imagen para ampliar).</p>
-   </div>
-  
-  <div class="card-group">
-        
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/9f-800.webp" srcset="./imagenes/9f-400.webp 400w, ./imagenes/9f-800.webp 800w, ./imagenes/9f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/9od-800.webp" srcset="./imagenes/9od-400.webp 400w, ./imagenes/9od-800.webp 800w, ./imagenes/9od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-       </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/9oi-800.webp" srcset="./imagenes/9oi-400.webp 400w, ./imagenes/9oi-800.webp 800w, ./imagenes/9oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/9pd-800.webp" srcset="./imagenes/9pd-400.webp 400w, ./imagenes/9pd-800.webp 800w, ./imagenes/9pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
-         <div class="card" style="width: 18rem;">
-          <img src="./imagenes/9pi-800.webp" srcset="./imagenes/9pi-400.webp 400w, ./imagenes/9pi-800.webp 800w, ./imagenes/9pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-       </div>
-       <div class="card" style="width: 18rem;">
-        <img src="./imagenes/9b-800.webp" srcset="./imagenes/9b-400.webp 400w, ./imagenes/9b-800.webp 800w, ./imagenes/9b-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-     </div>
-    </div>
-
-    <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
-    </div> 
-
-    <div class="text-center bg-primary text-white">
-      <a target="_blank" rel="noopener-noreferrer" href="https://bejewelled-daffodil-60c301.netlify.app"><h6 class="text-white" >🔍Caso 10</h6></a>
-      <p>Nariz torcida y problemas respiratorios asociados. Rinoplastia abierta con resección de giba, rotación de punta, corrección de desvío septal con spreader-graft. Turbinoplastía. <br> (click sobre imagen para ampliar).</p>
-   </div>
-  
-  <div class="card-group">
-        
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/f10-800.webp" srcset="./imagenes/f10-400.webp 400w, ./imagenes/f10-800.webp 800w, ./imagenes/f10-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/od10-800.webp" srcset="./imagenes/od10-400.webp 400w, ./imagenes/od10-800.webp 800w, ./imagenes/od10-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-       </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/oi10-800.webp" srcset="./imagenes/oi10-400.webp 400w, ./imagenes/oi10-800.webp 800w, ./imagenes/oi10-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/pd10-800.webp" srcset="./imagenes/pd10-400.webp 400w, ./imagenes/pd10-800.webp 800w, ./imagenes/pd10-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
-         <div class="card" style="width: 18rem;">
-          <img src="./imagenes/pi10-800.webp" srcset="./imagenes/pi10-400.webp 400w, ./imagenes/pi10-800.webp 800w, ./imagenes/pi10-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-       </div>
-       <div class="card" style="width: 18rem;">
-        <img src="./imagenes/b10-800.webp" srcset="./imagenes/b10-400.webp 400w, ./imagenes/b10-800.webp 800w, ./imagenes/b10-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-     </div>
-    </div>
-
-    <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
-    </div> 
-
-    <div class="text-center bg-primary text-white">
-      <a target="_blank" rel="noopener-noreferrer" href="https://bejewelled-daffodil-60c301.netlify.app"><h6 class="text-white" >🔍Caso 11</h6></a>
-      <p>Nariz en silla de montar por traumatismo. Injerto de dorso con fascia y cartílago. <br> (click sobre imagen para ampliar).</p>
-   </div>
-  
-  <div class="card-group">
-        
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/f11-800.webp" srcset="./imagenes/f11-400.webp 400w, ./imagenes/f11-800.webp 800w, ./imagenes/f11-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/od11-800.webp" srcset="./imagenes/od11-400.webp 400w, ./imagenes/od11-800.webp 800w, ./imagenes/od11-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-       </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/oi11-800.webp" srcset="./imagenes/oi11-400.webp 400w, ./imagenes/oi11-800.webp 800w, ./imagenes/oi11-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/pd11-800.webp" srcset="./imagenes/pd11-400.webp 400w, ./imagenes/pd11-800.webp 800w, ./imagenes/pd11-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
-         <div class="card" style="width: 18rem;">
-          <img src="./imagenes/pi11-800.webp" srcset="./imagenes/pi11-400.webp 400w, ./imagenes/pi11-800.webp 800w, ./imagenes/pi11-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-       </div>
-     </div>
-
-     <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
-    </div> 
-
-     <div class="text-center bg-primary text-white">
-      <a target="_blank" rel="noopener-noreferrer" href="https://bejewelled-daffodil-60c301.netlify.app"><h6 class="text-white" >🔍Caso 12</h6></a>
-      <p>Rotación de punta y resección de giba<br> (click sobre imagen para ampliar).</p>
-   </div>
-  
-  <div class="card-group">
-        
-        <div class="card" style="width: 18rem;">
-            <img src="./imagenes/12f-800.webp" srcset="./imagenes/12f-400.webp 400w, ./imagenes/12f-800.webp 800w, ./imagenes/12f-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-        </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/12od-800.webp" srcset="./imagenes/12od-400.webp 400w, ./imagenes/12od-800.webp 800w, ./imagenes/12od-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-       </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/12oi-800.webp" srcset="./imagenes/12oi-400.webp 400w, ./imagenes/12oi-800.webp 800w, ./imagenes/12oi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
-  
-          <div class="card" style="width: 18rem;">
-            <img src="./imagenes/12pd-800.webp" srcset="./imagenes/12pd-400.webp 400w, ./imagenes/12pd-800.webp 800w, ./imagenes/12pd-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-         </div>
-         <div class="card" style="width: 18rem;">
-          <img src="./imagenes/12pi-800.webp" srcset="./imagenes/12pi-400.webp 400w, ./imagenes/12pi-800.webp 800w, ./imagenes/12pi-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-       </div>
-       <div class="card" style="width: 18rem;">
-        <img src="./imagenes/12b-800.webp" srcset="./imagenes/12b-400.webp 400w, ./imagenes/12b-800.webp 800w, ./imagenes/12b-1200.webp 1200w" sizes="(max-width: 576px) 50vw, (max-width: 992px) 33vw, 300px" class="card-img-top flex-fill" alt="imagen rinoplastia foto antes después" loading="lazy" decoding="async" width="800" height="600" onclick="openModal(this)">
-     </div>
-      </div> 
-    <!--galeria rino-->
-    </section>
-
-
-
-    <!-- Modal -->
-    <div id="imageModal" class="modal fade" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content position-relative">
-                <button class="close-btn" data-bs-dismiss="modal" aria-label="Cerrar">&times;</button>
-                <img id="modalImage" class="modal-img" src="" alt="Imagen Ampliada">
-                <button class="nav-btn nav-btn-left" onclick="navigateImage(-1)">&#10094;</button>
-                <button class="nav-btn nav-btn-right" onclick="navigateImage(1)">&#10095;</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-flex text-center my-4 p-0">
-      <a href="#galeria" class="btn btn-sm nav-menu-btn" type="button">⬆️ Volver a galería</a>
-</div> 
-
-</main>
-
-<!-- Botón flotante de WhatsApp -->
-<div class="floating-whatsapp">
-  <a href="https://api.whatsapp.com/send?phone=541168212512&text=Quiero%20una%20consulta%20%20por%20chat%20con%20el%20Dr.%20Mosovich%20por%20una%20rinoplastia" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp sobre rinoplastia">
-    <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" loading="lazy" width="35" height="35" decoding="async">
+    <span class="visually-hidden">WhatsApp</span>
   </a>
-</div>
+
+  <!-- Botón flotante ir arriba a la izquierda -->
+  <button type="button" onclick="window.scrollTo({top:0,behavior:'smooth'});" class="btn btn-primary btn-lg rounded-circle shadow position-fixed" style="bottom: 24px; left: 24px; z-index: 1050; width:56px; height:56px; display:flex; align-items:center; justify-content:center; font-size:2rem;">
+   
+   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894z"/>
+</svg>
+   
+    <span class="visually-hidden">Ir arriba</span>
+  </button>
+
+
 
 <footer class="mt-5">
   <div class="container-fluid py-4" style="background-color: #d7e3f0;">
@@ -1673,89 +891,11 @@
   </div>
 </footer>
 
-    <!-- Load Bootstrap JS asynchronously -->
-    <script defer>
-      // Load scripts after initial content
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => {
-          const bootstrapScript = document.createElement('script');
-          bootstrapScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js';
-          bootstrapScript.defer = true;
-          document.head.appendChild(bootstrapScript);
-        }, { timeout: 2000 });
-      } else {
-        window.addEventListener('load', () => {
-          const bootstrapScript = document.createElement('script');
-          bootstrapScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js';
-          bootstrapScript.defer = true;
-          document.head.appendChild(bootstrapScript);
-        });
-      }
-    </script>
-  <script defer>
-    let currentImageIndex = 0;
-    const allImages = document.querySelectorAll('.card img');
-    const sliderImages = Array.from(allImages).slice(7);
 
-    function openModal(imgElement) {
-        const clickedImgSrc = imgElement.src;
-        currentImageIndex = sliderImages.findIndex(img => img.src === clickedImgSrc);
-
-        if (currentImageIndex !== -1) {
-            document.getElementById('modalImage').src = clickedImgSrc;
-            const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
-            imageModal.show();
-        }
-    }
-
-    function navigateImage(direction) {
-        if (sliderImages.length === 0) return;
-        currentImageIndex = (currentImageIndex + direction + sliderImages.length) % sliderImages.length;
-        document.getElementById('modalImage').src = sliderImages[currentImageIndex].src;
-    }
-
-    document.addEventListener('keydown', (e) => {
-        if (document.getElementById('imageModal').classList.contains('show')) {
-            if (e.key === 'ArrowRight') navigateImage(1);
-            if (e.key === 'ArrowLeft') navigateImage(-1);
-        }
-    });
-</script>
-
-<script defer>
-    document.querySelectorAll('.toggle-btn').forEach(button => {
-        button.addEventListener('click', function () {
-            setTimeout(() => {
-                if (button.getAttribute('aria-expanded') === 'true') {
-                    button.textContent = 'Ver menos';
-                } else {
-                    button.textContent = '¡Conoce más!';
-                }
-            }, 300);
-        });
-    });
-</script>
-
-<script defer>
-  // Barra de progreso de lectura
-  (function() {
-    const progressBar = document.getElementById('readingProgress');
-    if (!progressBar) return;
-
-    const updateProgress = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (scrollTop / docHeight) * 100;
-      progressBar.style.width = progress + '%';
-    };
-
-    window.addEventListener('scroll', updateProgress, { passive: true });
-    updateProgress();
-  })();
-</script>
-
-<button type="button" id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
-  <i class="fas fa-chevron-up" aria-hidden="true"></i>
+<button type="button" id="scrollToTop" class="btn btn-primary rounded-circle shadow position-fixed bottom-0 start-0 m-3 d-none" aria-label="Volver arriba">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
 </button>
 
 <script defer>
@@ -1779,5 +919,6 @@
     });
   })();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

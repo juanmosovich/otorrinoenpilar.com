@@ -85,12 +85,10 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-<!-- CSS async loading con preload -->
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"></noscript>
+<!-- bootstrap -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
 <title>Ronquidos y Apnea del Sueño en Adultos: CPAP y Tratamientos en Pilar</title>
 <link rel="canonical" href="https://www.otorrinoenpilar.com/sahos.html"/>
 <script type="application/ld+json">
@@ -129,7 +127,7 @@
       }
     },
     "datePublished": "2024-06-17T09:00:00-03:00",
-    "dateModified": "2026-02-17T10:00:00-03:00",
+    "dateModified": "2026-02-26T15:20:00-03:00",
     "keywords": [
       "Ronquidos",
       "Apnea del sueño",
@@ -623,11 +621,7 @@
     text-decoration: none;
   }
 
-  .floating-whatsapp img {
-    width: 35px;
-    height: 35px;
-    filter: brightness(0) invert(1);
-  }
+  
 
   @keyframes pulse {
     0% {
@@ -704,6 +698,7 @@
     z-index: 9999;
     transition: width 0.1s ease;
   }
+
 
   /* Índice visual con tarjetas */
   .nav-card {
@@ -789,6 +784,7 @@
   
   <!-- Barra de progreso de lectura -->
   <div id="readingProgress"></div>
+
   
   <header class="my-5">
     <!-- Simplificado para mobile first: el brand y el botón se distribuyen en cualquier pantalla -->
@@ -796,10 +792,10 @@
       <div class="container-fluid d-flex justify-content-between px-4">
         <!-- El texto del brand es un poco más pequeño en móvil con 'fs-5' -->
         <a class="navbar-brand text-primary fw-bold fs-5" href="https://www.otorrinoenpilar.com/">
-          Otorrino en Pilar
+          OtorrinoEnPilar
         </a>
         <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-outline-primary fw-bold rounded-pill px-4">
-          Contáctenos
+          Contacto
         </a>
       </div>
     </nav>
@@ -809,7 +805,7 @@
       <div class="container-fluid position-relative" style="z-index: 1;">
         <nav aria-label="breadcrumb" class="d-flex justify-content-center mb-3">
           <ol class="breadcrumb bg-transparent mb-0">
-            <li class="breadcrumb-item"><a href="https://www.otorrinoenpilar.com/" class="text-white text-decoration-none"><i class="fas fa-home"></i> Inicio</a></li>
+            <li class="breadcrumb-item"><a href="https://www.otorrinoenpilar.com/" class="text-white text-decoration-none">Inicio</a></li>
             <li class="breadcrumb-item active text-white" aria-current="page">Ronquidos y Apnea del Sueño</li>
           </ol>
         </nav>
@@ -818,10 +814,10 @@
         <p class="mb-4"><strong>Dr. Juan Mosovich</strong> - Medico ORL - Medicina del Sueño</p>
         <div class="d-flex gap-3 justify-content-center flex-wrap">
           <a href="#intro" class="btn btn-light btn-lg px-4 rounded-pill">
-            <i class="fas fa-book-medical"></i> Información Completa
+           Información Completa
           </a>
           <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-outline-light btn-lg px-4 rounded-pill">
-            <i class="fas fa-calendar-check"></i> Solicitar Turno
+            Solicitar Turno
           </a>
         </div>
       </div>
@@ -849,7 +845,9 @@
         <a href="#intro" class="text-decoration-none">
           <div class="nav-card card h-100 p-4 text-center">
             <div class="nav-card-icon">
-              <i class="fas fa-bed"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-1-circle" viewBox="0 0 16 16">
+              <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z"/>
+            </svg>
             </div>
             <h3>Ronquido y Apnea de Sueño</h3>
             <p>Diferencias, problemas relacionados y tests de riesgo</p>
@@ -862,7 +860,9 @@
         <a href="#dieta" class="text-decoration-none">
           <div class="nav-card card h-100 p-4 text-center">
             <div class="nav-card-icon">
-              <i class="fas fa-notes-medical"></i>
+             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-2-circle" viewBox="0 0 16 16">
+  <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.646 6.24v.07H5.375v-.064c0-1.213.879-2.402 2.637-2.402 1.582 0 2.613.949 2.613 2.215 0 1.002-.6 1.667-1.287 2.43l-.096.107-1.974 2.22v.077h3.498V12H5.422v-.832l2.97-3.293c.434-.475.903-1.008.903-1.705 0-.744-.557-1.236-1.313-1.236-.843 0-1.336.615-1.336 1.306"/>
+</svg>
             </div>
             <h3>Tratamientos</h3>
             <p>Opciones terapéuticas, CPAP y soluciones quirúrgicas</p>
@@ -875,7 +875,10 @@
         <a href="#diagnos" class="text-decoration-none">
           <div class="nav-card card h-100 p-4 text-center">
             <div class="nav-card-icon">
-              <i class="fas fa-stethoscope"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-3-circle" viewBox="0 0 16 16">
+  <path d="M7.918 8.414h-.879V7.342h.838c.78 0 1.348-.522 1.342-1.237 0-.709-.563-1.195-1.348-1.195-.79 0-1.312.498-1.348 1.055H5.275c.036-1.137.95-2.115 2.625-2.121 1.594-.012 2.608.885 2.637 2.062.023 1.137-.885 1.776-1.482 1.875v.07c.703.07 1.71.64 1.734 1.917.024 1.459-1.277 2.396-2.93 2.396-1.705 0-2.707-.967-2.754-2.144H6.33c.059.597.68 1.06 1.541 1.066.973.006 1.6-.563 1.588-1.354-.006-.779-.621-1.318-1.541-1.318"/>
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8"/>
+</svg>
             </div>
             <h3>Estudios de Diagnóstico</h3>
             <p>Poligrafía respiratoria y polisomnografía</p>
@@ -888,7 +891,10 @@
         <a href="#testsyr" class="text-decoration-none">
           <div class="nav-card card h-100 p-4 text-center">
             <div class="nav-card-icon">
-              <i class="fas fa-clipboard-check"></i>
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-4-circle" viewBox="0 0 16 16">
+  <path d="M7.519 5.057q.33-.527.657-1.055h1.933v5.332h1.008v1.107H10.11V12H8.85v-1.559H4.978V9.322c.77-1.427 1.656-2.847 2.542-4.265ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218"/>
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8"/>
+</svg>
             </div>
             <h3>Tests de Somnolencia</h3>
             <p>Evaluación de somnolencia diurna y reacción</p>
@@ -900,7 +906,7 @@
     <!-- Botón adicional para optimizar sueño -->
     <div class="text-center mt-4">
       <a href="https://www.otorrinoenpilar.com/dormir.html" class="btn btn-outline-primary btn-lg px-4 rounded-pill">
-        <i class="fas fa-moon"></i> Optimizar su Sueño
+        <i class="bi bi-moon-stars-fill"></i> Optimizar su Sueño
       </a>
     </div>
   </div>
@@ -1974,6 +1980,7 @@
   <div class="card-body">
   <h4 class="card-title h5">Mejorar la respiración nasal.</h4> 
 <article class="card-text">
+  <p>La nariz muchas veces puede tener que ver.</p>
   <div class="text-center">
     <a data-bs-toggle="collapse" href="#sah3" role="button" aria-expanded="false" aria-controls="collapseExample">
       <button class="btn btn-sm btn-outline-primary m-1 toggle-btn">
@@ -2031,7 +2038,7 @@
   <div class="card-body">
   <h4 class="card-title h5">Posición para dormir y apneas.</h4> 
    <article class="card-text">
-    <div class="text-center">
+     <div class="text-center">
       <a data-bs-toggle="collapse" href="#sah6" role="button" aria-expanded="false" aria-controls="collapseExample">
         <button class="btn btn-sm btn-outline-primary m-1 toggle-btn">
           Ver más
@@ -2074,10 +2081,6 @@
   <div class="card-footer bg-primary text-white"> 
  </div>
  </div>
-
-
-
-
   </section>
 
 <section class="card-group">
@@ -2086,7 +2089,8 @@
     <img loading="lazy" src="./imagenes/snoring-earplugs.webp"  class="card-img-top" alt="pareja durmiendo con tapones en oidos.">
     <div class="card-body">
     <h4 class="card-title h5">Tapones para oídos.</h4> 
-     <article class="card-text">
+        <article class="card-text">
+       <p>La solución para quienes buscan un descanso sin interrupciones.</p>
       <div class="text-center">
         <a data-bs-toggle="collapse" href="#sah11ear" role="button" aria-expanded="false" aria-controls="collapseExample">
           <button class="btn btn-sm btn-outline-primary m-1 toggle-btn">
@@ -2155,6 +2159,7 @@
     <div class="card-body">
     <h4 class="card-title h5">Ejercicios para no roncar.</h4> 
      <article class="card-text">
+      <p>Fortalecer la musculatura de tu boca puede ayudar.</p>
       <div class="text-center">
         <a data-bs-toggle="collapse" href="#sah11" role="button" aria-expanded="false" aria-controls="collapseExample">
           <button class="btn btn-sm btn-outline-primary m-1 toggle-btn">
@@ -2199,13 +2204,41 @@
       <div class="text-center my-1">
         <a href="https://www.otorrinoenpilar.com/info.html#ejercicios-ronquidos" class="btn btn-sm btn-danger" type="button">Ver ejercicios.</a>
       </div>
-      
       </span>
       </article>
     </div>
     <div class="card-footer bg-primary text-white"> 
    </div>
    </div>
+
+   <div class="card p-3">
+  <img loading="lazy" src="./imagenes/mouth-taping.webp" class="card-img-top" alt="Ilustración de sellado labial para el sueño">
+  <div class="card-body">
+    <h4 class="card-title h5">Sellado Labial Nocturno.</h4>
+    <article class="card-text">
+      <p>Una buena opción en casos seleccionados.</p>
+            <div class="text-center mb-2"> 
+        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#selladoLabial" role="button" aria-expanded="false" aria-controls="selladoLabial">
+          Ver más
+        </a>
+      </div> 
+      <span class="collapse" id="selladoLabial">    
+        <p>
+          El uso de cintas adhesivas de grado médico (especialmente diseñadas para la piel) puede ayudar a quienes roncan o tienen apnea leve, reduciendo las interrupciones en la respiración hasta en un 50%. Además, es una excelente ayuda para quienes usan CPAP con máscara nasal, ya que evita fugas de aire y mejora la comodidad.
+        </p>
+        <p><strong>Puntos clave a tener en cuenta:</strong></p>
+        <ul>
+          <li><strong>Efectividad:</strong> Es más eficaz y cómodo que el uso de mentoneras tradicionales.</li>
+          <li><strong>Seguridad:</strong> Nunca debe usarse si tienes la nariz tapada o congestión severa. Tu vía nasal debe estar libre.</li>
+          <li><strong>Supervisión:</strong> No es un remedio casero cualquiera; requiere una evaluación previa de un profesional para asegurar que es apto para tu caso.</li>
+        </ul>
+        <p>Si sufres de ronquidos o sequedad bucal al despertar, consulta con tu especialista si el sellado labial es el paso adecuado para mejorar tu terapia y volver a dormir profundamente.</p>
+      </span>
+    </article>
+      </div>
+    <div class="card-footer bg-primary"> 
+    </div>
+</div>
   
    
 
@@ -2213,8 +2246,11 @@
     <img loading="lazy" src=./imagenes/trd2.webp class=card-img-top alt="dispositivo antirronquido trd">
     <div class=card-body>
     <h4 class="card-title h5">Dispositivos orales antirronquido.</h4>
-    <article class=card-text>
+        <article class=card-text>
+           <p>Para el ronquido y la apnea leve a moderada.</p>
+      
       <div class="text-center">
+
         <a data-bs-toggle="collapse" href="#sah24" role="button" aria-expanded="false" aria-controls="collapseExample">
           <button class="btn btn-sm btn-outline-primary m-1 toggle-btn">
             Ver más
@@ -3596,10 +3632,24 @@
 
 <p>Si aún no lo has probado, te animamos a descargarlo. Es el primer paso para entender realmente qué sucede durante tus horas de terapia.</p>
 <p>  Ve como hacerlo en el video debajo.</p>
-<div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/QNfqIAzRBfA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Part 7: OSCAR Tutorial. Fix Problems with CPAP and Improve your Sleep for Free. Empower Yourself"></iframe>
+<div class="video-container" id="video-oscar-tutorial" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; cursor:pointer; background:#000;">
+  <img src="https://img.youtube.com/vi/QNfqIAzRBfA/hqdefault.jpg" alt="Video Oscar Tutorial" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border:0;" loading="lazy">
+  <button type="button" aria-label="Reproducir video" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.6);border:none;border-radius:50%;padding:16px 20px;z-index:2;">
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="#fff" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="rgba(0,0,0,0.4)"/><polygon points="20,16 36,24 20,32" fill="#fff"/></svg>
+  </button>
 </div>
 <p style="text-align: center;"><small><em>Video: Tutorial de como utilizar Oscar.</em></small></p>
+<script>
+  // Lazy load para el video de Oscar Tutorial
+  (function() {
+    const container = document.getElementById('video-oscar-tutorial');
+    if (!container) return;
+    const btn = container.querySelector('button');
+    btn.addEventListener('click', function() {
+      container.innerHTML = `<div style='position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;height:auto;'><iframe style='position:absolute;top:0;left:0;width:100%;height:100%;' src='https://www.youtube.com/embed/QNfqIAzRBfA?autoplay=1' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen title='Part 7: OSCAR Tutorial. Fix Problems with CPAP and Improve your Sleep for Free. Empower Yourself'></iframe></div>`;
+    });
+  })();
+</script>
       
 </span>
     </article>
@@ -4194,10 +4244,10 @@
     <div class="mb-4">
       <label>1. Sentado leyendo:</label>
       <div>
-        <input type="radio" name="q1" value="0" required> Ninguna posibilidad de dormirse
-        <input type="radio" name="q1" value="1"> Baja posibilidad
-        <input type="radio" name="q1" value="2"> Moderada posibilidad
-        <input type="radio" name="q1" value="3"> Alta posibilidad
+        <label><input type="radio" name="q1" id="q1-0" value="0" required> Ninguna posibilidad de dormirse</label>
+        <label><input type="radio" name="q1" id="q1-1" value="1"> Baja posibilidad</label>
+        <label><input type="radio" name="q1" id="q1-2" value="2"> Moderada posibilidad</label>
+        <label><input type="radio" name="q1" id="q1-3" value="3"> Alta posibilidad</label>
       </div>
     </div>
     
@@ -4205,10 +4255,10 @@
     <div class="mb-4">
       <label>2. Mirando televisión:</label>
       <div>
-        <input type="radio" name="q2" value="0" required> Ninguna posibilidad de dormirse
-        <input type="radio" name="q2" value="1"> Baja posibilidad
-        <input type="radio" name="q2" value="2"> Moderada posibilidad
-        <input type="radio" name="q2" value="3"> Alta posibilidad
+        <label><input type="radio" name="q2" id="q2-0" value="0" required> Ninguna posibilidad de dormirse</label>
+        <label><input type="radio" name="q2" id="q2-1" value="1"> Baja posibilidad</label>
+        <label><input type="radio" name="q2" id="q2-2" value="2"> Moderada posibilidad</label>
+        <label><input type="radio" name="q2" id="q2-3" value="3"> Alta posibilidad</label>
       </div>
     </div>
 
@@ -4216,10 +4266,10 @@
     <div class="mb-4">
       <label>3. Sentado, inactivo en un lugar público (p. ej., en un teatro o en una reunión):</label>
       <div>
-        <input type="radio" name="q3" value="0" required> Ninguna posibilidad de dormirse
-        <input type="radio" name="q3" value="1"> Baja posibilidad
-        <input type="radio" name="q3" value="2"> Moderada posibilidad
-        <input type="radio" name="q3" value="3"> Alta posibilidad
+        <label><input type="radio" name="q3" id="q3-0" value="0" required> Ninguna posibilidad de dormirse</label>
+        <label><input type="radio" name="q3" id="q3-1" value="1"> Baja posibilidad</label>
+        <label><input type="radio" name="q3" id="q3-2" value="2"> Moderada posibilidad</label>
+        <label><input type="radio" name="q3" id="q3-3" value="3"> Alta posibilidad</label>
       </div>
     </div>
 
@@ -4227,10 +4277,10 @@
     <div class="mb-4">
       <label>4. Como pasajero en un coche durante una hora sin parar:</label>
       <div>
-        <input type="radio" name="q4" value="0" required> Ninguna posibilidad de dormirse
-        <input type="radio" name="q4" value="1"> Baja posibilidad
-        <input type="radio" name="q4" value="2"> Moderada posibilidad
-        <input type="radio" name="q4" value="3"> Alta posibilidad
+        <label><input type="radio" name="q4" id="q4-0" value="0" required> Ninguna posibilidad de dormirse</label>
+        <label><input type="radio" name="q4" id="q4-1" value="1"> Baja posibilidad</label>
+        <label><input type="radio" name="q4" id="q4-2" value="2"> Moderada posibilidad</label>
+        <label><input type="radio" name="q4" id="q4-3" value="3"> Alta posibilidad</label>
       </div>
     </div>
 
@@ -4238,10 +4288,10 @@
     <div class="mb-4">
       <label>5. Acostado para descansar en la tarde cuando las circunstancias lo permiten:</label>
       <div>
-        <input type="radio" name="q5" value="0" required> Ninguna posibilidad de dormirse
-        <input type="radio" name="q5" value="1"> Baja posibilidad
-        <input type="radio" name="q5" value="2"> Moderada posibilidad
-        <input type="radio" name="q5" value="3"> Alta posibilidad
+        <label><input type="radio" name="q5" id="q5-0" value="0" required> Ninguna posibilidad de dormirse</label>
+        <label><input type="radio" name="q5" id="q5-1" value="1"> Baja posibilidad</label>
+        <label><input type="radio" name="q5" id="q5-2" value="2"> Moderada posibilidad</label>
+        <label><input type="radio" name="q5" id="q5-3" value="3"> Alta posibilidad</label>
       </div>
     </div>
 
@@ -4249,10 +4299,10 @@
     <div class="mb-4">
       <label>6. Sentado y hablando con alguien:</label>
       <div>
-        <input type="radio" name="q6" value="0" required> Ninguna posibilidad de dormirse
-        <input type="radio" name="q6" value="1"> Baja posibilidad
-        <input type="radio" name="q6" value="2"> Moderada posibilidad
-        <input type="radio" name="q6" value="3"> Alta posibilidad
+        <label><input type="radio" name="q6" id="q6-0" value="0" required> Ninguna posibilidad de dormirse</label>
+        <label><input type="radio" name="q6" id="q6-1" value="1"> Baja posibilidad</label>
+        <label><input type="radio" name="q6" id="q6-2" value="2"> Moderada posibilidad</label>
+        <label><input type="radio" name="q6" id="q6-3" value="3"> Alta posibilidad</label>
       </div>
     </div>
 
@@ -4260,10 +4310,10 @@
     <div class="mb-4">
       <label>7. Sentado tranquilamente después de un almuerzo sin alcohol:</label>
       <div>
-        <input type="radio" name="q7" value="0" required> Ninguna posibilidad de dormirse
-        <input type="radio" name="q7" value="1"> Baja posibilidad
-        <input type="radio" name="q7" value="2"> Moderada posibilidad
-        <input type="radio" name="q7" value="3"> Alta posibilidad
+        <label><input type="radio" name="q7" id="q7-0" value="0" required> Ninguna posibilidad de dormirse</label>
+        <label><input type="radio" name="q7" id="q7-1" value="1"> Baja posibilidad</label>
+        <label><input type="radio" name="q7" id="q7-2" value="2"> Moderada posibilidad</label>
+        <label><input type="radio" name="q7" id="q7-3" value="3"> Alta posibilidad</label>
       </div>
     </div>
 
@@ -4271,10 +4321,10 @@
     <div class="mb-4">
       <label>8. En un coche, detenido unos minutos en el tráfico:</label>
       <div>
-        <input type="radio" name="q8" value="0" required> Ninguna posibilidad de dormirse
-        <input type="radio" name="q8" value="1"> Baja posibilidad
-        <input type="radio" name="q8" value="2"> Moderada posibilidad
-        <input type="radio" name="q8" value="3"> Alta posibilidad
+        <label><input type="radio" name="q8" id="q8-0" value="0" required> Ninguna posibilidad de dormirse</label>
+        <label><input type="radio" name="q8" id="q8-1" value="1"> Baja posibilidad</label>
+        <label><input type="radio" name="q8" id="q8-2" value="2"> Moderada posibilidad</label>
+        <label><input type="radio" name="q8" id="q8-3" value="3"> Alta posibilidad</label>
       </div>
     </div>
 
@@ -4345,10 +4395,10 @@
   <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
     <div class="mb-2">
       <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
-        <i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i>
+        <i class="bi bi-facebook" style="font-size: 1.4rem;"></i>
       </a>
       <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
-        <i class="fab fa-instagram" style="font-size: 1.4rem;"></i>
+        <i class="bi bi-instagram" style="font-size: 1.4rem;"></i>
       </a>
     </div>
     <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
@@ -4586,7 +4636,9 @@
 <!-- Botón flotante de WhatsApp -->
 <div class="floating-whatsapp">
   <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20me%20gustar%C3%ADa%20coordinar%20una%20consulta" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
-    <img src="./imagenes/icons8-whatsapp-100.png" alt="WhatsApp" width="60" height="60" decoding="async" loading="lazy">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-whatsapp" viewBox="0 0 16 16">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+</svg>
   </a>
 </div>
 
@@ -4705,7 +4757,9 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 <button type="button" id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
-  <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-chevron-compact-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M7.776 5.553a.5.5 0 0 1 .448 0l6 3a.5.5 0 1 1-.448.894L8 6.56 2.224 9.447a.5.5 0 1 1-.448-.894z"/>
+</svg>
 </button>
 
 <script defer>
@@ -4747,6 +4801,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateProgress();
   })();
 </script>
+
 
 </body>
 </html>

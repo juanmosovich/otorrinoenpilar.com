@@ -2,23 +2,29 @@
 <html lang=es>
 <head>
 
-<!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) optimizado -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  const loadGtag = () => {
-    const gtagScript = document.createElement('script');
+  function loadGtag() {
+    if (window.gtagLoaded) return;
+    window.gtagLoaded = true;
+    var gtagScript = document.createElement('script');
     gtagScript.async = true;
     gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T';
     document.head.appendChild(gtagScript);
     gtag('js', new Date());
     gtag('config', 'G-XNNM71EW8T');
-  };
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(loadGtag, { timeout: 2000 });
-  } else {
-    window.addEventListener('load', loadGtag);
   }
+  // Cargar solo tras la primera interacción real del usuario
+  ["click","scroll","keydown","mousemove","touchstart"].forEach(function(evt){
+    window.addEventListener(evt, function handler(){
+      loadGtag();
+      ["click","scroll","keydown","mousemove","touchstart"].forEach(function(e){
+        window.removeEventListener(e, handler, {passive:true});
+      });
+    }, {passive:true});
+  });
 </script>
 
 <meta charset=utf-8>
@@ -48,7 +54,8 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 <link rel="preload" as="image" href="./imagenes/nino-durmiendo.webp" fetchpriority="high">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link href="./purify/pediatria.css" rel="stylesheet">
+
 <title>Ronquidos y Apnea del Sueño Infantil en Pilar | Adenoides y Amígdalas</title>
 <link rel="canonical" href="https://www.otorrinoenpilar.com/pediatria.html"/>
 <script type="application/ld+json">
@@ -84,7 +91,7 @@
       }
     },
     "datePublished": "2024-06-15T09:00:00-03:00",
-    "dateModified": "2026-02-13T08:00:00-03:00",
+    "dateModified": "2026-02-28T12:11:00-00:00",
     "inLanguage": "es-AR",
     "keywords": ["Ronquidos en niños", "Apnea del sueño infantil", "Amígdalas", "Adenoides", "Hipertrofia adenoamigdalina"],
     "hasPart": [
@@ -96,6 +103,15 @@
         "contentUrl": "https://www.youtube.com/watch?v=qcJKrbLFO_g",
         "embedUrl": "https://www.youtube.com/embed/qcJKrbLFO_g",
         "uploadDate": "2024-06-15T12:00:00-03:00"
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Ronquidos y apnea del sueño infantil: ¿cuándo consultar?",
+        "description": "Video explicativo sobre cuándo consultar por ronquidos y apnea del sueño en niños.",
+        "thumbnailUrl": "https://img.youtube.com/vi/4tSgp3QGaI8/hqdefault.jpg",
+        "contentUrl": "https://www.youtube.com/watch?v=4tSgp3QGaI8",
+        "embedUrl": "https://www.youtube.com/embed/4tSgp3QGaI8?autoplay=1",
+        "uploadDate": "2026-02-28T09:00:00-03:00"
       }
     ]
   },
@@ -221,431 +237,7 @@
   }
 ]
 </script>
-<style>
 
-  .video-responsive {
-            position: relative;
-            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-        }
-
-        .video-responsive iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-       img {
-        width: 100%; 
-        height: 250px; 
-        object-fit: contain;
-      }
-        .body {
-            font-family: sans-serif;
-            background-color: #f8f9fa;
-        }
-        .container-test {
-            margin-top: 30px;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-      .container-test .h1test, h2 {
-            color: #007bff;
-            margin-bottom: 20px;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
-        .result-container {
-            margin-top: 30px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-        .alert {
-            margin-top: 20px;
-        }
-        .disclaimer {
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #6c757d;
-        }
-
-        .assessment-intro {
-          background: #f1f5ff;
-          border: 1px solid #d6e2ff;
-          border-radius: 12px;
-          padding: 16px 18px;
-        }
-
-        .assessment-card {
-          border: 1px solid #e3e7ef;
-          border-radius: 14px;
-        }
-
-        .assessment-card .card-body {
-          display: flex;
-          flex-direction: column;
-          gap: 12px;
-        }
-
-        .symptom-group {
-          border: 1px solid #e6eaf2;
-          border-radius: 12px;
-          padding: 12px;
-          background: #fff;
-        }
-
-        .symptom-group-title {
-          font-weight: 600;
-          color: #003366;
-          margin-bottom: 8px;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-        }
-
-        .symptom-list {
-          display: grid;
-          gap: 8px;
-        }
-
-        @media (min-width: 992px) {
-          .symptom-list {
-            grid-template-columns: 1fr 1fr;
-          }
-        }
-
-        .score-card {
-          background: #f8f9fb;
-          border: 1px solid #e3e7ef;
-          border-radius: 10px;
-          padding: 12px;
-          text-align: center;
-        }
-
-        .score-label {
-          display: block;
-          font-size: 0.85rem;
-          color: #6c757d;
-        }
-
-        .score-value {
-          font-size: 1.5rem;
-          font-weight: 700;
-          color: #003366;
-        }
-
-        .overall-badge {
-          font-weight: 600;
-        }
-
-        .questionnaire-grid {
-          display: grid;
-          gap: 16px;
-        }
-
-        .questionnaire-grid .form-group {
-          margin-bottom: 0;
-        }
-
-        .index-card {
-          border: 1px solid #e3e7ef;
-          border-radius: 14px;
-        }
-
-        .index-link {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          padding: 10px 12px;
-          border-radius: 10px;
-          text-decoration: none;
-          font-weight: 600;
-          color: #0b4f9c;
-          background: #f7f9fc;
-          border: 1px solid #e1e7f2;
-        }
-
-        .index-link:hover {
-          background: #eef3fb;
-        }
-
-        .index-details summary {
-          list-style: none;
-          cursor: pointer;
-          font-weight: 600;
-          color: #0b4f9c;
-        }
-
-        .index-details summary::-webkit-details-marker {
-          display: none;
-        }
-
-        .section-details {
-          border: 1px solid #e3e7ef;
-          border-radius: 16px;
-          background: #ffffff;
-          margin-top: 24px;
-        }
-
-        .section-title {
-          background: #003366;
-          color: #ffffff;
-          padding: 12px 16px;
-          border-radius: 14px;
-          font-size: 1.5rem;
-          font-weight: 700;
-          text-align: center;
-          margin: 0;
-        }
-
-        .section-summary {
-          list-style: none;
-          cursor: pointer;
-          display: block;
-        }
-
-        .section-details[open] .section-summary {
-          border-bottom-left-radius: 0;
-          border-bottom-right-radius: 0;
-        }
-
-        .section-body {
-          padding: 16px 0;
-        }
-
-        .toggle-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-        }
-
-        .toggle-btn::after {
-          content: "";
-          width: 8px;
-          height: 8px;
-          border-right: 2px solid currentColor;
-          border-bottom: 2px solid currentColor;
-          transform: rotate(45deg);
-          transition: transform 0.2s ease;
-        }
-
-        .toggle-btn[aria-expanded="true"]::after {
-          transform: rotate(-135deg);
-        }
-
-        .hero-pediatria {
-          background: linear-gradient(135deg, #0a3a6b 0%, #0f5ca8 60%, #2b7bd1 100%);
-          color: #ffffff;
-        }
-
-        .hero-pediatria .hero-content {
-          max-width: 560px;
-        }
-
-        .hero-pediatria .hero-badge {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          background: rgba(255, 255, 255, 0.15);
-          border: 1px solid rgba(255, 255, 255, 0.25);
-          color: #ffffff;
-          padding: 6px 12px;
-          border-radius: 999px;
-          font-size: 0.9rem;
-        }
-
-        .hero-actions {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 12px;
-        }
-
-        .hero-actions .btn {
-          min-width: 160px;
-        }
-
-        .hero-image {
-          border-radius: 16px;
-          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-          width: 100%;
-          height: auto;
-          aspect-ratio: 4 / 3;
-          object-fit: cover;
-          background-color: #0f5ca8;
-        }
-
-        .quick-symptoms {
-          background: #f7f9fc;
-          border: 1px solid #e6ecf5;
-          border-radius: 16px;
-          padding: 20px;
-        }
-
-        .symptom-chip {
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          padding: 10px 14px;
-          border-radius: 999px;
-          background: #ffffff;
-          border: 1px solid #dfe6f1;
-          font-weight: 600;
-          color: #003366;
-        }
-
-        .icon {
-          width: 1.1em;
-          height: 1.1em;
-          display: inline-block;
-          vertical-align: -0.125em;
-        }
-
-        .hero-badge .icon {
-          width: 1.2em;
-          height: 1.2em;
-        }
-
-        .symptom-chip .icon {
-          width: 1em;
-          height: 1em;
-        }
-
-        .scroll-to-top .icon {
-          width: 1.1em;
-          height: 1.1em;
-        }
-
-        .icon-stroke {
-          fill: none;
-          stroke: currentColor;
-          stroke-width: 2;
-          stroke-linecap: round;
-          stroke-linejoin: round;
-        }
-
-        .icon-fill {
-          fill: currentColor;
-          opacity: 0.95;
-        }
-
-        .social-text {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: 26px;
-          height: 26px;
-          border-radius: 999px;
-          border: 1px solid currentColor;
-          font-size: 0.7rem;
-          font-weight: 700;
-          line-height: 1;
-        }
-
-        @media (max-width: 768px) {
-          body {
-            padding-bottom: 0;
-          }
-        }
-
-        /* WhatsApp Floating Button */
-        .floating-whatsapp {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          z-index: 1000;
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
-          background-color: #25d366;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-          transition: all 0.3s ease;
-          animation: pulse 2s infinite;
-        }
-        
-        .floating-whatsapp:hover {
-          transform: scale(1.1);
-          box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-        }
-        
-        .floating-whatsapp a {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          height: 100%;
-          text-decoration: none;
-        }
-        
-        .floating-whatsapp img {
-          width: 35px;
-          height: 35px;
-          filter: brightness(0) invert(1);
-        }
-        
-        @keyframes pulse {
-          0% {
-            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-          }
-          70% {
-            box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-          }
-          100% {
-            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-          }
-        }
-        
-        .scroll-to-top {
-          position: fixed;
-          left: 16px;
-          bottom: 16px;
-          width: 44px;
-          height: 44px;
-          border-radius: 999px;
-          background-color: #003366;
-          color: #ffffff;
-          border: none;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-          opacity: 0;
-          pointer-events: none;
-          transition: opacity 0.2s ease, transform 0.2s ease;
-          z-index: 1050;
-        }
-
-        .scroll-to-top.show {
-          opacity: 1;
-          pointer-events: auto;
-        }
-
-        .scroll-to-top:active {
-          transform: scale(0.96);
-        }
-
-        @media (min-width: 768px) {
-          .scroll-to-top {
-            left: 24px;
-            bottom: 24px;
-            width: 48px;
-            height: 48px;
-          }
-        }
-    </style>
 </head>
 <body>
     <header class="my-5">
@@ -654,10 +246,10 @@
       <div class="container-fluid d-flex justify-content-between px-4">
         <!-- El texto del brand es un poco más pequeño en móvil con 'fs-5' -->
         <a class="navbar-brand text-primary fw-bold fs-5" href="https://www.otorrinoenpilar.com/">
-          Otorrino en Pilar
+          OtorrinoEnPilar
         </a>
         <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-outline-primary fw-bold rounded-pill px-4">
-          Contáctenos
+          Contacto
         </a>
       </div>
     </nav>
@@ -750,6 +342,44 @@
           </svg>
           Voz nasal o apagada
         </span>
+        </div>
+        <div class="mt-3">
+          <div class="symptom-chip" style="background:#eaf6ff; border:1px solid #b3d8fd;">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4" y="4" width="16" height="16" rx="3" class="icon-stroke"></rect>
+              <polygon points="10,8 16,12 10,16" class="icon-fill"></polygon>
+            </svg>
+            <span>Mirá el resumen en video</span>
+          </div>
+          <div id="video-lazy-4tSgp3QGaI8" class="video-lazy-placeholder mt-2" style="position:relative;cursor:pointer;background:#000;border-radius:12px;overflow:hidden;min-height:180px;">
+            <img src="https://img.youtube.com/vi/4tSgp3QGaI8/hqdefault.jpg" alt="Resumen pediatría ORL" style="width:100%;display:block;filter:brightness(0.85);min-height:180px;">
+            <div style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+              <svg width="64" height="64" viewBox="0 0 64 64" style="background:rgba(0,0,0,0.3);border-radius:50%;" aria-hidden="true">
+                <circle cx="32" cy="32" r="30" fill="rgba(0,0,0,0.4)"/>
+                <polygon points="26,20 48,32 26,44" fill="#fff"/>
+              </svg>
+            </div>
+          </div>
+          <script>
+            (function(){
+              var ph = document.getElementById('video-lazy-4tSgp3QGaI8');
+              if(ph){
+                ph.addEventListener('click', function(){
+                  var iframe = document.createElement('iframe');
+                  iframe.width = '560';
+                  iframe.height = '315';
+                  iframe.src = 'https://www.youtube.com/embed/4tSgp3QGaI8?autoplay=1';
+                  iframe.title = 'Resumen pediatría ORL';
+                  iframe.frameBorder = '0';
+                  iframe.allowFullscreen = true;
+                  iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                  ph.parentNode.replaceChild(iframe, ph);
+                }, { once: true });
+              }
+            })();
+          </script>
+          <p class="small text-muted mt-1 mb-0">Video: Resumen de los contenidos de esta página.</p>
+        </div>
       </div>
     </div>
   </div>
