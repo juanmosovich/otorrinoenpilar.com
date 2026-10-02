@@ -2,30 +2,6 @@
 <html lang="es-AR">
   <head>
 
-    <!-- Google tag (gtag.js) -->
-    <!--
-      Si no necesitas Google Analytics en esta página, puedes eliminar este bloque para ahorrar recursos.
-      Si lo necesitas, este script retrasa la carga lo máximo posible para optimizar el LCP y reducir JS no usado.
-    -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      const loadGtag = () => {
-        const gtagScript = document.createElement('script');
-        gtagScript.async = true;
-        gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T';
-        document.head.appendChild(gtagScript);
-        gtag('js', new Date());
-        gtag('config', 'G-XNNM71EW8T');
-      };
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadGtag, { timeout: 4000 });
-      } else {
-        window.addEventListener('load', function() {
-          setTimeout(loadGtag, 4000);
-        });
-      }
-    </script>
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,7 +24,10 @@
     <!-- Open Graph Meta Tags for Social Sharing -->
     <meta property="og:title" content="Guía Completa de Cirugías ORL y Cuidados | Dr. Juan Mosovich">
     <meta property="og:description" content="Información detallada sobre cirugías de otorrinolaringología, prevención de alergias ambientales, tratamiento de disfagia y ejercicios para ronquidos. Guía completa del Dr. Mosovich en Pilar.">
-    <meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp">
+    <meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/oginfohtml.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="655">
+    <meta property="og:image:alt" content="Guía de cirugías ORL y cuidados - Dr. Juan Mosovich Pilar">
     <meta property="og:url" content="https://www.otorrinoenpilar.com/info.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_AR">
@@ -58,8 +37,8 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Guía de Cirugías ORL y Cuidados | Dr. Mosovich Pilar">
     <meta name="twitter:description" content="Información completa sobre cirugías otorrinolaringológicas, prevención de alergias, disfagia y ejercicios para ronquidos. Guía del Dr. Mosovich.">
-    <meta name="twitter:image" content="https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp">
-    <meta name="twitter:image:alt" content="Dr. Juan Mosovich - Otorrinolaringólogo en Pilar">
+    <meta name="twitter:image" content="https://www.otorrinoenpilar.com/imagenes/oginfohtml.webp">
+    <meta name="twitter:image:alt" content="Guía de cirugías ORL y cuidados - Dr. Juan Mosovich Pilar">
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
@@ -104,7 +83,7 @@
       }
     },
     "datePublished": "2023-01-15T09:00:00-03:00",
-    "dateModified": "2026-02-16T10:00:00-03:00",
+    "dateModified": "2026-04-26T19:00:00-03:00",
     "inLanguage": "es-AR",
     "mainEntity": {
       "@type": "FAQPage",
@@ -181,6 +160,37 @@
   },
   {
     "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Charla sobre consentimiento informado en cirugía",
+    "description": "El Dr. Juan Mosovich, otorrinolaringólogo, explica qué es el consentimiento informado preoperatorio, su importancia, qué implica firmarlo y cuáles son los derechos del paciente antes de una intervención quirúrgica.",
+    "thumbnailUrl": "https://img.youtube.com/vi/-r0_A2AqCmE/maxresdefault.jpg",
+    "uploadDate": "2026-04-26T00:00:00-03:00",
+    "contentUrl": "https://www.youtube.com/watch?v=-r0_A2AqCmE",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/-r0_A2AqCmE",
+    "inLanguage": "es-AR",
+    "author": {
+      "@type": "Physician",
+      "name": "Dr. Juan Mosovich",
+      "medicalSpecialty": "Otolaryngology",
+      "url": "https://www.otorrinoenpilar.com/info.html#cv"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Otorrino en Pilar",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.otorrinoenpilar.com/imagenes/logo.webp",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "isPartOf": {
+      "@type": "MedicalWebPage",
+      "url": "https://www.otorrinoenpilar.com/info.html"
+    }
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
       {
@@ -203,13 +213,10 @@
       <link rel="canonical" href="https://www.otorrinoenpilar.com/info.html"/>
       <title>Guía de Cirugías ORL y Cuidados | Dr. Juan Mosovich | Otorrino en Pilar</title>
     
-    <!-- Resource Hints para performance -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    
-    <!-- Bootstrap CSS con prioridad alta -->
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" as="style" fetchpriority="high" onload="this.onload=null;this.rel='stylesheet'" crossorigin>
-    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"></noscript>
+    <!-- Bootstrap reducido — solo clases usadas en esta página (3.6 KB vs 24.6 KB del CDN) -->
+    <link rel="stylesheet" href="./css/info-bootstrap.min.css">
+    <!-- Bootstrap Icons (webfont local) -->
+    <link rel="stylesheet" href="./css/bootstrap-icons.min.css">
     
     
     
@@ -742,10 +749,39 @@
         scroll-behavior: smooth;
       }
     </style>
+    <!-- Google Tag Manager — carga diferida hasta primera interacción del usuario -->
+    <script>
+    (function(){
+      var gtmLoaded=false;
+      function loadGTM(){
+        if(gtmLoaded)return;
+        gtmLoaded=true;
+        window.dataLayer=window.dataLayer||[];
+        window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=document.getElementsByTagName('script')[0],
+            j=document.createElement('script');
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id=GTM-MQ6VHPGC';
+        f.parentNode.insertBefore(j,f);
+      }
+      // Dispara en primera interacción real del usuario
+      ['click','scroll','keydown','touchstart','mousemove'].forEach(function(ev){
+        document.addEventListener(ev,loadGTM,{once:true,passive:true});
+      });
+      // Respaldo: carga a los 4 s si no hubo interacción
+      setTimeout(loadGTM,4000);
+    })();
+    </script>
+    <!-- End Google Tag Manager -->
     
     </head>
     
 <body id="top">
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ6VHPGC"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- Skip Link para accesibilidad -->
   <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 bg-primary text-white p-2 m-2" style="z-index: 9999;">Saltar al contenido principal</a>
@@ -808,7 +844,7 @@
       
       <div class="toc-card">
         <div class="toc-title">
-          <i class="fas fa-bars"></i>
+          <i class="bi bi-list"></i>
           Contenidos de esta guía
         </div>
         <div class="toc-grid">
@@ -907,7 +943,7 @@
                 
                 <div class="callout callout-danger">
                   <div class="callout-title">
-                    <i class="fas fa-exclamation-triangle"></i>
+                    <i class="bi bi-exclamation-triangle-fill"></i>
                     Advertencia Crítica
                   </div>
                   <p class="mb-0">No respetar el ayuno preoperatorio puede causar broncoaspiración, una complicación potencialmente mortal. Siga estrictamente las instrucciones de ayuno de su médico.</p>
@@ -943,6 +979,48 @@
                       </svg>
                         Charla sobre consentimiento informado
                     </a>
+                </div>
+
+                <div style="text-align: center; margin: 30px 0;">
+                    <p style="font-size: 1rem; color: #555; margin-bottom: 12px;">
+                        <strong>Video:</strong> Charla sobre consentimiento informado en cirugía
+                    </p>
+                    <div
+                        id="yt-consent-player"
+                        style="position:relative;width:100%;max-width:640px;margin:0 auto;border-radius:10px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,0.18);"
+                    >
+                        <div
+                            onclick="(function(el){
+                                var iframe = document.createElement('iframe');
+                                iframe.setAttribute('src', 'https://www.youtube-nocookie.com/embed/-r0_A2AqCmE?autoplay=1&rel=0');
+                                iframe.setAttribute('title', 'Charla sobre consentimiento informado en cirugía');
+                                iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+                                iframe.setAttribute('allowfullscreen', '');
+                                iframe.setAttribute('frameborder', '0');
+                                iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border-radius:10px;';
+                                el.innerHTML = '';
+                                el.appendChild(iframe);
+                                el.style.cursor = 'default';
+                            })(this)"
+                            style="padding-top:56.25%;position:relative;cursor:pointer;"
+                            role="button"
+                            aria-label="Reproducir video sobre consentimiento informado"
+                            tabindex="0"
+                            onkeydown="if(event.key==='Enter'||event.key===' ')this.click();"
+                        >
+                            <img
+                                src="https://img.youtube.com/vi/-r0_A2AqCmE/maxresdefault.jpg"
+                                alt="Miniatura del video sobre consentimiento informado"
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;"
+                                loading="lazy"
+                            >
+                            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(255,0,0,0.85);border-radius:50%;width:64px;height:64px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,0.35);transition:background 0.2s;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="white" viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
            
 
@@ -1173,28 +1251,28 @@ En casos más graves o cuando otras opciones de tratamiento no han tenido éxito
     en la casilla de consulta de la página.<br>
     
     <h2>Acceda a más información escuchando los siguientes podcast</h2>
-    <hr>
-    <a class="btn btn-info" target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/3Jae585M0p0HEgPYqhq8C8">
+    
+    <a class="btn btn-info m-2" target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/3Jae585M0p0HEgPYqhq8C8">
              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
                         <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
        </svg>
          ¿Respira realmente mal por su nariz?.
        </a>
-    <hr>
-    <a class="btn btn-info" target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/3dx3ytOciWVc2t7bcm4dmT">
+  
+    <a class="btn btn-info m-2" target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/3dx3ytOciWVc2t7bcm4dmT">
          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
                         <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
        </svg>
         ¿Es adicto a las gotas nasales?.
     </a>
-    <hr>
-    <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/4H2hBpYkhUgbevZBW2HpTw" class="btn btn-info">
+    
+    <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/4H2hBpYkhUgbevZBW2HpTw" class="btn btn-info m-2">
        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
                         <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
        </svg>
       Cirugía de radiofrecuencia de cornetes
     </a>
-    <br>
+ 
   </p>
 </article>
 </section>
@@ -1231,7 +1309,6 @@ En casos más graves o cuando otras opciones de tratamiento no han tenido éxito
         </ul>
         <p>La mayoría de estas complicaciones se resuelven con tratamiento médico, pero en algunos casos, pueden requerir nuevas intervenciones. Es importante recordar que ningún procedimiento invasivo está exento de riesgos, incluso la posibilidad de mortalidad, aunque esta es una eventualidad muy infrecuente. Para cualquier duda, se recomienda siempre consultar con el equipo médico.</p>
 
-        ---
 
         <div style="text-align: center; margin: 30px 0;">
             <a href="https://open.spotify.com/episode/200Y87ZvyxOc0NdVG29bu7" target="_blank" rel="noopener noreferrer" class="btn btn-info">
@@ -1356,21 +1433,21 @@ En casos más graves o cuando otras opciones de tratamiento no han tenido éxito
       con tratamiento médico pero a veces requieren nuevas intervenciones. Ningún procedimiento invasivo 
       está absolutamente exento de riesgos importantes, incluyendo el de mortalidad, si bien esta posibilidad
        es muy infrecuente. Cualquier duda consulte en la casilla de consulta de la página.
- <hr>
-  <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/0yJSm5iFPv1HzyHl66OywN" class="btn btn-info">
+
+  <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/0yJSm5iFPv1HzyHl66OywN" class="btn btn-info m-4">
      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
                         <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
        </svg>
     Infórmese más sobre otitis crónica escuchando este podcast
   </a>
- <hr>
+
 </p>
 </article>
 
 <article> 
 <h2>Cirugía por otoesclerosis.</h2>
 
-<p>La otoesclerosis en una enfermedad que produce acúfenos (zumbidos anormales en los oídos) y disminución de audición 
+<p class="mb-2">La otoesclerosis en una enfermedad que produce acúfenos (zumbidos anormales en los oídos) y disminución de audición 
   (hipoacusia). Se altera la estructura ósea del hueso temporal afectando el oído interno y el oído medio. A nivel del 
   oido interno genera una alteración de la capacidad del oído de recibir la información sonora y transmitirla al cerebro 
   (hipoacusia perceptiva). En el oído medio produce una alteración en la movilidad normal de los huesecillos impidiendo la 
@@ -1383,15 +1460,15 @@ En casos más graves o cuando otras opciones de tratamiento no han tenido éxito
   exenta de complicaciones. La más común es la sordera. En algunos casos se puede afectar el oído interno dañando las células 
   receptoras y generando una hipoacusia profunda en este oído operado. La protesis también se puede desplazar, correr, infectar etc.
   Otras complicaciones pueden ser el vertigo postoperatorio, la parálisis facial o las infecciones graves del sistema nervioso (meningitis).<br>
-  <hr>
-  <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/08un5ctQrC57jpyz0S3c5T" class="btn btn-info">
+
+   </p>
+  <a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/08un5ctQrC57jpyz0S3c5T" class="btn btn-info m-4">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-spotify" viewBox="0 0 16 16">
                         <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
        </svg>
     Escuche un podcast sobre otoesclerosis
   </a>
-  <hr>
-   </p>
+
 </article>
 </section>
 
@@ -1744,27 +1821,27 @@ El riesgo de broncoaspiracion disminuye en relacion al auento de la viscosidad d
   
   <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
     <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=3NgxFWbVHa8&t=641s" class="btn btn-danger fw-bold mb-2 d-inline-flex align-items-center gap-2">
-      <i class="fab fa-youtube" style="font-size: 1.5rem;"></i>
+      <i class="bi bi-youtube" style="font-size: 1.5rem;"></i>
       Taller de alimentos adaptados para pacientes con disfagia
     </a>
     
     <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=XYVy4TNmCw8&t=194s" class="btn btn-danger fw-bold mb-2 d-inline-flex align-items-center gap-2">
-      <i class="fab fa-youtube" style="font-size: 1.5rem;"></i>
+      <i class="bi bi-youtube" style="font-size: 1.5rem;"></i>
       Vea un ejemplo del uso de espesantes comerciales
     </a>
     
     <a rel="noopener noreferrer" href="https://www.youtube.com/watch?v=yFFroPIq8mk" class="btn btn-danger fw-bold mb-2 d-inline-flex align-items-center gap-2">
-      <i class="fab fa-youtube" style="font-size: 1.5rem;"></i>
+      <i class="bi bi-youtube" style="font-size: 1.5rem;"></i>
       Ejemplo de comidas adaptadas con textura pudding (milanesa con ensalada)
     </a>
     
     <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=QL83qzMzxAc" class="btn btn-danger fw-bold mb-2 d-inline-flex align-items-center gap-2">
-      <i class="fab fa-youtube" style="font-size: 1.5rem;"></i>
+      <i class="bi bi-youtube" style="font-size: 1.5rem;"></i>
       Pastel de papas adaptado
     </a>
     
     <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=98ha1h1vRGQ" class="btn btn-danger fw-bold mb-2 d-inline-flex align-items-center gap-2">
-      <i class="fab fa-youtube" style="font-size: 1.5rem;"></i>
+      <i class="bi bi-youtube" style="font-size: 1.5rem;"></i>
       Ensalada de frutas adaptada
     </a>
   </div>
@@ -2010,7 +2087,7 @@ Se recomienda efectuarlos varias veces al dia en forma diaria.
   
 <a style="text-decoration: none;" href="#top"> 
   <hr>
-<div class="separador">
+<div class="separador text-center">
      🔝menu
 </div>
 <hr>
@@ -2031,10 +2108,10 @@ Se recomienda efectuarlos varias veces al dia en forma diaria.
   <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
     <div class="mb-2">
       <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="link-dark bg-white border border-2 border-primary mx-1 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 44px; height: 44px; text-decoration: none;">
-        <i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i>
+        <i class="bi bi-facebook" style="font-size: 1.4rem;"></i>
       </a>
       <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="link-dark bg-white border border-2 border-primary mx-1 d-inline-flex align-items-center justify-content-center rounded-circle" style="width: 44px; height: 44px; text-decoration: none;">
-        <i class="fab fa-instagram" style="font-size: 1.4rem;"></i>
+        <i class="bi bi-instagram" style="font-size: 1.4rem;"></i>
       </a>
     </div>
     <p class="small text-dark mb-0 border-top pt-2" style="border-color: #003366 !important;">
@@ -2149,6 +2226,13 @@ Se recomienda efectuarlos varias veces al dia en forma diaria.
     });
 
   })();
+</script>
+
+<script src="./js/rate-prompt.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.ORPRatePrompt) window.ORPRatePrompt.autoShowOnEngagement();
+});
 </script>
 
 </body>

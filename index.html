@@ -2,33 +2,57 @@
 <html lang="es-AR">
 <head>
 <!-- SEO y Social Meta -->
-<meta name="description" content="Consultorio del Dr. Juan Mosovich, médico otorrinolaringólogo especialista universitario en Pilar y Zona Norte. Experto en rinoplastia, cirugía nasal, tratamiento de apnea del sueño, ronquidos, problemas de oído, garganta y otorrinolaringología pediátrica. Consultas potenciadas por inteligencia artificial. Atención presencial y online.">
-<meta name="keywords" content="otorrinolaringólogo pilar, otorrino zona norte, rinoplastia pilar, rinoplastia zona norte, apnea del sueño pilar, cirugía nariz, audífonos pilar, ronquidos tratamiento, Dr. Mosovich otorrino, otorrino derqui, otorrino panamericana km 46, centro médico pilares otorrino, otorrino san isidro, consultas con IA, otorrinolaringología pediátrica pilar, sinusitis pilar, vertigo pilar, tinnitus tratamiento, otorrino particular pilar, otorrino obras sociales pilar">
-<link rel="canonical" href="https://www.otorrinoenpilar.com/"/>
 <!-- Open Graph tags -->
 <meta property="og:title" content="Dr. Juan Mosovich | Otorrinolaringólogo Especialista en Pilar y Zona Norte">
 <meta property="og:description" content="Consultorio de otorrinolaringología en Pilar. Especialista en rinoplastia, apnea del sueño, ronquidos, cirugías ORL. Atención presencial y online.">
-<meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp">
+<meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/ogindexhtml.webp">
+<meta property="og:image:secure_url" content="https://www.otorrinoenpilar.com/imagenes/ogindexhtml.webp">
+<meta property="og:image:type" content="image/webp">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Dr. Juan Mosovich - Otorrinolaringólogo en Pilar">
+<meta property="og:image:height" content="670">
+<meta property="og:image:alt" content="Consultorio de otorrinolaringología - Oído, Nariz y Garganta en Pilar">
 <meta property="og:url" content="https://www.otorrinoenpilar.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="Otorrino en Pilar - Dr. Juan Mosovich">
+
+<!-- Google Tag Manager: carga diferida post-interacción para mejorar LCP/FCP -->
+<script>
+(function(){
+  window.dataLayer = window.dataLayer || [];
+  var gtmLoaded = false;
+  function loadGTM(){
+    if(gtmLoaded) return;
+    gtmLoaded = true;
+    var s=document.createElement('script');
+    s.async=true;
+    s.src='https://www.googletagmanager.com/gtm.js?id=GTM-MQ6VHPGC';
+    document.head.appendChild(s);
+    window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+  }
+  // Cargar tras primera interacción del usuario o a los 5 segundos, lo que ocurra primero
+  ['click','scroll','keydown','touchstart','mousemove'].forEach(function(e){
+    document.addEventListener(e, loadGTM, {once:true, passive:true});
+  });
+  setTimeout(loadGTM, 5000);
+})();
+</script>
+<!-- End Google Tag Manager -->
+
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Dr. Juan Mosovich | Otorrinolaringólogo Especialista en Pilar">
 <meta name="twitter:description" content="Consultorio de otorrinolaringología en Pilar. Especialista en rinoplastia, apnea del sueño, ronquidos. Atención presencial y online.">
-<meta name="twitter:image" content="https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp">
-<meta name="twitter:image:alt" content="Logo Dr. Juan Mosovich Otorrinolaringólogo">
+<meta name="twitter:image" content="https://www.otorrinoenpilar.com/imagenes/ogindexhtml.webp">
+<meta name="twitter:image:alt" content="Consultorio de otorrinolaringología - Oído, Nariz y Garganta en Pilar">
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#003366">
 <meta name="author" content="Dr. Juan Mosovich">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet" href="./css/bootstrap-index.min.css">
+<link rel="stylesheet" href="./css/bi-index.css">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
 <link rel="manifest" href="./favicon/site.webmanifest">
@@ -36,24 +60,65 @@
 <meta name="description" content="Consultorio del Dr. Juan Mosovich, médico otorrinolaringólogo especialista universitario en Pilar y Zona Norte. Experto en rinoplastia, cirugía nasal, tratamiento de apnea del sueño, ronquidos, problemas de oído, garganta y otorrinolaringología pediátrica. Consultas potenciadas por inteligencia artificial. Atención presencial y online.">
 <meta name="keywords" content="otorrinolaringólogo pilar, otorrino zona norte, rinoplastia pilar, rinoplastia zona norte, apnea del sueño pilar, cirugía nariz y oído, audífonos pilar, ronquidos tratamiento, Dr. Mosovich otorrino, otorrino derqui, otorrino panamericana km 46, centro médico pilares otorrino, otorrino san isidro, consultas con IA, otorrinolaringología pediátrica pilar, sinusitis pilar, vertigo pilar, tinnitus tratamiento, otorrino particular pilar, otorrino obras sociales pilar">
 <link rel="canonical" href="https://www.otorrinoenpilar.com/"/>
-<!--datos estructurados-->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Physician", "MedicalBusiness"],
+      "@type": "WebSite",
+      "@id": "https://www.otorrinoenpilar.com/#website",
+      "url": "https://www.otorrinoenpilar.com/",
+      "name": "Otorrino en Pilar - Dr. Juan Mosovich",
+      "description": "Consultorio de otorrinolaringología en Pilar y Zona Norte. Rinoplastia, apnea del sueño, audiometría y otorrino pediátrico.",
+      "inLanguage": "es-AR",
+      "publisher": { "@id": "https://www.otorrinoenpilar.com/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.otorrinoenpilar.com/",
+      "url": "https://www.otorrinoenpilar.com/",
+      "name": "Dr. Juan Mosovich | Otorrinolaringólogo en Pilar y Zona Norte",
+      "description": "Consultorio del Dr. Juan Mosovich, médico otorrinolaringólogo especialista universitario en Pilar y Zona Norte.",
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/#website" },
+      "about": { "@id": "https://www.otorrinoenpilar.com/#organization" },
+      "inLanguage": "es-AR",
+      "datePublished": "2022-01-01",
+      "dateModified": "2026-09-18",
+      "breadcrumb": { "@id": "https://www.otorrinoenpilar.com/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.otorrinoenpilar.com/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.otorrinoenpilar.com/"
+        }
+      ]
+    },
+    {
+      "@type": "Physician",
       "@id": "https://www.otorrinoenpilar.com/#organization",
       "name": "Dr. Juan Mosovich - Otorrinolaringólogo",
       "alternateName": "Otorrino en Pilar",
       "url": "https://www.otorrinoenpilar.com/",
-      "logo": "https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp",
+        "width": 600,
+        "height": 600
+      },
       "image": "https://www.otorrinoenpilar.com/imagenes/logo-dr-mosovich.webp",
-      "description": "Especialista en Otorrinolaringología en Pilar. Diagnóstico con IA, rinoplastia, ronquidos y otorrino pediátrico.",
-      "medicalSpecialty": ["Otolaryngology", "Rhinoplasty", "Sleep Medicine"],
+      "description": "Especialista en Otorrinolaringología en Pilar. Diagnóstico con IA, rinoplastia, audiometría, ronquidos y otorrino pediátrico.",
+      "medicalSpecialty": "Otolaryngology",
       "priceRange": "$$",
       "currenciesAccepted": "ARS",
-      "paymentAccepted": "Efectivo, Tarjeta de Crédito, Transferencia, Bitcoin",
+      "paymentAccepted": "Efectivo, Tarjeta de Crédito, Transferencia",
       "telephone": "+541168212512",
       "email": "contacto@otorrinoenpilar.com",
       "address": {
@@ -66,8 +131,17 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "-34.434636",
-        "longitude": "-58.829689"
+        "latitude": -34.434636,
+        "longitude": -58.829689
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": -34.434636,
+          "longitude": -58.829689
+        },
+        "geoRadius": "40000"
       },
       "openingHoursSpecification": [
         {
@@ -85,61 +159,138 @@
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
+        "ratingValue": "4.6",
         "bestRating": "5",
         "worstRating": "1",
-        "ratingCount": "127"
-      },
-      "offers": {
-        "@type": "AggregateOffer",
-        "offeredBy": { "@id": "https://www.otorrinoenpilar.com/#organization" },
-        "priceCurrency": "ARS",
-        "lowPrice": "0", 
-        "highPrice": "100000",
-        "offerCount": "7"
+        "ratingCount": "15"
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Servicios Médicos",
+        "name": "Servicios Médicos ORL",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "MedicalProcedure",
-              "name": "Rinoplastia"
+              "name": "Rinoplastia",
+              "url": "https://www.otorrinoenpilar.com/rinoplastia.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalProcedure",
+              "name": "Implantes Cocleares y Auditivos. Audífonos.",
+              "url": "https://www.otorrinoenpilar.com/ota.html"
             }
           },
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "MedicalTherapy",
-              "name": "Tratamiento de Apnea del Sueño"
+              "name": "Tratamiento de Apnea del Sueño y Medicina de Sueño.",
+              "url": "https://www.otorrinoenpilar.com/dormir.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalTherapy",
+              "name": "Clínica y cirugía de oído. Otología.",
+              "url": "https://www.otorrinoenpilar.com/oido.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalTherapy",
+              "name": "Otorrinolaringología Pediátrica",
+              "url": "https://www.otorrinoenpilar.com/pediatria.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "MedicalTherapy",
+              "name": "Tratamiento de Sinusitis",
+              "url": "https://www.otorrinoenpilar.com/sinusitis.html"
             }
           }
         ]
       },
       "sameAs": [
         "https://www.instagram.com/otorrino.fono.pilar",
-        "https://www.facebook.com/profile.php?id=100063748789595"
+        "https://www.facebook.com/profile.php?id=100063748789595",
+        "https://www.youtube.com/channel/UCBrWcUcpJTH0q4mofkYL9OQ"
       ]
     },
     {
       "@type": "FAQPage",
+      "@id": "https://www.otorrinoenpilar.com/#faq",
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/" },
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Dónde está ubicado el consultorio sobre Panamericana?",
+          "name": "¿Dónde está ubicado el consultorio del Dr. Mosovich sobre Panamericana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "El Dr. Mosovich atiende en Centro Médico Pilares (Km 49.5) y Edificio Agora 2 (Km 46)."
+            "text": "El Dr. Mosovich atiende en dos ubicaciones sobre la Autopista Panamericana: Centro Médico Pilares (Km 49.5, Complejo Bureau Pilar) y el Edificio Agora 2, Piso 1, Oficina 110 (Km 46, Caamaño 1100, Pilar)."
           }
         },
         {
           "@type": "Question",
-          "name": "¿Acepta obras sociales?",
+          "name": "¿El Dr. Mosovich acepta obras sociales y prepagas?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, acepta múltiples obras sociales y prepagas como OSDE."
+            "text": "Sí, el Dr. Mosovich acepta múltiples obras sociales y prepagas, entre ellas OSDE. También atiende pacientes particulares. Consultá disponibilidad por WhatsApp."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es la apnea del sueño y cómo se trata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La apnea del sueño es un trastorno en el que la respiración se interrumpe repetidamente durante el sueño. El tratamiento puede incluir el uso de CPAP, dispositivos orales o cirugía, según la severidad. El Dr. Mosovich es especialista en el diagnóstico y tratamiento de la apnea del sueño en Pilar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el tinnitus o acúfeno y tiene tratamiento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El tinnitus (acúfeno) es la percepción de un sonido, como un zumbido o pitido, sin que haya una fuente sonora externa. Tiene tratamiento: puede incluir terapia de reentrenamiento, medicación, o el manejo de la causa subyacente. Consultá con el Dr. Mosovich para una evaluación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el vértigo y cuándo debo consultar al otorrino?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El vértigo es la sensación de que el entorno gira. La causa más frecuente es el Vértigo Posicional Paroxístico Benigno (VPPB), que tiene tratamiento con maniobras específicas. Se recomienda consultar si el episodio dura más de un minuto, se repite, o se acompaña de pérdida auditiva o acúfenos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿A partir de qué edad se puede operar de amígdalas o adenoides?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En general, la cirugía de amígdalas (amigdalectomía) y adenoides (adenoidectomía) se realiza a partir de los 3 años de edad cuando existe indicación médica clara, como infecciones recurrentes, obstrucción respiratoria o apnea del sueño en niños. El Dr. Mosovich evalúa cada caso en forma individual."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué diferencia hay entre rinoplastia estética y funcional?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La rinoplastia estética modifica la forma externa de la nariz con fines cosméticos. La rinoplastia funcional corrige problemas que afectan la respiración, como la desviación del tabique nasal. Con frecuencia ambas se realizan en la misma intervención. El Dr. Mosovich es especialista en rinoplastia en Pilar y Zona Norte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El consultorio ofrece atención online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, el Dr. Mosovich ofrece consultas médicas online para pacientes que no pueden asistir de forma presencial, potenciadas con inteligencia artificial para un diagnóstico más preciso. Podés coordinar una consulta online a través del formulario de contacto o por WhatsApp."
           }
         }
       ]
@@ -156,7 +307,11 @@
 
 </head>
 
-<body class="bg-primary bg-opacity-100 min-vh-100 p-1 m-1">
+<body class="bg-primary bg-opacity-100 min-vh-100">
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ6VHPGC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> 
 
   <!-- Skip link para accesibilidad -->
   <a href="#main-content" class="visually-hidden-focusable position-absolute top-0 start-0 bg-primary text-white p-2 m-2" style="z-index: 9999;">Saltar al contenido principal</a>
@@ -180,9 +335,8 @@
 
 <nav class="navbar navbar-expand-lg navbar-light text-white sticky-top bg-primary">
 <div class=container-fluid>
-<a class="navbar-brand text-white" href="#"><strong>OtorrinoEnPilar.com</strong></a>
+<a class="navbar-brand text-white" href="./"><strong>OtorrinoEnPilar.com</strong></a>
 <button class=navbar-toggler type=button data-bs-toggle=collapse data-bs-target=#navbarNav aria-controls=navbarNav aria-expanded=false aria-label="Abrir menú de navegación">
-<div><p class="text-white p-0 mb-1"><small>menú</small></p></div>
   <span style="background-color: white;" class=navbar-toggler-icon></span>
 </button>
 <div class="collapse navbar-collapse" id=navbarNav>
@@ -236,21 +390,8 @@
     <div class="container position-relative" style="z-index: 10;">
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <!-- Badge superior -->
-          <div class="text-center mb-3">
-            <span class="badge rounded-pill px-4 py-2 fw-semibold text-white" style="background: linear-gradient(135deg, #ff9800 0%, #ff6b00 100%); font-size: 0.85rem; letter-spacing: 0.5px; box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-trophy-fill" viewBox="0 0 16 16">
-  <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935"/>
-</svg>    20+ AÑOS DE EXPERIENCIA
-            </span>
-          </div>
-          
           <!-- Título principal -->
-          <h1 class="display-4 text-white fw-bold text-center mb-3" style="text-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-            <a class="text-white text-decoration-none" href="./info.html#cv"> 
-              Dr. Juan Mosovich
-            </a>
-          </h1>
+          <h1 class="display-4 text-white fw-bold text-center mb-3" style="text-shadow: 0 2px 10px rgba(0,0,0,0.2);">Dr. Juan Mosovich</h1>
           
           <!-- Subtítulo -->
           <h2 class="h3 text-white text-center mb-2 fw-semibold" style="opacity: 0.95;">
@@ -258,9 +399,12 @@
           </h2>
           
           <!-- Descripción -->
-          <p class="text-white text-center mb-4 fs-5" style="max-width: 700px; margin-left: auto; margin-right: auto; opacity: 0.9;">
+          <p class="text-white text-center mb-2 fs-5" style="max-width: 700px; margin-left: auto; margin-right: auto; opacity: 0.9;">
             Médico Otorrinolaringólogo Especialista Universitario<br>
             <span class="small" style="opacity: 0.85;">Clínica y cirugía otorrinolaringológica para adultos y niños</span>
+          </p>
+          <p class="text-center mb-4" style="color: rgba(255,255,255,0.75); font-size: 0.9rem;">
+            Especialista universitario · +20 años de trayectoria
           </p>
           
           <!-- CTAs -->
@@ -284,8 +428,8 @@
     </div>
     
     <!-- Onda decorativa inferior -->
-    <div class="svg-wave-container">
-      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="1440" height="80">
+    <div class="svg-wave-container" style="width:100%;overflow:hidden;line-height:0;position:absolute;bottom:0;left:0;right:0;">
+      <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;" preserveAspectRatio="none">
         <path d="M0 0L60 8C120 16 240 32 360 37.3C480 43 600 37 720 32C840 27 960 21 1080 21.3C1200 21 1320 27 1380 29.3L1440 32V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0V0Z" fill="#003366"/>
       </svg>
     </div>
@@ -298,33 +442,19 @@
   <!-- Sección de Confianza -->
   <section class="py-4" style="background: linear-gradient(135deg, #003366 0%, #004d99 100%);">
     <div class="container">
-      <div class="row text-center text-white g-4">
-        <div class="col-6 col-md-3">
+      <div class="row text-center text-white g-4 justify-content-center">
+        <div class="col-6 col-md-4">
           <div class="p-3">
-            <i class="bi bi-person-badge fa-3x mb-3" style="color: #ff9800;" aria-hidden="true"></i>
+            <i class="bi bi-person-badge mb-3" style="color:#ff9800;font-size:2.5rem;" aria-hidden="true"></i>
             <h3 class="h2 fw-bold mb-1">20+</h3>
             <p class="mb-0 small text-white-50">Años de Experiencia</p>
           </div>
         </div>
-        <div class="col-6 col-md-3">
+        <div class="col-6 col-md-4">
           <div class="p-3">
-              <i class="bi bi-people-fill fa-3x mb-3" style="color: #ff9800;" aria-hidden="true"></i>
-            <h3 class="h2 fw-bold mb-1">2000+</h3>
-            <p class="mb-0 small text-white-50">Cirugías Efectuadas</p>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="p-3">
-            <i class="bi bi-star-fill fa-3x mb-3" style="color: #ff9800;" aria-hidden="true"></i>
-            <h3 class="h2 fw-bold mb-1">4.9★</h3>
+            <i class="bi bi-star-fill mb-3" style="color:#ff9800;font-size:2.5rem;" aria-hidden="true"></i>
+            <h3 class="h2 fw-bold mb-1">4.6★</h3>
             <p class="mb-0 small text-white-50">Calificación Google</p>
-          </div>
-        </div>
-        <div class="col-6 col-md-3">
-          <div class="p-3">
-            <i class="bi bi-hospital-fill fa-3x mb-3" style="color: #ff9800;" aria-hidden="true"></i>
-            <h3 class="h2 fw-bold mb-1">6</h3>
-            <p class="mb-0 small text-white-50">Consultorios en Pilar</p>
           </div>
         </div>
       </div>
@@ -355,22 +485,7 @@
                 </div>
             </div>
         </div>
-        <!-- Audífonos - DESTACADO -->
-        <div class="col-md-6 col-lg-3">
-            <div class="card service-card featured-card h-100 text-center p-4">
-                <span class="featured-badge">⭐ DESTACADO</span>
-                <div class="featured-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-earbuds" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M6.825 4.138c.596 2.141-.36 3.593-2.389 4.117a4.4 4.4 0 0 1-2.018.054c-.048-.01.9 2.778 1.522 4.61l.41 1.205a.52.52 0 0 1-.346.659l-.593.19a.55.55 0 0 1-.69-.34L.184 6.99c-.696-2.137.662-4.309 2.564-4.8 2.029-.523 3.402 0 4.076 1.948zm-.868 2.221c.43-.112.561-.993.292-1.969-.269-.975-.836-1.675-1.266-1.563s-.561.994-.292 1.969.836 1.675 1.266 1.563m3.218-2.221c-.596 2.141.36 3.593 2.389 4.117a4.4 4.4 0 0 0 2.018.054c.048-.01-.9 2.778-1.522 4.61l-.41 1.205a.52.52 0 0 0 .346.659l.593.19c.289.092.6-.06.69-.34l2.536-7.643c.696-2.137-.662-4.309-2.564-4.8-2.029-.523-3.402 0-4.076 1.948m.868 2.221c-.43-.112-.561-.993-.292-1.969.269-.975.836-1.675 1.266-1.563s.561.994.292 1.969-.836 1.675-1.266 1.563"/>
-                  </svg>
-                  </div>
-                <div class="card-body">
-                    <h3 class="card-title h5" style="color: #ff6b00; font-weight: 700;">Audífonos</h3>
-                    <p class="card-text">Soluciones auditivas personalizadas. Venta, adaptación y seguimiento profesional.</p>
-                    <a href="https://www.otorrinoenpilar.com/ota.html" class="btn btn-primary" style="background: linear-gradient(135deg, #ff9800 0%, #ff6b00 100%); border: none; font-weight: 600;" aria-label="Más información sobre audífonos">Más sobre Audífonos</a>
-                </div>
-            </div>
-        </div>
+       
          <!-- Nariz -->
          <div class="col-md-6 col-lg-3">
             <div class="card service-card h-100 text-center p-4">
@@ -402,7 +517,26 @@
                 </div>
             </div>
         </div>
-    </div>
+    
+     <!-- Audífonos - DESTACADO -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card service-card featured-card h-100 text-center p-4">
+                <span class="featured-badge">⭐ DESTACADO</span>
+                <div class="featured-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-earbuds" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6.825 4.138c.596 2.141-.36 3.593-2.389 4.117a4.4 4.4 0 0 1-2.018.054c-.048-.01.9 2.778 1.522 4.61l.41 1.205a.52.52 0 0 1-.346.659l-.593.19a.55.55 0 0 1-.69-.34L.184 6.99c-.696-2.137.662-4.309 2.564-4.8 2.029-.523 3.402 0 4.076 1.948zm-.868 2.221c.43-.112.561-.993.292-1.969-.269-.975-.836-1.675-1.266-1.563s-.561.994-.292 1.969.836 1.675 1.266 1.563m3.218-2.221c-.596 2.141.36 3.593 2.389 4.117a4.4 4.4 0 0 0 2.018.054c.048-.01-.9 2.778-1.522 4.61l-.41 1.205a.52.52 0 0 0 .346.659l.593.19c.289.092.6-.06.69-.34l2.536-7.643c.696-2.137-.662-4.309-2.564-4.8-2.029-.523-3.402 0-4.076 1.948m.868 2.221c-.43-.112-.561-.993-.292-1.969.269-.975.836-1.675 1.266-1.563s.561.994.292 1.969-.836 1.675-1.266 1.563"/>
+                  </svg>
+                  </div>
+                <div class="card-body">
+                    <h3 class="card-title h5" style="color: #ff6b00; font-weight: 700;">Oir mejor.</h3>
+                    <p class="card-text">Soluciones auditivas. Audífonos y dispositivos implantables.</p>
+                    <a href="https://www.otorrinoenpilar.com/ota.html" class="btn btn-primary" style="background: linear-gradient(135deg, #ff9800 0%, #ff6b00 100%); border: none; font-weight: 600;" aria-label="Más información sobre audífonos">Más sobre ayudas auditivas.</a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
     
     <!-- Segunda fila centrada para pantallas grandes -->
     <div class="row g-4 mt-0">
@@ -490,7 +624,7 @@
           <h2 class="h4 mb-0">Temas de interés frecuente</h2>
         </div>
         <div class="card-body bg-light">
-          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+          <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3 justify-content-center">
             <div class="col">
               <a href="https://www.otorrinoenpilar.com/oido.html#vppb" class="btn btn-outline-primary shadow-sm fw-bold py-3 px-2 d-flex flex-column align-items-center justify-content-center w-100 h-100" aria-label="Información sobre vértigo">
                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-emoji-dizzy" viewBox="0 0 16 16">
@@ -509,6 +643,14 @@
                 <span>Tinnitus</span>
               </a>
             </div>
+             <div class="col">
+              <a href="https://www.otorrinoenpilar.com/oido.html#atm" class="btn btn-outline-warning shadow-sm fw-bold py-3 px-2 d-flex flex-column align-items-center justify-content-center w-100 h-100" aria-label="Información sobre ATM - Articulación temporomandibular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-ear" viewBox="0 0 16 16">
+                  <path d="M8.5 1A4.5 4.5 0 0 0 4 5.5v7.047a2.453 2.453 0 0 0 4.75.861l.512-1.363a5.6 5.6 0 0 1 .816-1.46l2.008-2.581A4.34 4.34 0 0 0 8.66 1zM3 5.5A5.5 5.5 0 0 1 8.5 0h.16a5.34 5.34 0 0 1 4.215 8.618l-2.008 2.581a4.6 4.6 0 0 0-.67 1.197l-.51 1.363A3.453 3.453 0 0 1 3 12.547zM8.5 4A1.5 1.5 0 0 0 7 5.5v2.695q.168-.09.332-.192c.327-.208.577-.44.72-.727a.5.5 0 1 1 .895.448c-.256.513-.673.865-1.079 1.123A9 9 0 0 1 7 9.313V11.5a.5.5 0 0 1-1 0v-6a2.5 2.5 0 0 1 5 0V6a.5.5 0 0 1-1 0v-.5A1.5 1.5 0 0 0 8.5 4"/>
+                </svg>
+                <span>ATM</span>
+              </a>
+            </div>
             <div class="col">
               <a href="https://www.otorrinoenpilar.com/dormir.html" class="btn btn-outline-info shadow-sm fw-bold py-3 px-2 d-flex flex-column align-items-center justify-content-center w-100 h-100" aria-label="Información sobre trastornos del sueño">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-moon-stars" viewBox="0 0 16 16">
@@ -519,7 +661,7 @@
               </a>
             </div>
             <div class="col">
-              <a target="_blank" rel="noopener noreferrer" href="https://www.ketohoy.com/" class="btn btn-outline-warning shadow-sm fw-bold py-3 px-2 d-flex flex-column align-items-center justify-content-center w-100 h-100" aria-label="Información sobre dieta - Abre en nueva pestaña">
+              <a target="_blank" rel="noopener noreferrer" href="https://www.ketohoy.com/" class="btn btn-outline-danger shadow-sm fw-bold py-3 px-2 d-flex flex-column align-items-center justify-content-center w-100 h-100" aria-label="Información sobre dieta - Abre en nueva pestaña">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-fork-knife" viewBox="0 0 16 16">
                   <path d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z"/>
                 </svg>
@@ -535,15 +677,25 @@
               </a>
             </div>
             <div class="col">
-              <a href="https://www.otorrinoenpilar.com/sinusitis.html#prevenir" class="btn btn-outline-danger shadow-sm fw-bold py-3 px-2 d-flex flex-column align-items-center justify-content-center w-100 h-100" aria-label="Información sobre alergia">
+              <a href="https://www.otorrinoenpilar.com/sinusitis.html#prevenir" class="btn btn-outline-primary shadow-sm fw-bold py-3 px-2 d-flex flex-column align-items-center justify-content-center w-100 h-100" aria-label="Información sobre alergia">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-flower1" viewBox="0 0 16 16">
                   <path d="M6.174 1.184a2 2 0 0 1 3.652 0A2 2 0 0 1 12.99 3.01a2 2 0 0 1 1.826 3.164 2 2 0 0 1 0 3.652 2 2 0 0 1-1.826 3.164 2 2 0 0 1-3.164 1.826 2 2 0 0 1-3.652 0A2 2 0 0 1 3.01 12.99a2 2 0 0 1-1.826-3.164 2 2 0 0 1 0-3.652A2 2 0 0 1 3.01 3.01a2 2 0 0 1 3.164-1.826M8 1a1 1 0 0 0-.998 1.03l.01.091q.017.116.054.296c.049.241.122.542.213.887.182.688.428 1.513.676 2.314L8 5.762l.045-.144c.248-.8.494-1.626.676-2.314.091-.345.164-.646.213-.887a5 5 0 0 0 .064-.386L9 2a1 1 0 0 0-1-1M2 9l.03-.002.091-.01a5 5 0 0 0 .296-.054c.241-.049.542-.122.887-.213a61 61 0 0 0 2.314-.676L5.762 8l-.144-.045a61 61 0 0 0-2.314-.676 17 17 0 0 0-.887-.213 5 5 0 0 0-.386-.064L2 7a1 1 0 1 0 0 2m7 5-.002-.03a5 5 0 0 0-.064-.386 16 16 0 0 0-.213-.888 61 61 0 0 0-.676-2.314L8 10.238l-.045.144c-.248.8-.494 1.626-.676 2.314-.091.345-.164.646-.213.887a5 5 0 0 0-.064.386L7 14a1 1 0 1 0 2 0m-5.696-2.134.025-.017a5 5 0 0 0 .303-.248c.184-.164.408-.377.661-.629A61 61 0 0 0 5.96 9.23l.103-.111-.147.033a61 61 0 0 0-2.343.572c-.344.093-.64.18-.874.258a5 5 0 0 0-.367.138l-.027.014a1 1 0 1 0 1 1.732zM4.5 14.062a1 1 0 0 0 1.366-.366l.014-.027q.014-.03.036-.084a5 5 0 0 0 .102-.283c.078-.233.165-.53.258-.874a61 61 0 0 0 .572-2.343l.033-.147-.11.102a61 61 0 0 0-1.743 1.667 17 17 0 0 0-.629.66 5 5 0 0 0-.248.304l-.017.025a1 1 0 0 0 .366 1.366m9.196-8.196a1 1 0 0 0-1-1.732l-.025.017a5 5 0 0 0-.303.248 17 17 0 0 0-.661.629A61 61 0 0 0 10.04 6.77l-.102.111.147-.033a61 61 0 0 0 2.342-.572c.345-.093.642-.18.875-.258a5 5 0 0 0 .367-.138zM11.5 1.938a1 1 0 0 0-1.366.366l-.014.027q-.014.03-.036.084a5 5 0 0 0-.102.283c-.078.233-.165.53-.258.875a61 61 0 0 0-.572 2.342l-.033.147.11-.102a61 61 0 0 0 1.743-1.667c.252-.253.465-.477.629-.66a5 5 0 0 0 .248-.304l.017-.025a1 1 0 0 0-.366-1.366M14 9a1 1 0 0 0 0-2l-.03.002a5 5 0 0 0-.386.064c-.242.049-.543.122-.888.213-.688.182-1.513.428-2.314.676L10.238 8l.144.045c.8.248 1.626.494 2.314.676.345.091.646.164.887.213a5 5 0 0 0 .386.064zM1.938 4.5a1 1 0 0 0 .393 1.38l.084.035q.108.045.283.103c.233.078.53.165.874.258a61 61 0 0 0 2.343.572l.147.033-.103-.111a61 61 0 0 0-1.666-1.742 17 17 0 0 0-.66-.629 5 5 0 0 0-.304-.248l-.025-.017a1 1 0 0 0-1.366.366m2.196-1.196.017.025a5 5 0 0 0 .248.303c.164.184.377.408.629.661A61 61 0 0 0 6.77 5.96l.111.102-.033-.147a61 61 0 0 0-.572-2.342c-.093-.345-.18-.642-.258-.875a5 5 0 0 0-.138-.367l-.014-.027a1 1 0 1 0-1.732 1m9.928 8.196a1 1 0 0 0-.366-1.366l-.027-.014a5 5 0 0 0-.367-.138c-.233-.078-.53-.165-.875-.258a61 61 0 0 0-2.342-.572l-.147-.033.102.111a61 61 0 0 0 1.667 1.742c.253.252.477.465.66.629a5 5 0 0 0 .304.248l.025.017a1 1 0 0 0 1.366-.366m-3.928 2.196a1 1 0 0 0 1.732-1l-.017-.025a5 5 0 0 0-.248-.303 17 17 0 0 0-.629-.661A61 61 0 0 0 9.23 10.04l-.111-.102.033.147a61 61 0 0 0 .572 2.342c.093.345.18.642.258.875a5 5 0 0 0 .138.367zM8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
                 </svg>
                 <span>Alergia</span>
               </a>
             </div>
+               <div class="col">
+              <a href="https://www.otorrinoenpilar.com/sinusitis.html#higienico-dieteticas" class="btn btn-outline-success shadow-sm fw-bold py-3 px-2 d-flex flex-column align-items-center justify-content-center w-100 h-100" aria-label="Información sobre limpieza nasal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-droplet" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0q.164.544.371 1.038c.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8m.413 1.021A31 31 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10a5 5 0 0 0 10 0c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+                  <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87z"/>
+                </svg>
+                <span>Lavado nasal</span>
+              </a>
+            </div>
+          
             <div class="col">
-              <a href="https://www.fonoenpilar.com/" class="btn btn-outline-primary shadow-sm fw-bold py-3 px-2 d-flex flex-column align-items-center justify-content-center w-100 h-100" aria-label="Información sobre fonoaudiología">
+              <a href="https://www.fonoenpilar.com/" class="btn btn-outline-dark shadow-sm fw-bold py-3 px-2 d-flex flex-column align-items-center justify-content-center w-100 h-100" aria-label="Información sobre fonoaudiología">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
                   <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
                   <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125m.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2"/>
@@ -551,18 +703,99 @@
                 <span>Fonoaudiología</span>
               </a>
             </div>
+           
             <div class="col">
-              <a href="https://www.otorrinoenpilar.com/oido.html#atm" class="btn btn-outline-success shadow-sm fw-bold py-3 px-2 d-flex flex-column align-items-center justify-content-center w-100 h-100" aria-label="Información sobre ATM - Articulación temporomandibular">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-ear" viewBox="0 0 16 16">
-                  <path d="M8.5 1A4.5 4.5 0 0 0 4 5.5v7.047a2.453 2.453 0 0 0 4.75.861l.512-1.363a5.6 5.6 0 0 1 .816-1.46l2.008-2.581A4.34 4.34 0 0 0 8.66 1zM3 5.5A5.5 5.5 0 0 1 8.5 0h.16a5.34 5.34 0 0 1 4.215 8.618l-2.008 2.581a4.6 4.6 0 0 0-.67 1.197l-.51 1.363A3.453 3.453 0 0 1 3 12.547zM8.5 4A1.5 1.5 0 0 0 7 5.5v2.695q.168-.09.332-.192c.327-.208.577-.44.72-.727a.5.5 0 1 1 .895.448c-.256.513-.673.865-1.079 1.123A9 9 0 0 1 7 9.313V11.5a.5.5 0 0 1-1 0v-6a2.5 2.5 0 0 1 5 0V6a.5.5 0 0 1-1 0v-.5A1.5 1.5 0 0 0 8.5 4"/>
+              <a href="https://www.otorrinoenpilar.com/garganta.html#vocales" class="btn btn-outline-warning shadow-sm fw-bold py-3 px-2 d-flex flex-column align-items-center justify-content-center w-100 h-100" aria-label="Información sobre la voz">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
+                  <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5"/>
+                  <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3"/>
                 </svg>
-                <span>ATM</span>
+                <span>Voz</span>
               </a>
             </div>
-          </div>
+            <div class="col">
+              <a href="https://www.otorrinoenpilar.com/at.html" class="btn btn-outline-info shadow-sm fw-bold py-3 px-2 d-flex flex-column align-items-center justify-content-center w-100 h-100" aria-label="Información sobre audiometría">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-music-note-beamed" viewBox="0 0 16 16">
+                  <path d="M6 13c0 1.105-1.12 2-2.5 2S1 14.105 1 13s1.12-2 2.5-2 2.5.896 2.5 2m9-2c0 1.105-1.12 2-2.5 2s-2.5-.895-2.5-2 1.12-2 2.5-2 2.5.895 2.5 2"/>
+                  <path fill-rule="evenodd" d="M14 11V2h1v9zM6 3v10H5V3z"/>
+                  <path d="M5 2.905a1 1 0 0 1 .9-.995l8-.8a1 1 0 0 1 1.1.995V3L5 4z"/>
+                </svg>
+                <span>Audiometría</span>
+              </a>
+            </div>
+         </div>
         </div>
       </div>
     </section>
+<!-- Sección de Aplicaciones Clínicas (Minimalista con Desplegable) -->
+  <section class="container my-4" id="apps-pacientes">
+    <div class="card border-0 shadow-sm bg-light p-3">
+      <div class="row align-items-center">
+        <div class="col-md">
+          <h2 class="h5 fw-bold mb-1" style="color: #003366;">
+            <i class="bi bi-phone text-primary me-2"></i> Aplicaciones Clínicas para Celular
+          </h2>
+          <p class="text-muted small mb-0">
+            Herramientas interactivas de tratamiento y autoevaluación. <strong>Funcionan sin internet</strong> agregándolas a tu pantalla de inicio desde el navegador.
+          </p>
+        </div>
+        <div class="col-md-auto text-md-end mt-3 mt-md-0">
+          <button class="btn btn-primary btn-sm fw-semibold px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseApps" aria-expanded="false" aria-controls="collapseApps" style="background: linear-gradient(135deg, #0066cc 0%, #003366 100%); border: none;">
+            <i class="bi bi-grid-fill me-1"></i> Ver Apps Gratuitas <i class="bi bi-chevron-down ms-1 small"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Contenido desplegable -->
+      <div class="collapse mt-3 pt-3 border-top" id="collapseApps">
+        <div class="row g-2">
+          <div class="col-md-4 col-sm-6">
+            <a href="https://www.otorrinoenpilar.com/tcct.html" target="_blank" rel="noopener noreferrer" class="btn btn-white bg-white border w-100 py-2 px-3 text-start d-flex align-items-center shadow-sm small" style="font-size: 0.85rem;">
+              <i class="bi bi-brain text-primary me-2 fs-5"></i>
+              <span class="text-truncate text-dark">TCC para Tinnitus</span>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <a href="https://www.otorrinoenpilar.com/tinnitustop.html" target="_blank" rel="noopener noreferrer" class="btn btn-white bg-white border w-100 py-2 px-3 text-start d-flex align-items-center shadow-sm small" style="font-size: 0.85rem;">
+              <i class="bi bi-headphones text-success me-2 fs-5"></i>
+              <span class="text-truncate text-dark">Terapia Sonora (Tinnitus)</span>
+            </a>
+          </div>
+                    <div class="col-md-4 col-sm-6">
+            <a href="https://www.otorrinoenpilar.com/somnolencia.html" target="_blank" rel="noopener noreferrer" class="btn btn-white bg-white border w-100 py-2 px-3 text-start d-flex align-items-center shadow-sm small" style="font-size: 0.85rem;">
+              <i class="bi bi-moon-stars text-info me-2 fs-5"></i>
+              <span class="text-truncate text-dark">Test de Somnolencia (SAHOS)</span>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <a href="https://www.otorrinoenpilar.com/ronco-gim.html" target="_blank" rel="noopener noreferrer" class="btn btn-white bg-white border w-100 py-2 px-3 text-start d-flex align-items-center shadow-sm small" style="font-size: 0.85rem;">
+              <i class="bi bi-activity text-warning me-2 fs-5"></i>
+              <span class="text-truncate text-dark">Ejercicios Miofuncionales (Ronquidos)</span>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <a href="https://www.otorrinoenpilar.com/tccB.html" target="_blank" rel="noopener noreferrer" class="btn btn-white bg-white border w-100 py-2 px-3 text-start d-flex align-items-center shadow-sm small" style="font-size: 0.85rem;">
+              <i class="bi bi-alarm text-secondary me-2 fs-5"></i>
+              <span class="text-truncate text-dark">TCC para Insomnio</span>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <a href="https://www.otorrinoenpilar.com/at.html" target="_blank" rel="noopener noreferrer" class="btn btn-white bg-white border w-100 py-2 px-3 text-start d-flex align-items-center shadow-sm small" style="font-size: 0.85rem;">
+              <i class="bi bi-music-note-beamed text-info me-2 fs-5"></i>
+              <span class="text-truncate text-dark">Audiometría Online</span>
+            </a>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <small class="text-muted" style="font-size: 0.75rem;">
+            <i class="bi bi-info-circle me-1"></i> Para usarlas sin internet en tu celular: abre la app elegida, entra al menú de tu navegador (Safari o Chrome) y selecciona <strong>"Agregar a la pantalla principal"</strong>.
+          </small>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+
 <section  id="contacto" style="padding: 40px 15px; background-color: #f8f9fa; font-family: 'Segoe UI', Roboto, Arial, sans-serif; color: #212529;">
     
     <div id="lugares" style="text-align: center; margin-bottom: 30px;">
@@ -775,9 +1008,10 @@
                             > 
                                 <!-- Configuración FormSubmit -->
                                 <input type="hidden" name="_subject" value="Nueva consulta desde OtorrinoEnPilar.com">
-                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_captcha" value="true">
                                 <input type="hidden" name="_template" value="table">
-                                <input type="text" name="_honey" style="display:none">
+                                <input type="hidden" name="_next" value="https://www.otorrinoenpilar.com/#contacto">
+                                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
                                 
                                 <!-- Campo Nombre -->
                                 <div class="mb-4"> 
@@ -1026,28 +1260,32 @@
                 <div class="text-center mb-3 mb-md-3 mt-2 mt-md-0" id="dejarResenaGoogle">
                     <p class="text-white mb-2" style="font-size: 1.1rem;">¿Ya fuiste paciente? ¡Tu opinión es importante!</p>
                     <a href="https://g.page/r/CWbtrBOdyGoaEBM/review" target="_blank" rel="noopener noreferrer" class="btn btn-light btn-lg" style="background-color: #ffffff; color: #003366; font-weight: bold; border-radius: 30px; padding: 15px 35px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.3s ease; border: 2px solid #ffffff;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.2)'">
-                        <i class="fas fa-star" style="color: #FFC107; margin-right: 8px;" aria-hidden="true"></i>Dejar una reseña en Google
-                      </a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#FFC107" class="bi bi-star-fill" viewBox="0 0 16 16" style="margin-right:8px;vertical-align:middle;" aria-hidden="true"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>Dejar una reseña en Google
                     </a>
                 </div>
             </div>
             <hr>
             <p>La responsabilidad editorial de la página es de Juan Mosovich médico mn100231 mp56747 <a style="color: aliceblue;" href="./info.html#cv">(ver CV)</a>.<br>
             El objetivo del sitio no es reemplazar la consulta médica, sino complementarla y optimizarla.<br> 
-            La información suministrada por los pacientes es confidencial.<br>
-          
+            La información suministrada por los pacientes es confidencial.
+            </p>
 
             <hr>
-            <div class="text-center mb-3">
+            <div class="d-flex justify-content-center align-items-center mb-3 gap-3">
               <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" class="text-white social-link me-2 mx-2" aria-label="Facebook">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16" style="display:block">
                 <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
               </svg>
               </a>
               <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="mx-2 text-white social-link" aria-label="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16" style="display:block">
                 <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
               </svg>
+              </a>
+              <a href="https://www.youtube.com/channel/UCBrWcUcpJTH0q4mofkYL9OQ" target="_blank" rel="noopener noreferrer" class="mx-2 text-white social-link" aria-label="YouTube">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16" style="display:block">
+                  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                </svg>
               </a>
             </div>
             <div class="derechos-de-autor">Desarrollo de <a target="_blank" rel="noopener noreferrer" href="https://devmedical.netlify.app/" style="color:aliceblue; "><strong>DevMed</strong></a> (2022) &#169;</div>
@@ -1055,7 +1293,11 @@
     </div>
 </footer>
 
-
+<!-- Botón scroll al inicio -->
+<button id="scrollToTop" aria-label="Volver al inicio de la página" style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:9998;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#003366,#0066cc);border:none;color:#fff;box-shadow:0 4px 12px rgba(0,51,102,.4);opacity:0;pointer-events:none;transition:opacity .3s;display:flex;align-items:center;justify-content:center;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/></svg>
+</button>
+<style>#scrollToTop.show{opacity:1;pointer-events:auto}</style>
 
 
 
@@ -1100,6 +1342,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const form = document.getElementById('contactForm');
     if (!form) return;
+
+    // Time-gate: registrar cuándo se cargó el formulario
+    const formLoadTime = Date.now();
     
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
@@ -1127,6 +1372,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Manejo de envío
     form.addEventListener('submit', function(event) {
+      // Time-gate: bloquear envíos en menos de 3 segundos (comportamiento de bot)
+      if (Date.now() - formLoadTime < 3000) {
+        event.preventDefault();
+        event.stopPropagation();
+        return;
+      }
+
       if (!form.checkValidity()) {
         event.preventDefault();
         event.stopPropagation();
@@ -1176,7 +1428,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   })();
 </script>
-
-
 
 </html>

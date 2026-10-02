@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sinusitis y rinitis en Pilar y Zona Norte: sintomas, diagnostico clinico, tratamientos y autoevaluacion NOSE. Turnos con el Dr. Mosovich.">
+    <meta name="description" content="Sinusitis, rinitis, obstrucción nasal, sangrados nasales, problemas de olfato y cesación tabáquica en Pilar. Diagnóstico, tratamientos y autoevaluación NOSE. Dr. Mosovich, otorrinolaringólogo.">
     <meta name="author" content="Dr. Juan Mosovich">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#003366">
     <!-- Geo Tags para SEO Local -->
     <meta name="geo.region" content="AR-B">
     <meta name="geo.placename" content="Pilar, Buenos Aires, Argentina">
@@ -31,13 +32,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" fetchpriority="high" crossorigin>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap purgeado (solo clases usadas): ~6 KB gzipped vs 24.5 KB CDN original -->
+    <!-- Bloqueante intencionado: async causaba CLS 0.302 (reflow masivo al cargar el CSS) -->
+    <link rel="stylesheet" href="./css/sinusitis-bootstrap.min.css">
     <!-- Tipografía: solo Bootstrap, sin Google Fonts -->
-    <!--Polyfill loadCSS para compatibilidad con preload en navegadores antiguos-->
-    <script>
-      !function(e){"use strict";var t=function(t,n,r,o){var i,a=e.document,d=a.createElement("link");if(n)i=n;else{var l=(a.body||a.getElementsByTagName("head")[0]).childNodes;i=l[l.length-1]}var s=a.styleSheets;if(o)for(var u=0;u<s.length;u++)s[u].href&&s[u].href.indexOf(t)>-1&&(i=o);d.rel="stylesheet",d.href=t,d.media="only x",function e(t){if(a.body)return t();setTimeout(function(){e(t)})}(function(){i.parentNode.insertBefore(d,n?i:i.nextSibling)});var f=function(e){for(var t=d.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",f),d.onloadcssdefined=f,f(function(){d.media=r||"all"}),d}"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
-    </script>
 <meta name="keywords" content="problemas respiratorios nasales, rinitis y sinusitis agudas y crónicas, sangrados y fracturas nasales, tratamientos y complicaciones, rinoplastia, cirugía nasal estética, septoplastia, desviación de tabique, cornetes nasales, pólipos nasales, lavados nasales, alergias nasales, obstrucción nasal, otorrinolaringólogo Pilar, ENT Zona Norte">
 <meta name="author" content="Dr. Juan Mosovich">
  <!--favicon-->
@@ -46,103 +44,44 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
 <link rel="manifest" href="/favicon/site.webmanifest">
 <!--favicon-->   
-    <title>Sinusitis y rinitis en Pilar | Dr. Mosovich</title>
+    <title>Nariz: sinusitis, rinitis, sangrados nasales, olfato | Dr. Mosovich, Pilar</title>
     <link rel="canonical" href="https://www.otorrinoenpilar.com/sinusitis.html"/>
     <!-- Dato estructurado Google actualizado -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebPage",
-      "@id": "https://www.otorrinoenpilar.com/sinusitis.html",
-      "name": "Sinusitis y rinitis en Pilar | Dr. Mosovich",
-      "url": "https://www.otorrinoenpilar.com/sinusitis.html",
-      "description": "Sinusitis y rinitis en Pilar y Zona Norte: síntomas, diagnóstico clínico, tratamientos y autoevaluación NOSE.",
-      "dateModified": "2026-02-25",
-      "author": {
-        "@type": "Person",
-        "name": "Dr. Juan Mosovich"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Qué es la sinusitis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La sinusitis es la inflamación de los senos paranasales, que puede causar congestión y dolor facial."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cómo se puede prevenir la sinusitis?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Evitar resfriados, mantener higiene nasal y tratar alergias ayuda a prevenir la sinusitis."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Dónde se encuentra el consultorio?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Caamaño 1100, Edificio Agora 2, Pilar, Buenos Aires."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "MedicalBusiness",
-      "name": "Dr. Juan Mosovich - Otorrinolaringólogo",
-      "image": "https://www.otorrinoenpilar.com/imagenes/lavados-nasales.webp",
-      "telePhone": "+54-9-11-6821-2512",
-      "url": "https://www.otorrinoenpilar.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Caamaño 1100",
-        "addressLocality": "Pilar",
-        "addressRegion": "Buenos Aires",
-        "postalCode": "1631",
-        "addressCountry": "AR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "-34.434636",
-        "longitude": "-58.829689"
-      },
-      "priceRange": "$$",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "127"
-      }
-    }
-  ]
-}
-</script>
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:site_name" content="Otorrino en Pilar">
 <meta property="og:locale" content="es_AR">
-<meta property="og:title" content="Sinusitis y rinitis en Pilar | Dr. Mosovich">
-<meta property="og:description" content="Sinusitis y rinitis en Pilar y Zona Norte: sintomas, diagnostico clinico, tratamientos y autoevaluacion NOSE. Turnos con el Dr. Mosovich.">
+<meta property="og:title" content="Nariz: sinusitis, rinitis, sangrados nasales, olfato | Dr. Mosovich, Pilar">
+<meta property="og:description" content="Sinusitis, rinitis, obstrucción nasal, sangrados nasales, problemas de olfato y cesación tabáquica en Pilar. Diagnóstico, tratamientos y autoevaluación NOSE. Dr. Mosovich.">
 <meta property="og:url" content="https://www.otorrinoenpilar.com/sinusitis.html">
-<meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/lavados-nasales.webp">
-<meta property="og:image:alt" content="Lavado nasal con solucion salina">
+<meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/imagenogsinusitishtml.png">
+<meta property="og:image:width" content="1424">
+<meta property="og:image:height" content="752">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="Alivio real para tu sinusitis — Tratamientos y Consejos para Problemas Respiratorios Nasales | Dr. Mosovich, Pilar">
+<meta property="article:published_time" content="2024-01-01T00:00:00-03:00">
+<meta property="article:modified_time" content="2026-05-06T00:00:00-03:00">
+<meta property="article:author" content="https://www.otorrinoenpilar.com/#dr-juan-mosovich">
+<meta property="article:section" content="Salud ORL">
+<meta property="article:tag" content="sinusitis">
+<meta property="article:tag" content="rinitis alérgica">
+<meta property="article:tag" content="obstrucción nasal">
+<meta property="article:tag" content="sangrado nasal">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sinusitis y rinitis en Pilar | Dr. Mosovich">
-<meta name="twitter:description" content="Sinusitis y rinitis en Pilar y Zona Norte: sintomas, diagnostico clinico, tratamientos y autoevaluacion NOSE. Turnos con el Dr. Mosovich.">
-<meta name="twitter:image" content="https://www.otorrinoenpilar.com/imagenes/lavados-nasales.webp">
-<meta name="twitter:image:alt" content="Lavado nasal con solucion salina">
+<meta name="twitter:title" content="Nariz: sinusitis, rinitis, sangrados nasales, olfato | Dr. Mosovich, Pilar">
+<meta name="twitter:description" content="Sinusitis, rinitis, obstrucción nasal, sangrados nasales, problemas de olfato y cesación tabáquica en Pilar. Diagnóstico, tratamientos y autoevaluación NOSE. Dr. Mosovich.">
+<meta name="twitter:image" content="https://www.otorrinoenpilar.com/imagenes/imagenogsinusitishtml.png">
+<meta name="twitter:image:alt" content="Alivio real para tu sinusitis — Tratamientos y Consejos | Dr. Mosovich, Pilar">
     <style>
       :root {
         --brand-navy: #0a2b4f;
         --brand-teal: #1b8f8a;
+        --brand-teal-a11y: #116b66;
         --brand-ink: #0b1b2b;
         --brand-ice: #e7f4f4;
         --brand-sand: #f7f2ea;
+        --bs-link-color: #0549c7;
+        --bs-link-color-rgb: 5, 73, 199;
+        --bs-link-hover-color: #03368a;
       }
 
       body {
@@ -688,18 +627,6 @@
           }
         }
 
-        /* Barra de progreso de lectura */
-        .reading-progress {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 0;
-          height: 4px;
-          background: linear-gradient(90deg, var(--brand-teal), var(--brand-navy));
-          z-index: 9999;
-          transition: width 0.2s ease;
-        }
-
         /* Featured card para rinoplastia */
         .featured-card {
           background: linear-gradient(135deg, #e7f4f4, #f7f2ea);
@@ -716,19 +643,791 @@
           gap: 6px;
           padding: 6px 12px;
           border-radius: 999px;
-          background-color: var(--brand-teal);
+          background-color: var(--brand-teal-a11y);
           color: white;
           font-weight: 600;
           font-size: 0.85rem;
           margin-bottom: 12px;
         }
 
+        /* content-visibility: el browser omite layout/paint de secciones fuera del viewport */
+        .cv-section {}
+
+        /* Eliminar transiciones no compuestas de Bootstrap en botones.
+           El cambio de color/borde en hover sigue ocurriendo, solo sin animación.
+           Solo se animan opacity y transform (GPU-composited). */
+        .btn {
+          transition: opacity .15s ease-in-out, transform .15s ease-in-out, box-shadow .15s ease-in-out !important;
+        }
+
   </style>  
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.otorrinoenpilar.com/#website",
+      "url": "https://www.otorrinoenpilar.com",
+      "name": "Otorrino en Pilar",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" }
+    },
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://www.otorrinoenpilar.com/sinusitis.html",
+      "url": "https://www.otorrinoenpilar.com/sinusitis.html",
+      "name": "Nariz: sinusitis, rinitis, sangrados nasales, olfato | Dr. Mosovich, Pilar",
+      "description": "Guía completa de patología nasal: obstrucción nasal, sinusitis aguda y crónica, rinitis alérgica, epistaxis (sangrados nasales), traumatismos, desviación de tabique, cornetes, hiposmia/anosmia, cesación tabáquica y autoevaluación NOSE. Dr. Mosovich — Otorrinolaringólogo en Pilar, Zona Norte.",
+      "inLanguage": "es",
+      "datePublished": "2024-01-01",
+      "dateModified": "2026-05-23",
+      "lastReviewed": "2026-05-23",
+      "reviewedBy": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/#website" },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.otorrinoenpilar.com/sinusitis.html"
+      },
+      "audience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Patient"
+      },
+      "about": [
+        { "@id": "https://www.otorrinoenpilar.com/sinusitis.html#sinusitis" },
+        { "@id": "https://www.otorrinoenpilar.com/sinusitis.html#rinitis" },
+        { "@id": "https://www.otorrinoenpilar.com/sinusitis.html#epistaxis-condition" },
+        { "@id": "https://www.otorrinoenpilar.com/sinusitis.html#desviacion-septal" },
+        { "@id": "https://www.otorrinoenpilar.com/sinusitis.html#hiposmia-anosmia" },
+        { "@id": "https://www.otorrinoenpilar.com/sinusitis.html#tabaquismo" }
+      ],
+      "author": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "breadcrumb": { "@id": "https://www.otorrinoenpilar.com/sinusitis.html#breadcrumb" },
+      "specialty": "Otolaryngology",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".hero-title", "#ivn"]
+      }
+    },
+    {
+      "@type": "MedicalCondition",
+      "@id": "https://www.otorrinoenpilar.com/sinusitis.html#sinusitis",
+      "name": "Sinusitis",
+      "alternateName": "Rinosinusitis",
+      "code": {
+        "@type": "MedicalCode",
+        "codeValue": "J32",
+        "codingSystem": "ICD-10"
+      },
+      "description": "Inflamación de los senos paranasales que puede ser aguda (menos de 4 semanas) o crónica (más de 12 semanas).",
+      "possibleTreatment": [
+        { "@type": "MedicalTherapy", "name": "Lavados nasales con solución salina" },
+        { "@type": "MedicalTherapy", "name": "Corticoides nasales tópicos" },
+        { "@type": "MedicalTherapy", "name": "Antihistamínicos orales" },
+        { "@type": "MedicalTherapy", "name": "Cirugía endoscópica funcional de senos paranasales (CENS)" }
+      ],
+      "signOrSymptom": [
+        { "@type": "MedicalSymptom", "name": "Congestión nasal" },
+        { "@type": "MedicalSymptom", "name": "Secreción nasal espesa" },
+        { "@type": "MedicalSymptom", "name": "Dolor facial" },
+        { "@type": "MedicalSymptom", "name": "Presión en senos paranasales" },
+        { "@type": "MedicalSymptom", "name": "Reducción del olfato" }
+      ],
+      "relevantSpecialty": { "@type": "MedicalSpecialty", "name": "Otolaryngology" },
+      "sameAs": "https://es.wikipedia.org/wiki/Sinusitis",
+      "associatedAnatomy": {
+        "@type": "AnatomicalStructure",
+        "name": "Senos paranasales"
+      }
+    },
+    {
+      "@type": "MedicalCondition",
+      "@id": "https://www.otorrinoenpilar.com/sinusitis.html#rinitis",
+      "name": "Rinitis alérgica",
+      "alternateName": ["Rinitis perenne", "Rinitis estacional", "Fiebre del heno"],
+      "code": {
+        "@type": "MedicalCode",
+        "codeValue": "J30",
+        "codingSystem": "ICD-10"
+      },
+      "description": "Inflamación de la mucosa nasal desencadenada por alérgenos como el polen, los ácaros o la caspa de animales.",
+      "riskFactor": [
+        { "@type": "MedicalRiskFactor", "name": "Exposición a ácaros del polvo" },
+        { "@type": "MedicalRiskFactor", "name": "Exposición a pólenes estacionales" },
+        { "@type": "MedicalRiskFactor", "name": "Caspa de animales domésticos" },
+        { "@type": "MedicalRiskFactor", "name": "Tabaquismo activo o pasivo" }
+      ],
+      "possibleTreatment": [
+        { "@type": "MedicalTherapy", "name": "Antihistamínicos" },
+        { "@type": "MedicalTherapy", "name": "Corticoides nasales tópicos" },
+        { "@type": "MedicalTherapy", "name": "Inmunoterapia alérgica" },
+        { "@type": "MedicalTherapy", "name": "Control ambiental de alérgenos" },
+        { "@type": "MedicalTherapy", "name": "Lavados nasales con solución salina" }
+      ],
+      "signOrSymptom": [
+        { "@type": "MedicalSymptom", "name": "Estornudos" },
+        { "@type": "MedicalSymptom", "name": "Picazón nasal y ocular" },
+        { "@type": "MedicalSymptom", "name": "Secreción nasal acuosa" },
+        { "@type": "MedicalSymptom", "name": "Obstrucción nasal" },
+        { "@type": "MedicalSymptom", "name": "Conjuntivitis alérgica" }
+      ],
+      "relevantSpecialty": { "@type": "MedicalSpecialty", "name": "Otolaryngology" },
+      "sameAs": "https://es.wikipedia.org/wiki/Rinitis_al%C3%A9rgica",
+      "associatedAnatomy": {
+        "@type": "AnatomicalStructure",
+        "name": "Mucosa nasal"
+      }
+    },
+    {
+      "@type": "MedicalCondition",
+      "@id": "https://www.otorrinoenpilar.com/sinusitis.html#epistaxis-condition",
+      "name": "Epistaxis",
+      "alternateName": ["Sangrado nasal", "Hemorragia nasal"],
+      "code": {
+        "@type": "MedicalCode",
+        "codeValue": "R04.0",
+        "codingSystem": "ICD-10"
+      },
+      "description": "Sangrado originado en la mucosa nasal, frecuente en niños y adultos mayores. Puede ser anterior (plexo de Kiesselbach) o posterior.",
+      "possibleTreatment": [
+        { "@type": "MedicalTherapy", "name": "Compresión digital" },
+        { "@type": "MedicalTherapy", "name": "Cauterización con nitrato de plata" },
+        { "@type": "MedicalTherapy", "name": "Cauterización eléctrica" },
+        { "@type": "MedicalTherapy", "name": "Taponamiento nasal anterior" },
+        { "@type": "MedicalTherapy", "name": "Cirugía endoscópica para ligadura arterial" }
+      ],
+      "signOrSymptom": [
+        { "@type": "MedicalSymptom", "name": "Sangrado nasal espontáneo" },
+        { "@type": "MedicalSymptom", "name": "Sangrado nasal recurrente" },
+        { "@type": "MedicalSymptom", "name": "Sangrado nasal posterior con deglución de sangre" }
+      ],
+      "relevantSpecialty": { "@type": "MedicalSpecialty", "name": "Otolaryngology" },
+      "sameAs": "https://es.wikipedia.org/wiki/Epistaxis",
+      "associatedAnatomy": {
+        "@type": "AnatomicalStructure",
+        "name": "Plexo de Kiesselbach, mucosa nasal"
+      }
+    },
+    {
+      "@type": "MedicalCondition",
+      "@id": "https://www.otorrinoenpilar.com/sinusitis.html#desviacion-septal",
+      "name": "Desviación del tabique nasal",
+      "alternateName": ["Septum desviado", "Desviación septal"],
+      "code": {
+        "@type": "MedicalCode",
+        "codeValue": "J34.2",
+        "codingSystem": "ICD-10"
+      },
+      "description": "Desplazamiento del septum nasal respecto a la línea media que causa obstrucción respiratoria, ronquido y predisposición a sinusitis.",
+      "possibleTreatment": [
+        { "@type": "MedicalTherapy", "name": "Septoplastia" },
+        { "@type": "MedicalTherapy", "name": "Rinoseptoplastia funcional" },
+        { "@type": "MedicalTherapy", "name": "Turbinoplastia" }
+      ],
+      "signOrSymptom": [
+        { "@type": "MedicalSymptom", "name": "Obstrucción nasal unilateral o bilateral" },
+        { "@type": "MedicalSymptom", "name": "Ronquido" },
+        { "@type": "MedicalSymptom", "name": "Cefalea" },
+        { "@type": "MedicalSymptom", "name": "Sinusitis recurrente" }
+      ],
+      "relevantSpecialty": { "@type": "MedicalSpecialty", "name": "Otolaryngology" },
+      "sameAs": "https://es.wikipedia.org/wiki/Desviaci%C3%B3n_del_tabique_nasal",
+      "associatedAnatomy": {
+        "@type": "AnatomicalStructure",
+        "name": "Tabique nasal (septum)"
+      }
+    },
+    {
+      "@type": "MedicalCondition",
+      "@id": "https://www.otorrinoenpilar.com/sinusitis.html#hiposmia-anosmia",
+      "name": "Hiposmia y anosmia",
+      "alternateName": ["Pérdida del olfato", "Disminución del olfato"],
+      "code": {
+        "@type": "MedicalCode",
+        "codeValue": "R43",
+        "codingSystem": "ICD-10"
+      },
+      "description": "Disminución parcial (hiposmia) o pérdida total (anosmia) del sentido del olfato, frecuente tras infecciones virales, traumatismos o sinusitis crónica con pólipos.",
+      "possibleTreatment": [
+        { "@type": "MedicalTherapy", "name": "Entrenamiento olfativo con aromas" },
+        { "@type": "MedicalTherapy", "name": "Corticoides nasales tópicos" },
+        { "@type": "MedicalTherapy", "name": "Tratamiento de la causa subyacente (sinusitis, pólipos)" }
+      ],
+      "signOrSymptom": [
+        { "@type": "MedicalSymptom", "name": "Incapacidad para percibir olores" },
+        { "@type": "MedicalSymptom", "name": "Disminución del sentido del gusto" },
+        { "@type": "MedicalSymptom", "name": "Distorsión de olores (parosmia)" }
+      ],
+      "relevantSpecialty": { "@type": "MedicalSpecialty", "name": "Otolaryngology" },
+      "sameAs": "https://es.wikipedia.org/wiki/Anosmia",
+      "associatedAnatomy": {
+        "@type": "AnatomicalStructure",
+        "name": "Neuroepitelio olfatorio"
+      }
+    },
+    {
+      "@type": "MedicalCondition",
+      "@id": "https://www.otorrinoenpilar.com/sinusitis.html#tabaquismo",
+      "name": "Tabaquismo",
+      "alternateName": "Dependencia a la nicotina",
+      "code": {
+        "@type": "MedicalCode",
+        "codeValue": "F17",
+        "codingSystem": "ICD-10"
+      },
+      "description": "Dependencia crónica a la nicotina del cigarrillo. El tabaquismo daña la mucosa nasal, empeora sinusitis y rinitis, y es factor de riesgo de cáncer de vías aéreas.",
+      "possibleTreatment": [
+        { "@type": "MedicalTherapy", "name": "Terapia de reemplazo de nicotina (parches, chicles)" },
+        { "@type": "MedicalTherapy", "name": "Bupropión" },
+        { "@type": "MedicalTherapy", "name": "Vareniclina" },
+        { "@type": "MedicalTherapy", "name": "Apoyo conductual y fecha de cesación" }
+      ],
+      "relevantSpecialty": { "@type": "MedicalSpecialty", "name": "Otolaryngology" },
+      "sameAs": "https://es.wikipedia.org/wiki/Tabaquismo"
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.otorrinoenpilar.com/sinusitis.html#howto-lavado-nasal",
+      "name": "Cómo hacer un lavado nasal con solución salina",
+      "description": "Técnica correcta de lavado nasal con solución salina para aliviar la congestión, la rinitis y la sinusitis. Primera medida recomendada antes de recurrir a medicación.",
+      "totalTime": "PT5M",
+      "supply": [
+        { "@type": "HowToSupply", "name": "250 ml de agua potable hervida tibia" },
+        { "@type": "HowToSupply", "name": "1/4 cucharadita de sal fina sin yodo" },
+        { "@type": "HowToSupply", "name": "1/8 cucharadita de bicarbonato de sodio (opcional)" }
+      ],
+      "tool": [
+        { "@type": "HowToTool", "name": "Jeringa de 30 ml o botella squeeze nasal" }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Preparar la solución salina",
+          "text": "Disolver 1/4 cucharadita de sal fina (sin yodo) y una pizca de bicarbonato en 250 ml de agua tibia hervida. La temperatura debe ser corporal (37 °C)."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Cargar la jeringa",
+          "text": "Cargar la jeringa de 30 ml o la botella squeeze con la solución preparada."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Posicionarse sobre el lavabo",
+          "text": "Inclinarse sobre el lavabo con la cabeza ligeramente hacia adelante y ladeada. Respirar por la boca durante todo el proceso."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Irrigar la primera fosa nasal",
+          "text": "Introducir suavemente la punta en la fosa nasal superior y aplicar presión suave y constante. La solución debe salir por la fosa inferior o por la boca."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Sonarse con suavidad",
+          "text": "Sonarse suavemente para eliminar el moco. Nunca con fuerza excesiva."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Repetir en la otra fosa nasal",
+          "text": "Repetir el mismo procedimiento en la fosa nasal contraria con al menos 30 ml de solución."
+        }
+      ],
+      "inLanguage": "es",
+      "author": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/sinusitis.html" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.otorrinoenpilar.com/sinusitis.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://www.otorrinoenpilar.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Nariz: sinusitis, rinitis, sangrados y olfato",
+          "item": "https://www.otorrinoenpilar.com/sinusitis.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.otorrinoenpilar.com/sinusitis.html#faq",
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/sinusitis.html" },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es la sinusitis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La sinusitis es la inflamación de los senos paranasales. Puede ser aguda (menos de 4 semanas, generalmente de origen viral o bacteriano) o crónica (más de 12 semanas). Sus síntomas incluyen congestión nasal, secreción espesa, dolor o presión facial y reducción del olfato."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre sinusitis aguda y crónica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La sinusitis aguda dura menos de 4 semanas y suele ser de origen viral o bacteriano. La sinusitis crónica persiste más de 12 semanas y puede requerir tratamiento médico especializado —como corticoides nasales— o cirugía endoscópica funcional (CENS)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es la rinitis alérgica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La rinitis alérgica es la inflamación de la mucosa nasal provocada por una reacción inmune a alérgenos como el polen, los ácaros del polvo o la caspa de animales. Sus síntomas incluyen estornudos, picazón nasal, secreción acuosa y congestión. Puede ser estacional (por polen) o perenne (por ácaros u otros alérgenos del hogar)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el cuestionario NOSE y para qué sirve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El cuestionario NOSE (Nasal Obstruction Symptom Evaluation) es un instrumento validado que mide el impacto de la obstrucción nasal en la calidad de vida. Consta de 5 preguntas y clasifica la obstrucción en leve, moderada, grave o extrema, ayudando al paciente y al médico a decidir el mejor tratamiento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Los lavados nasales ayudan con la sinusitis y la rinitis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Los lavados nasales con solución salina isotónica o hipertónica son la primera medida recomendada. Eliminan moco, costras y alérgenos, humectan la mucosa y mejoran el aclaramiento mucociliar. Se recomiendan con una jeringa de 30 ml o botella tipo squeeze."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo reducir los ácaros del polvo en casa para mejorar las alergias?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para reducir los ácaros: mantenga la humedad relativa por debajo del 50% con un deshumidificador, use fundas antiácaros certificadas (poro menor a 10 micras) en colchones y almohadas, lave la ropa de cama semanalmente a 60 °C, elimine alfombras y cortinas pesadas, y aspire con aspiradora de filtro HEPA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuándo es necesaria la cirugía para la sinusitis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La cirugía endoscópica funcional (CENS) se considera cuando la sinusitis crónica no responde a al menos 12 semanas de tratamiento médico óptimo. También está indicada en sinusitis complicada, pólipos nasales extensos o anomalías anatómicas significativas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se puede prevenir la sinusitis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se previene con lavados nasales regulares, tratando a tiempo las alergias con antihistamínicos o corticoides tópicos, evitando irritantes como el tabaco y controlando la humedad ambiental. En personas alérgicas, la inmunoterapia puede reducir significativamente los episodios."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué antihistamínicos se usan para la rinitis alérgica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los antihistamínicos más utilizados son los de segunda generación: loratadina (10 mg/día), cetirizina (5-10 mg/día), fexofenadina (120-180 mg/día), desloratadina (5 mg/día) y levocetirizina (5 mg/día). No producen somnolencia significativa a diferencia de los de primera generación como la clorfenamina."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El tabaquismo empeora la sinusitis y la rinitis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. El humo del cigarrillo daña el epitelio ciliado nasal, inflama las mucosas, debilita el sistema inmunológico local y aumenta la producción de mucosidad espesa. Tanto el tabaquismo activo como pasivo incrementan la susceptibilidad a sinusitis, otitis y faringitis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué hacer ante un sangrado nasal (epistaxis)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sentarse inclinado hacia adelante, comprimir las alas de la nariz firmemente durante 10 minutos sin soltar, y respirar por la boca. No echar la cabeza hacia atrás. Si el sangrado no cede en 15-20 minutos, es abundante o se repite frecuentemente, consultar a un otorrinolaringólogo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuándo un sangrado nasal requiere atención urgente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Requiere atención urgente si el sangrado es muy abundante y no cede con compresión, si se acompaña de mareos o palidez, si ocurre tras un golpe fuerte en la nariz (posible fractura o hematoma septal), o si el paciente toma anticoagulantes y el sangrado no se detiene."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es un tabique nasal desviado y cuándo necesita cirugía?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El tabique nasal desviado es un desplazamiento del septum respecto a la línea media que causa obstrucción respiratoria. Se indica septoplastia cuando la desviación genera obstrucción significativa que no mejora con tratamiento médico, sinusitis recurrente, ronquido o apnea del sueño."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es la hiposmia y cómo se trata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La hiposmia es la disminución del sentido del olfato. Puede deberse a infecciones virales (como COVID-19), sinusitis crónica, pólipos nasales o traumatismos. El tratamiento incluye resolver la causa subyacente y el entrenamiento olfativo, que consiste en oler 4 aromas distintos (rosa, eucalipto, clavo, limón) dos veces al día durante al menos 12 semanas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué medicamentos ayudan a dejar de fumar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La terapia de reemplazo de nicotina (parches y chicles, venta libre) duplica las chances de éxito. El bupropión y la vareniclina (con receta) actúan sobre los circuitos cerebrales de recompensa, reduciendo la abstinencia y el deseo de fumar. Los cigarrillos electrónicos no se recomiendan como tratamiento de primera línea."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es la enfermedad de Von Willebrand y cómo se relaciona con los sangrados nasales?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La enfermedad de Von Willebrand es un trastorno hemorrágico hereditario que afecta al 1% de la población. Causa sangrados nasales frecuentes de más de 8 minutos, hematomas fáciles y menorragia. Se diagnostica con pruebas del factor de Von Willebrand y se trata con desmopresina, reemplazo del factor o antifibrinolíticos según la severidad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Dónde atiende el Dr. Mosovich en Pilar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El Dr. Juan Mosovich atiende en Caamaño 1100, Edificio Agora 2, Pilar, Buenos Aires. Horarios en Pilar: lunes 18:00, miércoles 16:30, jueves 18:00, viernes 14:00 y sábados 10:30. Turnos por WhatsApp al +54 9 11 6821-2512."
+          }
+        }
+      ]
+    },
+    {
+      "@type": ["MedicalBusiness", "Physician"],
+      "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich",
+      "name": "Dr. Juan Mosovich - Otorrinolaringólogo",
+      "image": "https://www.otorrinoenpilar.com/imagenes/imagenogsinusitishtml.png",
+      "telephone": "+54-9-11-6821-2512",
+      "url": "https://www.otorrinoenpilar.com",
+      "priceRange": "$$",
+      "medicalSpecialty": "Otolaryngology",
+      "currenciesAccepted": "ARS",
+      "paymentAccepted": "Efectivo, Transferencia, Obras sociales",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Pilar",
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": "Buenos Aires"
+          }
+        },
+        {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "-34.434636",
+            "longitude": "-58.829689"
+          },
+          "geoRadius": "30000"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/otorrino.fono.pilar",
+        "https://www.facebook.com/profile.php?id=100063748789595"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Caamaño 1100, Edificio Agora 2",
+        "addressLocality": "Pilar",
+        "addressRegion": "Buenos Aires",
+        "postalCode": "1631",
+        "addressCountry": "AR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-34.434636",
+        "longitude": "-58.829689"
+      },
+      "hasMap": "https://maps.google.com/?q=-34.434636,-58.829689",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Monday",
+          "opens": "18:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Wednesday",
+          "opens": "16:30",
+          "closes": "18:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Thursday",
+          "opens": "18:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Friday",
+          "opens": "14:00",
+          "closes": "16:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Saturday",
+          "opens": "10:30",
+          "closes": "12:30"
+        }
+      ],
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://wa.me/5491168212512",
+          "actionPlatform": ["https://schema.org/MobileWebPlatform", "https://schema.org/DesktopWebPlatform"],
+          "inLanguage": "es"
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Turno médico"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127"
+      }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.youtube.com/watch?v=CUkm302yJVk",
+      "name": "¿Respiro mal por la nariz? Obstrucción nasal, causas y consejos",
+      "description": "La nariz es un filtro natural esencial para la respiración. Explicación sobre las causas más frecuentes de obstrucción nasal, cuándo consultar a un especialista y cómo evitar tratamientos innecesarios con medidas simples.",
+      "thumbnailUrl": [
+        "https://i.ytimg.com/vi/CUkm302yJVk/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/CUkm302yJVk/hqdefault.jpg"
+      ],
+      "uploadDate": "2026-03-24T08:00:00-03:00",
+      "duration": "PT5M22S",
+      "embedUrl": "https://www.youtube.com/embed/CUkm302yJVk",
+      "contentUrl": "https://www.youtube.com/watch?v=CUkm302yJVk",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/sinusitis.html" }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.youtube.com/watch?v=030vifVZdXE",
+      "name": "Técnica de Desbloqueo Nasal — Método Buteyko",
+      "description": "Aprende a usar el CO2 de tu cuerpo como un descongestionante natural. Técnica de apnea nasal para destapar la nariz de forma inmediata antes de dormir.",
+      "thumbnailUrl": [
+        "https://i.ytimg.com/vi/030vifVZdXE/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/030vifVZdXE/hqdefault.jpg"
+      ],
+      "uploadDate": "2024-01-01",
+      "embedUrl": "https://www.youtube.com/embed/030vifVZdXE",
+      "contentUrl": "https://www.youtube.com/watch?v=030vifVZdXE",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/sinusitis.html" }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.youtube.com/watch?v=fsUiPiRSeU4",
+      "name": "Lavado nasal con solución salina — técnica correcta",
+      "description": "Tutorial paso a paso de la técnica correcta de lavado nasal con solución salina casera. Cómo preparar la solución, qué dispositivos usar y cómo realizar el lavado de forma segura y efectiva.",
+      "thumbnailUrl": [
+        "https://i.ytimg.com/vi/fsUiPiRSeU4/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/fsUiPiRSeU4/hqdefault.jpg"
+      ],
+      "uploadDate": "2024-01-01",
+      "duration": "PT1M44S",
+      "embedUrl": "https://www.youtube.com/embed/fsUiPiRSeU4",
+      "contentUrl": "https://www.youtube.com/watch?v=fsUiPiRSeU4",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/sinusitis.html" }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.youtube.com/watch?v=bC4tU0AgEJc",
+      "name": "La ciencia de la inflamación",
+      "description": "Explora cómo la dieta cetogénica y el ayuno intermitente actúan para reducir la inflamación crónica, regular citoquinas proinflamatorias y mejorar la salud celular.",
+      "thumbnailUrl": [
+        "https://i.ytimg.com/vi/bC4tU0AgEJc/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/bC4tU0AgEJc/hqdefault.jpg"
+      ],
+      "uploadDate": "2026-03-30",
+      "duration": "PT7M23S",
+      "embedUrl": "https://www.youtube.com/embed/bC4tU0AgEJc",
+      "contentUrl": "https://www.youtube.com/watch?v=bC4tU0AgEJc",
+      "inLanguage": "es",
+      "hasPart": [
+        {
+          "@type": "Clip",
+          "name": "Intestino permeable y Gluten",
+          "startOffset": 103,
+          "endOffset": 136,
+          "url": "https://www.youtube.com/watch?v=bC4tU0AgEJc&t=103"
+        },
+        {
+          "@type": "Clip",
+          "name": "Mecanismo de la Autofagia",
+          "startOffset": 328,
+          "endOffset": 369,
+          "url": "https://www.youtube.com/watch?v=bC4tU0AgEJc&t=328"
+        }
+      ],
+      "publisher": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/sinusitis.html" }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.youtube.com/watch?v=lBmiraJE05E",
+      "name": "Control de alergias en el hogar: ácaros, moho y alérgenos",
+      "description": "Guía práctica para controlar los principales alérgenos del hogar: ácaros del polvo, moho, caspa de animales y plagas. Estrategias de ingeniería ambiental, gestión de humedad, filtración HEPA y modulación nutricional para la rinitis alérgica perenne.",
+      "thumbnailUrl": [
+        "https://i.ytimg.com/vi/lBmiraJE05E/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/lBmiraJE05E/hqdefault.jpg"
+      ],
+      "uploadDate": "2026-04-01T08:00:00-03:00",
+      "embedUrl": "https://www.youtube.com/embed/lBmiraJE05E",
+      "contentUrl": "https://www.youtube.com/watch?v=lBmiraJE05E",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/sinusitis.html" }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.youtube.com/watch?v=dhcPzonF8yU",
+      "name": "Alergia al polen: síntomas, temporadas y prevención",
+      "description": "Información sobre la rinitis alérgica estacional por polen: síntomas nasales y oculares, temporadas de mayor riesgo en invierno y primavera, y medidas prácticas para reducir la exposición al polen en casa y al aire libre.",
+      "thumbnailUrl": [
+        "https://i.ytimg.com/vi/dhcPzonF8yU/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/dhcPzonF8yU/hqdefault.jpg"
+      ],
+      "uploadDate": "2024-01-01",
+      "embedUrl": "https://www.youtube.com/embed/dhcPzonF8yU",
+      "contentUrl": "https://www.youtube.com/watch?v=dhcPzonF8yU",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/sinusitis.html" }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.youtube.com/watch?v=-8Ub0tniByg",
+      "name": "Grounding: Conexión con la Tierra para la salud",
+      "description": "Documental sobre los beneficios del grounding o earthing: cómo la conexión directa con la Tierra puede regular el ritmo circadiano, mejorar el sueño, reducir la inflamación crónica y los niveles de cortisol.",
+      "thumbnailUrl": [
+        "https://i.ytimg.com/vi/-8Ub0tniByg/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/-8Ub0tniByg/hqdefault.jpg"
+      ],
+      "uploadDate": "2024-01-01",
+      "embedUrl": "https://www.youtube.com/embed/-8Ub0tniByg",
+      "contentUrl": "https://www.youtube.com/watch?v=-8Ub0tniByg",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/sinusitis.html" }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.youtube.com/watch?v=vFS6HfToSSw",
+      "name": "Dejar de Fumar",
+      "description": "Plan práctico con estrategias para dejar el tabaco, entendiendo la adicción como enfermedad crónica y utilizando herramientas como el método DEAT.",
+      "thumbnailUrl": [
+        "https://i.ytimg.com/vi/vFS6HfToSSw/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/vFS6HfToSSw/hqdefault.jpg"
+      ],
+      "uploadDate": "2026-04-03",
+      "duration": "PT6M16S",
+      "embedUrl": "https://www.youtube.com/embed/vFS6HfToSSw",
+      "contentUrl": "https://www.youtube.com/watch?v=vFS6HfToSSw",
+      "inLanguage": "es",
+      "hasPart": [
+        {
+          "@type": "Clip",
+          "name": "El método DEAT para antojos",
+          "startOffset": 142,
+          "url": "https://www.youtube.com/watch?v=vFS6HfToSSw&t=142s"
+        },
+        {
+          "@type": "Clip",
+          "name": "Beneficios inmediatos para la salud",
+          "startOffset": 226,
+          "url": "https://www.youtube.com/watch?v=vFS6HfToSSw&t=226s"
+        }
+      ],
+      "publisher": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/sinusitis.html" }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.youtube.com/watch?v=hPBtotK5TvM",
+      "name": "Suplementos de Nicotina para dejar de fumar",
+      "description": "Guía sobre la terapia de reemplazo de nicotina (TRN): parches, chicles y pastillas de nicotina. Dosis según consumo diario, técnica correcta de uso, marcas disponibles en Argentina y consejos para maximizar la eficacia.",
+      "thumbnailUrl": [
+        "https://i.ytimg.com/vi/hPBtotK5TvM/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/hPBtotK5TvM/hqdefault.jpg"
+      ],
+      "uploadDate": "2026-04-06",
+      "embedUrl": "https://www.youtube.com/embed/hPBtotK5TvM",
+      "contentUrl": "https://www.youtube.com/watch?v=hPBtotK5TvM",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/sinusitis.html" }
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.youtube.com/watch?v=y4H7jLCgmk0",
+      "name": "Fortaleza en Invierno: Vitamina D y Recetas Keto",
+      "description": "Cómo mantener niveles óptimos de Vitamina D en invierno con recetas keto económicas: cazuela de acelga, sardinas al horno y salteado de repollo. Consejos sobre exposición solar, hígado vacuno y suplementación con D3 y K2.",
+      "thumbnailUrl": [
+        "https://i.ytimg.com/vi/y4H7jLCgmk0/maxresdefault.jpg",
+        "https://i.ytimg.com/vi/y4H7jLCgmk0/hqdefault.jpg"
+      ],
+      "uploadDate": "2026-05-22",
+      "duration": "PT6M38S",
+      "embedUrl": "https://www.youtube.com/embed/y4H7jLCgmk0",
+      "contentUrl": "https://www.youtube.com/watch?v=y4H7jLCgmk0",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/sinusitis.html" }
+    }
+  ]
+}
+</script>
+<!-- Google Tag Manager: carga solo ante primera interacción real del usuario -->
+<script>
+(function() {
+  window.dataLayer = window.dataLayer || [];
+  var gtmLoaded = false;
+  function loadGTM() {
+    if (gtmLoaded) return;
+    gtmLoaded = true;
+    var f = document.getElementsByTagName('script')[0],
+        j = document.createElement('script');
+    j.async = true;
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MQ6VHPGC';
+    f.parentNode.insertBefore(j, f);
+  }
+  var events = ['scroll','click','keydown','touchstart'];
+  function onInteraction() {
+    loadGTM();
+    events.forEach(function(e) { window.removeEventListener(e, onInteraction, {passive:true}); });
+  }
+  events.forEach(function(e) { window.addEventListener(e, onInteraction, {passive:true}); });
+})();
+</script>
+<!-- End Google Tag Manager -->
 </head>
 <body id="menu">
-  <!-- Barra de progreso de lectura -->
-  <div class="reading-progress" id="readingProgress" role="progressbar" aria-label="Progreso de lectura" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
-  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ6VHPGC"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
     <symbol id="icon-stethoscope" viewBox="0 0 24 24">
       <path d="M6 3v4a6 6 0 0 0 12 0V3"/>
@@ -832,6 +1531,9 @@
       <rect x="4" y="4" width="16" height="16" rx="4"/>
       <circle cx="12" cy="12" r="3"/>
       <circle cx="17" cy="7" r="1"/>
+    </symbol>
+    <symbol id="icon-youtube" viewBox="0 0 16 16">
+      <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
     </symbol>
     <symbol id="icon-chevron-up" viewBox="0 0 24 24">
       <path d="M6 14l6-6 6 6"/>
@@ -1071,7 +1773,7 @@
       </div>
       <div class="summary-grid">
         <a class="summary-card" href="rinoplastia.html" style="border: 2px solid var(--brand-teal); background: linear-gradient(135deg, #ffffff, #e7f4f4);">
-          <p class="summary-chip mb-3" style="background-color: var(--brand-teal); color: white;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-route"></use></svg> ⭐ Destacado</p>
+          <p class="summary-chip mb-3" style="background-color: var(--brand-teal-a11y); color: white;"><svg class="icon" aria-hidden="true" focusable="false"><use href="#icon-route"></use></svg> ⭐ Destacado</p>
           <h3 class="h5">Rinoplastia: Estética y Función</h3>
           <p class="mb-0 text-muted">Mejorá tu respiración y la apariencia de tu nariz en un solo procedimiento.</p>
           <span class="badge bg-primary mt-2">Ver más detalles →</span>
@@ -1112,7 +1814,10 @@
             Ver más 
           </a>
              </div>   
-             <span class="collapse" id="d1">   
+             <div class="collapse" id="d1"
+                data-loaded="false"
+                data-video-id="CUkm302yJVk"
+                data-video-title="¿Respiro mal por la nariz? Obstrucción nasal, causas y consejos">   
               <h4>La nariz: más que un adorno, un filtro natural</h4>
               <p>La nariz no es solo una estructura en el centro de tu cara que sujeta tus gafas. Es, ante todo, un filtro natural y esencial para nuestra respiración. Su misión principal va más allá de percibir olores y evitar que pases por alto la cena quemada en el horno. La nariz tiene la importante tarea de <strong>calentar, filtrar y humidificar</strong> el aire que llega a los pulmones.</p>
               <p>Al inhalar, el aire pasa por los cornetes nasales, unas estructuras internas que lo preparan para su recorrido hacia los pulmones. Por eso, siempre habrá una ligera resistencia al paso del aire, incluso cuando estamos en perfecto estado de salud. En resumen, si sientes que tu nariz trabaja un poco, ¡es porque está haciendo su trabajo!</p>
@@ -1149,12 +1854,16 @@
               <p>La nariz es mucho más que un accesorio facial: es tu filtro natural, trabajando incansablemente para asegurarse de que el aire que respiras sea apto para tus pulmones. Entender su funcionamiento y sus limitaciones te ayudará a evitar alarmarte innecesariamente y, sobre todo, a no precipitarte hacia tratamientos invasivos cuando quizás solo necesites un poco de solución salina o un descanso del polvo.</p>
               <p>Recuerda: tu nariz es resistente, pero necesita tus cuidados. Así que, dale amor y paciencia, ¡y ella se encargará del resto!</p>
           
+            <p>A continuación, puede ver un video sobre la obstrucción nasal:</p>
+            <div id="video-target-CUkm302yJVk" class="iframe-placeholder"></div>
+            <p style="text-align: center;"><small><em>Video: ¿Respiro mal por la nariz? Obstrucción nasal, causas y consejos.</em></small></p>
+
             <div class="text-center my-2">
               <a class="link-dark" rel="noopener noreferrer" target="_blank" href="https://anchor.fm/juan-mosovich/episodes/Respiro-mal-por-mi-nariz-e1l7jdr">
                 <button class="btn btn-sm btn-danger" type="button">Charla "¿Respiro bien por mi nariz?".</button>
               </a>
             </div>
-          </span>
+          </div>
           </article>
          </div>
         <div class="card-footer bg-primary text-white">
@@ -1275,6 +1984,7 @@
       <a href="#ivn" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
     </div>
 
+<section class="cv-section">
     <h2 id="nose" class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">
      2 Cuestionario de valoración respiratoria (NOSE).
   </h2>
@@ -1345,7 +2055,9 @@
   <div class="container-flex text-center my-4 p-0">
     <a href="#nose" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
   </div>  
-  
+</section>
+
+<section class="cv-section">
       <h2 id="higienico-dieteticas" class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;"> 
         3 Medidas higiénico-dietéticas y farmacológicas.
       </h2>
@@ -1391,9 +2103,9 @@
       <div class="card p-3">
         <img src="./imagenes/carilina.webp" class="card-img-top" alt="caja con pañuelos descartables." loading="lazy" decoding="async" width="800" height="600">
         <div class="card-body">
-        <h4 class="card-title h5">Sonar bien su nariz.</h4>
+        <h4 class="card-title h5">Limpieza de nariz y manos.</h4>
         <article class="card-text">
-          <p class="preview-text mb-2"><em>Técnica correcta para sonarse: un lado a la vez, con suavidad. Evitá presionar ambos lados simultáneamente para prevenir otitis y sinusitis.</em></p>
+          <p class="preview-text mb-2"><em>Técnica correcta para sonarse: un lado a la vez, con suavidad. Evitá presionar ambos lados simultáneamente para prevenir otitis y sinusitis. El lavado de manos es clave para no contagiar ni contagiarse.</em></p>
           <div class="text-center mb-2"> 
             <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#blow" role="button" aria-expanded="false" aria-controls="collapseExample">
             Ver más
@@ -1435,11 +2147,19 @@
               </ul>
 
              
+              <h4>El lavado de manos: un hábito imprescindible</h4>
+
+              <p>Más allá de sonarse correctamente, el lavado de manos frecuente es una de las medidas más eficaces para prevenir la propagación de virus y bacterias respiratorias. Los gérmenes se transmiten fácilmente al tocar la cara, los ojos o la nariz con las manos sucias. Lavarse las manos con agua y jabón durante al menos 20 segundos, especialmente después de sonarse o estornudar, reduce significativamente el riesgo de contagio y de complicaciones como sinusitis u otitis.</p>
+
               <h4>Conclusión</h4>
               
-              <p>Sonarse de manera adecuada y conocer las técnicas correctas es esencial no solo para aliviar la congestión, sino también para evitar complicaciones como infecciones en el oído y sinusitis. Siguiendo las recomendaciones de sonarse suavemente y de no ejercer demasiada presión, es posible reducir estos riesgos. En casos de postoperatorio de cirugía nasal, es aún más importante tomar precauciones adicionales para proteger la zona en recuperación y promover una cicatrización óptima.</p>
+              <p>Sonarse de manera adecuada y mantener una higiene correcta de manos son hábitos sencillos pero fundamentales para prevenir complicaciones como infecciones de oído y sinusitis. En casos de postoperatorio de cirugía nasal, estas precauciones cobran aún más importancia para proteger la zona en recuperación.</p>
               
               <p>Recuerda que ante cualquier duda, especialmente en el caso de postoperatorios o de síntomas prolongados, es fundamental consultar a un especialista en otorrinolaringología.</p>
+
+              <div class="ratio ratio-16x9 mt-3">
+                <iframe src="https://www.youtube.com/embed/mDUosz3IDn0" title="Limpieza de nariz y manos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
          </span>
           </article>
        </div>
@@ -1461,7 +2181,10 @@
         </a>
       </div> 
 
-      <span class="collapse" id="tecnicaButeyko">    
+      <span class="collapse" id="tecnicaButeyko"
+            data-loaded="false"
+            data-video-id="030vifVZdXE"
+            data-video-title="Técnica de Desbloqueo Nasal — Método Buteyko">    
         <h4><strong>Paso a paso:</strong></h4>
         <ol>
           <li>Siéntate derecho e inhala suavemente por la nariz.</li>
@@ -1489,6 +2212,10 @@
   <footer class="blockquote-footer"> Dr. Konstantin Buteyko.
 </footer>
 
+        <p>A continuación, puede ver un video sobre la técnica de desbloqueo nasal:</p>
+        <div id="video-target-030vifVZdXE" class="iframe-placeholder"></div>
+        <p style="text-align: center;"><small><em>Video: Técnica de Desbloqueo Nasal — Método Buteyko.</em></small></p>
+
       </span>
     </article>
   </div>
@@ -1497,10 +2224,10 @@
     
        
             <div class="card p-3">
-                <img src="./imagenes/lavados-nasales.webp"  class="card-img-top" alt="imagen de diferentes tipos de sal y equipo de limpieza nasal" loading="lazy" decoding="async" width="800" height="600">
+                <img src="./imagenes/limpieza-nasal.webp"  class="card-img-top" width="600" height="255" alt="imagen de mujer limpiando su nariz y diferentes tipos de equipos de limpieza nasal" loading="lazy" decoding="async" width="600" height="255">
                 <div class="card-body">
-                <h4 class="card-title h5">Receta para la solución salina.</h4>
-                <p class="preview-text mb-2"><em>Métodos, dispositivos de limpieza, video tutorial y todo explicado al detalle.</em></p>
+                <h4 class="card-title h5">Solución salina casera, preparados listos para usar y vapor.</h4>
+                <p class="preview-text mb-2"><em>Receta casera, dispositivos de limpieza, preparados comerciales (Hypersol, Nasitral, Xylisol) y vapores descongestionantes. Video tutorial incluido.</em></p>
                  <article class="card-text">
             <div class="text-center mb-2">
                 <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#nasal-clean" role="button" aria-expanded="false" aria-controls="bte-collapse">
@@ -1571,6 +2298,41 @@
                      <button class="btn btn-sm btn-primary m-2" type="button">Video 3 (jeringa)</button>
                     </a>
                   </div>
+
+                  <hr class="my-4">
+
+                  <h4>Preparados listos para usar</h4>
+                  <p>
+                    La industria farmacéutica ofrece una amplia gama de soluciones salinas estériles en aplicadores especiales ideales para la limpieza nasal. Productos como <strong>Hypersol</strong>, <strong>Nasitral</strong>, <strong>Xylisol</strong> y <strong>Mar-V</strong> se destacan por su eficacia en el manejo de gripes, resfriados y alergias.
+                  </p>
+                  <p>
+                    Estas soluciones están diseñadas para hidratar las fosas nasales, eliminar impurezas y facilitar la respiración al reducir la congestión. Son fáciles de usar: el aplicador asegura una distribución uniforme del líquido.
+                  </p>
+                  <h5>Cómo usarlas</h5>
+                  <ol>
+                    <li>Inclina ligeramente la cabeza hacia adelante.</li>
+                    <li>Introduce el aplicador en una fosa nasal y presiona suavemente para liberar la solución.</li>
+                    <li>Repite el proceso en la otra fosa nasal.</li>
+                    <li>Sopla la nariz suavemente para eliminar el exceso de solución y mucosidad.</li>
+                    <li>Úsala varias veces al día según la recomendación del producto o de tu médico.</li>
+                  </ol>
+
+                  <hr class="my-4">
+
+                  <h4>Vapores para mejorar la respiración</h4>
+                  <p>
+                    Los vapores son una opción natural y efectiva para aliviar la congestión nasal asociada con la sinusitis, alergias y resfriados. La inhalación de vapor humedece las vías respiratorias, aflojando el moco y facilitando su expulsión.
+                  </p>
+                  <h5>Cómo usar vapores</h5>
+                  <ol>
+                    <li>Hierve agua en una olla y colócala en un recipiente seguro.</li>
+                    <li>Añade unas gotas de aceites esenciales u hojas de eucalipto o menta para potenciar los efectos descongestionantes.</li>
+                    <li>Cubre tu cabeza con una toalla, inclinándote sobre el recipiente.</li>
+                    <li>Inhala profundamente el vapor durante 5 a 10 minutos.</li>
+                  </ol>
+                  <p>
+                    Este método es una excelente opción complementaria al uso de soluciones salinas, maximizando el alivio de los síntomas respiratorios.
+                  </p>
                   </span>
                 </article>
                   </div>
@@ -1593,6 +2355,7 @@
                     <div class=card-body>
                     <h4 class="card-title h5">Limpiar la nariz a niños.</h4>
                     <article class=card-text>
+                      <p class="preview-text mb-2"><em>Técnicas adaptadas por edad para ayudar a los niños a sonarse correctamente: aspiradores nasales, irrigación salina y video tutorial. Con advertencias clave sobre gotas descongestivas.</em></p>
                       <div class="text-center mb-2"> 
                         <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#lavado-nino" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Ver más
@@ -1648,67 +2411,82 @@
                      </div>
                      </div>
 
-                     <div class="card p-3">
-                      <img src="./imagenes/hypersolspray.webp"  class="card-img-top" alt="productos comerciales con soluciones hipertónicas" loading="lazy" decoding="async" width="800" height="600">
-                      <div class="card-body">
-                      <h4 class="card-title h5">Preparados listos para usar y vapor.</h4>
-                      <article class="card-text">
-                        <div class="text-center mb-2"> 
-                          <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#hipersol" role="button" aria-expanded="false" aria-controls="collapseExample">
-                          Ver más
-                        </a>
-                           </div>   
-                           <span class="collapse" id="hipersol">    
-                            
-                              <h4>Soluciones Salinas para la Limpieza Nasal</h4>
-                              <p>
-                                  La industria farmacéutica ofrece una amplia gama de soluciones salinas estériles en aplicadores especiales que son ideales para 
-                                  la limpieza nasal. Productos como <strong>Hypersol</strong>, <strong>Nasitral</strong>, <strong>Xylisol</strong> y <strong>Mar-V</strong> se destacan por su eficacia en el manejo de condiciones como gripes, resfriados y alergias.
-                              </p>
-                              <p>
-                                  Estas soluciones están diseñadas para hidratar las fosas nasales, eliminar impurezas, y facilitar la respiración al reducir la congestión. Son fáciles de usar, ya que el aplicador asegura una distribución uniforme del líquido en las fosas nasales.
-                              </p>
-                              <h5>Cómo Usarlas</h5>
-                              <ul>
-                                  <li>Inclina ligeramente la cabeza hacia adelante.</li>
-                                  <li>Introduce el aplicador en una de las fosas nasales y presiona suavemente para liberar la solución.</li>
-                                  <li>Repite el proceso en la otra fosa nasal.</li>
-                                  <li>Sopla la nariz suavemente para eliminar el exceso de solución y mucosidad.</li>
-                                  <li>Úsala varias veces al día según la recomendación del producto o de tu médico.</li>
-                              </ul>
-                          
-                              <h5>El Uso de Vapores para Mejorar la Respiración</h5>
-                              <p>
-                                  Los vapores son una opción natural y efectiva para aliviar la congestión nasal asociada con la sinusitis, alergias y resfriados. La inhalación de vapor ayuda a humedecer las vías respiratorias, aflojando el moco y facilitando su expulsión.
-                              </p>
-                              <h5>Cómo Usar Vapores</h5>
-                              <ol>
-                                  <li>Hierve agua en una olla y colócala en un recipiente seguro.</li>
-                                  <li>Añade unas gotas de aceites esenciales u hojas de eucalipto o menta para potenciar los efectos descongestionantes.</li>
-                                  <li>Cubre tu cabeza con una toalla, inclinándote sobre el recipiente.</li>
-                                  <li>Inhala profundamente el vapor durante 5 a 10 minutos.</li>
-                              </ol>
-                              <p>
-                                  Este método es una excelente opción complementaria al uso de soluciones salinas, maximizando el alivio de los síntomas respiratorios.
-                              </p>
-                        </span>
-                      </article>
-                    </div>
-                    <div class="card-footer bg-primary text-white">
-                     </div>
-                     </div>
+                  
+
+                      <div class="card p-3"> 
+    <img src="./imagenes/vaselina.webp"  class="card-img-top" alt="Hombre colocandose vaselina en la nariz." loading="lazy" decoding="async" width="800" height="600">
+    <div class="card-body">
+    <h4 class="card-title h5">Vaselina nasal para la rinitis.</h4>
+    <article class="card-text">
+      <p class="preview-text mb-2"><em>La vaselina actúa como barrera física que atrapa alérgenos antes de que lleguen a la mucosa nasal. Una opción económica, segura y sin receta para aliviar síntomas de rinitis alérgica estacional y perenne.</em></p>
+      <div class="text-center mb-2"> 
+        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#vaselina" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Ver más
+      </a>
+         </div> 
+         <span class="collapse" id="vaselina">
+          
+          <p>La rinitis alérgica, una afección común que afecta a millones de personas en todo el mundo, puede causar síntomas molestos como congestión nasal, picazón, estornudos y secreción nasal. Para quienes sufren de alergias estacionales o perennes, encontrar alivio puede ser un desafío constante. Una solución simple y accesible es el uso de vaselina nasal.</p>
+      
+          <h4>¿Cómo funciona la vaselina nasal?</h4>
+          <p>La vaselina actúa como una barrera física que atrapa los alérgenos presentes en el aire, como el polen, el polvo y la caspa de mascotas, antes de que puedan entrar en contacto con la mucosa nasal. Al reducir la exposición a estos alérgenos, se pueden disminuir significativamente los síntomas de la rinitis alérgica.</p>
+      
+          <h4>Beneficios de la vaselina nasal:</h4>
+          <ul>
+              <li><strong>Alivio de los síntomas:</strong> La vaselina puede ayudar a reducir la congestión nasal, la picazón y los estornudos, mejorando la calidad de vida de quienes padecen rinitis alérgica.</li>
+              <li><strong>Prevención:</strong> El uso regular de vaselina nasal puede prevenir la aparición de síntomas alérgicos, especialmente durante las temporadas de alta concentración de polen.</li>
+              <li><strong>Seguridad:</strong> La vaselina es un producto seguro y bien tolerado por la mayoría de las personas, con un bajo riesgo de efectos secundarios.</li>
+              <li><strong>Accesibilidad:</strong> La vaselina es un producto económico y fácil de encontrar en cualquier farmacia o supermercado.</li>
+          </ul>
+      
+          <h4>¿Cómo usar la vaselina nasal?</h4>
+          <ol>
+              <li><strong>Lávate las manos:</strong> Antes de aplicar la vaselina, asegúrate de lavarte bien las manos con agua y jabón.</li>
+              <li><strong>Aplica una pequeña cantidad:</strong> Con un hisopo de algodón o la punta del dedo limpio, aplica una pequeña cantidad de vaselina en el interior de cada fosa nasal.</li>
+              <li><strong>Cubre la mucosa nasal:</strong> Asegúrate de cubrir toda la superficie de la mucosa nasal, especialmente en la parte frontal de las fosas nasales.</li>
+              <li><strong>Aplica con frecuencia:</strong> Para obtener mejores resultados, aplica la vaselina varias veces al día, especialmente antes de salir de casa o de exponerte a alérgenos conocidos.</li>
+          </ol>
+      
+          <h4>¿Cuándo es más útil?</h4>
+          <ul>
+              <li><strong>Temporadas de alergia:</strong> La vaselina nasal es especialmente útil durante las temporadas de alta concentración de polen, cuando los síntomas de la rinitis alérgica suelen empeorar.</li>
+              <li><strong>Exposición a alérgenos:</strong> Si sabes que vas a exponerte a alérgenos como polvo, caspa de mascotas o humo, aplica vaselina nasal antes de la exposición para prevenir la aparición de síntomas.</li>
+              <li><strong>Uso diario:</strong> Para quienes sufren de rinitis alérgica perenne, el uso diario de vaselina nasal puede ayudar a controlar los síntomas a largo plazo.</li>
+          </ul>
+      
+          <h4>Consideraciones importantes:</h4>
+          <ul>
+              <li>Aunque la vaselina es generalmente segura, algunas personas pueden experimentar irritación nasal leve. Si esto ocurre, suspende su uso y consulta a un médico.</li>
+              <li>No introduzcas hisopos de algodón demasiado profundo en las fosas nasales, ya que esto puede causar lesiones.</li>
+              <li>Si los síntomas de la rinitis alérgica persisten o empeoran, consulta a un alergólogo o médico especialista.</li>
+          </ul>
+      
+          <h4>Conclusión:</h4>
+          <p>La vaselina nasal es una herramienta sencilla y eficaz para aliviar y prevenir los síntomas de la rinitis alérgica. Su seguridad, accesibilidad y bajo costo la convierten en una opción atractiva para quienes buscan un alivio natural y sin complicaciones.</p>
+  </span>
+    </article>
+  </div>
+  <div class="card-footer bg-primary text-white">
+  </div>
+  </div>
+
 
                      <div class="card p-3">
                       <img src="./imagenes/gotas-nasales.webp"  class="card-img-top" alt="imagen de persona adicta a las gotas nasales" loading="lazy" decoding="async" width="800" height="600">
                       <div class="card-body">
                       <h4 class="card-title h5">Peligros de los descongestivos.</h4> 
                     <article class="card-text">
+                      <p class="preview-text mb-2"><em>Las gotas con oximetazolina, nafazolina o efedrina generan dependencia y efecto rebote. Conocé los riesgos y como liberarte de ellas. Video tutorial.</em></p>
                       <div class="text-center mb-2"> 
                         <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#descongest" role="button" aria-expanded="false" aria-controls="collapseExample">
                         Ver más
                       </a>
                          </div>   
-                         <span class="collapse" id="descongest">     
+                         <div class="collapse" id="descongest"
+                           data-loaded="false"
+                           data-video-id="DMHmkJcmpIo"
+                           data-video-title="Peligros de las gotas nasales descongestivas"
+                           data-video-description="Los peligros del abuso de las gotas nasales vasoconstrictoras y la rinitis medicamentosa.">     
                           <h4>Las gotas nasales: un alivio pasajero con efectos secundarios inesperados</h4>
   
                           <p>¿Quién no ha recurrido alguna vez a las gotas nasales para aliviar esa molesta congestión? Esas pequeñas botellas prometen un alivio rápido y eficaz, pero ¿conoces los riesgos que esconden? ¡Sigue leyendo y descubre por qué no debes abusar de ellas!</p>
@@ -1736,13 +2514,16 @@
                           </ul>
                       
                           <p>Recuerda, tu salud nasal merece atención. ¡No te automediques y consulta a un profesional! </p>
+
+                          <div id="video-target-DMHmkJcmpIo" class="iframe-placeholder"></div>
+                          <p style="text-align: center;"><small><em>Video: Peligros de las gotas nasales descongestivas.</em></small></p>
                      
                        <div class="text-center mt-2">
                         <a href="https://open.spotify.com/episode/3dx3ytOciWVc2t7bcm4dmT" target="_blank" rel="noopener noreferrer">
                          <button class="btn btn-danger btn-sm" type="button">Charla "descongestivos peligrosos".</button> 
                           </a>
                        </div>
-                      </span>
+                      </div>
                       </article>
                     </div>
                     <div class="card-footer bg-primary text-white">
@@ -1833,12 +2614,16 @@
   <div class="card-body">
   <h4 class="card-title h5">Dieta sistema inmune e inflamación.</h4>
   <article class="card-text">
+    <p class="preview-text mb-2"><em>La inflamación crónica de la mucosa nasal puede reducirse con una dieta baja en carbohidratos refinados y aceites proinflamatorios. Descubrí cómo la cetogénica regula citoquinas y fortalece el sistema inmune.</em></p>
     <div class="text-center mb-2"> 
       <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#collapseExample8" role="button" aria-expanded="false" aria-controls="collapseExample">
       Ver más
     </a>
     </div> 
-    <span class="collapse" id="collapseExample8">  
+    <div class="collapse" id="collapseExample8"
+      data-loaded="false"
+      data-video-id="bC4tU0AgEJc"
+      data-video-title="La ciencia de la inflamación">
       <h4>La Dieta Cetogénica y su Poder Antiinflamatorio: Un Enfoque Nutricional para la Salud</h4>
 
       <p>La dieta cetogénica, caracterizada por una ingesta muy baja de carbohidratos, moderada de proteínas y alta de grasas saludables, ha demostrado generar efectos antiinflamatorios significativos en el organismo. Estos beneficios se atribuyen a su capacidad para modular diversos marcadores clave de la inflamación.</p>
@@ -1878,20 +2663,109 @@
       
       <p>Le recomendamos encarecidamente que explore los posibles beneficios de la dieta cetogénica en fuentes de información confiables, como nuestra página web. Sin embargo, es crucial <strong>leer atentamente todas las recomendaciones y consultar a su médico o a un profesional de la salud cualificado antes de iniciar cualquier tipo de dieta cetogénica o régimen alimenticio significativo</strong>. Ellos podrán evaluar su estado de salud individual, identificar posibles contraindicaciones y brindarle una guía personalizada y segura.</p>
      
+      <p class="mt-3">A continuación, un video sobre dieta cetogénica, sistema inmune e inflamación:</p>
+      <div id="video-target-bC4tU0AgEJc" class="iframe-placeholder"></div>
+      <p style="text-align: center;"><small><em>Video: Dieta cetogénica, sistema inmune e inflamación.</em></small></p>
+
       <div class="text-center mt-2">
         <a class="btn btn-sm btn-danger" type="button" href="https://www.ketohoy.com/" rel="noopener noreferrer" target="_blank">
          Ver Web <strong>"🍓Ketohoy.com"</strong>
         </a>
       </div>
-    </span>
+    </div>
   </article>
   </div>
 <div class="card-footer bg-primary text-white">
 </div>
 </div> 
 
+<div class="card p-3">
+  <img src="./imagenes/aceites-rinitis.webp"  class="card-img-top" alt="persona cocinando con aceites de semillas" loading="lazy" decoding="async" width="500" height="273">
+  <div class="card-body">
+  <h4 class="card-title h5">¿Rinitis y Sinusitis Crónica? El Enemigo Oculto en tu Sartén</h4>
+  <article class="card-text">
+    <p class="preview-text mb-2"><em>Los aceites de semillas industriales generan humos tóxicos al cocinar y saturan tus células de grasas proinflamatorias, agravando la congestión nasal crónica. Descubrí cómo un cambio en la sartén puede aliviar tu rinitis.</em></p>
+    <div class="text-center mb-2"> 
+      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#aceites-sarten" role="button" aria-expanded="false" aria-controls="aceites-sarten">
+      Ver más
+    </a>
+    </div> 
+    <div class="collapse" id="aceites-sarten"
+      data-loaded="false"
+      data-video-id="S3hh56a4QFA"
+      data-video-title="Rinitis y sinusitis crónica: el enemigo oculto en tu sartén">
+
+    <p class="lead">Si sufres de congestión nasal persistente, estornudos frecuentes o sinusitis crónica, es probable que hayas intentado de todo: desde antihistamínicos hasta corticoides nasales. Sin embargo, la ciencia actual sugiere que la raíz del problema podría no estar solo en el aire que respiras, sino en la composición de tus membranas celulares, alterada por el consumo masivo de aceites de semillas industriales.</p>
+
+    <hr>
+
+    <h4>La Agresión Directa: Humos Tóxicos y Parálisis Ciliar</h4>
+    <p>El daño comienza incluso antes de ingerir el alimento. Al calentar aceites de semillas (como los de girasol, maíz o soja), su estructura química rica en ácidos grasos poliinsaturados (PUFAs) se rompe debido a su inestabilidad molecular. Esto libera compuestos volátiles altamente irritantes, como la <strong>acroleína</strong>, un potente químico también presente en el humo del tabaco.</p>
+
+    <p>Cuando inhalas estos vapores en la cocina, ocurren tres fenómenos devastadores en tu mucosa nasal:</p>
+
+    <ul>
+      <li><strong>Parálisis Ciliar:</strong> La acroleína inhibe el movimiento de los cilios, los pequeños "pelos" encargados de movilizar el moco y los patógenos. Esto favorece la acumulación de moco y aumenta la susceptibilidad a infecciones.</li>
+      <li><strong>Estrés Oxidativo Local:</strong> Los aldehídos tóxicos agotan el glutatión (el principal antioxidante) en la mucosa, dejando tus células vulnerables al daño.</li>
+      <li><strong>"Nariz Permeable":</strong> Estos compuestos rompen las uniones estrechas (tight junctions) del epitelio respiratorio, permitiendo que alérgenos como el polen o el polvo penetren mucho más fácilmente en el tejido.</li>
+    </ul>
+
+    <hr>
+
+    <h4>Inflamación "Aguas Arriba": Por qué tu Cuerpo sobre-reacciona</h4>
+    <p>El consumo de estos aceites satura tus células de ácido linoleico, el cual se convierte en <strong>Ácido Araquidónico (AA)</strong>. Este exceso de AA funciona como un "almacén de combustible" listo para arder ante cualquier estímulo.</p>
+
+    <p>Cuando un alérgeno entra en contacto con un sistema "cebado" por aceites de semillas, la respuesta es desproporcionada:</p>
+
+    <ul>
+      <li><strong>Leucotrienos Explosivos:</strong> El cuerpo libera leucotrienos, moléculas inflamatorias que son 1000 veces más potentes que la histamina para provocar inflamación y cierre de las vías respiratorias.</li>
+      <li><strong>Desequilibrio Evolutivo:</strong> Nuestra fisiología está diseñada para una proporción de Omega-6 y Omega-3 de 1:1. La dieta moderna, saturada de aceites industriales, nos sitúa en niveles de hasta 20:1, lo que nos mantiene en un estado de alerta máxima constante.</li>
+    </ul>
+
+    <hr>
+
+    <h4>El Efecto "Pseudo-Corticoide": Sanar sin Fármacos</h4>
+    <p>La medicina convencional utiliza corticoides para bloquear la enzima Fosfolipasa A2 y evitar que el Ácido Araquidónico inicie la inflamación. Eliminar los aceites de semillas de tu dieta ofrece una intervención "aguas arriba": al no darle al cuerpo el exceso de Omega-6, simplemente quitas el combustible antes de que se produzca la chispa.</p>
+
+    <p>Este cambio estructural imita la acción de los fármacos antiinflamatorios (AINEs) y corticoides de forma natural, elevando tu umbral de reactividad y permitiendo que el cuerpo resuelva los procesos inflamatorios de manera suave.</p>
+
+    <hr>
+
+    <h4>Recomendaciones para "Limpiar" tus Vías Respiratorias</h4>
+    <p>Para reducir la inflamación sistémica y proteger tu mucosa nasal, el cambio debe ser radical y estructural:</p>
+
+    <ul>
+      <li><strong>Elimina los aceites "muertos":</strong> Evita el aceite de soja, maíz, girasol y canola, así como los ultraprocesados que los contienen de forma oculta.</li>
+      <li><strong>Usa Grasas Estables:</strong> Para cocinar, prioriza grasas saturadas que no se oxidan al calor, como el aceite de coco, el ghee o la grasa vacuna.</li>
+      <li><strong>El poder del Oliva:</strong> Utiliza Aceite de Oliva Virgen Extra para aderezar y cocinar a temperaturas medias. Su contenido en oleocantal actúa como un inhibidor natural de la inflamación, similar al ibuprofeno.</li>
+    </ul>
+
+    <div class="alert alert-info" role="alert">
+      <strong>Conclusión:</strong> Regresar a las grasas ancestrales no es solo una moda; es una decisión informada para proteger la integridad de tus células y recuperar la capacidad de respirar libremente.
+    </div>
+
+    <p class="mt-3">A continuación, un video sobre el tema:</p>
+    <div id="video-target-S3hh56a4QFA" class="iframe-placeholder"></div>
+    <p class="text-center"><small><em>Video: Rinitis y sinusitis crónica — el enemigo oculto en tu sartén.</em></small></p>
+
+    </div>
+  </article>
+</div>
+<div class="card-footer bg-primary text-white">
+</div>
+</div>
+  
 
   
+
+</div>
+
+
+<div class="container-flex text-center my-4 p-0">
+  <a href="#prevenir" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
+</div>
+
+<div class="card-group"> 
 
     <div class="card p-3">
       <img src="./imagenes/64.webp"  class="card-img-top" alt="joven estornudando por alergia" loading="lazy" decoding="async" width="800" height="600">
@@ -1998,88 +2872,186 @@
      </div>
      </div>
 
-</div>
-
-
-<div class="container-flex text-center my-4 p-0">
-  <a href="#prevenir" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
-</div>
-
-<div class="card-group"> 
-
   <div class="card p-3">
 <img src="./imagenes/acaros-habit.webp" class="card-img-top" alt="mujer limpiando una habitacion de ácaros" loading="lazy" decoding="async" width="800" height="600">
 <div class="card-body">
   <h4 class="card-title h5">Alergias no estacionales.</h4>
   <article class="card-text">
+    <p class="preview-text mb-2"><em>Ácaros, moho, caspa de mascotas y plagas urbanas mantienen tus vías respiratorias inflamadas los 365 días del año. Conocé las estrategias de control ambiental y nutrición que reducen los síntomas sin depender solo de fármacos.</em></p>
     <div class="text-center mb-2"> 
       <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#acaros-pol" role="button" aria-expanded="false" aria-controls="collapseExample">
       Ver más
     </a>
        </div> 
-      <span class="collapse" id="acaros-pol">
+      <div class="collapse" id="acaros-pol"
+        data-loaded="false"
+        data-video-id="lBmiraJE05E"
+        data-video-title="Control de alergias en el hogar: ácaros, moho y alérgenos">
   
-    <h4>Alergias en el Hogar: Guía Completa para Combatir Ácaros, Caspa y Moho</h4>
-    <p>Para millones de personas, el verdadero desafío alérgico no es el polen estacional, sino una serie de alérgenos que residen en nuestros propios hogares durante todo el año. Desde el picor nasal y los estornudos hasta la dificultad para respirar, los responsables a menudo son amenazas invisibles: los ácaros del polvo, la caspa de animales y el moho. Comprender el mecanismo de estas alergias y adoptar un enfoque integral de prevención es la clave para recuperar el bienestar.</p>
+    <h4 class="mb-3">Más allá del Polen: Guía Avanzada para el Control de Alergias Perennes y Salud en el Hogar</h4>
+
+    <p class="lead">Para millones de personas, el verdadero desafío alérgico no es el polen estacional, sino una serie de alérgenos que residen en nuestros propios hogares durante todo el año. La transición hacia un estilo de vida predominantemente de interior ha convertido la <strong>rinitis alérgica perenne</strong> y el asma de interior en un desafío de salud pública crónico. Para recuperar el bienestar, es necesario pasar de un enfoque reactivo basado en fármacos a un modelo proactivo de <strong>control ambiental y modulación nutricional</strong>.</p>
 
     <hr>
 
-    <h4>Alérgenos Comunes en Interiores y su Mecanismo de Acción</h4>
-    <p>A diferencia de las picaduras de insectos, el problema con la mayoría de los alérgenos domésticos no es el contacto directo, sino la inhalación de partículas microscópicas. Las <strong>proteínas presentes en los excrementos, saliva y restos corporales</strong> de estos alérgenos se desintegran y flotan en el aire, siendo fácilmente inhaladas. El sistema inmunológico de una persona alérgica las identifica erróneamente como una amenaza, desencadenando una respuesta inflamatoria. Esta reacción libera histamina y otras sustancias que causan los síntomas típicos de la rinitis alérgica y el asma, como estornudos, congestión, picazón y sibilancias.</p>
+    <h4>1. Caracterización de los Enemigos Invisibles</h4>
+    <p>Para implementar medidas efectivas, debemos entender la biología de los agentes causales:</p>
 
-    <p>Los principales alérgenos domésticos incluyen:</p>
+    <div class="list-group mb-3">
+      <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">🦠 Ácaros del polvo <em>(Dermatophagoides)</em></h5>
+        </div>
+        <p class="mb-1">Son arácnidos microscópicos que no pican. Su patogenicidad reside en las proteínas de sus heces y restos biológicos. Un solo ácaro produce hasta <strong>20 partículas fecales al día</strong>, que contienen enzimas capaces de degradar las uniones epiteliales respiratorias, facilitando la sensibilización. Prosperan con una humedad del 70–75% y <strong>mueren si esta baja del 50%</strong>.</p>
+      </div>
+      <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">🐱 Alérgenos animales</h5>
+        </div>
+        <p class="mb-1">Contrario a lo que se cree, el pelo no es el problema, sino las <strong>proteínas de la saliva, orina y caspa</strong> (como <em>Fel d 1</em> en gatos). Estas partículas son extremadamente ligeras y adherentes, pudiendo permanecer suspendidas en el aire por horas y fijarse en ropa y muebles.</p>
+      </div>
+      <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">🍄 Mohos y hongos</h5>
+        </div>
+        <p class="mb-1">Géneros como <em>Aspergillus</em> o <em>Penicillium</em> proliferan en zonas de condensación y humedad. Además de actuar como alérgenos, pueden liberar <strong>micotoxinas</strong> que debilitan la respuesta inmunitaria.</p>
+      </div>
+      <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">🐜 Plagas urbanas</h5>
+        </div>
+        <p class="mb-1">Los detritos de cucarachas son fuentes potentes de alérgenos vinculados al <strong>asma infantil grave</strong>, especialmente en cocinas y baños.</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <h4>2. Ingeniería del Entorno: El Dormitorio como Prioridad</h4>
+    <p>Pasamos un tercio de nuestra vida durmiendo, lo que convierte al dormitorio en el <strong>centro de la intervención</strong>.</p>
+
+    <div class="row g-3 mb-3">
+      <div class="col-12 col-md-6">
+        <div class="card h-100 border-primary">
+          <div class="card-body">
+            <h5 class="card-title h6">🛏️ Fundas antiácaros certificadas</h5>
+            <p class="card-text">El colchón y la almohada son incubadoras de ácaros. Use fundas con poro <strong>&lt;10 micras</strong>, cobertura integral con cremallera y lavables a 60 °C. Los protectores que solo cubren la parte superior son ineficaces.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="card h-100 border-primary">
+          <div class="card-body">
+            <h5 class="card-title h6">🧹 Eliminación de reservorios</h5>
+            <p class="card-text">Evite alfombras, moquetas y cortinas pesadas. Sustitúyalas por <strong>suelos duros</strong> (madera, baldosa) y persianas sintéticas de fácil limpieza. El mobiliario debe ser de materiales no porosos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <h4>3. Control de la Atmósfera y Limpieza sin Tóxicos</h4>
+    <p>La calidad del aire interior puede ser hasta <strong>diez veces peor</strong> que la exterior.</p>
+
     <ul>
-        <li><strong>Ácaros del Polvo:</strong> Arácnidos microscópicos que se alimentan de escamas de piel humana y animal.</li>
-        <li><strong>Caspa de animales:</strong> Proteínas de la piel, saliva u orina de mascotas como perros y gatos.</li>
-        <li><strong>Moho:</strong> Hongos que se reproducen por esporas y prosperan en ambientes húmedos.</li>
-        <li><strong>Cucarachas:</strong> Las heces y fragmentos corporales de estos insectos pueden causar reacciones alérgicas.</li>
+      <li><strong>Gestión de la humedad:</strong> El rango óptimo es entre el <strong>35% y 50%</strong>. Use higrómetros digitales y deshumidificadores, ya que niveles superiores favorecen a los ácaros y el moho.</li>
+      <li><strong>Filtración HEPA:</strong> Los purificadores con filtros HEPA son esenciales para capturar esporas y caspa de mascotas. Colóquelos de modo que el flujo de aire limpio se dirija a la cabecera de la cama.</li>
+      <li><strong>Evitar los COV:</strong> Muchos limpiadores comerciales contienen <em>compuestos orgánicos volátiles</em> y fragancias sintéticas que irritan las vías respiratorias. Se recomienda la limpieza con <strong>vinagre blanco</strong>, bicarbonato de sodio y paños de microfibra humedecidos para atrapar el polvo sin suspenderlo.</li>
     </ul>
 
     <hr>
 
-    <h4>El Hogar: Un Refugio o un Santuario de Alérgenos</h4>
-    <p>Los alérgenos de interior prosperan en ambientes cálidos y, sobre todo, <strong>húmedos</strong>. Su lugar favorito para vivir y multiplicarse es su propia casa, con especial predilección por la habitación:</p>
-    <ul>
-        <li><strong>Colchones y almohadas:</strong> Pueden albergar millones de ácaros, ofreciendo calor, humedad y alimento abundante.</li>
-        <li><strong>Ropa de cama, cortinas y alfombras:</strong> Los tejidos acumulan polvo, caspa y retienen humedad, convirtiéndolos en hábitats perfectos.</li>
-        <li><strong>Muebles tapizados y peluches:</strong> Son refugios ideales para los ácaros y la caspa de animales.</li>
-        <li><strong>Zonas húmedas:</strong> Sótanos, baños y cocinas son el terreno perfecto para el crecimiento de moho.</li>
-    </ul>
+    <h4>4. Modulación Nutricional: Fortaleciendo el Escudo Interno</h4>
+    <p>La dieta proporciona herramientas para regular la cascada inflamatoria:</p>
+
+    <div class="table-responsive mb-3">
+      <table class="table table-bordered table-sm align-middle">
+        <thead class="table-primary">
+          <tr>
+            <th>Nutriente</th>
+            <th>Mecanismo</th>
+            <th>Fuentes principales</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Quercetina</strong></td>
+            <td>Estabiliza mastocitos, impide la liberación de histamina</td>
+            <td>Alcaparras, cebolla morada, manzanas</td>
+          </tr>
+          <tr>
+            <td><strong>Omega-3</strong></td>
+            <td>Reduce la cascada inflamatoria</td>
+            <td>Pescado azul, semillas de lino</td>
+          </tr>
+          <tr>
+            <td><strong>Vitamina D</strong></td>
+            <td>Inmunomoduladora, suprime la respuesta alérgica excesiva</td>
+            <td>Sol, pescado graso, suplementos</td>
+          </tr>
+          <tr>
+            <td><strong>Probióticos</strong></td>
+            <td>Restauran flora intestinal y reducen severidad de síntomas</td>
+            <td><em>Lactobacillus paracasei</em> LP-33, <em>Bifidobacterium longum</em></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><small class="text-muted"><strong>Sobre la histamina alimentaria:</strong> Los fermentados, curados y conservas de pescado acumulan niveles altos de histamina que pueden amplificar los síntomas. Priorice alimentos frescos.</small></p>
 
     <hr>
 
-    <h4>Estrategias Integrales de Prevención: La Guía Definitiva</h4>
-    <p>Combatir los alérgenos de interior requiere un enfoque multifacético que combine el control ambiental, la higiene y la atención a los detalles. No se necesita una inversión costosa, sino hábitos consistentes y de bajo costo.</p>
+    <h4>5. Protocolo de Mantenimiento Sugerido</h4>
 
-    <h5>1. Control de Humedad y Ventilación Inteligente</h5>
-    <p>Mantenga la humedad relativa del aire por debajo del <strong>50%</strong>. Los ácaros y el moho no sobreviven en ambientes secos. Utilice un deshumidificador si vive en un clima húmedo o en zonas como el sótano y el baño. Respecto a la ventilación:</p>
-    <ul>
-        <li><strong>En invierno y primavera (temporada de polen):</strong> Para evitar que el polen entre en su hogar, mantenga las ventanas cerradas en las horas de mayor concentración (mañana y atardecer). Si necesita ventilar, hágalo al mediodía o después de una lluvia. El uso de purificadores de aire con filtro <strong>HEPA</strong> es una excelente alternativa para limpiar el aire sin abrir las ventanas.</li>
-        <li><strong>En verano y otoño:</strong> Ventile su hogar diariamente para reducir la humedad y el polvo.</li>
-    </ul>
+    <div class="accordion mb-3" id="protocoloAcaros">
+      <div class="accordion-item">
+        <h5 class="accordion-header" id="headingDiario">
+          <button class="accordion-button collapsed py-2" type="button" data-bs-toggle="collapse" data-bs-target="#diario" aria-expanded="false" aria-controls="diario">
+            📅 Diario
+          </button>
+        </h5>
+        <div id="diario" class="accordion-collapse collapse" aria-labelledby="headingDiario" data-bs-parent="#protocoloAcaros">
+          <div class="accordion-body">
+            Verificar que la humedad esté entre el <strong>40–50%</strong>. Ventilar brevemente (10 min) por la mañana, evitando la exposición en horas de alta polinización.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h5 class="accordion-header" id="headingSemanal">
+          <button class="accordion-button collapsed py-2" type="button" data-bs-toggle="collapse" data-bs-target="#semanal" aria-expanded="false" aria-controls="semanal">
+            📅 Semanal
+          </button>
+        </h5>
+        <div id="semanal" class="accordion-collapse collapse" aria-labelledby="headingSemanal" data-bs-parent="#protocoloAcaros">
+          <div class="accordion-body">
+            Lavar la ropa de cama a <strong>60 °C</strong> y realizar limpieza húmeda de superficies con paño de microfibra.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h5 class="accordion-header" id="headingMensual">
+          <button class="accordion-button collapsed py-2" type="button" data-bs-toggle="collapse" data-bs-target="#mensual" aria-expanded="false" aria-controls="mensual">
+            📅 Mensual
+          </button>
+        </h5>
+        <div id="mensual" class="accordion-collapse collapse" aria-labelledby="headingMensual" data-bs-parent="#protocoloAcaros">
+          <div class="accordion-body">
+            Revisar filtros de aire acondicionado y purificadores. Inspeccionar posibles focos de moho o plagas en cocina y baño.
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <h5>2. Limpieza Rigurosa y Reducción de Contacto</h5>
-    <ul>
-        <li><strong>Lave la ropa de cama semanalmente:</strong> Utilice agua a una temperatura mínima de 60°C para matar a los ácaros. Esto incluye sábanas, fundas de almohada y edredones.</li>
-        <li><strong>Aspire con frecuencia:</strong> Aspire el colchón, las alfombras y los muebles tapizados al menos una vez por semana con una aspiradora con filtro <strong>HEPA</strong>.</li>
-        <li><strong>Evite alfombras y cortinas gruesas:</strong> Si es posible, reemplácelas por superficies que se limpien fácilmente.</li>
-        <li><strong>Use fundas antiácaros:</strong> Cubra colchones y almohadas con fundas especiales.</li>
-        <li><strong>Minimice los peluches:</strong> Lávelos regularmente con agua caliente si su hijo tiene alergia.</li>
-        <li><strong>Higiene personal:</strong> Dúchese y lávese el cabello antes de dormir para eliminar los alérgenos.</li>
-    </ul>
+    <div class="alert alert-info" role="alert">
+      <strong>Conclusión:</strong> El manejo de las alergias no estacionales requiere integrar la <em>exclusión física de alérgenos</em>, la <em>eliminación de irritantes químicos</em> y el <em>fortalecimiento biológico mediante nutrición avanzada</em>. Transformar el hogar en un santuario de salud respiratoria es posible mediante la educación y la constancia en estas rutinas.
+    </div>
 
-    <h5>3. Estrategias Específicas para Alérgenos</h5>
-    <ul>
-        <li><strong>Caspa de Animales:</strong> Mantenga a las mascotas fuera del dormitorio y báñelas al menos una vez por semana.</li>
-        <li><strong>Moho:</strong> Repare cualquier fuga de agua. Limpie las superficies con una solución de agua y detergente y no limpie el moho en seco.</li>
-    </ul>
+    <p class="mt-3">A continuación, un video sobre el control de alergias en el hogar:</p>
+    <div id="video-target-lBmiraJE05E" class="iframe-placeholder"></div>
+    <p class="text-center"><small><em>Video: Control de alergias en el hogar — ácaros, moho y alérgenos.</em></small></p>
 
-    <hr>
-
-    <h4>Una Breve Nota sobre las Alergias Alimentarias</h4>
-    <p>Si sospecha de un alimento como causa de sus síntomas, hable con su médico. Diferenciar entre una <strong>alergia alimentaria</strong> (respuesta inmunológica) y una <strong>intolerancia</strong> (problema digestivo) es crucial. Un enfoque común es la <strong>dieta de eliminación</strong>, que debe ser siempre iniciada y supervisada por un profesional médico.</p>
-
-  </span>
+  </div>
     </article>
 </div>
     <div class="card-footer bg-primary"> 
@@ -2092,12 +3064,16 @@
 <div class="card-body">
   <h4 class="card-title h5">Alergias estacionales al Polen.</h4>
   <article class="card-text">
+    <p class="preview-text mb-2"><em>Cada primavera, el polen de árboles, pastos y malezas desencadena estornudos, congestión y picazón ocular. Aprendé cuándo y por qué el polen es más abundante y qué medidas concretas adoptar en casa y al aire libre.</em></p>
     <div class="text-center mb-2"> 
       <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#polen" role="button" aria-expanded="false" aria-controls="collapseExample">
       Ver más
     </a>
        </div> 
-      <span class="collapse" id="polen">
+      <div class="collapse" id="polen"
+        data-loaded="false"
+        data-video-id="dhcPzonF8yU"
+        data-video-title="Alergia al polen: síntomas, temporadas y prevención">
     
     <h4>La Alergia al Polen: Síntomas y Temporadas de Riesgo</h4>
     <p>La <strong>rinitis alérgica</strong>, comúnmente conocida como fiebre del heno, es una reacción del sistema inmunitario a partículas de polen que el cuerpo identifica erróneamente como una amenaza. Al inhalar el polen, el cuerpo libera sustancias como la histamina, que provocan los síntomas característicos:</p>
@@ -2148,14 +3124,18 @@
     </ul>
 
     <p>Adoptar estas medidas puede marcar una gran diferencia en la calidad de vida de las personas con rinitis alérgica, permitiéndoles afrontar las estaciones de mayor riesgo de manera más cómoda y saludable.</p>
-<div class="text-center mt-2">
-          <a target="_blank" rel="noopener-noreferrer" href="https://www.alergia.org.ar/index.php/profesionales/conteo-de-polenes#buenos-aires">
-                <button class="btn btn-sm btn-info" type="button">
-                  Ver Informe del Polen.
+    <p class="mt-3">A continuación, un video sobre alergia al polen y medidas de prevención:</p>
+    <div id="video-target-dhcPzonF8yU" class="iframe-placeholder"></div>
+    <p class="text-center"><small><em>Video: Alergia al polen — síntomas, temporadas y prevención.</em></small></p>
+
+    <div class="text-center mt-2">
+         <a target="_blank" rel="noopener-noreferrer" href="https://www.alergia.org.ar/index.php/profesionales/conteo-de-polenes#buenos-aires">
+                <button class="btn btn-sm btn-secondary" type="button">
+                  Informe de Polen.
              </button>
-              </a> 
-  </div>
-      </span>
+              </a>       
+    </div>
+      </div>
     </article>
 </div>
     <div class="card-footer bg-primary">
@@ -2163,61 +3143,7 @@
       </div>
 
 
-  <div class="card p-3"> 
-    <img src="./imagenes/vaselina.webp"  class="card-img-top" alt="Hombre colocandose vaselina en la nariz." loading="lazy" decoding="async" width="800" height="600">
-    <div class="card-body">
-    <h4 class="card-title h5">Vaselina nasal para la rinitis.</h4>
-    <article class="card-text">
-      <div class="text-center mb-2"> 
-        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#vaselina" role="button" aria-expanded="false" aria-controls="collapseExample">
-        Ver más
-      </a>
-         </div> 
-         <span class="collapse" id="vaselina">
-          
-          <p>La rinitis alérgica, una afección común que afecta a millones de personas en todo el mundo, puede causar síntomas molestos como congestión nasal, picazón, estornudos y secreción nasal. Para quienes sufren de alergias estacionales o perennes, encontrar alivio puede ser un desafío constante. Una solución simple y accesible es el uso de vaselina nasal.</p>
-      
-          <h4>¿Cómo funciona la vaselina nasal?</h4>
-          <p>La vaselina actúa como una barrera física que atrapa los alérgenos presentes en el aire, como el polen, el polvo y la caspa de mascotas, antes de que puedan entrar en contacto con la mucosa nasal. Al reducir la exposición a estos alérgenos, se pueden disminuir significativamente los síntomas de la rinitis alérgica.</p>
-      
-          <h4>Beneficios de la vaselina nasal:</h4>
-          <ul>
-              <li><strong>Alivio de los síntomas:</strong> La vaselina puede ayudar a reducir la congestión nasal, la picazón y los estornudos, mejorando la calidad de vida de quienes padecen rinitis alérgica.</li>
-              <li><strong>Prevención:</strong> El uso regular de vaselina nasal puede prevenir la aparición de síntomas alérgicos, especialmente durante las temporadas de alta concentración de polen.</li>
-              <li><strong>Seguridad:</strong> La vaselina es un producto seguro y bien tolerado por la mayoría de las personas, con un bajo riesgo de efectos secundarios.</li>
-              <li><strong>Accesibilidad:</strong> La vaselina es un producto económico y fácil de encontrar en cualquier farmacia o supermercado.</li>
-          </ul>
-      
-          <h4>¿Cómo usar la vaselina nasal?</h4>
-          <ol>
-              <li><strong>Lávate las manos:</strong> Antes de aplicar la vaselina, asegúrate de lavarte bien las manos con agua y jabón.</li>
-              <li><strong>Aplica una pequeña cantidad:</strong> Con un hisopo de algodón o la punta del dedo limpio, aplica una pequeña cantidad de vaselina en el interior de cada fosa nasal.</li>
-              <li><strong>Cubre la mucosa nasal:</strong> Asegúrate de cubrir toda la superficie de la mucosa nasal, especialmente en la parte frontal de las fosas nasales.</li>
-              <li><strong>Aplica con frecuencia:</strong> Para obtener mejores resultados, aplica la vaselina varias veces al día, especialmente antes de salir de casa o de exponerte a alérgenos conocidos.</li>
-          </ol>
-      
-          <h4>¿Cuándo es más útil?</h4>
-          <ul>
-              <li><strong>Temporadas de alergia:</strong> La vaselina nasal es especialmente útil durante las temporadas de alta concentración de polen, cuando los síntomas de la rinitis alérgica suelen empeorar.</li>
-              <li><strong>Exposición a alérgenos:</strong> Si sabes que vas a exponerte a alérgenos como polvo, caspa de mascotas o humo, aplica vaselina nasal antes de la exposición para prevenir la aparición de síntomas.</li>
-              <li><strong>Uso diario:</strong> Para quienes sufren de rinitis alérgica perenne, el uso diario de vaselina nasal puede ayudar a controlar los síntomas a largo plazo.</li>
-          </ul>
-      
-          <h4>Consideraciones importantes:</h4>
-          <ul>
-              <li>Aunque la vaselina es generalmente segura, algunas personas pueden experimentar irritación nasal leve. Si esto ocurre, suspende su uso y consulta a un médico.</li>
-              <li>No introduzcas hisopos de algodón demasiado profundo en las fosas nasales, ya que esto puede causar lesiones.</li>
-              <li>Si los síntomas de la rinitis alérgica persisten o empeoran, consulta a un alergólogo o médico especialista.</li>
-          </ul>
-      
-          <h4>Conclusión:</h4>
-          <p>La vaselina nasal es una herramienta sencilla y eficaz para aliviar y prevenir los síntomas de la rinitis alérgica. Su seguridad, accesibilidad y bajo costo la convierten en una opción atractiva para quienes buscan un alivio natural y sin complicaciones.</p>
-  </span>
-    </article>
-  </div>
-  <div class="card-footer bg-primary text-white">
-  </div>
-  </div>
+ 
 </div>
 
 
@@ -2227,17 +3153,78 @@
 
 <div class="card-group">
 
+  <div class="card p-3 shadow-sm">
+  <img loading="lazy" src="./imagenes/vitdinfec.webp" width="600" height="327" class="card-img-top" alt="Alimentos ricos en Vitamina D">
+  <div class="card-body">
+    <h3 class="card-title h5">Fortaleza en Invierno: Vitamina D</h3>
+    <article class="card-text">
+      <p class="preview-text mb-2"><em>La vitamina D es clave para el sistema inmunológico. En Argentina, el invierno reduce drásticamente su síntesis natural. Estas recetas keto económicas te ayudan a recuperarla.</em></p>
+
+      <div class="text-center mb-2"> 
+        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#vitaminaD" role="button" aria-expanded="false" aria-controls="vitaminaD">
+          Ver más
+        </a>
+      </div> 
+      
+      <div class="collapse" id="vitaminaD"
+        data-loaded="false"
+        data-video-id="y4H7jLCgmk0"
+        data-video-title="Fortaleza en Invierno: Vitamina D y Recetas Keto"
+        data-video-duration="PT6M38S">
+        <p><strong>El Déficit:</strong> Niveles bajos aumentan la vulnerabilidad a infecciones y fatiga. Es crucial equilibrarla con Magnesio, Vitamina K2 y Zinc.</p>
+
+        <h4 class="h5 mt-3">Tres Recetas Keto de Invierno</h4>
+
+        <h5 class="mt-3">1. "Cazuela de Invierno" <small class="text-muted">(Alta en Magnesio y Vitamina K)</small></h5>
+        <p>Esta es una opción de olla, ideal para los días fríos y muy barata.</p>
+        <p><strong>Ingredientes:</strong> Carne picada, mucha acelga o espinaca picada, cebolla, ajo y un chorrito de crema de leche o un poco de queso cremoso.</p>
+        <p><strong>Preparación:</strong> Saltéa la carne con el ajo y la cebolla. Cuando esté dorada, añade las hojas verdes (que reducen su volumen). Cocina hasta que estén tiernas y termina con la crema o el queso para dar cuerpo y grasas saludables.</p>
+        <p class="small text-muted"><strong>Nota:</strong> Las hojas verdes de invierno son tus mejores aliadas para el magnesio y la vitamina K.</p>
+
+        <h5 class="mt-3">2. "Sardinas al Horno o Salteadas" <small class="text-muted">(Máxima Vitamina D)</small></h5>
+        <p>Las sardinas en lata son el "superalimento" olvidado en Argentina por su bajísimo costo y alto valor nutricional.</p>
+        <p><strong>Ingredientes:</strong> 1 lata de sardinas en aceite (escurridas), huevos, perejil fresco.</p>
+        <p><strong>Preparación:</strong> Podés hacer una tortilla de sardinas: batí los huevos, incorporá las sardinas desmenuzadas y el perejil. Cocinala en la sartén con un poco de manteca o aceite de oliva.</p>
+        <p class="small text-muted"><strong>Nota:</strong> El huevo aporta el extra de Zinc y grasas, completando un plato muy nutritivo.</p>
+
+        <h5 class="mt-3">3. "Salteado de Repollo con Panceta/Cuerito" <small class="text-muted">(Vitamina K y Zinc)</small></h5>
+        <p>El repollo es uno de los vegetales más económicos en Argentina durante el invierno.</p>
+        <p><strong>Ingredientes:</strong> Repollo blanco (cortado en tiras finas), trocitos de panceta, carne de cerdo o restos de carne vacuna, sal, pimienta.</p>
+        <p><strong>Preparación:</strong> Dorá la carne/panceta en una sartén profunda. Agregá el repollo y un poquito de agua o caldo casero. Tapá y dejá cocinar hasta que el repollo esté tierno pero crocante. La grasa de la carne ayudará a absorber las vitaminas liposolubles (K y D).</p>
+
+        <h4 class="h5 mt-4">Consejos para tu salud en invierno</h4>
+        <ul>
+          <li><strong>Priorizá el Hígado:</strong> El hígado vacuno es extremadamente barato en las carnicerías argentinas y una de las fuentes más concentradas de vitaminas y minerales. Una vez a la semana es suficiente.</li>
+          <li><strong>La "Regla de Oro" de la Vitamina D:</strong> Aunque la dieta ayuda, la principal fuente es el sol. En invierno, intentá exponerte al menos 15–20 minutos al sol del mediodía sin protector solar (cara o brazos) cuando el clima lo permita.</li>
+          <li><strong>Suplementación:</strong> Si notás mucha fatiga, consultá con un profesional sobre la posibilidad de suplementar Vitamina D3. En Argentina se consiguen opciones económicas, muchas combinadas con K2 o magnesio.</li>
+        </ul>
+
+        <p class="small text-muted mt-2">Consultá siempre a un profesional antes de suplementar.</p>
+
+        <p class="mt-3">A continuación, un video sobre Vitamina D, recetas keto y salud en invierno:</p>
+        <div id="video-target-y4H7jLCgmk0" class="iframe-placeholder"></div>
+        <p class="text-center"><small><em>Video: Fortaleza en Invierno — Vitamina D y Recetas Keto.</em></small></p>
+      </div>
+    </article>
+  </div>
+  <div class="card-footer bg-primary"></div>
+</div>
+
      <div class="card p-3"> 
       <img src="./imagenes/pies-arena.webp"  class="card-img-top" alt="pies desnudos sobre la arena" loading="lazy" decoding="async" width="800" height="600">
       <div class="card-body">
       <h4 class="card-title h5">Grounding: Conexión con la Tierra para tu Bienestar</h4>
       <article class="card-text">
+        <p class="preview-text mb-2"><em>Caminar descalzo sobre la tierra puede regular el ritmo circadiano, reducir el cortisol y tener efecto antiinflamatorio. Una práctica simple y gratuita que podría mejorar tu sueño y tu bienestar respiratorio.</em></p>
         <div class="text-center mb-2"> 
           <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#ground" role="button" aria-expanded="false" aria-controls="collapseExample">
           Ver más
         </a>
            </div> 
-           <span class="collapse" id="ground">
+           <div class="collapse" id="ground"
+              data-loaded="false"
+              data-video-id="-8Ub0tniByg"
+              data-video-title="Grounding: Conexión con la Tierra para la salud">
             
             <p>El grounding (también conocido como "earthing") es una práctica que consiste en conectar el cuerpo humano directamente a la Tierra, ya sea caminando descalzo sobre el suelo, usando dispositivos como alfombrillas o sábanas conductoras, o mediante otros métodos que faciliten esta conexión. La idea detrás del grounding es que al estar en contacto con la Tierra, el cuerpo puede absorber electrones libres que tienen efectos antioxidantes, lo que podría tener beneficios para la salud, como mejorar el sueño y reducir la inflamación.</p>
         
@@ -2265,24 +3252,30 @@
         
             <h4>Conclusión</h4>
             <p>El grounding es una práctica sencilla y accesible que puede ofrecer una variedad de beneficios para la salud. Al conectar nuestro cuerpo con la Tierra, podemos aprovechar sus electrones libres y mejorar nuestro bienestar general.</p>
+
+            <p>A continuación, un video sobre Grounding y sus beneficios para la salud:</p>
+            <div id="video-target--8Ub0tniByg" class="iframe-placeholder"></div>
+            <p style="text-align: center;"><small><em>Video: Grounding – Conexión con la Tierra.</em></small></p>
                    
     <div class="text-center mt-2">
       <a href="https://www.youtube.com/watch?v=44ddtR0XDVU" rel="noopener-noreferrer" target="_blank" class="btn btn-sm btn-danger" type="button">
         Ver documental.
       </a>
     </div>
-     </span>
+     </div>
       </article>
     </div>
     <div class="card-footer bg-primary text-white">
     </div>
     </div>
 
+    
  <div class="card p-3"> 
       <img src="./imagenes/natacion-mujer.webp"  class="card-img-top" alt="mujer nadando en pileta cerrada" loading="lazy" decoding="async" width="800" height="600">
       <div class="card-body">
       <h4 class="card-title h5">Natación e infecciones.</h4>
       <article class="card-text">
+        <p class="preview-text mb-2"><em>La natación es uno de los deportes más completos, pero el cloro de las piscinas puede irritar las vías respiratorias y favorecer infecciones. Conocé los riesgos y los consejos para seguir nadando sin perjudicar tu salud nasal.</em></p>
         <div class="text-center mb-2"> 
           <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#natac" role="button" aria-expanded="false" aria-controls="collapseExample">
           Ver más
@@ -2343,7 +3336,11 @@
       Ver más
     </a>
        </div>   
-       <span class="collapse" id="de5">    
+       <div class="collapse" id="de5"
+         data-loaded="false"
+         data-video-id="_gRcwadq0-s"
+         data-video-title="Corticoides: ¿Amigos o enemigos? Lo que todo paciente debe saber sobre su uso y riesgos"
+         data-video-duration="PT8M39S">
         <h4>¡No los confundas! Gotas nasales descongestivas y spray con corticoides</h4>
         <p>
             En el mundo de los medicamentos nasales, hay una gran diferencia entre las gotas descongestivas (como la oximetazolina, pseudoefedrina o nafazolina) y los sprays nasales con corticoides (como la mometasona o la fluticasona). Confundirlos puede ser un error tan grande como intentar usar un paraguas para arreglar una gotera: no va a salir bien.
@@ -2379,7 +3376,10 @@
         </a>
        
        </div>
-       </span>
+       <p class="mt-3">A continuación, un video sobre el uso y riesgos de los corticoides:</p>
+       <div id="video-target-_gRcwadq0-s" class="iframe-placeholder"></div>
+       <p style="text-align: center;"><small><em>Video: Corticoides: ¿Amigos o enemigos? Lo que todo paciente debe saber sobre su uso y riesgos — aprendamedicina.</em></small></p>
+       </div>
   </article>
       </div>
       <div class="card-footer bg-primary text-white">
@@ -2542,7 +3542,9 @@
     <div class="container-flex text-center my-4 p-0">
       <a href="#remedios" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
     </div>
+</section>
 
+<section class="cv-section">
     <h2 id="cornete" class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">
     4 Cornetes y tabique nasal. Rinoplastias.
 </h2> 
@@ -2831,6 +3833,9 @@
 
 
            
+</section>
+
+<section class="cv-section">
     <h2 id="sinusitis" class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">
         5 Sinusitis agudas y crónicas.
     </h2>
@@ -3494,7 +4499,9 @@
             </div>
 
 <!--trauma nasal y epistaxis-->
+</section>
 
+<section class="cv-section">
   <h2 id="epistaxis" class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">
    6 Sangrados nasales y traumatismos de nariz.
   </h2>
@@ -3511,7 +4518,10 @@
       Ver más
     </a>
        </div>   
-       <span class="collapse" id="episad"> 
+       <div class="collapse" id="episad"
+                data-loaded="false"
+                data-video-id="aCzLQWn-C-c"
+                data-video-title="Sangrados de nariz en adultos"> 
         <h4>Sangrado Nasal (Epistaxis): Causas Comunes, Manejo y Cuándo Buscar Atención Médica</h4>
 
         <p>El sangrado nasal, también conocido como epistaxis, es un motivo de consulta médica frecuente que puede generar preocupación. Si bien en la mayoría de los casos se trata de episodios leves y autolimitados, es importante comprender sus posibles causas, cómo manejarlos inicialmente y cuándo es necesario buscar evaluación médica.</p>
@@ -3585,12 +4595,17 @@
         </ul>
         
         <p>En resumen, si bien la mayoría de los sangrados nasales son leves y se resuelven con medidas simples, es crucial estar atento a los signos de alarma que puedan indicar una causa subyacente más seria y buscar atención médica cuando sea necesario.</p>
+
+<p>A continuación, puede ver un video sobre sangrados nasales:</p>
+            <div id="video-target-aCzLQWn-C-c" class="iframe-placeholder"></div>
+            <p style="text-align: center;"><small><em>Video: Sangrados de nariz en adultos.</em></small></p>
+
        <div class="text-center mt-2">
         <a class="btn btn-sm btn-danger" type="button" rel="noopener noreferrer" target="_blank" href="https://open.spotify.com/episode/4pfU0JfY3qTXKMj8BtiXXk?si=aa8cac51534e4c18">
           Charla "Sangrados nasales"
         </a>
       </div>
-      </span>
+      </div>
       </article>
      </div>
   <div class="card-footer bg-primary text-white">
@@ -3913,8 +4928,9 @@
 <div class="container-flex text-center my-4 p-0">
   <a href="#epistaxis" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
+</section>
 
-
+<section class="cv-section">
   <h2 id="tabaco" class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">
    7 Dejar de fumar. Consejos.
   </h2>
@@ -3927,12 +4943,16 @@
   <div class=card-body>
   <h3 class="card-title h5">Dejar el cigarrillo.</h3>
   <article class="card-text">
+    <p>Fijar un día D y dejarlo de golpe es la estrategia con más evidencia. Los beneficios empiezan a las pocas horas y se acumulan de por vida.</p>
     <div class="text-center mb-2"> 
       <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#collapseExamp1" role="button" aria-expanded="false" aria-controls="collapseExample">
       Ver más
     </a>
        </div>  
-       <span class="collapse" id="collapseExamp1">   
+       <div class="collapse" id="collapseExamp1"
+                data-loaded="false"
+                data-video-id="vFS6HfToSSw"
+                data-video-title="Dejar el cigarrillo">   
    <h4>Dejar de Fumar: El Impacto Transformador en tu Salud y tu Entorno</h4>
 
 <p>Si eres fumador, tomar la decisión de abandonar el cigarrillo podría ser el cambio más trascendental que realices en favor de tu salud y bienestar. Los beneficios de liberarse de esta adicción son vastos y de gran alcance, impactando positivamente tu cuerpo, tu calidad de vida y el entorno que te rodea.</p>
@@ -3956,66 +4976,154 @@
 
 <p>Dejar de fumar es un acto de amor propio y un regalo invaluable para tu salud y la de tus seres queridos. Aunque el camino pueda presentar desafíos, los beneficios a largo plazo hacen que el esfuerzo valga la pena.</p>
      
+<p>A continuación, puede ver un video sobre dejar de fumar:</p>
+            <div id="video-target-vFS6HfToSSw" class="iframe-placeholder"></div>
+            <p style="text-align: center;"><small><em>Video: Dejar el cigarrillo.</em></small></p>
+
 <div class="text-center mb-2">
       <a class="btn btn-sm btn-danger mt-2" type="button" target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/episode/6DrH5n5wCUiUroFn5MEnoO?si=3fed9c79edb347b4">
        Charla "dejar de fumar".
       </a> 
      </div>
-       </span>
+       </div>
   </article>
     </div>
   <div class="card-footer bg-primary text-white">
   </div>
   </div>
 
+ 
+
   <div class="card p-3">
-  <img src="./imagenes/parchenicotina.webp"  class=card-img-top alt="parche de nicotina sobre el brazo" loading="lazy" decoding="async" width="800" height="600">
-  <div class=card-body>
-  <h3 class="card-title h5">Suplementos de nicotina.</h3>
+  <img src="./imagenes/parchenicotina.webp" class="card-img-top" alt="Uso de parche de nicotina" loading="lazy" decoding="async" width="800" height="600">
+  <div class="card-body">
+  <h3 class="card-title h5">Suplementos de Nicotina.</h3>
   <article class="card-text">
+    <p>La Terapia de Reemplazo de Nicotina (TRN) duplica las chances de éxito al dejar de fumar al reducir el síndrome de abstinencia. <span class="badge rounded-pill bg-success">Venta Libre (OTC)</span></p>
     <div class="text-center mb-2"> 
-      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#coll1" role="button" aria-expanded="false" aria-controls="collapseExample">
+      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#infoNicotina" role="button" aria-expanded="false" aria-controls="collapseExample">
       Ver más
     </a>
        </div>  
-       <span class="collapse" id="coll1">
-    <h4>Suplementos de Nicotina de Venta Libre: Un Valioso Apoyo en el Camino para Dejar de Fumar</h4>
+       <div class="collapse" id="infoNicotina"
+                data-loaded="false"
+                data-video-id="hPBtotK5TvM"
+                data-video-title="Suplementos de Nicotina">
 
-<p>Una vez tomada la firme decisión de abandonar el hábito tabáquico, los meses posteriores a la suspensión del cigarrillo son cruciales para consolidar este logro y prevenir recaídas. En este periodo, los suplementos de nicotina de venta libre, como los parches y los chicles de nicotina, pueden convertirse en aliados estratégicos para aumentar significativamente las probabilidades de éxito a largo plazo.</p>
+      <div class="bg-light p-3 rounded mb-3 border-start border-primary border-4">
+        <h6 class="fw-bold"><i class="bi bi-info-circle"></i> ¿Cómo elegir tu dosis?</h6>
+        <p class="small mb-2">Depende de cuántos cigarrillos fumas por día:</p>
+        <ul class="list-group list-group-flush small mb-3">
+          <li class="list-group-item bg-transparent px-0 py-1">
+            <strong>Más de 20 cig/día:</strong> Iniciar con Parches de 21mg o Chicles/Pastillas de 4mg.
+          </li>
+          <li class="list-group-item bg-transparent px-0 py-1">
+            <strong>Menos de 20 cig/día:</strong> Iniciar con Parches de 14mg o Chicles/Pastillas de 2mg.
+          </li>
+        </ul>
 
-<h5>Parches y Chicles de Nicotina: Una Terapia de Reemplazo Efectiva</h5>
+        <h6 class="fw-bold mt-3 text-secondary">Tipos y Marcas en Argentina</h6>
+        <div class="d-flex flex-wrap gap-2 mb-3">
+          <span class="badge bg-white text-dark border">Nicotinell</span>
+          <span class="badge bg-white text-dark border">Niquitin</span>
+        </div>
 
-<p>Estos productos funcionan como una terapia de reemplazo de nicotina (TRN), suministrando al organismo dosis controladas de nicotina sin los miles de químicos dañinos presentes en el humo del cigarrillo. Al reducir gradualmente la dependencia física a la nicotina, ayudan a mitigar los síntomas de abstinencia, como la ansiedad, la irritabilidad, la dificultad para concentrarse y los intensos deseos de fumar (craving). Esto permite al exfumador enfocarse en los aspectos psicológicos y conductuales de la cesación tabáquica.</p>
+        <div class="alert alert-warning py-2 small mb-0">
+          <strong>Tip Pro:</strong> No mastiques el chicle como uno normal. Usa la técnica <em>"Masticar y Estacionar"</em> (entre mejilla y encía) para que la nicotina se absorba correctamente.
+        </div>
+      </div>
 
-<h5>Beneficios Clave de los Suplementos de Nicotina</h5>
+      <h6 class="fw-bold small">Puntos clave para el éxito:</h6>
+      <ul class="small ps-3">
+        <li><strong>Rotación:</strong> Cambiá el lugar del parche cada día para evitar irritación.</li>
+        <li><strong>Evitá ácidos:</strong> No tomes café o gaseosas 15 min antes de los chicles/pastillas (afectan la absorción).</li>
+        <li><strong>Combinación:</strong> Usar parche (base) + chicle (rescate) aumenta la eficacia.</li>
+      </ul>
 
-<ul>
-    <li><strong>Mayor probabilidad de éxito:</strong> Numerosos estudios han demostrado que la TRN duplica o incluso triplica las tasas de éxito a largo plazo al dejar de fumar, en comparación con los intentos realizados sin ayuda farmacológica.</li>
-    <li><strong>Alivio de los síntomas de abstinencia:</strong> Reducen la intensidad y la frecuencia de los síntomas desagradables asociados a la falta de nicotina, facilitando el proceso de adaptación a una vida sin cigarrillo.</li>
-    <li><strong>Control gradual de la dependencia:</strong> Permiten una disminución progresiva de la dosis de nicotina, ayudando al organismo a adaptarse lentamente a la ausencia de esta sustancia.</li>
-    <li><strong>Flexibilidad de uso:</strong> Los parches proporcionan una liberación constante de nicotina a lo largo del día, mientras que los chicles permiten un control más puntual de los antojos.</li>
-    <li><strong>Accesibilidad:</strong> Al ser de venta libre, están disponibles sin necesidad de receta médica, lo que facilita su adquisición y uso temprano en el proceso de cesación.</li>
-</ul>
+      <!-- Plan de Reducción de 12 Semanas -->
+      <div class="bg-white p-3 rounded mb-3 border-start border-success border-4 mt-3">
+        <h6 class="fw-bold"><i class="bi bi-calendar-check"></i> Plan de Reducción de 12 Semanas (Tapering)</h6>
+        <p class="small mb-2">El objetivo es permitir que los receptores nicotínicos del cerebro se desensibilicen progresivamente, minimizando el malestar físico.</p>
 
-<h5>Consideraciones Económicas: Una Inversión en tu Futuro</h5>
+        <h6 class="fw-bold mt-3 text-success small"><i class="bi bi-bandaid"></i> 1. Parches Transdérmicos (24 hs)</h6>
+        <p class="small mb-1 text-muted">Para fumadores de 10 a 20 cigarrillos diarios:</p>
+        <div class="table-responsive">
+          <table class="table table-sm table-bordered small mb-2 align-middle">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">Fase</th>
+                <th scope="col">Semanas</th>
+                <th scope="col">Dosis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge bg-danger">Inicial</span></td>
+                <td>1 a 6</td>
+                <td><strong>21 mg/día</strong> — Estabiliza niveles de nicotina sin picos de ansiedad.</td>
+              </tr>
+              <tr>
+                <td><span class="badge bg-warning text-dark">Descenso</span></td>
+                <td>7 a 9</td>
+                <td><strong>14 mg/día</strong> — El cuerpo se acostumbra a menor estimulación.</td>
+              </tr>
+              <tr>
+                <td><span class="badge bg-success">Consolidación</span></td>
+                <td>10 a 12</td>
+                <td><strong>7 mg/día</strong> — Al finalizar la semana 12, se suspende el parche.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-<p>Si bien la adquisición de parches o chicles de nicotina implica un costo, es fundamental analizar esta inversión en el contexto del ahorro económico sustancial que representa dejar de fumar. El dinero que antes se destinaba a la compra de cigarrillos se libera para otros usos. Aún más significativo es el ahorro a largo plazo en gastos médicos relacionados con las numerosas enfermedades que el tabaquismo causa o agrava, como enfermedades cardiovasculares, cáncer, enfermedades respiratorias crónicas y muchas otras.</p>
+        <h6 class="fw-bold mt-3 text-success small"><i class="bi bi-capsule"></i> 2. Chicles o Pastillas</h6>
+        <p class="small mb-1 text-muted">La reducción se basa en la frecuencia de consumo:</p>
+        <div class="table-responsive">
+          <table class="table table-sm table-bordered small mb-2 align-middle">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">Fase</th>
+                <th scope="col">Semanas</th>
+                <th scope="col">Frecuencia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge bg-danger">Inicial</span></td>
+                <td>1 a 6</td>
+                <td><strong>1 unidad cada 1–2 hs</strong> — Mínimo 9 unidades/día.</td>
+              </tr>
+              <tr>
+                <td><span class="badge bg-warning text-dark">Descenso</span></td>
+                <td>7 a 9</td>
+                <td><strong>1 unidad cada 2–4 hs</strong> — Reducir a la mitad del consumo inicial.</td>
+              </tr>
+              <tr>
+                <td><span class="badge bg-success">Consolidación</span></td>
+                <td>10 a 12</td>
+                <td><strong>1 unidad cada 4–8 hs</strong> — Al llegar a 1–2 unidades/día, se abandona.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-<h5>Años Productivos y Bienestar Económico a Largo Plazo</h5>
+        <div class="alert alert-info py-2 small mb-0">
+          <strong><i class="bi bi-lightbulb"></i> Recordá:</strong> Este plan es orientativo. Consultá siempre a tu médico para adaptarlo a tu caso particular.
+        </div>
+      </div>
 
-<p>Dejar de fumar no solo impacta positivamente en la salud física y mental, sino que también se traduce en una mayor cantidad de años productivos en la vida. Al prevenir enfermedades incapacitantes y prolongar la esperanza de vida saludable, se incrementa el potencial de generar ingresos y disfrutar plenamente de las actividades laborales y personales, con el consiguiente beneficio económico para el individuo y la sociedad en general.</p>
+      <div class="d-grid mt-3">
+        <a href="tel:08009993040" class="btn btn-sm btn-dark mb-2">
+           Llamar al 0800-999-3040 (Ayuda Gratuita)
+        </a>
+      </div>
 
-<h5>Conclusión: Un Apoyo Valioso para una Vida Libre de Humo</h5>
+      <div id="video-target-hPBtotK5TvM" class="iframe-placeholder"></div>
+      <p style="text-align: center;"><small><em>Video: Suplementos de Nicotina.</em></small></p>
 
-<p>Los suplementos de nicotina de venta libre representan una herramienta valiosa y accesible para quienes deciden emprender el camino hacia una vida sin tabaco. Su capacidad para aliviar los síntomas de abstinencia y aumentar las probabilidades de éxito, sumada al significativo ahorro económico a corto y largo plazo y a la perspectiva de más años de vida productiva, los convierte en una opción inteligente y recomendable para consolidar la libertad del humo.</p>
-     <div class="text-center mt-2">
-      <a target="_blank" rel="noopener noreferrer" href="https://www.nicotinell.com.ar/como-dejar.html">
-        <button class="btn btn-sm btn-danger" type="button">Consejos para dejar de fumar.</button>
-      </a> 
-     </div>
-       </span>
-    </article>
-     </div>
+       </div>
+  </article>
+  </div>
   <div class="card-footer bg-primary text-white">
   </div>
   </div>
@@ -4025,6 +5133,7 @@
   <div class=card-body>
   <h3 class="card-title h5">Drogas para dejar de fumar.</h3>
   <article class="card-text">
+    <p>El bupropión y la vareniclina actúan sobre los circuitos cerebrales de recompensa, reduciendo la abstinencia y el deseo de fumar. <span class="badge rounded-pill bg-warning text-dark">Requieren receta</span></p>
     <div class="text-center mb-2"> 
       <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#tabaco45" role="button" aria-expanded="false" aria-controls="collapseExample">
       Ver más
@@ -4094,7 +5203,9 @@
 <div class="container-flex text-center my-4 p-0">
   <a href="#tabaco" class="btn btn-sm btn-outline-dark" type="button">⬆ menu</a>
 </div>
+</section>
 
+<section class="cv-section">
 <h2 id="olfato" class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">
  8 Problemas en el Olfato.
 </h2>
@@ -4111,7 +5222,9 @@
       Ver más
     </a>
        </div>  
-       <span class="collapse" id="olfato23">
+       <span class="collapse" id="olfato23"
+                data-video-id="XQA1-7mv7iw"
+                data-video-title="Hiposmia y la anosmia">
         <p>La <strong>hiposmia</strong> es una disminución en la capacidad para percibir olores, mientras que la <strong>anosmia</strong> es la pérdida total de este sentido. Ambas condiciones afectan significativamente la calidad de vida, ya que el olfato está estrechamente relacionado con el sabor, la seguridad y el disfrute de los alimentos.</p>
 
         <h4>Causas de la hiposmia y la anosmia</h4>
@@ -4154,7 +5267,10 @@
         
         <h4>Conclusión</h4>
         <p>La hiposmia y la anosmia son condiciones que pueden tener un impacto significativo en la calidad de vida. Comprender sus causas, tomar precauciones adecuadas y buscar tratamientos puede ayudar a las personas afectadas a manejar mejor su situación y, en algunos casos, recuperar parte de su capacidad olfativa.</p>
-        
+
+        <p>A continuación, puede ver un video sobre hiposmia y anosmia:</p>
+        <div id="video-target-XQA1-7mv7iw" class="iframe-placeholder"></div>
+        <p style="text-align: center;"><small><em>Video: Hiposmia y la anosmia.</em></small></p>
         
        </span> 
   </article>
@@ -4267,7 +5383,8 @@
       <div class="question-card card p-3">
           <h4>Pregunta 2: Intensidad</h4>
           <p>Huela el té. ¿Qué tan fuerte es el olor?</p>
-          <select class="form-select" name="q2">
+          <label for="q2" class="form-label">Intensidad del olor</label>
+          <select class="form-select" id="q2" name="q2">
               <option value="" selected>Selecciona una opción</option>
               <option value="0">Sin olor</option>
               <option value="1">Débil</option>
@@ -4302,6 +5419,7 @@
 </div>
 
     </main>
+</section>
 <footer class="mt-5">
   <div class="container-fluid py-4" style="background-color: #d7e3f0;">
     <div class="row align-items-center justify-content-center text-center px-3">
@@ -4321,13 +5439,23 @@
     </div>
   </div>
 
-  <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
-    <div class="mb-2">
-      <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+  <div class="container-fluid text-center py-3" style="background-color: #d7e3f0;">
+    <p class="small fw-semibold mb-2" style="color: #003366;">Seguinos en redes</p>
+    <div class="d-flex justify-content-center align-items-center gap-3 mb-3">
+      <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+         style="color: #fff; background-color: #1877F2; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; text-decoration: none; transition: opacity .2s;"
+         onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
         <svg class="icon icon-fill" aria-hidden="true" focusable="false"><use href="#icon-facebook"></use></svg>
       </a>
-      <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
+      <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+         style="color: #fff; background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; text-decoration: none; transition: opacity .2s;"
+         onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
         <svg class="icon icon-fill" aria-hidden="true" focusable="false"><use href="#icon-instagram"></use></svg>
+      </a>
+      <a href="https://www.youtube.com/channel/UCBrWcUcpJTH0q4mofkYL9OQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+         style="color: #fff; background-color: #FF0000; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; text-decoration: none; transition: opacity .2s;"
+         onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
+        <svg class="icon icon-fill" aria-hidden="true" focusable="false"><use href="#icon-youtube"></use></svg>
       </a>
     </div>
     <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
@@ -4335,190 +5463,139 @@
     </p>
   </div>
 </footer>
-<script> 
-document.addEventListener('DOMContentLoaded', function() {
-    var videoCollapses = document.querySelectorAll('.collapse[data-video-id]');
-
-    videoCollapses.forEach(function(collapseElement) {
-        
-        collapseElement.addEventListener('shown.bs.collapse', function() {
-            
-            const isLoaded = collapseElement.getAttribute('data-loaded') === 'true';
-            if (isLoaded) {
-                return;
-            }
-
-            // 1. Obtención de todos los datos necesarios del HTML
-            const videoId = collapseElement.getAttribute('data-video-id');
-            const targetDiv = document.getElementById('video-target-' + videoId);
-            const videoTitle = collapseElement.getAttribute('data-video-title'); // NUEVO: Capturar el título
-            
-            if (videoId && targetDiv) {
-                // 2. Construcción del IFRAME completo
-                const iframeHtml = `
-                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-                        <iframe 
-                          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                          src="https://www.youtube.com/embed/${videoId}" 
-                          frameborder="0" 
-                          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                          allowfullscreen 
-                          loading="lazy"
-                          referrerpolicy="strict-origin-when-cross-origin"
-                          title="${videoTitle}"
-                          width="560"
-                          height="315"> </iframe>
-                    </div>
-                `;
-
-                // 3. Insertamos el iframe y marcamos como cargado
-                targetDiv.innerHTML = iframeHtml;
-                collapseElement.setAttribute('data-loaded', 'true');
-            }
-        });
-    });
-});
-</script>
-  <script>
-    function evaluateTest() {
-        let score = 0;
-
-        // Question 1
-        if (document.querySelector('input[name="q1"]:checked')?.value === "correct") {
-            score++;
-        }
-
-        // Question 2
-        const intensity = document.querySelector('select[name="q2"]').value;
-        if (intensity === "2" || intensity === "3") {
-            score++;
-        }
-
-        // Question 3
-        if (document.querySelector('input[name="q3"]:checked')?.value === "correct") {
-            score++;
-        }
-
-        // Display result
-        const resultDiv = document.getElementById("result");
-        if (score === 3) {
-            resultDiv.innerHTML = "<strong>¡Excelente!</strong> Tu sentido del olfato parece estar en buen estado.";
-            resultDiv.classList.add("text-success");
-        } else if (score === 2) {
-            resultDiv.innerHTML = "<strong>Buen trabajo.</strong> Podrías estar experimentando ligeras alteraciones.";
-            resultDiv.classList.add("text-warning");
-        } else {
-            resultDiv.innerHTML = "<strong>Atención:</strong> Te recomendamos consultar a un especialista.";
-            resultDiv.classList.add("text-danger");
-        }
+<script>
+  /* evaluateTest debe ser global: se llama desde onclick en el HTML */
+  function evaluateTest() {
+    var score = 0;
+    if (document.querySelector('input[name="q1"]:checked')?.value === 'correct') score++;
+    var intensity = document.querySelector('select[name="q2"]').value;
+    if (intensity === '2' || intensity === '3') score++;
+    if (document.querySelector('input[name="q3"]:checked')?.value === 'correct') score++;
+    var div = document.getElementById('result');
+    if (score === 3) {
+      div.innerHTML = '<strong>¡Excelente!</strong> Tu sentido del olfato parece estar en buen estado.';
+      div.classList.add('text-success');
+    } else if (score === 2) {
+      div.innerHTML = '<strong>Buen trabajo.</strong> Podrías estar experimentando ligeras alteraciones.';
+      div.classList.add('text-warning');
+    } else {
+      div.innerHTML = '<strong>Atención:</strong> Te recomendamos consultar a un especialista.';
+      div.classList.add('text-danger');
     }
-</script> 
-<script>
-  document.getElementById('nose-submit').addEventListener('click', function() {
-    // Obtener los valores seleccionados
-    const q1 = parseInt(document.getElementById('nose-q1').value);
-    const q2 = parseInt(document.getElementById('nose-q2').value);
-    const q3 = parseInt(document.getElementById('nose-q3').value);
-    const q4 = parseInt(document.getElementById('nose-q4').value);
-    const q5 = parseInt(document.getElementById('nose-q5').value);
+  }
 
-    // Calcular el puntaje total
-    const totalScore = (q1 + q2 + q3 + q4 + q5) * 5;
+  document.addEventListener('DOMContentLoaded', function () {
 
-    // Mostrar el resultado al usuario
-    const resultText = `Tu puntaje es ${totalScore}%. ` + 
-      (totalScore <= 25 ? "Obstrucción leve o inexistente." :
-       totalScore <= 50 ? "Obstrucción moderada." :
-       totalScore <= 75 ? "Obstrucción significativa." :
-       "Obstrucción severa.");
+    /* 3. Toggle "Ver más / Ver menos" – event delegation: se registra de inmediato (1 addEventListener) */
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.toggle-btn[data-bs-toggle="collapse"]');
+      if (!btn) return;
+      setTimeout(function () {
+        btn.textContent = btn.getAttribute('aria-expanded') === 'true' ? 'Ver menos' : 'Ver más';
+      }, 300);
+    });
 
-    const resultElement = document.getElementById('nose-result');
-    document.getElementById('nose-score').textContent = resultText;
-    resultElement.style.display = 'block';
+    /* requestIdleCallback: cada init es una tarea separada que solo corre en reposo del browser.
+       Fallback setTimeout(1) para Safari que no implementa rIC. */
+    var ric = window.requestIdleCallback
+      ? function (fn) { window.requestIdleCallback(fn, { timeout: 2000 }); }
+      : function (fn) { setTimeout(fn, 1); };
+
+    /* Tarea 1 – Videos YouTube: carga diferida al expandir collapse */
+    ric(function () {
+      document.querySelectorAll('.collapse[data-video-id]').forEach(function (col) {
+        col.addEventListener('shown.bs.collapse', function () {
+          if (col.getAttribute('data-loaded') === 'true') return;
+          var id    = col.getAttribute('data-video-id');
+          var title = col.getAttribute('data-video-title') || '';
+          var target = document.getElementById('video-target-' + id);
+          if (id && target) {
+            target.innerHTML =
+              '<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden">' +
+              '<iframe style="position:absolute;top:0;left:0;width:100%;height:100%"' +
+              ' src="https://www.youtube.com/embed/' + id + '"' +
+              ' title="' + title + '" frameborder="0"' +
+              ' allow="accelerometer;clipboard-write;encrypted-media;gyroscope;picture-in-picture"' +
+              ' allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"' +
+              ' width="560" height="315"></iframe></div>';
+            col.setAttribute('data-loaded', 'true');
+          }
+        });
+      });
+    });
+
+    /* Tarea 2 – NOSE score */
+    ric(function () {
+      var noseBtn = document.getElementById('nose-submit');
+      if (noseBtn) {
+        noseBtn.addEventListener('click', function () {
+          var total = ['nose-q1','nose-q2','nose-q3','nose-q4','nose-q5'].reduce(function (s, id) {
+            var el = document.getElementById(id);
+            return s + (el ? parseInt(el.value) || 0 : 0);
+          }, 0) * 5;
+          var text = 'Tu puntaje es ' + total + '%. ' +
+            (total <= 25 ? 'Obstrucción leve o inexistente.' :
+             total <= 50 ? 'Obstrucción moderada.' :
+             total <= 75 ? 'Obstrucción significativa.' : 'Obstrucción severa.');
+          var scoreEl = document.getElementById('nose-score');
+          var resultEl = document.getElementById('nose-result');
+          if (scoreEl) scoreEl.textContent = text;
+          if (resultEl) resultEl.style.display = 'block';
+        });
+      }
+    });
+
+    /* Tarea 3 – Sinusitis checker con IntersectionObserver */
+    ric(function () {
+      var checkerEl = document.getElementById('sinusitis-checker-app-container');
+      if (!checkerEl) return;
+      function initChecker() {
+        var symptomsSection = document.getElementById('sinusitis-checker-symptoms-section');
+        var resultCard      = document.getElementById('sinusitis-checker-result-card');
+        var allSymptoms     = document.querySelectorAll('#sinusitis-checker-major-symptoms li, #sinusitis-checker-minor-symptoms li');
+        var submitBtn       = document.getElementById('sinusitis-checker-submit-btn');
+        var resetBtn        = document.getElementById('sinusitis-checker-reset-btn');
+        var resultTitle     = document.getElementById('sinusitis-checker-result-title');
+        var resultMessage   = document.getElementById('sinusitis-checker-result-message');
+        var cardBody        = document.getElementById('sinusitis-checker-card-body');
+        if (!submitBtn) return;
+        allSymptoms.forEach(function (item) {
+          item.addEventListener('click', function () { item.classList.toggle('active'); });
+        });
+        submitBtn.addEventListener('click', function () {
+          var major = 0, minor = 0;
+          allSymptoms.forEach(function (item) {
+            if (item.classList.contains('active'))
+              item.getAttribute('data-symptom-type') === 'major' ? major++ : minor++;
+          });
+          var probable = major >= 2 || (major >= 1 && minor >= 2);
+          resultTitle.textContent = probable ? '¡Posible Sinusitis!' : 'Poca Probabilidad de Sinusitis';
+          resultTitle.classList.toggle('text-danger',  probable);
+          resultTitle.classList.toggle('text-success', !probable);
+          resultMessage.textContent = probable
+            ? 'Basado en tus síntomas, que han durado más de 10 días, existe una alta probabilidad de sinusitis. Te recomendamos encarecidamente que consultes a un médico para un diagnóstico y tratamiento adecuados.'
+            : 'De acuerdo con los criterios de diagnóstico, es poco probable que tus síntomas correspondan a una sinusitis. Sin embargo, si persisten o empeoran, no dudes en consultar a un profesional de la salud.';
+          symptomsSection.style.display = 'none';
+          resultCard.style.display = 'block';
+          if (cardBody) cardBody.scrollIntoView({ behavior: 'smooth' });
+        });
+        if (resetBtn) resetBtn.addEventListener('click', function () {
+          resultCard.style.display = 'none';
+          symptomsSection.style.display = 'block';
+          allSymptoms.forEach(function (item) { item.classList.remove('active'); });
+        });
+      }
+      if ('IntersectionObserver' in window) {
+        var obs = new IntersectionObserver(function (entries, observer) {
+          if (entries[0].isIntersecting) { initChecker(); observer.disconnect(); }
+        }, { rootMargin: '200px' });
+        obs.observe(checkerEl);
+      } else {
+        initChecker();
+      }
+    });
+
   });
-</script>
-
-<script>
-  document.querySelectorAll('.toggle-btn').forEach(button => {
-    button.addEventListener('click', function () {
-      setTimeout(() => {
-        if (button.getAttribute('aria-expanded') === 'true') {
-          button.textContent = 'Ver menos';
-        } else {
-          button.textContent = 'Ver más';
-        }
-      }, 300); // Tiempo para asegurar la actualización después de la animación del colapso
-    });
-  });
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Definimos los elementos del DOM
-    const symptomsSection = document.getElementById('sinusitis-checker-symptoms-section');
-    const resultCard = document.getElementById('sinusitis-checker-result-card');
-    const allSymptomsList = document.querySelectorAll('#sinusitis-checker-major-symptoms li, #sinusitis-checker-minor-symptoms li');
-    const submitBtn = document.getElementById('sinusitis-checker-submit-btn');
-    const resetBtn = document.getElementById('sinusitis-checker-reset-btn');
-    const resultTitle = document.getElementById('sinusitis-checker-result-title');
-    const resultMessage = document.getElementById('sinusitis-checker-result-message');
-    const cardBody = document.getElementById('sinusitis-checker-card-body');
-
-    // Manejador de eventos para seleccionar síntomas
-    allSymptomsList.forEach(item => {
-        item.addEventListener('click', () => {
-            item.classList.toggle('active');
-        });
-    });
-
-    // Lógica para el botón de "Obtener Resultado"
-    submitBtn.addEventListener('click', () => {
-        let majorCount = 0;
-        let minorCount = 0;
-
-        // Contamos los síntomas seleccionados
-        allSymptomsList.forEach(item => {
-            if (item.classList.contains('active')) {
-                if (item.getAttribute('data-symptom-type') === 'major') {
-                    majorCount++;
-                } else {
-                    minorCount++;
-                }
-            }
-        });
-
-        // Determinamos el resultado basado en los criterios
-        if (majorCount >= 2 || (majorCount >= 1 && minorCount >= 2)) {
-            resultTitle.textContent = "¡Posible Sinusitis!";
-            resultTitle.classList.add('text-danger');
-            resultTitle.classList.remove('text-success');
-            resultMessage.textContent = "Basado en tus síntomas, que han durado más de 10 días, existe una alta probabilidad de sinusitis. Te recomendamos encarecidamente que consultes a un médico para un diagnóstico y tratamiento adecuados.";
-        } else {
-            resultTitle.textContent = "Poca Probabilidad de Sinusitis";
-            resultTitle.classList.add('text-success');
-            resultTitle.classList.remove('text-danger');
-            resultMessage.textContent = "De acuerdo con los criterios de diagnóstico, es poco probable que tus síntomas correspondan a una sinusitis. Sin embargo, si persisten o empeoran, no dudes en consultar a un profesional de la salud.";
-        }
-
-        // Ocultamos la sección de síntomas y mostramos el resultado
-        symptomsSection.style.display = 'none';
-        resultCard.style.display = 'block';
-
-        // Desplazamos la vista al resultado
-        cardBody.scrollIntoView({ behavior: 'smooth' });
-    });
-
-    // Lógica para el botón de "Volver a empezar"
-    resetBtn.addEventListener('click', () => {
-        resultCard.style.display = 'none';
-        symptomsSection.style.display = 'block';
-
-        // Deseleccionamos todos los síntomas
-        allSymptomsList.forEach(item => {
-            item.classList.remove('active');
-        });
-    });
-});
 </script>
 
 
@@ -4529,116 +5606,31 @@ document.addEventListener('DOMContentLoaded', () => {
   </a>
 </div>
 
-<!-- Footer simple con ubicación -->
-<footer class="container-fluid bg-light border-top mt-5 py-4" style="background: linear-gradient(135deg, #f7f9fb, #e7f4f4);">
-  <div class="container">
-    <div class="row align-items-center g-3">
-      <div class="col-md-6 text-center text-md-start">
-        <h5 class="h6 fw-bold mb-2">Dr. Juan Mosovich - Otorrinolaringólogo</h5>
-        <p class="mb-1"><small>📍 Caamaño 1100, Pilar - Buenos Aires</small></p>
-        <p class="mb-1"><small>📞 <a href="tel:+541168212512" class="link-dark text-decoration-none">+54 11 6821-2512</a></small></p>
-        <p class="mb-0"><small>🔗 <a href="https://www.otorrinoenpilar.com" class="link-primary text-decoration-none">www.otorrinoenpilar.com</a></small></p>
-      </div>
-      <div class="col-md-6 text-center text-md-end">
-        <a href="https://maps.app.goo.gl/YBpxVGoSiMQhbxru8" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm rounded-pill mb-2">
-          <svg class="icon" style="width: 1em; height: 1em;" aria-hidden="true" focusable="false"><use href="#icon-map-pin"></use></svg>
-          Ver ubicación en Google Maps
-        </a>
-        <br>
-        <a href="https://maps.app.goo.gl/YBpxVGoSiMQhbxru8" target="_blank" rel="noopener noreferrer" aria-label="Icono Google Maps" style="color: #1b8f8a; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none; margin-right: 8px;">
-          <svg class="icon" style="width: 1.5em; height: 1.5em;" aria-hidden="true" focusable="false"><use href="#icon-map-pin"></use></svg>
-        </a>
-        <small class="text-muted d-block mt-2">Zona Norte - Pilar y alrededores</small>
-      </div>
-    </div>
-  </div>
-</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
+  <!-- Bootstrap JS: carga diferida a primera interacción (no bloquea el hilo principal en page load) -->
+  <script>
+  (function () {
+    var bsLoaded = false;
+    function loadBS() {
+      if (bsLoaded) return;
+      bsLoaded = true;
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js';
+      s.integrity = 'sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p';
+      s.crossOrigin = 'anonymous';
+      document.head.appendChild(s);
+    }
+    ['click', 'scroll', 'touchstart', 'keydown'].forEach(function (ev) {
+      document.addEventListener(ev, loadBS, { once: true, passive: true });
+    });
+  })();
+  </script>
   <!-- Font Awesome JS -->
 
-  <!-- Modal de Reseña -->
-  <div class="modal fade" id="modalResena" tabindex="-1" aria-labelledby="modalResenaLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header border-0 pb-0">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center px-3 px-md-4 pb-3">
-          <div class="mb-2 mb-md-3">
-            <span style="font-size: 2.5rem;">⭐</span>
-          </div>
-          <h3 class="modal-title mb-2 mb-md-3 fs-5 fs-md-4" id="modalResenaLabel">¿Cómo fue tu experiencia?</h3>
-          <p class="text-muted small">Tu opinión es muy valiosa para nosotros y para otros pacientes. ¿Podrías dedicarnos un minuto para calificarnos?</p>
-        </div>
-        <div class="modal-footer border-0 d-flex flex-column flex-sm-row justify-content-center gap-2 pt-0">
-          <button type="button" class="btn btn-light btn-sm" data-bs-dismiss="modal">Más tarde</button>
-          <a href="https://g.page/r/CWbtrBOdyGoaEBM/review" class="btn btn-primary btn-sm px-3" target="_blank" rel="noopener noreferrer">Calificar ahora</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <script src="./js/rate-prompt.js" defer></script>
   <script>
-  document.addEventListener("DOMContentLoaded", function() {
-      if (sessionStorage.getItem('resenaMostrada')) {
-          return;
-      }
-        let tiempoMinimo = 60000;
-        let scrollRequerido = 50;
-      let tiempoInicio = Date.now();
-      let scrollRealizado = false;
-      let modalMostrado = false;
-        let scrollHeight = 0;
-        let clientHeight = 0;
-
-        function actualizarMetricasScroll() {
-          const docEl = document.documentElement;
-          scrollHeight = docEl.scrollHeight;
-          clientHeight = docEl.clientHeight;
-        }
-
-        actualizarMetricasScroll();
-        window.addEventListener('resize', actualizarMetricasScroll, { passive: true });
-        function obtenerPorcentajeScroll() {
-          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-          const maxScroll = scrollHeight - clientHeight;
-          if (maxScroll <= 0) {
-            return 0;
-          }
-          return (scrollTop / maxScroll) * 100;
-        }
-      function verificarScroll() {
-          if (obtenerPorcentajeScroll() >= scrollRequerido) {
-              scrollRealizado = true;
-          }
-      }
-      function mostrarModal() {
-          if (modalMostrado) return;
-          modalMostrado = true;
-          var myModal = new bootstrap.Modal(document.getElementById('modalResena'));
-          myModal.show();
-          sessionStorage.setItem('resenaMostrada', 'true');
-          window.removeEventListener('scroll', verificarScroll);
-          document.removeEventListener('mouseleave', detectarSalida);
-      }
-      function verificarCondiciones() {
-          const tiempoTranscurrido = Date.now() - tiempoInicio >= tiempoMinimo;
-          if (tiempoTranscurrido && scrollRealizado) {
-              mostrarModal();
-          }
-      }
-      function detectarSalida(e) {
-          if (e.clientY <= 0 && (Date.now() - tiempoInicio >= 30000)) {
-              mostrarModal();
-          }
-      }
-        window.addEventListener('scroll', function() {
-          verificarScroll();
-          verificarCondiciones();
-        }, { passive: true });
-      document.addEventListener('mouseleave', detectarSalida);
-      setInterval(verificarCondiciones, 5000);
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.ORPRatePrompt) window.ORPRatePrompt.autoShowOnEngagement();
   });
   </script>
   <button type="button" id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
@@ -4646,240 +5638,19 @@ document.addEventListener('DOMContentLoaded', () => {
   </button>
 
   <script>
-    // Scroll to top button
-    (function() {
-      const scrollBtn = document.getElementById('scrollToTop');
-      if (!scrollBtn) return;
-
-      const toggleVisibility = () => {
-        if (window.scrollY > 300) {
-          scrollBtn.classList.add('show');
-        } else {
-          scrollBtn.classList.remove('show');
-        }
-      };
-
-      window.addEventListener('scroll', toggleVisibility, { passive: true });
-      toggleVisibility();
-
-      scrollBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    })();
-
-    // Reading progress bar
-    (function() {
-      const progressBar = document.getElementById('readingProgress');
-      if (!progressBar) return;
-
-      const updateProgress = () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = (scrollTop / docHeight) * 100;
-        progressBar.style.width = progress + '%';
-        progressBar.setAttribute('aria-valuenow', Math.round(progress));
-      };
-
-      window.addEventListener('scroll', updateProgress, { passive: true });
-      updateProgress();
-    })();
-  </script>
-
-  <!-- Google tag (gtag.js) -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    const loadGtag = () => {
-      const gtagScript = document.createElement('script');
-      gtagScript.async = true;
-      gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T';
-      document.head.appendChild(gtagScript);
-      gtag('js', new Date());
-      gtag('config', 'G-XNNM71EW8T');
-    };
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(loadGtag, { timeout: 2000 });
-    } else {
-      window.addEventListener('load', loadGtag);
+  /* Scroll to top */
+  (function () {
+    var btn = document.getElementById('scrollToTop');
+    if (btn) {
+      function toggleBtn() { btn.classList.toggle('show', window.scrollY > 300); }
+      window.addEventListener('scroll', toggleBtn, { passive: true });
+      toggleBtn();
+      btn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
     }
+  })();
   </script>
 
-  <!-- Marcado JSON-LD datos estructurados. -->
-  <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
-    "url": "https://www.otorrinoenpilar.com/sinusitis.html",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://www.otorrinoenpilar.com/sinusitis.html"
-    },
-    "name": "Sinusitis y problemas respiratorios nasales - Otorrino en Pilar",
-    "headline": "Problemas respiratorios nasales: sinusitis, rinitis y tratamientos",
-    "description": "Guia completa sobre sinusitis y rinitis en Pilar y Zona Norte: sintomas, diagnostico clinico, tratamientos y autoevaluacion NOSE.",
-    "inLanguage": "es-AR",
-    "datePublished": "2023-01-01T09:00:00-03:00",
-    "dateModified": "2026-02-07T09:00:00-03:00",
-    "keywords": [
-      "Sinusitis",
-      "Rinitis",
-      "Lavados nasales",
-      "Lavado nasal",
-      "Problemas respiratorios nasales"
-    ],
-    "image": [
-      "https://www.otorrinoenpilar.com/imagenes/video-limpieza.webp",
-      "https://www.otorrinoenpilar.com/imagenes/lavados-nasales.webp",
-      "https://www.otorrinoenpilar.com/imagenes/tac-sinusitis.webp"
-    ],
-    "author": {
-      "@type": "Person",
-      "name": "Dr. Juan Mosovich",
-      "url": "https://www.otorrinoenpilar.com/info.html#cv",
-      "jobTitle": "Otorrinolaringólogo"
-    },
-    "publisher": {
-      "@type": "MedicalOrganization",
-      "name": "Otorrino en Pilar",
-      "url": "https://www.otorrinoenpilar.com",
-      "medicalSpecialty": "Otorrinolaringología",
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=100063748789595",
-        "https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr"
-      ],
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.otorrinoenpilar.com/favicon/apple-touch-icon.png"
-      }
-    },
-    "about": {
-      "@type": "MedicalCondition",
-      "name": "Sinusitis",
-      "alternateName": ["Rinosinusitis", "Infección de los senos paranasales"],
-      "signOrSymptom": ["Congestión nasal", "Dolor facial", "Dolor de cabeza", "Secreción nasal espesa", "Pérdida del olfato"],
-      "possibleTreatment": {
-        "@type": "MedicalTherapy",
-        "name": "Tratamiento para sinusitis",
-        "description": "El tratamiento puede incluir descongestionantes, analgésicos, irrigación nasal con solución salina, corticoides tópicos o sistémicos, y en algunos casos, cirugía endoscópica de senos paranasales."
-      }
-    },
-    "audience": {
-      "@type": "PeopleAudience",
-      "suggestedMaxAge": 100,
-      "suggestedMinAge": 18
-    },
-    "potentialAction": {
-      "@type": "ReadAction",
-      "target": ["https://www.otorrinoenpilar.com/sinusitis.html"]
-    },
-    "hasPart": [
-      {
-        "@type": "VideoObject",
-        "name": "Lavados nasales con solución salina",
-        "description": "Video demostrativo de la técnica correcta de lavado nasal con solución salina (tutorial práctico).",
-        "thumbnailUrl": "https://www.otorrinoenpilar.com/imagenes/video-limpieza.webp",
-        "uploadDate": "2023-06-01T12:00:00-03:00",
-        "contentUrl": "https://www.otorrinoenpilar.com/videos/lavaje-nasal.mp4",
-        "embedUrl": "https://www.otorrinoenpilar.com/videos/lavaje-nasal.mp4"
-      },
-      {
-        "@type": "VideoObject",
-        "name": "Ejercicios de Brandt-Daroff",
-        "description": "Demostración de los ejercicios de Brandt‑Daroff para el tratamiento del vértigo posicional paroxístico benigno.",
-        "thumbnailUrl": "https://www.otorrinoenpilar.com/imagenes/video-brandt-daroff.webp",
-        "uploadDate": "2023-06-15T12:00:00-03:00",
-        "contentUrl": "https://www.otorrinoenpilar.com/videos/Brandt-Daroff.mp4",
-        "embedUrl": "https://www.otorrinoenpilar.com/videos/Brandt-Daroff.mp4"
-      },
-      {
-        "@type": "VideoObject",
-        "name": "Neti / técnica con neti pot",
-        "description": "Video externo sobre la técnica Neti (lavado nasal) enlazado desde YouTube.",
-        "thumbnailUrl": "https://img.youtube.com/vi/1wXCtd57RR4/hqdefault.jpg",
-        "uploadDate": "2022-08-01T12:00:00-03:00",
-        "contentUrl": "https://www.youtube.com/watch?v=1wXCtd57RR4",
-        "embedUrl": "https://www.youtube.com/embed/1wXCtd57RR4"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Inicio",
-        "item": "https://www.otorrinoenpilar.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Problemas respiratorios nasales",
-        "item": "https://www.otorrinoenpilar.com/sinusitis.html"
-      }
-    ]
-  }
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    "name": "Dr. Juan Mosovich - Otorrinolaringólogo",
-    "description": "Especialista en sinusitis, rinitis, problemas respiratorios nasales, rinoplastia y cirugía endoscópica en Pilar y Zona Norte.",
-    "url": "https://www.otorrinoenpilar.com",
-    "telephone": "+54-9-11-6821-2512",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Caamaño 1100",
-      "addressLocality": "Pilar",
-      "addressRegion": "Buenos Aires",
-      "postalCode": "1631",
-      "addressCountry": "AR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "-34.434636",
-      "longitude": "-58.829689"
-    },
-    "priceRange": "$$",
-    "medicalSpecialty": "Otorrinolaringología",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "127",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "sameAs": [
-      "https://maps.app.goo.gl/YBpxVGoSiMQhbxru8"
-    ],
-    "availableService": [
-      {
-        "@type": "MedicalTherapy",
-        "name": "Tratamiento de Sinusitis"
-      },
-      {
-        "@type": "MedicalTherapy",
-        "name": "Tratamiento de Rinitis"
-      },
-      {
-        "@type": "MedicalProcedure",
-        "name": "Rinoplastia Estética y Funcional"
-      },
-      {
-        "@type": "MedicalProcedure",
-        "name": "Cirugía Endoscópica de Senos Paranasales"
-      },
-      {
-        "@type": "MedicalTherapy",
-        "name": "Tratamiento de Problemas Respiratorios Nasales"
-      },
-      {
-        "@type": "MedicalProcedure",
-        "name": "Septoplastia"
-      }
-    ]
-  }
-    </script>
+
+
 </body>
 </html>

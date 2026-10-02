@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="es-AR" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>SleepTrack dCBT-I: App TCC para el Insomnio | Dr. Mosovich</title>
+    <meta name="description" content="SleepTrack dCBT-I: Aplicación gratuita para registrar tu sueño y aplicar la Terapia Cognitivo-Conductual para el Insomnio. Calculadora de ventana de sueño y herramientas. Dr. Mosovich | Pilar.">
+    <meta name="keywords" content="terapia cognitivo conductual insomnio, TCC-I, restricción de sueño, eficiencia de sueño, control de estímulos, insomnio crónico, registro de sueño, app insomnio, SleepTrack">
+    <meta name="author" content="Dr. Juan Mosovich">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#121214">
+    <link rel="canonical" href="https://www.otorrinoenpilar.com/tccB.html">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+    <meta name="geo.region" content="AR-B">
+    <meta name="geo.placename" content="Pilar, Buenos Aires">
+    <meta name="geo.position" content="-34.434636;-58.829689">
+    <meta name="ICBM" content="-34.434636, -58.829689">
+
+    <meta property="og:title" content="SleepTrack dCBT-I: App para Tratar el Insomnio | Dr. Mosovich">
+    <meta property="og:description" content="Registrá tu sueño, gestioná la ansiedad nocturna y recibí una prescripción de restricción horaria basada en TCC-I.">
+    <meta property="og:image" content="./imagenes/tcciog.jfif">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="SleepTrack dCBT-I - App para el insomnio">
+    <meta property="og:url" content="https://www.otorrinoenpilar.com/tccB.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SleepTrack dCBT-I: App para el Insomnio | Dr. Mosovich">
+    <meta name="twitter:description" content="Aplicá la Terapia Cognitivo-Conductual para el Insomnio con esta app gratuita, sin medicación, basada en evidencia.">
+    <meta name="twitter:image" content="./imagenes/tcciog.jfif">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./imagenes/tcciog.jfif">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./manifest-tccb.json">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthApplication",
+      "name": "SleepTrack dCBT-I",
+      "url": "https://www.otorrinoenpilar.com/tccB.html",
+      "description": "Aplicación web interactiva para aplicar la Terapia Cognitivo-Conductual para el Insomnio (TCC-I).",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "WebBrowser",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "ARS" },
+      "author": {
+        "@type": "Physician",
+        "name": "Dr. Juan Mosovich",
+        "url": "https://www.otorrinoenpilar.com/"
+      }
+    }
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./js/rate-prompt.js" defer></script>
+    <style>
+        body { background-color: #121214; color: #e2e8f0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .card { background-color: #1a1a1e; border: 1px solid #2d2d34; border-radius: 12px; }
+        .nav-tabs .nav-link { font-size: 0.85rem; padding: 0.6rem; color: #94a3b8; border: none; }
+        .nav-tabs .nav-link.active { background-color: transparent; color: #3b82f6; border-bottom: 3px solid #3b82f6; font-weight: bold; }
+        .instruccion-clave { background-color: #2a2015; border-left: 4px solid #ff9800; }
+        
+        #onboarding-banner { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); border-radius: 12px; }
+        .progress-help { font-size: 0.7rem; color: #94a3b8; }
+        
+        #breatheCircle {
+            width: 120px; height: 120px; border-radius: 50%; background-color: #198754;
+            margin: 0 auto; transition: transform linear; display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: bold; font-size: 1.1rem; box-shadow: 0 0 15px rgba(25, 135, 84, 0.4);
+        }
+
+        .loop-node { background: #212529; border: 2px solid #343a40; border-radius: 12px; padding: 1rem; transition: all 0.3s ease; cursor: pointer; }
+        .loop-node:hover { border-color: #3b82f6; background: #2b3035; transform: scale(1.02); }
+        .loop-node.active-node { border-color: #ef4444; background: #3f1515; }
+        #loop-detail-display { transition: opacity 0.25s ease; background-color: #1a1d20; border-left: 4px solid #ef4444; }
+
+        .card-flip { cursor: pointer; transition: transform 0.2s ease, border-color 0.2s ease; background-color: #1e1e24; border: 1px solid #ef4444; outline: none; }
+        .card-flip:hover, .card-flip:focus { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.3); border-color: #f87171; }
+        .card-flip.revealed { border-color: #22c55e !important; background-color: #14261c; }
+        
+        .panel-calculadora { background-color: #000; border: 1px solid #333; border-radius: 8px; }
+        .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+        /* Indicador de estado Offline - PWA (Dark Mode) */
+        #offline-badge {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            background: linear-gradient(90deg, #7f1d1d 0%, #450a0a 100%);
+            color: #fecaca;
+            padding: 0.5rem 1rem;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: none;
+            z-index: 9999;
+            box-shadow: 0 4px 12px rgba(127, 29, 29, 0.5);
+            animation: slideDown 0.3s ease-out;
+        }
+
+        #offline-badge.show {
+            display: block;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Ajuste para navbar cuando offline badge está visible */
+        body.offline-mode {
+            padding-top: 2.5rem;
+        }
+
+        /* Banner de re-engagement (conexión disponible) - Dark Mode */
+        #reengagement-banner {
+            background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+            color: #d1fae5;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            display: none;
+            box-shadow: 0 4px 12px rgba(6, 78, 59, 0.4);
+            animation: slideUp 0.4s ease-out;
+            border-left: 4px solid #10b981;
+        }
+
+        #reengagement-banner.show {
+            display: block;
+        }
+
+        #reengagement-banner h4 {
+            color: #a7f3d0;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        #reengagement-banner p {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #d1fae5;
+        }
+
+        #reengagement-banner .btn {
+            background-color: #10b981;
+            color: white;
+            font-weight: 600;
+            border: none;
+            padding: 0.4rem 1rem;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+        }
+
+        #reengagement-banner .btn:hover {
+            background-color: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Badge indicador de conexión en navbar - Dark Mode */
+        .connection-status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .connection-status-badge.online {
+            background-color: #052e16;
+            color: #86efac;
+            border: 1px solid #22c55e;
+        }
+
+        .connection-status-badge.offline {
+            background-color: #3f0f0f;
+            color: #fca5a5;
+            border: 1px solid #ef4444;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .status-indicator.online {
+            background-color: #10b981;
+        }
+
+        .status-indicator.offline {
+            background-color: #ef4444;
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Indicador de estado Offline (PWA) -->
+<div id="offline-badge" role="status" aria-live="polite" aria-label="Estado de conexión offline">
+    <span class="me-2">📡</span>
+    Estás en modo offline - usando versión guardada localmente
+</div>
+
+    <header class="bg-dark border-bottom border-secondary sticky-top py-1 py-md-2 shadow-sm">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-1 gap-md-2" style="max-width: 800px;">
+            <div class="text-center text-md-start">
+                <a href="index.html" class="text-muted text-decoration-none d-block mb-1" style="font-size: 0.6rem;">← Otorrino en Pilar</a>
+                <h1 class="h6 text-primary mb-0 font-monospace fw-bold" style="font-size: 0.95rem;">SleepTrack dCBT-I<span class="visually-hidden"> - Tratamiento para el Insomnio</span></h1>
+                <small class="text-muted d-none d-md-inline" style="font-size:0.65rem;">Dr. Juan Mosovich</small>
+            </div>
+            <div class="text-center text-md-end" style="min-width: 200px;">
+                <div class="d-flex align-items-center gap-1 gap-md-2 flex-wrap">
+                    <span id="connection-badge" class="connection-status-badge online d-none d-md-flex">
+                        <span class="status-indicator online"></span>
+                        En línea
+                    </span>
+                    <span class="text-muted fw-bold" id="progreso-label" style="font-size: 0.7rem;">Diario:</span>
+                    <div class="progress flex-grow-1" style="height: 8px; min-width: 80px;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-labelledby="progreso-label" id="treatment-progress-container" class="bg-secondary">
+                        <div id="treatment-progress-bar" class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 0%"></div>
+                    </div>
+                    <small id="treatment-progress-text" class="fw-bold text-success" style="font-size: 0.7rem;" aria-live="polite">0%</small>
+                </div>
+                <div class="progress-help mt-1" style="font-size: 0.65rem;">7 días = Calculadora activa</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-3" style="max-width: 800px;">
+        
+        <div id="onboarding-banner" class="p-3 mb-4 d-none shadow">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3">
+                <div>
+                    <h2 class="h5 fw-bold text-light mb-1">👋 Bienvenido a tu Programa de Sueño</h2>
+                    <p class="small text-light opacity-75 mb-0">Esta app clínica guiará tu restricción horaria, te enseñará a dominar tu ansiedad nocturna y reentrenará tu cerebro para dormir de forma natural. Completa tu diario cada mañana.</p>
+                </div>
+                <button type="button" class="btn btn-outline-light btn-sm flex-shrink-0 fw-bold" onclick="dismissOnboarding()" aria-label="Cerrar mensaje de bienvenida">Empezar ✓</button>
+            </div>
+        </div>
+
+        <!-- Banner de Re-engagement: Invita a explorar más contenido cuando está en línea -->
+        <div id="reengagement-banner">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3">
+                <div>
+                    <h4>🎯 ¡Tienes conexión! Explora más</h4>
+                    <p class="mb-0">Vuelve al sitio principal para descubrir artículos sobre el sueño, técnicas de relajación avanzadas y más recursos clínicos.</p>
+                </div>
+                <div class="d-flex gap-2 flex-shrink-0">
+                    <a href="./" class="btn btn-sm">Ir al sitio principal →</a>
+                    <button type="button" class="btn btn-outline-light btn-sm fw-bold" onclick="dismissReengagement()" aria-label="Cerrar sugerencia de explorar el sitio">✕</button>
+                </div>
+            </div>
+        </div>
+
+        <ul class="nav nav-tabs nav-fill mb-4 border-bottom-0" id="appTabs" role="tablist">
+            <li class="nav-item" role="presentation"><button class="nav-link active" id="tab-registro" data-bs-toggle="tab" data-bs-target="#registro" type="button" role="tab" aria-controls="registro" aria-selected="true">Diario</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="tab-historial" data-bs-toggle="tab" data-bs-target="#historial" type="button" role="tab" aria-controls="historial" aria-selected="false" onclick="renderHistorial()">Progreso</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="tab-herramientas" data-bs-toggle="tab" data-bs-target="#herramientas" type="button" role="tab" aria-controls="herramientas" aria-selected="false">Herramientas</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="tab-clinica" data-bs-toggle="tab" data-bs-target="#clinica" type="button" role="tab" aria-controls="clinica" aria-selected="false" onclick="renderCuestionarios()">Clínica</button></li>
+            <li class="nav-item" role="presentation"><button class="nav-link" id="tab-reglas" data-bs-toggle="tab" data-bs-target="#reglas" type="button" role="tab" aria-controls="reglas" aria-selected="false">Guía</button></li>
+        </ul>
+
+        <div class="tab-content">
+            
+            <section class="tab-pane fade show active" id="registro" role="tabpanel" aria-labelledby="tab-registro">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title h5 text-info mb-3">Registro de Anoche</h2>
+                        <form id="sleepForm" onsubmit="guardarRegistro(event)">
+                            <div class="row g-2 mb-3">
+                                <div class="col-6"><label class="form-label small text-muted" for="horaAcostarse">1. Hora a la cama</label><input type="time" id="horaAcostarse" class="form-control form-control-sm bg-dark text-light border-secondary" required></div>
+                                <div class="col-6"><label class="form-label small text-muted" for="horaDespertar">2. Hora despertar final</label><input type="time" id="horaDespertar" class="form-control form-control-sm bg-dark text-light border-secondary" required></div>
+                                <div class="col-12 mt-2"><label class="form-label small text-muted" for="horaLevantarse">3. Hora en que SALISTE de la cama hoy</label><input type="time" id="horaLevantarse" class="form-control form-control-sm bg-dark text-light border-secondary" required></div>
+                            </div>
+                            <div class="row g-2 mb-3">
+                                <div class="col-12"><label class="form-label small text-muted" for="latencia">4. Tiempo que tardaste en dormirte (minutos)</label><input type="number" id="latencia" class="form-control form-control-sm bg-dark text-light border-secondary text-center" min="0" placeholder="Ej: 30" required></div>
+                                <div class="col-12 mt-2">
+                                    <label class="form-label small text-muted" for="despertaresMin">5. Tiempo total despierto en la noche (suma en minutos)</label>
+                                    <input type="number" id="despertaresMin" class="form-control form-control-sm bg-dark text-light border-secondary text-center" min="0" placeholder="Ej: 45" aria-describedby="descDespertares" required>
+                                    <div id="descDespertares" class="form-text text-muted small" style="font-size:0.7rem;">Si te despertaste 3 veces y tardaste 15 min en volver a dormir cada vez, anota 45.</div>
+                                </div>
+                            </div>
+                            <div class="bg-dark p-2 rounded mb-3 border border-secondary">
+                                <span class="form-label small text-warning d-block fw-bold">Adherencia y Factores</span>
+                                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="reglaLevantarse"><label class="form-check-label small" for="reglaLevantarse">Me levanté de la cama al desvelarme (>20m)</label></div>
+                                <div class="d-flex flex-wrap gap-2 small text-muted mt-2">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="chkHipnotico"><label class="form-check-label" for="chkHipnotico">Medicación</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="chkCafeina"><label class="form-check-label" for="chkCafeina">Cafeína tarde</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="chkAlcohol"><label class="form-check-label" for="chkAlcohol">Alcohol</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="chkSiesta"><label class="form-check-label" for="chkSiesta">Siesta</label></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small text-muted" for="calidadSueno">Calidad subjetiva del sueño</label>
+                                <select id="calidadSueno" class="form-select form-select-sm bg-dark text-light border-secondary" required>
+                                    <option value="" disabled selected>Selecciona...</option>
+                                    <option value="5">5 - Excelente</option> <option value="4">4 - Bueno</option> <option value="3">3 - Regular</option> <option value="2">2 - Malo</option> <option value="1">1 - Muy malo</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 fw-bold">Guardar Diario Matutino</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="resultadoInmediato" class="card shadow-sm d-none mb-4" aria-live="polite">
+                    <div class="card-body">
+                        <h3 class="card-title h5 text-light">Eficiencia: <span id="txtEficiencia" class="fw-bold">0%</span></h3>
+                        <div class="progress mb-3" style="height: 8px;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="eficiencia-progress-container">
+                            <div id="barraEficiencia" class="progress-bar"></div>
+                        </div>
+                        <div id="indicacionMedica" class="p-3 rounded instruccion-clave small"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tab-pane fade" id="historial" role="tabpanel" aria-labelledby="tab-historial">
+                <div class="card shadow-sm mb-3 border-primary">
+                    <div class="card-body">
+                        <h2 class="card-title h5 text-primary mb-2">Calculadora de Ventana de Sueño</h2>
+                        <div id="panelTitulacion" class="bg-dark p-3 rounded border border-secondary small" aria-live="polite"></div>
+                    </div>
+                </div>
+                <div class="card shadow-sm">
+                    <div class="card-body p-2">
+                        <div class="d-flex justify-content-between align-items-center mb-2 px-2 pt-1">
+                            <h3 class="h6 text-muted mb-0 small">Historial de Registros</h3>
+                            <button class="btn btn-outline-danger btn-sm py-0" style="font-size: 0.7rem;" onclick="borrarHistorial()" aria-label="Borrar todos los datos del historial">🗑 Borrar Datos</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-dark table-sm table-striped align-middle text-center" style="font-size: 0.75rem;">
+                                <thead><tr><th scope="col">Fecha</th><th scope="col">Eficiencia</th><th scope="col">Calidad</th><th scope="col">Regla 20'</th></tr></thead>
+                                <tbody id="tablaCuerpo"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tab-pane fade" id="herramientas" role="tabpanel" aria-labelledby="tab-herramientas">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title h5 text-info mb-1">El Círculo Vicioso del Insomnio</h2>
+                        <p class="small text-muted mb-3">Toca cada eslabón para entender cómo la ansiedad perpetúa el desvelo.</p>
+                        <div class="row g-2 text-center mb-3">
+                            <div class="col-6 col-md-3"><div id="node1" class="loop-node active-node small" tabindex="0" role="button" onclick="showLoopDetail(1)" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); showLoopDetail(1); }"><span class="text-danger fw-bold">1. Ansiedad Anticipatoria</span></div></div>
+                            <div class="col-6 col-md-3"><div id="node2" class="loop-node small" tabindex="0" role="button" onclick="showLoopDetail(2)" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); showLoopDetail(2); }"><span class="text-light">2. Alerta Límbica</span></div></div>
+                            <div class="col-6 col-md-3"><div id="node3" class="loop-node small" tabindex="0" role="button" onclick="showLoopDetail(3)" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); showLoopDetail(3); }"><span class="text-light">3. Esfuerzo por Dormir</span></div></div>
+                            <div class="col-6 col-md-3"><div id="node4" class="loop-node small" tabindex="0" role="button" onclick="showLoopDetail(4)" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); showLoopDetail(4); }"><span class="text-light">4. Refuerzo Negativo</span></div></div>
+                        </div>
+                        <div id="loop-detail-display" class="p-3 rounded" aria-live="polite">
+                            <h3 class="h6 fw-bold text-danger mb-1" id="detail-title">1. Ansiedad Anticipatoria</h3>
+                            <p class="mb-0 text-light small" id="detail-desc">A medida que se acerca la noche, empiezas a preocuparte por si lograrás dormir, asociando la cama con un campo de batalla en lugar de descanso.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4 border-0 bg-transparent">
+                    <h2 class="h5 text-primary fw-bold mb-1">Desmitificando el Insomnio</h2>
+                    <p class="small text-muted mb-3">Toca las tarjetas para descubrir la evidencia que desmiente los pensamientos ansiosos.</p>
+                    <div class="row row-cols-1 row-cols-md-2 g-3">
+                        <div class="col"><div class="card p-3 border-danger h-100 card-flip" tabindex="0" role="button" aria-expanded="false" onclick="toggleThoughtCard(this)" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleThoughtCard(this); }">
+                            <div class="mb-2"><span class="badge bg-danger">1. Catastrofismo Diurno</span></div>
+                            <p class="fw-bold mb-2 text-light small">"Si no duermo 8 horas hoy, mañana mi día será un desastre y no podré trabajar."</p>
+                            <div class="card-reveal-content d-none border-top border-secondary pt-2 mt-2 text-success" style="font-size:0.75rem;"><strong>Evidencia:</strong> Estarás cansado, pero el cerebro es resistente. Has tenido días productivos después de malas noches. El cansancio incomoda, pero no incapacita.</div>
+                        </div></div>
+                        <div class="col"><div class="card p-3 border-danger h-100 card-flip" tabindex="0" role="button" aria-expanded="false" onclick="toggleThoughtCard(this)" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleThoughtCard(this); }">
+                            <div class="mb-2"><span class="badge bg-danger">2. Falacia de Control</span></div>
+                            <p class="fw-bold mb-2 text-light small">"Tengo que esforzarme y concentrarme al máximo para lograr dormirme rápido."</p>
+                            <div class="card-reveal-content d-none border-top border-secondary pt-2 mt-2 text-success" style="font-size:0.75rem;"><strong>Evidencia:</strong> El sueño es un proceso pasivo. Esforzarse por dormir genera ansiedad de rendimiento, activando tu alerta. El sueño llega cuando dejas de intentar forzarlo.</div>
+                        </div></div>
+                        <div class="col"><div class="card p-3 border-danger h-100 card-flip" tabindex="0" role="button" aria-expanded="false" onclick="toggleThoughtCard(this)" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleThoughtCard(this); }">
+                            <div class="mb-2"><span class="badge bg-danger">3. Regulación Compensatoria</span></div>
+                            <p class="fw-bold mb-2 text-light small">"Tuve una mala noche, así que hoy me iré a la cama mucho antes para recuperar horas."</p>
+                            <div class="card-reveal-content d-none border-top border-secondary pt-2 mt-2 text-success" style="font-size:0.75rem;"><strong>Evidencia:</strong> Acostarte sin presión de sueño biológica asegura que pasarás horas dando vueltas. Respetar tu horario de restricción es lo que consolida el sueño.</div>
+                        </div></div>
+                        <div class="col"><div class="card p-3 border-danger h-100 card-flip" tabindex="0" role="button" aria-expanded="false" onclick="toggleThoughtCard(this)" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleThoughtCard(this); }">
+                            <div class="mb-2"><span class="badge bg-danger">4. Magnificación de Salud</span></div>
+                            <p class="fw-bold mb-2 text-light small">"Este insomnio va a destruir mi sistema inmunológico o causarme una enfermedad grave."</p>
+                            <div class="card-reveal-content d-none border-top border-secondary pt-2 mt-2 text-success" style="font-size:0.75rem;"><strong>Evidencia:</strong> El insomnio crónico es hiperactivación, no una enfermedad degenerativa. Tu cuerpo sigue obteniendo descanso basal protegiendo tus funciones vitales.</div>
+                        </div></div>
+                        <div class="col"><div class="card p-3 border-danger h-100 card-flip" tabindex="0" role="button" aria-expanded="false" onclick="toggleThoughtCard(this)" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleThoughtCard(this); }">
+                            <div class="mb-2"><span class="badge bg-danger">5. Expectativa Irreal</span></div>
+                            <p class="fw-bold mb-2 text-light small">"Debería dormir de un tirón sin despertarme nunca en medio de la noche."</p>
+                            <div class="card-reveal-content d-none border-top border-secondary pt-2 mt-2 text-success" style="font-size:0.75rem;"><strong>Evidencia:</strong> Nadie duerme de un tirón. Los microdespertares ocurren al final de cada ciclo de sueño (cada 90 min). Es una función biológica normal de supervivencia.</div>
+                        </div></div>
+                        <div class="col"><div class="card p-3 border-danger h-100 card-flip" tabindex="0" role="button" aria-expanded="false" onclick="toggleThoughtCard(this)" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleThoughtCard(this); }">
+                            <div class="mb-2"><span class="badge bg-danger">6. Filtro Negativo</span></div>
+                            <p class="fw-bold mb-2 text-light small">"Me desperté a las 3 AM... ya está, mi noche se arruinó por completo."</p>
+                            <div class="card-reveal-content d-none border-top border-secondary pt-2 mt-2 text-success" style="font-size:0.75rem;"><strong>Evidencia:</strong> El despertar es temporal. Si abandonas la frustración y sales de la cama a leer (regla de los 20 min), el sueño volverá de forma natural.</div>
+                        </div></div>
+                        <div class="col"><div class="card p-3 border-danger h-100 card-flip" tabindex="0" role="button" aria-expanded="false" onclick="toggleThoughtCard(this)" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleThoughtCard(this); }">
+                            <div class="mb-2"><span class="badge bg-danger">7. Lectura de Mente</span></div>
+                            <p class="fw-bold mb-2 text-light small">"La gente notará que estoy agotado y pensarán que soy incompetente en mi trabajo."</p>
+                            <div class="card-reveal-content d-none border-top border-secondary pt-2 mt-2 text-success" style="font-size:0.75rem;"><strong>Evidencia:</strong> Las personas suelen estar concentradas en sí mismas. Tus ojeras o cansancio rara vez son percibidos por los demás con la misma magnitud que tú los sientes.</div>
+                        </div></div>
+                        <div class="col"><div class="card p-3 border-danger h-100 card-flip" tabindex="0" role="button" aria-expanded="false" onclick="toggleThoughtCard(this)" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleThoughtCard(this); }">
+                            <div class="mb-2"><span class="badge bg-danger">8. Etiquetado</span></div>
+                            <p class="fw-bold mb-2 text-light small">"Mi cerebro está roto. He perdido la capacidad biológica de dormir naturalmente."</p>
+                            <div class="card-reveal-content d-none border-top border-secondary pt-2 mt-2 text-success" style="font-size:0.75rem;"><strong>Evidencia:</strong> El sueño es un instinto de supervivencia inquebrantable; no se "rompe". Lo que tienes hiperactivo es el sistema de alerta, y eso es totalmente reversible con TCC-I.</div>
+                        </div></div>
+                        <div class="col"><div class="card p-3 border-danger h-100 card-flip" tabindex="0" role="button" aria-expanded="false" onclick="toggleThoughtCard(this)" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleThoughtCard(this); }">
+                            <div class="mb-2"><span class="badge bg-danger">9. Razonamiento Emocional</span></div>
+                            <p class="fw-bold mb-2 text-light small">"Siento muchísima ansiedad ahora mismo. Eso significa que es imposible que duerma."</p>
+                            <div class="card-reveal-content d-none border-top border-secondary pt-2 mt-2 text-success" style="font-size:0.75rem;"><strong>Evidencia:</strong> Estás confundiendo un estado emocional transitorio con el futuro. La ansiedad sube y baja. Acepta la sensación física sin luchar, y su intensidad disminuirá.</div>
+                        </div></div>
+                        <div class="col"><div class="card p-3 border-danger h-100 card-flip" tabindex="0" role="button" aria-expanded="false" onclick="toggleThoughtCard(this)" onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); toggleThoughtCard(this); }">
+                            <div class="mb-2"><span class="badge bg-danger">10. Dependencia Externa</span></div>
+                            <p class="fw-bold mb-2 text-light small">"Si no me tomo mi pastilla o infusión, jamás lograré pegar un ojo en toda la noche."</p>
+                            <div class="card-reveal-content d-none border-top border-secondary pt-2 mt-2 text-success" style="font-size:0.75rem;"><strong>Evidencia:</strong> Los fármacos sedan el cerebro, pero el sueño arquitectónico real siempre lo produce tu propio organismo. Eres completamente capaz de dormir por ti mismo.</div>
+                        </div></div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h2 class="card-title h5 text-success mb-3">Desactivación Fisiológica</h2>
+                        <p class="small text-muted">Las técnicas de respiración ayudan a reducir la hiperactivación del sistema nervioso.</p>
+                        <div class="mb-3">
+                            <button class="btn btn-dark border-success btn-sm w-100 text-start mb-2" onclick="document.getElementById('panelRespiracion').classList.toggle('d-none')" aria-expanded="false" aria-controls="panelRespiracion">🧘‍♂️ Guía Ritmo de Respiración 4-7-8</button>
+                            <div id="panelRespiracion" class="d-none bg-dark p-3 rounded text-center border border-success">
+                                <div id="breatheCircle" class="mb-3" aria-hidden="true">Respira</div>
+                                <div id="breatheText" class="text-light fw-bold mb-3 small" aria-live="polite">Sigue el ritmo del círculo...</div>
+                                <button class="btn btn-outline-success btn-sm fw-bold w-100" id="btnBreatheControl" onclick="iniciarRespiracion()">▶ Comenzar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tab-pane fade" id="clinica" role="tabpanel" aria-labelledby="tab-clinica">
+                <div class="card shadow-sm border-warning">
+                    <div class="card-body">
+                        <h2 class="card-title h5 text-warning mb-1">Cuestionarios Psicométricos</h2>
+                        <p class="small text-muted mb-3">Evaluaciones recomendadas cada 15 días.</p>
+                        <ul class="nav nav-pills nav-justified mb-3 bg-dark p-1 rounded" role="tablist">
+                            <li class="nav-item" role="presentation"><button class="nav-link active py-1 small text-warning" id="pill-isi" data-bs-toggle="pill" data-bs-target="#tab-isi" type="button" role="tab" aria-controls="tab-isi" aria-selected="true">Test ISI</button></li>
+                            <li class="nav-item" role="presentation"><button class="nav-link py-1 small text-warning" id="pill-ess" data-bs-toggle="pill" data-bs-target="#tab-ess" type="button" role="tab" aria-controls="tab-ess" aria-selected="false">Test ESS</button></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="tab-isi" role="tabpanel" aria-labelledby="pill-isi">
+                                <form id="formISI" onsubmit="calcularISI(event)"><div id="contenedorPreguntasISI"></div><button type="submit" class="btn btn-warning btn-sm w-100 fw-bold mt-3 text-dark">Calcular ISI</button></form>
+                                <div id="resultadoISI" class="mt-3 p-2 rounded bg-dark border border-secondary d-none" aria-live="polite"></div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-ess" role="tabpanel" aria-labelledby="pill-ess">
+                                <form id="formESS" onsubmit="calcularESS(event)"><div id="contenedorPreguntasESS"></div><button type="submit" class="btn btn-warning btn-sm w-100 fw-bold mt-3 text-dark">Calcular ESS</button></form>
+                                <div id="resultadoESS" class="mt-3 p-2 rounded bg-dark border border-secondary d-none" aria-live="polite"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tab-pane fade" id="reglas" role="tabpanel" aria-labelledby="tab-reglas">
+                <div class="card shadow-sm mb-3">
+                    <div class="card-body small">
+                        <h2 class="h5 text-danger mb-2">Protocolo ante Malas Noches</h2>
+                        <div class="p-2 rounded bg-dark border border-danger mb-3 text-muted">
+                            <strong class="text-light d-block mb-1">🚨 Prohibido compensar:</strong> No te quedes en la cama por la mañana, no hagas siestas y no te acuestes temprano la noche siguiente.<br>
+                            <strong class="text-light d-block mt-1">🔄 Aprovecha la presión:</strong> Estar despierto acumula adenosina. El sueño de la noche siguiente será más profundo si mantienes el horario rígido.
+                        </div>
+                        <h2 class="h5 text-warning mb-2">Control de Estímulos Estricto</h2>
+                        <ol class="text-muted ps-3 mb-0">
+                            <li class="mb-1">Usar la cama exclusivamente para dormir (y sexo).</li>
+                            <li class="mb-1">Acostarse solo con sensación física de sueño, no por mirar el reloj.</li>
+                            <li class="mb-1"><strong>Regla de los 20 min:</strong> Si te frustras, levántate a otro cuarto a leer con luz tenue hasta tener sueño.</li>
+                            <li>Levantarse SIEMPRE a la misma hora fija, sin importar cuánto dormiste.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // --- ONBOARDING Y PROGRESO ---
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!localStorage.getItem('insomnio_onboarding')) {
+                document.getElementById('onboarding-banner').classList.remove('d-none');
+            }
+            actualizarProgresoGlobal();
+        });
+
+        function dismissOnboarding() {
+            localStorage.setItem('insomnio_onboarding', '1');
+            document.getElementById('onboarding-banner').classList.add('d-none');
+        }
+        
+        function dismissReengagement() {
+            const banner = document.getElementById('reengagement-banner');
+            if (banner) {
+                banner.style.transition = 'opacity 0.3s ease';
+                banner.style.opacity = '0';
+                setTimeout(() => banner.classList.remove('show'), 320);
+            }
+        }
+
+        function actualizarProgresoGlobal() {
+            const historial = JSON.parse(localStorage.getItem('historialSueno')) || [];
+            const diasRegistrados = Math.min(historial.length, 7);
+            const porcentaje = Math.round((diasRegistrados / 7) * 100);
+            
+            const barraContainer = document.getElementById('treatment-progress-container');
+            const barra = document.getElementById('treatment-progress-bar');
+            const texto = document.getElementById('treatment-progress-text');
+            
+            barra.style.width = porcentaje + '%';
+            barraContainer.setAttribute('aria-valuenow', porcentaje);
+            texto.innerText = porcentaje + '%';
+            
+            if(porcentaje === 100) {
+                barra.classList.replace('progress-bar-animated', 'bg-success');
+                texto.innerHTML = '100% <span class="small text-muted">(Calculadora Activa)</span>';
+            }
+        }
+
+        // --- DIARIO Y TITULACIÓN ---
+        function calcularMinutos(horaString) { let [h, m] = horaString.split(':').map(Number); return h * 60 + m; }
+
+        function guardarRegistro(e) {
+            e.preventDefault();
+            const hAcostarse = document.getElementById('horaAcostarse').value;
+            const hDespertar = document.getElementById('horaDespertar').value;
+            const hLevantarse = document.getElementById('horaLevantarse').value;
+            const latencia = parseInt(document.getElementById('latencia').value) || 0;
+            const despMin = parseInt(document.getElementById('despertaresMin').value) || 0;
+            
+            let mAcostarse = calcularMinutos(hAcostarse);
+            let mLevantarse = calcularMinutos(hLevantarse);
+            if (mLevantarse < mAcostarse) mLevantarse += 24 * 60;
+
+            let tiempoCama = mLevantarse - mAcostarse;
+            let tiempoSueno = tiempoCama - latencia - despMin;
+            if (tiempoSueno < 0) tiempoSueno = 0;
+            let eficiencia = Math.round((tiempoSueno / tiempoCama) * 100);
+            if (isNaN(eficiencia) || eficiencia > 100) eficiencia = 0;
+
+            const nuevoRegistro = {
+                fecha: new Date().toLocaleDateString('es-AR', { day: '2-digit', month: '2-digit' }),
+                eficiencia: eficiencia,
+                tiempoCama: tiempoCama, 
+                horaLevantarFija: hLevantarse,
+                calidad: document.getElementById('calidadSueno').value,
+                regla20: document.getElementById('reglaLevantarse').checked
+            };
+
+            let historial = JSON.parse(localStorage.getItem('historialSueno')) || [];
+            historial.push(nuevoRegistro);
+            localStorage.setItem('historialSueno', JSON.stringify(historial));
+
+            document.getElementById('resultadoInmediato').classList.remove('d-none');
+            document.getElementById('txtEficiencia').innerText = eficiencia + '%';
+            
+            const barraEf = document.getElementById('barraEficiencia');
+            barraEf.style.width = eficiencia + '%';
+            barraEf.className = "progress-bar " + (eficiencia >= 85 ? "bg-success" : "bg-warning");
+            document.getElementById('eficiencia-progress-container').setAttribute('aria-valuenow', eficiencia);
+            
+            document.getElementById('indicacionMedica').innerHTML = eficiencia >= 85 ? 
+                "<span class='text-success fw-bold'>🎯 Consolidación Estable.</span> Mantené tus horarios actuales." : 
+                "<span class='text-warning fw-bold'>⚠️ Presión Insuficiente.</span> Aplicá regla de los 20 min estrictamente.";
+            
+            document.getElementById('sleepForm').reset();
+            document.getElementById('horaLevantarse').value = hLevantarse;
+            actualizarProgresoGlobal();
+        }
+
+        // --- CALCULADORA DE SUEÑO ---
+        function formatAMPM(horas, minutos) {
+            let ampm = horas >= 12 ? 'PM' : 'AM';
+            let h12 = horas % 12;
+            h12 = h12 ? h12 : 12; 
+            let mStr = minutos < 10 ? '0' + minutos : minutos;
+            return `${h12}:${mStr} ${ampm}`;
+        }
+
+        function renderHistorial() {
+            const historial = JSON.parse(localStorage.getItem('historialSueno')) || [];
+            const tabla = document.getElementById('tablaCuerpo');
+            let tablaHTML = '';
+            
+            if (historial.length === 0) {
+                tablaHTML = `<tr><td colspan="4" class="text-muted py-3">No hay registros guardados.</td></tr>`;
+            } else {
+                historial.slice().reverse().forEach(reg => {
+                    const colorEf = reg.eficiencia >= 85 ? 'text-success' : 'text-warning';
+                    tablaHTML += `<tr><td>${reg.fecha}</td><td class="${colorEf} fw-bold">${reg.eficiencia}%</td><td>${reg.calidad}/5</td><td>${reg.regla20 ? '✅' : '❌'}</td></tr>`;
+                });
+            }
+            tabla.innerHTML = tablaHTML;
+
+            const panel = document.getElementById('panelTitulacion');
+            if (historial.length < 7) {
+                panel.innerHTML = `
+                    <div class="text-center py-2">
+                        <span class="text-warning d-block mb-1">Faltan ${7 - historial.length} días de registro para habilitar la Calculadora.</span>
+                        <small class="text-muted">El motor requiere una semana completa de datos para recetar un horario seguro.</small>
+                    </div>`;
+            } else {
+                const u7 = historial.slice(-7);
+                const promEF = Math.round(u7.reduce((acc, curr) => acc + (curr.eficiencia || 0), 0) / 7);
+                let promTIB = Math.round(u7.reduce((acc, curr) => acc + (curr.tiempoCama || 480), 0) / 7); 
+                
+                const ultimoReg = u7[u7.length - 1];
+                const wakeStr = ultimoReg.horaLevantarFija || "07:00";
+                let [wakeH, wakeM] = wakeStr.split(':').map(Number);
+                
+                let newTIB = promTIB;
+                let recomendacionTexto = "";
+                
+                if (promEF >= 85) {
+                    newTIB += 15;
+                    recomendacionTexto = `<span class="text-success fw-bold">🔥 Ampliación de Ventana:</span> Tu eficiencia es excelente (${promEF}%). Sumamos 15 minutos a tu tiempo en cama.`;
+                } else if (promEF < 80) {
+                    newTIB -= 15;
+                    recomendacionTexto = `<span class="text-danger fw-bold">⚠️ Restricción Activa:</span> Tu eficiencia es baja (${promEF}%). Reducimos 15 minutos tu tiempo en cama para generar más presión de sueño biológica.`;
+                } else {
+                    recomendacionTexto = `<span class="text-info fw-bold">⚖️ Mantenimiento:</span> Tu eficiencia es estable (${promEF}%). Mantené la misma ventana horaria esta semana.`;
+                }
+                
+                // Fallback de seguridad: Nunca menos de 5 horas
+                newTIB = Math.max(300, newTIB);
+                
+                let bedMins = (wakeH * 60 + wakeM) - newTIB;
+                if (bedMins < 0) bedMins += 24 * 60;
+                let bedH = Math.floor(bedMins / 60);
+                let bedM = bedMins % 60;
+                
+                let horasP = Math.floor(newTIB / 60);
+                let minsP = newTIB % 60;
+                let duracionStr = minsP > 0 ? `${horasP}h ${minsP}m` : `${horasP}h`;
+
+                panel.innerHTML = `
+                    <div class="mb-3">${recomendacionTexto}</div>
+                    <div class="panel-calculadora p-3 text-center shadow-sm">
+                        <div class="small text-muted mb-2 text-uppercase fw-bold" style="letter-spacing: 1px;">Tu Horario Médico Prescrito</div>
+                        <div class="row g-2 mb-2">
+                            <div class="col-6 border-end border-secondary">
+                                <span class="d-block text-muted small">Acostarse:</span>
+                                <span class="fw-bold text-warning" style="font-size: 1.3rem;">${formatAMPM(bedH, bedM)}</span>
+                            </div>
+                            <div class="col-6">
+                                <span class="d-block text-muted small">Levantarse:</span>
+                                <span class="fw-bold text-info" style="font-size: 1.3rem;">${formatAMPM(wakeH, wakeM)}</span>
+                            </div>
+                        </div>
+                        <span class="badge bg-secondary px-3 py-2 mt-1">Tiempo total permitido en cama: ${duracionStr}</span>
+                    </div>
+                `;
+                if (window.ORPRatePrompt) window.ORPRatePrompt.maybeShow(1500);
+            }
+        }
+
+        function borrarHistorial() {
+            if(confirm("¿Estás seguro de que querés borrar todo el historial? Esto reiniciará tu progreso y apagará la Calculadora de Sueño. Esta acción no se puede deshacer.")) {
+                localStorage.removeItem('historialSueno');
+                renderHistorial();
+                actualizarProgresoGlobal();
+                document.getElementById('resultadoInmediato').classList.add('d-none');
+            }
+        }
+
+        // --- CÍRCULO VICIOSO ---
+        function showLoopDetail(node) {
+            const data = {
+                1: { t: '1. Ansiedad Anticipatoria', d: 'A medida que se acerca la noche, empiezas a preocuparte por si lograrás dormir, asociando la cama con un campo de batalla en lugar de descanso.' },
+                2: { t: '2. Alerta Límbica', d: 'El cerebro detecta la ansiedad como una amenaza real, liberando cortisol y adrenalina. Tu ritmo cardíaco sube, haciendo fisiológicamente imposible el inicio del sueño.' },
+                3: { t: '3. Esfuerzo por Dormir', d: 'Pasas horas dando vueltas, forzando la concentración para dormir. El sueño es pasivo; intentar controlarlo genera frustración y espanta a la melatonina.' },
+                4: { t: '4. Refuerzo Negativo', d: 'Te levantas agotado. El malestar diurno confirma tus miedos de la noche anterior, recargando la Ansiedad Anticipatoria para la noche siguiente.' }
+            };
+            document.querySelectorAll('.loop-node').forEach(n => { n.classList.remove('active-node'); n.querySelector('span').className = 'text-light'; });
+            const target = document.getElementById('node' + node);
+            target.classList.add('active-node');
+            target.querySelector('span').className = 'text-danger fw-bold';
+            document.getElementById('detail-title').innerText = data[node].t;
+            document.getElementById('detail-desc').innerText = data[node].d;
+        }
+
+        // --- TARJETAS COGNITIVAS ---
+        function toggleThoughtCard(card) {
+            const isRevealed = card.classList.toggle('revealed');
+            card.setAttribute('aria-expanded', isRevealed);
+            card.querySelector('.card-reveal-content').classList.toggle('d-none');
+        }
+
+        // --- RESPIRACIÓN ---
+        let respInterval, t1, t2; let isB = false;
+        function iniciarRespiracion() {
+            const btn = document.getElementById('btnBreatheControl');
+            if (isB) {
+                isB = false; clearInterval(respInterval); clearTimeout(t1); clearTimeout(t2);
+                document.getElementById('breatheCircle').style.transform = "scale(1)"; btn.innerText = "▶ Comenzar"; btn.classList.replace('btn-outline-danger', 'btn-outline-success');
+            } else {
+                isB = true; btn.innerText = "⏹ Detener"; btn.classList.replace('btn-outline-success', 'btn-outline-danger');
+                ciclo(); respInterval = setInterval(ciclo, 19000);
+            }
+        }
+        function ciclo() {
+            const c = document.getElementById('breatheCircle'); const t = document.getElementById('breatheText');
+            t.innerText = "Inhala (4s)..."; c.style.transition = "transform 4s linear"; c.style.transform = "scale(1.5)"; c.style.backgroundColor = "#198754";
+            t1 = setTimeout(() => { t.innerText = "Retén (7s)..."; c.style.backgroundColor = "#ffc107";
+                t2 = setTimeout(() => { t.innerText = "Exhala lento (8s)..."; c.style.transition = "transform 8s linear"; c.style.transform = "scale(1)"; c.style.backgroundColor = "#0dcaf0"; }, 7000);
+            }, 4000);
+        }
+
+        // --- CUESTIONARIOS ISI / ESS ---
+        const pISI = ["Dificultad iniciar:", "Dificultad mantener:", "Despertar temprano:", "Insatisfacción con sueño:", "Interferencia diaria:", "Notoriedad del problema:", "Preocupación por sueño:"];
+        const pESS = ["Leyendo:", "Viendo TV:", "Inactivo en público:", "Pasajero auto 1h:", "Recostado tarde:", "Sentado hablando:", "Después almuerzo:", "Tráfico parado:"];
+        
+        function renderCuestionarios() {
+            const cI = document.getElementById('contenedorPreguntasISI');
+            if(cI.innerHTML==="") {
+                let htmlISI = '';
+                pISI.forEach((p, idx) => htmlISI += `<div class="mb-2"><label for="isi-${idx}" class="small text-muted mb-1">${p}</label><select id="isi-${idx}" class="form-select form-select-sm bg-dark text-light border-secondary isi-i"><option value="0">0-Ninguno</option><option value="1">1-Leve</option><option value="2">2-Moderado</option><option value="3">3-Severo</option><option value="4">4-Muy severo</option></select></div>`);
+                cI.innerHTML = htmlISI;
+            }
+            const cE = document.getElementById('contenedorPreguntasESS');
+            if(cE.innerHTML==="") {
+                let htmlESS = '';
+                pESS.forEach((p, idx) => htmlESS += `<div class="mb-2"><label for="ess-${idx}" class="small text-muted mb-1">${p}</label><select id="ess-${idx}" class="form-select form-select-sm bg-dark text-light border-secondary ess-i"><option value="0">0-Nunca</option><option value="1">1-Baja</option><option value="2">2-Moderada</option><option value="3">3-Alta</option></select></div>`);
+                cE.innerHTML = htmlESS;
+            }
+        }
+        
+        function calcularISI(e) { 
+            e.preventDefault(); 
+            let t=0; 
+            document.querySelectorAll('.isi-i').forEach(i=>t+=parseInt(i.value)); 
+            const r=document.getElementById('resultadoISI'); 
+            r.classList.remove('d-none'); 
+            r.innerHTML=`<span class="${t>14?'text-danger':'text-success'} fw-bold">Puntaje ISI: ${t}</span><br><small>${t<=7?'Sin insomnio':t<=14?'Leve':t<=21?'Moderado':'Severo'}</small>`; 
+        }
+        
+        function calcularESS(e) { 
+            e.preventDefault(); 
+            let t=0; 
+            document.querySelectorAll('.ess-i').forEach(i=>t+=parseInt(i.value)); 
+            const r=document.getElementById('resultadoESS'); 
+            r.classList.remove('d-none'); 
+            r.innerHTML=`<span class="${t>10?'text-warning':'text-success'} fw-bold">Puntaje ESS: ${t}</span><br><small>${t<=10?'Normal':t<=12?'Leve':t<=15?'Moderada':'Severa Riesgo'}</small>`; 
+        }
+    </script>
+
+    <!-- Service Worker Registration & Offline/Online Handlers (PWA) -->
+    <script>
+    (function() {
+        'use strict';
+
+        // Registrar Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(registration => {
+                        console.log('[PWA] Service Worker registrado exitosamente:', registration);
+                        window.dispatchEvent(new CustomEvent('swRegistered', { detail: registration }));
+                    })
+                    .catch(error => {
+                        console.log('[PWA] Error registrando Service Worker:', error);
+                    });
+            });
+        }
+
+        // Manejadores de estado online/offline
+        const offlineBadge = document.getElementById('offline-badge');
+        const connectionBadge = document.getElementById('connection-badge');
+        const reengagementBanner = document.getElementById('reengagement-banner');
+
+        function updateConnectionStatus() {
+            const isOnline = navigator.onLine;
+
+            if (isOnline) {
+                // Estado: EN LÍNEA
+                if (offlineBadge) {
+                    offlineBadge.classList.remove('show');
+                    document.body.classList.remove('offline-mode');
+                }
+                if (connectionBadge) {
+                    connectionBadge.classList.remove('offline');
+                    connectionBadge.classList.add('online');
+                    connectionBadge.innerHTML = '<span class="status-indicator online"></span>En línea';
+                }
+                // Mostrar banner de re-engagement después de 1 segundo
+                setTimeout(() => {
+                    if (reengagementBanner && !reengagementBanner.classList.contains('show')) {
+                        reengagementBanner.classList.add('show');
+                        if (window.dataLayer) {
+                            window.dataLayer.push({
+                                event: 'pwaBannerShown',
+                                eventCategory: 'PWA',
+                                eventLabel: 'reengagement_banner'
+                            });
+                        }
+                    }
+                }, 1000);
+                console.log('[PWA] Estado: EN LÍNEA');
+            } else {
+                // Estado: OFFLINE
+                if (offlineBadge) {
+                    offlineBadge.classList.add('show');
+                    document.body.classList.add('offline-mode');
+                }
+                if (connectionBadge) {
+                    connectionBadge.classList.remove('online');
+                    connectionBadge.classList.add('offline');
+                    connectionBadge.innerHTML = '<span class="status-indicator offline"></span>Offline';
+                }
+                if (reengagementBanner) {
+                    reengagementBanner.classList.remove('show');
+                }
+                console.log('[PWA] Estado: OFFLINE');
+            }
+        }
+
+        // Detectar cambio de estado de conexión
+        window.addEventListener('online', () => {
+            console.log('[PWA] Conexión recuperada');
+            updateConnectionStatus();
+            if (window.dataLayer) {
+                window.dataLayer.push({
+                    event: 'pwaOnline',
+                    eventCategory: 'PWA',
+                    eventLabel: 'connection_restored'
+                });
+            }
+        });
+
+        window.addEventListener('offline', () => {
+            console.log('[PWA] Conexión perdida');
+            updateConnectionStatus();
+            if (window.dataLayer) {
+                window.dataLayer.push({
+                    event: 'pwaOffline',
+                    eventCategory: 'PWA',
+                    eventLabel: 'connection_lost'
+                });
+            }
+        });
+
+        // Verificar estado inicial
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', updateConnectionStatus);
+        } else {
+            updateConnectionStatus();
+        }
+
+        // Registrar interacciones en las herramientas del programa de sueño
+        document.addEventListener('click', (e) => {
+            const tabLink = e.target.closest('[data-bs-toggle="tab"]');
+            const formElement = e.target.closest('form');
+            if (tabLink || formElement) {
+                const eventLabel = tabLink ? tabLink.textContent.trim() : 'form_interaction';
+                if (window.dataLayer) {
+                    window.dataLayer.push({
+                        event: 'sleepTrackInteraction',
+                        eventCategory: 'Sleep_Program',
+                        eventLabel: eventLabel,
+                        connectionStatus: navigator.onLine ? 'online' : 'offline'
+                    });
+                }
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

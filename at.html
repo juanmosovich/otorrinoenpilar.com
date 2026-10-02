@@ -11,7 +11,12 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="geo.region" content="AR-B">
 <meta name="geo.placename" content="Pilar, Buenos Aires">
+<meta name="geo.position" content="-34.434636;-58.829689">
+<meta name="ICBM" content="-34.434636, -58.829689">
+<meta name="coverage" content="Pilar, Del Viso, Escobar, Tortuguitas, Zona Norte Buenos Aires">
 
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
@@ -34,7 +39,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
-<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="manifest" href="./manifest-at.json">
 <!--favicon-->
 
 <script type="application/ld+json">
@@ -50,7 +55,14 @@
     "author": {
       "@type": "Person",
       "name": "Dr. Juan Mosovich",
-      "jobTitle": "Otorrinolaringólogo"
+      "url": "https://www.otorrinoenpilar.com/info.html#cv",
+      "jobTitle": "Otorrinolaringólogo",
+      "sameAs": [
+        "https://www.otorrinoenpilar.com/info.html#cv",
+        "https://www.linkedin.com/in/juanhoraciomosovich",
+        "https://www.facebook.com/profile.php?id=100063748789595",
+        "https://www.instagram.com/otorrino.fono.pilar"
+      ]
     },
     "publisher": {
       "@type": "Organization",
@@ -163,6 +175,33 @@
     ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Recomendaciones para efectuar la audiometría online",
+    "description": "Video con recomendaciones prácticas para realizar correctamente la audiometría online y obtener resultados más precisos. Presentado por el Dr. Juan Mosovich, otorrinolaringólogo en Pilar.",
+    "thumbnailUrl": "https://i.ytimg.com/vi/woeurTRAHnw/hqdefault.jpg",
+    "uploadDate": "2026-03-28",
+    "contentUrl": "https://www.youtube.com/watch?v=woeurTRAHnw",
+    "embedUrl": "https://www.youtube.com/embed/woeurTRAHnw",
+    "url": "https://www.youtube.com/watch?v=woeurTRAHnw",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Otorrino en Pilar",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.otorrinoenpilar.com/favicon/favicon-32x32.png"
+        }
+    },
+    "inLanguage": "es-AR",
+    "isPartOf": {
+        "@type": "WebPage",
+        "url": "https://www.otorrinoenpilar.com/at.html"
+    }
+}
+</script>
     
     <title>Audiometría Online Gratis | Test de Audición Dr. Mosovich | Otorrino en Pilar</title>
     <link rel="canonical" href="https://www.otorrinoenpilar.com/at.html"/>
@@ -170,6 +209,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js" defer></script>
+    <script src="./js/rate-prompt.js" defer></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -352,6 +392,54 @@
             }
         }
 
+        /* Lazy YouTube embed */
+        .yt-lazy-wrapper {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .yt-lazy {
+            position: relative;
+            background: #000;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+        }
+        .yt-lazy img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.2s;
+        }
+        .yt-lazy:hover img {
+            opacity: 0.85;
+        }
+        .yt-lazy-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            filter: drop-shadow(0 2px 10px rgba(0,0,0,0.6));
+            transition: transform 0.15s;
+            line-height: 0;
+        }
+        .yt-lazy:hover .yt-lazy-btn {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        .yt-lazy iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
         @media (max-width: 575.98px) {
             .intensidad-display {
                 font-size: 2.4rem;
@@ -398,6 +486,25 @@
             }
         }
     </style>
+<!-- Google Tag Manager: carga diferida post-interacción -->
+<script>
+(function(){
+  window.dataLayer = window.dataLayer || [];
+  var gtmLoaded = false;
+  function loadGTM(){
+    if(gtmLoaded) return; gtmLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MQ6VHPGC';
+    document.head.appendChild(s);
+    window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+  }
+  ['click','scroll','keydown','touchstart','mousemove'].forEach(function(e){
+    document.addEventListener(e, loadGTM, {once: true, passive: true});
+  });
+  setTimeout(loadGTM, 5000);
+})();
+</script>
 </head>
 <body class="bg-light">
     <!-- Modal para configurar el volumen -->
@@ -452,6 +559,29 @@
   </header>
 
     <main class="container my-3 my-lg-5">
+   <section class="container my-5 section-compact">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="h4 mb-2">Video: recomendaciones para realizar la audiometría</h2>
+                <p class="text-muted mb-3">Antes de comenzar el test, mirá estas recomendaciones para obtener resultados más precisos.</p>
+                <div class="yt-lazy-wrapper">
+                    <div class="yt-lazy" data-videoid="woeurTRAHnw" role="button" tabindex="0"
+                         aria-label="Reproducir video: recomendaciones para efectuar la audiometría">
+                        <img src="https://i.ytimg.com/vi/woeurTRAHnw/hqdefault.jpg"
+                             alt="Miniatura del video con recomendaciones para efectuar la audiometría"
+                             width="480" height="360" loading="lazy" decoding="async">
+                        <button class="yt-lazy-btn" tabindex="-1" aria-hidden="true">
+                            <svg viewBox="0 0 68 48" width="68" height="48" aria-hidden="true">
+                                <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#ff0000"/>
+                                <path d="M45 24L27 14v20" fill="#fff"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
         <!-- Flujo principal -->
         <div class="instructions mb-3 mb-md-4">
             <h2 class="h3">Pasos rapidos para la audiometria online en Pilar</h2>
@@ -643,6 +773,8 @@
         </div>
     </section>
 
+   
+
     <section class="container my-5 section-compact">
         <div class="card faq-card">
             <div class="card-body">
@@ -829,7 +961,11 @@
                 estadoGuardadasIzquierdo.textContent = totalIzquierdo;
                 estadoTotalGuardadas.textContent = total;
                 const totalEsperado = totalFrecuencias * 2;
+                const yaEstabaCompleto = estadoCompleto.style.display === 'block';
                 estadoCompleto.style.display = total === totalEsperado ? 'block' : 'none';
+                if (total === totalEsperado && !yaEstabaCompleto && window.ORPRatePrompt) {
+                    window.ORPRatePrompt.maybeShow(1500);
+                }
                 const progreso = totalEsperado === 0 ? 0 : Math.round((total / totalEsperado) * 100);
                 estadoProgreso.style.width = `${progreso}%`;
                 estadoProgresoTexto.textContent = `${progreso}%`;
@@ -1153,6 +1289,30 @@
 
     <script>
         (function() {
+            document.querySelectorAll('.yt-lazy').forEach(function(el) {
+                function activar() {
+                    var videoId = el.dataset.videoid;
+                    var iframe = document.createElement('iframe');
+                    iframe.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1&rel=0';
+                    iframe.title = 'Video: recomendaciones para efectuar la audiometría';
+                    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+                    iframe.allowFullscreen = true;
+                    el.innerHTML = '';
+                    el.appendChild(iframe);
+                }
+                el.addEventListener('click', activar);
+                el.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        activar();
+                    }
+                });
+            });
+        })();
+    </script>
+
+    <script>
+        (function() {
             const scrollBtn = document.getElementById('scrollToTop');
             if (!scrollBtn) return;
 
@@ -1170,6 +1330,41 @@
             scrollBtn.addEventListener('click', () => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
+        })();
+    </script>
+
+    <!-- Service Worker Registration & Offline/Online Handling (PWA) -->
+    <script>
+        (function() {
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('./sw.js')
+                        .then((registration) => {
+                            console.log('[PWA] Service Worker registrado:', registration);
+                        })
+                        .catch((error) => {
+                            console.log('[PWA] Error registrando Service Worker:', error);
+                        });
+                });
+            }
+
+            const toastFeedback = document.getElementById('toastFeedback');
+            const notify = (message) => {
+                if (!toastFeedback) return;
+                toastFeedback.textContent = message;
+                toastFeedback.classList.add('show');
+                setTimeout(() => toastFeedback.classList.remove('show'), 2500);
+            };
+
+            function updateOnlineStatus() {
+                notify(navigator.onLine ? 'Conexion restaurada' : 'Modo offline - usando version guardada');
+                if (window.dataLayer) {
+                    window.dataLayer.push({ event: navigator.onLine ? 'app_online' : 'app_offline', timestamp: Date.now() });
+                }
+            }
+
+            window.addEventListener('online', updateOnlineStatus);
+            window.addEventListener('offline', updateOnlineStatus);
         })();
     </script>
 </body>

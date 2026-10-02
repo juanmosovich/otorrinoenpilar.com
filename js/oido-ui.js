@@ -7,77 +7,10 @@
     fn();
   }
 
-  function runIdle(fn) {
-    if ("requestIdleCallback" in window) {
-      window.requestIdleCallback(fn, { timeout: 2000 });
-      return;
+  function initRatePrompt() {
+    if (window.ORPRatePrompt) {
+      window.ORPRatePrompt.autoShowOnEngagement();
     }
-    setTimeout(fn, 0);
-  }
-
-  function initReviewModal() {
-    // Defer this to avoid blocking the initial render.
-    runIdle(() => {
-      if (sessionStorage.getItem("resenaMostrada")) {
-        return;
-      }
-
-      const tiempoMinimo = 60000;
-      const scrollRequerido = 50;
-      const tiempoInicio = Date.now();
-      let scrollRealizado = false;
-      let modalMostrado = false;
-
-      function obtenerPorcentajeScroll() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        return (scrollTop / scrollHeight) * 100;
-      }
-
-      function verificarScroll() {
-        if (obtenerPorcentajeScroll() >= scrollRequerido) {
-          scrollRealizado = true;
-        }
-      }
-
-      function mostrarModal() {
-        if (modalMostrado) {
-          return;
-        }
-
-        modalMostrado = true;
-        if (window.bootstrap && document.getElementById("modalResena")) {
-          const modal = new window.bootstrap.Modal(document.getElementById("modalResena"));
-          modal.show();
-          sessionStorage.setItem("resenaMostrada", "true");
-        }
-
-        window.removeEventListener("scroll", onScroll);
-        document.removeEventListener("mouseleave", detectarSalida);
-      }
-
-      function verificarCondiciones() {
-        const tiempoTranscurrido = Date.now() - tiempoInicio >= tiempoMinimo;
-        if (tiempoTranscurrido && scrollRealizado) {
-          mostrarModal();
-        }
-      }
-
-      function detectarSalida(e) {
-        if (e.clientY <= 0 && Date.now() - tiempoInicio >= 30000) {
-          mostrarModal();
-        }
-      }
-
-      function onScroll() {
-        verificarScroll();
-        verificarCondiciones();
-      }
-
-      window.addEventListener("scroll", onScroll, { passive: true });
-      document.addEventListener("mouseleave", detectarSalida);
-      setInterval(verificarCondiciones, 5000);
-    });
   }
 
   function initToggleButtons() {
@@ -197,6 +130,35 @@
     });
   }
 
+  function activateYtLite(el) {
+    var id = el.getAttribute("data-id");
+    if (!id) { return; }
+    var title = el.getAttribute("data-title") || "Video de YouTube";
+    var wrapper = document.createElement("div");
+    wrapper.style.cssText = "position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:8px;";
+    var iframe = document.createElement("iframe");
+    iframe.src = "https://www.youtube.com/embed/" + id + "?autoplay=1&rel=0";
+    iframe.title = title;
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.style.cssText = "position:absolute; top:0; left:0; width:100%; height:100%; border:0;";
+    wrapper.appendChild(iframe);
+    el.replaceWith(wrapper);
+  }
+
+  function initYtLite() {
+    document.addEventListener("click", function (e) {
+      var el = e.target.closest(".yt-lite");
+      if (el) { activateYtLite(el); }
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        var el = e.target.closest(".yt-lite");
+        if (el) { e.preventDefault(); activateYtLite(el); }
+      }
+    });
+  }
+
   function initScrollToTop() {
     const scrollBtn = document.getElementById("scrollToTop");
     if (!scrollBtn) {
@@ -220,10 +182,11 @@
   }
 
   onReady(() => {
-    initReviewModal();
+    initRatePrompt();
     initToggleButtons();
     initFormHandler();
     initVideoLazy();
+    initYtLite();
     initScrollToTop();
   });
 })();

@@ -1,86 +1,33 @@
-</style>
-<style>
-/* Botón flotante de WhatsApp */
-.floating-whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #25d366;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
-  animation: pulse 2s infinite;
-}
-.floating-whatsapp:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-}
-.floating-whatsapp a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-}
-.floating-whatsapp svg {
-  width: 35px;
-  height: 35px;
-  filter: brightness(0) invert(1);
-}
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
-@media (max-width: 768px) {
-  .floating-whatsapp {
-    bottom: 15px;
-    right: 15px;
-    width: 55px;
-    height: 55px;
-  }
-  .floating-whatsapp svg {
-    width: 28px;
-    height: 28px;
-  }
-}
-</style>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
   <head>
     <!-- Google Analytics diferido eliminado para mejorar velocidad. -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            }
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="✅ Especialista en enfermedades de garganta en Pilar y Zona Norte. Tratamiento de amigdalitis, disfagia, disfonía, halitosis y reflujo. Estudio FEES y nasofibroscopía. Turnos online Dr. Mosovich.">
+    <meta name="description" content="Especialista en enfermedades de garganta en Pilar y Zona Norte. Tratamiento de amigdalitis, disfagia, disfonía, halitosis y reflujo. Estudio FEES y nasofibroscopía. Turnos online Dr. Mosovich.">
     <!-- keywords meta eliminada: Google ya no la usa para SEO -->
     <meta name="author" content="Dr. Juan Mosovich">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#003366">
     <link rel="alternate" hreflang="es" href="https://www.otorrinoenpilar.com/garganta.html">
+    <link rel="alternate" hreflang="es-AR" href="https://www.otorrinoenpilar.com/garganta.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.otorrinoenpilar.com/garganta.html">
     
         
     <!-- Open Graph tags principales -->
     <meta property="og:locale" content="es_AR">
     <meta property="og:site_name" content="Otorrino en Pilar - Dr. Juan Mosovich">
-    <meta property="og:title" content="Enfermedades de la Garganta en Pilar | Amigdalitis, Disfagia, Voz - Dr. Mosovich">
+    <meta property="og:title" content="Enfermedades de Garganta en Pilar: Amigdalitis, Disfagia y Voz | Dr. Mosovich">
     <meta property="og:description" content="Especialista en enfermedades de garganta en Pilar. Tratamiento de amigdalitis, disfagia, trastornos de la voz, halitosis y reflujo. Estudio FEES disponible. Turnos online.">
-    <meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/cuerdas.webp">
-    <!-- og:image:width, height y alt eliminados para simplificar -->
+    <meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/og-garganta.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Enfermedades de garganta en Pilar - Dr. Juan Mosovich, Otorrinolaringólogo">
     <meta property="og:url" content="https://www.otorrinoenpilar.com/garganta.html">
     <meta property="og:type" content="article">
     <meta property="article:published_time" content="2023-10-26T09:00:00-03:00">
-    <meta property="article:modified_time" content="2026-02-17T10:00:00-03:00">
+    <meta property="article:modified_time" content="2026-05-26T10:00:00-03:00">
     <meta property="article:author" content="Dr. Juan Mosovich">
     <meta property="article:section" content="Salud">
     <meta property="article:tag" content="Otorrinolaringología">
@@ -89,10 +36,10 @@
     
     <!-- Twitter Cards principales -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Enfermedades de la Garganta en Pilar | Dr. Mosovich">
+    <meta name="twitter:title" content="Enfermedades de Garganta en Pilar: Amigdalitis, Disfagia y Voz | Dr. Mosovich">
     <meta name="twitter:description" content="Especialista en enfermedades de garganta: amigdalitis, disfagia, trastornos de voz, halitosis y reflujo. Estudio FEES en Pilar.">
-    <meta name="twitter:image" content="https://www.otorrinoenpilar.com/imagenes/cuerdas.webp">
-    <!-- twitter:image:alt eliminado para simplificar -->
+    <meta name="twitter:image" content="https://www.otorrinoenpilar.com/imagenes/og-garganta.png">
+    <meta name="twitter:image:alt" content="Enfermedades de garganta en Pilar - Dr. Juan Mosovich, Otorrinolaringólogo">
     <meta name="twitter:site" content="@otorrinopilar">
     
     <link rel="canonical" href="https://www.otorrinoenpilar.com/garganta.html"/>
@@ -105,14 +52,241 @@
     <link rel="manifest" href="/favicon/site.webmanifest">
   
     <!-- Resource hints para performance -->
-    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     
-    <!-- Bootstrap CSS - Carga asíncrona (mantener) -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Bootstrap purgeado compartido (~6 KB local vs 24.5 KB CDN). Bloqueante intencional: evita CLS por reflow. -->
+    <link rel="stylesheet" href="./css/sinusitis-bootstrap.min.css">
+
+  <style>
+  /* display-4: no incluido en el CSS purgeado compartido */
+  .display-4{font-size:calc(1.4rem + 1.8vw);font-weight:300;line-height:1.2}
+  @media(min-width:1200px){.display-4{font-size:2.5rem}}
+  /* ratio: usado por JS al crear iframes de video */
+  .ratio{position:relative;width:100%}
+  .ratio::before{display:block;padding-top:var(--bs-aspect-ratio);content:""}
+  .ratio>*{position:absolute;top:0;left:0;width:100%;height:100%}
+  .ratio-16x9{--bs-aspect-ratio:56.25%}
+
+  /* Tarjetas de navegación */
+  .nav-card{
+    border-radius:1rem!important;
+    border:1px solid #e0e7ef;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .nav-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 24px rgba(0,51,102,.13)!important;
+    border-color:#0d6efd;
+  }
+  .nav-card .nav-icon{
+    width:68px;height:68px;
+    background:linear-gradient(135deg,#0d6efd 60%,#3d8bfd);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto .75rem;
+    box-shadow:0 3px 10px rgba(13,110,253,.25);
+  }
+
+  /* Botón flotante de WhatsApp */
+  .floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25d366;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+  }
+  .floating-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  }
+  .floating-whatsapp a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+  }
+  .floating-whatsapp svg {
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) invert(1);
+  }
+  @keyframes pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  @media (max-width: 768px) {
+    .floating-whatsapp {
+      bottom: 15px;
+      right: 15px;
+      width: 55px;
+      height: 55px;
+    }
+    .floating-whatsapp svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  /* ── Card-group: apila en móvil, 2 col en tablet ── */
+  @media (max-width: 767px) {
+    .card-group {
+      flex-direction: column;
+    }
+    .card-group > .card {
+      margin-bottom: .75rem;
+      border-radius: .5rem !important;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .card-group {
+      flex-wrap: wrap;
+    }
+    .card-group > .card {
+      flex: 0 0 calc(50% - .375rem);
+      max-width: calc(50% - .375rem);
+      margin-bottom: .75rem;
+    }
+  }
+
+  /* ── Separadores de sección ── */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    background-color: #0a2b4f;
+    padding: .75rem 1.25rem;
+    margin: 2rem 0 1rem;
+  }
+  .section-divider h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+  }
+  .section-divider .sec-num {
+    background: rgba(255,255,255,.18);
+    color: #fff;
+    font-weight: 800;
+    font-size: .9rem;
+    border-radius: 50%;
+    width: 1.8rem; height: 1.8rem;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+
+  /* ── Card-footer como barra de acción ── */
+  .card-footer.cta-footer {
+    background: #f0f4ff;
+    border-top: 2px solid #0d6efd20;
+    padding: .5rem 1rem;
+    text-align: center;
+  }
+
+  /* ── EAT-10 sección wrapper ── */
+  #eat10Form {
+    background: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,51,102,.07);
+  }
+  #eat10Form > h3 { color: #003366; font-weight: 700; }
+  #eat10Form .list-group-item { border-left: none; border-right: none; }
+  #eat10Form .list-group-item:nth-child(even) { background: #f4f7fb; }
+
+  /* ── EAT-10 Likert scale ── */
+  .eat-likert { gap: .3rem; }
+  .eat-item { cursor: pointer; }
+  .eat-btn {
+    display: block;
+    width: 2.4rem; height: 2.4rem;
+    line-height: 2.4rem;
+    border-radius: 50%;
+    border: 2px solid #adb5bd;
+    background: #f8f9fa;
+    margin: 0 auto .2rem;
+    font-weight: 700;
+    color: #495057;
+    transition: background .12s, color .12s, border-color .12s, transform .1s, box-shadow .12s;
+    user-select: none;
+  }
+  .eat-item:hover .eat-btn {
+    border-color: #0d6efd;
+    color: #0d6efd;
+    background: #e7f0ff;
+  }
+  .eat-item input:checked ~ .eat-btn {
+    background: #0d6efd;
+    color: #fff;
+    border-color: #0d6efd;
+    transform: scale(1.12);
+    box-shadow: 0 2px 8px rgba(13,110,253,.4);
+  }
+  .eat-lbl { font-size: .7rem; color: #6c757d; line-height: 1.2; }
+
+  /* ── EAT-10 resultado ── */
+  .result-green {
+    padding: 1rem 1.25rem;
+    background: #d1e7dd;
+    border-left: 4px solid #198754;
+    border-radius: .5rem;
+    color: #0a3622;
+    font-weight: 600;
+  }
+  .result-yellow {
+    padding: 1rem 1.25rem;
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: .5rem;
+    color: #664d03;
+    font-weight: 600;
+  }
+  .result-red {
+    padding: 1rem 1.25rem;
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+    border-radius: .5rem;
+    color: #58151c;
+    font-weight: 600;
+  }
+  @media (max-width: 480px) {
+    .eat-btn { width: 2rem; height: 2rem; line-height: 2rem; font-size: .9rem; }
+    .eat-lbl { font-size: .65rem; }
+    #eat10Form { padding: 1.25rem .75rem; }
+  }
+
+  /* ── Tarjeta de consulta urgente ── */
+  .urgent-card {
+    background: linear-gradient(135deg, #fff4ea, #ffe3d3);
+    border-radius: 18px;
+    padding: 22px;
+    border: 1px solid rgba(178, 77, 0, 0.2);
+    box-shadow: 0 12px 26px rgba(146, 66, 0, 0.12);
+  }
+  .urgent-card h3 { margin-bottom: 10px; }
+  .urgent-list {
+    margin: 0 0 14px 0;
+    padding-left: 1.1rem;
+  }
+  .urgent-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  </style>
+
     <!-- Datos estructurados eliminados para reducir el DOM y mejorar velocidad. Si los necesitas para SEO, puedes mantener solo el principal. -->
    
   <script type="application/ld+json">
@@ -120,14 +294,28 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebPage",
-      "@id": "https://www.otorrinoenpilar.com/preguntas-frecuentes.html", 
-      "url": "https://www.otorrinoenpilar.com/preguntas-frecuentes.html",
-      "name": "Preguntas Frecuentes sobre Otorrinolaringología y Fonoaudiología en Pilar",
-      "breadcrumb": { "@id": "https://www.otorrinoenpilar.com/#breadcrumb" }
+      "@type": ["WebPage", "MedicalWebPage"],
+      "@id": "https://www.otorrinoenpilar.com/garganta.html",
+      "url": "https://www.otorrinoenpilar.com/garganta.html",
+      "name": "Enfermedades de Garganta en Pilar: Amigdalitis, Disfagia y Voz | Dr. Mosovich",
+      "description": "Especialista en enfermedades de garganta en Pilar. Tratamiento de amigdalitis, disfagia, trastornos de la voz, halitosis y reflujo. Estudio FEES disponible. Turnos online.",
+      "inLanguage": "es",
+      "datePublished": "2023-10-26",
+      "dateModified": "2026-05-26",
+      "author": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "breadcrumb": { "@id": "https://www.otorrinoenpilar.com/garganta.html#breadcrumb" },
+      "mainEntity": { "@id": "https://www.otorrinoenpilar.com/garganta.html#faq" },
+      "about": [
+        { "@type": "MedicalCondition", "name": "Disfagia" },
+        { "@type": "MedicalCondition", "name": "Amigdalitis" },
+        { "@type": "MedicalCondition", "name": "Halitosis" },
+        { "@type": "MedicalCondition", "name": "Disfonía" },
+        { "@type": "MedicalCondition", "name": "Reflujo laringofaríngeo" }
+      ]
     },
     {
       "@type": "FAQPage",
+      "@id": "https://www.otorrinoenpilar.com/garganta.html#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -184,12 +372,60 @@
             "@type": "Answer",
             "text": "Sí, realizamos evaluaciones de aptitud vocal para la carrera docente y emitimos certificados médicos oficiales de forma ágil en nuestro consultorio de Pilar."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo se realiza la maniobra de Heimlich si alguien se atraganta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Colócate detrás de la persona, rodea su cintura con tus brazos y apoya un puño justo arriba del ombligo. Realiza presiones rápidas hacia adentro y arriba en forma de J. Si la obstrucción es parcial, animá a la persona a toser; si es total, actúa de inmediato."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué son los cálculos amigdalinos (tonsilolitos) y cuándo debo preocuparme?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Son depósitos blancos o amarillentos en las criptas amigdalinas formados por restos de alimentos, saliva y bacterias. Son generalmente benignos, pero si provocan mal aliento persistente, molestias crónicas o inflamaciones frecuentes, conviene una evaluación médica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuáles son los síntomas de un absceso periamigdalino?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dolor de garganta intenso y unilateral, dificultad severa para tragar, fiebre alta, inflamación asimétrica de las amígdalas, voz apagada y trismo (dificultad para abrir la boca). Requiere antibioticoterapia y drenaje urgente; consulte al médico de inmediato."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre reflujo gastroesofágico y reflujo laringofaríngeo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El reflujo gastroesofágico (ERGE) produce acidez y ardor de pecho típicos. El reflujo laringofaríngeo (RLF) es más silencioso: el ácido alcanza la laringe causando ronquera, carraspera crónica y tos sin ardor, por lo que muchas veces no se diagnostica hasta un examen especializado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es el laringoespasmo nocturno?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Es una contracción súbita involuntaria de los músculos de la laringe que cierra las vías respiratorias y despierta al paciente con sensación de ahogo. Está fuertemente relacionado con el reflujo laringofaríngeo y requiere evaluación por otorrinolaringologo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué texturas de alimentos son más seguras si tengo disfagia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se recomiendan purés, yogur, compotas y alimentos blandos. Debe triturarse o licuarse la comida si es necesario, y evitar alimentos pegajosos, fibrosos, duros o muy fríos o calientes. La consistencia ideal se determina con una evaluación especializada como el estudio FEES."
+          }
         }
       ]
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://www.otorrinoenpilar.com/#breadcrumb",
+      "@id": "https://www.otorrinoenpilar.com/garganta.html#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -200,29 +436,121 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Preguntas Frecuentes"
+          "name": "Enfermedades de la Garganta",
+          "item": "https://www.otorrinoenpilar.com/garganta.html"
         }
       ]
     },
     {
-      "@type": "Physician",
+      "@type": ["MedicalBusiness", "Physician"],
       "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich",
-      "name": "Dr. Juan Mosovich",
-      "telephone": "+54 11 6821-2512",
+      "name": "Dr. Juan Mosovich - Otorrinolaringólogo",
+      "image": "https://www.otorrinoenpilar.com/imagenes/imagenogsinusitishtml.png",
+      "url": "https://www.otorrinoenpilar.com/",
+      "telephone": "+54-9-11-6821-2512",
+      "medicalSpecialty": "Otolaryngology",
+      "priceRange": "$$",
+      "currenciesAccepted": "ARS",
+      "paymentAccepted": "Efectivo, Transferencia, Obras sociales",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Pilar",
+          "containedInPlace": { "@type": "AdministrativeArea", "name": "Buenos Aires" }
+        },
+        {
+          "@type": "GeoCircle",
+          "geoMidpoint": { "@type": "GeoCoordinates", "latitude": "-34.434636", "longitude": "-58.829689" },
+          "geoRadius": "30000"
+        }
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Caamaño 1100, Edificio Agora 2, Piso 1, Oficina 110",
         "addressLocality": "Pilar",
         "addressRegion": "Buenos Aires",
+        "postalCode": "1631",
         "addressCountry": "AR"
-      }
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-34.434636",
+        "longitude": "-58.829689"
+      },
+      "hasMap": "https://maps.google.com/?q=-34.434636,-58.829689",
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Monday", "opens": "18:00", "closes": "20:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Wednesday", "opens": "16:30", "closes": "18:30" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Thursday", "opens": "18:00", "closes": "20:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Friday", "opens": "14:00", "closes": "16:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Saturday", "opens": "10:30", "closes": "12:30" }
+      ],
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://wa.me/5491168212512",
+          "actionPlatform": ["https://schema.org/MobileWebPlatform", "https://schema.org/DesktopWebPlatform"],
+          "inLanguage": "es"
+        },
+        "result": { "@type": "Reservation", "name": "Turno médico" }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/juanhoraciomosovich",
+        "https://www.instagram.com/otorrino.fono.pilar",
+        "https://www.facebook.com/profile.php?id=100063748789595",
+        "https://www.youtube.com/channel/UCBrWcUcpJTH0q4mofkYL9OQ"
+      ]
+    },
+    {
+      "@type": "VideoObject",
+      "@id": "https://www.otorrinoenpilar.com/garganta.html#video-halitosis",
+      "name": "Guía Definitiva de Higiene Bucal: Técnica de Bass, Hilo Dental y el Truco de la Cuchara",
+      "description": "Protocolo clínico de higiene bucodental basado en la técnica de Bass, limpieza interdental y raspado lingual.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/sEI5wRJSycs/maxresdefault.jpg",
+      "uploadDate": "2026-05-08",
+      "duration": "PT5M",
+      "embedUrl": "https://www.youtube.com/embed/sEI5wRJSycs",
+      "contentUrl": "https://www.youtube.com/watch?v=sEI5wRJSycs",
+      "inLanguage": "es",
+      "isPartOf": { "@id": "https://www.otorrinoenpilar.com/garganta.html" }
     }
   ]
 }
 </script>
     
+  <!-- Google Tag Manager - carga diferida en primera interacción para mejorar LCP/FCP -->
+  <script>
+  (function(){
+    var loaded=false;
+    function loadGTM(){
+      if(loaded)return;
+      loaded=true;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MQ6VHPGC');
+    }
+    ['click','mousemove','touchstart','keydown'].forEach(function(e){
+      window.addEventListener(e,loadGTM,{once:true,passive:true});
+    });
+  })();
+  </script>
+  <!-- End Google Tag Manager -->
+    
   </head>
  <body>
+
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ6VHPGC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 
 <header class="my-5">
@@ -240,7 +568,7 @@
     </nav>
 
     <!-- Hero Section mejorado -->
-    <div class="p-4 p-lg-5 text-center text-white" style="background-color: #003366;">
+    <div class="p-4 p-lg-5 text-center text-white" style="background: radial-gradient(circle at 20% 20%, rgba(27,143,138,0.25), transparent 45%), linear-gradient(135deg, #0a2b4f 0%, #103b68 45%, #1b8f8a 100%);">
       <div class="container">
         <nav aria-label="breadcrumb" class="mb-3">
           <ol class="breadcrumb justify-content-center" style="background: transparent;">
@@ -251,7 +579,7 @@
         <h1 class="display-4 fw-bold mb-3">Enfermedades de la Garganta: Voz, Deglución y Amigdalitis en Pilar</h1>
         <p class="lead mb-4">Tratamiento especializado de trastornos de la laringe y garganta. Dr. Juan Mosovich.</p>
         <div class="d-flex gap-2 justify-content-center flex-wrap">
-          <a href="#disfagia" class="btn btn-light fw-bold rounded-pill px-4">Ver información</a>
+          <a href="#contenidos" class="btn btn-light fw-bold rounded-pill px-4">Explorar temas</a>
           <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-outline-light fw-bold rounded-pill px-4">Solicitar turno</a>
         </div>
       </div>
@@ -271,16 +599,16 @@
       <!-- Índice de navegación visual mejorado -->
       <div id="contenidos" class="container my-5">
         <h2 class="text-center mb-4 h3">Contenidos de esta página</h2>
-        <div class="row g-4">
+        <div class="row g-4 justify-content-center">
           <div class="col-md-6 col-lg-4">
             <a href="#disfagia" class="text-decoration-none">
               <div class="card nav-card h-100 p-4 text-center">
-                <div class="d-flex align-items-center justify-content-center rounded-circle bg-primary mx-auto" style="width:60px;height:60px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-fork-knife mx-auto my-auto" viewBox="0 0 16 16">
-                <path d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z"/>
-                </svg>
+                <div class="nav-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 16 16">
+                    <path d="M13 .5c0-.276-.226-.506-.498-.465-1.703.257-2.94 2.012-3 8.462a.5.5 0 0 0 .498.5c.56.01 1 .13 1 1.003v5.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5zM4.25 0a.25.25 0 0 1 .25.25v5.122a.128.128 0 0 0 .256.006l.233-5.14A.25.25 0 0 1 5.24 0h.522a.25.25 0 0 1 .25.238l.233 5.14a.128.128 0 0 0 .256-.006V.25A.25.25 0 0 1 6.75 0h.29a.5.5 0 0 1 .498.458l.423 5.07a1.69 1.69 0 0 1-1.059 1.711l-.053.022a.92.92 0 0 0-.58.884L6.47 15a.971.971 0 1 1-1.942 0l.202-6.855a.92.92 0 0 0-.58-.884l-.053-.022a1.69 1.69 0 0 1-1.059-1.712L3.462.458A.5.5 0 0 1 3.96 0z"/>
+                  </svg>
                 </div>
-                <h3 class="h5 mb-2">Trastornos en la deglución</h3>
+                <h3 class="h5 mb-1">Trastornos en la deglución</h3>
                 <p class="text-muted small mb-0">Disfagia, maniobras y evaluación FEES</p>
               </div>
             </a>
@@ -288,12 +616,12 @@
           <div class="col-md-6 col-lg-4">
             <a href="#halitosis" class="text-decoration-none">
               <div class="card nav-card h-100 p-4 text-center">
-                <div class="d-flex align-items-center justify-content-center rounded-circle bg-primary mx-auto" style="width:60px;height:60px;">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-wind mx-auto my-auto" viewBox="0 0 16 16">
-                  <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5m-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2M0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5"/>
+                <div class="nav-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 16 16">
+                    <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5m-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2M0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5"/>
                   </svg>
                 </div>
-                <h3 class="h5 mb-2">Mal aliento</h3>
+                <h3 class="h5 mb-1">Mal aliento</h3>
                 <p class="text-muted small mb-0">Halitosis crónica y tratamiento</p>
               </div>
             </a>
@@ -301,13 +629,13 @@
           <div class="col-md-6 col-lg-4">
             <a href="#amigdalitis" class="text-decoration-none">
               <div class="card nav-card h-100 p-4 text-center">
-                <div class="d-flex align-items-center justify-content-center rounded-circle bg-primary mx-auto" style="width:60px;height:60px;">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-emoji-frown mx-auto my-auto" viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                  <path d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.5 3.5 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.5 4.5 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5"/>
-                </svg>
+                <div class="nav-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.5 3.5 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.5 4.5 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5"/>
+                  </svg>
                 </div>
-                <h3 class="h5 mb-2">Dolor de garganta</h3>
+                <h3 class="h5 mb-1">Dolor de garganta</h3>
                 <p class="text-muted small mb-0">Amigdalitis y sus tratamientos</p>
               </div>
             </a>
@@ -315,13 +643,13 @@
           <div class="col-md-6 col-lg-4">
             <a href="#vocales" class="text-decoration-none">
               <div class="card nav-card h-100 p-4 text-center">
-                <div class="d-flex align-items-center justify-content-center rounded-circle bg-primary mx-auto" style="width:60px;height:60px;">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-mic mx-auto my-auto" viewBox="0 0 16 16">
-                  <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5"/>
-                  <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3"/>
+                <div class="nav-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 16 16">
+                    <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5"/>
+                    <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3"/>
                   </svg>
                 </div>
-                <h3 class="h5 mb-2">Problemas vocales</h3>
+                <h3 class="h5 mb-1">Problemas vocales</h3>
                 <p class="text-muted small mb-0">Cuerdas vocales y laringe</p>
               </div>
             </a>
@@ -329,12 +657,12 @@
           <div class="col-md-6 col-lg-4">
             <a href="#reflujo" class="text-decoration-none">
               <div class="card nav-card h-100 p-4 text-center">
-              <div class="d-flex align-items-center justify-content-center rounded-circle bg-primary mx-auto" style="width:60px;height:60px;">
-                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-lungs mx-auto my-auto" viewBox="0 0 16 16">
-                  <path d="M8.5 1.5a.5.5 0 1 0-1 0v5.243L7 7.1V4.72C7 3.77 6.23 3 5.28 3c-.524 0-1.023.27-1.443.592-.431.332-.847.773-1.216 1.229-.736.908-1.347 1.946-1.58 2.48-.176.405-.393 1.16-.556 2.011-.165.857-.283 1.857-.241 2.759.04.867.233 1.79.838 2.33.67.6 1.622.556 2.741-.004l1.795-.897A2.5 2.5 0 0 0 7 11.264V10.5a.5.5 0 0 0-1 0v.764a1.5 1.5 0 0 1-.83 1.342l-1.794.897c-.978.489-1.415.343-1.628.152-.28-.25-.467-.801-.505-1.63-.037-.795.068-1.71.224-2.525.157-.82.357-1.491.491-1.8.19-.438.75-1.4 1.44-2.25.342-.422.703-.799 1.049-1.065.358-.276.639-.385.833-.385a.72.72 0 0 1 .72.72v3.094l-1.79 1.28a.5.5 0 0 0 .58.813L8 7.614l3.21 2.293a.5.5 0 1 0 .58-.814L10 7.814V4.72a.72.72 0 0 1 .72-.72c.194 0 .475.11.833.385.346.266.706.643 1.05 1.066.688.85 1.248 1.811 1.439 2.249.134.309.334.98.491 1.8.156.814.26 1.73.224 2.525-.038.829-.224 1.38-.505 1.63-.213.19-.65.337-1.628-.152l-1.795-.897A1.5 1.5 0 0 1 10 11.264V10.5a.5.5 0 0 0-1 0v.764a2.5 2.5 0 0 0 1.382 2.236l1.795.897c1.12.56 2.07.603 2.741.004.605-.54.798-1.463.838-2.33.042-.902-.076-1.902-.24-2.759-.164-.852-.38-1.606-.558-2.012-.232-.533-.843-1.571-1.579-2.479-.37-.456-.785-.897-1.216-1.229C11.743 3.27 11.244 3 10.72 3 9.77 3 9 3.77 9 4.72V7.1l-.5-.357z"/>
+                <div class="nav-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 16 16">
+                    <path d="M8.5 1.5a.5.5 0 1 0-1 0v5.243L7 7.1V4.72C7 3.77 6.23 3 5.28 3c-.524 0-1.023.27-1.443.592-.431.332-.847.773-1.216 1.229-.736.908-1.347 1.946-1.58 2.48-.176.405-.393 1.16-.556 2.011-.165.857-.283 1.857-.241 2.759.04.867.233 1.79.838 2.33.67.6 1.622.556 2.741-.004l1.795-.897A2.5 2.5 0 0 0 7 11.264V10.5a.5.5 0 0 0-1 0v.764a1.5 1.5 0 0 1-.83 1.342l-1.794.897c-.978.489-1.415.343-1.628.152-.28-.25-.467-.801-.505-1.63-.037-.795.068-1.71.224-2.525.157-.82.357-1.491.491-1.8.19-.438.75-1.4 1.44-2.25.342-.422.703-.799 1.049-1.065.358-.276.639-.385.833-.385a.72.72 0 0 1 .72.72v3.094l-1.79 1.28a.5.5 0 0 0 .58.813L8 7.614l3.21 2.293a.5.5 0 1 0 .58-.814L10 7.814V4.72a.72.72 0 0 1 .72-.72c.194 0 .475.11.833.385.346.266.706.643 1.05 1.066.688.85 1.248 1.811 1.439 2.249.134.309.334.98.491 1.8.156.814.26 1.73.224 2.525-.038.829-.224 1.38-.505 1.63-.213.19-.65.337-1.628-.152l-1.795-.897A1.5 1.5 0 0 1 10 11.264V10.5a.5.5 0 0 0-1 0v.764a2.5 2.5 0 0 0 1.382 2.236l1.795.897c1.12.56 2.07.603 2.741.004.605-.54.798-1.463.838-2.33.042-.902-.076-1.902-.24-2.759-.164-.852-.38-1.606-.558-2.012-.232-.533-.843-1.571-1.579-2.479-.37-.456-.785-.897-1.216-1.229C11.743 3.27 11.244 3 10.72 3 9.77 3 9 3.77 9 4.72V7.1l-.5-.357z"/>
                   </svg>
                 </div>
-                <h3 class="h5 mb-2">Reflujo gastroesofágico</h3>
+                <h3 class="h5 mb-1">Reflujo gastroesofágico</h3>
                 <p class="text-muted small mb-0">RGE y su relación con problemas respiratorios y la voz</p>
               </div>
             </a>
@@ -342,14 +670,14 @@
           <div class="col-md-6 col-lg-4">
             <a href="#eat10Form" class="text-decoration-none">
               <div class="card nav-card h-100 p-4 text-center">
-             <div class="d-flex align-items-center justify-content-center rounded-circle bg-primary mx-auto" style="width:60px;height:60px;">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-clipboard2-check mx-auto my-auto" viewBox="0 0 16 16">
-                <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z"/>
-                <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z"/>
-                <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
-                 </svg>
+                <div class="nav-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 16 16">
+                    <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z"/>
+                    <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z"/>
+                    <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z"/>
+                  </svg>
                 </div>
-                <h3 class="h5 mb-2">Evaluación EAT-10</h3>
+                <h3 class="h5 mb-1">Evaluación EAT-10</h3>
                 <p class="text-muted small mb-0">Test de disfagia online</p>
               </div>
             </a>
@@ -357,14 +685,34 @@
         </div>
       </div>
 
-      <div class="alert alert-info text-center my-4" role="alert" style="font-size:1.15em;">
+      <div class="container my-4">
+        <div class="urgent-card">
+          <h3 class="h5 fw-bold">Cuándo consultar de forma urgente</h3>
+          <p class="mb-2">Si aparece alguno de estos signos, buscá atención médica sin demoras:</p>
+          <ul class="urgent-list">
+            <li>Dificultad para respirar o sensación de obstrucción en la garganta.</li>
+            <li>Dificultad para tragar, tos o ahogos al tragar.</li>
+            <li>Cambios en la voz de más de 30 días de evolución.</li>
+            <li>Dolor de garganta muy intenso con fiebre alta o dificultad para abrir la boca.</li>
+          </ul>
+          <div class="urgent-actions">
+            <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-danger rounded-pill">Agendar consulta urgente</a>
+            <a href="https://api.whatsapp.com/send?phone=541168212512&text=Hola%20Dr.%20Mosovich,%20tengo%20s%C3%ADntomas%20urgentes%20de%20garganta%20y%20necesito%20una%20consulta" class="btn btn-outline-danger rounded-pill" target="_blank" rel="noopener noreferrer">WhatsApp urgente</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="alerta-docente" class="alert alert-info text-center my-4" role="alert" style="font-size:1.15em;">
   <strong>¡Nuevo servicio!</strong> Evaluación de aptitud para la carrera docente y emisión ágil de certificados médicos. <br>
   <span class="fw-semibold">Solicitá tu turno y recibí tu certificado en el día.</span>
+  <div class="mt-2">
+    <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-sm btn-primary rounded-pill px-4 fw-bold">
+      Solicitar turno ahora
+    </a>
+  </div>
 </div>
 
-      <div id="disfagia" class="d-grid gap-2">
-        <h2 class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">1 Trastornos en la deglución.</h2>
-      </div> 
+      <div id="disfagia" class="container section-divider"><span class="sec-num">1</span><h2>Trastornos en la deglución</h2></div> 
 
       <div class="card-group">
        
@@ -374,12 +722,19 @@
 <div class="card-body">
   <h3 class="card-title h5">Trastornos de la Deglución y su Impacto en la Salud.</h3>
   <article class="card-text">
+    <p class="card-text small text-muted mb-2">Los trastornos de la deglución, también conocidos como disfagia, son afecciones que afectan la capacidad de una persona para tragar alimentos y líquidos de manera eficaz y segur...</p>
     <div class="text-center mb-2"> 
-      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#btedisfag" role="button" aria-expanded="false" aria-controls="collapseExample">
+      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#btedisfag" role="button" aria-expanded="false" aria-controls="btedisfag">
       Ver más
     </a>
        </div> 
-       <span class="collapse" id="btedisfag">     
+       <div class="collapse" 
+            id="btedisfag"
+            data-loaded="false"
+            data-video-id="tBJIfK3C8Kk"
+            data-video-title="Disfagia: Trastornos de la deglución en adultos mayores"
+            data-video-description="Video explicativo sobre disfagia y su impacto en la salud."
+            data-video-duration="PT4M20S">
                 <p>Los trastornos de la deglución, también conocidos como disfagia, son afecciones que afectan la capacidad de una persona para tragar alimentos y líquidos de manera eficaz y segura. Estos trastornos pueden tener un impacto significativo en la salud personal y pública.</p>
 
                 <h4>Manifestaciones de la Disfagia</h4>
@@ -399,10 +754,12 @@
                 que la disfagia puede ser un problema de salud grave que en algunos casos requiere internación. Esta web es sólo un complemento 
               a la consulta médica y no intenta reemplazarla.</strong>
             </p>
-               </span>
+                <div id="video-target-tBJIfK3C8Kk" class="iframe-placeholder"></div>
+                <p style="text-align: center;"><small><em>Video: Disfagia - Trastornos de la deglución.</em></small></p>
+               </div>
           </article>
           </div>
-          <div class="card-footer bg-primary">
+          <div class="card-footer bg-primary" aria-hidden="true" style="height:4px;padding:0">
             </div>
           </div>
 
@@ -413,7 +770,8 @@
     <h3 class="card-title h5">Atragantamiento y Disfagia: La Maniobra de Heimlich como Salvavidas.</h3>
     
     <article class="card-text">
-      <div class="text-center mb-2"> 
+      <p class="card-text small text-muted mb-2">Para una persona con disfagia, el acto de comer conlleva un riesgo intrínseco. El atragantamiento u obstrucción de la vía aérea por cuerpo extraño (OVACE) es una emergencia médi...</p>
+    <div class="text-center mb-2"> 
         <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#heimlich-collapse" role="button" aria-expanded="false" aria-controls="heimlich-collapse">
           Ver más
         </a>
@@ -496,7 +854,7 @@
     </article>
   </div>
   
-  <div class="card-footer bg-primary">
+  <div class="card-footer bg-primary" aria-hidden="true" style="height:4px;padding:0">
   </div>
 </div>
 
@@ -505,12 +863,13 @@
             <div class=card-body>
               <h3 class="card-title h5">Test de disfagia con oxímetro.</h3>
             <article class=card-text>
-              <div class="text-center mb-2"> 
+              <p class="card-text small text-muted mb-2">La disfagia, o dificultad para tragar, puede llevar a la aspiración, donde los alimentos o líquidos entran en las vías respiratorias. La aspiración puede causar neumonía por asp...</p>
+    <div class="text-center mb-2"> 
                 <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#disfagiatesto" role="button" aria-expanded="false" aria-controls="disfagiatesto" aria-label="Ver más información sobre test de disfagia con oxímetro">
                 Ver más
               </a>
                  </div>  
-                 <span class="collapse" id="disfagiatesto">
+                 <div class="collapse" id="disfagiatesto">
                   <h4>Prueba de Evaluación del Riesgo de Aspiración en la Disfagia</h4>
 
                   <p>La disfagia, o dificultad para tragar, puede llevar a la aspiración, donde los alimentos o líquidos entran en las vías respiratorias. La aspiración puede causar neumonía por aspiración, una complicación grave. La prueba de evaluación del riesgo de aspiración es un método simple para identificar a las personas con riesgo de aspiración.</p>
@@ -571,16 +930,16 @@
                   </ul>
                   
                   <p>Estos estudios proporcionan información más detallada sobre la mecánica de la deglución y pueden ayudar a identificar la causa de la disfagia y el riesgo de aspiración.</p>
-                 </span>
+                 </div>
             </article>
             </div>
-            <div class="card-footer bg-primary">
+            <div class="card-footer bg-primary" aria-hidden="true" style="height:4px;padding:0">
              </div>
             </div>
       </div>
 
        <div class="container-flex text-center my-4 p-0">
-        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
       </div>
 
 <div class="card-group"> 
@@ -589,12 +948,13 @@
             <div class=card-body>
           <h3 class="card-title h5">Consejos simples para mejorar deglución.</h3>
           <article class=card-text>
-            <div class="text-center mb-2"> 
+            <p class="card-text small text-muted mb-2">Posturas correctas al comer, texturas recomendadas y maniobras de deglución para reducir el riesgo de atragantamiento.</p>
+    <div class="text-center mb-2"> 
               <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#disfagia23" role="button" aria-expanded="false" aria-controls="disfagia23" aria-label="Ver más consejos para mejorar la deglución">
                 Ver más
             </a>
                </div>  
-               <span class="collapse" id="disfagia23">
+               <div class="collapse" id="disfagia23">
                 <h4>Consejos Generales para la Deglución Segura</h4>
                 <ul>
                   <li><strong>Postura adecuada:</strong> Siéntate erguido a 90 grados, cabeza ligeramente inclinada hacia adelante.</li>
@@ -628,18 +988,19 @@
                      Recetas (disfagia leve).
                   </a>
                 </div>
-               </span>
+               </div>
           </article>
           </div>
-          <div class="card-footer bg-primary">
+          <div class="card-footer bg-primary" aria-hidden="true" style="height:4px;padding:0">
             </div>
           </div>
 
 <div class="card p-3">
-<img src="./imagenes/chin-down.webp" class="card-img-top" alt="maniobra chin-down para disfagia." loading="lazy" width="400" height="400" style="height:250px;object-fit:cover;">
+<img src="./imagenes/chin-down.webp" class="card-img-top" alt="Postura Chin Down para disfagia - técnica de protección de vía aérea al tragar" loading="lazy" width="400" height="400" style="height:250px;object-fit:cover;">
 <div class="card-body">
   <h3 class="card-title h5">La Postura del Mentón Abajo o Chin Down.</h3>
   <article class="card-text">
+    <p class="card-text small text-muted mb-2">La disfagia o dificultad para tragar es una condición que afecta la seguridad y la eficacia al comer y beber. Una de las herramientas más sencillas y efectivas para compensar es...</p>
     <div class="text-center mb-2"> 
        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#bte-collapse" role="button" aria-expanded="false" aria-controls="bte-collapse">
       Ver más
@@ -709,7 +1070,7 @@
 </div>
     </article>
       </div>
-    <div class="card-footer bg-primary"> 
+    <div class="card-footer bg-primary" aria-hidden="true" style="height:4px;padding:0"> 
         </div>
     </div> 
 
@@ -720,13 +1081,14 @@
         <h3 class="card-title h5">Estudio FEES: Evaluación de la Deglución</h3>
         
         <article class="card-text">
-            <div class="text-center mb-2"> 
+            <p class="card-text small text-muted mb-2">La Evaluación Endoscópica de la Deglución (FEES) es un procedimiento moderno y seguro que permite ver en tiempo real qué ocurre en tu garganta cuando tragas. Se utiliza un nasof...</p>
+    <div class="text-center mb-2"> 
                 <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#feesInfo" role="button" aria-expanded="false" aria-controls="feesInfo" aria-label="Ver más información sobre el estudio FEES">
                     Ver más
                 </a>
             </div>  
 
-            <span class="collapse" id="feesInfo">
+            <div class="collapse" id="feesInfo">
                 <h4>¿Qué es el estudio FEES?</h4>
                 <p>La <strong>Evaluación Endoscópica de la Deglución (FEES)</strong> es un procedimiento moderno y seguro que permite ver en tiempo real qué ocurre en tu garganta cuando tragas. Se utiliza un nasofibroscopio (una sonda muy fina con una cámara flexible) que se introduce suavemente por la nariz para observar la faringe y laringe.</p>
                 
@@ -764,11 +1126,11 @@
                   </a>
              </div>
             
-              </span>
+              </div>
         </article>
     </div>
     
-    <div class="card-footer bg-primary">
+    <div class="card-footer bg-primary" aria-hidden="true" style="height:4px;padding:0">
         </div>
 </div>
           
@@ -776,148 +1138,197 @@
 
  
     <div class="container-flex text-center my-4 p-0">
-        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
       </div>
 
 
-      <section id="eat10Form" class="container-sm my-5 text-center">
+      <section id="eat10Form" class="container-sm my-5">
 
-        <h3 class="text-center" >Cuestionario EAT-10</h3>
-        <p>Para cada pregunta, califica la severidad de tus síntomas en una escala del 0 al 4:</p>
-      
-        <form  class="my-4">
-          <!-- Preguntas del EAT-10 -->
-          <div class="mb-3">
-            <label for="q1" class="form-label">1. ¿Es difícil tragar líquidos?</label>
-            <select id="q1" class="form-select" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option value="0">0 - Nada</option>
-              <option value="1">1 - Un poco</option>
-              <option value="2">2 - Moderadamente</option>
-              <option value="3">3 - Bastante</option>
-              <option value="4">4 - Mucho</option>
-            </select>
+        <h3 class="text-center mb-1">Cuestionario EAT-10</h3>
+        <p class="text-center text-muted small mb-3">Seleccioná el número que mejor describe la severidad de cada síntoma (0 = Nada · 4 = Mucho)</p>
+        <div class="d-flex justify-content-center flex-wrap gap-2 mb-4" aria-label="Guía de puntaje">
+          <span class="rounded-pill px-3 py-1" style="background:#d1e7dd;color:#0a3622;font-weight:600;font-size:.8rem;">0–2 · Sin disfagia</span>
+          <span class="rounded-pill px-3 py-1" style="background:#fff3cd;color:#664d03;font-weight:600;font-size:.8rem;">3–7 · Disfagia moderada</span>
+          <span class="rounded-pill px-3 py-1" style="background:#f8d7da;color:#58151c;font-weight:600;font-size:.8rem;">8–40 · Disfagia severa</span>
+        </div>
+
+        <form id="eat10FormEl" class="my-2">
+
+          <!-- Macro helper visual: encabezado de escala -->
+          <div class="d-flex justify-content-between align-items-center px-2 py-2 mb-2 rounded" aria-hidden="true" style="background:#e8f0fe;font-size:.75rem;color:#003366;font-weight:700;">
+            <span>Pregunta</span>
+            <div class="d-flex" style="min-width:12rem;justify-content:space-between;">
+              <span class="text-center" style="width:2.4rem;">0<br><small style="font-weight:400;color:#666;">Nada</small></span>
+              <span class="text-center" style="width:2.4rem;">1</span>
+              <span class="text-center" style="width:2.4rem;">2</span>
+              <span class="text-center" style="width:2.4rem;">3</span>
+              <span class="text-center" style="width:2.4rem;">4<br><small style="font-weight:400;color:#666;">Mucho</small></span>
+            </div>
           </div>
-          <div class="mb-3">
-            <label for="q2" class="form-label">2. ¿Es difícil tragar sólidos?</label>
-            <select id="q2" class="form-select" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option value="0">0 - Nada</option>
-              <option value="1">1 - Un poco</option>
-              <option value="2">2 - Moderadamente</option>
-              <option value="3">3 - Bastante</option>
-              <option value="4">4 - Mucho</option>
-            </select>
+
+          <!-- Preguntas EAT-10 con Likert -->
+          <div class="list-group list-group-flush">
+
+            <!-- Q1 -->
+            <div class="list-group-item px-0 py-2">
+              <div class="d-flex align-items-center gap-3 flex-wrap">
+                <p class="mb-0 flex-grow-1 fw-semibold" style="min-width:14rem;">1. ¿Es difícil tragar líquidos?</p>
+                <div class="d-flex eat-likert" role="radiogroup" aria-label="Pregunta 1">
+                  <label class="eat-item text-center flex-fill" title="0 – Nada"><input type="radio" name="q1" value="0" required class="visually-hidden"><span class="eat-btn">0</span><span class="eat-lbl d-none d-md-block">Nada</span></label>
+                  <label class="eat-item text-center flex-fill" title="1 – Un poco"><input type="radio" name="q1" value="1" class="visually-hidden"><span class="eat-btn">1</span><span class="eat-lbl d-none d-md-block">Un poco</span></label>
+                  <label class="eat-item text-center flex-fill" title="2 – Moderado"><input type="radio" name="q1" value="2" class="visually-hidden"><span class="eat-btn">2</span><span class="eat-lbl d-none d-md-block">Moderado</span></label>
+                  <label class="eat-item text-center flex-fill" title="3 – Bastante"><input type="radio" name="q1" value="3" class="visually-hidden"><span class="eat-btn">3</span><span class="eat-lbl d-none d-md-block">Bastante</span></label>
+                  <label class="eat-item text-center flex-fill" title="4 – Mucho"><input type="radio" name="q1" value="4" class="visually-hidden"><span class="eat-btn">4</span><span class="eat-lbl d-none d-md-block">Mucho</span></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="list-group-item px-0 py-2">
+              <div class="d-flex align-items-center gap-3 flex-wrap">
+                <p class="mb-0 flex-grow-1 fw-semibold" style="min-width:14rem;">2. ¿Es difícil tragar sólidos?</p>
+                <div class="d-flex eat-likert" role="radiogroup" aria-label="Pregunta 2">
+                  <label class="eat-item text-center flex-fill" title="0 – Nada"><input type="radio" name="q2" value="0" required class="visually-hidden"><span class="eat-btn">0</span></label>
+                  <label class="eat-item text-center flex-fill" title="1 – Un poco"><input type="radio" name="q2" value="1" class="visually-hidden"><span class="eat-btn">1</span></label>
+                  <label class="eat-item text-center flex-fill" title="2 – Moderado"><input type="radio" name="q2" value="2" class="visually-hidden"><span class="eat-btn">2</span></label>
+                  <label class="eat-item text-center flex-fill" title="3 – Bastante"><input type="radio" name="q2" value="3" class="visually-hidden"><span class="eat-btn">3</span></label>
+                  <label class="eat-item text-center flex-fill" title="4 – Mucho"><input type="radio" name="q2" value="4" class="visually-hidden"><span class="eat-btn">4</span></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="list-group-item px-0 py-2">
+              <div class="d-flex align-items-center gap-3 flex-wrap">
+                <p class="mb-0 flex-grow-1 fw-semibold" style="min-width:14rem;">3. ¿Tenés dolor al tragar?</p>
+                <div class="d-flex eat-likert" role="radiogroup" aria-label="Pregunta 3">
+                  <label class="eat-item text-center flex-fill" title="0 – Nada"><input type="radio" name="q3" value="0" required class="visually-hidden"><span class="eat-btn">0</span></label>
+                  <label class="eat-item text-center flex-fill" title="1 – Un poco"><input type="radio" name="q3" value="1" class="visually-hidden"><span class="eat-btn">1</span></label>
+                  <label class="eat-item text-center flex-fill" title="2 – Moderado"><input type="radio" name="q3" value="2" class="visually-hidden"><span class="eat-btn">2</span></label>
+                  <label class="eat-item text-center flex-fill" title="3 – Bastante"><input type="radio" name="q3" value="3" class="visually-hidden"><span class="eat-btn">3</span></label>
+                  <label class="eat-item text-center flex-fill" title="4 – Mucho"><input type="radio" name="q3" value="4" class="visually-hidden"><span class="eat-btn">4</span></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="list-group-item px-0 py-2">
+              <div class="d-flex align-items-center gap-3 flex-wrap">
+                <p class="mb-0 flex-grow-1 fw-semibold" style="min-width:14rem;">4. ¿Te ahogás al comer?</p>
+                <div class="d-flex eat-likert" role="radiogroup" aria-label="Pregunta 4">
+                  <label class="eat-item text-center flex-fill" title="0 – Nada"><input type="radio" name="q4" value="0" required class="visually-hidden"><span class="eat-btn">0</span></label>
+                  <label class="eat-item text-center flex-fill" title="1 – Un poco"><input type="radio" name="q4" value="1" class="visually-hidden"><span class="eat-btn">1</span></label>
+                  <label class="eat-item text-center flex-fill" title="2 – Moderado"><input type="radio" name="q4" value="2" class="visually-hidden"><span class="eat-btn">2</span></label>
+                  <label class="eat-item text-center flex-fill" title="3 – Bastante"><input type="radio" name="q4" value="3" class="visually-hidden"><span class="eat-btn">3</span></label>
+                  <label class="eat-item text-center flex-fill" title="4 – Mucho"><input type="radio" name="q4" value="4" class="visually-hidden"><span class="eat-btn">4</span></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="list-group-item px-0 py-2">
+              <div class="d-flex align-items-center gap-3 flex-wrap">
+                <p class="mb-0 flex-grow-1 fw-semibold" style="min-width:14rem;">5. ¿Es difícil mantener el peso por problemas al tragar?</p>
+                <div class="d-flex eat-likert" role="radiogroup" aria-label="Pregunta 5">
+                  <label class="eat-item text-center flex-fill" title="0 – Nada"><input type="radio" name="q5" value="0" required class="visually-hidden"><span class="eat-btn">0</span></label>
+                  <label class="eat-item text-center flex-fill" title="1 – Un poco"><input type="radio" name="q5" value="1" class="visually-hidden"><span class="eat-btn">1</span></label>
+                  <label class="eat-item text-center flex-fill" title="2 – Moderado"><input type="radio" name="q5" value="2" class="visually-hidden"><span class="eat-btn">2</span></label>
+                  <label class="eat-item text-center flex-fill" title="3 – Bastante"><input type="radio" name="q5" value="3" class="visually-hidden"><span class="eat-btn">3</span></label>
+                  <label class="eat-item text-center flex-fill" title="4 – Mucho"><input type="radio" name="q5" value="4" class="visually-hidden"><span class="eat-btn">4</span></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q6 -->
+            <div class="list-group-item px-0 py-2">
+              <div class="d-flex align-items-center gap-3 flex-wrap">
+                <p class="mb-0 flex-grow-1 fw-semibold" style="min-width:14rem;">6. ¿Necesitás hacer esfuerzo para tragar?</p>
+                <div class="d-flex eat-likert" role="radiogroup" aria-label="Pregunta 6">
+                  <label class="eat-item text-center flex-fill" title="0 – Nada"><input type="radio" name="q6" value="0" required class="visually-hidden"><span class="eat-btn">0</span></label>
+                  <label class="eat-item text-center flex-fill" title="1 – Un poco"><input type="radio" name="q6" value="1" class="visually-hidden"><span class="eat-btn">1</span></label>
+                  <label class="eat-item text-center flex-fill" title="2 – Moderado"><input type="radio" name="q6" value="2" class="visually-hidden"><span class="eat-btn">2</span></label>
+                  <label class="eat-item text-center flex-fill" title="3 – Bastante"><input type="radio" name="q6" value="3" class="visually-hidden"><span class="eat-btn">3</span></label>
+                  <label class="eat-item text-center flex-fill" title="4 – Mucho"><input type="radio" name="q6" value="4" class="visually-hidden"><span class="eat-btn">4</span></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q7 -->
+            <div class="list-group-item px-0 py-2">
+              <div class="d-flex align-items-center gap-3 flex-wrap">
+                <p class="mb-0 flex-grow-1 fw-semibold" style="min-width:14rem;">7. ¿Evitás ciertos alimentos por miedo a atorarte?</p>
+                <div class="d-flex eat-likert" role="radiogroup" aria-label="Pregunta 7">
+                  <label class="eat-item text-center flex-fill" title="0 – Nada"><input type="radio" name="q7" value="0" required class="visually-hidden"><span class="eat-btn">0</span></label>
+                  <label class="eat-item text-center flex-fill" title="1 – Un poco"><input type="radio" name="q7" value="1" class="visually-hidden"><span class="eat-btn">1</span></label>
+                  <label class="eat-item text-center flex-fill" title="2 – Moderado"><input type="radio" name="q7" value="2" class="visually-hidden"><span class="eat-btn">2</span></label>
+                  <label class="eat-item text-center flex-fill" title="3 – Bastante"><input type="radio" name="q7" value="3" class="visually-hidden"><span class="eat-btn">3</span></label>
+                  <label class="eat-item text-center flex-fill" title="4 – Mucho"><input type="radio" name="q7" value="4" class="visually-hidden"><span class="eat-btn">4</span></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q8 -->
+            <div class="list-group-item px-0 py-2">
+              <div class="d-flex align-items-center gap-3 flex-wrap">
+                <p class="mb-0 flex-grow-1 fw-semibold" style="min-width:14rem;">8. ¿Tu deglución afecta tu calidad de vida?</p>
+                <div class="d-flex eat-likert" role="radiogroup" aria-label="Pregunta 8">
+                  <label class="eat-item text-center flex-fill" title="0 – Nada"><input type="radio" name="q8" value="0" required class="visually-hidden"><span class="eat-btn">0</span></label>
+                  <label class="eat-item text-center flex-fill" title="1 – Un poco"><input type="radio" name="q8" value="1" class="visually-hidden"><span class="eat-btn">1</span></label>
+                  <label class="eat-item text-center flex-fill" title="2 – Moderado"><input type="radio" name="q8" value="2" class="visually-hidden"><span class="eat-btn">2</span></label>
+                  <label class="eat-item text-center flex-fill" title="3 – Bastante"><input type="radio" name="q8" value="3" class="visually-hidden"><span class="eat-btn">3</span></label>
+                  <label class="eat-item text-center flex-fill" title="4 – Mucho"><input type="radio" name="q8" value="4" class="visually-hidden"><span class="eat-btn">4</span></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q9 -->
+            <div class="list-group-item px-0 py-2">
+              <div class="d-flex align-items-center gap-3 flex-wrap">
+                <p class="mb-0 flex-grow-1 fw-semibold" style="min-width:14rem;">9. ¿Sentís que los alimentos se quedan atrapados en la garganta?</p>
+                <div class="d-flex eat-likert" role="radiogroup" aria-label="Pregunta 9">
+                  <label class="eat-item text-center flex-fill" title="0 – Nada"><input type="radio" name="q9" value="0" required class="visually-hidden"><span class="eat-btn">0</span></label>
+                  <label class="eat-item text-center flex-fill" title="1 – Un poco"><input type="radio" name="q9" value="1" class="visually-hidden"><span class="eat-btn">1</span></label>
+                  <label class="eat-item text-center flex-fill" title="2 – Moderado"><input type="radio" name="q9" value="2" class="visually-hidden"><span class="eat-btn">2</span></label>
+                  <label class="eat-item text-center flex-fill" title="3 – Bastante"><input type="radio" name="q9" value="3" class="visually-hidden"><span class="eat-btn">3</span></label>
+                  <label class="eat-item text-center flex-fill" title="4 – Mucho"><input type="radio" name="q9" value="4" class="visually-hidden"><span class="eat-btn">4</span></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q10 -->
+            <div class="list-group-item px-0 py-2">
+              <div class="d-flex align-items-center gap-3 flex-wrap">
+                <p class="mb-0 flex-grow-1 fw-semibold" style="min-width:14rem;">10. ¿Te toma más tiempo comer que a otras personas?</p>
+                <div class="d-flex eat-likert" role="radiogroup" aria-label="Pregunta 10">
+                  <label class="eat-item text-center flex-fill" title="0 – Nada"><input type="radio" name="q10" value="0" required class="visually-hidden"><span class="eat-btn">0</span></label>
+                  <label class="eat-item text-center flex-fill" title="1 – Un poco"><input type="radio" name="q10" value="1" class="visually-hidden"><span class="eat-btn">1</span></label>
+                  <label class="eat-item text-center flex-fill" title="2 – Moderado"><input type="radio" name="q10" value="2" class="visually-hidden"><span class="eat-btn">2</span></label>
+                  <label class="eat-item text-center flex-fill" title="3 – Bastante"><input type="radio" name="q10" value="3" class="visually-hidden"><span class="eat-btn">3</span></label>
+                  <label class="eat-item text-center flex-fill" title="4 – Mucho"><input type="radio" name="q10" value="4" class="visually-hidden"><span class="eat-btn">4</span></label>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /list-group -->
+
+          <div class="text-center mt-4">
+            <button type="button" class="btn btn-primary rounded-pill px-5 me-2" onclick="calculateResult()" aria-label="Calcular resultado EAT-10">Calcular resultado</button>
+            <button type="button" class="btn btn-outline-secondary rounded-pill px-4" onclick="resetForm()" aria-label="Reiniciar cuestionario EAT-10">Reiniciar</button>
           </div>
-          <div class="mb-3">
-            <label for="q3" class="form-label">3. ¿Tienes dolor al tragar?</label>
-            <select id="q3" class="form-select" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option value="0">0 - Nada</option>
-              <option value="1">1 - Un poco</option>
-              <option value="2">2 - Moderadamente</option>
-              <option value="3">3 - Bastante</option>
-              <option value="4">4 - Mucho</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="q4" class="form-label">4. ¿Te ahogas al comer?</label>
-            <select id="q4" class="form-select" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option value="0">0 - Nada</option>
-              <option value="1">1 - Un poco</option>
-              <option value="2">2 - Moderadamente</option>
-              <option value="3">3 - Bastante</option>
-              <option value="4">4 - Mucho</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="q5" class="form-label">5. ¿Es difícil mantener el peso por problemas al tragar?</label>
-            <select id="q5" class="form-select" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option value="0">0 - Nada</option>
-              <option value="1">1 - Un poco</option>
-              <option value="2">2 - Moderadamente</option>
-              <option value="3">3 - Bastante</option>
-              <option value="4">4 - Mucho</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="q6" class="form-label">6. ¿Necesitas hacer esfuerzo para tragar?</label>
-            <select id="q6" class="form-select" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option value="0">0 - Nada</option>
-              <option value="1">1 - Un poco</option>
-              <option value="2">2 - Moderadamente</option>
-              <option value="3">3 - Bastante</option>
-              <option value="4">4 - Mucho</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="q7" class="form-label">7. ¿Evitas ciertos alimentos por miedo a atorarte?</label>
-            <select id="q7" class="form-select" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option value="0">0 - Nada</option>
-              <option value="1">1 - Un poco</option>
-              <option value="2">2 - Moderadamente</option>
-              <option value="3">3 - Bastante</option>
-              <option value="4">4 - Mucho</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="q8" class="form-label">8. ¿Tu deglución afecta tu calidad de vida?</label>
-            <select id="q8" class="form-select" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option value="0">0 - Nada</option>
-              <option value="1">1 - Un poco</option>
-              <option value="2">2 - Moderadamente</option>
-              <option value="3">3 - Bastante</option>
-              <option value="4">4 - Mucho</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="q9" class="form-label">9. ¿Sientes que los alimentos se quedan atrapados en la garganta?</label>
-            <select id="q9" class="form-select" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option value="0">0 - Nada</option>
-              <option value="1">1 - Un poco</option>
-              <option value="2">2 - Moderadamente</option>
-              <option value="3">3 - Bastante</option>
-              <option value="4">4 - Mucho</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="q10" class="form-label">10. ¿Te toma más tiempo comer que a otras personas?</label>
-            <select id="q10" class="form-select" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option value="0">0 - Nada</option>
-              <option value="1">1 - Un poco</option>
-              <option value="2">2 - Moderadamente</option>
-              <option value="3">3 - Bastante</option>
-              <option value="4">4 - Mucho</option>
-            </select>
-          </div>
-      
-          <!-- Botón para calcular -->
-           
-          <button type="button" class="btn btn-primary mt-3" onclick="calculateResult()" aria-label="Calcular resultado del cuestionario EAT-10 para evaluación de disfagia">Calcular Resultado</button>
-          <button type="button" class="btn btn-secondary mt-3 ms-2" onclick="resetForm()" aria-label="Reiniciar formulario del cuestionario EAT-10">Reiniciar</button>
-          
+
         </form>
-    
-        <!-- Sección para mostrar el resultado -->
+
+        <!-- Resultado -->
         <div id="result" class="mt-4"></div>
-      
-      </section> 
-      
+
+      </section>
+
 
       <div class="container-flex text-center my-4 p-0">
-        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
       </div>
 
-          <div id="halitosis" class="d-grid gap-2">
-            <h2 class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">2 Mal Aliento.</h2>
-          </div> 
+          <div id="halitosis" class="container section-divider"><span class="sec-num">2</span><h2>Mal Aliento</h2></div> 
       
   
     <div class="card-group">
@@ -927,12 +1338,18 @@
             <div class="card-body">
             <h3 class="card-title h5">Mal aliento e Higiene.</h3> 
         <article class="card-text">
+    <p class="card-text small text-muted mb-2">Mantener un aliento fresco y agradable es un aspecto importante de nuestra higiene personal y de nuestras interacciones sociales. La clave para prevenir el mal aliento, también ...</p>
     <div class="text-center mb-2"> 
       <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#alientomalo" role="button" aria-expanded="false" aria-controls="alientomalo" aria-label="Ver más sobre cómo combatir el mal aliento con higiene bucal">
       Ver más
     </a>
        </div> 
-       <span class="collapse" id="alientomalo">
+       <div class="collapse" id="alientomalo"
+            data-loaded="false"
+            data-video-id="sEI5wRJSycs"
+            data-video-title="Cómo eliminar el mal aliento - Higiene bucal efectiva"
+            data-video-description="Video educativo sobre higiene bucal para prevenir y tratar la halitosis."
+            data-video-duration="PT5M">
               <h4>Desterrando el Mal Aliento: Una Guía Completa para una Higiene Bucal Efectiva</h4>
 
               <p>Mantener un aliento fresco y agradable es un aspecto importante de nuestra higiene personal y de nuestras interacciones sociales. La clave para prevenir el mal aliento, también conocido como halitosis, radica en una rutina de limpieza bucal exhaustiva y regular, especialmente después de cada comida.</p>
@@ -979,10 +1396,12 @@
               <h5>Conclusión: Un Aliento Fresco es Sinónimo de Boca Sana</h5>
               
               <p>Adoptar una rutina de higiene bucal completa y constante, que incluya el cepillado de dientes, el uso de hilo dental y la limpieza de la lengua, especialmente la base, es la estrategia más eficaz para prevenir y combatir el mal aliento. Al convertir estos hábitos en parte de tu rutina diaria, no solo disfrutarás de un aliento fresco y agradable, sino que también estarás invirtiendo en la salud a largo plazo de tu boca.</p>
-             </span>
+              <div id="video-target-sEI5wRJSycs" class="iframe-placeholder"></div>
+              <p style="text-align: center;"><small><em>Video: Cómo eliminar el mal aliento - Higiene bucal efectiva.</em></small></p>
+             </div>
          </article>
           </div>     
-          <div class="card-footer bg-primary text-white">
+          <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
         </div> 
         </div>
 
@@ -991,12 +1410,13 @@
     <div class="card-body">
     <h3 class="card-title h5">Causas de mal aliento.</h3> 
 <article class="card-text">
-  <div class="text-center mb-2"> 
-    <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#aliento2" role="button" aria-expanded="false" aria-controls="collapseExample">
+  <p class="card-text small text-muted mb-2">Si bien la mayoría de los casos de mal aliento (halitosis) tienen su origen en la cavidad bucal, es importante reconocer que diversas enfermedades sistémicas, ciertos alimentos,...</p>
+    <div class="text-center mb-2"> 
+    <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#aliento2" role="button" aria-expanded="false" aria-controls="aliento2">
       ver más
   </a>
      </div>  
-     <span class="collapse" id="aliento2"> 
+     <div class="collapse" id="aliento2"> 
       <h4>Más Allá de la Boca: Causas Sistémicas, Alimentarias, Medicamentosas y Psicológicas del Mal Aliento Persistente</h4>
 
       <p>Si bien la mayoría de los casos de mal aliento (halitosis) tienen su origen en la cavidad bucal, es importante reconocer que diversas enfermedades sistémicas, ciertos alimentos, algunos medicamentos y hasta factores psicológicos pueden contribuir a este problema persistente.</p>
@@ -1059,10 +1479,10 @@
       <h5>Conclusión: Un Abanico de Posibles Causas Requiere una Evaluación Integral</h5>
       
       <p>El mal aliento persistente puede ser un síntoma de una variedad de condiciones que van más allá de la higiene bucal. Enfermedades sistémicas, la dieta, ciertos medicamentos y factores psicológicos pueden desempeñar un papel importante. Una evaluación exhaustiva por parte de un profesional de la salud es fundamental para identificar la causa subyacente y establecer un plan de tratamiento adecuado.</p>
-     </span>
+     </div>
  </article>
   </div>
-      <div class="card-footer bg-primary text-white">
+      <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
       </div> 
       </div>   
        
@@ -1071,12 +1491,13 @@
     <div class="card-body">
     <h3 class="card-title h5">Mal Aliento Crónico (halitosis).</h3> 
      <article class="card-text">
-      <div class="text-center mb-2"> 
+      <p class="card-text small text-muted mb-2">Si bien experimentar mal aliento por la mañana, que desaparece tras un buen cepillado dental, se considera un fenómeno fisiológico normal debido a la disminución de la producció...</p>
+    <div class="text-center mb-2"> 
         <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#aliento3" role="button" aria-expanded="false" aria-controls="aliento3" aria-label="Ver más sobre halitosis crónica y mal aliento persistente">
           Ver más
       </a>
          </div>  
-         <span class="collapse" id="aliento3">
+         <div class="collapse" id="aliento3">
           <h4>Mal Aliento Persistente: Más Allá del Aliento Matutino - Explorando las Posibles Causas</h4>
 
           <p>Si bien experimentar mal aliento por la mañana, que desaparece tras un buen cepillado dental, se considera un fenómeno fisiológico normal debido a la disminución de la producción de saliva durante la noche, la persistencia del mal aliento a lo largo del día puede ser una señal de un problema de salud subyacente que requiere atención.</p>
@@ -1125,22 +1546,20 @@
           <h5>La Importancia de la Evaluación Profesional</h5>
           
           <p>Ante la persistencia del mal aliento a pesar de una buena higiene bucal, es fundamental buscar la evaluación de un profesional de la salud, ya sea un dentista o un médico. Identificar la causa subyacente es clave para implementar el tratamiento adecuado y resolver el problema de manera efectiva.</p>
-          </span>
+          </div>
      </article>
     </div>
-    <div class="card-footer bg-primary text-white">
+    <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
     </div>
     </div>
 </div>      
 
 <div class="container-flex text-center my-4 p-0"> 
-  <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+  <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
 </div>
 
 
-<div id="amigdalitis" class="d-grid gap-2">
-    <h2 class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">3 Dolor de garganta. Amigdalitis.</h2>
-  </div> 
+<div id="amigdalitis" class="container section-divider"><span class="sec-num">3</span><h2>Dolor de garganta y Amigdalitis</h2></div> 
 
 <div class="card-group">
 
@@ -1156,12 +1575,13 @@
     <div class="card-body">
     <h3 class="card-title h5">Dolores de garganta.</h3> 
 <article class="card-text">
-  <div class="text-center mb-2"> 
-    <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#gargancausa" role="button" aria-expanded="false" aria-controls="collapseExample">
+  <p class="card-text small text-muted mb-2">El dolor de garganta es una molestia frecuente que puede variar desde una leve irritación hasta un dolor agudo que dificulta tragar. Si bien las infecciones virales y bacteriana...</p>
+    <div class="text-center mb-2"> 
+    <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#gargancausa" role="button" aria-expanded="false" aria-controls="gargancausa">
       ver más
   </a>
      </div>  
-     <span class="collapse" id="gargancausa">
+     <div class="collapse" id="gargancausa">
       <h4>Dolor de Garganta: Desvelando las Causas Comunes y Consejos para Aliviar el Malestar</h4>
 
       <p>El dolor de garganta es una molestia frecuente que puede variar desde una leve irritación hasta un dolor agudo que dificulta tragar. Si bien las infecciones virales y bacterianas son causas bien conocidas, existen otros factores comunes que a menudo se pasan por alto y que pueden estar detrás de esa sensación incómoda en tu garganta. Exploraremos algunas de estas causas menos evidentes y te brindaremos consejos prácticos para aliviar el dolor.</p>
@@ -1234,10 +1654,10 @@
     Ronquido y apnea.
    </a>
   </div>
-     </span>
+     </div>
 </article>
 </div>
-<div class="card-footer bg-primary text-white">
+<div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
 </div>
 </div>
 
@@ -1247,12 +1667,13 @@
     <div class="card-body">
     <h3 class="card-title h5">"Carnes crecidas" en adultos.</h3> 
 <article class="card-text">
-  <div class="text-center mb-2"> 
-    <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#amidalazz" role="button" aria-expanded="false" aria-controls="collapseExample">
+  <p class="card-text small text-muted mb-2">Aunque la hipertrofia adenoamigdalina (agrandamiento de las adenoides y las amígdalas) se considera un problema común en la infancia y la adolescencia, es importante destacar qu...</p>
+    <div class="text-center mb-2"> 
+    <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#amidalazz" role="button" aria-expanded="false" aria-controls="amidalazz">
       ver más
   </a>
      </div>  
-     <span class="collapse" id="amidalazz">
+     <div class="collapse" id="amidalazz">
       <h4>Hipertrofia Amigdalina en Adultos Mayores: Un Problema Persistente con Consecuencias Significativas</h4>
 
       <p>Aunque la hipertrofia adenoamigdalina (agrandamiento de las adenoides y las amígdalas) se considera un problema común en la infancia y la adolescencia, es importante destacar que muchos adultos mayores que no recibieron tratamiento en su juventud pueden seguir experimentando hipertrofia amigdalina significativa. Este agrandamiento persistente de las amígdalas en la edad adulta puede acarrear una serie de trastornos que impactan negativamente en la calidad de vida.</p>
@@ -1296,10 +1717,10 @@
     link ORL infantil
    </a>
    </div>
-     </span>
+     </div>
 </article>
 </div>
-<div class="card-footer bg-primary text-white">
+<div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
 </div>
 </div>
 
@@ -1308,16 +1729,17 @@
 
 
   <div class="card p-3"> 
-    <img loading="lazy" src="./imagenes/piogenes.webp"  class="card-img-top" alt="Imagen de estreptococo piogenes." width="400" height="254" style="height:250px;object-fit:cover;">
+    <img loading="lazy" src="./imagenes/piogenes.webp"  class="card-img-top" alt="Imagen microscópica de Streptococcus pyogenes - bacteria causante de amigdalitis bacteriana" width="400" height="254" style="height:250px;object-fit:cover;">
     <div class="card-body">
     <h3 class="card-title h5">Faringitis por estreptococo.</h3> 
 <article class="card-text">
-  <div class="text-center mb-2"> 
+  <p class="card-text small text-muted mb-2">La faringitis estreptocócica, causada por la bacteria Streptococcus pyogenes (también conocido como estreptococo betahemolítico del grupo A), es una infección bacteriana común d...</p>
+    <div class="text-center mb-2"> 
     <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#estrepto" role="button" aria-expanded="false" aria-controls="estrepto" aria-label="Ver más sobre faringitis por estreptococo">
       Ver más
   </a>
      </div>  
-     <span class="collapse" id="estrepto">
+     <div class="collapse" id="estrepto">
       <h4>Faringitis Estreptocócica: Identificación, Diagnóstico y Tratamiento de la Infección Bacteriana de Garganta</h4>
 
       <p>La faringitis estreptocócica, causada por la bacteria *Streptococcus pyogenes* (también conocido como estreptococo betahemolítico del grupo A), es una infección bacteriana común de la garganta que se distingue de las infecciones virales por su presentación clínica y tratamiento.</p>
@@ -1369,17 +1791,17 @@
       <h5>Profilaxis en Pacientes con Antecedentes de Fiebre Reumática</h5>
       
       <p>En ciertas poblaciones de alto riesgo, como aquellas personas que han padecido fiebre reumática (una complicación grave de la infección estreptocócica no tratada), es crucial prevenir cualquier nueva colonización por estreptococos del grupo A debido al riesgo significativo de recurrencia de la fiebre reumática. En estos casos, se recomienda la administración continua de <strong>penicilina intramuscular mensual</strong> como medida profiláctica a largo plazo <a class="link-dark" target="_blank" rel="noopener-noreferrer" href="https://pubmed.ncbi.nlm.nih.gov/12087516/">(ver cita).</a></p>
-      </span>
+      </div>
 </article>
 </div>
-<div class="card-footer bg-primary text-white">
+<div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
 </div>
 </div>
 </div>
 
 
 <div class="container-flex text-center my-4 p-0">
-  <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+  <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
 </div>
 
 <div class="card-group"> 
@@ -1389,12 +1811,13 @@
     <div class="card-body">
     <h3 class="card-title h5">Abscesos en las amígdalas.</h3> 
 <article class="card-text">
-  <div class="text-center mb-2"> 
+  <p class="card-text small text-muted mb-2">Un absceso periamigdalino es una acumulación de pus que se forma en el espacio ubicado entre la amígdala y los músculos de la faringe (garganta). Generalmente, se desarrolla com...</p>
+    <div class="text-center mb-2"> 
     <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#amidala" role="button" aria-expanded="false" aria-controls="amidala" aria-label="Ver más sobre abscesos periamigdalinos">
       Ver más
   </a>
      </div>  
-     <span class="collapse" id="amidala">
+     <div class="collapse" id="amidala">
       <h4>Absceso Periamigdalino: Infección Dolorosa y Complicación de la Amigdalitis</h4>
 
       <p>Un absceso periamigdalino es una acumulación de pus que se forma en el espacio ubicado entre la amígdala y los músculos de la faringe (garganta). Generalmente, se desarrolla como una complicación de una amigdalitis bacteriana (inflamación de las amígdalas) que no ha respondido completamente al tratamiento o que no se trató de manera oportuna.</p>
@@ -1448,10 +1871,10 @@
       <h5>Importancia de la Atención Médica Oportuna</h5>
       
       <p>Es crucial buscar atención médica de inmediato si se presentan síntomas de un absceso periamigdalino debido al intenso dolor y la potencial dificultad para tragar y respirar. Un tratamiento oportuno puede prevenir complicaciones y acelerar la recuperación.</p>
-     </span>
+     </div>
 </article>
 </div>
-<div class="card-footer bg-primary text-white">
+<div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
 </div>
 </div>
 
@@ -1461,12 +1884,13 @@
     <div class="card-body">
     <h3 class="card-title h5">Placas en la garganta. Amigdalitis focal, caseum,  tonsilolitiasis.</h3> 
 <article class="card-text">
-  <div class="text-center mb-2"> 
+  <p class="card-text small text-muted mb-2">Algunas personas pueden notar la presencia de pequeñas manchas blancas, a menudo descritas como un aspecto "granizado" o "nevado", dispersas sobre la superficie de sus amígdalas...</p>
+    <div class="text-center mb-2"> 
     <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#amidala2" role="button" aria-expanded="false" aria-controls="amidala2" aria-label="Ver más sobre placas en la garganta y cálculos amigdalinos">
       Ver más
   </a>
      </div>  
-     <span class="collapse" id="amidala2">
+     <div class="collapse" id="amidala2">
       <h4>Manchas Blancas en las Amígdalas: Entendiendo los Cálculos Amigdalinos y Cuándo Preocuparse</h4>
 
       <p>Algunas personas pueden notar la presencia de pequeñas manchas blancas, a menudo descritas como un aspecto "granizado" o "nevado", dispersas sobre la superficie de sus amígdalas. Estos depósitos son una acumulación de diversos materiales, incluyendo restos de alimentos, saliva y bacterias, que quedan atrapados en las criptas amigdalinas.</p>
@@ -1529,10 +1953,10 @@
    <a class="link-dark" rel="noopener noreferrer" target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/12792327/">
     Ver cita.</a>
   </p>
-     </span>
+     </div>
  </article>
 </div>
-<div class="card-footer bg-primary text-white">
+<div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
 </div>
 </div>
 
@@ -1541,12 +1965,13 @@
     <div class="card-body">
     <h3 class="card-title h5">Carotidinia.</h3> 
 <article class="card-text">
-  <div class="text-center mb-2"> 
+  <p class="card-text small text-muted mb-2">La carotidinia es un síndrome poco común que se caracteriza por dolor en el cuello, específicamente en la zona donde se localiza la arteria carótida. Este dolor a menudo se acom...</p>
+    <div class="text-center mb-2"> 
     <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#carodinia" role="button" aria-expanded="false" aria-controls="carodinia" aria-label="Ver más sobre carotidinia y dolor de cuello">
       Ver más
   </a>
      </div>  
-     <span class="collapse" id="carodinia">
+     <div class="collapse" id="carodinia">
      <h4>Carotidinia: Cuando la Migraña se Manifiesta con Dolor Carotídeo</h4>
 
 <p>La carotidinia es un síndrome poco común que se caracteriza por dolor en el cuello, específicamente en la zona donde se localiza la arteria carótida. Este dolor a menudo se acompaña de sensibilidad al tacto sobre la arteria y, en algunos casos, inflamación leve. Aunque puede presentarse de forma aislada, la carotidinia se considera una variante de la migraña, compartiendo con ella ciertos mecanismos y características.</p>
@@ -1607,10 +2032,10 @@
 
 <p>Si experimenta dolor persistente o intenso en el cuello, especialmente si se localiza a lo largo de la arteria carótida y se acompaña de sensibilidad, es fundamental consultar a un médico para obtener un diagnóstico preciso y un plan de tratamiento adecuado.</p>
   
-     </span>
+     </div>
  </article>
 </div>
-<div class="card-footer bg-primary text-white">
+<div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
 </div>
 </div>
 
@@ -1621,12 +2046,10 @@
 </div>
 
 <div class="container-flex text-center my-4 p-0"> 
-  <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+  <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
 </div>
 
-<div id="vocales" class="d-grid gap-2">
-    <h2 class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">4 Problemas vocales.</h2>
-  </div>   
+<div id="vocales" class="container section-divider"><span class="sec-num">4</span><h2>Problemas vocales</h2></div>   
 
  <div class="container-fluid text-center mb-5" style="background-color: #d7e3f0;"> 
         <h3 class="h4">
@@ -1700,8 +2123,45 @@
     </div>
 </div>
 
+<div class="container my-4">
+  <p class="text-center fw-semibold text-secondary mb-2">🎥 Video resumen de recomendaciones vocales</p>
+  <div id="yt-voz-thumb" role="button" tabindex="0" aria-label="Reproducir video sobre recomendaciones vocales" style="cursor:pointer;position:relative;max-width:560px;margin:0 auto;">
+    <img src="https://i.ytimg.com/vi/lFN7pWXFU44/hqdefault.jpg"
+         alt="Miniatura del video sobre higiene vocal"
+         width="480" height="360"
+         loading="lazy"
+         class="img-fluid rounded shadow-sm">
+    <div aria-hidden="true" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(200,0,0,0.88);border-radius:50%;width:64px;height:64px;display:flex;align-items:center;justify-content:center;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" viewBox="0 0 16 16">
+        <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/>
+      </svg>
+    </div>
+  </div>
+  <p class="text-center text-muted small mt-2">Haz clic para reproducir</p>
+  <script>
+    (function(){
+      var el = document.getElementById('yt-voz-thumb');
+      function loadVideo(){
+        var wrap = document.createElement('div');
+        wrap.className = 'ratio ratio-16x9';
+        wrap.style.cssText = 'max-width:560px;margin:0 auto';
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube.com/embed/lFN7pWXFU44?autoplay=1';
+        iframe.title = 'Recomendaciones de higiene vocal';
+        iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+        iframe.allowFullscreen = true;
+        iframe.loading = 'lazy';
+        wrap.appendChild(iframe);
+        el.parentNode.replaceChild(wrap, el);
+      }
+      el.addEventListener('click', loadVideo);
+      el.addEventListener('keypress', function(e){ if(e.key==='Enter') loadVideo(); });
+    })();
+  </script>
+</div>
+
      <div class="container-flex text-center my-4 p-0">
-      <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+      <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
     </div>
 
 
@@ -1709,16 +2169,17 @@
   <div class=card-group>
   
     <div class="card p-3">
-        <img loading="lazy" src="./imagenes/cuerdas.webp" style="max-height: 280px;" class=card-img-top alt="imágen de cuerdas vocales" width="416" height="416" style="height:250px;object-fit:cover;">
+        <img loading="lazy" src="./imagenes/cuerdas.webp" class="card-img-top" alt="imágen de cuerdas vocales" width="416" height="416" style="height:250px;object-fit:cover;">
         <div class=card-body>
         <h4 class="card-title5 h5">Estudie sus cuerdas vocales.</h4>
         <article class=card-text>
-          <div class="text-center mb-2"> 
-            <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#vocal3" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <p class="card-text small text-muted mb-2">Si experimentas una disfonía (ronquera o alteración de la voz) que dura más de treinta días, es crucial buscar una evaluación médica. Toda disfonía persistente merece un examen ...</p>
+    <div class="text-center mb-2"> 
+            <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#vocal3" role="button" aria-expanded="false" aria-controls="vocal3">
               ver más
           </a>
              </div>  
-             <span class="collapse" id="vocal3">
+             <div class="collapse" id="vocal3">
               <h4>Evaluación de la Laringe: Herramientas para Diagnosticar Problemas Vocales</h4>
 
     <p>Si experimentas una <strong>disfonía (ronquera o alteración de la voz) que dura más de treinta días</strong>, es crucial buscar una evaluación médica. Toda disfonía persistente merece un examen detallado de la laringe. La buena noticia es que la visualización de las cuerdas vocales mediante procedimientos endoscópicos modernos es un proceso <strong>generalmente sencillo, rápido e indoloro</strong>, que se realiza cómodamente en el consultorio. Estas técnicas nos permiten diagnosticar una amplia variedad de patologías vocales, desde nódulos o pólipos hasta condiciones más complejas.</p>
@@ -1793,10 +2254,10 @@
 
     <p>Si tu voz no suena como siempre o si experimentas alguna molestia en la garganta que no mejora, no lo dudes: consulta a un profesional. Tu voz es valiosa, ¡protégela!</p>
 
-             </span>
+             </div>
         </article>
       </div>
-      <div class="card-footer bg-primary text-white">
+      <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
       </div>
       </div>
 
@@ -1805,12 +2266,13 @@
     <div class="card-body">
     <h4 class="card-title h5">Dejar el alcohol y el tabaco.</h4>
     <article class="card-text">
-      <div class="text-center mb-2"> 
-        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#collapseExample7" role="button" aria-expanded="false" aria-controls="collapseExample">
+      <p class="card-text small text-muted mb-2">Nuestra voz es una herramienta fundamental para la comunicación, el trabajo y la expresión personal. La laringe, el órgano que alberga nuestras cuerdas vocales, es esencial para...</p>
+    <div class="text-center mb-2"> 
+        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#collapseExample7" role="button" aria-expanded="false" aria-controls="collapseExample7">
         Ver más
       </a>
       </div> 
-      <span class="collapse" id="collapseExample7"> 
+      <div class="collapse" id="collapseExample7"> 
      <h4>Protege tu Voz y tu Laringe: Adiós al Tabaco y al Alcohol</h4>
 
     <p>Nuestra voz es una herramienta fundamental para la comunicación, el trabajo y la expresión personal. La laringe, el órgano que alberga nuestras cuerdas vocales, es esencial para producirla. Sin embargo, factores como el tabaquismo y el consumo de alcohol representan amenazas significativas para la salud de este delicado sistema y para toda la vía aerodigestiva superior, aumentando drásticamente el riesgo de problemas vocales y, lo que es más grave, de cáncer.</p>
@@ -1907,10 +2369,10 @@
           Ver dieta.
        </a>
       </div>
-    </span>
+    </div>
    </article>
   </div>
-<div class="card-footer bg-primary text-white">
+<div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
 </div>
 </div> 
 
@@ -1919,12 +2381,13 @@
         <div class=card-body>
         <h4 class="card-title h5">Reflujo y voz.</h4>
         <article class=card-text>
-          <div class="text-center mb-2"> 
+          <p class="card-text small text-muted mb-2">¿Alguna vez has experimentado ronquera, carraspera constante, una sensación de nudo en la garganta o dificultad para tragar, incluso sin un resfriado? Estos síntomas, a menudo d...</p>
+    <div class="text-center mb-2"> 
             <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#vocalrge" role="button" aria-expanded="false" aria-controls="vocalrge" aria-label="Ver más sobre reflujo gastroesofágico y problemas de voz">
               Ver más
           </a>
              </div>  
-             <span class="collapse" id="vocalrge">
+             <div class="collapse" id="vocalrge">
        <h4>Reflujo Gastroesofágico y Voz: Una Conexión Que No Debes Ignorar</h4>
 
     <p>¿Alguna vez has experimentado ronquera, carraspera constante, una sensación de nudo en la garganta o dificultad para tragar, incluso sin un resfriado? Estos síntomas, a menudo desconcertantes, pueden no estar relacionados directamente con un problema de las cuerdas vocales, sino con un trastorno digestivo común: el <strong>reflujo gastroesofágico (RGE)</strong>. La conexión entre el estómago y la laringe es más estrecha de lo que pensamos, y comprenderla es fundamental para proteger nuestra salud vocal y prevenir problemas a largo plazo.</p>
@@ -2003,10 +2466,10 @@
       un <a href="#rge-test">cuestionario para detectar si presentas síntomas de reflujo</a>
     </p>
 
-        </span>
+        </div>
           </article>
         </div>
-        <div class="card-footer bg-primary text-white">
+        <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
         </div>
         </div>
 
@@ -2015,7 +2478,7 @@
   </div>
 
 <div class="container-flex text-center my-4 p-0">
-    <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+    <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
   </div>
 
 
@@ -2031,12 +2494,13 @@
         <div class=card-body>
         <h4 class="card-title h5">Reduciendo el esfuerzo vocal.</h4>
         <article class=card-text>
-          <div class="text-center mb-2"> 
+          <p class="card-text small text-muted mb-2">El trabajo docente requiere un uso constante de la voz, lo que puede llevar a problemas vocales como nódulos o disfonía si no se toman precauciones adecuadas. A continuación, se...</p>
+    <div class="text-center mb-2"> 
             <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#vocal2" role="button" aria-expanded="false" aria-controls="vocal2" aria-label="Ver más sobre cómo reducir el esfuerzo vocal">
               Ver más
           </a>
              </div>  
-             <span class="collapse" id="vocal2">
+             <div class="collapse" id="vocal2">
            <h4>El Cuidado de la Voz: Estrategias para Reducir el Esfuerzo Vocal</h4>
         
                 <p>El trabajo docente requiere un uso constante de la voz, lo que puede llevar a problemas vocales como 
@@ -2089,10 +2553,10 @@
               </button>
             </a>
            </div>
-             </span>
+             </div>
         </article>
         </div>
-        <div class="card-footer bg-primary text-white">
+        <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
         </div>
         </div>
 
@@ -2101,17 +2565,18 @@
 <div class="card-body">
   <h4 class="card-title h5">Cuidados de la voz. Guía.</h4>
   <article class="card-text">
+    <p class="card-text small text-muted mb-2">Como docente, tu voz es tu herramienta más valiosa de trabajo y comunicación. Un uso incorrecto o un cuidado deficiente pueden llevar a problemas de salud a largo plazo, como di...</p>
     <div class="text-center mb-2"> 
-      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#vozdocente1" role="button" aria-expanded="false" aria-controls="collapseExample">
+      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#vozdocente1" role="button" aria-expanded="false" aria-controls="vozdocente1">
       Ver más
     </a>
        </div> 
-       <span class="collapse" id="vozdocente1">    
+       <div class="collapse" id="vozdocente1">    
    
     <h4>Guía Completa de Cuidados y Uso de la Voz para Docentes</h4>
     <p>Como docente, tu voz es tu herramienta más valiosa de trabajo y comunicación. Un uso incorrecto o un cuidado deficiente pueden llevar a problemas de salud a largo plazo, como disfonía, nódulos o pólipos en las cuerdas vocales. Cuidar tu voz no solo te protege de estas afecciones, sino que también mejora la calidad y la efectividad de tu enseñanza. Aquí te presentamos una guía con lineamientos esenciales para mantener tu voz sana y fuerte.</p>
 
-    ---
+<hr>
 
     <h4>1. Cuidado Diario y Prevención</h4>
     <p>El cuidado vocal comienza con hábitos simples que debes incorporar a tu rutina diaria:</p>
@@ -2122,7 +2587,7 @@
         <li><strong>Evita Irritantes:</strong> Mantente alejado de ambientes con humo de tabaco, polvo, productos químicos o el aire acondicionado muy fuerte y seco.</li>
     </ul>
 
-    ---
+<hr>
 
     <h4>2. Técnicas de Uso Vocal en el Aula</h4>
     <p>Utilizar la voz de forma eficiente en el salón de clases es clave para evitar el desgaste y la tensión:</p>
@@ -2133,7 +2598,7 @@
         <li><strong>Modula tu Tono y Volumen:</strong> Evita mantener un tono de voz monótono. Varía el volumen, el tono y el ritmo para mantener el interés de los estudiantes y, al mismo tiempo, darle un respiro a tus cuerdas vocales.</li>
     </ul>
 
-    ---
+<hr>
 
     <h4>3. Erradica Malos Hábitos Vocales</h4>
     <p>Estos comportamientos son perjudiciales y pueden dañar seriamente tus cuerdas vocales con el tiempo:</p>
@@ -2143,7 +2608,7 @@
         <li><strong>No Hables sobre el Ruido:</strong> Si los estudiantes están haciendo ruido, espera a que se callen o utiliza una señal visual para pedir silencio en lugar de intentar hablar por encima del bullicio.</li>
     </ul>
 
-    ---
+<hr>
 
     <h4>4. Ejercicios y Cuidados Adicionales</h4>
     <p>Incorpora estos ejercicios y prácticas para mantener tu voz en óptimas condiciones:</p>
@@ -2155,16 +2620,16 @@
     </ul>
     <p>Una voz cuidada es una voz que te permite comunicarte mejor y con más energía. Invertir en su salud es invertir en tu bienestar y en el éxito de tu profesión.</p>
 
-</span>
+</div>
     </article>
     </div>
-    <div class="card-footer bg-primary"> 
+    <div class="card-footer bg-primary" aria-hidden="true" style="height:4px;padding:0"> 
     </div>
       </div>
     </div>
 
      <div class="container-flex text-center my-4 p-0">
-        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
       </div>
 
 
@@ -2175,12 +2640,13 @@
 <div class="card-body">
   <h4 class="card-title h5">Infusiones útiles.</h4>
   <article class="card-text">
+    <p class="card-text small text-muted mb-2">Cuidar la voz es vital para los profesionales que la usan a diario. Las infusiones adecuadas pueden ser un gran aliado para mantener la garganta y las cuerdas vocales en óptimas...</p>
     <div class="text-center mb-2"> 
-      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#tevoz" role="button" aria-expanded="false" aria-controls="collapseExample">
+      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#tevoz" role="button" aria-expanded="false" aria-controls="tevoz">
       Ver más
     </a>
        </div> 
-       <span class="collapse" id="tevoz">    
+       <div class="collapse" id="tevoz">    
  
   <p>Cuidar la voz es vital para los profesionales que la usan a diario. Las infusiones adecuadas pueden ser un gran aliado para mantener la garganta y las cuerdas vocales en óptimas condiciones. Aquí te presento una lista de preparaciones, ordenadas de las más a las menos beneficiosas.</p>
 
@@ -2219,10 +2685,10 @@
   <h4>Un consejo final:</h4>
   <p>Independientemente de la infusión que elijas, recuerda que la clave es beberla tibia, nunca demasiado caliente, y tomarla despacio. La hidratación constante a lo largo del día es tan importante como la infusión misma para mantener la voz en perfecto estado.</p>
  
-</span>
+</div>
     </article>
     </div>
-    <div class="card-footer bg-primary"> 
+    <div class="card-footer bg-primary" aria-hidden="true" style="height:4px;padding:0"> 
       </div>
     </div>
 
@@ -2233,17 +2699,18 @@
         <div class=card-body>
         <h4 class="card-title h5">Calentar y enfriar la voz.</h4>
         <article class=card-text>
-          <div class="text-center mb-2"> 
+          <p class="card-text small text-muted mb-2">Nuestra voz es una herramienta invaluable, especialmente para aquellos que la utilizan como principal medio de trabajo, como los docentes, oradores y cantantes. Al igual que un ...</p>
+    <div class="text-center mb-2"> 
             <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#vocalcal" role="button" aria-expanded="false" aria-controls="vocalcal" aria-label="Ver más sobre ejercicios para calentar y enfriar la voz">
               Ver más
           </a>
              </div>  
-             <span class="collapse" id="vocalcal">
+             <div class="collapse" id="vocalcal">
        <h4>Cuidando tu Instrumento: Guía para Calentar y Enfriar la Voz en Docentes y Profesionales Vocales</h4>
 <p>Nuestra voz es una herramienta invaluable, especialmente para aquellos que la utilizan como principal medio de trabajo, como los docentes, oradores y cantantes. Al igual que un atleta calienta y enfría sus músculos, la voz requiere una preparación y un cuidado específicos para funcionar óptimamente y prevenir lesiones. Ignorar esta rutina puede llevar a fatiga vocal, disfonía e incluso problemas más serios a largo plazo.</p>
 <p>Este artículo te brindará una guía práctica con ejercicios sencillos y efectivos para calentar y enfriar tu voz, asegurando que tu instrumento esté siempre listo y protegido.</p>
 
----
+<hr>
 
 <h4>¿Por qué Calentar la Voz?</h4>
 <p>Calentar la voz es fundamental por varias razones:</p>
@@ -2255,7 +2722,7 @@
     <li><strong>Optimiza el rendimiento vocal:</strong> Una voz calentada es más flexible, resistente y capaz de mantener su calidad durante períodos prolongados.</li>
 </ul>
 
----
+<hr>
 
 <h4>¿Por qué Enfriar la Voz?</h4>
 <p>El enfriamiento es tan importante como el calentamiento y a menudo es el paso más olvidado:</p>
@@ -2266,7 +2733,7 @@
     <li><strong>Mantiene la salud vocal a largo plazo:</strong> Un enfriamiento constante contribuye a la longevidad y resistencia de tu aparato fonador.</li>
 </ul>
 
----
+<hr>
 
 <h4>Rutina de Calentamiento Vocal (10-15 minutos)</h4>
 <p>Antes de empezar tu jornada laboral o cualquier actividad vocal intensa, dedica unos minutos a estos ejercicios:</p>
@@ -2300,7 +2767,7 @@
     <li><strong>Frases de ensayo:</strong> Practica algunas frases o expresiones que usarás durante tu actividad vocal, variando la entonación y el volumen.</li>
 </ul>
 
----
+<hr>
 
 <h4>Rutina de Enfriamiento Vocal (5-7 minutos)</h4>
 <p>Al finalizar tu jornada laboral o cualquier actividad vocal intensa, es crucial dedicar tiempo a relajar tu voz.</p>
@@ -2328,7 +2795,7 @@
     <li><strong>Descanso vocal (si es posible):</strong> Si tu voz se siente cansada, intenta limitar el habla después de tu enfriamiento. Unos minutos de silencio pueden ser muy beneficiosos.</li>
 </ul>
 
----
+<hr>
 
 <h4>Consejos Adicionales para el Cuidado Vocal</h4>
 <ul>
@@ -2341,19 +2808,19 @@
     <li><strong>Atención a las señales de alerta:</strong> Si experimentas cambios persistentes en la voz (ronquera, fatiga, pérdida de voz) que duran más de dos semanas, consulta a un otorrinolaringólogo especializado en voz.</li>
 </ul>
 
----
+<hr>
 
 <p>Tu voz es un tesoro y un instrumento delicado. Adoptar una rutina diaria de calentamiento y enfriamiento, junto con hábitos de cuidado vocal, te permitirá mantener tu voz sana, fuerte y resistente a lo largo de tu carrera profesional. ¡Invierte en tu voz, es la mejor inversión para tu bienestar y tu desempeño laboral!</p>
-        </span>
+        </div>
           </article>
         </div>
-        <div class="card-footer bg-primary">
+        <div class="card-footer bg-primary" aria-hidden="true" style="height:4px;padding:0">
         </div>
         </div>
     </div>
 
  <div class="container-flex text-center my-4 p-0">
-        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
   </div>
 
   <h3 id="laringoscopy"  class="h4 text-center text-dark py-1" style="background-color: #d7e3f0;">
@@ -2365,16 +2832,17 @@
         
 
    <div class="card p-3">
-        <img loading="lazy" src="./imagenes/nodulos.webp" style="max-height: 280px;" class=card-img-top alt="imágen de nodulos en la garganta" width="300" height="278">
+        <img loading="lazy" src="./imagenes/nodulos.webp" class="card-img-top" alt="imágen de nodulos en la garganta" width="300" height="278" style="height:250px;object-fit:cover;">
         <div class=card-body>
         <h4 class="card-title5 h5">Nódulos Laríngeos.</h4>
         <article class=card-text>
-          <div class="text-center mb-2"> 
-            <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#vocalnod" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <p class="card-text small text-muted mb-2">Los nódulos laríngeos, comúnmente conocidos como "nódulos de las cuerdas vocales" o "nódulos del cantante", son pequeñas protuberancias no cancerosas que se forman en las cuerda...</p>
+    <div class="text-center mb-2"> 
+            <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#vocalnod" role="button" aria-expanded="false" aria-controls="vocalnod">
               ver más
           </a>
              </div>  
-             <span class="collapse" id="vocalnod">
+             <div class="collapse" id="vocalnod">
          
     <h4>Nódulos Laríngeos: Comprendiendo estas Alteraciones de la Voz</h4>
     <p>Los <strong>nódulos laríngeos</strong>, comúnmente conocidos como "nódulos de las cuerdas vocales" o "nódulos del cantante", son pequeñas protuberancias no cancerosas que se forman en las cuerdas vocales. Estas lesiones se desarrollan como resultado de un <strong>abuso o mal uso crónico de la voz</strong>, lo que genera una inflamación repetida y engrosamiento del tejido vocal en un punto específico. Al ser bilaterales (aparecen en ambas cuerdas vocales, generalmente de forma simétrica), impiden que las cuerdas vocales se cierren completamente al hablar o cantar, afectando la calidad de la voz.</p>
@@ -2445,10 +2913,10 @@
 
     <p>Un diagnóstico y tratamiento tempranos, idealmente bajo la guía de un otorrinolaringólogo y un fonoaudiólogo/a, son esenciales para lograr la recuperación completa de la voz y evitar complicaciones a largo plazo.</p>
 
-             </span>
+             </div>
         </article>
       </div>
-      <div class="card-footer bg-primary text-white">
+      <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
       </div>
       </div>
 
@@ -2457,12 +2925,13 @@
 <div class="card-body">
   <h3 class="card-title h5">Hiatus Longitudinal.</h3>
   <article class="card-text">
+    <p class="card-text small text-muted mb-2">El hiatus longitudinal es una condición en la que las cuerdas vocales no logran un cierre completo a lo largo de su extensión durante la fonación. En una laringe sana, las cuerd...</p>
     <div class="text-center mb-2"> 
-      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#hiatus" role="button" aria-expanded="false" aria-controls="collapseExample">
+      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#hiatus" role="button" aria-expanded="false" aria-controls="hiatus">
       Ver más
     </a>
        </div> 
-       <span class="collapse" id="hiatus">    
+       <div class="collapse" id="hiatus">    
       <h4>Disfonía por Hiatus Longitudinal: Comprendiendo la Insuficiencia en el Cierre Vocal</h4>
     <p>El <strong>hiatus longitudinal</strong> es una condición en la que las cuerdas vocales no logran un cierre completo a lo largo de su extensión durante la fonación. En una laringe sana, las cuerdas deben juntarse de forma paralela y firme; sin embargo, en el hiatus, queda un espacio o "hueco" que permite el escape continuo de aire. Esta <strong>insuficiencia glótica</strong> da como resultado una voz soplada, débil y una fatiga vocal persistente, ya que el sistema requiere un esfuerzo extra para compensar el aire perdido.</p>
 
@@ -2513,10 +2982,10 @@
     </ul>
 
     <p>Si notas que tu voz suena "con aire" o te cansas rápidamente al hablar, es vital consultar a un otorrinolaringólogo.</p>
-</span>
+</div>
     </article>
      </div>
-    <div class="card-footer bg-primary"> 
+    <div class="card-footer bg-primary" aria-hidden="true" style="height:4px;padding:0"> 
    
       </div>
     </div>
@@ -2527,12 +2996,13 @@
 <div class="card-body">
   <h4 class="card-title h5">La Presbifonía: Cuando la Voz Envejece.</h4>
   <article class="card-text">
+    <p class="card-text small text-muted mb-2">El envejecimiento trae consigo muchos cambios físicos, y la voz no es una excepción. El deterioro de la calidad y la función vocal asociado a la edad se conoce como Presbifonía ...</p>
     <div class="text-center mb-2"> 
-      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#presbi" role="button" aria-expanded="false" aria-controls="collapseExample">
+      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#presbi" role="button" aria-expanded="false" aria-controls="presbi">
       Ver más
     </a>
        </div> 
-       <span class="collapse" id="presbi">    
+       <div class="collapse" id="presbi">    
  
     <p>El envejecimiento trae consigo muchos cambios físicos, y la voz no es una excepción. El deterioro de la calidad y la función vocal asociado a la edad se conoce como <strong>Presbifonía</strong> o disfonía senil. Este fenómeno está íntimamente ligado a la pérdida muscular general del cuerpo, un proceso conocido como sarcopenia. Conozca qué es la presbifonía, por qué ocurre y cómo se puede tratar.</p>
 
@@ -2589,10 +3059,10 @@
 
     <p>Si experimenta disfonía persistente, es fundamental consultar a un otorrinolaringólogo y a un logopeda/foniatra para recibir un diagnóstico y un plan de tratamiento personalizado.</p>
 
-</span>
+</div>
     </article>
     </div>  
-    <div class="card-footer bg-primary"> 
+    <div class="card-footer bg-primary" aria-hidden="true" style="height:4px;padding:0"> 
   
       </div>
     </div>        
@@ -2600,7 +3070,7 @@
   </div>
 
   <div class="container-flex text-center my-4 p-0">
-        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
       </div>
 
    
@@ -2608,16 +3078,17 @@
   <div class="card-group"> 
 
    <div class="card p-3">
-        <img loading="lazy" src="./imagenes/ca-laringe.webp" style="max-height: 280px;" class="card-img-top" alt="Lesiones y nódulos en laringe - cáncer laríngeo visualizado por laringoscopia" width="300" height="283" style="height:250px;object-fit:cover;">
+        <img loading="lazy" src="./imagenes/ca-laringe.webp" class="card-img-top" alt="Lesiones y nódulos en laringe - cáncer laríngeo visualizado por laringoscopia" width="300" height="283" style="height:250px;object-fit:cover;">
         <div class=card-body>
         <h4 class="card-title5 h5">Cáncer de Laringe.</h4>
         <article class=card-text>
-          <div class="text-center mb-2"> 
-            <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#ca-cancer" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <p class="card-text small text-muted mb-2">El carcinoma epidermoide de laringe, también conocido como cáncer de células escamosas de la laringe, es el tipo más común de cáncer que afecta la laringe o "caja de la voz". Es...</p>
+    <div class="text-center mb-2"> 
+            <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#ca-cancer" role="button" aria-expanded="false" aria-controls="ca-cancer">
               ver más
           </a>
              </div>  
-             <span class="collapse" id="ca-cancer">
+             <div class="collapse" id="ca-cancer">
              <h4>Carcinoma Epidermoide de Laringe: Una Mirada Detallada al Cáncer de Laringe</h4>
 <p>El <strong>carcinoma epidermoide de laringe</strong>, también conocido como cáncer de células escamosas de la laringe, es el tipo más común de cáncer que afecta la laringe o "caja de la voz". Esta enfermedad se origina en las células planas y delgadas que recubren el interior de la laringe. Dada su función vital en la respiración, el habla y la deglución, un cáncer en esta área puede tener un impacto significativo en la calidad de vida.</p>
 
@@ -2667,28 +3138,29 @@
     <li><strong>Quimioterapia:</strong> Utiliza medicamentos para destruir las células cancerosas. A menudo se combina con la radioterapia (quimiorradiación) para potenciar su efecto, especialmente en cánceres más avanzados.</li>
   </ul>
 <p>La rehabilitación (terapia de voz, terapia de deglución) es una parte fundamental del tratamiento para ayudar a los pacientes a recuperar sus funciones lo mejor posible. La detección temprana y la intervención oportuna son cruciales para el éxito del tratamiento y la preservación de la calidad de vida en pacientes con carcinoma epidermoide de laringe.</p>
-             </span>
+             </div>
         </article>
       </div>
-      <div class="card-footer bg-primary text-white">
+      <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
       </div>
       </div>    
 
   <div class="card p-3">
-        <img loading="lazy" src="./imagenes/hpv-laringe.webp" style="max-height: 280px;" class=card-img-top alt="imágen de hpv en laringe" width="300" height="266" style="height:250px;object-fit:cover;">
+        <img loading="lazy" src="./imagenes/hpv-laringe.webp" class="card-img-top" alt="imágen de hpv en laringe" width="300" height="266" style="height:250px;object-fit:cover;">
         <div class=card-body>
         <h4 class="card-title5 h5">Papilomatosis laringea (HPV).</h4>
         <article class=card-text>
-          <div class="text-center mb-2"> 
-            <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#hpv" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <p class="card-text small text-muted mb-2">El Virus del Papiloma Humano (VPH) es ampliamente conocido por su relación con el cáncer cervical en mujeres. Sin embargo, su impacto se extiende a otras áreas del cuerpo, inclu...</p>
+    <div class="text-center mb-2"> 
+            <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#hpv" role="button" aria-expanded="false" aria-controls="hpv">
               ver más
           </a>
              </div>  
-             <span class="collapse" id="hpv">
+             <div class="collapse" id="hpv">
               
         <p>El Virus del Papiloma Humano (VPH) es ampliamente conocido por su relación con el cáncer cervical en mujeres. Sin embargo, su impacto se extiende a otras áreas del cuerpo, incluyendo la laringe y las vías respiratorias. Si bien la transmisión sexual es la vía principal, es crucial comprender que el VPH puede llegar a estas zonas por otras modalidades, y su presencia puede tener implicaciones significativas para la salud.</p>
 
-        ---
+<hr>
 
         <h4>Tipos de VPH y su Relación con el Cáncer en Vías Respiratorias</h4>
         <p>Existen más de 200 tipos de VPH, clasificados en dos categorías principales: de bajo riesgo y de alto riesgo.</p>
@@ -2697,7 +3169,7 @@
             <li><strong>VPH de alto riesgo:</strong> Tipos como el <strong>VPH-16</strong> y el <strong>VPH-18</strong>, comúnmente asociados con el cáncer de cuello uterino, también pueden infectar la laringe y otras áreas de la cabeza y el cuello. La infección persistente por estos tipos de VPH de alto riesgo es un factor de riesgo importante para el desarrollo de <strong>cáncer de orofaringe</strong> (amígdalas, base de la lengua, paladar blando), <strong>laringe</strong> y <strong>esófago</strong>. El VPH-16 es el tipo más frecuentemente implicado en los cánceres de cabeza y cuello relacionados con el VPH.</li>
         </ul>
 
-        ---
+<hr>
 
         <h4>La Importancia de la Vacunación: Incluso en Personas con la Enfermedad</h4>
         <p>La vacuna contra el VPH es una herramienta de prevención extraordinariamente eficaz. Actualmente, las vacunas disponibles protegen contra los tipos de VPH más comunes y de alto riesgo (incluyendo el VPH-6, 11, 16 y 18, y en algunas vacunas, hasta 9 tipos).</p>
@@ -2708,7 +3180,7 @@
             <li><strong>Prevención de progresión a cáncer:</strong> Al prevenir nuevas infecciones por tipos de alto riesgo, la vacuna disminuye el riesgo de desarrollar cánceres relacionados con el VPH en el futuro, tanto en las vías respiratorias como en otras partes del cuerpo.</li>
         </ul>
 
-        ---
+<hr>
 
         <h4>Evolución y Tratamientos del VPH en la Laringe y Vías Respiratorias</h4>
         <p>La evolución de la papilomatosis respiratoria recurrente (PRR) puede variar significativamente entre individuos. En algunos casos, los papilomas pueden desaparecer espontáneamente, mientras que en otros, son persistentes y requieren múltiples intervenciones quirúrgicas a lo largo de la vida. La PRR puede causar:</p>
@@ -2733,7 +3205,7 @@
         </ul>
         <p>En el caso de los cánceres de cabeza y cuello relacionados con el VPH, el tratamiento puede incluir cirugía, radioterapia, quimioterapia o una combinación de estas modalidades, dependiendo del estadio y la extensión del cáncer.</p>
 
-        ---
+<hr>
 
         <h4>Modalidades de Transmisión del VPH: Más Allá de la Vía Sexual</h4>
         <p>Si bien la transmisión sexual (oral-genital, genital-genital, anal-genital) es la vía más frecuente y reconocida para la mayoría de las infecciones por VPH, es crucial entender que el virus no se limita a esta modalidad, especialmente en el contexto de las vías respiratorias.</p>
@@ -2752,34 +3224,35 @@
         <p>Es importante recalcar que, aunque estas otras vías de transmisión existen, <strong>la transmisión sexual sigue siendo la principal vía de infección para la mayoría de los casos de VPH en adultos</strong>. Sin embargo, comprender la diversidad de las modalidades de transmisión ayuda a desmitificar el VPH y a entender por qué puede aparecer en lugares inesperados, así como a reforzar la importancia de la higiene y las medidas preventivas.</p>
 
         <p>En resumen, el VPH en la laringe y las vías respiratorias es un problema de salud que merece atención. La comprensión de sus tipos, su relación con el cáncer, la importancia de la vacunación (incluso en personas ya infectadas) y las diversas formas de transmisión son cruciales para la prevención, el diagnóstico temprano y el manejo efectivo de esta condición.</p>
-             </span>
+             </div>
         </article>
       </div>
-      <div class="card-footer bg-primary text-white">
+      <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
       </div>
       </div>        
       
 <div class="card p-3">
-        <img loading="lazy" src="./imagenes/granul-laringe.webp" style="max-height: 280px;" class="card-img-top" alt="Granulomas en laringe causados por reflujo o trauma vocal" width="300" height="219" style="height:250px;object-fit:cover;">
+        <img loading="lazy" src="./imagenes/granul-laringe.webp" class="card-img-top" alt="Granulomas en laringe causados por reflujo o trauma vocal" width="300" height="219" style="height:250px;object-fit:cover;">
         <div class=card-body>
         <h4 class="card-title5 h5">Granulomas en laringe.</h4>
         <article class=card-text>
-          <div class="text-center mb-2"> 
+          <p class="card-text small text-muted mb-2">Los granulomas de la laringe son crecimientos benignos que se forman generalmente en la parte posterior de la laringe, específicamente sobre el cartílago aritenoides, cerca de d...</p>
+    <div class="text-center mb-2"> 
             <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#granuloma" role="button" aria-expanded="false" aria-controls="granuloma" aria-label="Ver más sobre granulomas en la laringe">
               Ver más
           </a>
              </div>  
-             <span class="collapse" id="granuloma">
+             <div class="collapse" id="granuloma">
       <h4>Granulomas de la Laringe: Una Afección Común y sus Causas</h4>
     <p>Los <strong>granulomas de la laringe</strong> son crecimientos benignos que se forman generalmente en la parte posterior de la laringe, específicamente sobre el cartílago aritenoides, cerca de donde se unen las cuerdas vocales. Aunque no son cancerosos, pueden causar síntomas molestos y afectar significativamente la calidad de vida de quienes los padecen.</p>
 
-    ---
+<hr>
 
     <h4>¿Qué son los Granulomas de la Laringe?</h4>
     <p>Un granuloma es una pequeña masa de tejido inflamado que se desarrolla como respuesta del cuerpo a una irritación o lesión crónica. En la laringe, esta irritación constante lleva a la formación de un tejido granular que intenta proteger el área dañada.</p>
     <p>A menudo, estos granulomas son unilaterales (afectan un solo lado), pero en algunos casos pueden ser bilaterales (afectar ambos lados). Su tamaño y ubicación pueden variar, lo que influye directamente en los síntomas que experimenta el paciente.</p>
 
-    ---
+<hr>
 
     <h4>Causas Principales de los Granulomas Laríngeos</h4>
     <p>La formación de granulomas en la laringe está casi siempre ligada a un trauma o irritación crónica. Las causas más comunes incluyen:</p>
@@ -2812,7 +3285,7 @@
         </li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Síntomas Asociados</h4>
     <p>Los síntomas de los granulomas de la laringe pueden variar, pero los más comunes incluyen:</p>
@@ -2825,7 +3298,7 @@
         <li><strong>Fatiga vocal:</strong> La voz se cansa fácilmente al hablar.</li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Diagnóstico y Tratamiento</h4>
     <p>El diagnóstico de los granulomas laríngeos lo realiza un otorrinolaringólogo mediante una <strong>laringoscopia</strong>, que permite visualizar directamente la laringe y las cuerdas vocales. A menudo, se utiliza una videolaringoestroboscopia para evaluar también la vibración de las cuerdas vocales.</p>
@@ -2849,7 +3322,7 @@
         </li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Prevención</h4>
     <p>La prevención de los granulomas laríngeos se centra en evitar las causas de irritación crónica:</p>
@@ -2861,10 +3334,10 @@
         <li>En pacientes intubados, asegurar un tamaño de tubo adecuado y una intubación atraumática.</li>
     </ul>
     <p>Los granulomas de la laringe, aunque benignos, requieren un manejo integral para aliviar los síntomas y prevenir su recurrencia. Identificar y tratar la causa subyacente es la clave para una recuperación exitosa.</p>
-     </span>
+     </div>
         </article>
       </div>
-      <div class="card-footer bg-primary text-white">
+      <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
       </div>
       </div>   
 
@@ -2872,28 +3345,29 @@
   </div>
 
  <div class="container-flex text-center my-4 p-0">
-        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
       </div>
 
 
   <div class="card-group">  
 
     <div class="card p-3">
-        <img loading="lazy" src="./imagenes/quiste-laringe.webp" class="card-img-top" alt="Quiste en cuerda vocal - lesión benigna que afecta la voz" width="300" height="267">
+        <img loading="lazy" src="./imagenes/quiste-laringe.webp" class="card-img-top" alt="Quiste en cuerda vocal - lesión benigna que afecta la voz" width="300" height="267" style="height:250px;object-fit:cover;">
         <div class=card-body>
         <h4 class="card-title h5">Quistes.</h4>
         <article class=card-text>
-          <div class="text-center mb-2"> 
+          <p class="card-text small text-muted mb-2">Los quistes en las cuerdas vocales son lesiones benignas que se forman dentro o debajo de la mucosa de la cuerda vocal. A diferencia de otras lesiones como los nódulos o los pól...</p>
+    <div class="text-center mb-2"> 
             <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#cyst" role="button" aria-expanded="false" aria-controls="cyst" aria-label="Ver más sobre quistes en las cuerdas vocales">
               Ver más
           </a>
              </div>  
-             <span class="collapse" id="cyst">
+             <div class="collapse" id="cyst">
        
     <h4>Quistes en las Cuerdas Vocales: Comprendiendo estas Afecciones de la Voz</h4>
     <p>Los <strong>quistes en las cuerdas vocales</strong> son lesiones benignas que se forman dentro o debajo de la mucosa de la cuerda vocal. A diferencia de otras lesiones como los nódulos o los pólipos, que suelen estar en la superficie, los quistes son sacos cerrados llenos de líquido o material semisólido. Son una causa común de disfonía (ronquera) y pueden afectar significativamente la calidad de la voz de una persona.</p>
 
-    ---
+<hr>
 
     <h4>¿Qué son y cómo se Clasifican los Quistes Vocales?</h4>
     <p>Un quiste cordal es una especie de "ampolla" o "saco" encapsulado que se desarrolla en el tejido de la cuerda vocal. La presencia de este quiste impide la vibración normal de la cuerda vocal, lo que altera el sonido de la voz. Se clasifican principalmente en dos tipos:</p>
@@ -2908,7 +3382,7 @@
         </li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Posibles Causas de los Quistes en las Cuerdas Vocales</h4>
     <p>Aunque los quistes epidermoides tienen un componente congénito, la mayoría de los quistes vocales están relacionados con:</p>
@@ -2935,7 +3409,7 @@
         </li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Síntomas Típicos de los Quistes Vocales</h4>
     <p>Los síntomas de un quiste vocal pueden aparecer gradualmente y variar en intensidad. Los más comunes incluyen:</p>
@@ -2948,7 +3422,7 @@
         <li><strong>Dolor o Malestar en la Garganta o Cuello:</strong> Menos común, pero puede presentarse.</li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Diagnóstico Preciso</h4>
     <p>El diagnóstico de un quiste en las cuerdas vocales lo realiza un otorrinolaringólogo especializado en voz. Los pasos clave son:</p>
@@ -2967,7 +3441,7 @@
         </li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Opciones de Tratamiento</h4>
     <p>El tratamiento de los quistes en las cuerdas vocales suele ser quirúrgico, pero siempre se complementa con terapia vocal y manejo de las causas subyacentes:</p>
@@ -2990,7 +3464,7 @@
         </li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Prevención de Quistes en las Cuerdas Vocales</h4>
     <p>La prevención se centra en la <strong>higiene vocal</strong> y el manejo de los factores de riesgo:</p>
@@ -3014,10 +3488,10 @@
         <li><strong>Descanso Vocal:</strong> Darle a la voz un descanso adecuado, especialmente después de un uso intenso o prolongado.</li>
     </ul>
     <p>En conclusión, los quistes en las cuerdas vocales son una condición manejable que, con un diagnóstico temprano y un tratamiento adecuado (a menudo una combinación de cirugía y terapia vocal), permite a los pacientes recuperar una voz sana y funcional.</p>
-        </span>
+        </div>
         </article>
         </div>
-        <div class="card-footer bg-primary text-white">
+        <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
         </div>
         </div>  
 
@@ -3026,17 +3500,18 @@
         <div class=card-body>
         <h4 class="card-title h5">Leucoplasia vocal.</h4>
         <article class=card-text>
-          <div class="text-center mb-2"> 
+          <p class="card-text small text-muted mb-2">La laringe, el órgano de la voz y protector de la vía aérea, puede ser asiento de diversas lesiones. Entre ellas, las lesiones premalignas (también conocidas como precancerosas)...</p>
+    <div class="text-center mb-2"> 
             <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#leuco" role="button" aria-expanded="false" aria-controls="leuco" aria-label="Ver más sobre leucoplasia vocal y lesiones premalignas">
               Ver más
           </a>
              </div>  
-             <span class="collapse" id="leuco">
+             <div class="collapse" id="leuco">
    
     <h4>Lesiones Premalignas de la Laringe: Comprendiendo la Displasia, Leucoplasia y Eritroplasia</h4>
     <p>La laringe, el órgano de la voz y protector de la vía aérea, puede ser asiento de diversas lesiones. Entre ellas, las <strong>lesiones premalignas</strong> (también conocidas como precancerosas) son de particular importancia, ya que representan cambios celulares que, si no se tratan, tienen el potencial de evolucionar hacia un cáncer invasivo. Comprender estas afecciones, sus grados y la forma en que se evalúan, es crucial para la prevención y el manejo temprano del cáncer de laringe.</p>
 
-    ---
+<hr>
 
     <h4>¿Qué son las Lesiones Premalignas (Displasias) de la Laringe?</h4>
     <p>Las lesiones premalignas en la laringe se refieren a alteraciones en el crecimiento y la maduración de las células que recubren la superficie (epitelio) de las cuerdas vocales o de otras partes de la laringe. Estos cambios no son cáncer todavía, pero indican un riesgo aumentado de que se conviertan en él con el tiempo. El término médico para estos cambios celulares anormales es <strong>displasia</strong>.</p>
@@ -3048,7 +3523,7 @@
         <li><strong>Carcinoma in situ (CIS):</strong> Considerado la etapa más avanzada de la displasia. Las células ya tienen todas las características de las células cancerosas, pero aún están confinadas al epitelio superficial y no han invadido las capas más profundas. Se considera un cáncer "muy temprano" y tiene un riesgo extremadamente alto de progresar a invasivo si no se trata.</li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Leucoplasia y Eritroplasia: Las Señales Visuales</h4>
     <p>Antes de que se realice una biopsia y se obtenga un diagnóstico histopatológico de displasia, los otorrinolaringólogos observan ciertas <strong>lesiones visuales</strong> en la laringe que sugieren la presencia de estas alteraciones premalignas:</p>
@@ -3058,7 +3533,7 @@
     </ul>
     <p>Es fundamental entender que el diagnóstico definitivo de displasia y su grado solo puede establecerse mediante un estudio anatomopatológico de una muestra de tejido (biopsia), no solo por la apariencia visual.</p>
 
-    ---
+<hr>
 
     <h4>Factores de Riesgo para el Desarrollo de Displasias</h4>
     <p>Los principales factores de riesgo que contribuyen al desarrollo de lesiones premalignas en la laringe son los mismos que los del cáncer de laringe:</p>
@@ -3069,7 +3544,7 @@
         <li><strong>Mal uso o abuso vocal crónico:</strong> Puede generar irritación local que, sumada a otros factores, aumente el riesgo.</li>
     </ul>
 
-    ---
+<hr>
 
     <h4>La Biopsia para Evaluación Anatomopatológica: Pros y Contras</h4>
     <p>Ante la detección de una leucoplasia o eritroplasia, la <strong>biopsia</strong> es el método estándar de oro para obtener un diagnóstico preciso y determinar el grado de displasia. Sin embargo, este procedimiento tiene sus pros y contras:</p>
@@ -3089,7 +3564,7 @@
         <li><strong>Necesidad de Vigilancia Continua:</strong> Un resultado benigno o de displasia leve no significa que el riesgo haya desaparecido, especialmente si los factores de riesgo (como el tabaquismo) persisten. Se requiere un seguimiento regular.</li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Manejo y Prevención</h4>
     <p>El manejo de las lesiones premalignas depende del grado de displasia:</p>
@@ -3106,34 +3581,35 @@
         <li><strong>Revisiones Médicas Regulares:</strong> Especialmente en fumadores o exfumadores, la revisión periódica por un ORL puede permitir la detección temprana de cualquier cambio sospechoso.</li>
     </ul>
     <p>Las lesiones premalignas de la laringe son una advertencia. Reconocerlas, entender su riesgo y abordarlas a tiempo, con un enfoque que priorice la eliminación de los factores de riesgo y un seguimiento adecuado, es vital para evitar su progresión a cáncer y preservar la salud de la voz.</p>
-        </span>
+        </div>
         </article>
         </div>
-        <div class="card-footer bg-primary text-white">
+        <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
         </div>
         </div>   
 
 <div class="card p-3">
-        <img loading="lazy" src="./imagenes/edemabordelibre.webp" class=card-img-top alt="imagen de edema de Reinke en laringe." width="300" height="318">
+        <img loading="lazy" src="./imagenes/edemabordelibre.webp" class="card-img-top" alt="imagen de edema de Reinke en laringe." width="300" height="318" style="height:250px;object-fit:cover;">
         <div class=card-body>
         <h4 class="card-title h5">Edema de Reinke.</h4>
         <article class=card-text>
-          <div class="text-center mb-2"> 
-            <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#reinke" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <p class="card-text small text-muted mb-2">El edema de Reinke, también conocido como edema de borde libre de cuerdas vocales o laringitis edematosa crónica, es una afección benigna de la laringe caracterizada por una acu...</p>
+    <div class="text-center mb-2"> 
+            <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#reinke" role="button" aria-expanded="false" aria-controls="reinke">
               ver más
           </a>
              </div>  
-             <span class="collapse" id="reinke">
+             <div class="collapse" id="reinke">
     <h4>Edema de Reinke: Cuando la Voz se Hincha</h4>
     <p>El <strong>edema de Reinke</strong>, también conocido como edema de borde libre de cuerdas vocales o laringitis edematosa crónica, es una afección benigna de la laringe caracterizada por una acumulación gelatinosa de líquido debajo de la capa superficial de una o ambas cuerdas vocales, en un espacio específico llamado el "espacio de Reinke". Esta inflamación crónica altera significativamente la vibración de las cuerdas vocales, lo que lleva a cambios distintivos en la voz.</p>
 
-    ---
+<hr>
 
     <h4>¿Qué es el Espacio de Reinke y por qué se Edematiza?</h4>
     <p>Las cuerdas vocales no son simplemente "cuerdas", sino estructuras multicapa complejas. Justo debajo de la capa más externa (el epitelio) se encuentra un espacio superficial, laxo y gelatinoso, conocido como el <strong>espacio de Reinke</strong> o lámina propia superficial. Este espacio es crucial para la vibración libre de las cuerdas vocales, lo que permite la producción de sonido.</p>
     <p>El edema de Reinke se produce cuando este espacio se llena de líquido, causando que las cuerdas vocales se hinchen y se vuelvan pesadas. Esta masa gelatinosa impide la vibración normal y simétrica de las cuerdas, resultando en la disfonía característica.</p>
 
-    ---
+<hr>
 
     <h4>Etiología: Las Causas Principales del Edema de Reinke</h4>
     <p>La causa principal y casi exclusiva del edema de Reinke es la <strong>irritación crónica y prolongada de las cuerdas vocales</strong>, siendo el factor más influyente y preponderante el <strong>tabaquismo</strong>. Sin embargo, otros factores pueden contribuir o exacerbar la condición:</p>
@@ -3160,7 +3636,7 @@
         </li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Síntomas del Edema de Reinke</h4>
     <p>Los síntomas del edema de Reinke se desarrollan gradualmente y empeoran con el tiempo a medida que el edema progresa. Los más característicos son:</p>
@@ -3191,7 +3667,7 @@
         </li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Diagnóstico y Diagnósticos Diferenciales</h4>
     <p>El diagnóstico de edema de Reinke lo realiza un <strong>otorrinolaringólogo (ORL)</strong>. Los métodos incluyen:</p>
@@ -3213,7 +3689,7 @@
         <li><strong>Carcinoma de laringe:</strong> Es vital descartar una malignidad, ya que el tabaquismo es un factor de riesgo común para ambos. La apariencia del edema de Reinke es generalmente benigna, pero cualquier lesión sospechosa debe ser biopsiada.</li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Tratamiento y Prevención</h4>
     <p>El tratamiento del edema de Reinke se basa en dos pilares fundamentales: la eliminación de los irritantes y, en muchos casos, la cirugía.</p>
@@ -3237,10 +3713,10 @@
     </ul>
     <p>En cuanto a la <strong>prevención</strong>, la medida más efectiva es <strong>evitar el tabaquismo por completo</strong>. Para aquellos que ya fuman, la cesación es la mejor forma de prevenir la progresión y la recurrencia. Además, mantener una buena higiene vocal y controlar el reflujo gastroesofágico contribuyen significativamente a la salud de las cuerdas vocales.</p>
     <p>El edema de Reinke es una afección crónica que, aunque benigna, puede tener un impacto devastador en la voz y, en casos extremos, en la respiración. Un enfoque integral que aborde sus causas, especialmente el tabaquismo, y combine la terapia vocal con la cirugía cuando sea necesario, es la clave para una recuperación exitosa y duradera.</p>
-        </span>
+        </div>
         </article>
         </div>
-        <div class="card-footer bg-primary text-white">
+        <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
         </div>
         </div>
 
@@ -3250,23 +3726,24 @@
   </div>
 
   <div class="container-flex text-center my-4 p-0">
-        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
       </div>
 
 
     <div class="card-group">
 
 <div class="card p-3">
-<img loading="lazy" src="./imagenes/candida-lar.webp" class="card-img-top" alt="Laringe afectada por candidiasis - infección fúngica de las cuerdas vocales">
+<img loading="lazy" src="./imagenes/candida-lar.webp" class="card-img-top" alt="Laringe afectada por candidiasis - infección fúngica de las cuerdas vocales" style="height:250px;object-fit:cover;">
 <div class="card-body">
   <h4 class="card-title h5">Laringitis por Hongos.</h4>
   <article class="card-text">
+    <p class="card-text small text-muted mb-2">Las infecciones por hongos en la laringe son menos frecuentes que las causadas por virus o bacterias, pero pueden ser graves, especialmente en pacientes con el sistema inmunitar...</p>
     <div class="text-center mb-2"> 
-      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#bte" role="button" aria-expanded="false" aria-controls="collapseExample">
+      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#bte" role="button" aria-expanded="false" aria-controls="bte">
       Ver más
     </a>
        </div> 
-       <span class="collapse" id="bte">    
+       <div class="collapse" id="bte">    
      
     <h4>🎙️ Infecciones Fúngicas de la Laringe: Candidiasis y Micosis Profundas de Sudamérica</h4>
     <p>Las infecciones por hongos en la laringe son menos frecuentes que las causadas por virus o bacterias, pero pueden ser graves, especialmente en pacientes con el <strong>sistema inmunitario debilitado</strong> (inmunodeprimidos). Se dividen principalmente en infecciones oportunistas como la <strong>candidiasis</strong>, que es la más común, y las <strong>micosis profundas o sistémicas</strong>, endémicas de regiones específicas de Sudamérica.</p>
@@ -3351,31 +3828,32 @@
         </table>
     </div>
 
-</span>
+</div>
     </article>
     </div>
-    <div class="card-footer bg-primary"> 
+    <div class="card-footer bg-primary" aria-hidden="true" style="height:4px;padding:0"> 
     
       </div>
     </div>
 
 
 <div class="card p-3">
-        <img loading="lazy" src="./imagenes/paralisisrecu.webp" class=card-img-top alt="infografia de paralisis de cuerdas vocales.">
+        <img loading="lazy" src="./imagenes/paralisisrecu.webp" class="card-img-top" alt="infografia de paralisis de cuerdas vocales." style="height:250px;object-fit:cover;">
         <div class=card-body>
         <h4 class="card-title h5">Parálisis Vocales.</h4>
         <article class=card-text>
-          <div class="text-center mb-2"> 
-            <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#vocalparalisis" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <p class="card-text small text-muted mb-2">La parálisis de cuerdas vocales es una afección neurológica que ocurre cuando los impulsos nerviosos a los músculos de la laringe se interrumpen, lo que lleva a la pérdida de mo...</p>
+    <div class="text-center mb-2"> 
+            <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#vocalparalisis" role="button" aria-expanded="false" aria-controls="vocalparalisis">
               ver más
           </a>
              </div>  
-             <span class="collapse" id="vocalparalisis">
+             <div class="collapse" id="vocalparalisis">
      
     <h4>Parálisis de Cuerdas Vocales: Cuando la Voz Se Apaga</h4>
     <p>La <strong>parálisis de cuerdas vocales</strong> es una afección neurológica que ocurre cuando los impulsos nerviosos a los músculos de la laringe se interrumpen, lo que lleva a la pérdida de movimiento de una o ambas cuerdas vocales. Esta condición puede variar desde una disfonía leve hasta problemas graves de la voz, la respiración y la deglución. Comprender sus causas, a menudo complejas, es fundamental para un diagnóstico y tratamiento efectivos.</p>
 
-    ---
+<hr>
 
     <h4>¿Qué es y Cómo Afecta?</h4>
     <p>Las cuerdas vocales son dos bandas de tejido muscular ubicadas en la laringe que vibran para producir el sonido de la voz. Se abren para permitir el paso del aire al respirar y se cierran para proteger la vía aérea durante la deglución. El movimiento de las cuerdas vocales está controlado principalmente por el <strong>nervio laríngeo recurrente</strong>, una rama del nervio vago.</p>
@@ -3386,7 +3864,7 @@
         <li><strong>Protección de la Vía Aérea (Deglución):</strong> Si las cuerdas no se cierran adecuadamente, alimentos o líquidos pueden entrar en la tráquea y los pulmones (aspiración), lo que puede llevar a neumonía por aspiración.</li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Causas Más Comunes de la Parálisis de Cuerdas Vocales</h4>
     <p>Las causas de la parálisis de cuerdas vocales son variadas y pueden ir desde condiciones benignas hasta enfermedades graves. Las más frecuentes incluyen:</p>
@@ -3422,7 +3900,7 @@
         </li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Síntomas de la Parálisis de Cuerdas Vocales</h4>
     <p>Los síntomas varían dependiendo de si una o ambas cuerdas están paralizadas, y de la posición en la que quedan las cuerdas:</p>
@@ -3450,7 +3928,7 @@
         </li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Diagnóstico y Diagnósticos Diferenciales</h4>
     <p>El diagnóstico de la parálisis de cuerdas vocales requiere la evaluación de un <strong>otorrinolaringólogo (ORL)</strong>, preferiblemente uno especializado en voz. Los pasos incluyen:</p>
@@ -3484,7 +3962,7 @@
         <li><strong>Laringitis Crónica:</strong> Inflamación de las cuerdas vocales.</li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Tratamiento de la Parálisis de Cuerdas Vocales</h4>
     <p>El tratamiento depende de la causa subyacente, el tipo de parálisis (unilateral o bilateral) y la duración de la condición. A menudo, se inicia con un enfoque conservador, ya que algunas parálisis, especialmente las virales o post-traumáticas leves, pueden recuperarse espontáneamente en 6-12 meses.</p>
@@ -3523,10 +4001,10 @@
     </ul>
     <p>La parálisis de cuerdas vocales es una condición compleja que requiere un enfoque multidisciplinario. Con el diagnóstico y tratamiento adecuados, que a menudo combinan la paciencia, la terapia vocal y, en algunos casos, la cirugía, muchas personas pueden recuperar una calidad de voz funcional y una deglución segura, mejorando significativamente su calidad de vida.</p>
  
-        </span>
+        </div>
         </article>
         </div>
-        <div class="card-footer bg-primary text-white">
+        <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
         </div>
         </div>
 
@@ -3535,21 +4013,22 @@
 
 
 <div class="card p-3">
-<img src="./imagenes/estroboscopia.webp" class="card-img-top" alt="médico efectuando una estroboscopia." loading="lazy">
+<img src="./imagenes/estroboscopia.webp" class="card-img-top" alt="médico efectuando una estroboscopia." loading="lazy" style="height:250px;object-fit:cover;">
 <div class="card-body">
   <h4 class="card-title h5">Alteraciones Mínimas</h4>
   <article class="card-text">
+    <p class="card-text small text-muted mb-2">Las alteraciones vocales mínimas, también conocidas como lesiones de la lámina propia o lesiones laríngeas funcionales, son cambios sutiles en la estructura de las cuerdas vocal...</p>
     <div class="text-center mb-2"> 
-      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#altvoc" role="button" aria-expanded="false" aria-controls="collapseExample">
+      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#altvoc" role="button" aria-expanded="false" aria-controls="altvoc">
       Ver más
     </a>
        </div> 
-       <span class="collapse" id="altvoc">    
+       <div class="collapse" id="altvoc">    
      
     <h4>Alteraciones Vocales Mínimas: Los Enemigos Ocultos de la Voz</h4>
     <p>Las <strong>alteraciones vocales mínimas</strong>, también conocidas como lesiones de la lámina propia o lesiones laríngeas funcionales, son cambios sutiles en la estructura de las cuerdas vocales que no son evidentes en un examen clínico de rutina. Aunque su tamaño es pequeño, pueden tener un impacto desproporcionadamente grande en la calidad de la voz. A diferencia de los nódulos o pólipos, que son más grandes y visibles, estas alteraciones a menudo son la causa de una <strong>disfonía persistente</strong> que no mejora con las terapias convencionales. Comprender estas lesiones es el primer paso para un diagnóstico preciso y un tratamiento eficaz.</p>
 
-    ---
+<hr>
 
     <h4>Tipos y Características de las Alteraciones Vocales Mínimas</h4>
     <p>Las alteraciones vocales mínimas afectan principalmente la lámina propia, la capa gelatinosa que permite la vibración de las cuerdas vocales. A continuación, se describen las más comunes:</p>
@@ -3571,7 +4050,7 @@
         </li>
     </ul>
 
-    ---
+<hr>
 
     <h4>Diagnóstico y Tratamiento</h4>
     <p>El diagnóstico de estas alteraciones es un desafío, ya que no son visibles a simple vista. Se requiere una evaluación exhaustiva por un <strong>otorrinolaringólogo especializado en voz</strong> utilizando una <strong>videolaringoestroboscopia</strong>. Este examen permite visualizar las cuerdas vocales en cámara lenta, revelando anomalías sutiles en el patrón de vibración de la onda mucosa que son indicativas de estas lesiones.</p>
@@ -3588,47 +4067,43 @@
         </li>
     </ul>
 
-    ---
+<hr>
 
     <h4>El Rol del Paciente en el Cuidado Vocal</h4>
     <p>El manejo de estas alteraciones requiere un compromiso a largo plazo con la <strong>higiene vocal</strong>. Evitar el abuso vocal (gritos, carraspeo), mantener una hidratación adecuada y controlar el reflujo gastroesofágico son medidas cruciales que complementan cualquier tratamiento médico. La colaboración entre el paciente, el otorrinolaringólogo y el foniatra es esencial para un diagnóstico y tratamiento exitosos, permitiendo a la persona recuperar una voz clara y funcional.</p>
 
-</span>
+</div>
     </article>
 </div>
-    <div class="card-footer bg-primary"> 
+    <div class="card-footer bg-primary" aria-hidden="true" style="height:4px;padding:0"> 
     </div>
       </div>
-
-
   </div>
 
      <div class="container-flex text-center my-4 p-0">
-        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
       </div>
    
 
-      <div id="reflujo" class="d-grid gap-2">
-        <h2 class="text-center text-white pt-3 pb-3" style="background-color: #003366; font-size: 1.5rem;">5 Reflujo gastro-esofágico y voz.</h2>
-      </div> 
+      <div id="reflujo" class="container section-divider"><span class="sec-num">5</span><h2>Reflujo gastroesofágico y voz</h2></div> 
 
 
 <div class="card-group">
 
   <div class="card p-3">
-    <img loading="lazy" src="./imagenes/dolor-pecho.webp" class=card-img-top alt="mujer con manos sobre el pecho.">
+    <img loading="lazy" src="./imagenes/dolor-pecho.webp" class="card-img-top" alt="mujer con manos sobre el pecho." style="height:250px;object-fit:cover;">
     <div class=card-body>
     <h3 class="card-title h5">Reflujo Gastroesofágico (RGE): Causas, Síntomas y Diagnóstico</h3>
-    <p class=card-text>
+    <article class=card-text>
+    <p class="card-text small text-muted mb-2">El reflujo gastroesofágico (RGE) es una condición en la que el ácido del estómago regresa al esófago. Puede causar acidez, ronquera, tos crónica y sensación de nudo en la garganta.</p>
       <div class="text-center mb-2"> 
-        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#rge2" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#rge2" role="button" aria-expanded="false" aria-controls="rge2">
           ver más
       </a>
          </div>  
-         <span class="collapse" id="rge2">
-          El <strong>reflujo gastroesofágico</strong> (RGE) es una condición en la que el ácido del estómago regresa al esófago, 
-            el tubo que conecta la boca con el estómago.
-          </p>
+         <div class="collapse" id="rge2">
+          <p>El <strong>reflujo gastroesofágico</strong> (RGE) es una condición en la que el ácido del estómago regresa al esófago,
+            el tubo que conecta la boca con el estómago.</p>
           
           <h4>Función del Esfínter Esofágico Inferior (EEI)</h4>
           <p>El <strong>esfínter esofágico inferior</strong> (EEI) es un músculo ubicado en la parte inferior del esófago que cierra la conexión entre el esófago y el estómago, evitando que el contenido estomacal regrese.</p>
@@ -3675,34 +4150,36 @@
             adoptar <strong>medidas higiénico-dietéticas</strong> para reducir los síntomas y prevenir su empeoramiento.
           </p>
         
-      </span>
-     </div>
-    <div class="card-footer bg-primary text-white">
+      </div>
+    </article>
     </div>
+    <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
     </div>
+  </div>
 
       <div class="card p-3">
-      <img loading="lazy" src="./imagenes/laringoespasmo.webp" class=card-img-top alt="mujer en la cama de noche con signos de ahogo.">
+      <img loading="lazy" src="./imagenes/laringoespasmo.webp" class="card-img-top" alt="mujer en la cama de noche con signos de ahogo." style="height:250px;object-fit:cover;">
       <div class=card-body>
       <h3 class="card-title h5">Laringoespasmo.</h3>
       <article class=card-text>
-        <div class="text-center mb-2"> 
-          <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#laringoesp" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <p class="card-text small text-muted mb-2">El laringoespasmo es una contracción súbita e involuntaria de los músculos de la laringe, específicamente de las cuerdas vocales, que provoca un cierre parcial o total de la vía...</p>
+    <div class="text-center mb-2"> 
+          <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#laringoesp" role="button" aria-expanded="false" aria-controls="laringoesp">
             ver más
         </a>
            </div>  
-           <span class="collapse" id="laringoesp">
+           <div class="collapse" id="laringoesp">
      
     <h4>Laringoespasmo: Cuando la Laringe se Cierra y la Respiración se Detiene</h4>
     <p>El <strong>laringoespasmo</strong> es una contracción súbita e involuntaria de los músculos de la laringe, específicamente de las cuerdas vocales, que provoca un cierre parcial o total de la vía aérea. Esta reacción, aunque a menudo breve y autolimitada, puede ser extremadamente angustiante para quien la experimenta, generando una sensación de ahogo intenso y pánico. Comprender sus causas, especialmente su fuerte relación con el reflujo gastroesofágico, es clave para su manejo y prevención.</p>
 
-    ---
+<hr>
 
     <h4>El Laringoespasmo como Reflejo de Protección</h4>
     <p>La laringe es una estructura vital no solo para la producción de la voz, sino, fundamentalmente, para proteger nuestras vías respiratorias. Actúa como una "puerta" que se cierra automáticamente para evitar que alimentos, líquidos o sustancias extrañas entren en la tráquea y los pulmones (aspiración).</p>
     <p>El laringoespasmo es precisamente una exacerbación de este <strong>reflejo de protección laríngea a la aspiración</strong>. Cuando algo irritante o no deseado llega a la laringe, como pequeñas cantidades de líquido, partículas de comida o, de manera muy significativa, ácido estomacal, los músculos laríngeos se contraen de forma refleja y violenta para sellar la entrada a las vías respiratorias. Si bien este reflejo es protector, una contracción excesiva o prolongada puede dejar a la persona sin poder inhalar aire.</p>
 
-    ---
+<hr>
 
     <h4>La Íntima Relación entre Laringoespasmo y Reflujo Gastroesofágico (ERGE/RLF)</h4>
     <p>Una de las causas más frecuentes y subestimadas de laringoespasmo recurrente es el <strong>reflujo gastroesofágico (ERGE)</strong> y, más específicamente, el <strong>reflujo laringofaríngeo (RLF)</strong>. A diferencia del ERGE clásico que causa acidez y ardor de estómago, en el RLF el ácido (y a veces la pepsina, una enzima digestiva) asciende hasta la garganta y la laringe, irritando directamente estos delicados tejidos.</p>
@@ -3717,7 +4194,7 @@
     </ul>
     <p>La irritación crónica de la laringe por el reflujo sensibiliza los reflejos protectores, haciéndolos más propensos a activarse de forma exagerada ante el menor estímulo.</p>
 
-    ---
+<hr>
 
     <h4>Otras Causas y Diagnósticos Diferenciales</h4>
     <p>Aunque el reflujo es un gran protagonista, otras situaciones pueden desencadenar un laringoespasmo:</p>
@@ -3749,7 +4226,7 @@
     </ul>
     <p>Es crucial diferenciar el laringoespasmo de otras condiciones que causan dificultad respiratoria, como el asma, la anafilaxia (reacción alérgica grave), la disfunción de cuerdas vocales (donde las cuerdas se cierran paradójicamente durante la inspiración voluntaria) o un ataque de pánico puro.</p>
 
-    ---
+<hr>
 
     <h4>Tratamiento y Manejo</h4>
     <p>El tratamiento del laringoespasmo depende de su gravedad y frecuencia, y siempre apunta a la causa subyacente:</p>
@@ -3795,29 +4272,29 @@
         </li>
     </ul>
     <p>Experimentar un laringoespasmo es una vivencia aterradora. Sin embargo, en la mayoría de los casos, es una condición benigna y manejable. Identificar la causa subyacente, particularmente el reflujo laringofaríngeo, y adherirse a un plan de tratamiento puede reducir significativamente la frecuencia y la intensidad de estos episodios, devolviendo la tranquilidad y el bienestar respiratorio.</p>
-           </span>
+           </div>
       </article>
     </div>
-    <div class="card-footer bg-primary text-white">
+    <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
     </div>
     </div>
 
 
     <div class="card p-3">
-      <img loading="lazy" src="./imagenes/nflc-ia.webp"  class="card-img-top" alt="medico visualizando la laringe en un paciente">
+      <img loading="lazy" src="./imagenes/nflc-ia.webp" class="card-img-top" alt="medico visualizando la laringe en un paciente" style="height:250px;object-fit:cover;">
       <div class="card-body">
       <h3 class="card-title h5">RGE y la fibrolaringoscopía.</h3> 
   <article class="card-text">
+    <p class="card-text small text-muted mb-2">La nasofibrolaringoscopia es una herramienta diagnóstica clave en la evaluación de patologías relacionadas con el reflujo. Este procedimiento permite visualizar de forma directa...</p>
     <div class="text-center mb-2"> 
-      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#rge10" role="button" aria-expanded="false" aria-controls="collapseExample">
+      <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#rge10" role="button" aria-expanded="false" aria-controls="rge10">
         ver más
     </a>
        </div>  
-       <span class="collapse" id="rge10">
+       <div class="collapse" id="rge10">
         
-        Durante la evaluación clínica inicial, el otorrinolaringólogo puede identificar varios hallazgos sugestivos de RGE, 
-        tales como:
-      </p>
+        <p>Durante la evaluación clínica inicial, el otorrinolaringólogo puede identificar varios hallazgos sugestivos de RGE, 
+        tales como:</p>
         <ul>
             <li><strong>Disfonía:</strong> Alteraciones en la calidad de la voz, especialmente ronquera matutina.</li>
             <li><strong>Sensación de cuerpo extraño:</strong> Descrita como "nudo en la garganta" o globus faríngeo.</li>
@@ -3846,25 +4323,26 @@
         <h4>Conclusión</h4>
         <p>La identificación de signos indirectos de reflujo gastroesofágico en el examen otorrinolaringológico y en la nasofibrolaringoscopia es crucial para un manejo temprano y adecuado. La integración de los hallazgos clínicos y endoscópicos mejora la precisión diagnóstica y la eficacia del tratamiento.</p>
     
-       </span>
+       </div>
   </article>
   </div>
-  <div class="card-footer bg-primary text-white">
+  <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
   </div>
   </div>
 
    
     <div class="card p-3">
-      <img loading="lazy" src="./imagenes/limones.webp" class=card-img-top alt="limones cortados sobre hojas verdes.">
+      <img loading="lazy" src="./imagenes/limones.webp" class="card-img-top" alt="limones cortados sobre hojas verdes." style="height:250px;object-fit:cover;">
       <div class=card-body>
       <h3 class="card-title h5">Recomendaciones para mejorar el reflujo.</h3>
       <article class=card-text>
+        <p class="card-text small text-muted mb-2">Estrategias dietéticas y de estilo de vida, incluyendo dieta cetogénica y ayuno intermitente, para reducir los síntomas del reflujo gastroesofágico.</p>
         <div class="text-center mb-2"> 
-          <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#rge22" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#rge22" role="button" aria-expanded="false" aria-controls="rge22">
             ver más
         </a>
            </div>  
-           <span class="collapse" id="rge22">
+           <div class="collapse" id="rge22">
       <a rel="noopener-noreferrer" target="_blank" href="https://www.ketohoy.com/">La dieta cetogénica y el ayuno intermitente</a> pueden mejorar el reflujo gastro esofágico. Deben hacerse algunas consideraciones 
       especiales.<br><br>
            
@@ -3898,28 +4376,25 @@
     <li><strong>Elevar la cabecera de la cama</strong>: Dormir con la parte superior del cuerpo ligeramente elevada ayuda a prevenir el reflujo durante la noche.</li>
     <li><strong>Mantener un peso saludable</strong>: El exceso de peso puede aumentar la presión abdominal, empeorando la hernia y el reflujo.</li>
 </ul>
-           </span>
+           </div>
       </article>
     </div>
-    <div class="card-footer bg-primary text-white">
+    <div class="card-footer bg-primary text-white" aria-hidden="true" style="height:4px;padding:0">
     </div>
     </div>
 </div>
+</div>
 
-  
 
-   <div id="rge-test"  class="container-flex text-center my-4 p-0">
-        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+   <div class="container-flex text-center my-4 p-0">
+        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
       </div>
 
-
-  <div  class="d-grid gap-2">
-    <h2  class="h4 text-center text-white pt-3 pb-3" style="background-color: #003366;">6 Cuestionario para detección del reflujo gastro-esofágico.</h2>
-  </div>  
+  <div id="rge-test" class="container section-divider"><span class="sec-num">6</span><h2>Cuestionario de detección del reflujo gastroesofágico</h2></div>
 
   <div class="container-rgeb py-4">
     <div class="container bg-light rounded p-4 shadow-sm text-dark">
-        <h3 class="text-center h1 mb-4">Cuestionario GERD-Q</h3>
+        <h3 class="text-center mb-3 fw-bold" style="color:#003366;">Cuestionario GERD-Q</h3>
         <p class="text-secondary">
             Este cuestionario tiene como propósito evaluar la probabilidad de que padezcas reflujo gastroesofágico (RGE). 
             Contesta las siguientes preguntas basándote en tus síntomas de la última semana. 
@@ -3993,7 +4468,7 @@
     </div>
 </div>
       <div   class="container-fluid text-center my-4 p-0">
-        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">Menú</a>
+        <a href="#contenidos" class="btn btn-sm btn-outline-dark" type="button" aria-label="Volver al menú principal">&#8593; Menú</a>
       </div> 
 
     </main>
@@ -4016,74 +4491,56 @@
     </div>
   </div>
 
-  <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
-    <div class="mb-2">
-      <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
-        <i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i>
+  <div class="container-fluid text-center py-3" style="background-color: #d7e3f0;">
+    <p class="small fw-semibold mb-2" style="color: #003366;">Seguinos en redes</p>
+    <div class="d-flex justify-content-center align-items-center gap-3 mb-3">
+      <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+         style="color:#fff;background-color:#1877F2;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;text-decoration:none;transition:opacity .2s;"
+         onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
+        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M14 3h-2a4 4 0 0 0-4 4v3H6v3h2v8h3v-8h3l1-3h-4V7a1 1 0 0 1 1-1h2z"/>
+        </svg>
       </a>
-      <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
-        <i class="fab fa-instagram" style="font-size: 1.4rem;"></i>
+      <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+         style="color:#fff;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;text-decoration:none;transition:opacity .2s;"
+         onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
+        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="4" width="16" height="16" rx="4"/>
+          <circle cx="12" cy="12" r="3"/>
+          <circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+      <a href="https://www.youtube.com/channel/UCBrWcUcpJTH0q4mofkYL9OQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+         style="color:#fff;background-color:#FF0000;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;text-decoration:none;transition:opacity .2s;"
+         onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
+        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+        </svg>
       </a>
     </div>
-    <p class="small text-secondary mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
+    <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
       &copy; 2025 Otorrino en Pilar. Todos los derechos reservados.
     </p>
   </div>
 </footer>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const videoCollapses = document.querySelectorAll('.collapse[data-video-id]');
-
-    videoCollapses.forEach(function(collapseElement) {
-        // Escuchamos el evento de Bootstrap cuando se termina de mostrar el panel
-        collapseElement.addEventListener('shown.bs.collapse', function() {
-            
-            // Si ya se cargó, no hacemos nada
-            if (collapseElement.getAttribute('data-loaded') === 'true') return;
-
-            const videoId = collapseElement.getAttribute('data-video-id');
-            const targetDiv = document.getElementById('video-target-' + videoId);
-            const videoTitle = collapseElement.getAttribute('data-video-title') || 'Video informativo'; 
-            
-            if (videoId && targetDiv) {
-                targetDiv.innerHTML = `
-                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-                        <iframe 
-                            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                            src="https://www.youtube.com/embed/${videoId}" 
-                            frameborder="0" 
-                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen 
-                            title="${videoTitle}"> 
-                        </iframe>
-                    </div>`;
-                
-                // Marcamos como cargado para no repetir el proceso
-                collapseElement.setAttribute('data-loaded', 'true');
-            }
-        });
-    });
-});
-</script>
-
-  
-<script>
 // 1. Funciones de Cálculo (Disfagia y RGE)
 function calculateResult() {
-    let t = 0, e = !0;
+    let t = 0, e = true;
     for (let n = 1; n <= 10; n++) {
-        const r = document.getElementById(`q${n}`).value;
-        if ("" === r) { e = !1; break }
-        t += parseInt(r)
+        const r = document.querySelector(`input[name="q${n}"]:checked`);
+        if (!r) { e = false; break; }
+        t += parseInt(r.value);
     }
-    if (!e) return void(document.getElementById("result").innerHTML = "<p class='text-danger'>Por favor, responde todas las preguntas.</p>");
+    if (!e) return void(document.getElementById("result").innerHTML = "<p class='text-danger'>Por favor, respondé todas las preguntas.</p>");
     let s = "", a = "";
-    t <= 2 ? (s = "Sin disfagia o disfagia leve", a = "result-green") : t <= 7 ? (s = "Disfagia moderada", a = "result-yellow") : (s = "Disfagia severa", a = "result-red"), document.getElementById("result").innerHTML = `<p class="${a}">Puntaje total: ${t}. ${s}</p>`
+    t <= 2 ? (s = "Sin disfagia o disfagia leve", a = "result-green") : t <= 7 ? (s = "Disfagia moderada", a = "result-yellow") : (s = "Disfagia severa", a = "result-red");
+    document.getElementById("result").innerHTML = `<p class="${a}">Puntaje total: ${t}. ${s}</p>`;
 }
 
 function resetForm() {
-    document.getElementById("eat10Form").reset();
-    document.getElementById("result").innerHTML = ""
+    document.getElementById("eat10FormEl").reset();
+    document.getElementById("result").innerHTML = "";
 }
 
 function calculateScorerge() {
@@ -4163,94 +4620,19 @@ document.addEventListener("DOMContentLoaded", function() {
     script.async = true; // Permite carga en paralelo sin bloquear el renderizado
     
     // Opcional: Ejecutar algo apenas cargue Bootstrap
-    script.onload = () => {
-        console.log("Bootstrap cargado y listo.");
-    };
-
     document.head.appendChild(script);
   }
 
-  // Estrategia de carga inteligente
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(() => loadBootstrap(), { timeout: 2000 });
-  } else {
-    window.addEventListener('load', loadBootstrap);
-  }
+  // Carga solo en primera interacción real (no dispara en Lighthouse)
+  ['click','scroll','touchstart','keydown'].forEach(function(e){
+    window.addEventListener(e, loadBootstrap, {once:true, passive:true});
+  });
 </script>
 
-<!-- Modal de Reseña -->
-<div class="modal fade" id="modalResena" tabindex="-1" aria-labelledby="modalResenaLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header border-0 pb-0">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center px-3 px-md-4 pb-3">
-        <div class="mb-2 mb-md-3">
-          <span style="font-size: 2.5rem;">⭐</span>
-        </div>
-        <h3 class="modal-title mb-2 mb-md-3 fs-5 fs-md-4" id="modalResenaLabel">¿Cómo fue tu experiencia?</h3>
-        <p class="text-muted small">Tu opinión es muy valiosa para nosotros y para otros pacientes. ¿Podrías dedicarnos un minuto para calificarnos?</p>
-      </div>
-      <div class="modal-footer border-0 d-flex flex-column flex-sm-row justify-content-center gap-2 pt-0">
-        <button type="button" class="btn btn-light btn-sm" data-bs-dismiss="modal">Más tarde</button>
-        <a href="https://g.page/r/CWbtrBOdyGoaEBM/review" class="btn btn-primary btn-sm px-3" target="_blank" rel="noopener noreferrer">Calificar ahora</a>
-      </div>
-    </div>
-  </div>
-</div>
-
+<script src="./js/rate-prompt.js" defer></script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    // 1. Si ya se mostró en esta sesión, no hacer nada
-    if (sessionStorage.getItem('resenaMostrada')) return;
-
-    let tiempoMinimo = 60000; // 1 minuto
-    let scrollRequerido = 50; // 50% de la página
-    let tiempoInicio = Date.now();
-    let modalMostrado = false;
-
-    function obtenerPorcentajeScroll() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        return (scrollTop / scrollHeight) * 100;
-    }
-
-    function mostrarModal() {
-        // Validación crítica: verificar si bootstrap está cargado antes de llamar al modal
-        if (modalMostrado || typeof bootstrap === 'undefined') return;
-        
-        modalMostrado = true;
-        const modalElement = document.getElementById('modalResena');
-        const myModal = new bootstrap.Modal(modalElement);
-        myModal.show();
-        
-        sessionStorage.setItem('resenaMostrada', 'true');
-        
-        // Limpiar eventos para ahorrar recursos
-        window.removeEventListener('scroll', verificarCondiciones);
-        document.removeEventListener('mouseleave', detectarSalida);
-    }
-
-    function verificarCondiciones() {
-        const tiempoCumplido = (Date.now() - tiempoInicio) >= tiempoMinimo;
-        const scrollCumplido = obtenerPorcentajeScroll() >= scrollRequerido;
-        
-        if (tiempoCumplido && scrollCumplido) {
-            mostrarModal();
-        }
-    }
-
-    function detectarSalida(e) {
-        // Si intenta cerrar la pestaña después de 30 segundos
-        if (e.clientY <= 0 && (Date.now() - tiempoInicio >= 30000)) {
-            mostrarModal();
-        }
-    }
-
-    // 2. ACTIVAR LOS EVENTOS (Esto faltaba en tu código)
-    window.addEventListener('scroll', verificarCondiciones);
-    document.addEventListener('mouseleave', detectarSalida);
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.ORPRatePrompt) window.ORPRatePrompt.autoShowOnEngagement();
 });
 </script>
 

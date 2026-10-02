@@ -1,39 +1,43 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-  
+<meta charset="UTF-8">
+<!-- Preload LCP: poster del video - debe estar lo más arriba posible en el head -->
+<link rel="preload" href="https://www.otorrinoenpilar.com/imagenes/rinop.webp" as="image" fetchpriority="high">
 <!-- Resource hints para performance -->
-<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
-
-<!-- Google Tag Manager -->
+<!-- Google Tag Manager (carga diferida) -->
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  let gtagLoaded = false;
-  const loadGtag = () => {
-    if (gtagLoaded) return;
-    gtagLoaded = true;
-    const gtagScript = document.createElement('script');
-    gtagScript.async = true;
-    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-XNNM71EW8T';
-    document.head.appendChild(gtagScript);
-    gtag('js', new Date());
-    gtag('config', 'G-XNNM71EW8T');
-  };
-  window.addEventListener('click', loadGtag, { once: true });
+  window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+  (function() {
+    var _gtmLoaded = false;
+    function loadGTM() {
+      if (_gtmLoaded) return;
+      _gtmLoaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-MQ6VHPGC';
+      document.head.appendChild(s);
+    }
+    ['click','mousemove','keydown','touchstart','scroll'].forEach(function(e) {
+      window.addEventListener(e, loadGTM, {once: true, passive: true});
+    });
+  })();
 </script>
+<!-- End Google Tag Manager -->
 
 <!-- Metadatos esenciales -->
-<meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Rinoplastia y rinoseptumplastia en Pilar, Buenos Aires. Simulación digital preoperatoria con enfoque estético y funcional. Consultas por WhatsApp.">
 <meta name="keywords" content="rinoplastia, septumplastia, rinoseptumplastia, cirugía de nariz, Pilar, Buenos Aires, simulación digital, cirugía estética de nariz">
 <meta name="author" content="Dr. Juan Mosovich">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="theme-color" content="#003366">
 
 <!-- Open Graph para compartir en redes sociales -->
 <meta property="og:title" content="Rinoplastia en Pilar | Simulación Digital - Dr. Mosovich">
@@ -41,13 +45,18 @@
 <meta property="og:image" content="https://www.otorrinoenpilar.com/imagenes/rinop.webp">
 <meta property="og:url" content="https://www.otorrinoenpilar.com/rinoplastia.html">
 <meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-06-14T09:00:00-03:00">
+<meta property="article:modified_time" content="2026-08-28T07:00:00-03:00">
+<meta property="og:site_name" content="Otorrino en Pilar">
 <meta property="og:locale" content="es_AR">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Rinoplastia en Pilar | Simulación Digital">
+<meta name="twitter:title" content="Rinoplastia en Pilar | Simulación Digital - Dr. Mosovich">
 <meta name="twitter:description" content="Rinoplastia y rinoseptumplastia con simulación digital preoperatoria en Pilar, Buenos Aires.">
-<meta name="twitter:image" content="https://otorrinoenpilar.com/imagenes/rinop.webp">
+<meta name="twitter:image" content="https://www.otorrinoenpilar.com/imagenes/rinop.webp">
 
 <!-- Geo Tags para SEO local -->
 <meta name="geo.region" content="AR-B">
@@ -69,26 +78,86 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
 <link rel="manifest" href="/favicon/site.webmanifest">
 
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<!-- Bootstrap purgado para rinoplastia: menor peso y menos CSS no usado -->
+<link rel="preload" href="./css/rino-bootstrap.min.css" as="style">
+<link href="./css/rino-bootstrap.min.css" rel="stylesheet">
+<style>
+/* Elimina animaciones no compuestas en botones (mejora CLS/TBT en Lighthouse) */
+.btn, .accordion-button { transition: none !important; }
+/* display-4: no incluido en el CSS purgeado */
+.display-4{font-size:calc(1.4rem + 1.8vw);font-weight:300;line-height:1.2}
+@media(min-width:1200px){.display-4{font-size:2.5rem}}
+</style>
 
 <title>Rinoplastia en Pilar | Simulación Digital - Dr. Mosovich</title>
 <link rel="canonical" href="https://www.otorrinoenpilar.com/rinoplastia.html"/>
 <!-- Datos estructurados JSON-LD -->
 <script type="application/ld+json">
-{
+ {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Physician",
+      "@type": "MedicalWebPage",
+      "@id": "https://www.otorrinoenpilar.com/rinoplastia.html#webpage",
+      "url": "https://www.otorrinoenpilar.com/rinoplastia.html",
+      "name": "Rinoplastia Ultrasónica en Pilar - Dr. Juan Mosovich",
+      "description": "Cirugía de nariz avanzada en Pilar, Buenos Aires. Especialista en Rinoplastia Ultrasónica de alta precisión, recuperación rápida y simulación digital preoperatoria.",
+      "inLanguage": "es-AR",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://www.otorrinoenpilar.com/#website",
+        "url": "https://www.otorrinoenpilar.com/",
+        "name": "Otorrino en Pilar"
+      },
+      "about": [
+        {
+          "@type": "MedicalProcedure",
+          "name": "Rinoplastia Ultrasónica",
+          "code": {
+            "@type": "MedicalCode",
+            "code": "Rinoplastia",
+            "codingSystem": "Procedimiento Quirúrgico"
+          }
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Rinoseptumplastia"
+        }
+      ],
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.otorrinoenpilar.com/imagenes/rinop.webp"
+      },
+      "datePublished": "2022-06-14T09:00:00-03:00",
+      "dateModified": "2026-09-29T09:49:00-03:00",
+      "author": {
+        "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich"
+      },
+      "publisher": {
+        "@id": "https://www.otorrinoenpilar.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.otorrinoenpilar.com/#organization",
+      "name": "Otorrino en Pilar",
+      "url": "https://www.otorrinoenpilar.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.otorrinoenpilar.com/imagenes/rino.webp"
+      }
+    },
+    {
+      "@type": ["MedicalBusiness", "Physician"],
       "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich",
       "name": "Dr. Juan Mosovich",
-      "medicalSpecialty": "Otolaryngology",
-      "url": "https://www.otorrinoenpilar.com",
-      "telephone": "+54 11 6821-2512",
-      "priceRange": "$$",
       "image": "https://www.otorrinoenpilar.com/imagenes/rinop.webp",
-      "hasMap": "https://www.google.com/maps?cid=12140810488927800678",
+      "url": "https://www.otorrinoenpilar.com",
+      "telephone": "+541168212512",
+      "priceRange": "$$",
+      "currenciesAccepted": "ARS",
+      "paymentAccepted": "Efectivo, Tarjeta de crédito, Mercado Pago",
+      "medicalSpecialty": "Otolaryngology",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Caamaño 1100, Edificio Agora 2, Piso 1, Oficina 110",
@@ -102,11 +171,39 @@
         "latitude": -34.4346398,
         "longitude": -58.8299421
       },
+      "hasMap": "https://www.google.com/maps?cid=12140810488927800678",
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Pilar"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Zona Norte, Buenos Aires"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Escobar"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Del Viso"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Tortuguitas"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Presidente Derqui"
+        }
+      ],
       "knowsAbout": [
         "Rinoplastia Ultrasónica",
         "Rinoseptumplastia",
         "Otorrinolaringología",
-        "Cirugía de nariz sin taponajes"
+        "Cirugía de nariz sin taponajes",
+        "Simulación digital preoperatoria"
       ],
       "openingHoursSpecification": [
         {
@@ -121,31 +218,30 @@
           "opens": "12:00",
           "closes": "13:00"
         }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 4.9,
+        "reviewCount": 127,
+        "bestRating": 5
+      },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=100063748789595",
+        "https://www.instagram.com/otorrino.fono.pilar"
       ]
     },
     {
-      "@type": "Article",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.otorrinoenpilar.com/rinoplastia.html"
-      },
-      "headline": "Rinoplastia Ultrasónica en Pilar - Dr. Juan Mosovich",
-      "description": "Cirugía de nariz avanzada en Pilar, Buenos Aires. Especialista en Rinoplastia Ultrasónica de alta precisión, recuperación rápida y simulación digital preoperatoria.",
-      "image": [
-        "https://www.otorrinoenpilar.com/imagenes/rinop.webp",
-        "https://www.otorrinoenpilar.com/imagenes/consultaonline.webp"
-      ],
-      "author": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "@type": "VideoObject",
+      "name": "Resumen de Rinoplastia en Pilar",
+      "description": "Este video explica de manera sencilla qué es la rinoplastia y la rinoseptumplastia, cómo se realiza la simulación digital preoperatoria y cuáles son los beneficios estéticos y funcionales para los pacientes en Pilar, Buenos Aires.",
+      "thumbnailUrl": "https://www.otorrinoenpilar.com/imagenes/rinop.webp",
+      "uploadDate": "2026-03-12T08:00:00-03:00",
+      "duration": "PT2M30S",
+      "contentUrl": "https://www.otorrinoenpilar.com/videos/video-rino.mp4",
+      "embedUrl": "https://www.otorrinoenpilar.com/videos/video-rino.mp4",
       "publisher": {
-        "@type": "Organization",
-        "name": "Otorrino en Pilar",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.otorrinoenpilar.com/imagenes/rino.webp"
-        }
-      },
-      "datePublished": "2022-06-14T09:00:00-03:00",
-      "dateModified": "2026-03-05T07:00:00-03:00"
+        "@id": "https://www.otorrinoenpilar.com/#organization"
+      }
     },
     {
       "@type": "MedicalProcedure",
@@ -153,7 +249,9 @@
       "description": "Procedimiento quirúrgico con tecnología piezoeléctrica para remodelar la estructura nasal con mínima inflamación y resultados precisos.",
       "bodyLocation": "Nariz",
       "procedureType": "Surgical",
-      "performer": { "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich" },
+      "performer": {
+        "@id": "https://www.otorrinoenpilar.com/#dr-juan-mosovich"
+      },
       "areaServed": {
         "@type": "AdministrativeArea",
         "name": "Pilar, Buenos Aires"
@@ -181,18 +279,10 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "¿Qué beneficios tiene la Rinoplastia Ultrasónica?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La rinoplastia ultrasónica ofrece mayor precisión, menos moretones, una recuperación más rápida y permite evitar los incómodos taponajes nasales en la mayoría de los casos."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "¿La rinoplastia mejora la respiración?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sí, la rinoseptumplastia corrige desvíos del tabique y otros problemas funcionales para mejorar el flujo de aire nasal."
+            "text": "En muchos casos sí. La rinoseptumplastia corrige desvíos del tabique y otras causas de obstrucción nasal, mejorando el flujo de aire."
           }
         },
         {
@@ -202,6 +292,54 @@
             "@type": "Answer",
             "text": "Es una herramienta que permite visualizar un resultado estimado antes de la cirugía para alinear expectativas entre el paciente y el Dr. Mosovich."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tiempo dura la recuperación de una rinoplastia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La recuperación inicial suele ser de 7 a 14 días, y la desinflamación completa puede tardar varios meses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿La rinoplastia deja cicatrices visibles?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En la técnica cerrada las incisiones son internas y no dejan cicatrices visibles. En la técnica abierta puede existir una cicatriz mínima en la columela que suele desvanecerse con el tiempo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué es la Rinoplastia Ultrasónica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La Rinoplastia Ultrasónica es una técnica avanzada que utiliza un dispositivo ultrasónico para esculpir el hueso nasal con mayor precisión y menor trauma, resultando en menos moretones y una recuperación más rápida."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se pueden evitar los taponajes nasales en el postquirúrgico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En casi todos los casos es posible evitar los taponajes nasales gracias a técnicas avanzadas como la Rinoplastia Ultrasónica, que reduce el trauma y la inflamación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es la diferencia entre rinoplastia abierta y cerrada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La rinoplastia cerrada realiza todas las incisiones dentro de las fosas nasales, sin cicatrices visibles, ideal para correcciones moderadas. La rinoplastia abierta incluye una pequeña incisión en la columela que brinda mayor visibilidad al cirujano, siendo preferida en casos complejos o revisiones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es necesaria anestesia general para una rinoplastia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de cada caso. La rinoplastia puede realizarse bajo anestesia local o general según la complejidad del procedimiento y la preferencia del paciente y el cirujano."
+          }
         }
       ]
     }
@@ -209,10 +347,16 @@
 }
 </script>
 
+<!-- gtag stub: GA4 se gestiona a través de GTM (tag GA4 Configuration en el panel de GTM) -->
+<script>function gtag(){dataLayer.push(arguments);}</script>
+
 </head>
 
 <body id="top">
-
+ <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ6VHPGC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> 
 
   
   <!-- Skip link para accesibilidad -->
@@ -225,193 +369,24 @@
         <a class="navbar-brand text-primary fw-bold" href="index.html">
           OtorrinoEnPilar
         </a>
-        <a href="#contacto" class="btn btn-primary">
+        <a href="https://www.otorrinoenpilar.com/#contacto" class="btn btn-primary">
           Contacto
         </a>
       </div>
     </nav>
 
     <!-- Se ajusta el padding con clases responsivas: 'p-4' en móvil y 'p-lg-5' en pantallas grandes -->
-    <div class="p-4 p-lg-5 text-center text-white hero-banner" style="background-color: #003366;">
-        <h1 class="h2 fw-bold mb-3">Rinoplastia y Rinoseptumplastia en Pilar</h1>
+    <div class="p-4 p-lg-5 text-center text-white hero-banner" style="background: radial-gradient(circle at 20% 20%, rgba(27,143,138,0.25), transparent 45%), linear-gradient(135deg, #0a2b4f 0%, #103b68 45%, #1b8f8a 100%);">
+        <h1 class="display-4 fw-bold mb-3">Rinoplastia y Rinoseptumplastia en Pilar</h1>
+        <!-- Video resumen UX/UI -->
+        <div class="mb-4 d-flex justify-content-center">
+          <video controls preload="none" width="480" height="270" poster="https://www.otorrinoenpilar.com/imagenes/rinop.webp" style="max-width:100%; height:auto; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
+            <source src="https://www.otorrinoenpilar.com/videos/video-rino.mp4" type="video/mp4">
+            Tu navegador no soporta el video. Puedes verlo en <a href="https://www.otorrinoenpilar.com/videos/video-rino.mp4" target="_blank">Ver video de rinoplastia en Pilar</a>.
+          </video>
+        </div>
         <p class="mb-4">Simulación digital preoperatoria y tratamientos personalizados.<br>Dr. Juan Mosovich - Pilar y Zona Norte.</p>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> -->
-<script>
-// Alterna visibilidad y texto de los botones 'Ver más'/'Ver menos' sin Bootstrap
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.toggle-btn').forEach(function(btn) {
-    var targetId = btn.getAttribute('href');
-    if (!targetId) return;
-    var target = document.querySelector(targetId);
-    if (!target) return;
-    // Inicializa estado
-    target.style.display = target.classList.contains('show') ? 'block' : 'none';
-    btn.textContent = target.classList.contains('show') ? 'Ver menos' : 'Ver más';
-    btn.setAttribute('aria-expanded', target.classList.contains('show') ? 'true' : 'false');
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      var visible = target.style.display === 'block';
-      if (visible) {
-        target.style.display = 'none';
-        btn.textContent = 'Ver más';
-        btn.setAttribute('aria-expanded', 'false');
-      } else {
-        target.style.display = 'block';
-        btn.textContent = 'Ver menos';
-        btn.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
-});
-</script>
-<script>
-// Sincroniza el texto de los botones 'Ver más'/'Ver menos' con el estado del collapse
-document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(function() { // Espera a que Bootstrap inicialice
-    document.querySelectorAll('.toggle-btn').forEach(function(btn) {
-      var targetId = btn.getAttribute('href');
-      if (!targetId) return;
-      var target = document.querySelector(targetId);
-      if (!target) return;
-      // Cambia el texto al abrir
-      target.addEventListener('show.bs.collapse', function() {
-        btn.textContent = 'Ver menos';
-        btn.setAttribute('aria-expanded', 'true');
-      });
-      // Cambia el texto al cerrar
-      target.addEventListener('hide.bs.collapse', function() {
-        btn.textContent = 'Ver más';
-        btn.setAttribute('aria-expanded', 'false');
-      });
-      // Estado inicial
-      if (target.classList.contains('show')) {
-        btn.textContent = 'Ver menos';
-        btn.setAttribute('aria-expanded', 'true');
-      } else {
-        btn.textContent = 'Ver más';
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }, 100);
-});
-</script>
-<script>
-// Sincroniza el texto de los botones 'Ver más'/'Ver menos' con el estado del collapse
-window.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.toggle-btn').forEach(function(btn) {
-    var targetId = btn.getAttribute('href');
-    if (!targetId) return;
-    var target = document.querySelector(targetId);
-    if (!target) return;
-    // Cambia el texto al abrir
-    target.addEventListener('show.bs.collapse', function() {
-      btn.textContent = 'Ver menos';
-      btn.setAttribute('aria-expanded', 'true');
-    });
-    // Cambia el texto al cerrar
-    target.addEventListener('hide.bs.collapse', function() {
-      btn.textContent = 'Ver más';
-      btn.setAttribute('aria-expanded', 'false');
-    });
-    // Estado inicial
-    if (target.classList.contains('show')) {
-      btn.textContent = 'Ver menos';
-      btn.setAttribute('aria-expanded', 'true');
-    } else {
-      btn.textContent = 'Ver más';
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
-});
-</script>
-<script>
-// Sincroniza el texto de los botones 'Ver más'/'Ver menos' con el estado del collapse
-window.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.toggle-btn').forEach(function(btn) {
-    var targetId = btn.getAttribute('href');
-    if (!targetId) return;
-    var target = document.querySelector(targetId);
-    if (!target) return;
-    // Cambia el texto al abrir
-    target.addEventListener('show.bs.collapse', function() {
-      btn.textContent = 'Ver menos';
-      btn.setAttribute('aria-expanded', 'true');
-    });
-    // Cambia el texto al cerrar
-    target.addEventListener('hide.bs.collapse', function() {
-      btn.textContent = 'Ver más';
-      btn.setAttribute('aria-expanded', 'false');
-    });
-    // Estado inicial
-    if (target.classList.contains('show')) {
-      btn.textContent = 'Ver menos';
-      btn.setAttribute('aria-expanded', 'true');
-    } else {
-      btn.textContent = 'Ver más';
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
-});
-</script>
-<script>
-// Sincroniza el texto de los botones 'Ver más'/'Ver menos' con el estado del collapse
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.toggle-btn').forEach(function(btn) {
-    var targetId = btn.getAttribute('href');
-    if (!targetId) return;
-    var target = document.querySelector(targetId);
-    if (!target) return;
-    // Cambia el texto al abrir
-    target.addEventListener('show.bs.collapse', function() {
-      btn.textContent = 'Ver menos';
-      btn.setAttribute('aria-expanded', 'true');
-    });
-    // Cambia el texto al cerrar
-    target.addEventListener('hide.bs.collapse', function() {
-      btn.textContent = 'Ver más';
-      btn.setAttribute('aria-expanded', 'false');
-    });
-    // Estado inicial
-    if (target.classList.contains('show')) {
-      btn.textContent = 'Ver menos';
-      btn.setAttribute('aria-expanded', 'true');
-    } else {
-      btn.textContent = 'Ver más';
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
-});
-</script>
-<script>
-// Sincroniza el texto de los botones 'Ver más'/'Ver menos' con el estado del collapse
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.toggle-btn').forEach(function(btn) {
-    var targetId = btn.getAttribute('href');
-    if (!targetId) return;
-    var target = document.querySelector(targetId);
-    if (!target) return;
-    // Cambia el texto al abrir
-    target.addEventListener('show.bs.collapse', function() {
-      btn.textContent = 'Ver menos';
-      btn.setAttribute('aria-expanded', 'true');
-    });
-    // Cambia el texto al cerrar
-    target.addEventListener('hide.bs.collapse', function() {
-      btn.textContent = 'Ver más';
-      btn.setAttribute('aria-expanded', 'false');
-    });
-    // Estado inicial
-    if (target.classList.contains('show')) {
-      btn.textContent = 'Ver menos';
-      btn.setAttribute('aria-expanded', 'true');
-    } else {
-      btn.textContent = 'Ver más';
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
-});
-</script>
         <div class="d-flex flex-wrap justify-content-center gap-2">
           <a href="#consulrino" class="btn btn-success">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-whatsapp" viewBox="0 0 16 16">
@@ -432,32 +407,72 @@ document.addEventListener('DOMContentLoaded', function() {
     <main id="main-content">
     <!-- Contenido introductorio optimizado para SEO -->
     <div class="container my-4 section-intro">
-      <p class="lead">
-        Especialista en Otorrinolaringología. <strong>Rinoplastia</strong> y <strong>rinoseptumplastia</strong> en <strong>Pilar</strong> y <strong>Zona Norte de Buenos Aires</strong> 
-        (<strong>Escobar</strong>, <strong>Del Viso</strong>, <strong>Tortuguitas</strong>, <strong>Derqui</strong>, <strong>Belén de Escobar</strong>). 
-        Ofrecemos <strong>cirugía estética y funcional de la nariz</strong> con tecnología de <strong>simulación digital preoperatoria</strong> 
-        para que pueda visualizar el resultado antes de la intervención. Tratamientos personalizados para mejorar tanto la 
-        <strong>estética facial</strong> como la <strong>función respiratoria</strong>. 
-        Consultorio particular ubicado en <strong>Complejo 46 Plaza, Caamaño 1100, Edificio Agora 2, 1er Piso, Oficina 110, Pilar</strong> (Panamericana km 46). 
-        <a href="https://maps.app.goo.gl/H8MGdSrEawJcMZxE6" target="_blank" rel="noopener noreferrer" class="link-primary"><i class="fas fa-map-marker-alt"></i> Ver en Google Maps</a>. 
-        Conozca el <a href="https://www.otorrinoenpilar.com/info.html#rino" class="link-primary">consentimiento informado</a>.
-      </p>
+      <ul style="list-style:none;padding-left:0;margin-bottom:.5rem">
+        <li class="d-flex align-items-start gap-2 mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#1b8f8a" viewBox="0 0 16 16" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></svg>
+          <span><strong>Otorrinolaringólogo con experiencia en cirugía nasal</strong> — rinoplastia y rinoseptumplastia en <strong>Pilar y Zona Norte</strong> (Escobar, Del Viso, Tortuguitas, Derqui, Belén de Escobar).</span>
+        </li>
+        <li class="d-flex align-items-start gap-2 mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#1b8f8a" viewBox="0 0 16 16" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></svg>
+          <span><strong>Simulación digital preoperatoria</strong> — visualice el resultado esperado antes de decidir la intervención.</span>
+        </li>
+        <li class="d-flex align-items-start gap-2 mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#1b8f8a" viewBox="0 0 16 16" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></svg>
+          <span>Tratamientos personalizados para mejorar tanto la <strong>estética facial</strong> como la <strong>función respiratoria</strong>.</span>
+        </li>
+        <li class="d-flex align-items-start gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#1b8f8a" viewBox="0 0 16 16" aria-hidden="true" style="flex-shrink:0;margin-top:2px"><path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/><path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
+          <span>Consultorio en <strong>Complejo 46 Plaza, Ed. Agora 2, 1er Piso, Of. 110, Pilar</strong> (Panamericana km 46). <a href="https://maps.app.goo.gl/H8MGdSrEawJcMZxE6" target="_blank" rel="noopener noreferrer" class="link-primary">Ver en Google Maps</a></span>
+        </li>
+      </ul>
+      <p class="text-muted small mb-0">Conozca el <a href="https://www.otorrinoenpilar.com/info.html#rino" class="link-primary">consentimiento informado</a>.</p>
     </div>
-      <div class="container-sm text-center my-3 py-3">
-        <nav aria-label="Migas de pan">
+      <div class="container my-4" id="contenidos">
+        <nav aria-label="Migas de pan" class="mb-3">
           <ol class="breadcrumb justify-content-center">
             <li class="breadcrumb-item"><a href="https://www.otorrinoenpilar.com/">Inicio</a></li>
             <li class="breadcrumb-item active" aria-current="page">Rinoplastia</li>
           </ol>
         </nav>
-        <h2 class="h3"><a href="#consulrino" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Consúltenos su caso</a></h2>
-        <hr>
-        <h2 class="h4"><a href="#info" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Información general sobre rinoplastias</a></h2>
-        <hr>
-        <h2 class="h4"><a href="#galeria" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Galería de casos clínicos de rinoplastia</a></h2>
-        <hr>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <a href="#consulrino" class="btn btn-outline-primary rounded-pill px-4">Consultar mi caso</a>
+          <a href="#info" class="btn btn-outline-secondary rounded-pill px-4">Información</a>
+          <a href="#galeria" class="btn btn-outline-secondary rounded-pill px-4">Galería</a>
+        </div>
       </div>
-       
+
+  <!-- Diferenciadores: genera confianza antes del CTA -->
+  <div class="container my-4">
+    <div class="row text-center">
+      <div class="col-12 col-md-4 mb-3">
+        <div class="card border-0" style="background:#f0f8f7;height:100%">
+          <div class="card-body">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#1b8f8a" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4q0 1 .25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75Q6 13 6 12H2s-2 0-2-2zm1.398-.855a.76.76 0 0 0-.254.302A1.5 1.5 0 0 0 1 4v6c0 .325.078.502.145.602q.105.156.302.254a1.5 1.5 0 0 0 .538.143L2.5 11h11l.014-.001a1.5 1.5 0 0 0 .537-.143q.197-.098.302-.254A1.5 1.5 0 0 0 15 10V4a1.5 1.5 0 0 0-.145-.602.76.76 0 0 0-.302-.254A1.5 1.5 0 0 0 13.5 3h-11a1.5 1.5 0 0 0-.602.145z"/></svg>
+            <p class="fw-bold mb-1 mt-2">Simulación digital</p>
+            <p class="text-muted small mb-0">Visualice el resultado esperado antes de decidir la cirugía.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-3">
+        <div class="card border-0" style="background:#f0f8f7;height:100%">
+          <div class="card-body">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#1b8f8a" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56z"/><path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/></svg>
+            <p class="fw-bold mb-1 mt-2">Sin taponajes</p>
+            <p class="text-muted small mb-0">Técnica moderna que evita el taponaje nasal posoperatorio.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-3">
+        <div class="card border-0" style="background:#f0f8f7;height:100%">
+          <div class="card-body">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#1b8f8a" viewBox="0 0 16 16" aria-hidden="true"><path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/></svg>
+            <p class="fw-bold mb-1 mt-2">Función + estética</p>
+            <p class="text-muted small mb-0">Mejora la respiración y la armonía facial en una sola cirugía.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <h2 id="consulrino" class="text-center text-white section-title-primary">Consúltenos su caso sin cargo por chat.</h2>
       
@@ -514,9 +529,10 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="card-group">
   
       <div class="card">
-        <img fetchpriority="high" decoding="async" src="./imagenes/blogrino2.webp" class="card-img-top" alt="Perfil de una persona con una nariz armoniosa, mostrando mejora estética y respiración clara después de la rinoplastia" width="350" height="245" style="max-width:100%;height:auto;">
+        <img fetchpriority="high" decoding="async" src="./imagenes/blogrino2.webp" srcset="./imagenes/blogrino2-sm.webp 410w, ./imagenes/blogrino2.webp 600w" sizes="(max-width: 575px) 100vw, 410px" class="card-img-top" alt="Perfil de una persona con una nariz armoniosa, mostrando mejora estética y respiración clara después de la rinoplastia" width="410" height="287" style="max-width:100%;height:auto;">
         <div class="card-body">
             <h3 class="card-title h5">Rinoplastia: La Armonía Perfecta entre Belleza y Salud.</h3>
+            <p class="card-text text-muted small mb-2">Cómo una sola cirugía puede mejorar tanto la forma de la nariz como la función respiratoria.</p>
             <article class="card-text">
                 <div class="text-center mb-2">
                     <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#rino6" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -532,60 +548,56 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     <p>La clave de un resultado verdaderamente excepcional reside en la posibilidad de abordar tanto la <strong>estética como la funcionalidad</strong> en un único procedimiento. ¿Por qué someterse a dos recuperaciones cuando puedes tener una? Esta estrategia no solo optimiza tu tiempo de sanación, sino que garantiza que obtengas los <strong>resultados más armoniosos y duraderos</strong> posibles. Es la combinación perfecta de arte y ciencia al servicio de tu bienestar.</p>
                     <div class="text-center mt-2">
-                        <a rel="noopener noreferrer" target="_blank" href="https://open.spotify.com/episode/200Y87ZvyxOc0NdVG29bu7">
-                            <button class="btn btn-primary btn-sm" type="button">
-                                ¡Escucha una charla imperdible!
-                            </button>
+                        <a rel="noopener noreferrer" target="_blank" href="https://open.spotify.com/episode/200Y87ZvyxOc0NdVG29bu7" class="btn btn-primary btn-sm">
+                            ¡Escucha una charla imperdible!
                         </a>
                     </div>
                 </span>
             </article>
         </div>
-        <div class="card-footer bg-primary">
-        </div>
+        <div class="card-footer" aria-hidden="true" style="height:4px;padding:0;background:#0a2b4f"></div>
     </div>
 
     
 
-        <div class="card">
+        <div class="card" id="beneficios1">
           <img loading="lazy" decoding="async" src="./imagenes/rinoplastia-400.webp" class="card-img-top" alt="Mujer sonriendo con confianza después de una rinoplastia exitosa, con una nariz sutil y de aspecto natural." width="350" height="245" style="max-width:100%;height:auto;">
           <div class="card-body">
             <h3 class="card-title h5">Beneficios de la Rinoplastia: Más Allá de la Estética.</h3>
+            <p class="card-text text-muted small mb-2">Autoestima, bienestar emocional y respiración mejorada: los beneficios que van mucho más allá del cambio visual.</p>
             <article class="card-text">
                 <div class="text-center mb-2">
                     <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#rino1" role="button" aria-expanded="false" aria-controls="collapseExample">
                         ¡Descubre más!
                     </a>
                 </div>
-                <span class="collapse" id="rino1">
-                    <h4>Transforma tu Rostro, Renueva tu Vida: El Poder Oculto de la Rinoplastia</h4>
-                    <p>¿Alguna vez has pensado en el impacto que tiene tu nariz en la percepción de ti mismo y de tu belleza? La <strong>rinoplastia</strong>, mucho más que una simple cirugía estética, es una puerta a una nueva realidad. Es el procedimiento quirúrgico que está revolucionando la vida de miles, ofreciendo una transformación que va más allá de lo visible. Pero, ¿qué secretos esconde esta cirugía para ser tan buscada y venerada?</p>
+             <span class="collapse" id="rino1">
+    <h4>Rinoplastia y Bienestar: Un Acercamiento Realista a la Transformación Estética</h4>
+    <p>A menudo se comercializa la cirugía estética bajo la promesa de una felicidad absoluta y transformaciones de vida milagrosas. Sin embargo, la realidad es mucho más matizada. La <strong>rinoplastia</strong> es un procedimiento quirúrgico que modifica una estructura anatómica, y aunque puede mejorar la armonía facial y aliviar complejos persistentes, no es ni debe verse como el eje central de la felicidad humana.</p>
 
-                    <h4>El Espejo de tu Alma: Autoestima y Confianza al Descubierto</h4>
-                    <p>Imagina mirarte al espejo y sentir una <strong>confianza inquebrantable</strong>. Estudios científicos lo confirman: la rinoplastia no solo esculpe una nariz más armónica, sino que eleva tu <strong>autoestima</strong> a niveles insospechados. Te sentirás no solo más atractivo, sino con la seguridad para conquistar cualquier desafío. ¿Estás listo para liberar la mejor versión de ti?</p>
+    <h4>El Espejo y la Percepción: Cuando el Conflicto Está en Otro Lado</h4>
+    <p>En la práctica clínica, es frecuente ver pacientes que presentan un defecto estético menor en su nariz, pero que cargan con la sensación de que su vida está completamente arruinada, destruida o limitada por este problema. <strong>Ojo: en estos casos, el origen del malestar profundo rara vez es físico, y por lo tanto, casi nunca se soluciona con una cirugía.</strong> Cuando una pequeña imperfección se vive como una catástrofe personal, intervenir quirúrgicamente suele ser una vía de escape equivocada que no resuelve la angustia subyacente. La verdadera solución requiere abordar la salud mental y la autoimagen desde un espacio terapéutico, no desde el quirófano.</p>
 
-                    <h4>Libérate de las Cadenas Invisibles: Adiós Ansiedad y Depresión</h4>
-                    <p>Esa preocupación constante por tu nariz, ¿sabías que puede ser una carga invisible para tu bienestar? La insatisfacción facial a menudo se esconde detrás de la <strong>ansiedad</strong> y la <strong>depresión</strong>. La rinoplastia no es solo una solución estética, es un bálsamo para el alma, aliviando esa presión y abriendo un camino hacia la paz interior. Es hora de respirar profundo y dejar ir lo que te frena.</p>
+    <h4>Más Allá del Espejo: Autoestima, Expectativas y Salud Mental</h4>
+    <p>Desde la psicología positiva —como los modelos de bienestar de Martin Seligman— sabemos que la plenitud se construye sobre pilares profundos: las relaciones significativas, el sentido de propósito, el compromiso y el logro personal. Una nariz simétrica no reemplaza estos factores. Si bien corregir una característica que genera un malestar genuino y proporcionado puede aportar tranquilidad, la cirugía debe entenderse como una herramienta complementaria de cuidado personal, nunca como un sustituto del trabajo emocional.</p>
 
-                    <h4>Respira Vida Plena: La Fusión Perfecta de Belleza y Bienestar</h4>
-                    <p>Pero la rinoplastia es un tesoro con múltiples facetas. Además de transformar tu rostro, puede ser la clave para una <strong>funcionalidad nasal</strong> óptima. ¿Problemas para respirar? ¿Tabique desviado? Esta cirugía no solo te dará la nariz que siempre soñaste, sino que mejorará tu <strong>calidad de sueño</strong>, tu <strong>energía diaria</strong> y, en definitiva, tu <strong>calidad de vida</strong>. ¿No es hora de vivir sin límites?</p>
+    <h4>Salud Respiratoria y Funcionalidad: El Verdadero Impacto Físico</h4>
+    <p>Más allá de la estética, el aspecto más sólido y transformador de una rinoplastia suele ser el funcional. La corrección de un tabique desviado o de problemas obstructivos no busca cambiar quién eres, sino mejorar tu calidad de vida a un nivel muy tangible: la <strong>respiración</strong>. Una correcta oxigenación impacta directamente en el descanso nocturno, el rendimiento físico y la energía diaria. Aquí es donde la cirugía cumple un rol médico y de bienestar fisiológico indiscutible.</p>
 
-                    <h4>El Viaje Hacia una Nueva Versión de Ti Mismo</h4>
-                    <p>En resumen, la rinoplastia es más que un procedimiento quirúrgico; es una inversión en ti. Una transformación que abarca desde la estética hasta el bienestar emocional y físico. Es la oportunidad de despertar cada día con una sonrisa, con la certeza de que has dado un paso gigante hacia una vida plena y feliz. ¿Te atreves a dar el salto? Para profundizar en el tema, te invitamos a consultar este estudio revelador <a class="link-dark" rel="noopener-noreferrer" target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/35766540/">
-                        (ver cita).
-                    </a></p>
-                </span>
+    <h4>Una Decisión Consciente, Informada y con Pies en la Tierra</h4>
+    <p>Abordar una rinoplastia requiere madurez y expectativas realistas. No se trata de "renacer" ni de borrar inseguridades profundas con un bisturí, sino de alinear la imagen externa con la propia identidad desde un lugar de aceptación sana. La verdadera transformación ocurre cuando la decisión nace del respeto propio y de un diagnóstico médico responsable. Para profundizar en la evidencia científica sobre la relación entre cirugía plástica y bienestar emocional, puedes consultar este estudio <a class="link-dark" rel="noopener-noreferrer" target="_blank" href="https://pubmed.ncbi.nlm.nih.gov/35766540/">(ver cita)</a>.</p>
+</span>
             </article>
         </div>
-        <div class="card-footer bg-primary">
-        </div>
+        <div class="card-footer" aria-hidden="true" style="height:4px;padding:0;background:#0a2b4f"></div>
     </div>
 
 
-    <div class="card">
-        <img loading="lazy" decoding="async" src="./imagenes/blogrino3.webp" class="card-img-top info-card-img" alt="Ilustración realista de una nariz, enfatizando la armonía natural con el rostro en lugar de la perfección idealizada." width="348" height="244" style="max-width:100%;height:auto;">
+    <div class="card" id="informacion1">
+        <img loading="lazy" decoding="async" src="./imagenes/blogrino3.webp" srcset="./imagenes/blogrino3-sm.webp 444w, ./imagenes/blogrino3.webp 600w" sizes="(max-width: 575px) 100vw, 444px" class="card-img-top info-card-img" alt="Ilustración realista de una nariz, enfatizando la armonía natural con el rostro en lugar de la perfección idealizada." width="444" height="311" style="max-width:100%;height:auto;">
         <div class="card-body">
             <h3 class="card-title h5">Rinoplastia: La Verdad Detrás de la Perfección.</h3>
+            <p class="card-text text-muted small mb-2">Expectativas realistas, armonía facial y resultados naturales: lo que realmente es posible con esta cirugía.</p>
             <article class="card-text">
                 <div class="text-center mb-2">
                     <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#rino4" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -615,8 +627,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </span>
             </article>
         </div>
-        <div class="card-footer bg-primary">
-        </div>
+        <div class="card-footer" aria-hidden="true" style="height:4px;padding:0;background:#0a2b4f"></div>
     </div>
 </div>
 
@@ -634,10 +645,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <div class="card-group p-1">
 
-    <div class="card p-3">
-      <img loading="lazy" decoding="async" src="./imagenes/simulacion-rino-gemini.webp"  class="card-img-top info-card-img" alt="hombre haciendo una simulación de rinoplastia en una computadora." style="aspect-ratio:370/280;width:100%;height:auto;">
+  <div class="card p-3" >
+    <img loading="lazy" decoding="async" src="./imagenes/costos-rino.webp" class="card-img-top info-card-img" alt="infografia de costos en rinoseptumplastia." width="600" height="327" style="max-width:100%;height:auto;">
+    <div class="card-body">
+        <h3 class="card-title h5">Optimiza los Costos en tu Rinoseptumplastia sin Perder Calidad.</h3>
+        <p class="card-text text-muted small mb-2">Estrategias inteligentes: hotelería funcional, anestesia adecuada y técnicas eficientes para cuidar tu bolsillo sin arriesgar tu salud.</p>
+        <article class="card-text">
+            <div class="text-center mb-2">
+                <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#rino60" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    ¡Infórmate más!
+                </a>
+            </div>
+            <span class="collapse" id="rino60">
+                <h4>Hotelería Sanatorial: Funcionalidad sobre Lujo Innecesario</h4>
+
+                <p>La rinoseptumplastia es, en la gran mayoría de los casos, un procedimiento <strong>ambulatorio o de internación abreviada</strong> de apenas unas pocas horas. Pagar por habitaciones de lujo o suites premium en sanatorios de alta gama representa un gasto completamente desaprovechado. Optar por instituciones de categoría estándar que mantengan una excelente infraestructura médica y seguridad de alta complejidad te permite recortar costos de forma drástica sin resignar calidad asistencial.</p>
+
+                <h4>Anestesia y Tecnología: Decisiones Médicas a tu Medida</h4>
+
+                <p>El presupuesto quirúrgico también se optimiza evaluando con precisión cada recurso. Si bien la anestesia general es indispensable en cirugías complejas con fracturas óseas amplias, los procedimientos focalizados en el dorso o la <strong>punta nasal</strong> pueden realizarse de forma muy segura con <strong>anestesia local y sedación asistida</strong>, reduciendo los costos de quirófano. Asimismo, técnicas tradicionales muy refinadas como las <strong>micro-osteotomías</strong> logran resultados excelentes y poco traumáticos prescindiendo de la aparatología ultrasónica y sus costosos descartables.</p>
+
+                <h4>Una Planificación Inteligente para Resultados Seguros</h4>
+
+                <p>Reducir gastos en tu cirugía estética no significa poner en riesgo tu salud, sino desechar recargos superfluos. Al coordinar con tu cirujano una estructura de honorarios globales y elegir centros que combinen eficiencia y seguridad, lograrás el equilibrio perfecto entre un <strong>precio razonable</strong> y una intervención de máxima calidad. ¡Infórmate bien y toma decisiones financieras inteligentes!</p>
+                         
+            </span>
+            </article>
+        </div>
+        <div class="card-footer" aria-hidden="true" style="height:4px;padding:0;background:#0a2b4f"></div>
+    </div>
+    
+    <div class="card p-3" id="simulacion1">
+      <img loading="lazy" decoding="async" src="./imagenes/simulacion-rino-gemini.webp" class="card-img-top info-card-img" alt="hombre haciendo una simulación de rinoplastia en una computadora." width="400" height="280" style="width:100%;height:auto;">
         <div class="card-body">
             <h3 class="card-title h5">Tu Futuro Rostro Hoy: La Magia de la Simulación en Rinoplastia.</h3>
+            <p class="card-text text-muted small mb-2">Envíe sus fotos y obtenga una vista previa del resultado antes de decidir la intervención.</p>
             <article class="card-text">
                 <div class="text-center mb-2">
                     <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#simulacionRino" role="button" aria-expanded="false" aria-controls="simulacionRino">
@@ -647,6 +689,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 <span class="collapse" id="simulacionRino">
                     <h4>¿Preparado para ver tu nueva nariz antes de la cirugía?</h4>
                     <p>La <strong>rinoplastia</strong> ha evolucionado, y con ella, la forma en que te acercas a tu transformación. En nuestra práctica, te ofrecemos una ventana al futuro: una <strong>simulación digital</strong> de los posibles resultados de tu cirugía. Envíanos tus fotos y te mostraremos un adelanto de esa nariz que siempre has soñado, alineando tus expectativas con la realidad quirúrgica.</p>
+
+                    <h4>¿Por qué la simulación se realiza en la vista de perfil?</h4>
+                    <p>La simulación digital 2D se trabaja de forma casi exclusiva sobre la <strong>foto de perfil estricto (90°)</strong>. En esta vista, el cálculo de la altura del dorso, la proyección de la punta y el ángulo nasolabial es exacto y clínicamente representativo. En la vista de frente, los cambios digitales resultan poco fiables debido a la forma en que interactúan las sombras y al grosor de la piel, los cuales no responden en pantalla igual que en el tejido real.</p>
+
+                    <h4>Guía paso a paso para tomar tus fotos con el celular</h4>
+                    <p>Para obtener un registro útil y evitar deformaciones ópticas provocadas por las lentes de los teléfonos, te pedimos seguir estas pautas al tomarte las imágenes:</p>
+                    <ul>
+                        <li><strong>Evita las selfies:</strong> Utiliza siempre la cámara trasera (principal) y pide a otra persona que tome la fotografía.</li>
+                        <li><strong>Distancia y Zoom (Clave):</strong> La persona debe ubicarse a <strong>2 metros de distancia</strong> y aplicar un <strong>zoom de 2x o 3x</strong>. Esto previene el efecto gran angular que distorsiona las proporciones del rostro.</li>
+                        <li><strong>Fondo e Iluminación:</strong> Colócate frente a una pared lisa de color claro (blanca o gris) con luz natural de frente (por ejemplo, ante una ventana). Evita luces cenitales que generen sombras bajo la nariz.</li>
+                        <li><strong>Posición de la cabeza:</strong> Mantén la mirada recta al frente sin elevar ni bajar la barbilla.</li>
+                        <li><strong>Tomas requeridas:</strong> Perfil izquierdo exacto (90°), perfil derecho exacto (90°) y foto de frente. En los perfiles solo debe observarse un ojo y la silueta nítida del dorso nasal.</li>
+                        <li><strong>Envío sin pérdida de calidad:</strong> Si nos envías las imágenes por WhatsApp, selecciónalas con la opción <strong>"Documento"</strong> (en lugar de "Galería") para evitar que la aplicación las comprima.</li>
+                    </ul>
 
                     <h4>El Arte de lo Posible: Entendiendo los Límites de la Transformación</h4>
                     <p>Aunque la simulación es una herramienta poderosa, es crucial entender que <strong>no es una promesa inquebrantable</strong>. Sirve como guía, un mapa hacia tu objetivo estético y funcional. Factores como tu tipo de cicatrización, la respuesta de tus tejidos e incluso la posibilidad de infecciones son variables que la cirugía no puede controlar por completo. En algunos casos, el resultado deseado se logra al 100%, pero en otros, la belleza reside en la adaptación a las características individuales.</p>
@@ -659,14 +715,64 @@ document.addEventListener('DOMContentLoaded', function() {
                 </span>
             </article>
         </div>
-        <div class="card-footer bg-primary">
+        <div class="card-footer" aria-hidden="true" style="height:4px;padding:0;background:#0a2b4f"></div>
+</div>
+
+<div class="card p-3" id="rinoplastiaUltrasonica">
+      <img loading="lazy" decoding="async" src="./imagenes/rinoplastia-ultrasonica.webp" class="card-img-top info-card-img" alt="cirujano evaluando rinoplastia ultrasónica con piezótomo." width="400" height="280" style="width:100%;height:auto;">
+        <div class="card-body">
+            <h3 class="card-title h5">Rinoplastia Ultrasónica vs. Tradicional: El Piezótomo, la Punta y el Costo.</h3>
+            <p class="card-text text-muted small mb-2">Análisis clínico sobre las ventajas reales del piezótomo, su impacto en la punta nasal y el incremento económico.</p>
+            <article class="card-text">
+                <div class="text-center mb-2">
+                    <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#contenidoUltrasonica" role="button" aria-expanded="false" aria-controls="contenidoUltrasonica">
+                        Leer análisis completo
+                    </a>
+                </div>
+                <span class="collapse" id="contenidoUltrasonica">
+                    <p>En los últimos años, la <strong>rinoplastia ultrasónica</strong> mediante piezótomo se ha promocionado comercialmente como la alternativa superior frente a la técnica tradicional. Si bien esta tecnología ofrece ventajas en etapas específicas de la operación, es vital analizar su impacto real en la punta nasal y el costo económico del procedimiento.</p>
+
+                    <h4>1. Lo que sí hace el piezótomo: Precisión en el hueso nasal</h4>
+                    <p>El piezótomo utiliza microvibraciones de alta frecuencia diseñadas exclusivamente para cortar tejido mineralizado (hueso), respetando la elasticidad de los tejidos blandos adyacentes como vasos sanguíneos, mucosas y periostio.</p>
+                    <p>Esta selectividad ofrece ventajas claras en el tercio superior de la nariz:</p>
+                    <ul>
+                        <li><strong>Menor trauma y recuperación temprana más cómoda:</strong> Al evitar el impacto mecánico de los escoplos y martillos tradicionales, disminuye el sangrado, los hematomas (equimosis) y la hinchazón (edema) periocular en los primeros 7 a 14 días.</li>
+                        <li><strong>Cortes óseos controlados:</strong> Permite esculpir y realizar osteotomías en los huesos nasales con alta precisión y menor riesgo de fracturas irregulares.</li>
+                    </ul>
+
+                    <h4>2. El punto crucial: Los cartílagos de la punta nasal</h4>
+                    <p>A pesar de la narrativa comercial, el piezótomo <strong>no tiene ninguna influencia</strong> en el trabajo de la punta nasal.</p>
+                    <p>La definición, simetría, proyección y rotación de la punta dependen exclusivamente del modelado de las estructuras cartilaginosas (cartílagos alares y cuadrangular):</p>
+                    <ul>
+                        <li><strong>Incompatibilidad técnica:</strong> La energía ultrasónica actúa únicamente sobre matriz ósea dura y no tiene aplicación sobre los cartílagos blandos de la punta.</li>
+                        <li><strong>Dependencia absoluta de la destreza del cirujano:</strong> El refinamiento de la punta se realiza mediante suturas, resecciones minuciosas e injertos de cartílago. La estética depende 100% de la técnica manual, la planificación y el juicio artístico del especialista, no de herramientas ultrasónicas.</li>
+                    </ul>
+
+                    <h4>3. El impacto económico: Desglose de costos y tiempo quirúrgico</h4>
+                    <p>El empleo de tecnología ultrasónica supone un incremento directo en los costos operativos de la intervención:</p>
+                    <ul>
+                        <li><strong>Insumos y consumibles especializados:</strong> Las puntas y herramientas ultrasónicas añaden un costo directo de entre <strong>$500 y $750 USD</strong> por procedimiento.</li>
+                        <li><strong>Tiempo adicional de quirófano:</strong> La ejecución meticulosa de las osteotomías con ultrasonido prolonga la duración de la cirugía, sumando aproximadamente <strong>$500 USD adicionales</strong> en tarifas de anestesia y quirófano.</li>
+                        <li><strong>Sobrecosto total directo:</strong> Estos factores representan un incremento de entre <strong>$1,000 y $1,250 USD</strong> por cirugía. El porcentaje exacto de aumento global varía en función de la tarifa base de cada centro médico.</li>
+                    </ul>
+
+                    <h4>Conclusión</h4>
+                    <p>La rinoplastia ultrasónica es una herramienta muy útil para remodelar los huesos nasales con menor inflamación inicial, pero <strong>no sustituye ni mejora</strong> la escultura de la punta nasal. Dado el sobrecosto de $1,000 a $1,250 USD en insumos y quirófano, el paciente debe valorar si la comodidad de los primeros días de recuperación justifica la inversión frente a una técnica convencional ejecutada por un cirujano experto.</p>
+                </span>
+            </article>
         </div>
+        <div class="card-footer" aria-hidden="true" style="height:4px;padding:0;background:#0a2b4f"></div>
+</div>
+
     </div>
 
-    <div class="card p-3">
+    <div class="card-group p-1"> 
+
+    <div class="card p-3" id="viajar1">
         <div class="card-body">
-            <img loading="lazy" decoding="async" src="./imagenes/avion.webp"  class="card-img-top info-card-img" alt="avion" style="aspect-ratio:338/225;width:100%;height:auto;">
+            <img loading="lazy" decoding="async" src="./imagenes/avion.webp" class="card-img-top info-card-img" alt="Avión de viaje internacional, representando el turismo médico para rinoplastia en el extranjero" width="400" height="225" style="width:100%;height:auto;">
             <h3 class="card-title h5">¿Rinoplastia en el Extranjero? Lo Que Nadie Te Cuenta Antes de Viajar.</h3>
+            <p class="card-text text-muted small mb-2">Turismo médico para rinoplastia: ventajas reales y riesgos que pocos mencionan antes de viajar al extranjero.</p>
             <article class="card-text">
                 <div class="text-center mb-2">
                     <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#turismoRino" role="button" aria-expanded="false" aria-controls="turismoRino">
@@ -685,14 +791,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 </span>
             </article>
         </div>
-        <div class="card-footer bg-primary">
-        </div>
+        <div class="card-footer" aria-hidden="true" style="height:4px;padding:0;background:#0a2b4f"></div>
     </div>
 
     <div class="card p-3">
-      <img loading="lazy" decoding="async" src="./imagenes/rinop.webp"  class="card-img-top info-card-img" alt="foto de antes y después de una rinoplastia" width="330" height="220" style="max-width:100%;height:auto;">
+      <img loading="lazy" decoding="async" src="./imagenes/rinop.webp" srcset="./imagenes/rinop-sm.webp 370w, ./imagenes/rinop.webp 509w" sizes="(max-width: 575px) 100vw, 370px" class="card-img-top info-card-img" alt="foto de antes y después de una rinoplastia" width="370" height="246" style="max-width:100%;height:auto;">
         <div class="card-body">
             <h3 class="card-title h5">Desvelando los Secretos: ¿Qué Tipo de Rinoplastia es Para Ti?</h3>
+            <p class="card-text text-muted small mb-2">Técnica cerrada, abierta, estética o funcional: una guía para entender qué abordaje es el indicado para cada caso.</p>
             <article class="card-text">
                 <div class="text-center mb-2">
                     <a class="btn btn-outline-primary btn-sm toggle-btn" data-bs-toggle="collapse" href="#tiposRino" role="button" aria-expanded="false" aria-controls="tiposRino">
@@ -722,8 +828,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </span>
             </article>
         </div>
-        <div class="card-footer bg-primary">
-        </div>
+        <div class="card-footer" aria-hidden="true" style="height:4px;padding:0;background:#0a2b4f"></div>
     </div>
 </div>
 
@@ -814,6 +919,30 @@ document.addEventListener('DOMContentLoaded', function() {
                       </div>
                     </div>
                   </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="faqSeven">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseSeven" aria-expanded="false" aria-controls="faqCollapseSeven">
+                        ¿Cuál es la diferencia entre rinoplastia abierta y cerrada?
+                      </button>
+                    </h3>
+                    <div id="faqCollapseSeven" class="accordion-collapse collapse" aria-labelledby="faqSeven" data-bs-parent="#faqRino">
+                      <div class="accordion-body">
+                        La rinoplastia cerrada realiza todas las incisiones dentro de las fosas nasales, sin cicatrices visibles, ideal para correcciones moderadas. La rinoplastia abierta incluye una pequeña incisión en la columela que brinda mayor visibilidad al cirujano, siendo preferida en casos complejos o revisiones.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="faqEight">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseEight" aria-expanded="false" aria-controls="faqCollapseEight">
+                        ¿Es necesaria anestesia general para una rinoplastia?
+                      </button>
+                    </h3>
+                    <div id="faqCollapseEight" class="accordion-collapse collapse" aria-labelledby="faqEight" data-bs-parent="#faqRino">
+                      <div class="accordion-body">
+                        Depende de cada caso. La rinoplastia puede realizarse bajo anestesia local o general según la complejidad del procedimiento y la preferencia del paciente y el cirujano.
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </section>
 
@@ -876,17 +1005,35 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
   </div>
 
-  <div class="container-fluid text-center py-2" style="background-color: #d7e3f0;">
-    <div class="mb-2">
-      <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
-        <i class="fab fa-facebook-f" style="font-size: 1.4rem;"></i>
+  <div class="container-fluid text-center py-3" style="background-color: #d7e3f0;">
+    <p class="small fw-semibold mb-2" style="color: #003366;">Seguinos en redes</p>
+    <div class="d-flex justify-content-center align-items-center gap-3 mb-3">
+      <a href="https://www.facebook.com/profile.php?id=100063748789595" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+         style="color:#fff;background-color:#1877F2;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;text-decoration:none;transition:opacity .2s;"
+         onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true" focusable="false">
+          <path d="M14 3h-2a4 4 0 0 0-4 4v3H6v3h2v8h3v-8h3l1-3h-4V7a1 1 0 0 1 1-1h2z"/>
+        </svg>
       </a>
-      <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color: #003366; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 999px; text-decoration: none;">
-        <i class="fab fa-instagram" style="font-size: 1.4rem;"></i>
+      <a href="https://www.instagram.com/otorrino.fono.pilar?igsh=MXVlMHR4a2VxaWpsNA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+         style="color:#fff;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;text-decoration:none;transition:opacity .2s;"
+         onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <rect x="4" y="4" width="16" height="16" rx="4"/>
+          <circle cx="12" cy="12" r="3"/>
+          <circle cx="17" cy="7" r="1" fill="white" stroke="none"/>
+        </svg>
+      </a>
+      <a href="https://www.youtube.com/channel/UCBrWcUcpJTH0q4mofkYL9OQ" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+         style="color:#fff;background-color:#FF0000;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;text-decoration:none;transition:opacity .2s;"
+         onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
+        <svg width="20" height="20" viewBox="0 0 16 16" fill="white" aria-hidden="true" focusable="false">
+          <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+        </svg>
       </a>
     </div>
     <p class="small text-muted mb-0 border-top pt-2" style="border-color: #a7b7c8 !important;">
-      &copy; 2025 Otorrino en Pilar. Todos los derechos reservados.
+      &copy; 2026 Otorrino en Pilar. Todos los derechos reservados.
     </p>
   </div>
 </footer>
@@ -898,27 +1045,67 @@ document.addEventListener('DOMContentLoaded', function() {
   </svg>
 </button>
 
-<script defer>
-  (function() {
-    const scrollBtn = document.getElementById('scrollToTop');
-    if (!scrollBtn) return;
+<script>
+(function () {
+  function collapseToggle(btn) {
+    var sel = btn.getAttribute('data-bs-target') || btn.getAttribute('href');
+    var target = sel ? document.querySelector(sel) : null;
+    if (!target) return;
+    var isShown = target.classList.contains('show');
 
-    const toggleVisibility = () => {
-      if (window.scrollY > 300) {
-        scrollBtn.classList.add('show');
-      } else {
-        scrollBtn.classList.remove('show');
+    // Accordion: cerrar los otros paneles del mismo grupo
+    var parentSel = btn.getAttribute('data-bs-parent');
+    if (parentSel) {
+      var parent = document.querySelector(parentSel);
+      if (parent) {
+        parent.querySelectorAll('.collapse.show').forEach(function (el) {
+          if (el === target) return;
+          el.classList.remove('show');
+          var ps = '#' + el.id;
+          var pb = parent.querySelector('[data-bs-target="' + ps + '"],[href="' + ps + '"]');
+          if (pb) { pb.classList.add('collapsed'); pb.setAttribute('aria-expanded', 'false'); }
+        });
       }
-    };
+    }
 
-    window.addEventListener('scroll', toggleVisibility, { passive: true });
-    toggleVisibility();
+    // Toggle sin leer propiedades de layout (evita forced reflow)
+    if (isShown) {
+      target.classList.remove('show');
+    } else {
+      target.classList.add('show');
+    }
+    btn.setAttribute('aria-expanded', !isShown ? 'true' : 'false');
+    btn.classList.toggle('collapsed', !isShown);
+    if (btn.classList.contains('toggle-btn')) {
+      btn.textContent = isShown ? 'Ver más' : 'Ver menos';
+    }
+  }
 
-    scrollBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-bs-toggle="collapse"]');
+    if (!btn) return;
+    e.preventDefault();
+    collapseToggle(btn);
+  });
+
+  // Inicializar texto de los botones toggle
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.toggle-btn').forEach(function (btn) {
+      var sel = btn.getAttribute('href');
+      var target = sel ? document.querySelector(sel) : null;
+      if (!target) return;
+      btn.textContent = target.classList.contains('show') ? 'Ver menos' : 'Ver más';
+      btn.setAttribute('aria-expanded', target.classList.contains('show') ? 'true' : 'false');
     });
-  })();
+  });
+})();
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<script src="./js/rate-prompt.js" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.ORPRatePrompt) window.ORPRatePrompt.autoShowOnEngagement();
+});
+</script>
 </body>
 </html>

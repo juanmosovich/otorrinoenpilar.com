@@ -1,0 +1,1663 @@
+﻿<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TinnituStop: Apps gratuitas de terapia sonora para tinnitus - notch, ruido blanco/rosa/fractal y ondas binaurales. Tratamiento online sin instalación. Dr. Mosovich, Pilar.">
+<meta name="keywords" content="tinnitus tratamiento, terapia notch, ruido blanco tinnitus, ondas binaurales, acúfenos solución, terapia sonora gratis, TMNMT, habituación auditiva, Dr. Mosovich, otorrino Pilar">
+<meta name="author" content="Dr. Juan Mosovich">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="#0f172a">
+<link rel="canonical" href="https://www.otorrinoenpilar.com/tinnitustop.html">
+
+<!-- Geo Tags -->
+<meta name="geo.region" content="AR-B">
+<meta name="geo.placename" content="Pilar, Buenos Aires">
+<meta name="geo.position" content="-34.434636;-58.829689">
+<meta name="ICBM" content="-34.434636, -58.829689">
+<meta name="coverage" content="Pilar, Del Viso, Escobar, Tortuguitas, Zona Norte Buenos Aires">
+
+<!-- Open Graph -->
+<meta property="og:title" content="TinnituStop – Terapias Sonoras para Tinnitus y Acúfenos | Dr. Mosovich">
+<meta property="og:description" content="Apps gratuitas de terapia sonora para tinnitus: notch (TMNMT), ruido blanco/rosa/fractal y ondas binaurales. Sin instalación, funciona online. Dr. Mosovich, Pilar.">
+<meta property="og:image" content="./imagenes/TinnituStopOg.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:url" content="https://www.otorrinoenpilar.com/tinnitustop.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Otorrino en Pilar - Dr. Juan Mosovich">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TinnituStop – Terapias Sonoras para Tinnitus | Dr. Mosovich">
+<meta name="twitter:description" content="Apps gratuitas de terapia sonora para acúfenos: notch, ruido blanco/rosa/fractal y ondas binaurales. Dr. Mosovich, Pilar.">
+<meta name="twitter:image" content="./imagenes/TinnituStopOg.png">
+<meta name="twitter:image:alt" content="TinnituStop – Terapias Sonoras para Tinnitus">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="./imagenes/TinnituStopOg.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+<link rel="manifest" href="./manifest-tinnitustop.json">
+<meta name="theme-color" content="#0f172a">
+
+<!-- DNS Prefetch -->
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="./js/rate-prompt.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TinnituStop",
+  "alternateName": "App de Terapias Sonoras para Tinnitus y Acúfenos",
+  "description": "Suite de tres aplicaciones web gratuitas para el tratamiento del tinnitus: terapia notch (TMNMT), ruido de banda ancha (blanco, rosa, fractal) y ondas binaurales. Sin instalación, funciona en el navegador.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "url": "https://www.otorrinoenpilar.com/tinnitustop.html",
+  "inLanguage": "es-AR",
+  "author": {
+    "@type": "Person",
+    "name": "Dr. Juan Mosovich",
+    "url": "https://www.otorrinoenpilar.com/info.html#cv"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "ARS"
+  },
+  "featureList": [
+    "Terapia notch con slider logarítmico 250–16,000 Hz",
+    "Ruido blanco, rosa y fractal",
+    "Ondas binaurales Delta, Theta, Alfa y Beta",
+    "Temporizador de sesión integrado",
+    "Control de volumen preciso",
+    "Sin instalación, funciona online",
+    "Funciona sin conexión a internet"
+  ]
+}
+</script>
+
+<title>TinnituStop – Terapias Sonoras para Tinnitus y Acúfenos | Dr. Mosovich</title>
+
+<style>
+    :root {
+        --primary: #2563eb;
+        --primary-dark: #1d4ed8;
+        --primary-light: #dbeafe;
+        --secondary: #0d9488;
+        --secondary-light: #ccfbf1;
+        --accent: #f59e0b;
+        --bg: #f8fafc;
+        --card-bg: #ffffff;
+        --text-main: #0f172a;
+        --text-muted: #64748b;
+        --border: #e2e8f0;
+        --success: #10b981;
+        --warning: #f59e0b;
+        --danger: #dc2626;
+        --radius-lg: 16px;
+        --radius-md: 12px;
+        --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Outfit', sans-serif;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        background-color: var(--bg);
+        color: var(--text-main);
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        padding-bottom: 40px;
+    }
+
+    .app-container {
+        width: 100%;
+        max-width: 480px;
+        background: var(--bg);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    /* Header */
+    header {
+        background: linear-gradient(135deg, #1e293b, #0f172a);
+        color: white;
+        padding: 24px 20px 28px 20px;
+        border-bottom-left-radius: 24px;
+        border-bottom-right-radius: 24px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+
+    .logo i {
+        color: #38bdf8;
+    }
+
+    .back-to-site {
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-size: 0.85rem;
+        text-decoration: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s;
+    }
+
+    .back-to-site:hover {
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+    main {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+    }
+
+    /* Secciones */
+    .section-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .section-title span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Selector de Terapias */
+    .therapy-selector {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .therapy-card {
+        background: white;
+        padding: 16px;
+        border-radius: var(--radius-md);
+        border: 2px solid var(--border);
+        cursor: pointer;
+        transition: all 0.2s;
+        text-align: center;
+    }
+
+    .therapy-card:hover {
+        border-color: var(--primary);
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+        transform: translateY(-2px);
+    }
+
+    .therapy-card.active {
+        background: var(--primary-light);
+        border-color: var(--primary);
+    }
+
+    .therapy-card h4 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: var(--text-main);
+    }
+
+    .therapy-card p {
+        font-size: 0.8rem;
+        color: var(--text-muted);
+        line-height: 1.4;
+    }
+
+    .therapy-card i {
+        display: block;
+        font-size: 1.8rem;
+        color: var(--primary);
+        margin-bottom: 8px;
+    }
+
+    /* Cards de Control */
+    .control-card {
+        background: white;
+        border-radius: var(--radius-md);
+        padding: 16px;
+        margin-bottom: 16px;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+    }
+
+    .control-card h5 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: var(--text-main);
+    }
+
+    .form-label {
+        font-size: 0.85rem;
+        font-weight: 500;
+        margin-bottom: 8px;
+        display: block;
+        color: var(--text-main);
+    }
+
+    .form-range {
+        width: 100%;
+        height: 6px;
+        border-radius: 3px;
+        background: var(--border);
+        outline: none;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    .form-range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--primary);
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+    }
+
+    .form-range::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--primary);
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+    }
+
+    .slider-labels {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        margin-top: 4px;
+    }
+
+    /* Chips de frecuencias comunes, ordenados por prominencia segun prevalencia clinica */
+    .freq-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 14px;
+    }
+
+    .freq-chip {
+        border: 2px solid var(--border);
+        background: white;
+        color: var(--text-main);
+        border-radius: 20px;
+        cursor: pointer;
+        font-family: 'Outfit', sans-serif;
+        font-weight: 600;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .freq-chip:hover {
+        border-color: var(--primary);
+    }
+
+    .freq-chip.active {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: white;
+    }
+
+    .freq-chip.tier-1 {
+        padding: 10px 18px;
+        font-size: 1rem;
+        border-color: var(--primary);
+        color: var(--primary);
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+    }
+
+    .freq-chip.active.tier-1 {
+        color: white;
+    }
+
+    .freq-chip.tier-2 {
+        padding: 8px 14px;
+        font-size: 0.88rem;
+    }
+
+    .freq-chip.tier-3 {
+        padding: 6px 12px;
+        font-size: 0.78rem;
+        color: var(--text-muted);
+    }
+
+    .freq-chip.active.tier-3 {
+        color: white;
+    }
+
+    .freq-chip .badge-star {
+        color: var(--accent);
+    }
+
+    .freq-chip.active .badge-star {
+        color: #fde68a;
+    }
+
+    .frequency-display {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 12px;
+    }
+
+    /* Botones */
+    .btn {
+        padding: 12px 20px;
+        border: none;
+        border-radius: var(--radius-md);
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: all 0.2s;
+        font-family: 'Outfit', sans-serif;
+    }
+
+    .btn-primary {
+        background: var(--primary);
+        color: white;
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-primary:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        background: #e2e8f0;
+        color: var(--text-main);
+    }
+
+    .btn-secondary:hover {
+        background: #cbd5e1;
+    }
+
+    .btn-outline {
+        background: white;
+        border: 2px solid var(--primary);
+        color: var(--primary);
+    }
+
+    .btn-outline:hover {
+        background: var(--primary-light);
+    }
+
+    .btn-outline.active {
+        background: var(--primary);
+        color: white;
+    }
+
+    .btn-danger {
+        background: var(--danger);
+        color: white;
+    }
+
+    .btn-danger:hover {
+        background: #991b1b;
+    }
+
+    .btn-success {
+        background: var(--success);
+        color: white;
+    }
+
+    .btn-success:hover {
+        background: #059669;
+    }
+
+    .btn-block {
+        width: 100%;
+    }
+
+    /* Grid de Botones */
+    .btn-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+
+    .btn-group.double {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Timer y Display */
+    .timer-display {
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--primary);
+        font-family: 'Courier New', monospace;
+        margin: 20px 0;
+        letter-spacing: 2px;
+    }
+
+    .status-indicator {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px;
+        background: var(--secondary-light);
+        border-radius: var(--radius-md);
+        margin-bottom: 16px;
+        color: var(--secondary);
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .status-indicator.playing {
+        background: #dcfce7;
+        color: var(--success);
+    }
+
+    .status-indicator.warning {
+        background: #fef3c7;
+        color: var(--warning);
+    }
+
+    .status-indicator.error {
+        background: #fee2e2;
+        color: var(--danger);
+    }
+
+    /* Alert y Warnings */
+    .alert {
+        padding: 12px 16px;
+        border-radius: var(--radius-md);
+        margin-bottom: 16px;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        border-left: 4px solid;
+    }
+
+    .alert-info {
+        background: #dbeafe;
+        border-color: var(--primary);
+        color: #0c4a6e;
+    }
+
+    .alert-warning {
+        background: #fef3c7;
+        border-color: var(--warning);
+        color: #92400e;
+    }
+
+    .alert-danger {
+        background: #fee2e2;
+        border-color: var(--danger);
+        color: #7f1d1d;
+    }
+
+    /* Presets y Quick Access */
+    .preset-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+
+    .preset-btn {
+        padding: 12px;
+        background: white;
+        border: 2px solid var(--border);
+        border-radius: var(--radius-md);
+        font-size: 0.85rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s;
+        text-align: center;
+    }
+
+    .preset-btn:hover {
+        border-color: var(--primary);
+        background: var(--primary-light);
+    }
+
+    .preset-btn.active {
+        background: var(--primary);
+        color: white;
+        border-color: var(--primary);
+    }
+
+    /* Hidden */
+    .ts-hidden {
+        display: none !important;
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-align: center;
+        margin-top: 20px;
+        padding: 12px;
+        line-height: 1.4;
+        background: #f1f5f9;
+        border-radius: var(--radius-md);
+    }
+
+    /* Media Queries */
+    @media (min-width: 481px) {
+        .app-container {
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            margin: 20px;
+        }
+
+        .therapy-selector {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    /* Responsive Therapy Selector */
+    @media (max-width: 480px) {
+        .therapy-selector {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Offline Indicator */
+    .offline-indicator {
+        background: #fef2f2;
+        color: #dc2626;
+        padding: 0.75rem 1rem;
+        border-radius: 10px;
+        margin: 1rem 1rem 0.5rem 1rem;
+        display: none;
+        text-align: center;
+        font-size: 0.85rem;
+        border: 1px solid #fecaca;
+    }
+
+    .offline-indicator.show {
+        display: block;
+    }
+
+    /* Re-engagement Banner */
+    #reengagementBanner {
+        background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+        color: white;
+        padding: 0.75rem 1rem;
+        border-radius: 10px;
+        margin: 1rem 1rem 0.5rem 1rem;
+        display: none;
+        box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+        animation: slideUp 0.4s ease-out;
+        max-height: auto;
+    }
+
+    #reengagementBanner.show {
+        display: block;
+    }
+
+    #reengagementBanner h4 {
+        color: white;
+        margin-bottom: 0.25rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    #reengagementBanner p {
+        margin-bottom: 0;
+        font-size: 0.85rem;
+        opacity: 0.95;
+        line-height: 1.2;
+    }
+
+    #reengagementBanner .btn {
+        background-color: white;
+        color: #1e3a8a;
+        font-weight: 600;
+        border: none;
+        padding: 0.5rem 1rem !important;
+        font-size: 0.8rem;
+        transition: all 0.2s ease;
+        min-height: auto !important;
+        height: auto !important;
+        display: inline-block !important;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        gap: 6px;
+    }
+
+    #reengagementBanner .btn:hover {
+        background-color: #f0f9ff;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+</head>
+<body>
+<div class="offline-indicator" id="offlineIndicator">
+    <i class="fa-solid fa-wifi-slash"></i>
+    <span>Modo offline - usando versión guardada</span>
+</div>
+
+<div class="app-container">
+    <!-- Re-engagement Banner -->
+    <div id="reengagementBanner" class="show">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+            <div>
+                <h4>🎯 ¡Tienes conexión! Explora más</h4>
+                <p class="mb-0">Vuelve al sitio principal para descubrir artículos sobre el sueño, técnicas de relajación avanzadas y más recursos clínicos.</p>
+            </div>
+            <div class="d-flex gap-2 flex-shrink-0">
+                <a href="./" class="btn btn-sm">Ir al sitio principal →</a>
+                <button type="button" class="btn btn-sm fw-bold" onclick="dismissReengagement()" aria-label="Cerrar sugerencia de explorar el sitio">✕</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <a href="./oido.html" class="back-to-site">
+                <i class="fa-solid fa-arrow-left"></i> Dr. Mosovich
+            </a>
+            <div class="logo">
+                <i class="fa-solid fa-volume-high"></i> TinnituStop
+            </div>
+            <div style="width: 80px;"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Selector de Terapias -->
+        <div class="section-title">
+            <span>Elige tu Terapia.</span>
+        </div>
+
+        <div class="therapy-selector">
+            <div class="therapy-card" id="btn-therapy-notch">
+                <i class="fa-solid fa-music"></i>
+                <h4>Tono Único</h4>
+                <p>Para tinnitus de una sola frecuencia constante</p>
+            </div>
+            <div class="therapy-card" id="btn-therapy-complex">
+                <i class="fa-solid fa-wave-square"></i>
+                <h4>Tinnitus Complejo</h4>
+                <p>Para tinnitus con múltiples tonos</p>
+            </div>
+            <div class="therapy-card" id="btn-therapy-binaural">
+                <i class="fa-solid fa-brain"></i>
+                <h4>Ondas Binaurales</h4>
+                <p>Tratamiento de segunda línea</p>
+            </div>
+        </div>
+
+        <!-- Alerta General -->
+        <div class="alert alert-info">
+            <strong>💡 Consejo:</strong> Estas apps son herramientas de apoyo. Consulta siempre con un otorrinolaringólogo para diagnóstico y tratamiento personalizado.
+        </div>
+
+        <!-- ============== TERAPIA NOTCH ============== -->
+        <div id="therapy-notch-section" class="ts-hidden">
+            <div class="section-title">
+                <span><i class="fa-solid fa-music"></i> Terapia Notch (TMNMT)</span>
+            </div>
+
+            <div class="alert alert-info">
+                <strong>📝 Instrucciones:</strong>
+                <ol style="margin-top: 8px; margin-left: 20px; font-size: 0.85rem;">
+                    <li>Toca uno de los botones de frecuencia común (los más grandes son los más frecuentes) o afina con el control deslizante</li>
+                    <li>Orden de frecuencia clínica: 4000 &gt; 6000 &gt; 8000 &gt; 3000 &gt; 2000 &gt; 1000 Hz</li>
+                    <li>El tinnitus suele coincidir con la zona de mayor pérdida auditiva en la AT</li>
+                    <li>Prueba el sonido antes de iniciar la terapia</li>
+                    <li>Ajusta el volumen (debe estar por debajo del tinnitus)</li>
+                    <li>Inicia una sesión (máx. 50 minutos)</li>
+                </ol>
+            </div>
+
+            <!-- Control de Frecuencia -->
+            <div class="control-card">
+                <label class="form-label">
+                    Frecuencia de tu Tinnitus:
+                    <span style="float: right; color: var(--primary); font-weight: 700;" id="ts-freq-display">4000 Hz</span>
+                </label>
+
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 8px;">
+                    Tonos más frecuentes primero, toca el que se parezca a tu tinnitus:
+                </p>
+                <div class="freq-chips" id="ts-freq-chips">
+                    <button type="button" class="freq-chip tier-1" data-freq="4000"><i class="fa-solid fa-star badge-star"></i> 4000 Hz</button>
+                    <button type="button" class="freq-chip tier-2" data-freq="6000">6000 Hz</button>
+                    <button type="button" class="freq-chip tier-2" data-freq="8000">8000 Hz</button>
+                    <button type="button" class="freq-chip tier-3" data-freq="3000">3000 Hz</button>
+                    <button type="button" class="freq-chip tier-3" data-freq="2000">2000 Hz</button>
+                    <button type="button" class="freq-chip tier-3" data-freq="1000">1000 Hz</button>
+                </div>
+
+                <input type="range" class="form-range" id="ts-frequency-slider" min="0" max="100" step="1" value="67">
+                <div class="slider-labels">
+                    <span>250 Hz</span>
+                    <span>1000 Hz</span>
+                    <span>4000 Hz</span>
+                    <span>16,000 Hz</span>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">
+                    4000 Hz es la frecuencia más común después de traumatismo acústico
+                </p>
+            </div>
+
+            <!-- Botones de Acción -->
+            <div class="control-card">
+                <div class="btn-group double" style="margin-bottom: 0;">
+                    <button class="btn btn-outline" id="ts-notch-play-btn">
+                        <i class="fa-solid fa-volume-high"></i> Probar
+                    </button>
+                    <button class="btn btn-primary" id="ts-notch-treatment-btn" disabled>
+                        <i class="fa-solid fa-play"></i> Iniciar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Control de Volumen -->
+            <div class="control-card">
+                <label class="form-label">Volumen del Tratamiento</label>
+                <input type="range" class="form-range" id="ts-volume-control" min="0" max="100" value="30">
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">
+                    Debe ser audible pero más bajo que tu tinnitus
+                </p>
+            </div>
+
+            <!-- Timer -->
+            <div class="timer-display" id="ts-timer">00:00</div>
+
+            <!-- Warnings -->
+            <div class="alert alert-warning ts-hidden" id="ts-warning-message">
+                <strong>⚠️ Próximo cierre:</strong> Quedan menos de 5 minutos. La sesión se detendrá en 50 minutos.
+            </div>
+
+            <div class="alert alert-success ts-hidden" id="ts-session-complete">
+                <strong>✅ Sesión completada:</strong> 50 minutos. Descansa al menos 1 hora antes de la próxima sesión.
+            </div>
+
+            <button class="btn btn-secondary btn-block" id="ts-notch-back-btn">
+                ← Cambiar de Terapia
+            </button>
+        </div>
+
+        <!-- ============== TERAPIA COMPLEJA ============== -->
+        <div id="therapy-complex-section" class="ts-hidden">
+            <div class="section-title">
+                <span><i class="fa-solid fa-wave-square"></i> Terapia de Ruido</span>
+            </div>
+
+            <div class="alert alert-info">
+                <strong>📝 Instrucciones:</strong>
+                <ol style="margin-top: 8px; margin-left: 20px; font-size: 0.85rem;">
+                    <li>Elige el tipo de ruido más cómodo</li>
+                    <li>Ajusta el volumen (por debajo del tinnitus)</li>
+                    <li>Escucha entre 20 y 60 minutos diarios</li>
+                    <li>La consistencia es clave para ver resultados</li>
+                </ol>
+            </div>
+
+            <!-- Información de Ruidos -->
+            <div class="control-card">
+                <h5 style="margin-bottom: 12px;">¿Qué tipo de ruido elegir?</h5>
+                <div style="font-size: 0.85rem; line-height: 1.6; color: var(--text-muted);">
+                    <p><strong>🟡 Blanco:</strong> Para tinnitus agudos (silbidos)</p>
+                    <p><strong>🔴 Rosa:</strong> Para tinnitus graves (zumbidos)</p>
+                    <p><strong>🎲 Fractal:</strong> Para tinnitus cambiante o mixto</p>
+                </div>
+            </div>
+
+            <!-- Botones de Selección de Ruido -->
+            <div class="control-card">
+                <div class="btn-group" style="margin-bottom: 0;">
+                    <button class="btn btn-outline" id="ts-btn-blanco">
+                        <i class="fa-solid fa-circle" style="color: #f59e0b;"></i> Blanco
+                    </button>
+                    <button class="btn btn-outline" id="ts-btn-rosa">
+                        <i class="fa-solid fa-circle" style="color: #ec4899;"></i> Rosa
+                    </button>
+                    <button class="btn btn-outline" id="ts-btn-fractal">
+                        <i class="fa-solid fa-circle" style="color: #8b5cf6;"></i> Fractal
+                    </button>
+                </div>
+            </div>
+
+            <!-- Status de Reproducción -->
+            <div class="status-indicator ts-hidden" id="ts-complex-playing-indicator">
+                <i class="fa-solid fa-play"></i>
+                <span>Reproduciendo: <strong id="ts-complex-playing-name">Ruido</strong></span>
+            </div>
+
+            <!-- Control de Volumen -->
+            <div class="control-card">
+                <label class="form-label">Volumen</label>
+                <input type="range" class="form-range" id="ts-complex-volumen" min="0" max="100" value="15">
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">
+                    Audible pero inferior a tu tinnitus
+                </p>
+            </div>
+
+            <!-- Timer -->
+            <div class="timer-display" id="ts-complex-timer">00:00</div>
+
+            <!-- Botón Detener -->
+            <button class="btn btn-danger btn-block" id="ts-btn-stop-complex" disabled>
+                <i class="fa-solid fa-stop"></i> Detener
+            </button>
+
+            <button class="btn btn-secondary btn-block" id="ts-complex-back-btn" style="margin-top: 12px;">
+                ← Cambiar de Terapia
+            </button>
+        </div>
+
+        <!-- ============== ONDAS BINAURALES ============== -->
+        <div id="therapy-binaural-section" class="ts-hidden">
+            <div class="section-title">
+                <span><i class="fa-solid fa-brain"></i> Ondas Binaurales</span>
+            </div>
+
+            <div class="alert alert-danger">
+                <strong>⚠️ Segunda línea:</strong> Solo para casos donde la terapia notch no ha funcionado. Requiere auriculares estéreo.
+            </div>
+
+            <div class="alert alert-warning">
+                <strong>🎧 Imprescindible:</strong> Usa auriculares estéreo. Sin ellos, las ondas no funcionan.
+            </div>
+
+            <!-- Controles de Frecuencia -->
+            <div class="control-card">
+                <label class="form-label">
+                    Oído Izquierdo:
+                    <span style="float: right; color: var(--primary);" id="ts-binaural-left-display">440</span> Hz
+                </label>
+                <input type="range" class="form-range" id="ts-binaural-left" min="100" max="1000" value="440">
+            </div>
+
+            <div class="control-card">
+                <label class="form-label">
+                    Oído Derecho:
+                    <span style="float: right; color: var(--primary);" id="ts-binaural-right-display">450</span> Hz
+                </label>
+                <input type="range" class="form-range" id="ts-binaural-right" min="100" max="1000" value="450">
+            </div>
+
+            <!-- Frecuencia Resultante -->
+            <div class="control-card" style="text-align: center;">
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Onda Binaural Resultante</p>
+                <div class="frequency-display">
+                    <span id="ts-binaural-freq-result">10</span> Hz
+                </div>
+            </div>
+
+            <!-- Presets Rápidos -->
+            <div class="control-card">
+                <label class="form-label" style="margin-bottom: 12px;">Presets Rápidos:</label>
+                <div class="preset-grid">
+                    <button class="preset-btn" id="ts-preset-delta">
+                        <strong>Δ Delta</strong><br><small>2 Hz • Sueño</small>
+                    </button>
+                    <button class="preset-btn" id="ts-preset-theta">
+                        <strong>Θ Theta</strong><br><small>5 Hz • Meditación</small>
+                    </button>
+                    <button class="preset-btn" id="ts-preset-alpha">
+                        <strong>Α Alfa</strong><br><small>10 Hz • Relajación</small>
+                    </button>
+                    <button class="preset-btn" id="ts-preset-beta">
+                        <strong>Β Beta</strong><br><small>15 Hz • Concentración</small>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Control de Volumen -->
+            <div class="control-card">
+                <label class="form-label">Volumen</label>
+                <input type="range" class="form-range" id="ts-binaural-volumen" min="0" max="100" value="20">
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px;">
+                    No debe enmascarar completamente el tinnitus
+                </p>
+            </div>
+
+            <!-- Status de Reproducción -->
+            <div class="status-indicator playing ts-hidden" id="ts-binaural-playing-indicator">
+                <i class="fa-solid fa-play"></i>
+                <span>Reproduciendo ondas binaurales</span>
+            </div>
+
+            <!-- Timer -->
+            <div class="timer-display" id="ts-binaural-timer">00:00</div>
+
+            <!-- Botones de Control -->
+            <div class="btn-group double" style="margin-bottom: 0;">
+                <button class="btn btn-success" id="ts-binaural-play-btn">
+                    <i class="fa-solid fa-play"></i> Reproducir
+                </button>
+                <button class="btn btn-danger" id="ts-binaural-stop-btn" disabled>
+                    <i class="fa-solid fa-stop"></i> Detener
+                </button>
+            </div>
+
+            <button class="btn btn-secondary btn-block" id="ts-binaural-back-btn" style="margin-top: 12px;">
+                ← Cambiar de Terapia
+            </button>
+        </div>
+
+        <!-- Disclaimer Final -->
+        <div class="disclaimer">
+            <strong>Aviso Legal:</strong> Esta aplicación es una herramienta de apoyo y no sustituye la evaluación o tratamiento médico profesional. Consulta siempre con un especialista en oído antes de iniciar cualquier terapia.
+        </div>
+    </main>
+</div>
+
+<!-- Audio Context para gestión de sonidos -->
+<script>
+(function() {
+    // =========================================================================
+    // AUDIO ENGINE - Gestión centralizada de contexto de audio
+    // =========================================================================
+    
+    window.audioContext = null;
+    
+    function getAudioContext() {
+        if (!window.audioContext) {
+            window.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        return window.audioContext;
+    }
+    
+    async function ensureAudio() {
+        const ctx = getAudioContext();
+        if (ctx.state === "suspended") {
+            await ctx.resume();
+        }
+        return ctx;
+    }
+    
+    // =========================================================================
+    // VARIABLES GLOBALES
+    // =========================================================================
+    
+    let currentTherapy = null;
+    
+    // Notch variables
+    let notchOscillator, notchGainNode, isPlayingNotch = false;
+    let notchTreatmentActive = false, notchTreatmentStartTime, notchTimerInterval;
+    let notchFrequency = 4000, notchVolume = 0.3;
+    let notchWhiteNoiseBuffer, notchSource, notchFilter;
+    
+    // Complex noise variables
+    let noiseSource = null;
+    let noiseGainNode = null;
+    let activeNoiseType = null;
+    let complexTimerInterval = null;
+    
+    // Binaural variables
+    let binauralOscLeft, binauralOscRight, binauralGainNode;
+    let binauralActive = false;
+    let binauralTimerInterval = null;
+    
+    const NOTCH_MIN = 250;
+    const NOTCH_MAX = 16000;
+    
+    function sliderToFreq(v) {
+        return Math.round(NOTCH_MIN * Math.pow(NOTCH_MAX / NOTCH_MIN, v / 100));
+    }
+    
+    function freqToSlider(freq) {
+        return Math.round(100 * Math.log(freq / NOTCH_MIN) / Math.log(NOTCH_MAX / NOTCH_MIN));
+    }
+    
+    // =========================================================================
+    // UI NAVIGATION
+    // =========================================================================
+    
+    function switchTherapy(therapy) {
+        // Stop all audio
+        stopAllAudio();
+        
+        // Hide all sections
+        document.querySelectorAll('[id$="-section"]').forEach(el => {
+            el.classList.add('ts-hidden');
+        });
+        
+        // Remove active class from cards
+        document.querySelectorAll('.therapy-card').forEach(card => {
+            card.classList.remove('active');
+        });
+        
+        // Show selected section
+        const sectionId = 'therapy-' + therapy + '-section';
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.classList.remove('ts-hidden');
+        }
+        
+        // Mark card as active
+        document.getElementById('btn-therapy-' + therapy)?.classList.add('active');
+        currentTherapy = therapy;
+        
+        // Scroll to the therapy section just shown
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+    
+    function stopAllAudio() {
+        stopNotchAudio();
+        stopNotchTreatment();
+        stopComplexAudio();
+        stopBinauralAudio();
+    }
+
+    function backToSelection() {
+        // Stop all audio
+        stopAllAudio();
+
+        // Hide all sections
+        document.querySelectorAll('[id$="-section"]').forEach(el => {
+            el.classList.add('ts-hidden');
+        });
+
+        // Remove active class from cards
+        document.querySelectorAll('.therapy-card').forEach(card => {
+            card.classList.remove('active');
+        });
+
+        currentTherapy = null;
+
+        // Scroll back to the therapy selector
+        document.querySelector('.therapy-selector')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    
+    // =========================================================================
+    // TERAPIA NOTCH
+    // =========================================================================
+    
+    function initNotchApp() {
+        const slider = document.getElementById('ts-frequency-slider');
+        const display = document.getElementById('ts-freq-display');
+        const playBtn = document.getElementById('ts-notch-play-btn');
+        const treatBtn = document.getElementById('ts-notch-treatment-btn');
+        const volControl = document.getElementById('ts-volume-control');
+        const freqChips = document.querySelectorAll('#ts-freq-chips .freq-chip');
+        
+        if (!slider) return;
+        
+        function updateActiveChip() {
+            freqChips.forEach(chip => {
+                chip.classList.toggle('active', parseInt(chip.dataset.freq, 10) === notchFrequency);
+            });
+        }
+        
+        notchFrequency = sliderToFreq(parseInt(slider.value, 10));
+        updateNotchDisplay();
+        updateActiveChip();
+        
+        slider.addEventListener('input', () => {
+            notchFrequency = sliderToFreq(parseInt(slider.value, 10));
+            updateNotchDisplay();
+            updateActiveChip();
+            if (isPlayingNotch && notchOscillator) {
+                notchOscillator.frequency.setValueAtTime(notchFrequency, getAudioContext().currentTime);
+            }
+            if (notchTreatmentActive && notchFilter) {
+                notchFilter.frequency.setValueAtTime(notchFrequency, getAudioContext().currentTime);
+            }
+        });
+        
+        freqChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                notchFrequency = parseInt(chip.dataset.freq, 10);
+                slider.value = freqToSlider(notchFrequency);
+                updateNotchDisplay();
+                updateActiveChip();
+                if (isPlayingNotch && notchOscillator) {
+                    notchOscillator.frequency.setValueAtTime(notchFrequency, getAudioContext().currentTime);
+                }
+                if (notchTreatmentActive && notchFilter) {
+                    notchFilter.frequency.setValueAtTime(notchFrequency, getAudioContext().currentTime);
+                }
+            });
+        });
+        
+        volControl?.addEventListener('input', (e) => {
+            notchVolume = parseFloat(e.target.value) / 100;
+            if (isPlayingNotch && notchGainNode) {
+                notchGainNode.gain.setValueAtTime(notchVolume * 0.15, getAudioContext().currentTime);
+            }
+            if (notchTreatmentActive && notchGainNode) {
+                notchGainNode.gain.setValueAtTime(notchVolume * 0.4, getAudioContext().currentTime);
+            }
+        });
+        
+        playBtn?.addEventListener('click', () => {
+            if (isPlayingNotch) stopNotchAudio();
+            else startNotchAudio();
+        });
+        
+        treatBtn?.addEventListener('click', () => {
+            if (notchTreatmentActive) stopNotchTreatment();
+            else startNotchTreatment();
+        });
+        
+        document.getElementById('ts-notch-back-btn')?.addEventListener('click', backToSelection);
+    }
+    
+    function updateNotchDisplay() {
+        document.getElementById('ts-freq-display').textContent = notchFrequency.toLocaleString('es') + ' Hz';
+    }
+    
+    async function startNotchAudio() {
+        try {
+            const ctx = await ensureAudio();
+            notchOscillator = ctx.createOscillator();
+            notchGainNode = ctx.createGain();
+            notchOscillator.connect(notchGainNode);
+            notchGainNode.connect(ctx.destination);
+            notchOscillator.frequency.setValueAtTime(notchFrequency, ctx.currentTime);
+            notchOscillator.type = 'sine';
+            notchGainNode.gain.setValueAtTime(notchVolume * 0.15, ctx.currentTime);
+            notchOscillator.start();
+            isPlayingNotch = true;
+            
+            document.getElementById('ts-notch-play-btn').textContent = '⏹ Detener Prueba';
+            document.getElementById('ts-notch-treatment-btn').disabled = false;
+        } catch (e) {
+            console.error('Error starting notch audio:', e);
+        }
+    }
+    
+    function stopNotchAudio() {
+        if (notchOscillator) {
+            notchOscillator.stop();
+            notchOscillator.disconnect();
+            notchOscillator = null;
+        }
+        isPlayingNotch = false;
+        document.getElementById('ts-notch-play-btn').textContent = '🔊 Probar';
+    }
+    
+    function generateNotchWhiteNoise() {
+        const ctx = getAudioContext();
+        const bufferSize = ctx.sampleRate * 2;
+        notchWhiteNoiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+        const output = notchWhiteNoiseBuffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+            output[i] = Math.random() * 2 - 1;
+        }
+    }
+    
+    async function startNotchTreatment() {
+        stopNotchAudio();
+        try {
+            const ctx = await ensureAudio();
+            if (!notchWhiteNoiseBuffer) generateNotchWhiteNoise();
+            
+            notchSource = ctx.createBufferSource();
+            notchSource.buffer = notchWhiteNoiseBuffer;
+            notchSource.loop = true;
+            
+            notchFilter = ctx.createBiquadFilter();
+            notchFilter.type = 'notch';
+            notchFilter.frequency.setValueAtTime(notchFrequency, ctx.currentTime);
+            notchFilter.Q.setValueAtTime(5, ctx.currentTime);
+            
+            notchGainNode = ctx.createGain();
+            notchGainNode.gain.setValueAtTime(notchVolume * 0.4, ctx.currentTime);
+            
+            notchSource.connect(notchFilter);
+            notchFilter.connect(notchGainNode);
+            notchGainNode.connect(ctx.destination);
+            
+            notchSource.start();
+            notchTreatmentActive = true;
+            document.getElementById('ts-notch-treatment-btn').textContent = '⏹ Detener';
+            document.getElementById('ts-notch-play-btn').disabled = true;
+            
+            notchTreatmentStartTime = Date.now();
+            notchTimerInterval = setInterval(() => {
+                const elapsed = Date.now() - notchTreatmentStartTime;
+                const minutes = Math.floor(elapsed / 60000);
+                const seconds = Math.floor((elapsed % 60000) / 1000);
+                document.getElementById('ts-timer').textContent = 
+                    String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
+                
+                if (minutes >= 45 && minutes < 50) {
+                    document.getElementById('ts-warning-message').classList.remove('ts-hidden');
+                }
+                if (minutes >= 50) {
+                    stopNotchTreatment();
+                    document.getElementById('ts-session-complete').classList.remove('ts-hidden');
+                    if (window.ORPRatePrompt) window.ORPRatePrompt.maybeShow(1500);
+                }
+            }, 1000);
+        } catch (e) {
+            console.error('Error starting notch treatment:', e);
+        }
+    }
+    
+    function stopNotchTreatment() {
+        if (notchSource) {
+            notchSource.stop();
+            notchSource.disconnect();
+            notchSource = null;
+        }
+        if (notchFilter) {
+            notchFilter.disconnect();
+            notchFilter = null;
+        }
+        if (notchGainNode) {
+            notchGainNode.disconnect();
+            notchGainNode = null;
+        }
+        notchTreatmentActive = false;
+        document.getElementById('ts-notch-treatment-btn').textContent = '▶ Iniciar';
+        document.getElementById('ts-notch-play-btn').disabled = false;
+        clearInterval(notchTimerInterval);
+        document.getElementById('ts-timer').textContent = '00:00';
+        document.getElementById('ts-warning-message').classList.add('ts-hidden');
+    }
+    
+    // =========================================================================
+    // TERAPIA COMPLEJA (RUIDOS)
+    // =========================================================================
+    
+    function initComplexApp() {
+        document.getElementById('ts-btn-blanco')?.addEventListener('click', () => playNoise('blanco'));
+        document.getElementById('ts-btn-rosa')?.addEventListener('click', () => playNoise('rosa'));
+        document.getElementById('ts-btn-fractal')?.addEventListener('click', () => playNoise('fractal'));
+        document.getElementById('ts-btn-stop-complex')?.addEventListener('click', stopComplexAudio);
+        
+        document.getElementById('ts-complex-volumen')?.addEventListener('input', (e) => {
+            if (noiseGainNode) noiseGainNode.gain.value = parseFloat(e.target.value) / 100;
+        });
+        
+        document.getElementById('ts-complex-back-btn')?.addEventListener('click', backToSelection);
+    }
+    
+    async function playNoise(type) {
+        stopComplexAudio();
+        const ctx = await ensureAudio();
+        
+        const bufferSize = 2 * ctx.sampleRate;
+        const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+        const output = noiseBuffer.getChannelData(0);
+        
+        if (type === 'blanco') {
+            for (let i = 0; i < bufferSize; i++) {
+                output[i] = Math.random() * 2 - 1;
+            }
+        } else if (type === 'rosa') {
+            let b0 = 0, b1 = 0, b2 = 0;
+            for (let i = 0; i < bufferSize; i++) {
+                const white = Math.random() * 2 - 1;
+                b0 = 0.99886 * b0 + white * 0.0555179;
+                b1 = 0.99476 * b1 + white * 0.0993388;
+                b2 = 0.96900 * b2 + white * 0.4432098;
+                output[i] = (b0 + b1 + b2) * 0.1;
+            }
+        } else if (type === 'fractal') {
+            let lastValue = 0;
+            for (let i = 0; i < bufferSize; i++) {
+                lastValue = (Math.random() * 2 - 1) * 0.5 + lastValue * 0.5;
+                output[i] = lastValue;
+            }
+        }
+        
+        noiseSource = ctx.createBufferSource();
+        noiseSource.buffer = noiseBuffer;
+        noiseSource.loop = true;
+        noiseGainNode = ctx.createGain();
+        noiseSource.connect(noiseGainNode);
+        noiseGainNode.connect(ctx.destination);
+        
+        const vol = document.getElementById('ts-complex-volumen');
+        noiseGainNode.gain.value = vol ? parseFloat(vol.value) / 100 : 0.15;
+        
+        noiseSource.start();
+        activeNoiseType = type;
+        startComplexTimer();
+        updateComplexUI();
+    }
+    
+    function stopComplexAudio() {
+        if (noiseSource) {
+            noiseSource.stop();
+            noiseSource.disconnect();
+            noiseSource = null;
+        }
+        if (noiseGainNode) {
+            noiseGainNode.disconnect();
+            noiseGainNode = null;
+        }
+        activeNoiseType = null;
+        stopComplexTimer();
+        updateComplexUI();
+    }
+    
+    function updateComplexUI() {
+        const names = { blanco: 'Ruido Blanco', rosa: 'Ruido Rosa', fractal: 'Ruido Fractal' };
+        document.getElementById('ts-complex-playing-name').textContent = activeNoiseType ? names[activeNoiseType] : '';
+        
+        if (activeNoiseType) {
+            document.getElementById('ts-complex-playing-indicator').classList.remove('ts-hidden');
+            document.getElementById('ts-btn-stop-complex').disabled = false;
+        } else {
+            document.getElementById('ts-complex-playing-indicator').classList.add('ts-hidden');
+            document.getElementById('ts-btn-stop-complex').disabled = true;
+        }
+    }
+    
+    function startComplexTimer() {
+        clearInterval(complexTimerInterval);
+        const startTime = Date.now();
+        complexTimerInterval = setInterval(() => {
+            const elapsed = Date.now() - startTime;
+            const mm = String(Math.floor(elapsed / 60000)).padStart(2, '0');
+            const ss = String(Math.floor((elapsed % 60000) / 1000)).padStart(2, '0');
+            document.getElementById('ts-complex-timer').textContent = mm + ':' + ss;
+        }, 1000);
+    }
+    
+    function stopComplexTimer() {
+        clearInterval(complexTimerInterval);
+        document.getElementById('ts-complex-timer').textContent = '00:00';
+    }
+    
+    // =========================================================================
+    // ONDAS BINAURALES
+    // =========================================================================
+    
+    function initBinauralApp() {
+        const leftSlider = document.getElementById('ts-binaural-left');
+        const rightSlider = document.getElementById('ts-binaural-right');
+        const playBtn = document.getElementById('ts-binaural-play-btn');
+        const stopBtn = document.getElementById('ts-binaural-stop-btn');
+        
+        if (!leftSlider || !rightSlider) return;
+        
+        [leftSlider, rightSlider].forEach(slider => {
+            slider.addEventListener('input', updateBinauralDisplay);
+        });
+        
+        document.getElementById('ts-preset-delta')?.addEventListener('click', () => setBinauralPreset(400, 402));
+        document.getElementById('ts-preset-theta')?.addEventListener('click', () => setBinauralPreset(400, 405));
+        document.getElementById('ts-preset-alpha')?.addEventListener('click', () => setBinauralPreset(400, 410));
+        document.getElementById('ts-preset-beta')?.addEventListener('click', () => setBinauralPreset(400, 415));
+        
+        playBtn?.addEventListener('click', startBinauralAudio);
+        stopBtn?.addEventListener('click', stopBinauralAudio);
+        
+        document.getElementById('ts-binaural-back-btn')?.addEventListener('click', backToSelection);
+        
+        updateBinauralDisplay();
+    }
+    
+    function setBinauralPreset(left, right) {
+        document.getElementById('ts-binaural-left').value = left;
+        document.getElementById('ts-binaural-right').value = right;
+        updateBinauralDisplay();
+    }
+    
+    function updateBinauralDisplay() {
+        const left = parseInt(document.getElementById('ts-binaural-left').value);
+        const right = parseInt(document.getElementById('ts-binaural-right').value);
+        document.getElementById('ts-binaural-left-display').textContent = left;
+        document.getElementById('ts-binaural-right-display').textContent = right;
+        document.getElementById('ts-binaural-freq-result').textContent = Math.abs(left - right);
+    }
+    
+    async function startBinauralAudio() {
+        const ctx = await ensureAudio();
+        const left = parseInt(document.getElementById('ts-binaural-left').value);
+        const right = parseInt(document.getElementById('ts-binaural-right').value);
+        
+        binauralOscLeft = ctx.createOscillator();
+        binauralOscRight = ctx.createOscillator();
+        const pannerLeft = ctx.createStereoPanner();
+        const pannerRight = ctx.createStereoPanner();
+        binauralGainNode = ctx.createGain();
+        
+        binauralOscLeft.connect(pannerLeft);
+        pannerLeft.pan.setValueAtTime(-1, ctx.currentTime);
+        pannerLeft.connect(binauralGainNode);
+        
+        binauralOscRight.connect(pannerRight);
+        pannerRight.pan.setValueAtTime(1, ctx.currentTime);
+        pannerRight.connect(binauralGainNode);
+        
+        const vol = document.getElementById('ts-binaural-volumen');
+        binauralGainNode.gain.value = vol ? parseFloat(vol.value) / 100 : 0.2;
+        binauralGainNode.connect(ctx.destination);
+        
+        binauralOscLeft.frequency.setValueAtTime(left, ctx.currentTime);
+        binauralOscRight.frequency.setValueAtTime(right, ctx.currentTime);
+        binauralOscLeft.start();
+        binauralOscRight.start();
+        
+        binauralActive = true;
+        document.getElementById('ts-binaural-play-btn').disabled = true;
+        document.getElementById('ts-binaural-stop-btn').disabled = false;
+        document.getElementById('ts-binaural-playing-indicator').classList.remove('ts-hidden');
+        
+        startBinauralTimer();
+    }
+    
+    function stopBinauralAudio() {
+        if (binauralOscLeft) {
+            binauralOscLeft.stop();
+            binauralOscLeft.disconnect();
+            binauralOscLeft = null;
+        }
+        if (binauralOscRight) {
+            binauralOscRight.stop();
+            binauralOscRight.disconnect();
+            binauralOscRight = null;
+        }
+        if (binauralGainNode) {
+            binauralGainNode.disconnect();
+            binauralGainNode = null;
+        }
+        binauralActive = false;
+        document.getElementById('ts-binaural-play-btn').disabled = false;
+        document.getElementById('ts-binaural-stop-btn').disabled = true;
+        document.getElementById('ts-binaural-playing-indicator').classList.add('ts-hidden');
+        stopBinauralTimer();
+    }
+    
+    function startBinauralTimer() {
+        clearInterval(binauralTimerInterval);
+        const startTime = Date.now();
+        binauralTimerInterval = setInterval(() => {
+            const elapsed = Date.now() - startTime;
+            const mm = String(Math.floor(elapsed / 60000)).padStart(2, '0');
+            const ss = String(Math.floor((elapsed % 60000) / 1000)).padStart(2, '0');
+            document.getElementById('ts-binaural-timer').textContent = mm + ':' + ss;
+        }, 1000);
+    }
+    
+    function stopBinauralTimer() {
+        clearInterval(binauralTimerInterval);
+        document.getElementById('ts-binaural-timer').textContent = '00:00';
+    }
+    
+    // =========================================================================
+    // ONLINE/OFFLINE & RE-ENGAGEMENT BANNER
+    // =========================================================================
+    
+    const offlineIndicator = document.getElementById('offlineIndicator');
+    const reengagementBanner = document.getElementById('reengagementBanner');
+    let bannerDismissed = false;
+
+    function dismissReengagement() {
+        const banner = document.getElementById('reengagementBanner');
+        if (banner) {
+            bannerDismissed = true;
+            console.log('[Banner] Dismissing banner...');
+            banner.classList.remove('show');
+            banner.style.display = 'none';
+            
+            // Track dismissal
+            if (window.dataLayer) {
+                window.dataLayer.push({
+                    event: 'reengagement_banner_dismiss',
+                    timestamp: new Date().getTime()
+                });
+            }
+        }
+    }
+
+    function updateOnlineStatus() {
+        const isOnline = navigator.onLine;
+        console.log('[App] Online status:', isOnline);
+        
+        if (isOnline) {
+            offlineIndicator.classList.remove('show');
+            // Show re-engagement banner only on online status and if not dismissed
+            if (!bannerDismissed) {
+                reengagementBanner.classList.add('show');
+            }
+            
+            // Track navigation event for analytics
+            if (window.dataLayer) {
+                window.dataLayer.push({
+                    event: 'app_online',
+                    timestamp: new Date().getTime()
+                });
+            }
+        } else {
+            offlineIndicator.classList.add('show');
+            reengagementBanner.classList.remove('show');
+            // Reset dismissed state when going offline, so banner shows again when online
+            bannerDismissed = false;
+            
+            // Track offline event for analytics
+            if (window.dataLayer) {
+                window.dataLayer.push({
+                    event: 'app_offline',
+                    timestamp: new Date().getTime()
+                });
+            }
+        }
+    }
+
+    // Listen to online/offline events
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+
+    // Initial check on load
+    document.addEventListener('DOMContentLoaded', () => {
+        updateOnlineStatus();
+    });
+
+    // Analytics tracking for banner interactions
+    const bannerLink = document.querySelector('#reengagementBanner a');
+    if (bannerLink) {
+        bannerLink.addEventListener('click', function() {
+            if (window.dataLayer) {
+                window.dataLayer.push({
+                    event: 'reengagement_banner_click',
+                    button: 'main_site',
+                    timestamp: new Date().getTime()
+                });
+            }
+        });
+    }
+    
+    // =========================================================================
+    // INICIALIZACIÓN
+    // =========================================================================
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        // Setup banner close button listener
+        const bannerCloseBtn = document.querySelector('#reengagementBanner button');
+        if (bannerCloseBtn) {
+            bannerCloseBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('[Banner] Close button clicked');
+                dismissReengagement();
+            });
+        }
+        
+        // Event listeners para selector de terapias
+        document.getElementById('btn-therapy-notch')?.addEventListener('click', () => switchTherapy('notch'));
+        document.getElementById('btn-therapy-complex')?.addEventListener('click', () => switchTherapy('complex'));
+        document.getElementById('btn-therapy-binaural')?.addEventListener('click', () => switchTherapy('binaural'));
+        
+        // Inicializar apps
+        initNotchApp();
+        initComplexApp();
+        initBinauralApp();
+    });
+})();
+</script>
+</body>
+</html>

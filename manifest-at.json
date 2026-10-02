@@ -1,0 +1,32 @@
+{
+  "name": "Audiometría Online - Dr. Mosovich",
+  "short_name": "Audiometría",
+  "description": "Audiometría online gratuita: evalúa frecuencias e intensidades auditivas y descargá tus resultados en PDF.",
+  "start_url": "./at.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#003366",
+  "background_color": "#f8f9fa",
+  "icons": [
+    {
+      "src": "./imagenes/audiometria-online.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "./imagenes/audiometria-online.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "./favicon/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["health", "medical"]
+}
